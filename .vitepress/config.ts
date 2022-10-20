@@ -1,8 +1,10 @@
 import { defineConfig } from 'vitepress'
+import highlight from './markdown/highlight'
+import fence from './markdown/fence'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
-export default defineConfig({
+export default async () => defineConfig({
   title: 'Koishi',
 
   head: [
@@ -10,6 +12,13 @@ export default defineConfig({
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#5546a3' }],
   ],
+
+  markdown: {
+    highlight: await highlight('one-dark-pro'),
+    config(md) {
+      md.use(fence)
+    },
+  },
 
   themeConfig: {
     logo: '/koishi.png',
