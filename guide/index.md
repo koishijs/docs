@@ -5,7 +5,7 @@ sidebarDepth: 0
 # 指南
 
 ::: tip
-这部教程假设读者已经拥有了中级的 TypeScript 和 node.js 相关知识。如果你只想快速搭建自己的机器人应用而非学习 Koishi 开发，请前往 [入门](../manual/starter/installation.md)。
+这部教程假设读者已经拥有了中级的 TypeScript 和 node.js 相关知识。如果你只想快速搭建自己的机器人应用而非学习 Koishi 开发，请前往 [入门](../manual/starter/boilerplate.md)。
 :::
 
 Koishi 是一个强大的聊天机器人框架，因此有大量的知识需要学习。不过请不用担心，我们为学习者提供了一部循序渐进的教程，帮助你从最基础的概念出发，逐步掌握 Koishi 开发。

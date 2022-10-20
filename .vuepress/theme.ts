@@ -1,8 +1,6 @@
 import type { Theme, PageHeader } from '@vuepress/core'
 import { defaultTheme } from '@vuepress/theme-default'
 import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import pwa from '@vuepress/plugin-pwa'
-import popup from '@vuepress/plugin-pwa-popup'
 import container from '@vuepress/plugin-container'
 import docsearch from '@vuepress/plugin-docsearch'
 import zoom from '@vuepress/plugin-medium-zoom'
@@ -14,10 +12,6 @@ export default (options: DefaultThemeOptions): Theme => ({
   plugins: [
     [require('./markdown/highlight')],
     [require('./markdown/github')],
-    ...process.env.ENABLE_PWA ? [
-      pwa({}),
-      popup({}),
-    ] : [],
     docsearch({
       appId: 'JDPYQL1A66',
       apiKey: '22055314b65e8198e43399540003b84b',
