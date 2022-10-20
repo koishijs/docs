@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import highlight from './markdown/highlight'
 import fence from './markdown/fence'
+import { resolve } from 'path'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
@@ -33,7 +34,7 @@ export default async () => defineConfig({
       link: '/guide/',
       activeMatch: '/guide/',
     }, {
-      text: 'API',
+      text: '参考',
       link: '/api/',
       activeMatch: '/api/',
     }],
@@ -44,9 +45,8 @@ export default async () => defineConfig({
           makeLink('介绍', '/manual/introduction.md'),
         ],
       }, {
-        text: '起步',
         items: [
-          makeLink('', '/manual/starter/index.md'),
+          makeLink('起步', '/manual/starter/'),
           makeLink('创建模板项目', '/manual/starter/boilerplate.md'),
           makeLink('作为依赖调用', '/manual/starter/direct.md'),
           makeLink('使用启动器', '/manual/starter/desktop.md'),
@@ -148,55 +148,54 @@ export default async () => defineConfig({
           makeLink('模块组织', '/guide/in-depth/module.md'),
           makeLink('消息处理', '/guide/in-depth/message.md'),
         ],
-      // }],
+      }],
 
-      // '/api/': [{
-      //   text: '总览',
-      //   link: '/api/',
-      // // }, {
-      // //   text: '术语表',
-      // //   link: '/api/glossary.md',
-      // }, {
-      //   text: '核心 API',
-      //   items: [
-      //     makeLink('', '/api/core/adapter.md'),
-      //     makeLink('', '/api/core/app.md'),
-      //     makeLink('', '/api/core/bot.md'),
-      //     makeLink('', '/api/core/command.md'),
-      //     makeLink('', '/api/core/context.md'),
-      //     makeLink('', '/api/core/events.md'),
-      //     makeLink('', '/api/core/session.md'),
-      //   ],
-      // }, {
-      //   text: '服务 API',
-      //   items: [
-      //     makeLink('', '/api/service/bots.md'),
-      //     makeLink('', '/api/service/i18n.md'),
-      //     makeLink('', '/api/service/lifecycle.md'),
-      //     makeLink('', '/api/service/registry.md'),
-      //     makeLink('', '/api/service/selector.md'),
-      //     makeLink('', '/api/service/router.md'),
-      //     makeLink('', '/api/service/http.md'),
-      //     makeLink('', '/api/service/assets.md'),
-      //   ],
-      // }, {
-      //   text: '数据库 API',
-      //   items: [
-      //     makeLink('', '/api/database/built-in.md'),
-      //     makeLink('', '/api/database/database.md'),
-      //     makeLink('', '/api/database/model.md'),
-      //     makeLink('', '/api/database/query.md'),
-      //     makeLink('', '/api/database/evaluation.md'),
-      //   ],
-      // }, {
-      //   text: '其他内置 API',
-      //   items: [
-      //     makeLink('', '/api/utils/segment.md'),
-      //     makeLink('', '/api/utils/schema.md'),
-      //     makeLink('', '/api/utils/observer.md'),
-      //     makeLink('', '/api/utils/logger.md'),
-      //     makeLink('', '/api/utils/misc.md'),
-      //   ],
+      '/api/': [{
+        items: [
+          makeLink('总览', '/api/'),
+          // makeLink('术语表', '/api/glossary.md'),
+        ],
+      }, {
+        text: '核心 API',
+        items: [
+          makeLink('适配器 (Adapter)', '/api/core/adapter.md'),
+          makeLink('应用 (App)', '/api/core/app.md'),
+          makeLink('机器人 (Bot)', '/api/core/bot.md'),
+          makeLink('指令 (Command)', '/api/core/command.md'),
+          makeLink('上下文 (Context)', '/api/core/context.md'),
+          makeLink('事件 (Events)', '/api/core/events.md'),
+          makeLink('会话 (Session)', '/api/core/session.md'),
+        ],
+      }, {
+        text: '服务 API',
+        items: [
+          makeLink('机器人 (Bots)', '/api/service/bots.md'),
+          makeLink('国际化 (I18n)', '/api/service/i18n.md'),
+          makeLink('事件系统 (Lifecycle)', '/api/service/lifecycle.md'),
+          makeLink('插件系统 (Registry)', '/api/service/registry.md'),
+          makeLink('选择器 (Selector)', '/api/service/selector.md'),
+          makeLink('网络服务 (Router)', '/api/service/router.md'),
+          makeLink('网络请求 (HTTP)', '/api/service/http.md'),
+          makeLink('资源存储 (Assets)', '/api/service/assets.md'),
+        ],
+      }, {
+        text: '数据库 API',
+        items: [
+          makeLink('内置数据结构', '/api/database/built-in.md'),
+          makeLink('数据库操作 (Database)', '/api/database/database.md'),
+          makeLink('数据模型 (Model)', '/api/database/model.md'),
+          makeLink('查询表达式 (Query)', '/api/database/query.md'),
+          makeLink('求值表达式 (Eval)', '/api/database/evaluation.md'),
+        ],
+      }, {
+        text: '其他内置 API',
+        items: [
+          makeLink('消息段 (Segment)', '/api/utils/segment.md'),
+          makeLink('配置模式 (Schema)', '/api/utils/schema.md'),
+          makeLink('观察者 (Observer)', '/api/utils/observer.md'),
+          makeLink('输出日志 (Logger)', '/api/utils/logger.md'),
+          makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
+        ],
       // }],
 
       // '/plugins/': [{
@@ -318,7 +317,7 @@ export default async () => defineConfig({
     resolve: {
       dedupe: ['vue'],
       alias: {
-        '@parent': 'vitepress/dist/client/theme-default',
+        '@theme-default': 'vitepress/dist/client/theme-default',
       },
     },
 

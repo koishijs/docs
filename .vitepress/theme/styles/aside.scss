@@ -1,0 +1,17 @@
+.VPSidebarGroup {
+  .items:first-child {
+    a:first-child {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--vp-c-text-1);
+      margin: 0;
+
+      &.active {
+        color: var(--vp-c-brand);
+      }
+    }
+  }
+}
