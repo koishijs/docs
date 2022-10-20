@@ -302,11 +302,6 @@ export default async () => defineConfig({
       { icon: 'discord', link: 'https://discord.com/invite/xfxYwmd284' },
       { icon: 'github', link: 'https://github.com/koishijs/novelai-bot' }
     ],
-  
-    footer: {
-      message: `Released under the MIT License.`,
-      copyright: 'Copyright © 2022-present Shigma',
-    },
 
     editLink: {
       pattern: 'https://github.com/koishijs/docs/edit/main/:path',

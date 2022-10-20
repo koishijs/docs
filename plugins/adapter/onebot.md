@@ -33,7 +33,7 @@ sidebarDepth: 2
 2. 打开命令行并 cd 到你的解压目录
 3. 输入 `./go-cqhttp` 并运行，此时将提示：
 
-```cli
+```sh
 未找到配置文件，正在为您生成配置文件中！
 请选择你需要的通信方式:
   1: HTTP 通信
@@ -45,7 +45,7 @@ sidebarDepth: 2
 
 4. 根据 [配置参考](#go-cqhttp-配置参考) 中的说明修改 config.yml 文件。之后再次输入 `./go-cqhttp` 并运行：
 
-```cli
+```sh
 [INFO]: 登录成功 欢迎使用: balabala
 ```
 
@@ -55,7 +55,7 @@ sidebarDepth: 2
 
 默认情况下启用 go-cqhttp 将会有五秒钟的延时，可以使用命令行参数 `faststart` 进行跳过：
 
-```cli
+```sh
 ./go-cqhttp faststart
 ```
 
@@ -65,13 +65,13 @@ sidebarDepth: 2
 
 在命令行中进入 go-cqhttp 所在目录并输入：
 
-```cli
+```sh
 ./go-cqhttp update
 ```
 
 如果在国内连接 GitHub 下载速度可能很慢, 可以使用镜像源下载：
 
-```cli
+```sh
 ./go-cqhttp update https://github.rc1844.workers.dev
 ```
 
@@ -95,7 +95,7 @@ sidebarDepth: 2
 
 在终端执行：
 
-```cli
+```sh
 apt install -y ffmpeg
 ```
 
@@ -103,7 +103,7 @@ apt install -y ffmpeg
 
 在终端执行：
 
-```cli
+```sh
 # Centos7 及之前
 yum install ffmpeg ffmpeg-devel
 
@@ -429,7 +429,7 @@ await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
 
 在终端执行：
 
-```cli
+```sh
 node -e "console.log(process.arch)"
 ```
 

@@ -48,7 +48,7 @@ import VPLocalNav from '@theme-default/components/VPLocalNav.vue'
 import VPSidebar from '@theme-default/components/VPSidebar.vue'
 import VPFooter from '@theme-default/components/VPFooter.vue'
 import VPDoc from '@theme-default/components/VPDoc.vue'
-import Starter from './layouts/starter.vue'
+import starter from './layouts/starter.vue'
 
 const {
   isOpen: isSidebarOpen,
@@ -67,12 +67,14 @@ provide('close-sidebar', closeSidebar)
 const { frontmatter } = useData()
 
 const layouts = {
-  starter: Starter,
+  starter,
   default: VPDoc,
 }
 
 const NotFound = inject('NotFound')
-const component = computed(() => layouts[frontmatter.layout] || layouts.default)
+const component = computed(() => {
+  return layouts[frontmatter.value.layout] || layouts.default
+})
 
 </script>
 

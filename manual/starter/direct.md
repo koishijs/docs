@@ -72,7 +72,7 @@ app.start()
 
 最后运行这个文件：
 
-```cli
+```sh
 node -r esbuild-register .
 ```
 

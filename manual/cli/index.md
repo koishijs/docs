@@ -6,7 +6,7 @@
 
 `koishi start` 指令需要一个配置文件作为入口。这个配置文件允许 js，ts，json，yaml 等多种格式。默认情况下，配置文件名应当形如 `koishi.[ext]` 或 `koishi.config.[ext]`，但你其实也可以传入一个 `file` 参数来指定其他名称。它的完整语法为：
 
-```cli
+```sh
 # 如果你不写这里的 file 参数，程序就会自动寻找 koishi.[ext] 和 koishi.config.[ext] 文件
 koishi start [file] [options]
 ```
