@@ -22,16 +22,17 @@ export default defineConfig({
     }, {
       text: '指南',
       link: '/guide/',
+      activeMatch: '/guide/',
     }, {
       text: 'API',
       link: '/api/',
+      activeMatch: '/api/',
     }],
 
     sidebar: {
       '/manual/': [{
-        text: '介绍',
         items: [
-          makeLink('简介', '/manual/introduction.md'),
+          makeLink('介绍', '/manual/introduction.md'),
         ],
       }, {
         text: '起步',
@@ -61,7 +62,6 @@ export default defineConfig({
       }],
 
       '/guide/': [{
-        text: '总览',
         items: [
           makeLink('总览', '/guide/'),
         ],
@@ -302,6 +302,25 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/koishijs/docs/edit/main/:path',
+    },
+  },
+
+  vite: {
+    resolve: {
+      dedupe: ['vue'],
+      alias: {
+        '@parent': 'vitepress/dist/client/theme-default',
+      },
+    },
+
+    optimizeDeps: {
+      include: ['vue'],
+    },
+
+    server: {
+      fs: {
+        strict: false,
+      },
     },
   },
 })

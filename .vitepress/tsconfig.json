@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
     "target": "esnext",
     "module": "commonjs",
     "incremental": true,
@@ -7,6 +8,6 @@
     "moduleResolution": "node",
   },
   "include": [
-    ".vuepress/build",
+    "*",
   ],
 }
