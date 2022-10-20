@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 插件管理 (Market)
 
 ## 配置项

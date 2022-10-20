@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 配置模式 (Schema)
 
 ## 静态方法

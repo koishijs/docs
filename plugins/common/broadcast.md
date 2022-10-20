@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 发送广播 (Broadcast)
 
 ::: tip

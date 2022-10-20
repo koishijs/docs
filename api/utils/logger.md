@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 输出日志 (Logger)
 
 ## new Logger(name)

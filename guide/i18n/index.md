@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 多语言支持
 
 ::: warning

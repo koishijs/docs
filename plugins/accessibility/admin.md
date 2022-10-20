@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 数据管理 (Admin)
 
 ::: tip

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 插件系统 (Registry)
 
 ## 实例属性

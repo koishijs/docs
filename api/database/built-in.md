@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 内置数据结构
 
 Koishi 的数据库 API 实际上分为两部分：

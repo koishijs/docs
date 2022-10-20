@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 处理申请 (Verifier)
 
 @koishijs/plugin-verifier 可用于配置机器人接收到各类申请时的行为。

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 求值表达式 (Evaluation)
 
 ## 数值运算

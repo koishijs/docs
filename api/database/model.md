@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 数据模型 (Model)
 
 ## 数据类型

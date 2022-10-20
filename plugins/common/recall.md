@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 撤回消息 (Recall)
 
 ::: tip

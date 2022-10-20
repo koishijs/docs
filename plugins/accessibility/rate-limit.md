@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 速率限制 (Rate Limit)
 
 ::: tip

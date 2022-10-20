@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 发送反馈 (Feedback)
 
 ## 指令：feedback

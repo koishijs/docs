@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 会话选择器 (Selector)
 
 ## 实例属性

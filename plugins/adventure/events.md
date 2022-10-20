@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 事件
 
 ## Event API

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 账号绑定 (Bind)
 
 ::: tip

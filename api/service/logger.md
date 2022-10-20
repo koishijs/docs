@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 输出与日志
 
 ::: danger 注意

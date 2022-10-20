@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 编写适配器插件
 
 ::: danger 注意

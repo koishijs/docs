@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 发送消息 (Echo)
 
 ## 指令：echo

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 快捷回复 (Respondent)
 
 @koishijs/plugin-respondent 允许设置一套内置问答，就像这样：

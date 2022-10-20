@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 用户登录 (Auth)
 
 ## 配置项

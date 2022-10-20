@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 运行状态 (Status)
 
 ## 指令：status

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 查询表达式 (Query)
 
 ## 逻辑运算

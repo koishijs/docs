@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 使用命令行
 
 ## 启动 Koishi

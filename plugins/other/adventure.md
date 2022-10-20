@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 冒险 (Adventure)
 
 ::: tip

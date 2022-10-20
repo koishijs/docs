@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 模拟调用 (Sudo)
 
 ## 指令：sudo

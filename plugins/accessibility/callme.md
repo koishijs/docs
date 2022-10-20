@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 设置昵称 (Callme)
 
 ::: tip

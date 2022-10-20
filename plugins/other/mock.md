@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 测试工具 (Mock)
 
 @koishijs/plugin-mock 包含了被 Koishi 使用的测试工具。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 聊天工具 (Chat)
 
 koishi-plugin-chat 能够提供三方面的支持：

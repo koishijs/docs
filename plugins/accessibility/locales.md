@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 本地翻译 (Locales)
 
 @koishijs/plugin-locales 允许你在本地覆盖和扩展 Koishi 本体和其他插件的翻译文本。

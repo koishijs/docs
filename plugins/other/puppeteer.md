@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 网页截图 (Puppeteer)
 
 ::: warning

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 使用适配器
 
 ::: danger 注意

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 事件系统 (Lifecycle)
 
 ::: tip

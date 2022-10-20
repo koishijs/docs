@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 转发消息 (Forward)
 
 @koishijs/plugin-forward 支持在不同的频道之间转发消息。它有两种使用方法：
