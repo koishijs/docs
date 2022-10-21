@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import highlight from './markdown/highlight'
 import fence from './markdown/fence'
-import { resolve } from 'path'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
@@ -34,9 +33,17 @@ export default async () => defineConfig({
       link: '/guide/',
       activeMatch: '/guide/',
     }, {
-      text: '参考',
+      text: 'API',
       link: '/api/',
       activeMatch: '/api/',
+    }, {
+      text: '插件',
+      link: '/plugins/',
+      activeMatch: '/plugins/',
+    }, {
+      text: '关于',
+      link: '/about/history.md',
+      activeMatch: '/about/',
     }],
 
     sidebar: {
@@ -196,105 +203,100 @@ export default async () => defineConfig({
           makeLink('输出日志 (Logger)', '/api/utils/logger.md'),
           makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
         ],
-      // }],
+      }],
 
-      // '/plugins/': [{
-      //   text: '总览',
-      //   link: '/plugins/',
-      // }, {
-      //   text: '适配器支持',
-      //   items: [
-      //     makeLink('', '/plugins/adapter/discord.md'),
-      //     makeLink('', '/plugins/adapter/kook.md'),
-      //     makeLink('', '/plugins/adapter/onebot.md'),
-      //     makeLink('', '/plugins/adapter/qqguild.md'),
-      //     makeLink('', '/plugins/adapter/telegram.md'),
-      //   ],
-      // }, {
-      //   text: '数据库支持',
-      //   items: [
-      //     makeLink('', '/plugins/database/level.md'),
-      //     makeLink('', '/plugins/database/memory.md'),
-      //     makeLink('', '/plugins/database/mongo.md'),
-      //     makeLink('', '/plugins/database/mysql.md'),
-      //     makeLink('', '/plugins/database/sqlite.md'),
-      //   ],
-      // }, {
-      //   text: '资源存储支持',
-      //   items: [
-      //     makeLink('', '/plugins/assets/git.md'),
-      //     makeLink('', '/plugins/assets/local.md'),
-      //     makeLink('', '/plugins/assets/remote.md'),
-      //     makeLink('', '/plugins/assets/s3.md'),
-      //   ],
-      // }, {
-      //   text: '常用功能',
-      //   items: [
-      //     makeLink('', '/plugins/common/broadcast.md'),
-      //     makeLink('', '/plugins/common/echo.md'),
-      //     makeLink('', '/plugins/common/feedback.md'),
-      //     makeLink('', '/plugins/common/forward.md'),
-      //     makeLink('', '/plugins/common/recall.md'),
-      //     makeLink('', '/plugins/common/repeater.md'),
-      //     makeLink('', '/plugins/common/respondent.md'),
-      //   ],
-      // }, {
-      //   text: '辅助功能',
-      //   items: [
-      //     makeLink('', '/plugins/accessibility/admin.md'),
-      //     makeLink('', '/plugins/accessibility/bind.md'),
-      //     makeLink('', '/plugins/accessibility/callme.md'),
-      //     makeLink('', '/plugins/accessibility/commands.md'),
-      //     makeLink('', '/plugins/accessibility/locales.md'),
-      //     makeLink('', '/plugins/accessibility/rate-limit.md'),
-      //     makeLink('', '/plugins/accessibility/schedule.md'),
-      //     makeLink('', '/plugins/accessibility/sudo.md'),
-      //     makeLink('', '/plugins/accessibility/verifier.md'),
-      //   ],
-      // }, {
-      //   text: '控制台功能',
-      //   items: [
-      //     makeLink('', '/plugins/console/index.md'),
-      //     makeLink('', '/plugins/console/auth.md'),
-      //     makeLink('', '/plugins/console/chat.md'),
-      //     makeLink('', '/plugins/console/dataview.md'),
-      //     makeLink('', '/plugins/console/insight.md'),
-      //     makeLink('', '/plugins/console/logger.md'),
-      //     makeLink('', '/plugins/console/market.md'),
-      //     makeLink('', '/plugins/console/sandbox.md'),
-      //     makeLink('', '/plugins/console/status.md'),
-      //   ],
-      // }, {
-      //   text: '其他官方插件',
-      //   items: [
-      //     makeLink('', '/plugins/other/mock.md'),
-      //     makeLink('', '/plugins/other/puppeteer.md'),
-      //   ],
-      // }],
+      '/plugins/': [{
+        items: [
+          makeLink('总览', '/plugins/'),
+        ],
+      }, {
+        text: '适配器支持',
+        items: [
+          makeLink('适配器：Discord', '/plugins/adapter/discord.md'),
+          makeLink('适配器：KOOK', '/plugins/adapter/kook.md'),
+          makeLink('适配器：OneBot', '/plugins/adapter/onebot.md'),
+          makeLink('适配器：QQGuild', '/plugins/adapter/qqguild.md'),
+          makeLink('适配器：Telegram', '/plugins/adapter/telegram.md'),
+        ],
+      }, {
+        text: '数据库支持',
+        items: [
+          makeLink('数据库：LevelDB', '/plugins/database/level.md'),
+          makeLink('数据库：MongoDB', '/plugins/database/mongo.md'),
+          makeLink('数据库：MySQL', '/plugins/database/mysql.md'),
+          makeLink('数据库：SQLite', '/plugins/database/sqlite.md'),
+        ],
+      }, {
+        text: '资源存储支持',
+        items: [
+          makeLink('资源存储：Git', '/plugins/assets/git.md'),
+          makeLink('资源存储：Local', '/plugins/assets/local.md'),
+          makeLink('资源存储：Remote', '/plugins/assets/remote.md'),
+          makeLink('资源存储：S3', '/plugins/assets/s3.md'),
+        ],
+      }, {
+        text: '常用功能',
+        items: [
+          makeLink('发送广播 (Broadcast)', '/plugins/common/broadcast.md'),
+          makeLink('发送消息 (Echo)', '/plugins/common/echo.md'),
+          makeLink('发送反馈 (Feedback)', '/plugins/common/feedback.md'),
+          makeLink('转发消息 (Forward)', '/plugins/common/forward.md'),
+          makeLink('撤回消息 (Recall)', '/plugins/common/recall.md'),
+          makeLink('复读机 (Repeater)', '/plugins/common/repeater.md'),
+          makeLink('快捷回复 (Respondent)', '/plugins/common/respondent.md'),
+        ],
+      }, {
+        text: '辅助功能',
+        items: [
+          makeLink('数据管理 (Admin)', '/plugins/accessibility/admin.md'),
+          makeLink('账号绑定 (Bind)', '/plugins/accessibility/bind.md'),
+          makeLink('设置昵称 (Callme)', '/plugins/accessibility/callme.md'),
+          makeLink('指令管理 (Commands)', '/plugins/accessibility/commands.md'),
+          makeLink('本地翻译 (Locales)', '/plugins/accessibility/locales.md'),
+          makeLink('速率限制 (Rate Limit)', '/plugins/accessibility/rate-limit.md'),
+          makeLink('计划任务 (Schedule)', '/plugins/accessibility/schedule.md'),
+          makeLink('模拟调用 (Sudo)', '/plugins/accessibility/sudo.md'),
+          makeLink('处理申请 (Verifier)', '/plugins/accessibility/verifier.md'),
+        ],
+      }, {
+        text: '控制台功能',
+        items: [
+          makeLink('控制台 (Console)', '/plugins/console/index.md'),
+          makeLink('用户登录 (Auth)', '/plugins/console/auth.md'),
+          makeLink('聊天工具 (Chat)', '/plugins/console/chat.md'),
+          makeLink('数据库操作 (Dataview)', '/plugins/console/dataview.md'),
+          makeLink('插件依赖图 (Insight)', '/plugins/console/insight.md'),
+          makeLink('日志管理 (Logger)', '/plugins/console/logger.md'),
+          makeLink('插件管理 (Market)', '/plugins/console/market.md'),
+          makeLink('沙箱调试 (Sandbox)', '/plugins/console/sandbox.md'),
+          makeLink('运行状态 (Status)', '/plugins/console/status.md'),
+        ],
+      }, {
+        text: '测试工具',
+        items: [
+          makeLink('模拟聊天环境 (Mock)', '/plugins/test/mock.md'),
+          makeLink('模拟数据库 (Memory)', '/plugins/test/memory.md'),
+        ],
+      }],
 
-      // '/community/': communitySidebar,
-
-      // '/about/': [{
-      //   text: '常见问题',
-      //   link: '/about/faq.md',
-      // }, {
-      //   text: '更新与迁移',
-      //   items: [
-      //     makeLink('', '/about/history.md'),
-      //     makeLink('', '/about/migration.md'),
-      //     makeLink('', '/about/releases/v4.1.md'),
-      //     makeLink('', '/about/releases/v4.2.md'),
-      //     makeLink('', '/about/releases/v4.3.md'),
-      //     makeLink('', '/about/releases/v4.4.md'),
-      //     makeLink('', '/about/releases/v4.5.md'),
-      //     makeLink('', '/about/releases/v4.6.md'),
-      //   ],
-      // }, {
-      //   text: '贡献指南',
-      //   items: [
-      //     makeLink('', '/about/contribute/structure.md'),
-      //     makeLink('', '/about/contribute/docs.md'),
-      //   ],
+      '/about/': [{
+        text: '更新与迁移',
+        items: [
+          makeLink('发展史', '/about/history.md'),
+          makeLink('从 v3 迁移', '/about/migration.md'),
+          makeLink('v4.1 版本介绍', '/about/releases/v4.1.md'),
+          makeLink('v4.2 版本介绍', '/about/releases/v4.2.md'),
+          makeLink('v4.3 版本介绍', '/about/releases/v4.3.md'),
+          makeLink('v4.4 版本介绍', '/about/releases/v4.4.md'),
+          makeLink('v4.5 版本介绍', '/about/releases/v4.5.md'),
+          makeLink('v4.6 版本介绍', '/about/releases/v4.6.md'),
+        ],
+      }, {
+        text: '贡献指南',
+        items: [
+          makeLink('项目结构', '/about/contribute/structure.md'),
+          makeLink('文档贡献指南', '/about/contribute/docs.md'),
+        ],
       }],
     },
 
