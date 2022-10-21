@@ -28,7 +28,7 @@ export default {
   ['Koishi', '一直挖坑一直爽'],
 ]"/>
 
-如果想要加入更高级和用户可定义的问答系统，可以参见 [koishi-plugin-dialogue](../../community/dialogue/)。
+如果想要加入更高级和用户可定义的问答系统，可以参见 [koishi-plugin-dialogue](https://dialogue.koishi.chat)。
 
 ## 配置项
 

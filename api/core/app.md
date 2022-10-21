@@ -23,13 +23,13 @@
 
 - 类型：`string | string[]`
 
-机器人的昵称，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `'恋恋'`，则你可以通过 `恋恋，help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command.md#指令前缀) 一节。
+机器人的昵称，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `'恋恋'`，则你可以通过 `恋恋，help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command/execution.md#指令前缀) 一节。
 
 ### options.prefix
 
 - 类型：`string | string[]`
 
-指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command.md#指令前缀) 一节。
+指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command/execution.md#指令前缀) 一节。
 
 ### options.delay
 
@@ -88,7 +88,7 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 - 类型：`number`
 
-用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../guide/command.md#模糊匹配) 一节。
+用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../guide/command/execution.md#模糊匹配) 一节。
 
 ### options.request.proxyAgent
 
@@ -104,7 +104,7 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 - 类型：`Record<string, any>`
 
-要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见 [插件与上下文](../../guide/plugin-and-context.md) 一章。
+要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见 [认识插件](../../guide/plugin/) 一章。
 
 我们还支持配置插件的上下文选择器：
 
@@ -123,7 +123,7 @@ interface Selection {
 }
 ```
 
-参见 [在配置文件中使用选择器](../../guide/context.md#在配置文件中使用选择器) 一节。
+参见 [在配置文件中使用选择器](../../guide/aspect/selector.md#在配置文件中使用选择器) 一节。
 
 ### options.logger
 
@@ -154,7 +154,7 @@ interface Selection {
   - **watch.root:** `string` 要监听的根目录，相对于工作路径
   - **watch.debounce:** `number` 延迟触发更新的等待时间，默认为 `100`
 
-监听文件变化的选项。参见 [插件热重载](../../guide/cli.md#插件热重载) 一节。
+监听文件变化的选项。参见 [模块热替换](../../manual/cli/index.md#模块热替换) 一节。
 
 ### options.timezoneOffset
 

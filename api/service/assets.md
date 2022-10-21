@@ -4,7 +4,7 @@
 `ctx.assets` 并非内置服务。如要使用请同时安装提供此服务的插件，可参见 [相关生态](#相关生态)。
 :::
 
-在一些情况下，我们需要非即时地处理含有资源消息段的消息，例如使用 [dialogue](../../community/dialogue/) 插件添加教学问答，或是在 [github](../../community/github/) 插件中快速回复等等。虽然可以直接将这些资源消息段发送出去，但由于涉及的消息会被长时间存储，将会导致一些潜在的问题：
+在一些情况下，我们需要非即时地处理含有资源消息段的消息，例如使用 [dialogue](https://dialogue.koishi.chat) 插件添加教学问答，或是在 [github](https://github.koishi.chat) 插件中快速回复等等。虽然可以直接将这些资源消息段发送出去，但由于涉及的消息会被长时间存储，将会导致一些潜在的问题：
 
 - 部分平台提供的资源链接只对特定账户可用，因此发送出去的消息无法被其他平台解析
 - 部分平台提供的资源链接并不是永久生效的，在一段时间后相应的内容将失效
@@ -69,5 +69,5 @@ export interface FileInfo {
 
 以下是使用此服务的插件：
 
-- [koishi-plugin-github](../../community/github/) (可选)
-- [koishi-plugin-dialogue](../../community/dialogue/) (可选)
+- [koishi-plugin-github](https://github.koishi.chat) (可选)
+- [koishi-plugin-dialogue](https://dialogue.koishi.chat) (可选)
