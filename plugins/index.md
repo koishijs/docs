@@ -17,7 +17,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## 数据库支持
 
 - [@koishijs/plugin-database-level](./database/level.md)
-- [@koishijs/plugin-database-memory](./database/memory.md)
+- [@koishijs/plugin-database-memory]()
 - [@koishijs/plugin-database-mongo](./database/mongo.md)
 - [@koishijs/plugin-database-mysql](./database/mysql.md)
 - [@koishijs/plugin-database-sqlite](./database/sqlite.md)

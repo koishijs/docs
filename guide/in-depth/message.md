@@ -14,13 +14,13 @@
     - 临时中间件会直接插在当前序列的尾端，并不会影响中间件池本身
     - 如果执行中遇到错误或未调用 `next` 函数，会停止后续中间件的执行
 4. 触发 [middleware](../../api/core/events.md#事件：middleware) 事件
-5. 更新当前用户和群的缓冲数据 (参见 [按需加载与自动更新](./manage.md#按需加载与自动更新))
+5. 更新当前用户和群的缓冲数据 (参见 [按需加载与自动更新](../database/observer.md#按需加载与自动更新))
 
 ### 内置中间件
 
 1. 从前缀中匹配 at 机器人，nickname 或 prefix
 2. 预处理消息内容，生成 [`session.parsed`](../../api/core/session.md#session-parsed)
-3. 触发 [before-parse](../../api/core/events.md#事件：before-parse) 事件，尝试解析消息内容 ([快捷方式](./execute.md#快捷方式) 的解析也在此处完成)
+3. 触发 [before-parse](../../api/core/events.md#事件：before-parse) 事件，尝试解析消息内容 ([快捷方式](../command/execution.md#快捷方式) 的解析也在此处完成)
 4. 如果数据库存在：
     - 触发 [before-attach-channel](../../api/core/events.md#事件：before-attach-channel) 事件
     - 获取频道数据并存储于 [`session.channel`](../../api/core/session.md#session-channel)
@@ -31,7 +31,7 @@
     - 根据 flags 等字段判断是否应该处理该信息，如果不应该则直接返回
     - 触发 [attach-user](../../api/core/events.md#事件：attach-user) 事件 (用户可以在其中同步地更新群和用户数据，或中止执行后续操作)
 5. 如果解析出指令：执行该指令 (下接 [指令执行流程](#指令执行流程))
-6. 尝试解析出候选指令，如果成功则显示候选项 (参见 [模糊匹配](./execute.md#模糊匹配))
+6. 尝试解析出候选指令，如果成功则显示候选项 (参见 [模糊匹配](../command/execution.md#模糊匹配))
 
 在以上过程中，无论是解析指令还是出发内置的 before-attach-* 钩子都可能用到 [parse](../../api/core/events.md#事件：parse) 事件。
 
@@ -40,7 +40,7 @@
 1. 如果解析过程中存在错误 (如非法参数等)，直接返回错误信息
 2. 逐一调用 check 回调函数，直到返回值不为 `undefined`
 3. 触发 [before-command](../../api/core/events.md#事件：before-command) 事件：
-    - 如果是 -h, --help 则直接显示帮助信息 (参见 [查看帮助](./help.md#查看帮助))
+    - 如果是 -h, --help 则直接显示帮助信息 (参见 [查看帮助](../command/help.md#查看帮助))
     - 根据配置检查用户权限和调用记录 (参见 [指令调用管理](./message.md#指令调用管理))
 4. 逐一调用 action 回调函数，直到返回值不为 `undefined`
 5. 触发 [command](../../api/core/events.md#事件：command) 事件

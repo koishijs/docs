@@ -33,7 +33,7 @@
 
 参考：
 
-- [更多功能 / 使用缓存数据](./service/cache.md)
+- [更多功能 / 使用缓存数据]()
 
 ## 频道 (Channel)
 
@@ -41,14 +41,14 @@
 
 参考：
 
-- [处理交互 / 指令系统初探](../guide/message/command.md)
-- [API 文档 / 指令 (Command)](../core/command.md)
+- [处理交互 / 指令系统初探](../guide/command/)
+- [API 文档 / 指令 (Command)](./core/command.md)
 
 ## 上下文 (Context)
 
 参考：
 
-- [复用性 / 使用上下文](../guide/plugin/context.md)
+- [复用性 / 使用上下文](../guide/aspect/selector.md)
 - [API 文档 / 上下文 (Context)](./core/context.md)
 
 ## 数据库 (Database)
@@ -56,7 +56,7 @@
 参考：
 
 - [数据库 / 使用数据库](../guide/database/)
-- [API 文档 / 数据库 (Database)](./core/database.md)
+- [API 文档 / 数据库 (Database)](./database/built-in.md)
 
 ## 事件 (Events)
 
@@ -82,7 +82,7 @@
 
 参考：
 
-- [数据库 / 扩展数据模型](../guide/database/database.md#扩展数据模型)
+- [数据库 / 扩展数据模型](../guide/database/model.md#扩展数据模型)
 - [API 文档 / 数据模型 (Model)](./database/model.md)
 
 ## 观察者 (Observer)
@@ -127,7 +127,7 @@
 
 参考：
 
-- [模块化 / 服务与依赖](../guide/plugin/service.md)
+- [模块化 / 服务与依赖](../guide/aspect/service.md)
 
 ## 会话 (Session)
 
