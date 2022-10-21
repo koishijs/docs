@@ -74,4 +74,4 @@ sidebarDepth: 2
 
 - 类型：`string`
 
-Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/app.md#options-selfurl) 的值。
+Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/core/app.md#options-selfurl) 的值。

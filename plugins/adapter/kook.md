@@ -39,7 +39,7 @@ sidebarDepth: 2
 - 类型: `'separate' | 'mixed' | 'card'`
 - 默认值: `'separate'`
 
-控制当尝试发送含有[资源消息段](../segment.md#资源消息段)的消息时的行为。
+控制当尝试发送含有[资源消息段](../../api/utils/segment.md#资源消息段)的消息时的行为。
 
 - **separate:** 每一个资源消息段，以及资源消息段之间的文本都将单独发送一条消息
 - **mixed:** 当要发送的内容中含有多个资源消息段或资源消息段和文本的混合时，发送卡片消息；否则将单独发送资源消息段
@@ -62,4 +62,4 @@ sidebarDepth: 2
 
 ## WebSocket 配置项
 
-包括全部的 [`WsClient`](../adapter.md#类-adapter-wsclient) 选项。
+包括全部的 [`WsClient`](../../api/core/adapter.md#类：adapter-websocketclient) 选项。

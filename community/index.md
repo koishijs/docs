@@ -6,8 +6,8 @@
 
 大型插件提供了丰富的功能，会在本栏有详细的介绍：
 
-- [koishi-plugin-dialogue](./dialogue/)：教学系统
-- [koishi-plugin-eval](./eval/)：执行脚本
+- [koishi-plugin-dialogue]()：教学系统
+- [koishi-plugin-eval]()：执行脚本
 
 ## 装饰器支持
 

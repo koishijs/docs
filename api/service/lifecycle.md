@@ -1,7 +1,7 @@
 # 事件系统 (Lifecycle)
 
 ::: tip
-相关指南：[事件系统](../../guide/plugin/events.md)
+相关指南：[事件系统](../../guide/aspect/events.md)
 :::
 
 ## 实例方法
@@ -9,7 +9,7 @@
 ### ctx.emit(session?, event, ...param)
 ### ctx.parallel(session?, event, ...param)
 
-- **session:** [`Session`](./session.md) 会话对象
+- **session:** [`Session`](../core/session.md) 会话对象
 - **event:** `string` 事件名称
 - **param:** `any[]` 事件的参数
 - 返回值: `boolean` 匹配结果
@@ -19,7 +19,7 @@
 ### ctx.bail(session?, event, ...param)
 ### ctx.serial(session?, event, ...param)
 
-- **session:** [`Session`](./session.md) 会话对象
+- **session:** [`Session`](../core/session.md) 会话对象
 - **event:** `string` 事件名称
 - **param:** `any[]` 事件的参数
 - 返回值: `boolean` 匹配结果
@@ -29,7 +29,7 @@
 ### ctx.chain(session?, event, ...param) <Badge text="beta" type="warning"/>
 ### ctx.waterfall(session?, event, ...param) <Badge text="beta" type="warning"/>
 
-- **session:** [`Session`](./session.md) 会话对象
+- **session:** [`Session`](../core/session.md) 会话对象
 - **event:** `string` 事件名称
 - **param:** `any[]` 事件的参数
 - 返回值: `boolean` 匹配结果
@@ -73,7 +73,7 @@
 
 ### ctx.middleware(middleware, prepend?)
 
-- **middleware:** [`Middleware`](../../guide/message.md#使用中间件) 要注册的中间件
+- **middleware:** [`Middleware`](../../guide/message/middleware.md#使用中间件) 要注册的中间件
 - **prepend:** `boolean` 是否前置
 - 返回值: `() => boolean` 取消这个中间件
 

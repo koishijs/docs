@@ -48,9 +48,9 @@
 ### ctx.logger(scope?)
 
 - **scope:** `string` 要指定的类型，默认为 `''`
-- 返回值: [`Logger`](../../guide/logger.md#使用-logger)
+- 返回值: [`Logger`]()
 
-根据 namespace 生成一个 [Logger 对象](../../guide/logger.md#使用-logger)。
+根据 namespace 生成一个 [Logger 对象]()。
 
 ## 静态属性和方法
 

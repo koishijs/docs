@@ -55,7 +55,7 @@ interface DelayOptions {
 
 - 类型：`string`
 
-Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](./adapter/telegram.md) 或是 [plugin-assets](../../plugins/other/assets.md)）需要用到。
+Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](../../plugins/assets/local.md)）需要用到。
 
 ### options.maxListeners
 
@@ -132,21 +132,21 @@ interface Selection {
 - 类型：`number | object`
 - 默认值：`{}`
 
-默认的输出等级。参见 [设置输出等级](../../guide/logger.md#设置输出等级) 一节。
+默认的输出等级。参见 [设置输出等级](../utils/logger.md#logger-level) 一节。
 
 #### options.logger.showTime
 
 - 类型：`string | boolean`
 - 默认值：`false`
 
-输出日志所使用的时间格式。参见 [输出时间](../../guide/logger.md#输出时间) 一节。
+输出日志所使用的时间格式。参见 [输出时间](../utils/logger.md#not-exist) 一节。
 
 #### options.logger.showDiff
 
 - 类型：`boolean`
 - 默认值：初始未设置，在 ready 事件触发后修改为 `!options.logTime`
 
-是否标注相邻两次输出的时间差。参见 [输出时间](../../guide/logger.md#输出时间) 一节。
+是否标注相邻两次输出的时间差。参见 [输出时间](../utils/logger.md#not-exist) 一节。
 
 ### options.watch
 
