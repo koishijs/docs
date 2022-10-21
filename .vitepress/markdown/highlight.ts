@@ -1,6 +1,5 @@
 // modified from https://github.com/vuejs/vitepress/blob/283407d072353a77ee0939a71a1f2a35e953eb7d/src/node/markdown/plugins/highlight.ts
 import { IThemeRegistration, getHighlighter, HtmlRendererOptions } from 'shiki'
-import type { ThemeOptions } from 'vitepress'
 import MarkdownIt from 'markdown-it'
 
 /**
@@ -37,6 +36,8 @@ const attrsToLines = (attrs: string): HtmlRendererOptions['lineOptions'] => {
 const alias = {
   npm: 'sh',
   yarn: 'sh',
+  podman: 'sh',
+  docker: 'sh',
 }
 
 export default async function highlight(theme: string): Promise<MarkdownIt.Options['highlight']> {
