@@ -28,7 +28,7 @@ yarn setup [name] [-c]
 
 我们假设你创建了一个叫 `demo` 的插件。那么，你将看到下面的目录结构：
 
-```
+```diff
 root
 ├── plugins
 │   └── demo

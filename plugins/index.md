@@ -51,7 +51,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-sudo](./accessibility/sudo.md)：模拟调用
 - [@koishijs/plugin-verifier](./accessibility/verifier.md)：处理申请
 
-## 控制台开发
+## 控制台功能
 
 - [@koishijs/plugin-console](./console/index.md)：控制台
 - [@koishijs/plugin-chat](./console/chat.md)：聊天工具
@@ -61,9 +61,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-market](./console/market.md)：插件管理
 - [@koishijs/plugin-status](./console/status.md)：运行状态
 
-## 其他官方插件
+## 测试工具
 
-此外，官方还维护了其他大量功能插件，它们同样会在本栏有介绍：
-
-- [@koishijs/plugin-mock](./other/mock.md)：测试工具
-- [@koishijs/plugin-puppeteer](./other/puppeteer.md)：网页截图
+- [@koishijs/plugin-memory](./test/memory.md)：模拟数据库
+- [@koishijs/plugin-mock](./test/mock.md)：模拟聊天环境
