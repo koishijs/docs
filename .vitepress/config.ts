@@ -7,6 +7,8 @@ const makeLink = (text: string, link: string) => ({ text, link })
 export default async () => defineConfig({
   title: 'Koishi',
 
+  ignoreDeadLinks: true,
+
   head: [
     ['link', { rel: 'icon', href: '/koishi.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -251,7 +253,6 @@ export default async () => defineConfig({
           makeLink('数据管理 (Admin)', '/plugins/accessibility/admin.md'),
           makeLink('账号绑定 (Bind)', '/plugins/accessibility/bind.md'),
           makeLink('设置昵称 (Callme)', '/plugins/accessibility/callme.md'),
-          makeLink('指令管理 (Commands)', '/plugins/accessibility/commands.md'),
           makeLink('本地翻译 (Locales)', '/plugins/accessibility/locales.md'),
           makeLink('速率限制 (Rate Limit)', '/plugins/accessibility/rate-limit.md'),
           makeLink('计划任务 (Schedule)', '/plugins/accessibility/schedule.md'),
@@ -264,6 +265,7 @@ export default async () => defineConfig({
           makeLink('控制台 (Console)', '/plugins/console/index.md'),
           makeLink('用户登录 (Auth)', '/plugins/console/auth.md'),
           makeLink('聊天工具 (Chat)', '/plugins/console/chat.md'),
+          makeLink('指令管理 (Commands)', '/plugins/console/commands.md'),
           makeLink('数据库操作 (Dataview)', '/plugins/console/dataview.md'),
           makeLink('插件依赖图 (Insight)', '/plugins/console/insight.md'),
           makeLink('日志管理 (Logger)', '/plugins/console/logger.md'),

@@ -51,7 +51,7 @@
   - @koishijs/scripts：用于模板项目的命令行工具
 - 数据库相关：
   - [@koishijs/plugin-database-level](../plugins/database/level.md)：LevelDB 数据库实现
-  - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
+  - [@koishijs/plugin-database-memory](../plugins/test/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
 - 资源存储相关：
   - [@koishijs/plugin-assets-git](../plugins/assets/git.md)：使用 git 仓库存放资源文件
@@ -95,7 +95,7 @@
 ### 插件变更
 
 - 移除了 before-connect 和 before-disconnect 事件，请直接使用 ready 和 dispose 事件代替
-- 新增了 [Schema API](./schema.md)，用于描述插件的配置项，下面是一个例子：
+- 新增了 [Schema API](../api/utils/schema.md)，用于描述插件的配置项，下面是一个例子：
 
 ```ts
 // @errors: 2749
