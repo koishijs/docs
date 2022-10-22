@@ -13,12 +13,9 @@
     <VPLocalNav :open="isSidebarOpen" @open-menu="openSidebar" />
     <VPSidebar :open="isSidebarOpen" />
 
-    <div class="VPContent" id="VPContent" :class="{
-      'has-sidebar': hasSidebar,
-      'is-home': frontmatter.layout === 'home'
-    }">
+    <div class="VPContent" id="VPContent" :class="contentClass">
       <NotFound v-if="route.component === NotFound" />
-      <component :is="component">
+      <component v-else :is="component">
         <template #doc-footer-before></template>
         <template #doc-before></template>
         <template #doc-after></template>
@@ -48,7 +45,9 @@ import VPLocalNav from '@theme-default/components/VPLocalNav.vue'
 import VPSidebar from '@theme-default/components/VPSidebar.vue'
 import VPFooter from '@theme-default/components/VPFooter.vue'
 import VPDoc from '@theme-default/components/VPDoc.vue'
-import starter from './layouts/starter.vue'
+import home from '../layouts/home.vue'
+import market from '../layouts/market.vue'
+import starter from '../layouts/starter.vue'
 
 const {
   isOpen: isSidebarOpen,
@@ -67,6 +66,8 @@ provide('close-sidebar', closeSidebar)
 const { frontmatter } = useData()
 
 const layouts = {
+  home,
+  market,
   starter,
   default: VPDoc,
 }
@@ -75,6 +76,11 @@ const NotFound = inject('NotFound')
 const component = computed(() => {
   return layouts[frontmatter.value.layout] || layouts.default
 })
+
+const contentClass = computed(() => ({
+  'has-sidebar': hasSidebar.value,
+  [`layout-${frontmatter.value.layout}`]: frontmatter.value.layout,
+}))
 
 </script>
 
@@ -91,11 +97,6 @@ const component = computed(() => {
   flex-shrink: 0;
   margin: 0 auto;
   width: 100%;
-}
-
-.VPContent.is-home {
-  width: 100%;
-  max-width: 100%;
 }
 
 @media (min-width: 960px) {

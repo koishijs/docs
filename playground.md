@@ -1,5 +1,5 @@
 ---
-layout: Playground
+layout: playground
 ---
 
 # 演练场

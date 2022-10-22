@@ -1,5 +1,5 @@
 <template>
-  <div class="starter-container page">
+  <div class="starter-container">
     <div class="vp-doc">
       <content />
     </div>
