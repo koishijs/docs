@@ -8,7 +8,7 @@
         <div class="chooser-header chooser-cell">
           <span>我使用 Koishi……</span>
         </div>
-        <div class="chooser-select">
+        <div class="chooser-select chooser-select-usage">
           <div class="chooser-select-item chooser-cell"
             v-for="(value, key) in choices" :key="key"
             :class="{ selected: chooserUsage === key }"
@@ -22,7 +22,7 @@
         <div class="chooser-header chooser-cell">
           <span>{{ choices[chooserUsage].caption }}</span>
         </div>
-        <div class="chooser-select links">
+        <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
           <a class="chooser-select-item chooser-cell"
             v-for="(value, key) in choices[chooserUsage].children" :key="key"
             :href="normalizeLink(value)">
@@ -38,9 +38,9 @@
 
 import { ref } from 'vue'
 import { normalizeLink } from '@theme-default/support/utils.js'
-const chooserUsage = ref('non-dev')
+const chooserUsage = ref('production')
 const choices = {
-  'non-dev': {
+  production: {
     text: '用于搭建机器人服务',
     caption: '我的运行环境是……',
     children: {
@@ -48,9 +48,11 @@ const choices = {
       'macOS': '/manual/starter/desktop',
       'Linux': '/manual/starter/desktop',
       'Android': '/manual/starter/mobile',
+      'Docker': '/manual/starter/docker',
+      'Server': '/manual/starter/server',
     },
   },
-  dev: {
+  development: {
     text: '用于开发',
     caption: '我希望 Koishi 作为……',
     children: {
@@ -77,9 +79,13 @@ const choices = {
 
   @media (max-width: 719px) {
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 0;
     padding-top: calc(1rem + var(--vp-nav-height));
   }
+}
+
+.vp-doc {
+  padding: 16px 24px;
 }
 
 .content {
@@ -90,7 +96,7 @@ const choices = {
 }
 
 .chooser {
-  .chooser-cell {
+  &-cell {
     padding: 20px 36px;
     font-size: 1.125rem;
 
@@ -101,14 +107,14 @@ const choices = {
 
   &-header {
     background-color: var(--vp-c-bg-alt);
+    // border-bottom: 1px solid var(--vp-c-divider-light);
   }
 
   &-select {
-    display: flex;
+    display: grid;
 
     &-item {
       flex: 1;
-      font-weight: bold;
       cursor: pointer;
       background-color: var(--vp-c-bg-alt);
       transition: background-color 0.3s ease;
@@ -118,9 +124,34 @@ const choices = {
       }
     }
 
-    @media (max-width: 719px) {
-      flex-direction: column;
+    &-usage {
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 719px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
+
+    &-development {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      @media (max-width: 719px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-production {
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 719px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  > div + div {
+    // border-top: 1px solid var(--vp-c-divider-light);
   }
 }
 
