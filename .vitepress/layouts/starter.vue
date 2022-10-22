@@ -3,8 +3,8 @@
     <div class="vp-doc">
       <content />
     </div>
-    <div class="chooser">
-      <div>
+    <div :class="chooserUsage">
+      <div class="chooser">
         <div class="chooser-header chooser-cell">
           <span>我使用 Koishi……</span>
         </div>
@@ -13,23 +13,25 @@
             v-for="(value, key) in choices" :key="key"
             :class="{ selected: chooserUsage === key }"
             @click="chooserUsage = key">
-            &gt; {{ value.text }}
+            <span class="hint"></span>{{ value.text }}
           </div>
         </div>
       </div>
 
-      <div>
-        <div class="chooser-header chooser-cell">
-          <span>{{ choices[chooserUsage].caption }}</span>
+      <transition>
+        <div class="chooser" :key="chooserUsage">
+          <div class="chooser-header chooser-cell">
+            <span>{{ choices[chooserUsage].caption }}</span>
+          </div>
+          <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
+            <a class="chooser-select-item chooser-cell"
+              v-for="(value, key) in choices[chooserUsage].children" :key="key"
+              :href="normalizeLink(value)">
+              <span class="hint"></span>{{ key }}
+            </a>
+          </div>
         </div>
-        <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
-          <a class="chooser-select-item chooser-cell"
-            v-for="(value, key) in choices[chooserUsage].children" :key="key"
-            :href="normalizeLink(value)">
-            &gt; {{ key }}
-          </a>
-        </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -74,6 +76,7 @@ const choices = {
   flex-direction: column;
   justify-content: center;
   max-width: 840px;
+  position: relative;
   margin: 0 auto;
   margin-top: calc(0px - var(--vp-nav-height));
 
@@ -118,9 +121,42 @@ const choices = {
       cursor: pointer;
       background-color: var(--vp-c-bg-alt);
       transition: background-color 0.3s ease;
+
       &:hover, &.selected {
         background-color: var(--vp-button-brand-bg);
         color: var(--vp-button-brand-text);
+      }
+
+      .hint {
+        width: 1.75rem;
+        height: 1rem;
+        display: inline-block;
+
+        &::before {
+          content: '>';
+          position: relative;
+          transition: padding-left 0.3s cubic-bezier(.6, 0, 1, 1);
+        }
+      }
+
+      &.selected .hint::before {
+        animation: chooser-hint-bounce 1s infinite 0.3s;
+      }
+
+      &:hover .hint::before {
+        padding-left: 0.5rem;
+      }
+
+      @keyframes chooser-hint-bounce {
+        0%, 100% {
+          padding-left: 0.5rem;
+          animation-timing-function: cubic-bezier(.6, 0, 1, 1);
+        }
+
+        50% {
+          padding-left: 0;
+          animation-timing-function: cubic-bezier(0, 0, .4, 1);
+        }
       }
     }
 
@@ -150,8 +186,39 @@ const choices = {
     }
   }
 
-  > div + div {
-    // border-top: 1px solid var(--vp-c-divider-light);
+  &:first-child {
+    margin-bottom: 12rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: -12rem;
+    position: absolute;
+    width: 100%;
+
+    &.v-enter-active,
+    &.v-leave-active {
+      transition: opacity 0.15s ease, transform 0.3s ease;
+    }
+
+    @mixin transform($distance) {
+      .development &.v-enter-from,
+      .production &.v-leave-to {
+        opacity: 0;
+        transform: translateX(#{$distance});
+      }
+
+      .development &.v-leave-to,
+      .production &.v-enter-from {
+        opacity: 0;
+        transform: translateX(-#{$distance});
+      }
+    }
+
+    @include transform(50%);
+
+    @media (max-width: 719px) {
+      @include transform(100%);
+    }
   }
 }
 

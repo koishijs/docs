@@ -8,6 +8,10 @@ redirectFrom:
 # 作为依赖调用
 
 ::: tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+:::
+
+::: tip
 这篇指南假设你已了解关于 [TypeScript](https://www.typescriptlang.org/) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JS 开发或者对编写业务代码不感兴趣，建议跳过本章，直接前往 [创建模板项目](./boilerplate.md) 章节。
 :::
 
