@@ -103,14 +103,83 @@
 
 - **type:** 特殊类型，例如 `flash` 表示 QQ 闪照
 
+`<image>` 元素用于表示图片。
+
 ### 语音 (audio)
 
 参见上述通用属性。
+
+`<audio>` 元素用于表示语音。
 
 ### 视频 (video)
 
 参见上述通用属性。
 
+`<video>` 元素用于表示视频。
+
 ### 文件 (file)
 
 参见上述通用属性。
+
+`<file>` 元素用于表示文件。
+
+## 排版元素
+
+### 消息 (message)
+
+- **id:** `string` 消息 ID
+- **forward:** `boolean` 是否为转发消息
+
+`<message>` 元素的基本用法是表示一条消息。子元素对应于消息的内容。如果其没有子元素，则消息不会被发送。
+
+当出现 `<message>` 元素时，之前的元素会被立即视为一条消息被发送。因此下面的两种写法是等价的：
+
+```html
+<!-- 第一种写法：发送两条消息 -->
+<message>hello</message>
+<message>world</message>
+
+<!-- 第二种写法：用一条空消息隔开两段文本，实际上仍然会发送两条消息 -->
+hello<message/>world
+```
+
+部分平台允许你模拟其他用户发送消息：
+
+```html
+<message>
+  <author id="123123123" nickname="Alice" avatar="url"/>
+  hello world
+</message>
+```
+
+在支持转发的平台上，你可以配合 `id` 属性来转发一条消息：
+
+```html
+<message id="123456789" forward/>
+```
+
+在支持合并转发的平台上，你可以使用带有 `forward` 属性的 `<message>` 元素嵌套其他 `<message>` 元素来实现合并转发：
+
+```html
+<message forward>
+  <message id="123456789"/>
+  <message id="987654321"/>
+  <!-- 合并转发里也可以嵌套模拟其他用户发送的消息 -->
+  <message>
+    <author id="123123123" nickname="Alice" avatar="url"/>
+    hello world
+  </message>
+</message>
+```
+
+### 图文 (figure)
+
+## 元信息元素
+
+### 引用 (quote)
+
+`<quote>` 元素用于表示对消息引用。它的子元素会被渲染为引用的内容。
+
+### 作者 (author)
+
+`<author>` 元素用于表示消息的作者。它的子元素会被渲染为作者的名字。
