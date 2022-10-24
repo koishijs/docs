@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@koishijs/client": "^4.6.8",
-    "@koishijs/plugin-adapter-discord": "^3.2.6",
+    "@koishijs/plugin-adapter-discord": "^3.2.7",
     "@koishijs/plugin-adapter-onebot": "^5.2.7",
     "@koishijs/plugin-adapter-telegram": "^3.4.9",
     "@koishijs/plugin-console": "^4.6.8",

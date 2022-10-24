@@ -203,6 +203,7 @@ export default async () => defineConfig({
           makeLink('配置模式 (Schema)', '/api/utils/schema.md'),
           makeLink('观察者 (Observer)', '/api/utils/observer.md'),
           makeLink('输出日志 (Logger)', '/api/utils/logger.md'),
+          makeLink('随机数 (Random)', '/api/utils/random.md'),
           makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
         ],
       }],

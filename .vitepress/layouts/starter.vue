@@ -50,8 +50,8 @@ const choices = {
       'macOS': '/manual/starter/desktop',
       'Linux': '/manual/starter/desktop',
       'Android': '/manual/starter/mobile',
-      'Docker': '/manual/starter/docker',
       'Server': '/manual/starter/server',
+      'Container': '/manual/starter/container',
     },
   },
   development: {
@@ -135,7 +135,7 @@ const choices = {
         &::before {
           content: '>';
           position: relative;
-          transition: padding-left 0.3s cubic-bezier(.6, 0, 1, 1);
+          transition: padding-left 0.3s ease;
         }
       }
 
