@@ -1,44 +1,61 @@
 # 消息段 (Segment)
 
-**消息段** 的概念最早起源于 CoolQ，用于在纯文本中表达特殊的消息语义。由于这种方式非常便捷，也被 Koishi 所沿用至今。
+**消息段** 的概念类似于 HTML 中的标签，用于描述具有特定语义的内容。Koishi 提供了两种方式处理消息：字符串和消息段数组。它们之间可以相互转换。
 
-消息段协议本身也是 OneBot 协议的 [一部分](https://github.com/howmanybots/onebot/blob/master/v11/specs/message/segment.md)，但该协议与 Koishi 所使用的消息段**存在一定的区别，在实际使用时请以本页文档为准**。由于 @koishijs/plugin-onebot 会自动进行两种协议间的转换，你并不需要担心兼容性问题。
+```ts
+// 会话属性
+session.content                         // 字符串
+session.elements                        // 消息段数组
 
-## 消息段操作
+// 发送消息
+session.send('Hello, world!')           // 发送字符串
+session.send(segment('at', { id }))     // 发送消息段
+```
+
+我们为常见的消息段提供了静态方法，以方便使用：
+
+```ts
+session.send(segment.image(url))        // 发送图片
+```
+
+对于复杂的消息段，我们也提供了 `h` 的别名。下面的写法是等价的：
+
+```ts
+session.send(h('image', { url }))       // 发送图片
+```
+
+## 实例属性
 
 一个消息段对象的结构如下：
 
 ```ts
 interface segment {
   type: string
-  data: Dict<string | number | boolean>
+  attrs: object
+  children: segment[]
 }
 ```
 
-### segment(type, data)
+## 静态方法
+
+### segment(type, attrs?, children?)
 
 - **type:** `string` 消息段类型
-- **data:** `object` 消息段参数
-- 返回值: `string` 生成的消息段
+- **attrs:** `object` 消息段属性
+- **children:** `segment[]` 子消息段
+- 返回值: `segment` 生成的消息段
 
-将一个对象转化成消息段文本。
-
-### segment.join(codes)
-
-- **codes:** `segment[]` 消息段数组
-- 返回值: `string` 生成的文本
-
-将多个 segment 对象转化成文本并连接。
+构造一个消息段对象。
 
 ### segment.escape(source, inline?)
 
 - **source:** `string` 源文本
-- **inline:** `boolean` 在消息段内部转义（会额外处理逗号）
+- **inline:** `boolean` 在属性内部转义 (会额外处理引号)
 - 返回值: `string` 转义过后的文本
 
 转义一段文本到消息段格式。
 
-### segment.unescape(souce)
+### segment.unescape(source)
 
 - **source:** `string` 源文本
 - 返回值: `string` 转义前的文本
@@ -52,33 +69,56 @@ interface segment {
 
 解析一段文本内的全部消息段。其中的纯文本将会解析成 text 类型。
 
+### segment.select(source, query)
 
-### segment.transform(source, rules, dropOthers?)
+- **source:** `string | segment[]` 源文本或消息段数组
+- **query:** `string` 选择器
+- 返回值: `segment[]` 消息段数组
 
-- **source:** `string` 源文本或其解析成的消息段
-- **rules:** `Dict<Transformer>` 转换规则，以消息段类型未键
-- **dropOthers:** `boolean` 丢弃未指定转换规则的消息段类型，否则使用 [`segment(type, data)`](#segment-type-data) 的输出
-- 返回值: `string` 转换后的文本
+使用选择器在一段文本或消息段数组中查找。支持的语法包括：
 
-将一段文本或其解析结果的所有消息段按照规则进行转换。转换规则的定义方式如下（若为字符串类型则一律将消息段转换为该字符串）：
+- 通配选择器 `*`
+- 元素选择器 `type`
+- 选择器列表 `sel1, sel2`
+- 组合器
+  - 后代组合器 `sel1 sel2`
+  - 直接子代组合器 `sel1 > sel2`
+  - 一般兄弟组合器 `sel1 ~ sel2`
+  - 紧邻兄弟组合器 `sel1 + sel2`
+
+如果传入了字符串，则会先使用 [`segment.parse()`](#segment-parse-source) 进行解析。
+
+### segment.transform(source, rules)
+
+- **source:** `string | segment[]` 源文本或消息段数组
+- **rules:** `Dict<Transformer>` 转换规则，以消息段类型为键
+- 返回值: `string | segment[]` 转换后的文本或消息段数组
+
+将一段文本或消息段数组中的所有消息段按照规则进行转换。转换规则的定义方式如下：
 
 ```ts
+type Content = string | segment | (string | segment)[]
 type Transformer =
-  | string
-  | ((data: Dict<string>, index: number, chain: segment[]) => string)
+  | boolean
+  | Content
+  | ((attrs: Dict, index: number, array: segment[]) => Content)
 ```
+
+返回值会与传入的参数保持相同类型。如果传入了字符串，则会先使用 [`segment.parse()`](#segment-parse-source) 进行解析，并在转换完成后重新序列化。
 
 ### segment.transformAsync(source, rules)
 
-- **source:** `string` 源文本或其解析成的消息段
-- **rules:** `Dict<AsyncTransformer>` 转换规则，以消息段类型未键
+- **source:** `string | segment[]` 源文本或消息段数组
+- **rules:** `Dict<AsyncTransformer>` 转换规则，以消息段类型为键
+- 返回值: `Promise<string | segment[]>` 转换后的文本或消息段数组
 
-与 [`segment.transform()`](#segment-transform-source-rules-dropothers) 类似但实现略有不同。未定义转换规则的消息段类型一律使用 [`segment()`](#segment-type-data) 的输出。
+与 [`segment.transform()`](#segment-transform-source-rules) 类似，但转换规则可以是异步的，同一层级的各元素的转换将同时进行。转换规则的定义方式如下：
 
 ```ts
 type AsyncTransformer =
-  | string
-  | ((data: Dict<string>, index: number, chain: segment[]) => Awaitable<string>)
+  | boolean
+  | Content
+  | ((attrs: Dict, index: number, chain: segment[]) => Awaitable<Content>)
 ```
 
 ## 元素消息段

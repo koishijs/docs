@@ -17,6 +17,7 @@ sidebarDepth: 0
 - [上下文 (Context)](./core/context.md)
 - [事件 (Events)](./core/events.md)
 - [会话 (Session)](./core/session.md)
+- [消息元素 (Segment)](./core/segment.md)
 
 ## 服务 API
 
@@ -41,8 +42,8 @@ sidebarDepth: 0
 
 由其他官方库提供的 API：
 
-- [消息段 (Segment)](./utils/segment.md)
 - [配置模式 (Schema)](./utils/schema.md)
 - [观察者 (Observer)](./utils/observer.md)
 - [输出日志 (Logger)](./utils/logger.md)
+- [随机操作 (Random)](./utils/random.md)
 - [其他工具 (Misc)](./utils/misc.md)

@@ -174,6 +174,7 @@ export default async () => defineConfig({
           makeLink('上下文 (Context)', '/api/core/context.md'),
           makeLink('事件 (Events)', '/api/core/events.md'),
           makeLink('会话 (Session)', '/api/core/session.md'),
+          makeLink('消息段 (Segment)', '/api/core/segment.md'),
         ],
       }, {
         text: '服务 API',
@@ -199,11 +200,10 @@ export default async () => defineConfig({
       }, {
         text: '其他内置 API',
         items: [
-          makeLink('消息段 (Segment)', '/api/utils/segment.md'),
           makeLink('配置模式 (Schema)', '/api/utils/schema.md'),
           makeLink('观察者 (Observer)', '/api/utils/observer.md'),
           makeLink('输出日志 (Logger)', '/api/utils/logger.md'),
-          makeLink('随机数 (Random)', '/api/utils/random.md'),
+          makeLink('随机操作 (Random)', '/api/utils/random.md'),
           makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
         ],
       }],
