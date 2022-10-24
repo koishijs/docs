@@ -17,7 +17,11 @@ sidebarDepth: 0
 - [上下文 (Context)](./core/context.md)
 - [事件 (Events)](./core/events.md)
 - [会话 (Session)](./core/session.md)
-- [消息元素 (Segment)](./core/segment.md)
+
+## 消息 API
+
+- [消息段 (Segment)](./message/segment.md)
+- [语义标准](./message/standard.md)
 
 ## 服务 API
 

@@ -174,7 +174,12 @@ export default async () => defineConfig({
           makeLink('上下文 (Context)', '/api/core/context.md'),
           makeLink('事件 (Events)', '/api/core/events.md'),
           makeLink('会话 (Session)', '/api/core/session.md'),
-          makeLink('消息段 (Segment)', '/api/core/segment.md'),
+        ],
+      }, {
+        text: '消息 API',
+        items: [
+          makeLink('消息段 (Segment)', '/api/message/segment.md'),
+          makeLink('语义标准', '/api/message/standard.md'),
         ],
       }, {
         text: '服务 API',
