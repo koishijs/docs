@@ -10,22 +10,11 @@
 :::
 
 ::: tip 关于兼容性表格
-- `√` 表示平台和适配器都完全支持
+- `✓` 表示平台和适配器都完全支持
 - `~` 表示平台不支持，适配器也因此不支持
 - `×` 表示平台支持但适配器不支持
 - `?` 表示平台支持情况未知
 :::
-
-<style lang="scss" scoped>
-
-td:not(:first-child) code {
-  padding: 0;
-  border-radius: 0;
-  font-size: inherit;
-  background-color: transparent;
-}
-
-</style>
 
 ## 基础元素
 
@@ -39,7 +28,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `√` | `√` | `√` |
+| `<text>` | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ### 提及用户 (at)
 
@@ -56,8 +45,8 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<at>`  | `√` | `√` | `√` | `×` | `√` |
-| `id`    | `√` | `√` | `√` | `×` | `√` |
+| `<at>`  | ✓ | ✓ | ✓ | × | ✓ |
+| `id`    | ✓ | ✓ | ✓ | × | ✓ |
 
 ### 提及频道 (sharp)
 
@@ -81,7 +70,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `√` | `√` | `√` |
+| `<text>` | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## 资源元素
 
@@ -128,7 +117,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 斜体 (i, em)
 
@@ -136,7 +125,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 下划线 (u, ins)
 
@@ -144,7 +133,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 删除线 (s, del)
 
@@ -152,7 +141,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 剧透 (spl)
 
@@ -160,7 +149,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 代码 (code)
 
@@ -168,7 +157,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `√` | `√` | `~` | `~` | `√` |
+| `<text>` | ✓ | ✓ | ~ | ~ | ✓ |
 
 ### 上标 (sup)
 
@@ -176,7 +165,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `~` | `~` | `~` | `~` | `~` |
+| `<text>` | ~ | ~ | ~ | ~ | ~ |
 
 ### 下标 (sub)
 
@@ -184,7 +173,7 @@ td:not(:first-child) code {
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | `~` | `~` | `~` | `~` | `~` |
+| `<text>` | ~ | ~ | ~ | ~ | ~ |
 
 ## 排版元素
 
@@ -241,9 +230,9 @@ hello<message/>world
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<message>` | `√` | `√` | `√` | `√` | `√` |
-| `id`      | `?` | `?` | `√` | `?` | `?` |
-| `forward` | `?` | `?` | `√` | `?` | `?` |
+| `<message>` | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `id`      | ? | ? | ✓ | ? | ? |
+| `forward` | ? | ? | ✓ | ? | ? |
 
 ## 元信息元素
 
@@ -255,8 +244,8 @@ hello<message/>world
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<quote>` | `√` | `√` | `√` | `√` | `√` |
-| `id`      | `√` | `√` | `√` | `√` | `√` |
+| `<quote>` | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `id`      | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ### 作者 (author)
 
