@@ -11,8 +11,8 @@
 
 ::: tip 关于兼容性表格
 - `✓` 表示平台和适配器都完全支持
-- `~` 表示平台不支持，适配器也因此不支持
-- `×` 表示平台支持但适配器不支持
+- `~` 表示平台不支持，适配器自动回退
+- `○` 表示平台支持但适配器不支持
 - `?` 表示平台支持情况未知
 :::
 
@@ -45,8 +45,8 @@
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<at>`  | ✓ | ✓ | ✓ | × | ✓ |
-| `id`    | ✓ | ✓ | ✓ | × | ✓ |
+| `<at>`  | ✓ | ✓ | ✓ | ○ | ✓ |
+| `id`    | ✓ | ✓ | ✓ | ○ | ✓ |
 
 ### 提及频道 (sharp)
 
@@ -70,13 +70,13 @@
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<text>` | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `<a>` | ✓ | ✓ | ✓ | ✓ | ✓ |
+| href  | ~ | ✓ | ~ | ~ | ✓ |
 
 ## 资源元素
 
 资源消息元素表示文本中存在的资源文件。不同的平台对资源文件的支持存在较大的差异。发送时只需提供 `url`。如果某个平台不支持特定的资源类型，适配器应该用 `url` 代替。如果某个平台不支持将资源消息元素和其他消息元素同时发送，适配器应该分多条发送，并返回最后一条消息的 ID。
 
-- **file:** `string` 资源在本地目录的相对路径
 - **url:** `string` 资源的 URL（可以是网络 URL，文件绝对路径，或 base64 协议等）
 - **cache:** `boolean` 是否使用已缓存的文件
 - **timeout:** `string` 下载文件的最长时间
@@ -203,7 +203,7 @@ hello<message/>world
 
 ```html
 <message>
-  <author id="123123123" nickname="Alice" avatar="url"/>
+  <author id="123123123" name="Alice" avatar="url"/>
   hello world
 </message>
 ```
@@ -222,7 +222,7 @@ hello<message/>world
   <message id="987654321"/>
   <!-- 合并转发里也可以嵌套模拟其他用户发送的消息 -->
   <message>
-    <author id="123123123" nickname="Alice" avatar="url"/>
+    <author id="123123123" name="Alice" avatar="url"/>
     hello world
   </message>
 </message>
@@ -249,7 +249,21 @@ hello<message/>world
 
 ### 作者 (author)
 
+- **id:** `string` 用户 ID
+- **name:** `string` 用户名
+- **avatar:** `string` 头像 URL
+
 `<author>` 元素用于表示消息的作者。它的子元素会被渲染为作者的名字。
+
+|  | Discord | Kook | OneBot | QQGuild | Telegram |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| `<author>` | ○<sup>[1]</sup> | ~ | ✓<sup>[2]</sup> | ~ | ~ |
+| `id`      | ~ | ~ | ✓ | ~ | ~ |
+| `name`    | ○ | ~ | ✓ | ~ | ~ |
+| `avatar`  | ○ | ~ | ~ | ~ | ~ |
+
+- [1]: 基于 Webhook 功能，目前暂未支持
+- [2]: 仅限 forward 和 quote 消息
 
 ### 元信息 (meta)
 
