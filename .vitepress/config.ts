@@ -1,4 +1,4 @@
-import { defineConfig } from '@koishijs/vitepress-theme'
+import { defineConfig } from '@koishijs/vitepress'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
@@ -278,6 +278,11 @@ export default async () => defineConfig({
       }],
 
       '/about/': [{
+        text: '关于我们',
+        items: [
+          makeLink('团队介绍', '/about/team.md'),
+        ],
+      }, {
         text: '更新与迁移',
         items: [
           makeLink('发展史', '/about/history.md'),

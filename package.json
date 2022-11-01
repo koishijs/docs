@@ -19,7 +19,7 @@
     "@koishijs/plugin-rate-limit": "^1.2.2",
     "@koishijs/plugin-schedule": "^4.3.1",
     "@koishijs/registry": "^4.1.0",
-    "@koishijs/vitepress-theme": "latest",
+    "@koishijs/vitepress": "latest",
     "@rollup/plugin-yaml": "^3.1.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.6.4",
