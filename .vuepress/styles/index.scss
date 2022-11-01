@@ -1,10 +1,3 @@
-@import '@vuepress/plugin-palette/palette';
-@import './twoslash';
-
-html {
-  background-color: var(--bg0);
-}
-
 #app {
   .navbar .logo {
     height: 2rem;
@@ -12,55 +5,6 @@ html {
     margin-right: 0.8rem;
     vertical-align: top;
   }
-
-  p code {
-    padding: 0.2rem 0.35rem;
-    margin: 0 2px;
-    border-radius: 2px;
-  }
-
-  a.header-anchor {
-    transition: opacity 0.3s ease;
-  }
-}
-
-.page {
-  strong {
-    color: var(--c-text-dark);
-  }
-
-  a {
-    font-weight: 600;
-  }
-}
-
-body {
-  font-size: 15px;
-}
-
-code {
-  font-size: 0.9em;
-}
-
-.badge + .badge {
-  margin-left: 0.5rem;
-}
-
-aside.sidebar {
-  font-size: 15px;
-
-  li:not(:first-child) .sidebar-heading {
-    margin-top: 1rem;
-  }
-}
-
-.sidebar-item {
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-}
-
-.medium-zoom-image--opened {
-  border-radius: 0 !important;
 }
 
 ::-webkit-scrollbar {
@@ -114,20 +58,6 @@ aside.sidebar {
       text-shadow: $textShadow;
     }
   }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5;
-}
-
-h1, h4 {
-  .header-anchor {
-    display: none;
-  }
-}
-
-h3 + h3 {
-  margin-top: -3.6rem !important;
 }
 
 .custom-container {

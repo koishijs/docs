@@ -1,5 +1,5 @@
 <template>
-  <div class="starter-container">
+  <div class="layout-starter">
     <div class="vp-doc">
       <content />
     </div>
@@ -26,7 +26,7 @@
           <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
             <a class="chooser-select-item chooser-cell"
               v-for="(value, key) in choices[chooserUsage].children" :key="key"
-              :href="normalizeLink(value)">
+              :href="withBase(value)">
               <span class="hint"></span>{{ key }}
             </a>
           </div>
@@ -39,7 +39,7 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import { normalizeLink } from '@theme-default/support/utils.js'
+import { withBase } from 'vitepress'
 const chooserUsage = ref('production')
 const choices = {
   production: {
@@ -68,7 +68,7 @@ const choices = {
 
 <style lang="scss" scoped>
 
-.starter-container {
+.layout-starter {
   height: 100vh;
   box-sizing: border-box;
   display: flex;
