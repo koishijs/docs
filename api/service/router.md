@@ -10,7 +10,7 @@ Koishi 默认情况下并不会监听任何端口，如要启用网络服务请�
 
 ### ctx.router[method](path, middleware)
 
-- **method:** 可以是 `GET`, `POST`, `PUT`, `DELETE`, `PATCH` 或 `ALL`
+- **method:** 可以是 `get`, `post`, `put`, `delete`, `patch` 或 `all` (仅能是小写)
 - **path:** `string | RegExp | (string | RegExp)[]` 路径
 - **middleware:** `Function` Koa 中间件
 
