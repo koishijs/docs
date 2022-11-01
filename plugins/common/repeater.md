@@ -14,13 +14,13 @@ plugins:
       probability: 0.5
 ```
 
-<panel-view :messages="[
-  ['Alice', 'foo'],
-  ['Bob', 'foo'],
-  ['Carol', 'foo'],
-  ['Koishi', 'foo'],
-  ['Dave', 'foo'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">foo</chat-message>
+<chat-message nickname="Bob">foo</chat-message>
+<chat-message nickname="Carol">foo</chat-message>
+<chat-message nickname="Koishi">foo</chat-message>
+<chat-message nickname="Dave">foo</chat-message>
+</chat-panel>
 
 在这种配置下，当复读语句达到 3 句后，每一次其他人的复读都有 50% 的概率触发机器人的复读行为。而一旦复读后，机器人将不再重复复读。
 
@@ -45,11 +45,11 @@ export default {
 }
 ```
 
-<panel-view :messages="[
-  ['Alice', '这机器人又开始复读了'],
-  ['Bob', '这机器人又开始复读了'],
-  ['Koishi', '打断复读！'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">这机器人又开始复读了</chat-message>
+<chat-message nickname="Bob">这机器人又开始复读了</chat-message>
+<chat-message nickname="Koishi">打断复读！</chat-message>
+</chat-panel>
 
 ## 检测重复复读
 
@@ -67,12 +67,12 @@ export default {
 }
 ```
 
-<panel-view :messages="[
-  ['Alice', 'foo'],
-  ['Bob', 'foo'],
-  ['Alice', 'foo'],
-  ['Koishi', '不许重复复读！'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">foo</chat-message>
+<chat-message nickname="Bob">foo</chat-message>
+<chat-message nickname="Alice">foo</chat-message>
+<chat-message nickname="Koishi">不许重复复读！</chat-message>
+</chat-panel>
 
 ## 检测打断复读
 
@@ -97,13 +97,13 @@ export default {
 }
 ```
 
-<panel-view :messages="[
-  ['Alice', 'bar'],
-  ['Bob', 'bar'],
-  ['Koishi', ' bar'],
-  ['Dave', '打断复读'],
-  ['Koishi', ' 在？为什么打断复读？'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">bar</chat-message>
+<chat-message nickname="Bob">bar</chat-message>
+<chat-message nickname="Koishi"> bar</chat-message>
+<chat-message nickname="Dave">打断复读</chat-message>
+<chat-message nickname="Koishi"> 在？为什么打断复读？</chat-message>
+</chat-panel>
 
 ## 完整的配置项参考
 

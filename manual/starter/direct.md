@@ -82,10 +82,10 @@ node -r esbuild-register .
 
 现在可以对你的机器人说话了：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">echo 你好</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">你好</chat-message>
-</panel-view>
+</chat-panel>
 
 ## 添加更多插件
 
@@ -149,10 +149,10 @@ app.middleware((session, next) => {
 
 然后重新运行你的项目：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">天王盖地虎</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">宝塔镇河妖</chat-message>
-</panel-view>
+</chat-panel>
 
 不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。我们推荐将上面的逻辑写在一个单独的文件里，并将它作为一个插件来加载：
 

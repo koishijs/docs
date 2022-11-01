@@ -8,7 +8,7 @@
 
 Koishi 拥有着强大的指令系统，然而过于复杂的功能也会困扰使用者。因此，Koishi 也内置了 help 指令，用于输出全部或特定指令的使用方法。你可以使用 `help` 查看指令列表：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">help</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>当前可用的指令有：</p>
@@ -16,7 +16,7 @@ Koishi 拥有着强大的指令系统，然而过于复杂的功能也会困扰�
 <p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 或通过 `help echo` 或 `echo -h` 查看特定指令的信息，包括指令的名称，参数，选项，子指令，权限设置等等。这里的 echo 是指令名，但也可以换成 [指令别名](./execution.md#指令别名) 甚至 [快捷方式](./execution.md#快捷方式)。具体的细节将在下面的介绍。
 
@@ -29,7 +29,7 @@ ctx.command('echo <message:text> 输出收到的信息')
   .option('timeout', '-t <seconds> 设定延迟发送的时间')
 ```
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">echo -h</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>echo &lt;message></p>
@@ -37,7 +37,7 @@ ctx.command('echo <message:text> 输出收到的信息')
 <p>可用的选项有：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 ### 添加用法和使用示例
 
@@ -52,7 +52,7 @@ ctx.command('echo <message:text>', '输出收到的信息')
 
 这时再调用 `echo -h`，你便会发现使用说明中已经添加了你刚刚的补充文本：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">echo -h</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>echo &lt;message></p>
@@ -63,7 +63,7 @@ ctx.command('echo <message:text>', '输出收到的信息')
 <p>使用示例：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;echo -t 300 Hello World  五分钟后发送 Hello World</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 最后，如果直接调用 `help`，输出的会是全部指令组成的列表。
 
@@ -77,7 +77,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
   .action(({ options }) => 'secret: ' + options.foo)
 ```
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">help</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>当前可用的指令有：</p>
@@ -86,11 +86,11 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 </chat-message>
 <chat-message nickname="Alice" color="#cc0066">bar --foo 123</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">secret: 123</chat-message>
-</panel-view>
+</chat-panel>
 
 如果要查看隐藏的指令和选项，可以使用 `help -H`：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">help -H</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>当前可用的指令有：</p>
@@ -98,7 +98,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <p>&nbsp;&nbsp;&nbsp;&nbsp;bar  一条看不见的指令</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 ## 指令的多级结构
 

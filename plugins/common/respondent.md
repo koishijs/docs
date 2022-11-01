@@ -19,14 +19,14 @@ export default {
 }
 ```
 
-<panel-view :messages="[
-  ['Alice', 'awsl'],
-  ['Koishi', '爱我苏联'],
-  ['Bob', '久 等 了'],
-  ['Koishi', '空格警察，出动！'],
-  ['Carol', '挖坑一时爽'],
-  ['Koishi', '一直挖坑一直爽'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">awsl</chat-message>
+<chat-message nickname="Koishi">爱我苏联</chat-message>
+<chat-message nickname="Bob">久 等 了</chat-message>
+<chat-message nickname="Koishi">空格警察，出动！</chat-message>
+<chat-message nickname="Carol">挖坑一时爽</chat-message>
+<chat-message nickname="Koishi">一直挖坑一直爽</chat-message>
+</chat-panel>
 
 如果想要加入更高级和用户可定义的问答系统，可以参见 [koishi-plugin-dialogue](https://dialogue.koishi.chat)。
 

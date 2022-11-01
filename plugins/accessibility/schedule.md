@@ -6,14 +6,14 @@
 
 @koishijs/plugin-schedule 用于设置和触发计划任务。
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">schedule 1m -- echo 233</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">日程已创建，编号为 1。</chat-message>
 <chat-message nickname="Alice" color="#cc0066">schedule -l</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">1. 今天 10:01：echo 233</chat-message>
 <p>——— 1 分钟后 ———</p>
 <chat-message nickname="Koishi" avatar="/koishi.png">233</chat-message>
-</panel-view>
+</chat-panel>
 
 ## 指令：schedule
 

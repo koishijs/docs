@@ -36,14 +36,14 @@ rank@list:
 session.text('rank', ['foo', 'bar'])
 ```
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>当前排名如下：</p>
 <p>第 1 名：foo</p>
 <p>第 2 名：bar</p>
 <p>要查看更多结果，请使用 --all 选项。</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 ## 随机渲染
 

@@ -6,7 +6,7 @@
 
 status 指令可以用于查看机器人的运行状态。
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">你的状态</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">
 <p>5 名四季酱正在为 20 个群和 2409 名用户提供服务。</p>
@@ -24,7 +24,7 @@ status 指令可以用于查看机器人的运行状态。
 <p>CPU 使用率：1% / 2%</p>
 <p>内存使用率：34% / 91%</p>
 </chat-message>
-</panel-view>
+</chat-panel>
 
 ### 修改指令输出
 

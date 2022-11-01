@@ -45,8 +45,8 @@
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<at>`  | ✓ | ✓ | ✓ | ○ | ✓ |
-| `id`    | ✓ | ✓ | ✓ | ○ | ✓ |
+| `<at>`  | ✓ | ✓ | ✓ | ⭘ | ✓ |
+| `id`    | ✓ | ✓ | ✓ | ⭘ | ✓ |
 
 ### 提及频道 (sharp)
 
@@ -257,10 +257,10 @@ hello<message/>world
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<author>` | ○<sup>[1]</sup> | ~ | ✓<sup>[2]</sup> | ~ | ~ |
+| `<author>` | ⭘<sup>[1]</sup> | ~ | ✓<sup>[2]</sup> | ~ | ~ |
 | `id`      | ~ | ~ | ✓ | ~ | ~ |
-| `name`    | ○ | ~ | ✓ | ~ | ~ |
-| `avatar`  | ○ | ~ | ~ | ~ | ~ |
+| `name`    | ⭘ | ~ | ✓ | ~ | ~ |
+| `avatar`  | ⭘ | ~ | ~ | ~ | ~ |
 
 - [1]: 基于 Webhook 功能，目前暂未支持
 - [2]: 仅限 forward 和 quote 消息

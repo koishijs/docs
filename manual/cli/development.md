@@ -58,10 +58,10 @@ export function apply(ctx: Context) {
 
 以开发模式重新运行你的项目，你会立即在网页控制台的配置界面中看到 `demo` 插件。只需点击启用，你就可以实现与机器人的对话了：
 
-<panel-view title="聊天记录">
+<chat-panel>
 <chat-message nickname="Alice" color="#cc0066">天王盖地虎</chat-message>
 <chat-message nickname="Koishi" avatar="/koishi.png">宝塔镇河妖</chat-message>
-</panel-view>
+</chat-panel>
 
 ## 构建源代码
 

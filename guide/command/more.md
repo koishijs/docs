@@ -80,11 +80,11 @@ ctx.command('accurate 精准抽卡', { maxUsage: 10, usageName: 'lottery' })
 
 在日常的使用中，我们也难免会遇到打错的情况，这时 Koishi 还会自动根据相近的指令名进行纠错提醒：
 
-<panel-view :messages="[
-  ['Alice', 'ecko hello'],
-  ['Koishi', '没有此命令。你要找的是不是“echo”？发送空行或句号以调用推测的指令。'],
-  ['Alice', '.'],
-  ['Koishi', 'hello'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">ecko hello</chat-message>
+<chat-message nickname="Koishi">没有此命令。你要找的是不是“echo”？发送空行或句号以调用推测的指令。</chat-message>
+<chat-message nickname="Alice">.</chat-message>
+<chat-message nickname="Koishi">hello</chat-message>
+</chat-panel>
 
 如果想调整模糊匹配的程度，你还可以修改配置项 [minSimilarity](../../api/core/app.md#options-minsimilarity)。是不是很方便呢？

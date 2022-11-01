@@ -36,11 +36,11 @@ Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃�
 
 <!-- 同时，你也可以通过指令手动进行重启：
 
-<panel-view :messages="[
-  ['Alice', 'exit -r'],
-  ['Koishi', '正在重启……'],
-  ['Koishi', '重启完成。'],
-]"/> -->
+<chat-panel>
+<chat-message nickname="Alice">exit -r</chat-message>
+<chat-message nickname="Koishi">正在重启……</chat-message>
+<chat-message nickname="Koishi">重启完成。</chat-message>
+</chat-panel> -->
 
 ## 开发模式
 

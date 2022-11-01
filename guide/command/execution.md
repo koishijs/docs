@@ -91,16 +91,16 @@ Koishi 会自动将引号（半角或者全角）中的内容视为一个整体�
 
 如果你希望在指令中使用其他指令的内容，可以使用 `$()` 进行指令插值：
 
-<panel-view :messages="[
-  ['Alice', 'echo foo$(echo bar)'],
-  ['Koishi', 'foobar'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">echo foo$(echo bar)</chat-message>
+<chat-message nickname="Koishi">foobar</chat-message>
+</chat-panel>
 
 Koishi 默认不转义单引号内的文本。如果你不希望某个参数被插值语法所转义，可以使用单引号：
 
-<panel-view :messages="[
-  ['Alice', 'echo \'foo$(echo bar)\''],
-  ['Koishi', 'foo$(echo bar)'],
-]"/>
+<chat-panel>
+<chat-message nickname="Alice">echo 'foo$(echo bar)'</chat-message>
+<chat-message nickname="Koishi">foo$(echo bar)</chat-message>
+</chat-panel>
 
 最后，你还可以在 [koishi-plugin-eval](https://eval.koishi.chat) 中了解到另一种插值方法。

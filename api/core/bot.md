@@ -2,7 +2,7 @@
 
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
-标有 <Badge text="内置" vertical="baseline"/> 的 API 已经由 @koishijs/core 提供，适配器可以覆盖对应的方法，但是无需自行实现。
+标有 <badge text="内置"/> 的 API 已经由 @koishijs/core 提供，适配器可以覆盖对应的方法，但是无需自行实现。
 
 ## 构造函数选项
 
