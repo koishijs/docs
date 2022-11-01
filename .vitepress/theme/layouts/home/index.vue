@@ -1,8 +1,9 @@
 <template>
   <div class="layout-home">
-    <div class="track track-swiper" :style="swiper">
-      <track-slide1></track-slide1>
+    <div class="track track-main" :style="main">
+      <track-slide1 @swipe="move(1)"></track-slide1>
       <track-slide2></track-slide2>
+      <track-slide3></track-slide3>
     </div>
     <div class="track track-demo" :style="demo">
       <track-demo></track-demo>
@@ -14,6 +15,7 @@
 
 import TrackSlide1 from './track-slide-1.vue'
 import TrackSlide2 from './track-slide-2.vue'
+import TrackSlide3 from './track-slide-3.vue'
 import TrackDemo from './track-demo.vue'
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
@@ -21,26 +23,31 @@ import { useEventListener } from '@vueuse/core'
 
 const { frontmatter } = useData()
 
-const totalHeight = computed(() => {
-  return frontmatter.value.features.length
-})
+const demoCount = computed<number>(() => frontmatter.value.features.length)
+const totalCount = computed(() => demoCount.value + 2)
 
 const position = ref(0)
 
-const swiper = computed(() => ({
+const main = computed(() => ({
   transform: `translateY(${-position.value * 100}vh)`,
 }))
 
+function interval(value: number, begin: number, end: number) {
+  if (value < begin) {
+    return begin - value
+  } else if (value > end) {
+    return end - value
+  } else {
+    return 0
+  }
+}
+
 const demo = computed(() => ({
-  transform: `translateY(${(
-    position.value < 1
-      ? 1 - position.value
-      : 0
-  ) * 100}vh)`,
+  transform: `translateY(${interval(position.value, 1, demoCount.value) * 100}vh)`,
 }))
 
 function restrict(value: number) {
-  return Math.max(Math.min(value, totalHeight.value), 0)
+  return Math.max(Math.min(value, totalCount.value), 0)
 }
 
 function move(offset: number) {
@@ -83,6 +90,7 @@ useEventListener('mousemove', (e: MouseEvent) => {
 
 useEventListener('mouseup', (e: MouseEvent) => {
   isDragging = false
+  position.value = position.value + (lastY - e.clientY) / innerHeight
   position.value = restrict(Math.round(position.value))
 })
 
@@ -99,6 +107,7 @@ useEventListener('touchmove', (e: TouchEvent) => {
 
 useEventListener('touchend', (e: TouchEvent) => {
   isDragging = false
+  position.value = position.value + (lastY - e.touches[0].clientY) / innerHeight
   position.value = restrict(Math.round(position.value))
 })
 
