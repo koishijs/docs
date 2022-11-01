@@ -33,7 +33,7 @@ ctx.on('guild-member-added', (session) => {
 - guild-removed: 加入的群组减少
 - guild-request: 收到群组邀请
 - guild-member-added: 群组成员增加
-- guild-member-removed: 群组成员减少
+- guild-member-deleted: 群组成员减少
 - guild-member-request: 收到群组成员申请
 
 ### 通用会话属性
