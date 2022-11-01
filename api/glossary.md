@@ -48,7 +48,7 @@
 
 参考：
 
-- [复用性 / 使用上下文](../guide/aspect/selector.md)
+- [复用性 / 使用上下文](../guide/plugin/selector.md)
 - [API 文档 / 上下文 (Context)](./core/context.md)
 
 ## 数据库 (Database)
@@ -111,7 +111,7 @@
 
 参考：
 
-- [模块化 / 定义配置模式](../guide/plugin/schema.md)
+- [模块化 / 定义配置模式](../manual/cli/schema.md)
 - [API 文档 / 配置模式](./utils/schema.md)
 
 ## 消息段 (Segment)
@@ -127,7 +127,7 @@
 
 参考：
 
-- [模块化 / 服务与依赖](../guide/aspect/service.md)
+- [模块化 / 服务与依赖](../guide/plugin/service.md)
 
 ## 会话 (Session)
 

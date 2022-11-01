@@ -1,7 +1,7 @@
 # 事件系统 (Lifecycle)
 
 ::: tip
-相关指南：[事件系统](../../guide/aspect/events.md)
+相关指南：[事件系统](../../guide/plugin/events.md)
 :::
 
 ## 实例方法

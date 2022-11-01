@@ -26,7 +26,7 @@
 - **plugin:** `Plugin` 要安装的插件
 - 返回值: `this`
 
-安装一个存在服务依赖的插件。参见 [服务的依赖关系](../../guide/aspect/service.md#服务的依赖关系)。
+安装一个存在服务依赖的插件。参见 [服务的依赖关系](../../guide/plugin/service.md#服务的依赖关系)。
 
 ### ctx.dispose(plugin?)
 

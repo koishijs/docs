@@ -30,7 +30,7 @@
 - **keys:** `string[]` 隔离的服务列表
 - 返回值: `this`
 
-以当前上下文为原型创建一个新上下文。`keys` 中指定的服务将在新的上下文中被隔离，其他服务仍然与当前上下文共享。参见 [服务的共享与隔离](../../guide/aspect/service.md#服务的共享与隔离)。
+以当前上下文为原型创建一个新上下文。`keys` 中指定的服务将在新的上下文中被隔离，其他服务仍然与当前上下文共享。参见 [服务的共享与隔离](../../guide/plugin/service.md#服务的共享与隔离)。
 
 ### ctx.command(def, desc?, config?)
 
@@ -66,7 +66,7 @@
 
 - 类型: `symbol`
 
-特殊的键值，可以在通用上下文属性对象的方法上访问。参见 [声明通用上下文属性](../../guide/aspect/service.md#声明通用上下文属性)。
+特殊的键值，可以在通用上下文属性对象的方法上访问。参见 [声明通用上下文属性](../../guide/plugin/service.md#声明通用上下文属性)。
 
 ### Context.mixin(name, options)
 
@@ -78,4 +78,4 @@
 - **name:** `string` 属性名称
 - **options:** `MixinOptions` 混入选项
 
-声明一个通用上下文属性。参见 [声明通用上下文属性](../../guide/aspect/service.md#声明通用上下文属性)。
+声明一个通用上下文属性。参见 [声明通用上下文属性](../../guide/plugin/service.md#声明通用上下文属性)。

@@ -67,6 +67,8 @@ export default async () => defineConfig({
         items: [
           makeLink('使用命令行', '/manual/cli/index.md'),
           makeLink('插件开发', '/manual/cli/development.md'),
+          makeLink('配置模式', '/manual/cli/schema.md'),
+          makeLink('发布插件', '/manual/cli/publish.md'),
         ],
       }],
 
@@ -94,15 +96,9 @@ export default async () => defineConfig({
         items: [
           makeLink('认识插件', '/guide/plugin/index.md'),
           makeLink('生命周期', '/guide/plugin/lifecycle.md'),
-          makeLink('配置模式', '/guide/plugin/schema.md'),
-          makeLink('发布插件', '/guide/plugin/publish.md'),
-        ],
-      }, {
-        text: '切面开发',
-        items: [
-          makeLink('会话选择器', '/guide/aspect/selector.md'),
-          makeLink('事件系统', '/guide/aspect/events.md'),
-          makeLink('服务与依赖', '/guide/aspect/service.md'),
+          makeLink('会话选择器', '/guide/plugin/selector.md'),
+          makeLink('事件系统', '/guide/plugin/events.md'),
+          makeLink('服务与依赖', '/guide/plugin/service.md'),
         ],
       }, {
         text: '数据库',

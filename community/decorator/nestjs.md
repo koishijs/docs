@@ -93,10 +93,10 @@ koishi-nestjs 的配置项和 [Koishi 配置项](../../api/core/app.md) 基本�
 - **usePlugins:** `KoishiModulePlugin[]` 可选。预先安装的 Koishi 插件列表。使用 `PluginDef(plugin, options, select)` 方法生成该项的定义。该配置项的成员参数如下。
   - **plugin:** Koishi 插件。
   - **options:** Koishi 插件配置。等同于 `ctx.plugin(plugin, options)`。
-  - **select:** 可选，Selection 对象，指定插件的 [上下文选择器](../../guide/aspect/selector.md#配置插件上下文)。
+  - **select:** 可选，Selection 对象，指定插件的 [上下文选择器](../../guide/plugin/selector.md#配置插件上下文)。
 - **moduleSelection:** `KoishiModuleSelection[]` 可选。指定 Nest 实例加载的其他 Nest 模块注入的 Koishi 上下文选择器，参数如下：
   - **module:** Nest 模块类。
-  - **select:** Selection 对象，指定插件的 [上下文选择器](../../guide/aspect/selector.md#配置插件上下文)。
+  - **select:** Selection 对象，指定插件的 [上下文选择器](../../guide/plugin/selector.md#配置插件上下文)。
 - **useWs:** `boolean` 是否启用 WebSocket 网关。**异步配置该项应写入异步配置项中**，而不是写在 `useFactory` 中。默认 `false`。
 - **actionErrorMessage:** `string` 指令中发生未知错误时，机器人返回的信息。默认 `Internal Server Error`。
 - **templateParams:** 定义注册的 [插值上下文对象](#插值定义)。

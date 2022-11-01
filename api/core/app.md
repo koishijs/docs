@@ -123,7 +123,7 @@ interface Selection {
 }
 ```
 
-参见 [在配置文件中使用选择器](../../guide/aspect/selector.md#在配置文件中使用选择器) 一节。
+参见 [在配置文件中使用选择器](../../guide/plugin/selector.md#在配置文件中使用选择器) 一节。
 
 ### options.logger
 
