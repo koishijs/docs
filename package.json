@@ -10,14 +10,6 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
-    "@koishijs/client": "^4.6.9",
-    "@koishijs/plugin-adapter-discord": "^3.3.1",
-    "@koishijs/plugin-adapter-onebot": "^5.3.4",
-    "@koishijs/plugin-adapter-telegram": "^3.5.1",
-    "@koishijs/plugin-console": "^4.6.9",
-    "@koishijs/plugin-mock": "^2.2.0",
-    "@koishijs/plugin-rate-limit": "^1.2.2",
-    "@koishijs/plugin-schedule": "^4.3.1",
     "@koishijs/registry": "^4.1.0",
     "@koishijs/vitepress": "latest",
     "@rollup/plugin-yaml": "^3.1.0",

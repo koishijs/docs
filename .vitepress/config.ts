@@ -35,7 +35,7 @@ export default async () => defineConfig({
       activeMatch: '/plugins/',
     }, {
       text: '关于',
-      link: '/about/history.md',
+      link: '/about/contact.md',
       activeMatch: '/about/',
     }],
 
@@ -280,6 +280,7 @@ export default async () => defineConfig({
       '/about/': [{
         text: '关于我们',
         items: [
+          makeLink('参与讨论', '/about/contact.md'),
           makeLink('团队介绍', '/about/team.md'),
         ],
       }, {
