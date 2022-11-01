@@ -4,6 +4,7 @@
       <track-slide1 @swipe="move(1)"></track-slide1>
       <track-slide2></track-slide2>
       <track-slide3></track-slide3>
+      <track-slide4></track-slide4>
     </div>
     <div class="track track-demo" :style="demo">
       <track-demo></track-demo>
@@ -16,6 +17,7 @@
 import TrackSlide1 from './track-slide-1.vue'
 import TrackSlide2 from './track-slide-2.vue'
 import TrackSlide3 from './track-slide-3.vue'
+import TrackSlide4 from './track-slide-4.vue'
 import TrackDemo from './track-demo.vue'
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
@@ -67,7 +69,7 @@ let lastWheel = 0
 useEventListener('wheel', (e: WheelEvent) => {
   if (e.ctrlKey || e.shiftKey || Math.abs(e.deltaY) < 50) return
   const timestamp = Date.now()
-  if (timestamp - lastWheel >= 75) {
+  if (timestamp - lastWheel >= 100) {
     move(Math.sign(e.deltaY))
   }
   lastWheel = timestamp
@@ -119,6 +121,7 @@ useEventListener('touchend', (e: TouchEvent) => {
   height: 100vh;
   margin-top: calc(0px - var(--vp-nav-height));
   overflow: hidden;
+  line-height: 1.7em;
 
   :deep(.screen) {
     height: 100vh;
@@ -131,6 +134,12 @@ useEventListener('touchend', (e: TouchEvent) => {
   left: 0;
   width: 100vw;
   transition: transform 0.3s ease;
+}
+
+.track-main {
+  :deep(.screen):nth-child(2n) {
+    background-color: var(--vp-c-bg-alt);
+  }
 }
 
 .track-demo {

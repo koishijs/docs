@@ -23,7 +23,6 @@ h2 {
 
 p {
   font-size: 1rem;
-  line-height: 1.7;
 }
 
 </style>
