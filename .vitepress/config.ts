@@ -1,6 +1,4 @@
-import { defineConfig } from 'vitepress'
-import highlight from './markdown/highlight'
-import fence from './markdown/fence'
+import { defineConfig } from '@koishijs/vitepress-theme'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
@@ -14,13 +12,6 @@ export default async () => defineConfig({
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#5546a3' }],
   ],
-
-  markdown: {
-    highlight: await highlight('one-dark-pro'),
-    config(md) {
-      md.use(fence)
-    },
-  },
 
   themeConfig: {
     logo: '/koishi.png',
@@ -229,7 +220,6 @@ export default async () => defineConfig({
       }, {
         text: '数据库支持',
         items: [
-          makeLink('数据库：LevelDB', '/plugins/database/level.md'),
           makeLink('数据库：MongoDB', '/plugins/database/mongo.md'),
           makeLink('数据库：MySQL', '/plugins/database/mysql.md'),
           makeLink('数据库：SQLite', '/plugins/database/sqlite.md'),
@@ -310,7 +300,7 @@ export default async () => defineConfig({
 
     socialLinks: [
       { icon: 'discord', link: 'https://discord.com/invite/xfxYwmd284' },
-      { icon: 'github', link: 'https://github.com/koishijs/novelai-bot' }
+      { icon: 'github', link: 'https://github.com/koishijs/koishi' }
     ],
 
     editLink: {
@@ -321,9 +311,6 @@ export default async () => defineConfig({
   vite: {
     resolve: {
       dedupe: ['vue'],
-      alias: {
-        '@theme-default': 'vitepress/dist/client/theme-default',
-      },
     },
 
     optimizeDeps: {

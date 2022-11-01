@@ -50,7 +50,6 @@
   - create-koishi：可结合 npm init 或 yarn create 使用，用于快速搭建项目
   - @koishijs/scripts：用于模板项目的命令行工具
 - 数据库相关：
-  - [@koishijs/plugin-database-level](../plugins/database/level.md)：LevelDB 数据库实现
   - [@koishijs/plugin-database-memory](../plugins/test/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
 - 资源存储相关：

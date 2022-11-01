@@ -1,11 +1,12 @@
-import DefaultTheme from 'vitepress/theme'
-import Layout from './Layout.vue'
-import './styles/aside.scss'
-import './styles/code.scss'
-import './styles/doc.scss'
-import './styles/vars.scss'
+import { defineTheme } from '@koishijs/vitepress-theme/client'
+import home from '../layouts/home.vue'
+import market from '../layouts/market.vue'
+import starter from '../layouts/starter.vue'
 
-export default {
-  ...DefaultTheme,
-  Layout,
-}
+export default defineTheme({
+  layouts: {
+    home,
+    market,
+    starter,
+  },
+})

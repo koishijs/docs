@@ -6,28 +6,30 @@
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev . --port 8514 --open",
+    "serve": "vitepress serve . --port 8514 --open",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
     "@koishijs/client": "^4.6.9",
-    "@koishijs/plugin-adapter-discord": "^3.2.7",
-    "@koishijs/plugin-adapter-onebot": "^5.2.7",
-    "@koishijs/plugin-adapter-telegram": "^3.4.9",
+    "@koishijs/plugin-adapter-discord": "^3.3.1",
+    "@koishijs/plugin-adapter-onebot": "^5.3.4",
+    "@koishijs/plugin-adapter-telegram": "^3.5.1",
     "@koishijs/plugin-console": "^4.6.9",
-    "@koishijs/plugin-mock": "^2.1.0",
+    "@koishijs/plugin-mock": "^2.2.0",
     "@koishijs/plugin-rate-limit": "^1.2.2",
     "@koishijs/plugin-schedule": "^4.3.1",
     "@koishijs/registry": "^4.1.0",
+    "@koishijs/vitepress-theme": "latest",
     "@rollup/plugin-yaml": "^3.1.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.6.4",
     "@typescript/twoslash": "^3.1.0",
     "cross-env": "^7.0.3",
     "diacritics": "^1.3.0",
-    "koishi": "^4.9.6",
+    "koishi": "^4.9.9",
     "remark-shiki-twoslash": "^3.1.0",
     "shiki": "^0.11.1",
     "typescript": "4.8.2",
-    "vitepress": "1.0.0-alpha.20"
+    "vitepress": "1.0.0-alpha.26"
   }
 }
