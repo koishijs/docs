@@ -74,7 +74,7 @@ export default async () => defineConfig({
 
       '/guide/': [{
         items: [
-          makeLink('总览', '/guide/'),
+          makeLink('关于指南', '/guide/'),
         ],
       }, {
         text: '处理交互',

@@ -78,24 +78,6 @@ useEventListener('wheel', (e: WheelEvent) => {
 let isDragging = false
 let lastY: number
 
-useEventListener('mousedown', (e: MouseEvent) => {
-  if (e.button !== 0) return
-  isDragging = true
-  lastY = e.clientY
-})
-
-useEventListener('mousemove', (e: MouseEvent) => {
-  if (!isDragging) return
-  position.value = position.value + (lastY - e.clientY) / innerHeight
-  lastY = e.clientY
-})
-
-useEventListener('mouseup', (e: MouseEvent) => {
-  isDragging = false
-  position.value = position.value + (lastY - e.clientY) / innerHeight
-  position.value = restrict(Math.round(position.value))
-})
-
 useEventListener('touchstart', (e: TouchEvent) => {
   isDragging = true
   lastY = e.touches[0].clientY
