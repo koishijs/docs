@@ -19,11 +19,11 @@
 - Koishi Android
 - https://github.com/anillc
 
-### MaikoTan
+### Maiko Sinkyaet Tan
 
 - Translations
 - satorijs/adapter-feishu
-- https://github.com/maikotan
+- https://github.com/MaikoTan
 
 ## 团队成员
 
