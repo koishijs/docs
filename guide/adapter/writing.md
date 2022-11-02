@@ -43,7 +43,7 @@ class Bot {
 
 下面是一个使用 Webhook 的例子。适配器通过 http post 请求接受事件推送。
 
-::: code-group language adapter
+::: tabs code
 ```js no-extra-header
 const { Adapter, Bot, Session } = require('koishi')
 
@@ -112,7 +112,7 @@ Adapter.types['my-adapter'] = MyAdapter
 
 WebSocket 的逻辑相比 Webhook 要稍微复杂一些，因此我们提供了一个工具类：
 
-::: code-group language adapter
+::: tabs code
 ```js no-extra-header
 const { Adapter, Bot, Session } = require('koishi')
 const WebSocket = require('ws')

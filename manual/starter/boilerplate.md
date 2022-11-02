@@ -27,11 +27,6 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v12，推荐使用 LTS) 运
 
 随后，运行下载好的安装包，根据提示完成整个安装流程即可。
 
-::: tip
-#### Windows 7 用户看这里！
-Windows 7 不支持 v14 以上的版本，因此上述版本你是无法安装的。此时请使用 v12 版本 (**请不要下载 v13**，因为 Node.js 的奇数版本都是不稳定的)。你可以前往这里的 [镜像链接](https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v12.22.12/) 以下载 (32 位系统请下载 `x86.msi`，64 位系统请下载 `x64.msi`)。
-:::
-
 ### 安装包管理器
 
 Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单：
@@ -48,7 +43,7 @@ yarn -v
 
 如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
 
-::: code-group manager
+::: tabs code
 ```npm
 npm config set registry https://registry.npmmirror.com
 ```
@@ -65,7 +60,7 @@ yarn config set registry https://registry.npmmirror.com
 
 在任意目录启动命令行，输入下面的指令：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm init koishi
 ```
@@ -90,8 +85,7 @@ yarn create koishi
 3. 输入 `npm install` / `yarn` 安装依赖。
 4. 输入 `npm start` / `yarn start` 开始运行。
 
-::: warning
-#### pnpm 用户看这里！
+::: warning pnpm 用户看这里！
 Koishi 不支持 pnpm 默认的 isolated linker。如果你确实想使用 pnpm，请在安装依赖前运行如下命令：
 
 ```sh
@@ -103,7 +97,7 @@ echo node-linker=hoisted > .npmrc
 
 如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，你无需进行额外的操作。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm start
 ```

@@ -12,7 +12,7 @@ redirectFrom:
 
 ## 创建新插件
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run setup [name] [-c]
 ```
@@ -67,7 +67,7 @@ export function apply(ctx: Context) {
 
 在插件正式发布前，你需要将插件的源代码构建为 js 文件。
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run build [...folder]
 ```
@@ -87,7 +87,7 @@ yarn build [...folder]
 
 ## 更新版本号
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run bump [...folder] [-1|-2|-3|-p|-v <ver>] [-r]
 ```
@@ -118,7 +118,7 @@ yarn bump [...folder] [-1|-2|-3|-p|-v <ver>] [-r]
 
 尽管 npm 和 yarn 等包管理器都提供了依赖更新功能，但它们对工作区开发的支持都不是很好。因此，我们也提供了一个简单的指令用于批量更新依赖版本。
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run dep
 ```
@@ -131,7 +131,7 @@ yarn dep
 
 ## 发布插件
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run pub [...folder]
 ```

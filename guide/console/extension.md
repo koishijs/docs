@@ -2,7 +2,7 @@
 
 ## 创建扩展
 
-::: code-group manager
+::: tabs code
 ```npm
 npm i @koishijs/client @koishijs/plugin-console -D
 ```
@@ -113,7 +113,7 @@ plugins:
 
 然后运行上面的脚本就大功告成啦：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run build:console
 ```

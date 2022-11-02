@@ -24,7 +24,7 @@ redirectFrom:
 
 安装所需的测试工具以及 @koishijs/plugin-mock：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm i mocha chai @koishijs/plugin-mock -D
 ```
@@ -47,7 +47,7 @@ app.plugin(mock)
 
 如果你使用 TypeScript 进行开发，你可能还需要下面这些依赖 (当然你可能已经安装了它们)：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm i typescript esbuild-register @types/node @types/mocha @types/chai -D
 ```

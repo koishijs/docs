@@ -10,7 +10,7 @@
 
 如果你是插件开发者，你并不需要关心具体的数据库实现。但是如果你是 Koishi 的使用者，只有当安装了数据库你才能正常使用所有的特性。首先你需要安装数据库依赖：
 
-::: code-group manager
+::: tabs code
 ```npm
 # 我们以 mysql 数据库为例
 npm i @koishijs/plugin-database-mysql -D

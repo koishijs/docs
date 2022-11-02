@@ -12,7 +12,7 @@
 
 让我们看一个简单的示例。下面的插件将注册一个指令，输出当前插件的配置项。
 
-::: code-group language
+::: tabs code
 ```js no-extra-header
 const { Schema } = require('koishi')
 

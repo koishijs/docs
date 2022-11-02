@@ -46,7 +46,7 @@ Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃�
 
 在模板项目下运行下面的指令可以启动开发模式：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm run dev
 ```

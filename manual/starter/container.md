@@ -16,7 +16,7 @@ Koishi 提供了 [Docker](https://hub.docker.com/r/koishijs/koishi) 镜像，方
 
 你可以从 Docker Hub 拉取最新的 Koishi 镜像：
 
-::: code-group container
+::: tabs code
 ```podman
 podman pull docker.io/koishijs/koishi
 ```
@@ -27,7 +27,7 @@ docker pull koishijs/koishi
 
 如果你需要运行 [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) 插件，应使用预装 chromium 的容器:
 
-::: code-group container
+::: tabs code
 ```podman
 podman pull docker.io/koishijs/koishi:latest-puppeteer
 ```
@@ -40,7 +40,7 @@ docker pull koishijs/koishi:latest-puppeteer
 
 使用以下命令启动容器:
 
-::: code-group container
+::: tabs code
 ```podman
 podman run -p 5140:5140 koishijs/koishi
 ```

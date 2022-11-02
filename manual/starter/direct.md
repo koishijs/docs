@@ -29,7 +29,7 @@ Koishi 需要 Node.js (最低 v12，推荐使用 LTS) 运行环境，你需要�
 
 首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 onebot 和 echo 为例)：
 
-::: code-group manager
+::: tabs code
 ```npm
 # 初始化项目
 npm init
@@ -184,7 +184,7 @@ app.plugin(ping)
 
 数据库是机器人开发的常见需求，许多插件本身也要求你安装数据库。在 Koishi 这里，数据库支持也可以通过插件来安装。这里以 MySQL 为例。首先安装所需的依赖：
 
-::: code-group manager
+::: tabs code
 ```npm
 npm i @koishijs/plugin-database-mysql
 ```

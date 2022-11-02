@@ -177,7 +177,7 @@ servers:
           secret: my-secret
 ```
 
-::: code-group config koishi
+::: tabs code
 ```yaml
 port: 8080
 plugins:
@@ -211,7 +211,7 @@ servers:
       port: 6700
 ```
 
-::: code-group config koishi
+::: tabs code
 ```yaml
 plugins:
   adapter-onebot:
@@ -240,7 +240,7 @@ servers:
       universal: ws://127.0.0.1:8080/onebot
 ```
 
-::: code-group config koishi
+::: tabs code
 ```yaml
 port: 8080
 plugins:
@@ -274,7 +274,7 @@ servers:
       universal: wss://my-host:9090/onebot
 ```
 
-::: code-group config koishi
+::: tabs code
 ```yaml
 # 请注意这里的 port 可能跟 selfUrl 中的不一致
 # 你可以通过 nginx，candy 等工具实现端口的转发和 SSL 等需求

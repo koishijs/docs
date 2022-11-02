@@ -18,7 +18,7 @@
 
 在 [快速上手]() 一章中我们已经给出了一个简单的例子：
 
-::: code-group config koishi
+::: tabs code
 ```yaml
 plugins:
   adapter-discord:
