@@ -3,7 +3,7 @@
 为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market.md) 中，其他人就可以通过控制台来安装它。
 
 ::: tip
-- 想要了解发布工作区插件的具体操作，请前往 [插件开发](../../manual/cli/development.md#发布插件)
+- 想要了解发布工作区插件的具体操作，请前往 [插件开发](../../manual/advanced/development.md#发布插件)
 - 想要了解更多关于发布 npm 包的知识，请参考 [这篇文档](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
 :::
 

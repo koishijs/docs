@@ -111,7 +111,7 @@
 
 参考：
 
-- [模块化 / 定义配置模式](../manual/cli/schema.md)
+- [模块化 / 定义配置模式](../manual/advanced/schema.md)
 - [API 文档 / 配置模式](./utils/schema.md)
 
 ## 消息段 (Segment)

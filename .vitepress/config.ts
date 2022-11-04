@@ -55,7 +55,7 @@ export default async () => defineConfig({
           makeLink('使用容器', '/manual/starter/container.md'),
         ],
       }, {
-        text: '使用控制台',
+        text: '控制台',
         items: [
           makeLink('什么是控制台', '/manual/console/index.md'),
           makeLink('安装和配置插件', '/manual/console/market.md'),
@@ -63,13 +63,13 @@ export default async () => defineConfig({
           makeLink('使用数据库', '/manual/console/dataview.md'),
         ],
       }, {
-        text: '开发与部署',
+        text: '进阶',
         items: [
-          makeLink('配置文件', '/manual/cli/config.md'),
-          makeLink('启动脚本', '/manual/cli/index.md'),
-          makeLink('插件开发', '/manual/cli/development.md'),
-          makeLink('配置模式', '/manual/cli/schema.md'),
-          makeLink('发布插件', '/manual/cli/publish.md'),
+          makeLink('配置文件', '/manual/advanced/config.md'),
+          makeLink('启动脚本', '/manual/advanced/script.md'),
+          makeLink('插件开发', '/manual/advanced/development.md'),
+          makeLink('配置模式', '/manual/advanced/schema.md'),
+          makeLink('发布插件', '/manual/advanced/publish.md'),
         ],
       }],
 
