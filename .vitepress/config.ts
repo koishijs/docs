@@ -63,8 +63,9 @@ export default async () => defineConfig({
           makeLink('使用数据库', '/manual/console/dataview.md'),
         ],
       }, {
-        text: '命令行工具',
+        text: '开发与部署',
         items: [
+          makeLink('配置文件', '/manual/cli/config.md'),
           makeLink('使用命令行', '/manual/cli/index.md'),
           makeLink('插件开发', '/manual/cli/development.md'),
           makeLink('配置模式', '/manual/cli/schema.md'),
@@ -74,7 +75,7 @@ export default async () => defineConfig({
 
       '/guide/': [{
         items: [
-          makeLink('关于指南', '/guide/'),
+          makeLink('总览', '/guide/'),
         ],
       }, {
         text: '处理交互',
