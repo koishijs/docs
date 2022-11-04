@@ -1,35 +1,46 @@
-# 使用命令行
+# 命令行工具
 
-## 启动 Koishi
+Koishi 提供了一套命令行工具，用于读取配置文件快速启动应用。
 
-### 修改入口文件
+## 基本用法
 
-`koishi start` 指令需要一个配置文件作为入口。这个配置文件允许 js，ts，json，yaml 等多种格式。默认情况下，配置文件名应当形如 `koishi.[ext]` 或 `koishi.config.[ext]`，但你其实也可以传入一个 `file` 参数来指定其他名称。它的完整语法为：
+我们推荐使用**启动脚本**来启动 Koishi 应用。打开 [根目录](./config.md#根目录位置) 下的 `package.json` 文件：
 
-```sh
-# 如果你不写这里的 file 参数，程序就会自动寻找 koishi.[ext] 和 koishi.config.[ext] 文件
-koishi start [file] [options]
+```json title=package.json
+{
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development koishi start -r esbuild-register -r yml-register --watch",
+    "start": "koishi start -r yml-register"
+  }
+}
 ```
 
-::: tip
-基于这个逻辑，你也可以将你的配置文件的后缀名改为 ts 等，但动态的配置文件格式将不再支持 @koishijs/plugin-market，这意味着你将无法使用插件市场。
+运行下面的命令行以启动 Koishi 应用：
+
+::: tabs code
+```npm
+npm run start
+```
+```yarn
+yarn start
+```
 :::
+
+在本节的后续部分，我们会介绍上述启动脚本的更多参数。无论你做何改动，你都可以使用上面的命令行来快速启动。这也是启动脚本的意义所在。
+
+### 启动参数
+
+启动脚本支持 Node.js 的 [命令行参数](https://nodejs.org/api/cli.html)。例如，上面的 `-r` 对应于 `--require`，它将允许你加载 `.yaml` 和 `.yml` 后缀的文件。
+
+除了 Node.js 的命令行参数，Koishi 还提供了一些额外的参数。我们将在下面逐一介绍。
 
 ### 自动重启
 
 Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃时，如果 Koishi 已经启动成功，则监视进程将自动重新启动一个新的进程。
 
-<!-- 同时，你也可以通过指令手动进行重启：
-
-<chat-panel>
-<chat-message nickname="Alice">exit -r</chat-message>
-<chat-message nickname="Koishi">正在重启……</chat-message>
-<chat-message nickname="Koishi">重启完成。</chat-message>
-</chat-panel> -->
-
 ## 开发模式
 
-在模板项目下运行下面的指令可以启动开发模式：
+除了 `start` 以外，模板项目还准备了名为 `dev` 的开发模式启动脚本。运行下面的命令行可以启动开发模式：
 
 ::: tabs code
 ```npm
@@ -40,29 +51,34 @@ yarn dev
 ```
 :::
 
-这其实相当于在 `start` 指令的基础上添加下面的参数：
-
-```sh
--r esbuild-register
--r yml-register
---watch
-```
-
-这些参数为我们提供了额外的特性。
+如你所见，`dev` 相当于在 `start` 指令的基础上添加了 `-r esbuild-register` 和 `--watch` 参数。这些参数为我们提供了额外的特性。
 
 ### TypeScript 支持
 
-Koishi 工作区原生地支持 TypeScript 开发。上面的两组 `-r` 参数允许我们在运行时直接使用工作区插件的 TypeScript 源代码。
+Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register` 参数允许我们在运行时直接使用工作区插件的 TypeScript 源代码。
 
-如果你想使用其他语言进行开发，你也可以打开 `package.json`，修改 `dev` 指令对应的脚本，向其中添加自己所需的参数：
+你也可以自行扩展更多的后缀名支持。例如，如果你更喜欢 CoffeeScript，你可以这样修改你的启动脚本为：
 
-```sh
--r coffeescript/register        # 以 CoffeeScript 为例
+```json title=package.json
+{
+  "scripts": {
+    "start": "koishi start -r yml-register -r coffeescript/register"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  }
+}
 ```
+
+这样你就可以使用 CoffeeScript 编写你的插件，甚至连配置文件都可以使用 `koishi.coffee` 书写了。
+
+::: warning
+我们并不推荐使用高级语言来编写配置文件，因为动态的配置无法支持环境变量、配置热重载和插件市场等特性。大部分情况下我们建议仅将 `-r` 用于开发目的。
+:::
 
 ### 模块热替换
 
-如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。Koishi 也做到了！`--watch` 参数实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
+如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！`--watch` 参数实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
 
 这里的行为也可以在配置文件中进行定制：
 
@@ -72,11 +88,3 @@ watch:
   ignore:
     - some-file
 ```
-
-<!-- 此外，这个指令还支持一些额外的配置项：
-
-- **--log-level:** 控制输出等级
-- **--log-time:** 在日志中显示时间
-- **--debug:** 最高等级输出的命名空间
-
-与输出日志相关的选项请参见 [输出与日志](../service/logger.md) 一章。 -->

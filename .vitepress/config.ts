@@ -66,7 +66,7 @@ export default async () => defineConfig({
         text: '开发与部署',
         items: [
           makeLink('配置文件', '/manual/cli/config.md'),
-          makeLink('使用命令行', '/manual/cli/index.md'),
+          makeLink('启动脚本', '/manual/cli/index.md'),
           makeLink('插件开发', '/manual/cli/development.md'),
           makeLink('配置模式', '/manual/cli/schema.md'),
           makeLink('发布插件', '/manual/cli/publish.md'),
