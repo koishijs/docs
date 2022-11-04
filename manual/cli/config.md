@@ -11,9 +11,9 @@
 配置文件所在的目录叫**根目录**。根据你的安装方式，根目录的位置可能不同：
 
 - 模板项目：你创建的项目目录
-- zip：解压目录下 `data/instances/default`
-- msi：`C:/Users/你的用户名/AppData/Roaming/Il Harper/Koishi/data/instances/default`
-- pkg：`~/Library/Application Support/Il Harper/Koishi/data/instances/default`
+- 启动器 (zip)：解压目录下 `data/instances/default`
+- 启动器 (msi)：`C:/Users/你的用户名/AppData/Roaming/Il Harper/Koishi/data/instances/default`
+- 启动器 (pkg)：`~/Library/Application Support/Il Harper/Koishi/data/instances/default`
 
 配置文件是根目录下名为 `koishi.yml` 的文件。当你遇到问题时，开发者可能会要求你提供配置文件的内容。此时去上面的地方找就好了。
 
@@ -45,7 +45,7 @@ plugins:
   dialogue:
 ```
 
-如果你使用过控制台，你就会发现，配置文件的结构与「插件配置」页面基本是一致的。具体而言，配置文件中包含三种内容：
+具体而言，配置文件中包含三种内容：
 
 ### 全局设置
 
@@ -84,14 +84,16 @@ plugins:
       market:
 ```
 
-## 编辑配置文件
+## 修改配置文件
 
-当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件；而当你在「插件配置」页面中修改了某些配置，Koishi 也会自动将这些改动写入配置文件。
+当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件。反过来，如果你想调整 Koishi 及其插件的行为，你就需要修改这个配置文件。
 
-绝大多数的功能都可以通过「插件配置」页面来完成，但目前尚有一些功能没有做好相应的交互界面，这时你就需要手动修改配置文件了。你需要做的有以下几步：
+如果你使用的是模板项目，你需要手动修改它并重新启动 Koishi 应用；如果你使用的是启动器，则你可以直接在「插件配置」中进行调整，Koishi 会自动将这些改动写入配置文件。事实上你会发现，配置文件的结构与「插件配置」页面基本是一致的。
+
+绝大多数的功能都可以通过「插件配置」页面来完成，但目前尚有一些功能没有做好相应的交互界面，这时你仍然需要手动修改配置文件。具体的步骤与模板项目类似：
 
 1. 关闭当前 Koishi 应用
-2. 打开配置文件进行编辑
+2. 在 [根目录](#根目录位置) 下找到配置文件并进行编辑
 3. 保存配置文件后再次启动 Koishi 应用
 
 ## 使用更多格式
@@ -121,14 +123,13 @@ Koishi 默认支持的配置文件后缀名包括 `.yml`、`.yaml`、`.json`、`
 ```yaml title=koishi.yml
 plugins:
   adapter-discord:
-    bots:
-      - token: ${{ env.DISCORD_TOKEN }}
+    token: ${{ env.DISCORD_TOKEN }}
 ```
 
 当项目启动时，会将环境变量中的值替换进去。
 
 除了系统提供的环境变量外，Koishi 还原生支持 [dotenv](https://github.com/motdotla/dotenv)。你可以在当前目录创建一个 `.env` 文件，并在里面填写你的环境变量。这个文件已经被包含在 `.gitignore` 中，你可以在其中填写隐私信息 (例如账号密码) 而不用担心被上传到远端。例如在上面的例子中你就可以这样写：
 
-```sh .env
+```sh title=.env
 DISCORD_TOKEN = xxx
 ```
