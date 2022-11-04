@@ -1,8 +1,3 @@
----
-title: 资源存储：Local
-sidebarDepth: 2
----
-
 # @koishijs/plugin-assets-local
 
 使用本地目录存放资源文件。

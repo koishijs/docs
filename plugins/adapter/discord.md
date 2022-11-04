@@ -1,8 +1,3 @@
----
-title: 适配器：Discord
-sidebarDepth: 2
----
-
 # @koishijs/plugin-adapter-discord
 
 ## 接入方法

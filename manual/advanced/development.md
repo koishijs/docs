@@ -1,11 +1,3 @@
----
-sidebarDepth: 2
-redirectFrom:
-  - /guide/introduction/cli.html
-  - /guide/introduction/development.html
-  - /guide/introduction/workspace.html
----
-
 # 插件开发
 
 本章节将介绍如何使用模板项目编写、构建和发布自己的 Koishi 插件。

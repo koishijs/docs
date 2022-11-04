@@ -1,8 +1,3 @@
----
-title: 适配器：QQ 频道
-sidebarDepth: 2
----
-
 # @koishijs/plugin-adapter-qqguild
 
 ::: warning 注意

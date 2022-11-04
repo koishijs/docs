@@ -221,6 +221,7 @@ export default async () => defineConfig({
       }, {
         text: '数据库支持',
         items: [
+          makeLink('数据库：Memory', '/plugins/database/memory.md'),
           makeLink('数据库：MongoDB', '/plugins/database/mongo.md'),
           makeLink('数据库：MySQL', '/plugins/database/mysql.md'),
           makeLink('数据库：SQLite', '/plugins/database/sqlite.md'),
@@ -274,7 +275,6 @@ export default async () => defineConfig({
         text: '测试工具',
         items: [
           makeLink('模拟聊天环境 (Mock)', '/plugins/test/mock.md'),
-          makeLink('模拟数据库 (Memory)', '/plugins/test/memory.md'),
         ],
       }],
 

@@ -1,8 +1,3 @@
----
-title: 适配器：KOOK
-sidebarDepth: 2
----
-
 # @koishijs/plugin-adapter-kook
 
 ## 接入方法

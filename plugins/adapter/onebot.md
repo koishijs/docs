@@ -1,8 +1,3 @@
----
-title: 适配器：OneBot
-sidebarDepth: 2
----
-
 # @koishijs/plugin-adapter-onebot
 
 ::: warning

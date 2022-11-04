@@ -1,10 +1,3 @@
----
-sidebarDepth: 2
-redirectFrom:
-  - /guide/introduction/coding.html
-  - /guide/introduction/direct.html
----
-
 # 作为依赖调用
 
 ::: tip

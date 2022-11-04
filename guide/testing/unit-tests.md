@@ -1,9 +1,3 @@
----
-sidebarDepth: 2
-redirectFrom:
-  - /guide/misc/unit-tests.md
----
-
 # 单元测试
 
 如果你是一位插件开发者，比起让机器人真正运行起来，你或许会更希望使用**单元测试**，因为它具有许多前者所不具有的优点：

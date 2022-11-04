@@ -1,8 +1,3 @@
----
-sidebarDepth: 2
-noOutboundLinks: true
----
-
 # 介绍
 
 Koishi 是一个现代、高效的跨平台聊天机器人框架。

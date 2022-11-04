@@ -1,8 +1,3 @@
----
-title: 适配器：Telegram
-sidebarDepth: 2
----
-
 # @koishijs/plugin-adapter-telegram
 
 ## 接入方法

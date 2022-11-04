@@ -1,9 +1,3 @@
----
-sidebarDepth: 2
-redirectFrom:
-  - /guide/misc/docker.md
----
-
 # 使用容器
 
 ::: tip
