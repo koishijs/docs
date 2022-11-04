@@ -29,26 +29,64 @@ port: 5140
 # 插件列表
 plugins:
   # group 表示这是一个插件组
-  group:basic:
-    help:
-    rate-limit:
-    suggest:
-    locales:
-    commands:
-
-  # 这是另一个插件组
-  group:adapter:
+  group:console:
     # 波浪线前缀表示一个不启用的插件
-    ~adapter-onebot:
-    ~adapter-discord:
-    ~adapter-telegram:
-    gocqhttp:
+    ~auth:
+    console:
+    logger:
+    insight:
+    market:
+      # 以缩进的方式显示插件的配置项
+      registry:
+        endpoint: https://registry.npmmirror.com
 
-  # 你刚刚安装的 NovelAI 插件
-  novelai:
+  # 这里是一些零散的插件
+  github:
+  dialogue:
 ```
 
-你会发现，配置文件的结构与「插件配置」页面基本是一致的。当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件；而当你在「插件配置」页面中修改了某些配置，Koishi 也会自动将这些改动写入配置文件。
+如果你使用过控制台，你就会发现，配置文件的结构与「插件配置」页面基本是一致的。具体而言，配置文件中包含三种内容：
+
+### 全局设置
+
+全局设置对应于配置文件中 `plugins:` 一行以上的部分。这里会包含一些最基础的配置项，例如网络设置、指令前缀、默认权限等。修改这里的配置项，会影响整个 Koishi 应用的行为而非某个插件。你可以在 [这个页面](../../api/core/app.md) 了解全部的全局设置。
+
+### 插件配置
+
+`plugins` 是一个 YAML 对象，它的每一个键对应于插件的名称，而值则对应于插件的配置。当没有进行配置时，值可以省略 (或者写成 `{}`)。当存在配置时，值需要在插件的基础上缩进并写在接下来的几行中。例如：
+
+```yaml koishi.yml
+plugins:
+  dialogue:
+    # 这里是 koishi-plugin-dialogue 的配置
+    context:
+      enable: true
+```
+
+### 插件名称
+
+插件名称通常对应于插件发布时的包名。例如：
+
+- `market` 对应于官方插件 `@koishijs/plugin-market`
+- `dialogue` 对应于社区插件 `koishi-plugin-dialogue`
+
+除了插件的包名外，插件名称还可以拥有一个可选的前缀 (`~`) 和后缀 (`:xxx`)。插件名称前的波浪线 (`~`) 表示该插件不会被启用。插件名称后的冒号后是插件的别名，当某个插件需要存在多组配置时这会非常有用。
+
+### 插件组
+
+你可以将插件组理解为一个名为 `group` 的特殊插件。它的语法与 `plugins` 一致，都是一个包含了插件名称和插件配置的 YAML 对象。使用插件组不仅能更好地帮助你整理插件，还能批量控制其中插件的行为。插件组也支持嵌套，例如：
+
+```yaml koishi.yml
+plugins:
+  group:official:
+    group:console:
+      # 两层嵌套插件组下的 market 插件
+      market:
+```
+
+## 编辑配置文件
+
+当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件；而当你在「插件配置」页面中修改了某些配置，Koishi 也会自动将这些改动写入配置文件。
 
 绝大多数的功能都可以通过「插件配置」页面来完成，但目前尚有一些功能没有做好相应的交互界面，这时你就需要手动修改配置文件了。你需要做的有以下几步：
 
@@ -76,7 +114,7 @@ Koishi 默认支持的配置文件后缀名包括 `.yml`、`.yaml`、`.json`、`
 
 这样你就可以将配置写在 `koishi.coffee` 中啦~
 
-## 使用环境变量
+## 环境变量插值
 
 你可以通过插值语法在配置文件中使用环境变量。例如：
 
