@@ -50,7 +50,6 @@ const choices = {
       'macOS': '/manual/starter/desktop',
       'Linux': '/manual/starter/desktop',
       'Android': '/manual/starter/mobile',
-      'Server': '/manual/starter/server',
       'Container': '/manual/starter/container',
     },
   },

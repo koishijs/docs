@@ -51,7 +51,6 @@ export default async () => defineConfig({
           makeLink('作为依赖调用', '/manual/starter/direct.md'),
           makeLink('使用启动器', '/manual/starter/desktop.md'),
           makeLink('在手机上运行', '/manual/starter/mobile.md'),
-          makeLink('在服务器上安装', '/manual/starter/server.md'),
           makeLink('使用容器', '/manual/starter/container.md'),
         ],
       }, {
@@ -68,8 +67,12 @@ export default async () => defineConfig({
           makeLink('配置文件', '/manual/advanced/config.md'),
           makeLink('启动脚本', '/manual/advanced/script.md'),
           makeLink('插件开发', '/manual/advanced/development.md'),
-          makeLink('配置模式', '/manual/advanced/schema.md'),
           makeLink('发布插件', '/manual/advanced/publish.md'),
+        ],
+      }, {
+        text: '配方',
+        items: [
+          makeLink('部署在服务器', '/manual/recipe/server.md'),
         ],
       }],
 
@@ -100,6 +103,7 @@ export default async () => defineConfig({
           makeLink('会话选择器', '/guide/plugin/selector.md'),
           makeLink('事件系统', '/guide/plugin/events.md'),
           makeLink('服务与依赖', '/guide/plugin/service.md'),
+          makeLink('配置模式', '/guide/plugin/schema.md'),
         ],
       }, {
         text: '数据库',
