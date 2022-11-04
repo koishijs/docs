@@ -15,21 +15,6 @@ koishi start [file] [options]
 基于这个逻辑，你也可以将你的配置文件的后缀名改为 ts 等，但动态的配置文件格式将不再支持 @koishijs/plugin-market，这意味着你将无法使用插件市场。
 :::
 
-### 使用环境变量
-
-你可以通过插值语法在配置文件中使用环境变量。例如：
-
-```yaml title=koishi.yml
-plugins:
-  adapter-discord:
-    bots:
-      - token: ${{ env.DISCORD_TOKEN }}
-```
-
-当项目启动时，会将环境变量中的值替换进去。
-
-除了系统提供的环境变量外，Koishi 还支持 [dotenv](https://github.com/motdotla/dotenv)。你可以在当前目录创建一个 `.env` 文件，并在里面填写你的环境变量。这个文件已经被包含在 `.gitignore` 中，你可以在其中填写隐私信息（例如账号密码）而不用担心被上传到远端。
-
 ### 自动重启
 
 Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃时，如果 Koishi 已经启动成功，则监视进程将自动重新启动一个新的进程。

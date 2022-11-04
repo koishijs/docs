@@ -55,3 +55,42 @@ plugins:
 1. 关闭当前 Koishi 应用
 2. 打开配置文件进行编辑
 3. 保存配置文件后再次启动 Koishi 应用
+
+## 使用更多格式
+
+::: warning
+我们并不推荐使用高级语言来编写配置文件，因为动态的配置无法支持环境变量、配置热重载和插件市场等特性。
+:::
+
+Koishi 默认支持的配置文件后缀名包括 `.yml`、`.yaml`、`.json`、`.js`、`.ts`。这意味着你也可以使用其他类型的配置文件。
+
+除此以外，结合命令行工具的 `-r` 参数，你还可以扩展配置文件的格式。例如，如果你喜欢 CoffeeScript，你可以这样修改你的启动脚本：
+
+```json title=package.json
+{
+  "scripts": {
+    "start": "koishi start -r coffeescript/register -r yml-register"
+  }
+}
+```
+
+这样你就可以将配置写在 `koishi.coffee` 中啦~
+
+## 使用环境变量
+
+你可以通过插值语法在配置文件中使用环境变量。例如：
+
+```yaml title=koishi.yml
+plugins:
+  adapter-discord:
+    bots:
+      - token: ${{ env.DISCORD_TOKEN }}
+```
+
+当项目启动时，会将环境变量中的值替换进去。
+
+除了系统提供的环境变量外，Koishi 还原生支持 [dotenv](https://github.com/motdotla/dotenv)。你可以在当前目录创建一个 `.env` 文件，并在里面填写你的环境变量。这个文件已经被包含在 `.gitignore` 中，你可以在其中填写隐私信息 (例如账号密码) 而不用担心被上传到远端。例如在上面的例子中你就可以这样写：
+
+```sh .env
+DISCORD_TOKEN = xxx
+```
