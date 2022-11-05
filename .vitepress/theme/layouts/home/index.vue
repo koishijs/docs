@@ -1,10 +1,10 @@
 <template>
   <div class="layout-home">
     <div class="track track-main" :style="main">
-      <track-slide1 @swipe="move(1)"></track-slide1>
-      <track-slide2></track-slide2>
-      <track-slide3></track-slide3>
-      <track-slide4></track-slide4>
+      <slide1 @swipe="move(1)"></slide1>
+      <slide2></slide2>
+      <slide3></slide3>
+      <slide4></slide4>
     </div>
     <div class="track track-demo" :style="demo">
       <track-demo></track-demo>
@@ -14,10 +14,10 @@
 
 <script lang="ts" setup>
 
-import TrackSlide1 from './track-slide-1.vue'
-import TrackSlide2 from './track-slide-2.vue'
-import TrackSlide3 from './track-slide-3.vue'
-import TrackSlide4 from './track-slide-4.vue'
+import Slide1 from './slide1.vue'
+import Slide2 from './slide2.vue'
+import Slide3 from './slide3.vue'
+import Slide4 from './slide4.vue'
 import TrackDemo from './track-demo.vue'
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
@@ -85,6 +85,7 @@ useEventListener('touchstart', (e: TouchEvent) => {
 
 useEventListener('touchmove', (e: TouchEvent) => {
   if (!isDragging) return
+  e.preventDefault()
   position.value = position.value + (lastY - e.touches[0].clientY) / innerHeight
   lastY = e.touches[0].clientY
 })

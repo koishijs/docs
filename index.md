@@ -44,8 +44,6 @@ footer:
         link: /manual/starter/desktop.html
       - text: 在手机上运行
         link: /manual/starter/mobile.html
-      - text: 在服务器上安装
-        link: /manual/starter/server.html
       - text: 使用容器
         link: /manual/starter/container.html
   - text: 文档

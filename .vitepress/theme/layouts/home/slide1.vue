@@ -23,23 +23,6 @@ import { withBase } from 'vitepress'
 
 defineEmits(['swipe'])
 
-// 跨平台 (待定)
-
-// 实时监控 (仪表盘)
-// 借助 Koishi 仪表盘功能，你可以实时监控机器人的运行状态。
-
-// 简单配置 (全局配置)
-// Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
-
-// 生态丰富 (插件市场)
-// Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
-
-// 掌控数据 (数据库)
-// 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
-
-// 即刻预览 (沙盒)
-// 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
-
 </script>
 
 <style lang="scss" scoped>
@@ -50,11 +33,11 @@ defineEmits(['swipe'])
   justify-content: center;
   align-items: center;
   gap: 1rem 0;
+  color: var(--vp-c-brand-darker);
 
   h1 {
     line-height: 1.5;
     font-size: 3rem;
-    color: var(--vp-c-brand-lightest);
   }
 
   svg {
@@ -83,7 +66,7 @@ defineEmits(['swipe'])
   }
 
   .actions {
-    margin: 2rem;
+    margin: 1.5rem 0;
     display: flex;
     flex-wrap: wrap;
     gap: 2.2rem;
@@ -95,6 +78,7 @@ defineEmits(['swipe'])
     }
 
     .action-button {
+      flex: 1 0 auto;
       user-select: none;
       display: inline-block;
       font-size: 1.05rem;
