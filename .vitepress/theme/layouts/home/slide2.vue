@@ -1,14 +1,14 @@
 <template>
-  <screen-demo v-for="feat in frontmatter.features" :key="feat.title">
+  <demo v-for="feat in frontmatter.features" :key="feat.title">
     <h2>{{ feat.title }}</h2>
     <p>{{ feat.desc }}</p>
-  </screen-demo>
+  </demo>
 </template>
 
 <script lang="ts" setup>
 
 import { useData } from 'vitepress'
-import ScreenDemo from './screen-demo.vue'
+import Demo from './demo.vue'
 
 const { frontmatter } = useData()
 

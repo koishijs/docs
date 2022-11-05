@@ -7,7 +7,7 @@
       <slide4></slide4>
     </div>
     <div class="track track-demo" :style="demo">
-      <track-demo></track-demo>
+      <track-demo :position="position"></track-demo>
     </div>
   </div>
 </template>
@@ -81,6 +81,7 @@ let lastY: number
 useEventListener('touchstart', (e: TouchEvent) => {
   isDragging = true
   lastY = e.touches[0].clientY
+  e.preventDefault()
 })
 
 useEventListener('touchmove', (e: TouchEvent) => {
@@ -116,7 +117,7 @@ useEventListener('touchend', (e: TouchEvent) => {
   top: 0;
   left: 0;
   width: 100vw;
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .track-main {
