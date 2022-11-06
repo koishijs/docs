@@ -8,7 +8,7 @@
 
 ![market](/console/market_light.webp) {.light-only}
 
-![market](/console/marke_dark.webp) {.dark-only}
+![market](/console/market_dark.webp) {.dark-only}
 
 2. 前往「依赖管理」页面，你可以在这里看到依赖列表，你可以在这里更新你的依赖，当状态显示为「可更新」时，点击右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」即可完成更新。
 
