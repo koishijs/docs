@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-home" :class="{ dragging: isDragging }">
+  <div class="layout-home" :class="{ moving }">
     <div class="track track-main" :style="main">
       <slide1 @swipe="move(1)"></slide1>
       <slide2></slide2>
@@ -7,7 +7,7 @@
       <slide4></slide4>
     </div>
     <div class="track track-demo" :style="demo">
-      <track-demo :position="position"></track-demo>
+      <carousel :position="position"></carousel>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ import Slide1 from './slide1.vue'
 import Slide2 from './slide2.vue'
 import Slide3 from './slide3.vue'
 import Slide4 from './slide4.vue'
-import TrackDemo from './track-demo.vue'
+import Carousel from './carousel.vue'
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 import { useEventListener } from '@vueuse/core'
@@ -53,47 +53,66 @@ function restrict(value: number) {
 }
 
 function move(offset: number) {
-  position.value = restrict(position.value + offset)
+  position.value = restrict(Math.round(position.value + offset))
+}
+
+function sign(value: number, epsilon = 0) {
+  if (value > epsilon) return 1
+  if (value < -epsilon) return -1
+  return 0
 }
 
 useEventListener('keydown', (e: KeyboardEvent) => {
   if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+    e.preventDefault()
     move(1)
   } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault()
     move(-1)
   }
 })
 
-let lastWheel = 0
+let lastMove = 0
 
 useEventListener('wheel', (e: WheelEvent) => {
   if (e.ctrlKey || e.shiftKey || Math.abs(e.deltaY) < 50) return
   const timestamp = Date.now()
-  if (timestamp - lastWheel >= 100) {
+  if (timestamp - lastMove >= 100) {
     move(Math.sign(e.deltaY))
   }
-  lastWheel = timestamp
+  lastMove = timestamp
 }, { passive: false })
 
-let isDragging = false
+let moving = false
+let startY: number
 let lastY: number
 
 useEventListener('touchstart', (e: TouchEvent) => {
-  isDragging = true
-  lastY = e.changedTouches[0].clientY
+  moving = true
+  startY = lastY = e.changedTouches[0].clientY
 })
 
 useEventListener('touchmove', (e: TouchEvent) => {
-  if (!isDragging) return
-  e.preventDefault()
-  position.value = position.value + (lastY - e.changedTouches[0].clientY) / innerHeight
-  lastY = e.changedTouches[0].clientY
+  if (!moving) return
+  const { clientY } = e.changedTouches[0]
+  position.value += (lastY - clientY) / innerHeight
+  if (position.value === restrict(position.value)) {
+    // do not prevent default at the top or bottom
+    e.preventDefault()
+  }
+  lastY = clientY
 }, { passive: false })
 
 useEventListener('touchend', (e: TouchEvent) => {
-  isDragging = false
-  position.value = position.value + (lastY - e.changedTouches[0].clientY) / innerHeight
-  position.value = restrict(Math.round(position.value))
+  moving = false
+  const { clientY } = e.changedTouches[0]
+  const deltaY = startY - clientY
+  const timestamp = Date.now()
+  if (timestamp - lastMove >= 100) {
+    position.value -= (lastY - startY) / innerHeight
+    move(sign(deltaY, 50))
+  }
+  lastMove = timestamp
 })
 
 </script>
@@ -107,13 +126,17 @@ useEventListener('touchend', (e: TouchEvent) => {
   overflow: hidden;
   line-height: 1.7em;
 
-  &.dragging {
+  &.moving {
     --t-duration: 0;
   }
 
   :deep(.screen) {
     height: 100vh;
     position: relative;
+  }
+
+  :deep(p) {
+    font-size: 15px;
   }
 }
 

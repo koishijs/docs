@@ -30,6 +30,12 @@
     flex: 3 0 0;
     overflow-x: hidden;
   }
+
+  @media (max-width: 959px) {
+    .caption {
+      padding: 0 2rem;
+    }
+  }
 }
 
 </style>

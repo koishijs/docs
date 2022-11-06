@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 
-import { useData, withBase } from 'vitepress'
+import { useData } from 'vitepress'
 
 const { frontmatter } = useData()
 

@@ -2,7 +2,8 @@
   <div class="mask" :style="{ top: (index + offset) * 100 + 'vh' }" v-for="(feat, index) in frontmatter.features" :key="index">
     <demo #figure :style="{ top: -(index + offset) * 100 + 'vh' }">
       <chat-panel controls>
-        <img :src="withBase(feat.image)"/>
+        <img :src="withBase(feat.image + '_light.webp')" class="light-only"/>
+        <img :src="withBase(feat.image + '_dark.webp')" class="dark-only"/>
       </chat-panel>
     </demo>
   </div>
@@ -37,6 +38,10 @@ const offset = computed(() => {
   position: absolute !important;
   overflow: hidden;
   transition: top var(--t-duration) ease;
+
+  @media (max-width: 959px) {
+    padding: 0 0.5rem;
+  }
 }
 
 .screen {

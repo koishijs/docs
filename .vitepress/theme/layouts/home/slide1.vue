@@ -57,6 +57,7 @@ defineEmits(['swipe'])
     text-transform: uppercase;
     text-align: center;
     line-height: 2;
+    font-size: 16px;
 
     br {
       @media (min-width: 600px) {
