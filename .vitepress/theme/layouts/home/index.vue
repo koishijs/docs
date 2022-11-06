@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-home">
+  <div class="layout-home" :class="{ dragging: isDragging }">
     <div class="track track-main" :style="main">
       <slide1 @swipe="move(1)"></slide1>
       <slide2></slide2>
@@ -80,20 +80,19 @@ let lastY: number
 
 useEventListener('touchstart', (e: TouchEvent) => {
   isDragging = true
-  lastY = e.touches[0].clientY
-  e.preventDefault()
+  lastY = e.changedTouches[0].clientY
 })
 
 useEventListener('touchmove', (e: TouchEvent) => {
   if (!isDragging) return
   e.preventDefault()
-  position.value = position.value + (lastY - e.touches[0].clientY) / innerHeight
-  lastY = e.touches[0].clientY
-})
+  position.value = position.value + (lastY - e.changedTouches[0].clientY) / innerHeight
+  lastY = e.changedTouches[0].clientY
+}, { passive: false })
 
 useEventListener('touchend', (e: TouchEvent) => {
   isDragging = false
-  position.value = position.value + (lastY - e.touches[0].clientY) / innerHeight
+  position.value = position.value + (lastY - e.changedTouches[0].clientY) / innerHeight
   position.value = restrict(Math.round(position.value))
 })
 
@@ -102,10 +101,15 @@ useEventListener('touchend', (e: TouchEvent) => {
 <style lang="scss" scoped>
 
 .layout-home {
+  --t-duration: .3s;
   height: 100vh;
   margin-top: calc(0px - var(--vp-nav-height));
   overflow: hidden;
   line-height: 1.7em;
+
+  &.dragging {
+    --t-duration: 0;
+  }
 
   :deep(.screen) {
     height: 100vh;
@@ -117,7 +121,7 @@ useEventListener('touchend', (e: TouchEvent) => {
   top: 0;
   left: 0;
   width: 100vw;
-  transition: transform .3s ease;
+  transition: transform var(--t-duration) ease;
 }
 
 .track-main {

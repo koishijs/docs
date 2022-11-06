@@ -74,7 +74,8 @@ const { frontmatter } = useData()
       flex: 0;
       text-align: center;
       width: 100%;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
+      font-size: 14px;
       border-top: 1px solid var(--vp-c-divider-light);
 
       div {
