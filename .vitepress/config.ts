@@ -56,7 +56,7 @@ export default async () => defineConfig({
       }, {
         text: '控制台',
         items: [
-          makeLink('什么是控制台', '/manual/console/index.md'),
+          makeLink('认识控制台', '/manual/console/index.md'),
           makeLink('安装和配置插件', '/manual/console/market.md'),
           makeLink('接入聊天平台', '/manual/console/adapter.md'),
           makeLink('使用数据库', '/manual/console/dataview.md'),

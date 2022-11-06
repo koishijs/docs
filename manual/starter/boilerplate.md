@@ -1,3 +1,12 @@
+---
+prev:
+  text: 选择安装方式
+  link: /manual/starter/
+next:
+  text: 认识控制台
+  link: /manual/console/
+---
+
 # 创建模板项目
 
 ::: tip
@@ -100,12 +109,3 @@ npm start
 yarn start
 ```
 :::
-
-## 下一步
-
-恭喜你已经学会了 Koishi 的安装方法！接下来：
-
-- 首先建议你阅读 [使用控制台](../console/)，你可以快速掌握 Koishi 的使用方法
-- 如果想要创建自己的第一个插件，请阅读 [插件开发](../advanced/development.md)
-- 如果你想继续学习 Koishi 的开发，我们的 [指南](../../guide/) 提供了详细的资料
-- 如果你想了解更多的插件以便快速搭建成熟的项目，可以前往 [官方插件](../../plugins/) 部分

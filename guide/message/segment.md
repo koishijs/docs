@@ -12,7 +12,7 @@ declare const userId: string
 session.send(segment('at', { id: userId }) + '我在叫你哟！')
 
 // 你发送了一张 Koishi 图标
-session.send(segment('image', { url: 'https://koishi.js.org/koishi.png' }))
+session.send(segment('image', { url: 'https://koishi.chat/koishi.png' }))
 ```
 
 **前缀消息段**表达了你发送的消息具有某些特殊语义。当你要发送匿名消息，或者引用其他消息的内容，你同样只需要在消息的开头加上一个消息段即可：

@@ -32,6 +32,9 @@
   }
 
   @media (max-width: 959px) {
+    padding-top: var(--vp-nav-height-mobile);
+    padding-bottom: 64px;
+
     .caption {
       padding: 0 2rem;
     }

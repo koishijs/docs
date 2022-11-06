@@ -73,6 +73,9 @@ useEventListener('keydown', (e: KeyboardEvent) => {
 })
 
 let lastMove = 0
+let moving = false
+let startY: number
+let lastY: number
 
 useEventListener('wheel', (e: WheelEvent) => {
   if (e.ctrlKey || e.shiftKey || Math.abs(e.deltaY) < 50) return
@@ -83,10 +86,6 @@ useEventListener('wheel', (e: WheelEvent) => {
   lastMove = timestamp
 }, { passive: false })
 
-let moving = false
-let startY: number
-let lastY: number
-
 useEventListener('touchstart', (e: TouchEvent) => {
   moving = true
   startY = lastY = e.changedTouches[0].clientY
@@ -95,8 +94,9 @@ useEventListener('touchstart', (e: TouchEvent) => {
 useEventListener('touchmove', (e: TouchEvent) => {
   if (!moving) return
   const { clientY } = e.changedTouches[0]
-  position.value += (lastY - clientY) / innerHeight
-  if (position.value === restrict(position.value)) {
+  const destination = position.value + (lastY - clientY) / innerHeight
+  position.value = restrict(destination)
+  if (position.value === destination) {
     // do not prevent default at the top or bottom
     e.preventDefault()
   }
@@ -155,7 +155,7 @@ useEventListener('touchend', (e: TouchEvent) => {
 
 .track-demo {
   position: fixed;
-  z-index: 100;
+  z-index: 15;
   pointer-events: none;
 }
 
