@@ -2,10 +2,6 @@
 
 每个 Koishi 应用都有一个配置文件，它管理了应用及其插件的全部配置。默认情况下配置文件的格式为 [YAML](https://en.wikipedia.org/wiki/YAML)，它是一种易于阅读和编辑的文本格式，你可以用任何文本编辑器打开。
 
-::: tip
-如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在[这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html)中学习 YAML 的语法。
-:::
-
 ## 根目录位置
 
 配置文件所在的目录叫**根目录**。根据你的安装方式，根目录的位置可能不同：
@@ -85,6 +81,10 @@ plugins:
 ```
 
 ## 修改配置文件
+
+::: tip
+如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在[这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html)中学习 YAML 的语法。
+:::
 
 当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件。反过来，如果你想调整 Koishi 及其插件的行为，你就需要修改这个配置文件。
 

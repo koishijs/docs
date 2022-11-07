@@ -66,7 +66,7 @@ export default async () => defineConfig({
         items: [
           makeLink('配置文件', '/manual/advanced/config.md'),
           makeLink('启动脚本', '/manual/advanced/script.md'),
-          makeLink('插件开发', '/manual/advanced/development.md'),
+          makeLink('工作区开发', '/manual/advanced/workspace.md'),
           makeLink('发布插件', '/manual/advanced/publish.md'),
         ],
       }, {
