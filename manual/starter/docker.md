@@ -7,7 +7,7 @@ next:
   link: /manual/console/
 ---
 
-# 使用容器
+# 在容器中使用
 
 ::: tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。

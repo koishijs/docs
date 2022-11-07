@@ -47,11 +47,13 @@ export default async () => defineConfig({
       }, {
         items: [
           makeLink('起步', '/manual/starter/'),
+          makeLink('为 Windows 安装', '/manual/starter/windows.md'),
+          makeLink('为 macOS 安装', '/manual/starter/macos.md'),
+          makeLink('为 Linux 安装', '/manual/starter/linux.md'),
+          makeLink('为 Android 安装', '/manual/starter/android.md'),
+          makeLink('在容器中使用', '/manual/starter/docker.md'),
           makeLink('创建模板项目', '/manual/starter/boilerplate.md'),
           makeLink('作为依赖调用', '/manual/starter/direct.md'),
-          makeLink('使用启动器', '/manual/starter/desktop.md'),
-          makeLink('在手机上运行', '/manual/starter/mobile.md'),
-          makeLink('使用容器', '/manual/starter/container.md'),
         ],
       }, {
         text: '控制台',

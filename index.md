@@ -41,16 +41,20 @@ development:
 footer:
   - text: 起步
     items:
+      - text: 为 Windows 安装
+        link: /manual/starter/windows.html
+      - text: 为 macOS 安装
+        link: /manual/starter/macos.html
+      - text: 为 Linux 安装
+        link: /manual/starter/linux.html
+      - text: 为 Android 安装
+        link: /manual/starter/android.html
+      - text: 在容器中使用
+        link: /manual/starter/docker.html
       - text: 创建模板项目
         link: /manual/starter/boilerplate.html
       - text: 作为依赖调用
         link: /manual/starter/direct.html
-      - text: 使用启动器
-        link: /manual/starter/desktop.html
-      - text: 在手机上运行
-        link: /manual/starter/mobile.html
-      - text: 使用容器
-        link: /manual/starter/container.html
   - text: 文档
     items:
       - text: 开发指南

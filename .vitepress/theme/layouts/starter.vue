@@ -46,19 +46,19 @@ const choices = {
     text: '用于搭建机器人服务',
     caption: '我的运行环境是……',
     children: {
-      'Windows': '/manual/starter/desktop',
-      'macOS': '/manual/starter/desktop',
-      'Linux': '/manual/starter/desktop',
-      'Android': '/manual/starter/mobile',
-      'Container': '/manual/starter/container',
+      'Windows': '/manual/starter/windows.html',
+      'macOS': '/manual/starter/macos.html',
+      'Linux': '/manual/starter/linux.html',
+      'Android': '/manual/starter/android.html',
+      'Docker': '/manual/starter/docker.html',
     },
   },
   development: {
     text: '用于开发',
     caption: '我希望 Koishi 作为……',
     children: {
-      '一个独立的项目': '/manual/starter/boilerplate',
-      '其他 Node 项目的依赖': '/manual/starter/direct',
+      '一个独立的项目': '/manual/starter/boilerplate.html',
+      '其他 Node 项目的依赖': '/manual/starter/direct.html',
     },
   },
 }
