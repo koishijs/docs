@@ -78,8 +78,8 @@ node -r esbuild-register .
 最后，打开浏览器并前往 `http://localhost:5140`，你将看到一个控制台界面。在左侧点击进入「沙盒」页面，并点击屏幕上方的「添加用户」来创建一个模拟用户。现在你已经可以与机器人对话了：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">echo 你好</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">你好</chat-message>
+<chat-message nickname="Alice">echo 你好</chat-message>
+<chat-message nickname="Koishi">你好</chat-message>
 </chat-panel>
 
 ## 配置机器人
@@ -184,8 +184,8 @@ ctx.middleware((session, next) => {
 然后重新运行你的项目：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">天王盖地虎</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">宝塔镇河妖</chat-message>
+<chat-message nickname="Alice">天王盖地虎</chat-message>
+<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
 不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：

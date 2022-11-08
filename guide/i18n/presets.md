@@ -37,7 +37,7 @@ session.text('rank', ['foo', 'bar'])
 ```
 
 <chat-panel>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Koishi">
 <p>当前排名如下：</p>
 <p>第 1 名：foo</p>
 <p>第 2 名：bar</p>

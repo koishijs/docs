@@ -22,8 +22,8 @@ Koishi 的一个核心特性是强大的控制台，控制台是一个对用户�
 
 控制台的界面分为两部分，左边是侧边栏，用来切换右边活动的界面，右边默认打开的是仪表盘页面。
 
-![home](/console/status_light.webp) {.light-only}
+![home](/manual/console/status_light.webp) {.light-only}
 
-![home](/console/status_dark.webp) {.dark-only}
+![home](/manual/console/status_dark.webp) {.dark-only}
 
 在接下来的几页中会继续介绍其他界面的功能和使用。

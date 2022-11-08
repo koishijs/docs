@@ -9,8 +9,8 @@
 Koishi 拥有着强大的指令系统，然而过于复杂的功能也会困扰使用者。因此，Koishi 也内置了 help 指令，用于输出全部或特定指令的使用方法。你可以使用 `help` 查看指令列表：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">help</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">help</chat-message>
+<chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;echo  输出收到的信息</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
@@ -30,8 +30,8 @@ ctx.command('echo <message:text> 输出收到的信息')
 ```
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">echo -h</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">echo -h</chat-message>
+<chat-message nickname="Koishi">
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>可用的选项有：</p>
@@ -53,8 +53,8 @@ ctx.command('echo <message:text>', '输出收到的信息')
 这时再调用 `echo -h`，你便会发现使用说明中已经添加了你刚刚的补充文本：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">echo -h</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">echo -h</chat-message>
+<chat-message nickname="Koishi">
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>注意：参数请写在最前面，不然会被当成 message 的一部分！</p>
@@ -78,21 +78,21 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 ```
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">help</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">help</chat-message>
+<chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
-<chat-message nickname="Alice" color="#cc0066">bar --foo 123</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">secret: 123</chat-message>
+<chat-message nickname="Alice">bar --foo 123</chat-message>
+<chat-message nickname="Koishi">secret: 123</chat-message>
 </chat-panel>
 
 如果要查看隐藏的指令和选项，可以使用 `help -H`：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">help -H</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">help -H</chat-message>
+<chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;bar  一条看不见的指令</p>

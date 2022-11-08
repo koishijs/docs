@@ -8,13 +8,13 @@ export default async () => defineConfig({
   ignoreDeadLinks: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/koishi.png' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#5546a3' }],
   ],
 
   themeConfig: {
-    logo: '/koishi.png',
+    logo: '/logo.png',
     outline: [2, 3],
 
     nav: [{

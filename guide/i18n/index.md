@@ -30,8 +30,8 @@ ctx.middleware((session, next) => {
 ```
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">greeting</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">你好！</chat-message>
+<chat-message nickname="Alice">greeting</chat-message>
+<chat-message nickname="Koishi">你好！</chat-message>
 </chat-panel>
 
 我们看到机器人回复了「你好！」，这是因为 Koishi 使用的默认语言是中文。
@@ -43,8 +43,8 @@ channel.locale = 'en'
 ```
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">greeting</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">Hello!</chat-message>
+<chat-message nickname="Alice">greeting</chat-message>
+<chat-message nickname="Koishi">Hello!</chat-message>
 </chat-panel>
 
 ### 插值语法
@@ -65,8 +65,8 @@ ctx.middleware((session, next) => {
 ```
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">greeting</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">Hello, Alice!</chat-message>
+<chat-message nickname="Alice">greeting</chat-message>
+<chat-message nickname="Koishi">Hello, Alice!</chat-message>
 </chat-panel>
 
 这里的参数也可以是一个对象，此时花括号中的内容仍然表示对象的索引。
@@ -104,7 +104,7 @@ session.text('remain', [123456 /* 毫秒数 */])
 ```
 
 <chat-panel>
-<chat-message nickname="Koishi" avatar="/koishi.png">距离比赛结束还有 2 分钟 3 秒。</chat-message>
+<chat-message nickname="Koishi">距离比赛结束还有 2 分钟 3 秒。</chat-message>
 </chat-panel>
 
 ## 渲染回退

@@ -55,8 +55,8 @@ export function apply(ctx: Context) {
 以 [开发模式](./script.md#开发模式) 重新运行你的项目，你会立即在网页控制台的配置界面中看到 `example` 插件。只需点击启用，你就可以实现与机器人的对话了：
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">天王盖地虎</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">宝塔镇河妖</chat-message>
+<chat-message nickname="Alice">天王盖地虎</chat-message>
+<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
 ## 构建源代码

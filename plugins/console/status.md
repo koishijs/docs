@@ -7,8 +7,8 @@
 status 指令可以用于查看机器人的运行状态。
 
 <chat-panel>
-<chat-message nickname="Alice" color="#cc0066">你的状态</chat-message>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Alice">你的状态</chat-message>
+<chat-message nickname="Koishi">
 <p>5 名四季酱正在为 20 个群和 2409 名用户提供服务。</p>
 <p>四季酱 2 号：工作中（2/min）</p>
 <p>四季酱 3 号：工作中（3/min）</p>

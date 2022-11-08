@@ -18,10 +18,10 @@ plugins:
 当用户 Alice 在频道 `source` 中发送消息 foo 的时候，`selfId` 对应的机器人就会在频道 `target` 中发送如下的内容。接着，频道 `target` 中的用户 Bob 也可以通过引用回复这条消息的方式将自己想说的话发回到频道 `source` 中去。
 
 <chat-panel>
-<chat-message nickname="Koishi" avatar="/koishi.png">
+<chat-message nickname="Koishi">
 <p>Alice: foo</p>
 </chat-message>
-<chat-message nickname="Bob" color="#00994d">
+<chat-message nickname="Bob">
 <blockquote><p>Alice: foo</p></blockquote>
 <p>bar</p>
 </chat-message>
