@@ -15,6 +15,6 @@ next:
 
 ## 下载
 
-- [便携包 (.zip)](http://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.0/koishi-desktop-win-x64-v0.8.0.zip)
-- [安装包 (.msi)](http://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.0/koishi-desktop-win-x64-v0.8.0.msi)
+- [便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.0/koishi-desktop-win-x64-v0.8.0.zip)
+- [安装包 (.msi)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.0/koishi-desktop-win-x64-v0.8.0.msi)
 - [更多下载](https://github.com/koishijs/koishi-desktop/releases)
