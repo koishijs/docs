@@ -15,5 +15,5 @@ next:
 
 ## 下载
 
-- [便携包 (.zip)](http://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.0/koishi-desktop-linux-x64-v0.8.0.zip)
+- [便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-linux-x64-v0.8.1.zip)
 - [更多下载](https://github.com/koishijs/koishi-desktop/releases)
