@@ -15,6 +15,10 @@ next:
 
 ## 下载
 
-- [便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.zip)
-- [安装包 (.pkg)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.pkg)
-- [更多下载](https://github.com/koishijs/koishi-desktop/releases)
+- [下载安装包 (.pkg)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.pkg)
+- [下载便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.zip)
+- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+
+## 其他选择
+
+找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。

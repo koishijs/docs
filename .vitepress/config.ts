@@ -15,7 +15,6 @@ export default async () => defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
-    outline: [2, 3],
 
     nav: [{
       text: '入门',
@@ -83,7 +82,7 @@ export default async () => defineConfig({
           makeLink('总览', '/guide/'),
         ],
       }, {
-        text: '处理交互',
+        text: '交互基础',
         items: [
           makeLink('使用中间件', '/guide/message/middleware.md'),
           makeLink('使用会话', '/guide/message/session.md'),
@@ -307,29 +306,13 @@ export default async () => defineConfig({
       }],
     },
 
-    socialLinks: [
-      { icon: 'discord', link: 'https://discord.com/invite/xfxYwmd284' },
-      { icon: 'github', link: 'https://github.com/koishijs/koishi' }
-    ],
+    socialLinks: {
+      discord: 'https://discord.com/invite/xfxYwmd284',
+      github: 'https://github.com/koishijs/koishi',
+    },
 
     editLink: {
       pattern: 'https://github.com/koishijs/docs/edit/main/:path',
-    },
-  },
-
-  vite: {
-    resolve: {
-      dedupe: ['vue'],
-    },
-
-    optimizeDeps: {
-      include: ['vue'],
-    },
-
-    server: {
-      fs: {
-        strict: false,
-      },
     },
   },
 })
