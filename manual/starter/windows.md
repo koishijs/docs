@@ -22,8 +22,7 @@ next:
 
 ## msi 安装
 
-通过 msi 安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。
-一般情况下你都应该选择这种方式。
+通过 msi 安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
@@ -35,21 +34,17 @@ next:
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-点击 Koishi 图标即可启动。等待几秒钟，你的默认浏览器将会打开 Koishi 控制台，
-现在你可以开始使用 Koishi 了。
+点击 Koishi 图标即可启动。等待几秒钟，你的默认浏览器将会打开 Koishi 控制台，现在你可以开始使用 Koishi 了。
 
 ## 便携包安装
 
-通过 msi 安装包安装 Koishi 是最推荐的安装方式，但是当你有一些特殊需要时
-（比如，希望将 Koishi 置于 U 盘内携带），
-你可以使用便携包的方式安装。
+通过 msi 安装包安装 Koishi 是最推荐的安装方式，但是当你有一些特殊需要时 (比如，希望将 Koishi 置于 U 盘内携带)，你可以使用便携包的方式安装。
 
 ![unzip](/manual/windows/unzip-dark.webp) {.dark-only}
 
 ![unzip](/manual/windows/unzip-light.webp) {.light-only}
 
-可以使用你喜欢的解压缩工具解压 Koishi 便携包。
-如果你没有安装解压缩工具，使用 Windows 自带的解压缩功能也可完成。
+可以使用你喜欢的解压缩工具解压 Koishi 便携包。如果你没有安装解压缩工具，使用 Windows 自带的解压缩功能也可完成。
 
 ![run-koi](/manual/windows/run-koi-dark.webp) {.dark-only}
 
