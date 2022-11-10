@@ -45,8 +45,8 @@
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| `<at>`  | ✓ | ✓ | ✓ | ⭘ | ✓ |
-| `id`    | ✓ | ✓ | ✓ | ⭘ | ✓ |
+| `<at>`  | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `id`    | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ### 提及频道 (sharp)
 
@@ -55,12 +55,23 @@
 
 `<sharp>` 元素用于提及某个频道。
 
+|  | Discord | Kook | OneBot | QQGuild | Telegram |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| `<sharp>` | ✓ | ✓ | ~ | ✓ | ~ |
+| `id`      | ✓ | ✓ | ~ | ✓ | ~ |
+
 ### 表情 (face)
 
 - **id:** `string` 表情的 ID
 - **name:** `string` 表情的名称
+- **platform:** `string` 表情显示的平台
 
-`<face>` 元素用于显示某个表情。
+`<face>` 元素用于显示某个表情。通常来说为了跨平台转发，在 `<face>` 内部还会增加 `<image>` 作为回退。当图片的存在可能导致消息分片时，可以使用 `name` 取代图片的渲染。
+
+|  | Discord | Kook | OneBot | QQGuild | Telegram |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| `<face>`  | ✓ | ○ | ✓ | ○ | ○ |
+| `id`      | ✓ | ○ | ✓ | ○ | ○ |
 
 ### 链接 (a)
 
@@ -249,8 +260,8 @@ hello<message/>world
 
 ### 作者 (author)
 
-- **id:** `string` 用户 ID
-- **name:** `string` 用户名
+- **userId:** `string` 用户 ID
+- **nickname:** `string` 昵称
 - **avatar:** `string` 头像 URL
 
 `<author>` 元素用于表示消息的作者。它的子元素会被渲染为作者的名字。
@@ -258,9 +269,9 @@ hello<message/>world
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | `<author>` | ⭘<sup>[1]</sup> | ~ | ✓<sup>[2]</sup> | ~ | ~ |
-| `id`      | ~ | ~ | ✓ | ~ | ~ |
-| `name`    | ⭘ | ~ | ✓ | ~ | ~ |
-| `avatar`  | ⭘ | ~ | ~ | ~ | ~ |
+| `userId`   | ~ | ~ | ✓ | ~ | ~ |
+| `nickname` | ⭘ | ~ | ✓ | ~ | ~ |
+| `avatar`   | ⭘ | ~ | ~ | ~ | ~ |
 
 - [1]: 基于 Webhook 功能，目前暂未支持
 - [2]: 仅限 forward 和 quote 消息
