@@ -73,7 +73,7 @@ export default async () => defineConfig({
       }, {
         text: '配方',
         items: [
-          makeLink('部署在服务器', '/manual/recipe/server.md'),
+          makeLink('服务器部署', '/manual/recipe/server.md'),
         ],
       }],
 

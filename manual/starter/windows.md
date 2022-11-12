@@ -14,6 +14,7 @@ next:
 :::
 
 我们为 Windows 用户提供了多种安装方式：
+
 - [下载安装包 (.msi)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-win-x64-v0.8.1.msi)
 - [下载便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-win-x64-v0.8.1.zip)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)

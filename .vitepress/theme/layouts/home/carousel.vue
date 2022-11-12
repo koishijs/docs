@@ -57,7 +57,7 @@ const offset = computed(() => {
     padding: 2.5rem 1rem 1rem;
 
     img {
-      height: 75vh;
+      height: 70vh;
       max-width: unset;
       border-radius: 8px;
     }
