@@ -1,6 +1,6 @@
 # 认识插件
 
-在 [直接调用 Koishi](../../manual/starter/direct.md) 一章中，我们已经学习了基础的插件开发范例。本章将介绍更多的插件编写方式，以及一些场景下的最佳实践。
+模块化是 Koishi 的核心特性。借助插件系统，Koishi 得以将各种功能解耦出来，并以模块的形式分发。在入门篇中我们已经学习了基础的插件开发范例。本章将介绍更多的模块化编写方式，并介绍一些场景下的最佳实践。
 
 ## 插件的基本形式
 
@@ -34,82 +34,42 @@ ctx.plugin(class {
 
 ## 模块化的插件
 
-一个模块可以作为插件被 Koishi 加载，其需要满足以下两条中的一条：
+插件化最大的好处就是可以把不同的功能写在不同的模块中。此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容)。
 
-- 此模块的**默认导出**是一个插件
-- 此模块的**导出整体**是一个插件
+对于对象形式的插件，你还可以额外提供一个 `name` 属性作为插件的名称。对于函数和类形式的插件来说，插件名称便是函数名或类名。具名插件有助于更好地描述插件的功能，并被用于插件关系可视化中，实际上不会影响任何运行时的行为。
 
-这两种写法并无优劣之分，你完全可以按照自己的需求调整导出的形式。按照惯例，如果你的插件是一个函数，我们通常直接导出 apply 方法，并将导出整体作为一个插件；如果你的插件是一个类，那么我们通常使用默认导出的形式。
-
-```ts
-// 导出 apply 方法
+```ts title=foo.ts
+// 默认导出一个类插件
 export interface Config {}
 
-export function apply(ctx: Context, config: Config) {}
-
-// 将模块整体作为插件
-import * as plugin from './plugin'
-```
-
-```ts
-// 默认导出一个类
-export interface Config {}
-
-export default class ExamplePlugin {
+export default class Foo {
   constructor(ctx: Context, config: Config) {}
 }
-
-// 将默认导出作为插件
-import plugin from './plugin'
 ```
 
-::: tip
-这里默认导出的优先级更高。因此，只要模块提供了默认导出，Koishi 就会尝试加载这个默认导出，而不是导出整体。在开发中请务必注意这一点。
-:::
+```ts title=bar.ts
+// 整体导出一个对象插件
+export interface Config {}
 
-## 具名插件
+export const name = 'Bar'
 
-插件如果使用对象式，那么除了 `apply` 以外，你还可以提供一个 `name` 属性，它便是插件的名称。对于函数和类形式的插件来说，插件名称便是函数名或类名。具名插件有助于更好地描述插件的功能，并被用于插件关系可视化中，实际上不会影响任何运行时的行为。
+export function apply(ctx: Context, config: Config) {}
+```
 
-例如，下面给出了一个插件的例子，它实现了检测说话带空格的功能：
+Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子插件，再将调用这些子插件的一个新插件作为入口模块，就像这样：
 
-```ts title=detect-space.ts
-import { Context } from 'koishi'
-
-export const name = 'detect-space'
+```ts title=index.ts
+// 入口文件，从上述两种模块分别加载插件
+import Foo from './foo'
+import * as Bar from './bar'
 
 export function apply(ctx: Context) {
-  ctx.middleware((session, next) => {
-    if (session.content.match(/^\s*(\S +){2,}\S\s*$/g)) {
-      return '在？为什么说话带空格？'
-    } else {
-      return next()
-    }
-  })
+  ctx.plugin(Foo)
+  ctx.plugin(Bar)
 }
 ```
 
-## 嵌套插件
-
-Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子插件，再用一个父插件作为入口，就像这样：
-
-```ts title=nested-plugin.ts
-declare module './a' {}
-declare module './b' {}
-// ---cut---
-// 在 a.ts, b.ts 中编写两个不同的插件
-import { Context } from 'koishi'
-import pluginA from './a'
-import pluginB from './b'
-
-export function apply(ctx: Context) {
-  // 依次加载 a, b 两个插件
-  ctx.plugin(pluginA)
-  ctx.plugin(pluginB)
-}
-```
-
-这样当你加载 nested-plugin 时，就相当于同时加载了 a 和 b 两个插件。
+这样当你加载上述模块时，就相当于同时加载了 foo 和 bar 两个插件。
 
 当你在开发较为复杂的功能时，可以将插件分解成多个独立的子插件，并在入口文件中依次加载这些子插件。许多大型插件都采用了这种写法。
 
@@ -162,7 +122,18 @@ export function apply(ctx: Context, options) {
 
 这里的 `ready` 和 `dispose` 被称为**生命周期事件**，我们将会在后续的章节中进一步介绍。
 
-## 在配置文件中加载插件 <Badge text="CLI"/>
+## 在配置文件中加载
+
+一个模块可以作为插件被 Koishi 的配置文件加载，其需要满足以下两条中的一条：
+
+- 此模块的**默认导出**是一个插件
+- 此模块的**导出整体**是一个插件
+
+这两种写法并无优劣之分，你完全可以按照自己的需求调整导出的形式。按照惯例，如果你的插件是一个函数，我们通常直接导出 apply 方法，并将导出整体作为一个插件；如果你的插件是一个类，那么我们通常使用默认导出的形式。
+
+::: tip
+这里默认导出的优先级更高。因此，只要模块提供了默认导出，Koishi 就会尝试加载这个默认导出，而不是导出整体。在开发中请务必注意这一点。
+:::
 
 配置文件中的 `plugins` 字段记录了插件的信息：
 
