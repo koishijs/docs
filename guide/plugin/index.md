@@ -39,7 +39,7 @@ ctx.plugin(class {
 对于对象形式的插件，你还可以额外提供一个 `name` 属性作为插件的名称。对于函数和类形式的插件来说，插件名称便是函数名或类名。具名插件有助于更好地描述插件的功能，并被用于插件关系可视化中，实际上不会影响任何运行时的行为。
 
 ```ts title=foo.ts
-// 默认导出一个类插件
+// 默认导出类形式的插件
 export interface Config {}
 
 export default class Foo {
@@ -48,7 +48,7 @@ export default class Foo {
 ```
 
 ```ts title=bar.ts
-// 整体导出一个对象插件
+// 整体导出对象形式的插件
 export interface Config {}
 
 export const name = 'Bar'
@@ -56,10 +56,12 @@ export const name = 'Bar'
 export function apply(ctx: Context, config: Config) {}
 ```
 
-Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子插件，再将调用这些子插件的一个新插件作为入口模块，就像这样：
+## 嵌套插件
+
+Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子模块，再将调用这些子模块的一个新插件作为入口模块，就像这样：
 
 ```ts title=index.ts
-// 入口文件，从上述两种模块分别加载插件
+// 入口文件，从上述模块分别加载插件
 import Foo from './foo'
 import * as Bar from './bar'
 
@@ -69,39 +71,49 @@ export function apply(ctx: Context) {
 }
 ```
 
-这样当你加载上述模块时，就相当于同时加载了 foo 和 bar 两个插件。
+这样当你加载上述模块时，就相当于同时加载了 foo 和 bar 两个模块。这样的做法不仅能够减轻心智负担，解耦出的模块还享受独立的热重载，你可以在不影响一个模块运行的情况下修改另一个的代码！
 
 当你在开发较为复杂的功能时，可以将插件分解成多个独立的子插件，并在入口文件中依次加载这些子插件。许多大型插件都采用了这种写法。
 
-## 卸载插件
+## 停用插件
+
+`ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
 
 通常来说一个插件的效应应该是永久的，但如果你想在运行时卸载一个插件，应该怎么做？你可以使用 `ctx.dispose()` 方法来解决：
 
 ```ts
-declare const eventCallback: (session: Session) => void
-declare const commandCallback: Command.Action
-declare const middlewareCallback: Middleware
-// ---cut---
 import { Context } from 'koishi'
 
-function callback(ctx: Context, options) {
+function callback(ctx: Context) {
   // 编写你的插件逻辑
-  ctx.on('message', eventCallback)
-  ctx.command('foo').action(commandCallback)
-  ctx.middleware(middlewareCallback)
+  ctx.on('message', callback1)
+  ctx.command('foo').action(callback2)
+  ctx.middleware(callback3)
   ctx.plugin(require('another-plugin'))
 }
 
 // 加载插件
-const dispose = app.plugin(callback)
+const fork = app.plugin(callback)
 
-// 卸载这个插件，取消上述全部操作
-dispose()
+// 卸载这个插件，取消上述全部效果
+fork.dispose()
 ```
 
-看起来很神奇，不过它的实现方式也非常简单。当一个插件被注册时，Koishi 会记录注册过程中定义的所有事件钩子、指令、中间件乃至子插件。当 `ctx.dispose()` 被调用时，再逐一取消上述操作的效应。因此，它的局限性也很明显：它并不能妥善处理除了 Context API 以外的**副作用**。不过，我们也准备了额外的解决办法：
+对于可重用的插件，`fork.dispose()` 也只会停用 `fork` 对应的那一次。如果你想停用每一次的效果，可以使用 `ctx.registry.delete()`：
 
-```ts title=my-plugin.ts
+```ts
+// 移除可重用插件的全部分支
+ctx.registry.delete(plugin)
+```
+
+## 清除副作用
+
+当插件上下文被停用时，会触发名为 `dispose` 的生命周期事件。它可以用来清除插件的副作用。
+
+绝大部分 `Context` 方法都已经是 disposable 了，所以你并不需要担心这些方法带来的副作用。然而，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。下面是一个例子：
+
+```ts
+// 一个示例的服务器插件
 import { Context } from 'koishi'
 import { createServer } from 'http'
 
@@ -109,18 +121,18 @@ export function apply(ctx: Context, options) {
   const server = createServer()
 
   ctx.on('ready', () => {
-    // ctx.dispose 无法消除 server.listen 带来的副作用
+    // 在插件启动时监听端口
     server.listen(1234)
   })
 
-  // 添加一个特殊的回调函数来处理副作用
   ctx.on('dispose', () => {
+    // 在插件停用时关闭端口
     server.close()
   })
 }
 ```
 
-这里的 `ready` 和 `dispose` 被称为**生命周期事件**，我们将会在后续的章节中进一步介绍。
+这里的 `ready` 和 `dispose` 被称为 **生命周期事件**，我们将会在下一节中进一步介绍。
 
 ## 在配置文件中加载
 
