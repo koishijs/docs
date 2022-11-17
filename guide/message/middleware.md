@@ -1,8 +1,8 @@
 # 使用中间件
 
-从本节开始，我们开始深入研究如何利用 Koishi 的来接收和发送消息。
+本节将从中间件这个概念开始介绍如何使用 Koishi 来接收和发送消息。
 
-首先让我们回顾一下之前展示过的 [基本示例](../../manual/starter/direct.md#添加交互逻辑)：
+如果你已经阅读过 [作为依赖调用](../../manual/starter/direct.md#添加交互逻辑) 或 [工作区开发](../../manual/advanced/workspace.md#创建新插件)，你应该对下面的基本示例有所印象：
 
 ```ts
 // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
@@ -15,11 +15,11 @@ ctx.middleware((session, next) => {
 })
 ```
 
-在这个简单的示例中，这里有两件事你需要了解：
+上述代码片段实现了一个简单的功能：当任何用户发送「天王盖地虎」时，机器人将发送「宝塔镇河妖」。在这个示例中，这里有两件事你需要了解：
 
-上面的 `ctx.middleware()` 方法所传入的回调函数成为 **中间件 (Middleware)**。你可以使用中间件来处理所有收到的一切消息。如果你希望处理其他类型的事件 (例如加群申请又或者消息撤回等等)，可以使用 Koishi 的事件系统，这将在后面的章节中介绍。
+`ctx.middleware()` 方法所传入的回调函数称为 **中间件 (Middleware)**。你可以使用中间件来处理机器人所收到的一切消息。如果你希望处理其他类型的事件 (如加群申请、消息撤回等)，可以使用 Koishi 的事件系统，这将在后面的章节中介绍。
 
-上面的 `session` 对象被称为 **会话 (Session)**。所有的上报事件都会被转化成一个会话对象。你可以利用这个对象访问与此事件有关的数据 (例如用 `session.content` 表示消息的内容)，或调用 API 作为对此事件的响应 (例如用 `session.send()` 在当前频道内发送消息)。
+上面的 `session` 对象被称为 **会话 (Session)**。它是你处理绝大部分事件的着力点。你可以利用会话对象访问与此事件有关的数据 (例如用 `session.content` 表示消息的内容)，或调用 API 作为对此事件的响应 (例如用 `session.send()` 在当前频道内发送消息)。
 
 ## 为什么？
 
@@ -158,4 +158,4 @@ ctx.middleware((session, next) => {
 }, true)
 ```
 
-搭配使用上面几种中间件，你的机器人便拥有了无限可能。在 @koishijs/plugin-repeater 库中，就有着一个官方实现的复读功能，它远比上面的示例所显示的更加强大。如果想深入了解中间件机制，可以去研究一下这个功能的 [源代码](https://github.com/koishijs/koishi/blob/master/plugins/common/repeater/src/index.ts)。
+搭配使用上面几种中间件，你的机器人便拥有了无限可能。在 koishi-plugin-repeater 库中，就有着一个官方实现的复读功能，它远比上面的示例所显示的更加强大。如果想深入了解中间件机制，可以去研究一下这个功能的 [源代码](https://github.com/koishijs/koishi-plugin-repeater/blob/main/src/index.ts)。

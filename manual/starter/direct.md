@@ -172,11 +172,9 @@ ctx.plugin(require('@koishijs/plugin-echo'))
 
 ```ts title=index.ts
 // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
-ctx.middleware((session, next) => {
+ctx.on('message', (session) => {
   if (session.content === '天王盖地虎') {
-    return '宝塔镇河妖'
-  } else {
-    return next()
+    session.send('宝塔镇河妖')
   }
 })
 ```
@@ -197,11 +195,9 @@ export const name = 'ping'
 
 export function apply(ctx: Context) {
   // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
-  ctx.middleware(async (session, next) => {
+  ctx.on('message', (session) => {
     if (session.content === '天王盖地虎') {
-      return '宝塔镇河妖'
-    } else {
-      return next()
+      session.send('宝塔镇河妖')
     }
   })
 }
