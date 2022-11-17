@@ -141,15 +141,14 @@ export default async () => defineConfig({
       }, {
         text: '测试工具',
         items: [
-          makeLink('使用沙箱', '/guide/testing/sandbox.md'),
           makeLink('单元测试', '/guide/testing/unit-tests.md'),
         ],
-      }, {
-        text: '深入底层',
-        items: [
-          makeLink('模块组织', '/guide/in-depth/module.md'),
-          makeLink('消息处理', '/guide/in-depth/message.md'),
-        ],
+      // }, {
+      //   text: '深入底层',
+      //   items: [
+      //     makeLink('模块组织', '/guide/in-depth/module.md'),
+      //     makeLink('消息处理', '/guide/in-depth/message.md'),
+      //   ],
       }],
 
       '/api/': [{
