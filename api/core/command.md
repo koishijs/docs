@@ -138,7 +138,7 @@ type FieldCollector<K extends string> =
   - **argv.args:** `any[]` 指令的参数列表
   - **argv.options:** `Record<string, any>` 指令的选项
   - **argv.session:** [`Session`](./session.md) 当前的会话对象
-- **next:** [`Next`](../../guide/message/middleware.md) 所处的中间件的 `next` 回调函数
+- **next:** [`Next`](../../guide/basic/middleware.md) 所处的中间件的 `next` 回调函数
 - 返回值: `Promise<string>` 执行函数的返回结果，可用于指令插值
 
 执行当前指令。

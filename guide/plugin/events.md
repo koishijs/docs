@@ -1,6 +1,6 @@
 # 事件系统
 
-在 [使用会话](../message/session.md) 一章中，我们介绍了如何使用接受会话事件，并埋下了一个伏笔。本章节就让我们来完整地认识一下 Koishi 的事件系统。
+在 [使用会话](../basic/session.md) 一章中，我们介绍了如何使用接受会话事件，并埋下了一个伏笔。本章节就让我们来完整地认识一下 Koishi 的事件系统。
 
 - 相关 API：[事件系统 (Lifecycle)](../../api/service/lifecycle.md)
 

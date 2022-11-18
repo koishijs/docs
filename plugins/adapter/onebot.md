@@ -296,7 +296,7 @@ export default {
 
 ## 内部 API
 
-你可以通过 `bot.internal` 或 `session.onebot` 访问到内部 API，参见 [调用机器人](../../guide/message/session.md#调用机器人)。
+你可以通过 `bot.internal` 或 `session.onebot` 访问到内部 API，参见 [调用机器人](../../guide/basic/session.md#调用机器人)。
 
 下面展示了目前已经实现的 API 列表。如要了解细节请自行点击对应方法的链接进行查阅。
 

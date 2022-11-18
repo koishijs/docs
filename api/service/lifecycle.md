@@ -73,7 +73,7 @@
 
 ### ctx.middleware(middleware, prepend?)
 
-- **middleware:** [`Middleware`](../../guide/message/middleware.md#使用中间件) 要注册的中间件
+- **middleware:** [`Middleware`](../../guide/basic/middleware.md#使用中间件) 要注册的中间件
 - **prepend:** `boolean` 是否前置
 - 返回值: `() => boolean` 取消这个中间件
 

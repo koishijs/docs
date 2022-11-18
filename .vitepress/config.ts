@@ -84,9 +84,9 @@ export default async () => defineConfig({
       }, {
         text: '交互基础',
         items: [
-          makeLink('使用会话', '/guide/message/session.md'),
-          makeLink('使用中间件', '/guide/message/middleware.md'),
-          makeLink('使用消息段', '/guide/message/segment.md'),
+          makeLink('使用会话', '/guide/basic/session.md'),
+          makeLink('使用中间件', '/guide/basic/middleware.md'),
+          makeLink('使用消息段', '/guide/basic/segment.md'),
         ],
       }, {
         text: '指令系统',
@@ -170,8 +170,8 @@ export default async () => defineConfig({
       }, {
         text: '消息 API',
         items: [
-          makeLink('消息段 (Segment)', '/api/message/segment.md'),
-          makeLink('语义标准', '/api/message/standard.md'),
+          makeLink('消息段 (Segment)', '/api/basic/segment.md'),
+          makeLink('语义标准', '/api/basic/standard.md'),
         ],
       }, {
         text: '服务 API',

@@ -76,7 +76,7 @@
 
 参考：
 
-- [处理交互 / 接收和发送消息](../guide/message/middleware.md)
+- [处理交互 / 接收和发送消息](../guide/basic/middleware.md)
 
 ## 数据模型 (Model)
 
@@ -118,7 +118,7 @@
 
 参考：
 
-- [处理交互 / 使用消息段](../guide/message/segment.md)
+- [处理交互 / 使用消息段](../guide/basic/segment.md)
 - [API 文档 / 消息段](./utils/segment.md)
 
 ## 服务 (Service)
@@ -135,7 +135,7 @@
 
 参考：
 
-- [处理交互 / 监听会话事件](../guide/message/session.md)
+- [处理交互 / 监听会话事件](../guide/basic/session.md)
 - [API 文档 / 会话 (Session)](./core/session.md)
 
 ## 用户 (User)
