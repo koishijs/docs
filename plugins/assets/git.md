@@ -1,1 +1,1 @@
-# @koishijs/plugin-git
+# @koishijs/plugin-assets-git
