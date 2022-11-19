@@ -84,9 +84,9 @@ export default async () => defineConfig({
       }, {
         text: '交互基础',
         items: [
-          makeLink('使用会话', '/guide/basic/session.md'),
-          makeLink('使用中间件', '/guide/basic/middleware.md'),
-          makeLink('使用消息段', '/guide/basic/segment.md'),
+          makeLink('会话事件', '/guide/basic/session.md'),
+          makeLink('中间件', '/guide/basic/middleware.md'),
+          makeLink('消息元素', '/guide/basic/segment.md'),
         ],
       }, {
         text: '指令系统',

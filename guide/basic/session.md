@@ -1,75 +1,61 @@
-# 使用会话
+# 会话事件
 
-本节将从最基本的会话事件开始，介绍如何使用 Koishi 来接收和发送消息。
+本节将从最基础的会话事件开始，介绍如何使用 Koishi 来接收和发送消息。
 
-## 会话事件
+## 监听会话事件
 
-让我们先用一个简单的例子来引入事件的概念：
+让我们先从一个基本示例开始：
 
 ```ts
-// 当有新成员入群时，发送：欢迎+@入群者+入群！
-ctx.on('guild-member-added', (session) => {
-  session.send('欢迎' + segment.at(session.userId) + '入群！')
+ctx.on('message', (session) => {
+  if (session.content === '天王盖地虎') {
+    session.send('宝塔镇河妖')
+  }
 })
 ```
 
-如你所见，上述 `ctx.on()` 方法监听了一个事件。第一个参数 `guild-member-added` 是要监听的事件名称 (群组成员增加)，而第二个参数则是当事件被触发时的回调函数。与中间件相同，这个回调函数依然会传入一个会话对象，你可以在其中使用之前你已经学习过的方法操作它。而与中间件不同的地方在于，在事件的回调函数中并没有 `next` 方法，回调函数的执行也是同时开始的。
+上述代码片段实现了一个简单的功能：当任何用户发送「天王盖地虎」时，机器人将发送「宝塔镇河妖」。如你所见，`ctx.on()` 方法监听了一个事件。传入的第一个参数 `message` 是事件的名称 (收到消息)，而第二个参数则是事件被触发时的回调函数。
 
-像这样由平台推送的事件，我们称之为 **通用会话事件**。与此相对的，Koishi 还有一些 **生命周期事件**，例如 `ready` 事件表示应用启动完成等。前者通常由适配器生成，回调函数只接受一个会话对象；而后者由 Koishi 自身生成，回调函数有着各种不同的形式。你可以在 [事件列表](../../api/core/events.md) 中看到全部 Koishi 支持的事件接口。关于更一般的事件，我们也将在 [事件系统](../plugin/lifecycle.md) 中着重介绍。
+回调函数接受一个参数 `session`，通常称为会话对象。在这个例子中，我们通过它访问事件相关的数据 (使用 `session.content` 获取消息的内容)，并调用其上的 API 作为对此事件的响应 (使用 `session.send()` 在当前频道内发送消息)。
 
-### 通用事件类型
+事件与会话构成了最基础的交互模型。这种模型不仅能够处理消息，还能够处理其他类型的事件。我们再给出两个例子：
 
-不同平台可能会有不同的会话事件，但是有一些会话事件是通用的，只要平台支持相应的特性你就总是可以使用它们。
-
-- message: 收到新消息
-- message-edited: 消息被修改
-- message-deleted: 消息被删除
-- reaction-added: 响应被添加
-- reaction-removed: 响应被移除
-- friend-added: 好友增加
-- friend-removed: 好友减少
-- friend-request: 收到好友申请
-- guild-added: 加入的群组增加
-- guild-removed: 加入的群组减少
-- guild-request: 收到群组邀请
-- guild-member-added: 群组成员增加
-- guild-member-deleted: 群组成员减少
-- guild-member-request: 收到群组成员申请
-
-### 通用会话属性
-
-对于会话事件，我们也抽象出了一套通用的属性：
-
-- session.platform: 触发事件的平台
-- session.type: 事件的类型
-- session.content: 事件的文本内容 (例如消息的文本等)
-- session.selfId: 收到事件的机器人的平台编号
-- session.userId: 相关用户的平台编号 (例如发送好友申请的人，发送消息的人等)
-- session.guildId: 相关群组的平台编号 (如果不是群组相关事件则没有这一项)
-- session.channelId: 相关频道的平台编号 (如果不是频道相关事件则没有这一项)
-- session.messageId: 消息编号 (例如在回复消息时需要用到)
-
-### 调用机器人
-
-现在让我们再次尝试一个简单的例子：
+```ts
+// 当有新成员入群时，发送：欢迎+@新成员+入群！
+ctx.on('guild-member-added', (session) => {
+  // session.userId 对应了入群者的平台账号
+  // <at> 是一种消息元素，能够实现 @特定用户 的效果
+  session.send(`欢迎 <at id="${session.userId}"/> 入群！`)
+})
+```
 
 ```ts
 // 当有好友请求时，接受请求并发送欢迎消息
 ctx.on('friend-request', async (session) => {
+  // session.bot 是当前会话绑定的机器人实例
   await session.bot.handleFriendRequest(session.messageId, true)
   await session.bot.sendPrivateMessage(session.userId, '很高兴认识你！')
 })
 ```
 
-你可以在 [机器人文档](../../api/core/bot.md) 中看到完整的 API 列表。
+## 事件的类型
 
-### 访问原始接口
+像这样由聊天平台推送的事件，我们称之为 **会话事件**。除此以外，Koishi 还有着其他类型的事件，例如由 Koishi 自身生成的 **生命周期事件**，又或者是由插件提供的 **自定义事件** 等等。这些事件的监听方式与会话事件基本一致，只不过它们的回调函数接受的参数不同。例如下面的代码实现了当 Bot 上线时自动给自己发送一条消息的功能：
 
-## 一些高级案例
+```ts
+// bot-status-updated 不是会话事件
+// 所以回调函数接受的参数不是 session 而是 bot
+ctx.on('bot-status-updated', (bot) => {
+  if (bot.status === 'online') {
+    // 这里的 userId 换成你的账号
+    bot.sendPrivateMessage(userId, '我上线了~')
+  }
+})
+```
 
-除了大家已经熟知的 `session.send()` 以外，会话对象还提供了一些实用方法。下面介绍其中的一些。
+在后续的章节中，我们也将介绍更多的事件和会话的使用方法。
 
-### 延时发送
+<!-- ### 延时发送
 
 如果你需要连续发送多条消息，那么在各条消息之间留下一定的时间间隔是很重要的：一方面它可以防止消息刷屏和消息错位（后发的条消息呈现在先发的消息前面），提高了阅读体验；另一方面它能够有效降低机器人发送消息的频率，防止被平台误封。这个时候，`session.sendQueued()` 可以解决你的问题。
 
@@ -96,7 +82,6 @@ await session.cancelQueued(0.5 * Time.second)
 
 事实上，对于不同的消息长度，系统等待的时间也是不一样的，你可以通过配置项修改这个行为：
 
-::: tabs code
 ```yaml
 delay:
   # 消息里每有一个字符就等待 0.02s
@@ -104,19 +89,6 @@ delay:
   # 每条消息至少等待 0.5s
   message: 500
 ```
-```ts
-import { Time } from 'koishi'
-
-export default {
-  delay: {
-    // 消息里每有一个字符就等待 0.02s
-    character: 0.02 * Time.second,
-    // 每条消息至少等待 0.5s
-    message: 0.5 * Time.second,
-  },
-}
-```
-:::
 
 这样一来，一段长度为 60 个字符的消息发送后，下一条消息发送前就需要等待 1.2 秒了。
 
@@ -168,4 +140,4 @@ ctx.middleware((session, next) => {
     return next()
   }
 })
-```
+``` -->
