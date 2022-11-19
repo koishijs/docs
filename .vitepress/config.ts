@@ -84,7 +84,7 @@ export default async () => defineConfig({
       }, {
         text: '交互基础',
         items: [
-          makeLink('会话事件', '/guide/basic/session.md'),
+          makeLink('事件系统', '/guide/basic/events.md'),
           makeLink('中间件', '/guide/basic/middleware.md'),
           makeLink('消息元素', '/guide/basic/segment.md'),
         ],
@@ -102,7 +102,6 @@ export default async () => defineConfig({
           makeLink('认识插件', '/guide/plugin/index.md'),
           makeLink('生命周期', '/guide/plugin/lifecycle.md'),
           makeLink('会话选择器', '/guide/plugin/selector.md'),
-          makeLink('事件系统', '/guide/plugin/events.md'),
           makeLink('服务与依赖', '/guide/plugin/service.md'),
           makeLink('配置模式', '/guide/plugin/schema.md'),
         ],
