@@ -141,7 +141,7 @@ export default async () => defineConfig({
       }, {
         text: '测试工具',
         items: [
-          makeLink('单元测试', '/guide/testing/unit-tests.md'),
+          makeLink('单元测试', '/guide/testing/index.md'),
         ],
       // }, {
       //   text: '深入底层',
@@ -170,8 +170,8 @@ export default async () => defineConfig({
       }, {
         text: '消息 API',
         items: [
-          makeLink('消息段 (Segment)', '/api/basic/segment.md'),
-          makeLink('语义标准', '/api/basic/standard.md'),
+          makeLink('消息段 (Segment)', '/api/message/segment.md'),
+          makeLink('语义标准', '/api/message/standard.md'),
         ],
       }, {
         text: '服务 API',
@@ -202,6 +202,11 @@ export default async () => defineConfig({
           makeLink('输出日志 (Logger)', '/api/utils/logger.md'),
           makeLink('随机操作 (Random)', '/api/utils/random.md'),
           makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
+        ],
+      }, {
+        text: '测试工具',
+        items: [
+          makeLink('模拟环境 (Mock)', '/api/testing/'),
         ],
       }],
 
@@ -270,11 +275,6 @@ export default async () => defineConfig({
           makeLink('插件管理 (Market)', '/plugins/console/market.md'),
           makeLink('沙箱调试 (Sandbox)', '/plugins/console/sandbox.md'),
           makeLink('运行状态 (Status)', '/plugins/console/status.md'),
-        ],
-      }, {
-        text: '测试工具',
-        items: [
-          makeLink('模拟聊天环境 (Mock)', '/plugins/test/mock.md'),
         ],
       }],
 

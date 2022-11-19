@@ -20,8 +20,8 @@ sidebarDepth: 0
 
 ## 消息 API
 
-- [消息段 (Segment)](./basic/segment.md)
-- [语义标准](./basic/standard.md)
+- [消息段 (Segment)](./message/segment.md)
+- [语义标准](./message/standard.md)
 
 ## 服务 API
 

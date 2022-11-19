@@ -59,7 +59,3 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-logger](./console/logger.md)：日志管理
 - [@koishijs/plugin-market](./console/market.md)：插件管理
 - [@koishijs/plugin-status](./console/status.md)：运行状态
-
-## 测试工具
-
-- [@koishijs/plugin-mock](./test/mock.md)：模拟聊天环境
