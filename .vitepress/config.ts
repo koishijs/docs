@@ -245,9 +245,7 @@ export default async () => defineConfig({
           makeLink('发送广播 (Broadcast)', '/plugins/common/broadcast.md'),
           makeLink('发送消息 (Echo)', '/plugins/common/echo.md'),
           makeLink('发送反馈 (Feedback)', '/plugins/common/feedback.md'),
-          makeLink('转发消息 (Forward)', '/plugins/common/forward.md'),
           makeLink('撤回消息 (Recall)', '/plugins/common/recall.md'),
-          makeLink('复读机 (Repeater)', '/plugins/common/repeater.md'),
           makeLink('快捷回复 (Respondent)', '/plugins/common/respondent.md'),
         ],
       }, {
