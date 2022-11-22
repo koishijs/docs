@@ -156,7 +156,7 @@ export default async () => defineConfig({
           // makeLink('术语表', '/api/glossary.md'),
         ],
       }, {
-        text: '核心 API',
+        text: '核心模块',
         items: [
           makeLink('适配器 (Adapter)', '/api/core/adapter.md'),
           makeLink('应用 (App)', '/api/core/app.md'),
@@ -167,13 +167,15 @@ export default async () => defineConfig({
           makeLink('会话 (Session)', '/api/core/session.md'),
         ],
       }, {
-        text: '消息 API',
+        text: '消息元素',
         items: [
-          makeLink('消息段 (Segment)', '/api/message/segment.md'),
-          makeLink('语义标准', '/api/message/standard.md'),
+          makeLink('语法规范', '/api/message/syntax.md'),
+          makeLink('标准元素', '/api/message/elements.md'),
+          makeLink('内置组件', '/api/message/components.md'),
+          makeLink('渲染 API', '/api/message/api.md'),
         ],
       }, {
-        text: '服务 API',
+        text: '内置服务',
         items: [
           makeLink('机器人 (Bots)', '/api/service/bots.md'),
           makeLink('国际化 (I18n)', '/api/service/i18n.md'),
@@ -182,10 +184,14 @@ export default async () => defineConfig({
           makeLink('选择器 (Selector)', '/api/service/selector.md'),
           makeLink('网络服务 (Router)', '/api/service/router.md'),
           makeLink('网络请求 (HTTP)', '/api/service/http.md'),
+        ],
+      }, {
+        text: '其他服务',
+        items: [
           makeLink('资源存储 (Assets)', '/api/service/assets.md'),
         ],
       }, {
-        text: '数据库 API',
+        text: '数据库',
         items: [
           makeLink('内置数据结构', '/api/database/built-in.md'),
           makeLink('数据库操作 (Database)', '/api/database/database.md'),
@@ -194,7 +200,7 @@ export default async () => defineConfig({
           makeLink('求值表达式 (Eval)', '/api/database/evaluation.md'),
         ],
       }, {
-        text: '其他内置 API',
+        text: '其他功能',
         items: [
           makeLink('配置模式 (Schema)', '/api/utils/schema.md'),
           makeLink('观察者 (Observer)', '/api/utils/observer.md'),
