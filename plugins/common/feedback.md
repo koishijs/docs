@@ -13,7 +13,7 @@ plugins:
     - onebot:123456789
 ```
 
-这样，当有人调用 feedback 指令时，传入的 message 就会自动被私聊发送给你。你也可以直接回复收到的反馈信息，机器人会把这些消息重新发回到调用 feedback 指令的上下文。这里的用法类似后面将介绍的 [消息转发](./forward.md)。
+这样，当有人调用 feedback 指令时，传入的 message 就会自动被私聊发送给你。你也可以直接回复收到的反馈信息，机器人会把这些消息重新发回到调用 feedback 指令的上下文。这里的用法类似于 [消息转发](https://forward.koishi.chat)。
 
 <chat-panel>
 <chat-message nickname="Koishi">

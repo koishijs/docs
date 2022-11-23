@@ -41,7 +41,7 @@
 
 参考：
 
-- [处理交互 / 指令系统初探](../guide/command/)
+- [指令系统 / 指令系统初探](../guide/command/)
 - [API 文档 / 指令 (Command)](./core/command.md)
 
 ## 上下文 (Context)
@@ -76,7 +76,7 @@
 
 参考：
 
-- [处理交互 / 接收和发送消息](../guide/basic/middleware.md)
+- [交互基础 / 中间件](../guide/basic/middleware.md)
 
 ## 数据模型 (Model)
 
@@ -111,15 +111,15 @@
 
 参考：
 
-- [模块化 / 定义配置模式](../manual/advanced/schema.md)
+- [模块化 / 定义配置模式](../guide/plugin/schema.md)
 - [API 文档 / 配置模式](./utils/schema.md)
 
-## 消息段 (Segment)
+## 消息元素 (Element)
 
 参考：
 
-- [处理交互 / 使用消息段](../guide/basic/segment.md)
-- [API 文档 / 消息段](./utils/segment.md)
+- [交互基础 / 消息元素](../guide/basic/element.md)
+- [API 文档 / 消息元素](./message/syntax.md)
 
 ## 服务 (Service)
 
@@ -135,7 +135,7 @@
 
 参考：
 
-- [处理交互 / 监听会话事件](../guide/basic/session.md)
+- [交互基础 / 事件系统](../guide/basic/events.md)
 - [API 文档 / 会话 (Session)](./core/session.md)
 
 ## 用户 (User)

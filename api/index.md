@@ -6,7 +6,7 @@ sidebarDepth: 0
 
 本栏介绍的内容分为三个主要部分：
 
-## 核心 API
+## 核心模块
 
 由 @koishijs/core 提供的 API：
 
@@ -18,10 +18,12 @@ sidebarDepth: 0
 - [事件 (Events)](./core/events.md)
 - [会话 (Session)](./core/session.md)
 
-## 消息 API
+## 消息元素
 
-- [消息段 (Segment)](./message/segment.md)
-- [语义标准](./message/standard.md)
+- [语法规范](./message/syntax.md)
+- [标准元素](./message/elements.md)
+- [内置组件](./message/components.md)
+- [渲染 API](./message/api.md)
 
 ## 服务 API
 

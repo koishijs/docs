@@ -5,8 +5,6 @@ const makeLink = (text: string, link: string) => ({ text, link })
 export default async () => defineConfig({
   title: 'Koishi',
 
-  ignoreDeadLinks: true,
-
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -86,7 +84,7 @@ export default async () => defineConfig({
         items: [
           makeLink('事件系统', '/guide/basic/events.md'),
           makeLink('中间件', '/guide/basic/middleware.md'),
-          makeLink('消息元素', '/guide/basic/segment.md'),
+          makeLink('消息元素', '/guide/basic/element.md'),
         ],
       }, {
         text: '指令系统',

@@ -23,7 +23,7 @@
 - **forced:** `boolean` 是否无视 silent 标记
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
-所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。参见 [发送广播消息](../../guide/basic/session.md#发送广播消息)。
+所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
 
 ### ctx.bots.get(sid)
 

@@ -32,12 +32,12 @@
   - [@koishijs/plugin-callme](../plugins/accessibility/callme.md)
   - [@koishijs/plugin-echo](../plugins/common/echo.md)
   - [@koishijs/plugin-feedback](../plugins/common/feedback.md)
-  - [@koishijs/plugin-forward](../plugins/common/forward.md)
   - [@koishijs/plugin-recall](../plugins/common/recall.md)
   - [@koishijs/plugin-sudo](../plugins/accessibility/sudo.md)
-  - [@koishijs/plugin-repeater](../plugins/common/repeater.md)
   - [@koishijs/plugin-respondent](../plugins/common/respondent.md)
   - [@koishijs/plugin-verifier](../plugins/accessibility/verifier.md)
+  - [koishi-plugin-forward](https://forward.koishi.chat)
+  - [koishi-plugin-repeater](https://repeater.koishi.chat)
 - koishi-plugin-webui 被拆分为多个插件：
   - @koishijs/client (构建工具)
   - [@koishijs/plugin-console](../plugins/console/index.md)
@@ -50,7 +50,7 @@
   - create-koishi：可结合 npm init 或 yarn create 使用，用于快速搭建项目
   - @koishijs/scripts：用于模板项目的命令行工具
 - 数据库相关：
-  - [@koishijs/plugin-database-memory](../plugins/test/memory.md)：基于内存的数据库实现
+  - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
 - 资源存储相关：
   - [@koishijs/plugin-assets-git](../plugins/assets/git.md)：使用 git 仓库存放资源文件
