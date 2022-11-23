@@ -19,6 +19,6 @@ next:
 
 ## 下载
 
-- [下载标准包 (.apk)](https://ghproxy.com/https://github.com/koishijs/koishi-android/releases/download/v0.0.3/koishi-android-v0.0.3.apk)
-- [下载扩展包 (.apk)](https://ghproxy.com/https://github.com/koishijs/koishi-android/releases/download/v0.0.3/koishi-android-with-chromium-v0.0.3.apk)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
 - [查看更多版本](https://github.com/koishijs/koishi-android/releases)
