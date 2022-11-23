@@ -296,6 +296,7 @@ export default async () => defineConfig({
           makeLink('v4.4 版本介绍', '/about/releases/v4.4.md'),
           makeLink('v4.5 版本介绍', '/about/releases/v4.5.md'),
           makeLink('v4.6 版本介绍', '/about/releases/v4.6.md'),
+          makeLink('工具链更新', '/about/tool-chain.md'),
         ],
       }, {
         text: '贡献指南',
