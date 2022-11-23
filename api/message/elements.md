@@ -214,7 +214,7 @@ hello<message/>world
 
 ```html
 <message>
-  <author id="123123123" name="Alice" avatar="url"/>
+  <author user-id="123123123" nickname="Alice" avatar="url"/>
   hello world
 </message>
 ```
@@ -233,7 +233,7 @@ hello<message/>world
   <message id="987654321"/>
   <!-- 合并转发里也可以嵌套模拟其他用户发送的消息 -->
   <message>
-    <author id="123123123" name="Alice" avatar="url"/>
+    <author user-id="123123123" nickname="Alice" avatar="url"/>
     hello world
   </message>
 </message>
@@ -275,7 +275,3 @@ hello<message/>world
 
 - [1]: 基于 Webhook 功能，目前暂未支持
 - [2]: 仅限 forward 和 quote 消息
-
-### 元信息 (meta)
-
-`<meta>` 元素用于表示消息的元信息。
