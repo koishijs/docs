@@ -93,20 +93,6 @@ ctx.i18n.define('en', { hello: 'Hello, {author.username}!' })
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。
 
-### 格式化插值
-
-在插值语法中，你还可以使用 `|` 分隔符来进行格式化：
-
-```ts
-ctx.i18n.define('zh', { remain: '距离比赛结束还有{0 | time}。' })
-
-session.text('remain', [123456 /* 毫秒数 */])
-```
-
-<chat-panel>
-<chat-message nickname="Koishi">距离比赛结束还有 2 分钟 3 秒。</chat-message>
-</chat-panel>
-
 ## 渲染回退
 
 ### 语言优先级

@@ -20,12 +20,12 @@ ctx.on('message', (session) => {
 
 事件与会话构成了最基础的交互模型。这种模型不仅能够处理消息，还能够处理其他类型的事件。我们再给出两个例子：
 
-```ts
+```tsx
 // 当有新成员入群时，发送：欢迎+@新成员+入群！
 ctx.on('guild-member-added', (session) => {
   // session.userId 对应了入群者的平台账号
   // <at> 是一种消息元素，能够实现 @特定用户 的效果
-  session.send(`欢迎 <at id="${session.userId}"/> 入群！`)
+  session.send(<>欢迎 <at id={session.userId}/> 入群！</>)
 })
 ```
 
