@@ -27,7 +27,6 @@ sidebarDepth: 0
 
 ## 服务 API
 
-- [资源存储 (Assets)](./service/assets.md)
 - [机器人管理 (Bots)](./service/bots.md)
 - [网络请求 (HTTP)](./service/http.md)
 - [国际化 (I18n)](./service/i18n.md)

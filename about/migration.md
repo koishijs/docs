@@ -21,9 +21,9 @@
 为了提供更细粒度的插件功能，我们将部分插件拆分为了多个包进行发布。
 
 - koishi-plugin-assets 被拆分为多个插件：
-  - [@koishijs/plugin-assets-local](../plugins/assets/local.md)
-  - [@koishijs/plugin-assets-remote](../plugins/assets/remote.md)
-  - [koishi-plugin-assets-smms](https://github.com/koishijs/koishi-plugin-assets-smms) (社区维护)
+  - [koishi-plugin-assets-local](https://assets.koishi.chat/plugins/local.html)
+  - [koishi-plugin-assets-remote](https://assets.koishi.chat/plugins/remote.html)
+  - [koishi-plugin-assets-smms](https://assets.koishi.chat/plugins/smms.html)
   - 由于这些插件实现了同一个服务，你只需安装其中的一个即可
 - koishi-plugin-common 被拆分为多个插件：
   - [@koishijs/plugin-admin](../plugins/accessibility/admin.md)
@@ -52,9 +52,6 @@
 - 数据库相关：
   - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
-- 资源存储相关：
-  - [@koishijs/plugin-assets-git](../plugins/assets/git.md)：使用 git 仓库存放资源文件
-  - [@koishijs/plugin-assets-s3](../plugins/assets/s3.md)：使用 s3 云存储存放资源文件
 - 控制台相关 (部分插件也可脱离控制台使用)：
   - [@koishijs/plugin-auth](../plugins/console/auth.md)：用户登录
   - [@koishijs/plugin-commands](../plugins/console/commands.md)：指令管理

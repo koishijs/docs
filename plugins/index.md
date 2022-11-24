@@ -21,13 +21,6 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-database-mysql](./database/mysql.md)
 - [@koishijs/plugin-database-sqlite](./database/sqlite.md)
 
-## 资源存储支持
-
-- [@koishijs/plugin-assets-git](./assets/git.md)
-- [@koishijs/plugin-assets-local](./assets/local.md)
-- [@koishijs/plugin-assets-remote](./assets/remote.md)
-- [@koishijs/plugin-assets-s3](./assets/s3.md)
-
 ## 常用功能
 
 - [@koishijs/plugin-broadcast](./common/broadcast.md)：发送广播

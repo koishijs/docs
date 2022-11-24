@@ -55,7 +55,7 @@ interface DelayOptions {
 
 - 类型：`string`
 
-Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](../../plugins/assets/local.md)）需要用到。
+Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
 
 ### options.maxListeners
 

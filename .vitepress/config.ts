@@ -184,11 +184,6 @@ export default async () => defineConfig({
           makeLink('网络请求 (HTTP)', '/api/service/http.md'),
         ],
       }, {
-        text: '其他服务',
-        items: [
-          makeLink('资源存储 (Assets)', '/api/service/assets.md'),
-        ],
-      }, {
         text: '数据库',
         items: [
           makeLink('内置数据结构', '/api/database/built-in.md'),
@@ -233,14 +228,6 @@ export default async () => defineConfig({
           makeLink('数据库：MongoDB', '/plugins/database/mongo.md'),
           makeLink('数据库：MySQL', '/plugins/database/mysql.md'),
           makeLink('数据库：SQLite', '/plugins/database/sqlite.md'),
-        ],
-      }, {
-        text: '资源存储支持',
-        items: [
-          makeLink('资源存储：Git', '/plugins/assets/git.md'),
-          makeLink('资源存储：Local', '/plugins/assets/local.md'),
-          makeLink('资源存储：Remote', '/plugins/assets/remote.md'),
-          makeLink('资源存储：S3', '/plugins/assets/s3.md'),
         ],
       }, {
         text: '常用功能',
