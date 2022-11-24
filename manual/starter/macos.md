@@ -15,8 +15,7 @@ next:
 
 ## 下载
 
-- [下载安装包 (.pkg)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.pkg)
-- [下载便携包 (.zip)](https://ghproxy.com/https://github.com/koishijs/koishi-desktop/releases/download/v0.8.1/koishi-desktop-osx-x64-v0.8.1.zip)
+- [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## 其他选择
