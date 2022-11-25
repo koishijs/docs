@@ -18,16 +18,7 @@ ctx.on('message', (session) => {
 
 回调函数接受一个参数 `session`，称为会话对象。在这个例子中，我们通过它访问事件相关的数据 (使用 `session.content` 获取消息的内容)，并调用其上的 API 作为对此事件的响应 (使用 `session.send()` 在当前频道内发送消息)。
 
-事件与会话构成了最基础的交互模型。这种模型不仅能够处理消息，还能够处理其他类型的事件。我们再给出两个例子：
-
-```tsx
-// 当有新成员入群时，发送：欢迎+@新成员+入群！
-ctx.on('guild-member-added', (session) => {
-  // session.userId 对应了入群者的平台账号
-  // <at> 是一种消息元素，能够实现 @特定用户 的效果
-  session.send(<>欢迎 <at id={session.userId}/> 入群！</>)
-})
-```
+事件与会话构成了最基础的交互模型。这种模型不仅能够处理消息，还能够处理其他类型的事件。我们再给出一个例子：
 
 ```ts
 // 当有好友请求时，接受请求并发送欢迎消息
@@ -103,13 +94,6 @@ ctx.on('dialogue/before-search', callback, true)
 
 ## 触发事件
 
-Koishi 的事件系统与 EventEmitter 的最大区别在于，触发一个事件可以有着多种形式，目前支持 4 个不同的方法，足以适应绝大多数需求。
-
-- emit: 同时触发所有 event 事件的回调函数
-- parallel: 上述方法对应的异步版本
-- bail: 依次触发所有 event 事件的回调函数；当返回一个 `false`, `null`, `undefined` 以外的值时将这个值作为结果返回
-- serial: 上述方法对应的异步版本
-
 这些方法的基本用法也都与 EventEmitter 类似，第一个参数是事件名称，之后的参数对应回调函数的参数。下面是一个例子：
 
 ```ts
@@ -125,6 +109,17 @@ ctx.emit('custom-event', arg1, arg2, ...rest)
 // 对应于
 ctx.on('custom-event', (arg1, arg2, ...rest) => {})
 ```
+
+### 触发方式
+
+Koishi 的事件系统与 EventEmitter 的另一个区别在于，触发一个事件可以有着多种形式，目前支持 4 个不同的方法，足以适应绝大多数需求。
+
+- emit: 同时触发所有 event 事件的回调函数
+- parallel: 上述方法对应的异步版本
+- bail: 依次触发所有 event 事件的回调函数；当返回一个 `false`, `null`, `undefined` 以外的值时将这个值作为结果返回
+- serial: 上述方法对应的异步版本
+
+此外，你还将在下一节学习 [中间件](./middleware.md)，它提供了一种更加强大的消息事件处理流程。
 
 ### 过滤触发上下文
 
