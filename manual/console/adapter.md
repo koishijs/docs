@@ -1,6 +1,6 @@
 # 接入聊天平台
 
-Koishi 支持多个聊天平台，对于不同的平台，你也需要做好相应的准备工作。
+Koishi 使用适配器插件来支持各种聊天平台，对于不同的平台，你需要做好相应的准备工作。
 
 - [Discord](../../plugins/adapter/discord.md)
 - [KOOK (开黑啦)](../../plugins/adapter/kook.md)
@@ -8,7 +8,12 @@ Koishi 支持多个聊天平台，对于不同的平台，你也需要做好相�
 - [QQ 频道](../../plugins/adapter/qqguild.md)
 - [Telegram](../../plugins/adapter/telegram.md)
 
-1. 前往「机器人」页面，点击「添加机器人」，在表单中选择适配器和协议。
-2. 完成剩下的配置项 (具体请参考对应平台的接入指南)。
-3. 点击「登录账号」，你的机器人就已经开始运行了。
-4. 如果发现没有你想要的适配器，可以前往「插件市场」中进行安装。
+Koishi 中预装了一些常用的适配器插件，你可以在插件配置中的 adapter 分组中找到他们，如果这里没有你想要的适配器，你可以在插件市场中搜索并添加适配器。
+
+![adapter](manual/console/adapter_dark.webp) {.dark-only}
+
+![adapter](manual/console/adapter_light.webp) {.light-only}
+
+你需要阅读适配器的文档，按照文档中的流程获取 api 或注册账号，参考文档填写插件配置，最后点击屏幕上方的启用插件，这样你就完成了一个平台的接入。
+
+对于 QQ 平台，你可以在 [koishi 用户手册](https://k.ilharp.cc/r3) 中找到接入教程，以及一些常见错误的处理方案。
