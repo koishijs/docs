@@ -8,33 +8,55 @@
 
 ### session.type
 
+- 类型: `string`
+
 事件类型。它应当是 [通用会话事件](./events.md#通用会话事件) 中的某一个。
 
 ### session.platform
+
+- 类型: `string`
 
 触发事件的机器人所在的平台。
 
 ### session.selfId
 
+- 类型: `string`
+
 触发事件的机器人所在平台的编号。
 
 ### session.userId
+
+- 类型: `string`
 
 事件相关用户的平台编号 (例如发送好友申请的人，发送消息的人等)。
 
 ### session.guildId
 
+- 类型: `string`
+
 事件相关群组的平台编号 (如果不是群组相关事件则没有这一项)。
 
 ### session.channelId
+
+- 类型: `string`
 
 事件相关频道的平台编号 (如果不是频道相关事件则没有这一项)。
 
 ### session.messageId
 
+- 类型: `string`
+
 事件相关的消息编号 (例如在回复消息时需要用到)。
 
+### session.elements
+
+- 类型: `Element[]`
+
+事件的消息元素内容 (例如消息的文本等)。
+
 ### session.content
+
+- 类型: `string`
 
 事件的文本内容 (例如消息的文本等)。
 
@@ -111,32 +133,30 @@
 
 取消当前正在等待发送的消息队列，并重置与下一条通过 `session.sendQueued` 发送的消息之间的时间间隔。
 
-### session.middleware(middleware)
-
-- **middleware:** [`Middleware`](../../guide/basic/middleware.md) 要注册的中间件
-- 返回值: `() => void` 取消该中间件的函数
-
-注册一个仅对当前会话生效的中间件。
-
-### session.prompt(timeout?) <Badge text="beta" type="warning"/>
+### session.prompt(timeout?)
 
 - **timeout:** `number` 中间件的生效时间，缺省时会使用 [`app.config.delay.prompt`](./app.md#options-delay)
 - 返回值: `Promise<string>` 用户输入
 
-等待当前会话的下一次输入，如果超时则会返回空串。
+等待当前会话的下一次输入并返回，如果超时则会返回 `null`。无论用户输入什么，超时前的下一次输入都不会进入中间件处理流程。
+
+### session.prompt(callback, options?)
+
+- **callback:** `(session: Session) => Awaitable<T>`
+- **options.timeout:** 中间件的生效时间，缺省时会使用 [`app.config.delay.prompt`](./app.md#options-delay)
+- 返回值: `Promise<T>` 回调函数返回的结果
+
+处理当前会话的下一次输入，如果超时则会返回 `null`。如果回调函数返回值非空，则下一次输入不会进入中间件处理流程。
 
 ### session.suggest(options)
 
-- **options.target:** `string` 目标字符串
-- **options.items:** `string[]` 源字符串列表
-- **options.next:** [`Next?`](../../guide/basic/middleware.md#注册和取消中间件) 回调函数
+- **options.actual:** `string?` 目标字符串
+- **options.expect:** `string[]` 候选项列表
 - **options.prefix:** `string?` 显示在候选输入前的文本
 - **options.suffix:** `string` 当只有一个选项时，显示在候选输入后的文本
-- **options.coefficient:** `number` 用于模糊匹配的相似系数，缺省时会使用 [`app.config.minSimilarity`](./app.md#options-minsimilarity)
-- **options.apply:** `(suggestion: string, next: Next) => void` 确认后执行的操作
-- 返回值: `Promise<void>`
+- 返回值: `Promise<string>`
 
-尝试显示候选输入。
+向用户展示候选项并等待输入。
 
 ### session.resolve(argv)
 

@@ -22,7 +22,8 @@ ctx.middleware((session, next) => {
 
 ```ts
 ctx.on('bot-status-updated', (bot) => {
-  if (bot.status === 'online') {
+  // 这里的 selfId 换成机器人的账号
+  if (bot.status === 'online' && bot.selfId === selfId) {
     // 这里的 userId 换成你的账号
     bot.sendPrivateMessage(userId, '我上线了~')
   }

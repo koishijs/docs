@@ -14,14 +14,14 @@
 session.send(<>欢迎 <at id={userId}/> 入群！</>)
 
 // 发送一张 Koishi 图标
-session.send(<image url="https://koishi.chat/koishi.png"/>)
+session.send(<image url="https://koishi.chat/logo.png"/>)
 ```
 ```ts title=API
 // 欢迎 @某某用户 入群！
 session.send('欢迎 ' + h('at', { id: session.userId }) + ' 入群！')
 
 // 发送一张 Koishi 图标
-session.send(h('image', { url: 'https://koishi.chat/koishi.png' }))
+session.send(h('image', { url: 'https://koishi.chat/logo.png' }))
 ```
 :::
 
