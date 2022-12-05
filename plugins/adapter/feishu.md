@@ -11,3 +11,56 @@
 7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确。
 
 参考文档：<https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/coding>
+
+## 配置项
+
+### options.path
+
+- 类型：`string`
+- 默认值：`'/feishu'`
+
+要连接的服务器地址
+
+### options.appId
+
+- 类型：`string`
+
+机器人的应用 ID
+
+### options.appSecret
+
+- 类型：`string`
+
+机器人的应用密钥
+
+### options.encryptKey
+
+- 类型：`string`
+
+机器人的 Encrypt Key
+
+### options.verificationToken
+
+- 类型：`string`
+
+事件推送的验证令牌
+
+### HTTP 配置项
+
+### options.selfUrl
+
+- 类型：`string`
+
+服务器暴露在公网的地址。缺省时将使用全局配置。
+
+### options.verifyToken
+
+- 类型：`boolean`
+
+是否验证令牌。
+
+### options.verifySignature
+
+- 类型：`boolean`
+
+是否验证签名。
