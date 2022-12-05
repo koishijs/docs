@@ -217,6 +217,7 @@ export default async () => defineConfig({
         text: '适配器支持',
         items: [
           makeLink('适配器：Discord', '/plugins/adapter/discord.md'),
+          makeLink('适配器：Feishu', '/plugins/adapter/feishu.md'),
           makeLink('适配器：KOOK', '/plugins/adapter/kook.md'),
           makeLink('适配器：OneBot', '/plugins/adapter/onebot.md'),
           makeLink('适配器：QQGuild', '/plugins/adapter/qqguild.md'),
