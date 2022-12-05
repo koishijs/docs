@@ -3,6 +3,7 @@
 Koishi 使用适配器插件来支持各种聊天平台，对于不同的平台，你需要做好相应的准备工作。
 
 - [Discord](../../plugins/adapter/discord.md)
++ [Feishu (飞书)](../../plugins/adapter/feishu.md)
 - [KOOK (开黑啦)](../../plugins/adapter/kook.md)
 - [OneBot](../../plugins/adapter/onebot.md)
 - [QQ 频道](../../plugins/adapter/qqguild.md)
