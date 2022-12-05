@@ -1,0 +1,13 @@
+# @koishijs/plugin-adapter-feishu
+
+## 接入方法
+
+1. 在[开发者后台](https://open.feishu.cn/app/)新建**企业自建应用**，点击应用名称进入应用详情页。
+2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段。
+3. 点击事件订阅，获取 Encrypt Key 和 Verification Token 值，填写到插件配置对应字段。
+4. 在事件订阅页面，确保添加了`接收消息v2.0` (`im.message.receive_v1`) 事件。
+5. 按实际情况配置插件或机器人全局的 `selfUrl` 值，然后启动插件。
+6. 将第 5 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的**请求地址配置**中，并点击完成。
+7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确。
+
+参考文档：<https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/coding>
