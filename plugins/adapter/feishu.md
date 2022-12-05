@@ -19,31 +19,31 @@
 - 类型：`string`
 - 默认值：`'/feishu'`
 
-要连接的服务器地址
+服务器监听的路径。
 
 ### options.appId
 
 - 类型：`string`
 
-机器人的应用 ID
+机器人的应用 ID。
 
 ### options.appSecret
 
 - 类型：`string`
 
-机器人的应用密钥
+机器人的应用密钥。
 
 ### options.encryptKey
 
 - 类型：`string`
 
-机器人的 Encrypt Key
+机器人的 Encrypt Key。
 
 ### options.verificationToken
 
 - 类型：`string`
 
-事件推送的验证令牌
+事件推送的验证令牌。
 
 ## HTTP 配置项
 
@@ -51,16 +51,16 @@
 
 - 类型：`string`
 
-服务器暴露在公网的地址。缺省时将使用全局配置。
+Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/core/app.md#options-selfurl) 的值。
 
 ### options.verifyToken
 
 - 类型：`boolean`
 
-是否验证令牌。
+接受事件推送时是否验证令牌。
 
 ### options.verifySignature
 
 - 类型：`boolean`
 
-是否验证签名。
+接受事件推送时是否验证签名。
