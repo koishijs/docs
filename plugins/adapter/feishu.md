@@ -14,13 +14,6 @@
 
 ## 配置项
 
-### options.path
-
-- 类型：`string`
-- 默认值：`'/feishu'`
-
-服务器监听的路径。
-
 ### options.appId
 
 - 类型：`string`
@@ -46,6 +39,13 @@
 事件推送的验证令牌。
 
 ## HTTP 配置项
+
+### options.path
+
+- 类型：`string`
+- 默认值：`'/feishu'`
+
+服务器监听的路径。
 
 ### options.selfUrl
 
