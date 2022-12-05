@@ -221,6 +221,7 @@ export default async () => defineConfig({
           makeLink('适配器：OneBot', '/plugins/adapter/onebot.md'),
           makeLink('适配器：QQGuild', '/plugins/adapter/qqguild.md'),
           makeLink('适配器：Telegram', '/plugins/adapter/telegram.md'),
+          makeLink('适配器：Feishu', '/plugins/adapter/feishu.md'),
         ],
       }, {
         text: '数据库支持',
