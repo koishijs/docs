@@ -45,7 +45,7 @@
 
 事件推送的验证令牌
 
-### HTTP 配置项
+## HTTP 配置项
 
 ### options.selfUrl
 
