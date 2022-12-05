@@ -9,11 +9,11 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## 适配器支持
 
 - [@koishijs/plugin-adapter-discord](./adapter/discord.md)
+- [@koishijs/plugin-adapter-feishu](./adapter/feishu.md)
 - [@koishijs/plugin-adapter-kook](./adapter/kook.md)
 - [@koishijs/plugin-adapter-onebot](./adapter/onebot.md)
 - [@koishijs/plugin-adapter-qqguild](./adapter/qqguild.md)
 - [@koishijs/plugin-adapter-telegram](./adapter/telegram.md)
-- [@koishijs/plugin-adapter-feishu](./adapter/feishu.md)
 
 ## 数据库支持
 
