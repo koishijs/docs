@@ -158,7 +158,7 @@
 
 向用户展示候选项并等待输入。
 
-### session.resolve(argv)
+<!-- ### session.resolve(argv)
 
 - **argv:** `Argv` 运行时参数对象
 - 返回值: [`Command`](./command.md) 关联的指令
@@ -172,7 +172,7 @@
 - **argv:** `Argv` 只需确保其中存在 command 属性即可
 - **key:** `'user' | 'channel'` 要添加的类型
 - **fields:** `Set<string>` 用户字段集合
-- 返回值: `void`
+- 返回值: `void` -->
 
 ### session.execute(argv, next?)
 

@@ -6,6 +6,14 @@
 
 `ctx.bots` 保存了当前全部 [Bot](../core/bot.md) 实例。它继承了 Array 类，因此你可以使用诸如 `ctx.bots.forEach()` 的写法。除此以外，我们还提供了一些与机器人相关的实用方法。
 
+## 实例属性
+
+### ctx.bots\[sid]
+
+- **sid:** `string` 机器人的 sid
+
+你可以用这个属性来获取或移除机器人实例。
+
 ## 实例方法
 
 ### ctx.getSelfIds(type?, assignees?)
@@ -25,7 +33,7 @@
 
 所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
 
-### ctx.bots.get(sid)
+<!-- ### ctx.bots.get(sid)
 
 - **sid:** `string` 机器人的 sid
 - 返回值: `Bot` 机器人实例
@@ -37,12 +45,4 @@
 - **sid:** `string` 机器人的 id
 - 返回值: `boolean` 机器人实例是否存在
 
-移除一个机器人实例。
-
-### ctx.bots.create(platform, options, constructor?)
-
-- **platform:** `string` 适配器名
-- **options:** `object` 配置项
-- **constructor:** `Function` 构造函数
-
-新增一个机器人实例。
+移除一个机器人实例。 -->
