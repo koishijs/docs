@@ -63,4 +63,18 @@ footer:
         link: /api/
       - text: 官方插件
         link: /plugins/
+  - text: 平台
+    items:
+      - text: Discord
+        link: /plugins/adapter/discord.html
+      - text: Feishu (飞书)
+        link: /plugins/adapter/feishu.html
+      - text: Kook (开黑啦)
+        link: /plugins/adapter/kook.html
+      - text: OneBot (QQ)
+        link: /plugins/adapter/onebot.html
+      - text: QQ 频道
+        link: /plugins/adapter/qqguild.html
+      - text: Telegram
+        link: /plugins/adapter/telegram.html
 ---

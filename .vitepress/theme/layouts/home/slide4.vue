@@ -37,8 +37,8 @@ const { frontmatter } = useData()
   .links {
     flex: 1;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
     gap: 1.5rem;
     padding: 1.5rem 0;
 
@@ -59,6 +59,7 @@ const { frontmatter } = useData()
       margin-left: -2rem;
       padding-left: 2rem;
       border-left: 1px solid var(--vp-c-divider-light);
+      justify-content: center;
     }
 
     .copyright {
@@ -70,8 +71,16 @@ const { frontmatter } = useData()
   @media (max-width: 767px) {
     flex-direction: column;
 
+    .links {
+      flex: 1 1 0;
+      height: 0;
+      width: 100%;
+      padding: calc(var(--vp-nav-height-mobile) + 1rem) 2rem 1rem;
+      justify-content: flex-start;
+    }
+
     .copyright {
-      flex: 0;
+      flex: 0 0 auto;
       text-align: center;
       width: 100%;
       padding: 1.5rem 0;

@@ -20,7 +20,7 @@ Koishi 默认情况下并不会监听任何端口，如要启用网络服务请�
 
 处理特定路径上的网络请求。具体请参见 [这里](https://github.com/koajs/router/blob/master/API.md)。
 
-### ctx.router.ws(path, handler)
+### ctx.router\.ws(path, handler)
 
 - **path:** `string | RegExp | (string | RegExp)[]` 路径
 - **handler:** `WebSocketHandler` 处理函数，接受下列参数
