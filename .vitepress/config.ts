@@ -17,23 +17,23 @@ export default async () => defineConfig({
     nav: [{
       text: '入门',
       link: '/manual/introduction.md',
-      activeMatch: '/manual/',
+      activeMatch: '^/manual/',
     }, {
       text: '指南',
       link: '/guide/',
-      activeMatch: '/guide/',
+      activeMatch: '^/guide/',
     }, {
       text: 'API',
       link: '/api/',
-      activeMatch: '/api/',
+      activeMatch: '^/api/',
     }, {
       text: '插件',
       link: '/plugins/',
-      activeMatch: '/plugins/',
+      activeMatch: '^/plugins/',
     }, {
       text: '关于',
       link: '/about/contact.md',
-      activeMatch: '/about/',
+      activeMatch: '^/about/',
     }],
 
     sidebar: {
