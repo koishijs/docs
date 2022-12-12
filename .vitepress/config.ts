@@ -19,7 +19,7 @@ export default async () => defineConfig({
       link: '/manual/introduction.md',
       activeMatch: '^/manual/',
     }, {
-      text: '指南',
+      text: '开发',
       link: '/guide/',
       activeMatch: '^/guide/',
     }, {
@@ -273,6 +273,7 @@ export default async () => defineConfig({
         items: [
           makeLink('参与讨论', '/about/contact.md'),
           makeLink('团队介绍', '/about/team.md'),
+          makeLink('社区资源', '/about/resource.md'),
         ],
       }, {
         text: '更新与迁移',
