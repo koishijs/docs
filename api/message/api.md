@@ -103,3 +103,23 @@ type AsyncTransformer = boolean | ((
   session: Session,
 ) => Awaitable<Fragment>)
 ```
+
+## 快捷调用
+
+我们也为一些常见的标准元素提供了语法糖，可以直接通过一些静态方法进行调用。
+
+```ts
+// content
+h.text(content)
+
+// id
+h.at(id)
+h.sharp(id)
+h.quote(id)
+
+// url
+h.image(url)
+h.audio(url)
+h.video(url)
+h.file(url)
+```
