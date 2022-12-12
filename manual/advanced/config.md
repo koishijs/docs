@@ -2,16 +2,16 @@
 
 每个 Koishi 应用都有一个配置文件，它管理了应用及其插件的全部配置。默认情况下配置文件的格式为 [YAML](https://en.wikipedia.org/wiki/YAML)，它是一种易于阅读和编辑的文本格式，你可以用任何文本编辑器打开。
 
-## 根目录位置
+## 应用目录
 
-配置文件所在的目录叫**根目录**。根据你的安装方式，根目录的位置可能不同：
+配置文件所在的目录叫**应用目录**。根据你的安装方式，应用目录的位置可能不同：
 
 - 模板项目：你创建的项目目录
 - 启动器 (zip)：解压目录下 `data/instances/default`
-- 启动器 (msi)：`C:/Users/你的用户名/AppData/Roaming/Il Harper/Koishi/data/instances/default`
-- 启动器 (pkg)：`~/Library/Application Support/Il Harper/Koishi/data/instances/default`
+- 启动器 (msi)：`C:/Users/你的用户名/AppData/Roaming/Koishi/Desktop/data/instances/default`
+- 启动器 (pkg)：`~/Library/Application Support/Koishi/Desktop/data/instances/default`
 
-配置文件是根目录下名为 `koishi.yml` 的文件。当你遇到问题时，开发者可能会要求你提供配置文件的内容。此时去上面的地方找就好了。
+配置文件是应用目录下名为 `koishi.yml` 的文件。当你遇到问题时，开发者可能会要求你提供配置文件的内容。此时去上面的地方找就好了。
 
 ## 理解配置文件
 
@@ -93,7 +93,7 @@ plugins:
 绝大多数的功能都可以通过「插件配置」页面来完成，但目前尚有一些功能没有做好相应的交互界面，这时你仍然需要手动修改配置文件。具体的步骤与模板项目类似：
 
 1. 关闭当前 Koishi 应用
-2. 在 [根目录](#根目录位置) 下找到配置文件并进行编辑
+2. 在 [应用目录](#应用目录) 下找到配置文件并进行编辑
 3. 保存配置文件后再次启动 Koishi 应用
 
 ## 使用环境变量
