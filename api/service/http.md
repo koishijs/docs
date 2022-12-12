@@ -6,32 +6,43 @@
 
 ## 实例方法
 
-### http(method, url, config)
+### ctx.http(method, url, config)
 
 - **method:** `string` 请求方法
 - **url:** `string` 请求地址
 - **config:** `AxiosRequestConfig` 配置项
 - 返回值: `Promise<any>`
 
-### http.axios(url, config)
+### ctx.http.axios(url, config)
 
 - **url:** `string` 请求地址
 - **config:** `AxiosRequestConfig` 配置项
 - 返回值: `Promise<AxiosResponse<any>>`
 
-### http.head(url, config)
-### http.get(url, config)
-### http.delete(url, config)
+### ctx.http.head(url, config)
+### ctx.http.get(url, config)
+### ctx.http.delete(url, config)
 
 - **url:** `string` 请求地址
 - **config:** `AxiosRequestConfig` 配置项
 - 返回值: `Promise<any>`
 
-### http.post(url, data, config)
-### http.put(url, data, config)
-### http.patch(url, data, config)
+发送 HEAD / GET / DELETE 请求。
+
+### ctx.http.post(url, data, config)
+### ctx.http.put(url, data, config)
+### ctx.http.patch(url, data, config)
 
 - **url:** `string` 请求地址
 - **data:** `any` 请求数据
 - **config:** `AxiosRequestConfig` 配置项
 - 返回值: `Promise<any>`
+
+发送 POST / PUT / PATCH 请求。
+
+### ctx.http\.ws(url)
+
+- **url:** `string` 请求地址
+- 返回值: `WebSocket`
+
+创建一个 WebSocket 连接。
