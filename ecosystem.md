@@ -15,7 +15,7 @@
 
 - [puppeteer](https://puppeteer.koishi.chat)：提供浏览器服务
 
-### 资源存储服务
+### 资源存储
 
 - [assets-git](https://assets.koishi.chat/plugins/git.html)：基于 Git 的资源存储
 - [assets-local](https://assets.koishi.chat/plugins/local.html)：本地资源存储
@@ -23,11 +23,11 @@
 - [assets-s3](https://assets.koishi.chat/plugins/s3.html)：基于 S3 的资源存储
 - [assets-smms](https://assets.koishi.chat/plugins/smms.html)：基于 SM.MS 的资源存储
 
-### 内容审查服务
+### 内容审查
 
 - [censor-text](https://censor.koishi.chat/plugins/text.html)：文本敏感词过滤
 
-### 翻译服务
+### 文本翻译
 
 - [translator-youdao](https://translator.koishi.chat/plugins/youdao.html)：有道翻译
 - [translator-baidu](https://translator.koishi.chat/plugins/baidu.html)：百度翻译

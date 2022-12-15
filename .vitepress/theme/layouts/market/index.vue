@@ -1,11 +1,11 @@
 <template>
   <div class="market-container" v-if="market">
-    <h1 class="banner">插件市场</h1>
-    <div class="banner info">
+    <h1>插件市场</h1>
+    <div class="info">
       当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ market.objects.length }} 个可用于 v4 版本的插件
       <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
     </div>
-    <div class="banner card search-box">
+    <div class="card search-box">
       <badge type="tip" v-for="(word, index) in words.slice(0, -1)" :key="index" @click="words.splice(index, 1)">{{ word }}</badge>
       <input
         placeholder="输入想要查询的插件名"
@@ -16,16 +16,18 @@
         @keypress.enter.prevent="onEnter"
         @keypress.space.prevent="onEnter"/>
     </div>
-    <package-view class="card"
-      v-for="data in packages"
-      :key="data.name"
-      :data="data" @query="onQuery"/>
+    <div class="packages">
+      <package-view class="card"
+        v-for="data in packages"
+        :key="data.name"
+        :data="data" @query="onQuery"/>
+    </div>
   </div>
   <div class="market-container loading" v-else>
-    <div class="banner" v-if="error">
+    <div v-if="error">
       插件市场加载失败。
     </div>
-    <div class="banner" v-else>
+    <div v-else>
       正在加载插件市场...
     </div>
   </div>
@@ -85,9 +87,7 @@ function validate(data: AnalyzedPackage, word: string) {
   }
 
   if (data.shortname.includes(word)) return true
-  return data.keywords.some((keyword) => {
-    return !keyword.includes(':') && keyword.includes(word)
-  })
+  return data.keywords.some(keyword => keyword.includes(word))
 }
 
 const hasWords = computed(() => {
@@ -120,7 +120,7 @@ const packages = computed(() => {
 
 $max-width: 480px;
 $min-width: 420px;
-$breakpoint: 2 * $min-width + 90px;
+$breakpoint: 760px;
 
 .market-container {
   --b-border: transparent;
@@ -134,55 +134,69 @@ html.dark .market-container {
   --c-rating: #f9af1b;
 }
 
-.market-container {
-  display: grid;
-  column-gap: 2rem;
-  margin: 0 auto 0;
-  margin-top: calc(0px - var(--vp-nav-height));
-  padding: var(--vp-nav-height) 2rem 2rem;
-  justify-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
+@media (min-width: 1440px) and (max-width: 1503px) {
+  .layout-market .VPContent.has-sidebar {
+    padding-right: 2rem;
+  }
+}
 
-  .banner {
-    grid-column: 1 / -1;
+.market-container {
+  margin: calc(0px - var(--vp-nav-height)) 0 0;
+  padding: var(--vp-nav-height) 0 2rem 2rem;
+  min-height: 100vh;
+  max-width: var(--vp-layout-max-width);
+
+  @media (max-width: 1439px) {
+    padding-right: 2rem;
+  }
+
+  &.loading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
   h1 {
     font-size: 2.2rem;
-    margin: 1em 0;
+    margin: 1.5rem auto;
     font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
   }
 
-  > .card {
-    transition: box-shadow 0.3s ease;
+  .info {
+    margin: 1rem auto;
+    text-align: center;
   }
 
-  @media (min-width: $breakpoint) {
-    > .card {
+  // @media (min-width: $breakpoint) {
+    .card {
       background-color: var(--vp-c-bg-alt);
       border: 1px solid var(--c-border);
       border-radius: 8px;
-      margin-top: 2rem;
     }
 
-    .package-view {
-      height: 12rem;
+    .market-view {
       display: flex;
       flex-direction: column;
     }
-  }
+  // }
 
-  > .search-box {
+  .search-box {
     display: flex;
-    width: 600px;
-    max-width: 600px;
+    margin: 2rem auto 0;
+    width: 540px;
+    max-width: 540px;
     height: 3rem;
     border-radius: 1.5rem;
     background-color: var(--vp-c-bg-alt);
     align-items: center;
     padding: 0 1.2rem;
+
+    @media (max-width: 663px) {
+      width: 100%;
+    }
 
     input {
       height: 3rem;
@@ -210,58 +224,70 @@ html.dark .market-container {
     font-weight: 500;
   }
 
-  @media (min-width: (2 * $max-width + 90px)) {
-    grid-template-columns: repeat(2, $max-width);
+  --card-margin: 2rem;
+  --card-padding-vertical: 1.5rem;
+  --card-padding-horizontal: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    --card-margin: 1.5rem;
+    --card-padding-vertical: 1rem;
+    --card-padding-horizontal: 1rem;
   }
 
-  @media (max-width: (2 * $max-width + 90px)) and (min-width: $breakpoint) {
-    grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 420px) {
+    --card-margin: 1rem;
+    --card-padding-vertical: 0.75rem;
+    --card-padding-horizontal: 0.875rem;
   }
 
-  @media (max-width: $breakpoint) {
-    grid-template-columns: 1fr;
-
-    .search-box {
-      width: calc(100% - 2.4rem);
-      margin: 2rem 0;
-    }
-
-    > .package-view {
-      padding: 0.25rem 0;
-      border-top: 1px solid var(--c-border);
-
-      &:last-child {
-        border-bottom: 1px solid var(--c-border);
-      }
-
-      .badge-container {
-        margin: 1rem 0 1.25rem;
-      }
-    }
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    gap: var(--card-margin);
+    margin: var(--card-margin) 0;
+    justify-items: center;
   }
+
+  // @media (max-width: ($breakpoint - 1px)) {
+  //   .market-view {
+  //     padding: 0.25rem 0;
+  //     border-top: 1px solid var(--c-border);
+
+  //     &:last-child {
+  //       border-bottom: 1px solid var(--c-border);
+  //     }
+
+  //     .badge-container {
+  //       margin: 1rem 0 1.25rem;
+  //     }
+  //   }
+  // }
 
   @media (max-width: 480px) {
-    padding: 0 1rem 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
-    .search-box {
-      width: calc(100% - 3.4rem);
-    }
+    // .search-box {
+    //   width: calc(100% - 1rem);
+    // }
 
-    .banner.info span.timestamp {
+    .info .timestamp {
       display: none;
     }
 
-    > .package-view {
-      padding: 0;
-    }
+  //   .market-view {
+  //     padding: 0;
+  //   }
 
-    > .package-view > * {
-      padding: 0 1rem;
-    }
+  //   .market-view > * {
+  //     padding: 0 1rem;
+  //   }
   }
 }
 
-html:not(.dark) .market-container > .card {
+html:not(.dark) .market-container .card {
+  transition: box-shadow 0.3s ease;
+
   --shadow-left-1: 0 1px 4px hsl(250deg 40% 40% / 12%);
   --shadow-left-2: 0 2px 8px hsl(250deg 40% 40% / 8%);
   --shadow-left-3: 0 4px 16px hsl(250deg 40% 40% / 6%);
@@ -271,7 +297,7 @@ html:not(.dark) .market-container > .card {
   --shadow-right-3: 4px 4px 16px hsl(250deg 40% 40% / 6%);
   --shadow-right-4: 6px 6px 24px hsl(250deg 40% 40% / 4%);
 
-  @media (min-width: $breakpoint) {
+  // @media (min-width: $breakpoint) {
     box-shadow: var(--shadow-right-1), var(--shadow-right-3);
 
     &:hover {
@@ -285,7 +311,7 @@ html:not(.dark) .market-container > .card {
         box-shadow: var(--shadow-left-2), var(--shadow-left-4);
       }
     }
-  }
+  // }
 
   &.search-box {
     box-shadow: var(--shadow-right-1), var(--shadow-right-3);
