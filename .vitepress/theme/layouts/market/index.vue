@@ -21,11 +21,13 @@
       :key="data.name"
       :data="data" @query="onQuery"/>
   </div>
-  <div class="market-container loading" v-else-if="error">
-    插件市场加载失败。
-  </div>
   <div class="market-container loading" v-else>
-    正在加载插件市场...
+    <div class="banner" v-if="error">
+      插件市场加载失败。
+    </div>
+    <div class="banner" v-else>
+      正在加载插件市场...
+    </div>
   </div>
 </template>
 
@@ -116,27 +118,9 @@ const packages = computed(() => {
 
 <style lang="scss">
 
-.layout-market .VPNav {
-  background-color: transparent !important;
-  // backdrop-filter: none !important;
-}
-
 $max-width: 480px;
 $min-width: 420px;
 $breakpoint: 2 * $min-width + 90px;
-
-.market-container.loading {
-  position: absolute;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
 
 .market-container {
   --b-border: transparent;
@@ -158,7 +142,8 @@ html.dark .market-container {
   padding: var(--vp-nav-height) 2rem 2rem;
   justify-items: center;
   justify-content: center;
-  background-color: var(--vp-c-bg-alt);
+  min-height: 100vh;
+  align-items: center;
 
   .banner {
     grid-column: 1 / -1;
@@ -176,7 +161,7 @@ html.dark .market-container {
 
   @media (min-width: $breakpoint) {
     > .card {
-      background-color: var(--vp-c-bg);
+      background-color: var(--vp-c-bg-alt);
       border: 1px solid var(--c-border);
       border-radius: 8px;
       margin-top: 2rem;
@@ -195,7 +180,7 @@ html.dark .market-container {
     max-width: 600px;
     height: 3rem;
     border-radius: 1.5rem;
-    background-color: var(--vp-c-bg);
+    background-color: var(--vp-c-bg-alt);
     align-items: center;
     padding: 0 1.2rem;
 
@@ -277,36 +262,36 @@ html.dark .market-container {
 }
 
 html:not(.dark) .market-container > .card {
-  --shadow-left-1: 0 2px 4px hsl(250deg 40% 40% / 12%);
-  --shadow-left-2: 0 4px 8px hsl(250deg 40% 40% / 12%);
-  --shadow-left-3: 0 8px 16px hsl(250deg 40% 40% / 6%);
-  --shadow-left-4: 0 12px 24px hsl(250deg 40% 40% / 6%);
-  --shadow-right-1: 1px 2px 4px hsl(250deg 40% 40% / 12%);
-  --shadow-right-2: 2px 4px 8px hsl(250deg 40% 40% / 12%);
-  --shadow-right-3: 4px 8px 16px hsl(250deg 40% 40% / 6%);
-  --shadow-right-4: 6px 12px 24px hsl(250deg 40% 40% / 6%);
+  --shadow-left-1: 0 1px 4px hsl(250deg 40% 40% / 12%);
+  --shadow-left-2: 0 2px 8px hsl(250deg 40% 40% / 8%);
+  --shadow-left-3: 0 4px 16px hsl(250deg 40% 40% / 6%);
+  --shadow-left-4: 0 6px 24px hsl(250deg 40% 40% / 4%);
+  --shadow-right-1: 1px 1px 4px hsl(250deg 40% 40% / 12%);
+  --shadow-right-2: 2px 2px 8px hsl(250deg 40% 40% / 8%);
+  --shadow-right-3: 4px 4px 16px hsl(250deg 40% 40% / 6%);
+  --shadow-right-4: 6px 6px 24px hsl(250deg 40% 40% / 4%);
 
   @media (min-width: $breakpoint) {
-    box-shadow: var(--shadow-right-1), var(--shadow-right-2);
+    box-shadow: var(--shadow-right-1), var(--shadow-right-3);
 
     &:hover {
-      box-shadow: var(--shadow-right-3), var(--shadow-right-4);
+      box-shadow: var(--shadow-right-2), var(--shadow-right-4);
     }
 
     &:nth-child(2n) {
-      box-shadow: var(--shadow-left-1), var(--shadow-left-2);
+      box-shadow: var(--shadow-left-1), var(--shadow-left-3);
 
       &:hover {
-        box-shadow: var(--shadow-left-3), var(--shadow-left-4);
+        box-shadow: var(--shadow-left-2), var(--shadow-left-4);
       }
     }
   }
 
   &.search-box {
-    box-shadow: var(--shadow-right-1), var(--shadow-right-2);
+    box-shadow: var(--shadow-right-1), var(--shadow-right-3);
 
     &:hover {
-      box-shadow: var(--shadow-right-3), var(--shadow-right-4);
+      box-shadow: var(--shadow-right-2), var(--shadow-right-4);
     }
   }
 }

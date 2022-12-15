@@ -106,6 +106,6 @@ export default {
   autoAssign: ses => ses.channelId === '123456789',
   // 为用户 987654321 设置 4 级权限
   // 如果收到了来自未知用户的群消息，那么就自动注册用户数据，权限等级为 1
-  autoAuthorize: ses => ses.userId === '987654321' ? 4 : ses.groupId ? 1 : 0,
+  autoAuthorize: ses => ses.userId === '987654321' ? 4 : ses.guildId ? 1 : 0,
 }
 ```
