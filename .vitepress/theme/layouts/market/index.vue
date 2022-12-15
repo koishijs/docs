@@ -10,7 +10,7 @@
       <input
         placeholder="输入想要查询的插件名"
         v-model="words[words.length - 1]"
-        @blur="onEnter"
+        @blur="(onEnter as any)"
         @keydown.escape="onEscape"
         @keydown.backspace="onBackspace"
         @keypress.enter.prevent="onEnter"
@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 
-import type { AnalyzedPackage } from '@koishijs/registry'
+import type { AnalyzedPackage, MarketResult } from '@koishijs/registry'
 import { computed, onMounted, reactive, ref } from 'vue'
 import PackageView from './package.vue'
 
@@ -92,7 +92,7 @@ const hasWords = computed(() => {
   return words.filter(w => w).length > 0
 })
 
-const market = ref()
+const market = ref<MarketResult>()
 const error = ref()
 
 onMounted(async () => {
@@ -116,21 +116,14 @@ const packages = computed(() => {
 
 <style lang="scss">
 
+.layout-market .VPNav {
+  background-color: transparent !important;
+  // backdrop-filter: none !important;
+}
+
 $max-width: 480px;
 $min-width: 420px;
 $breakpoint: 2 * $min-width + 90px;
-
-:root {
-  --c-card-bg: #ffffff;
-  --c-card-border: transparent;
-  --c-card-badge: #ffffff;
-}
-
-html.dark {
-  --c-card-bg: #1F1D26;
-  --c-card-border: var(--c-border);
-  --c-card-badge: var(--c-text);
-}
 
 .market-container.loading {
   position: absolute;
@@ -146,25 +139,45 @@ html.dark {
 }
 
 .market-container {
+  --b-border: transparent;
+  --c-verified: #67c23a;
+  --c-rating: #e49400;
+}
+
+html.dark .market-container {
+  --c-border: var(--vp-c-divider-inverse);
+  --c-verified: #3ba55e;
+  --c-rating: #f9af1b;
+}
+
+.market-container {
   display: grid;
   column-gap: 2rem;
-  margin: var(--navbar-height) auto 0;
-  padding: 0 2rem 2rem;
+  margin: 0 auto 0;
+  margin-top: calc(0px - var(--vp-nav-height));
+  padding: var(--vp-nav-height) 2rem 2rem;
   justify-items: center;
   justify-content: center;
+  background-color: var(--vp-c-bg-alt);
 
   .banner {
     grid-column: 1 / -1;
   }
 
+  h1 {
+    font-size: 2.2rem;
+    margin: 1em 0;
+    font-weight: 600;
+  }
+
   > .card {
-    transition: var(--color-transition);
+    transition: box-shadow 0.3s ease;
   }
 
   @media (min-width: $breakpoint) {
     > .card {
-      background-color: var(--c-card-bg);
-      border: 1px solid var(--c-card-border);
+      background-color: var(--vp-c-bg);
+      border: 1px solid var(--c-border);
       border-radius: 8px;
       margin-top: 2rem;
     }
@@ -182,10 +195,9 @@ html.dark {
     max-width: 600px;
     height: 3rem;
     border-radius: 1.5rem;
-    background-color: var(--c-card-bg);
+    background-color: var(--vp-c-bg);
     align-items: center;
     padding: 0 1.2rem;
-    transition: var(--color-transition);
 
     input {
       height: 3rem;
@@ -213,11 +225,11 @@ html.dark {
     font-weight: 500;
   }
 
-  @media (min-width: 2 * $max-width + 90px) {
+  @media (min-width: (2 * $max-width + 90px)) {
     grid-template-columns: repeat(2, $max-width);
   }
 
-  @media (max-width: 2 * $max-width + 90px) and (min-width: $breakpoint) {
+  @media (max-width: (2 * $max-width + 90px)) and (min-width: $breakpoint) {
     grid-template-columns: repeat(2, 1fr);
   }
 
