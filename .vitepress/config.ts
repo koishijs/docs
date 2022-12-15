@@ -28,11 +28,11 @@ export default async () => defineConfig({
       activeMatch: '^/api/',
     }, {
       text: '插件',
-      activeMatch: '^/(plugins/|market|sitemap)',
+      activeMatch: '^/(plugins/|market|ecosystem)',
       items: [
         makeLink('插件市场', '/market.md'),
         makeLink('官方插件文档', '/plugins/'),
-        makeLink('社区插件导航', '/sitemap.md'),
+        makeLink('社区插件导航', '/ecosystem.md'),
       ],
     }, {
       text: '更多',
@@ -218,7 +218,7 @@ export default async () => defineConfig({
         items: [
           makeLink('插件市场', '/market.md'),
           makeLink('官方插件文档', '/plugins/'),
-          makeLink('社区插件导航', '/sitemap.md'),
+          makeLink('社区插件导航', '/ecosystem.md'),
         ],
       }],
 
@@ -227,7 +227,7 @@ export default async () => defineConfig({
         items: [
           makeLink('插件市场', '/market.md'),
           makeLink('官方插件文档', '/plugins/'),
-          makeLink('社区插件导航', '/sitemap.md'),
+          makeLink('社区插件导航', '/ecosystem.md'),
         ],
       }, {
         text: '适配器支持',
