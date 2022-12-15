@@ -31,7 +31,7 @@ export default async () => defineConfig({
       activeMatch: '^/(plugins/|market|ecosystem)',
       items: [
         makeLink('插件市场', '/market.md'),
-        makeLink('官方插件文档', '/plugins/'),
+        makeLink('官方插件索引', '/plugins/'),
         makeLink('社区插件导航', '/ecosystem.md'),
       ],
     }, {
@@ -213,20 +213,11 @@ export default async () => defineConfig({
         ],
       }],
 
-      '/market.md': [{
-        text: '插件',
-        items: [
-          makeLink('插件市场', '/market.md'),
-          makeLink('官方插件文档', '/plugins/'),
-          makeLink('社区插件导航', '/ecosystem.md'),
-        ],
-      }],
-
       '/plugins/': [{
         text: '插件',
         items: [
           makeLink('插件市场', '/market.md'),
-          makeLink('官方插件文档', '/plugins/'),
+          makeLink('官方插件索引', '/plugins/'),
           makeLink('社区插件导航', '/ecosystem.md'),
         ],
       }, {
@@ -262,7 +253,6 @@ export default async () => defineConfig({
           makeLink('数据管理 (Admin)', '/plugins/accessibility/admin.md'),
           makeLink('账号绑定 (Bind)', '/plugins/accessibility/bind.md'),
           makeLink('设置昵称 (Callme)', '/plugins/accessibility/callme.md'),
-          makeLink('本地翻译 (Locales)', '/plugins/accessibility/locales.md'),
           makeLink('速率限制 (Rate Limit)', '/plugins/accessibility/rate-limit.md'),
           makeLink('计划任务 (Schedule)', '/plugins/accessibility/schedule.md'),
           makeLink('模拟调用 (Sudo)', '/plugins/accessibility/sudo.md'),
@@ -277,10 +267,29 @@ export default async () => defineConfig({
           makeLink('指令管理 (Commands)', '/plugins/console/commands.md'),
           makeLink('数据库操作 (Dataview)', '/plugins/console/dataview.md'),
           makeLink('插件依赖图 (Insight)', '/plugins/console/insight.md'),
+          makeLink('本地翻译 (Locales)', '/plugins/console/locales.md'),
           makeLink('日志管理 (Logger)', '/plugins/console/logger.md'),
           makeLink('插件管理 (Market)', '/plugins/console/market.md'),
           makeLink('沙箱调试 (Sandbox)', '/plugins/console/sandbox.md'),
           makeLink('运行状态 (Status)', '/plugins/console/status.md'),
+        ],
+      }],
+
+      '/market.md': [{
+        text: '插件',
+        items: [
+          makeLink('插件市场', '/market.md'),
+          makeLink('官方插件索引', '/plugins/'),
+          makeLink('社区插件导航', '/ecosystem.md'),
+        ],
+      }],
+
+      '/ecosystem.md': [{
+        text: '插件',
+        items: [
+          makeLink('插件市场', '/market.md'),
+          makeLink('官方插件索引', '/plugins/'),
+          makeLink('社区插件导航', '/ecosystem.md'),
         ],
       }],
 
@@ -289,7 +298,7 @@ export default async () => defineConfig({
         items: [
           makeLink('参与讨论', '/about/contact.md'),
           makeLink('团队介绍', '/about/team.md'),
-          makeLink('社区资源', '/about/resource.md'),
+          makeLink('社区资源', '/about/community.md'),
         ],
       }, {
         text: '更新与迁移',
