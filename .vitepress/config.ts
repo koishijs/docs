@@ -28,7 +28,7 @@ export default async () => defineConfig({
       activeMatch: '^/api/',
     }, {
       text: '插件',
-      activeMatch: '^/plugins/',
+      activeMatch: '^/(plugins/|market|sitemap)',
       items: [
         makeLink('插件市场', '/market.md'),
         makeLink('官方插件文档', '/plugins/'),
@@ -214,15 +214,6 @@ export default async () => defineConfig({
       }],
 
       '/market.md': [{
-        text: '插件',
-        items: [
-          makeLink('插件市场', '/market.md'),
-          makeLink('官方插件文档', '/plugins/'),
-          makeLink('社区插件导航', '/sitemap.md'),
-        ],
-      }],
-
-      '/sitemap.md': [{
         text: '插件',
         items: [
           makeLink('插件市场', '/market.md'),
