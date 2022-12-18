@@ -52,6 +52,17 @@ docker run -p 5140:5140 koishijs/koishi
 ```
 :::
 
+或使用此命令运行带 chromium 的容器
+
+::: tabs code
+```podman
+podman run -p 5140:5140 koishijs/koishi:latest-puppeteer
+```
+```docker
+docker run -p 5140:5140 koishijs/koishi:latest-puppeteer
+```
+:::
+
 启动后将会绑定 koishi 控制台到 5140 端口。
 
 ## 安装插件
