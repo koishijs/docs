@@ -1,7 +1,3 @@
----
-sidebarDepth: 0
----
-
 # 官方插件
 
 Koishi 官方提供了许多插件。为了更好地模块化开发，它们被分散在了多个仓库中。
@@ -43,6 +39,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## 控制台功能
 
 - [@koishijs/plugin-console](./console/index.md)：控制台
+- [@koishijs/plugin-auth](./console/auth.md)：用户登录
 - [@koishijs/plugin-chat](./console/chat.md)：聊天工具
 - [@koishijs/plugin-commands](./console/commands.md)：指令管理
 - [@koishijs/plugin-dataview](./console/dataview.md)：数据库操作
@@ -50,4 +47,5 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-locales](./console/locales.md)：本地翻译
 - [@koishijs/plugin-logger](./console/logger.md)：日志管理
 - [@koishijs/plugin-market](./console/market.md)：插件管理
+- [@koishijs/plugin-sandbox](./console/sandbox.md)：沙箱调试
 - [@koishijs/plugin-status](./console/status.md)：运行状态
