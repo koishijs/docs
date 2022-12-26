@@ -41,7 +41,10 @@
       </template>
       <span class="spacer grow"></span>
       <div class="avatars">
-        <a v-for="({ email, username }) in data.maintainers" :title="username" :key="email" @click="$emit('query', 'email:' + email)">
+        <a v-for="({ email, name, username }, index) in data.maintainers"
+          :title="name || username"
+          :key="index"
+          @click="$emit('query', 'user:' + (name || username))">
           <img :src="getAvatar(email)">
         </a>
       </div>
