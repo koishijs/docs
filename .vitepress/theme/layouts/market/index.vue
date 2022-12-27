@@ -76,8 +76,8 @@ function validate(data: AnalyzedPackage, word: string) {
   } else if (word.startsWith('using:')) {
     const name = word.slice(6)
     return service.required.includes(name) || service.optional.includes(name)
-  } else if (word.startsWith('user:')) {
-    return data.maintainers.some(({ username, name }) => (name || username) === word.slice(5))
+  } else if (word.startsWith('author:')) {
+    return data.contributors.some(({ name }) => name === word.slice(7))
   } else if (word.startsWith('is:')) {
     if (word === 'is:verified') {
       return data.verified

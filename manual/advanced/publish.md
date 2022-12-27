@@ -60,7 +60,7 @@ root
   "name": "koishi-plugin-example",
   "version": "1.0.0",
   "author": "Alice <alice@gmail.com>",      // 作者
-  "maintainers": [                          // 维护者
+  "contributors": [                         // 贡献者
     "Bob <bob@gmail.com>"
   ],
   "license": "MIT",                         // 许可证

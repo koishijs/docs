@@ -41,10 +41,10 @@
       </template>
       <span class="spacer grow"></span>
       <div class="avatars">
-        <a v-for="({ email, name, username }, index) in data.maintainers"
-          :title="name || username"
+        <a v-for="({ email, name }, index) in data.contributors"
+          :title="name"
           :key="index"
-          @click="$emit('query', 'user:' + (name || username))">
+          @click="$emit('query', 'author:' + name)">
           <img :src="getAvatar(email)">
         </a>
       </div>
@@ -84,7 +84,7 @@ const props = defineProps<{
 const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
 
 function getAvatar(email: string) {
-  return 'https://s.gravatar.com' + '/avatar/' + md5.hash(email) + '?d=mp'
+  return 'https://s.gravatar.com/avatar/' + (email ? md5.hash(email) : '') + '?d=mp'
 }
 
 function formatValue(value: number) {
