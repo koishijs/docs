@@ -18,7 +18,7 @@ Koishi 应用默认情况下只能在本机访问。如果你希望在本机以�
 
 ### 使用 Caddy
 
-```caddyfile
+```text
 # 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名。（如 koishi.chat）
 # https://caddyserver.com/docs/caddyfile
 :80 {
@@ -46,6 +46,7 @@ server {
     proxy_redirect off;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $http_host;
     proxy_read_timeout 300s;
     proxy_send_timeout 300s;
     proxy_http_version 1.1;
