@@ -16,6 +16,16 @@ Koishi 应用默认情况下只能在本机访问。如果你希望在本机以�
 
 如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
 
+### 使用 Caddy
+
+```text
+# 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名。（如 koishi.chat）
+# https://caddyserver.com/docs/caddyfile
+:80 {
+  reverse_proxy http://127.0.0.1:5140
+}
+```
+
 ### 使用 nginx
 
 下面给出一段 nginx 配置作为参考：
@@ -36,7 +46,7 @@ server {
     proxy_redirect off;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
+    proxy_set_header X-Forwarded-Host $http_host;
     proxy_read_timeout 300s;
     proxy_send_timeout 300s;
     proxy_http_version 1.1;
