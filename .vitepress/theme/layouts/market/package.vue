@@ -84,7 +84,7 @@ const props = defineProps<{
 const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
 
 function getAvatar(email: string) {
-  return 'https://s.gravatar.com/avatar/' + (email ? md5.hash(email) : '') + '?d=mp'
+  return 'https://s.gravatar.com/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '?d=mp'
 }
 
 function formatValue(value: number) {
