@@ -24,15 +24,14 @@
 
 按平台名称对机器人分类。
 
-### ctx.broadcast(channels?, content, forced?)
+### ctx.broadcast(channels?, content, forced?) <badge text="需要数据库"/>
 
 - **channels:** `string[]` 频道列表
 - **content:** `string` 要发送的内容
 - **forced:** `boolean` 是否无视 silent 标记
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
-所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。  
-此方法需要安装了数据库才能正常使用。
+所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
 
 <!-- ### ctx.bots.get(sid)
 
