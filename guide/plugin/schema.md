@@ -56,4 +56,4 @@ export function apply(ctx: Context, config: Config) {
 
 ## 更多配置类型
 
-有关于更多配置类型，你可以阅读[schemastery文档](https://shigma.github.io/schemastery/)以了解更多。
+有关于更多配置类型，你可以阅读 [schemastery 文档](https://shigma.github.io/schemastery/) 以了解更多。
