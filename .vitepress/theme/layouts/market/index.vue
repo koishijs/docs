@@ -110,6 +110,7 @@ onMounted(async () => {
 const packages = computed(() => {
   if (!market.value) return []
   return market.value.objects.filter((data) => {
+    if (data.manifest.hidden) return
     return words.every(word => validate(data, word))
   })
 })

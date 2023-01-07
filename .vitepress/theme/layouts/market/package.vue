@@ -6,7 +6,7 @@
       </div>
       <div class="right">
         <h2>
-          <a :href="data.links.homepage" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
+          <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
           <span v-if="data.verified" class="verified" title="官方认证">
             <k-icon name="verified"></k-icon>
           </span>
@@ -84,7 +84,7 @@ const props = defineProps<{
 const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
 
 function getAvatar(email: string) {
-  return 'https://s.gravatar.com/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '?d=mp'
+  return 'https://cravatar.cn/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '?d=mp'
 }
 
 function formatValue(value: number) {

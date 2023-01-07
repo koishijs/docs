@@ -12,7 +12,7 @@
     </div>
     <div class="copyright">
       <div>MIT Licensed</div>
-      <div>Copyright © 2019-2022 Shigma</div>
+      <div>Copyright © 2019-2023 Shigma</div>
     </div>
   </footer>
 </template>
