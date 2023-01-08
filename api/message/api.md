@@ -122,4 +122,10 @@ h.image(url)
 h.audio(url)
 h.video(url)
 h.file(url)
+
+// buffer
+h.image(buffer, 'image/png')
+h.audio(buffer, 'audio/mpeg')
+h.video(buffer, 'video/mp4')
+h.file(buffer, 'application/octet-stream')
 ```

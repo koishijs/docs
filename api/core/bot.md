@@ -72,10 +72,11 @@
 
 ## 处理消息
 
-### bot.sendMessage(channelId, content)
+### bot.sendMessage(channelId, content, guildId?)
 
 - **channelId:** `string` 频道 ID
 - **content:** `string` 要发送的内容
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定频道发送消息。
