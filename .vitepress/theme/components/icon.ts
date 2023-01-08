@@ -1,4 +1,4 @@
-import { defineComponent, h } from 'vue'
+import { Component, defineComponent, h } from 'vue'
 import All from './svg/all.vue'
 import Balance from './svg/balance.vue'
 import Business from './svg/business.vue'
@@ -6,6 +6,7 @@ import Console from './svg/console.vue'
 import Download from './svg/download.vue'
 import FileArchive from './svg/file-archive.vue'
 import Game from './svg/game.vue'
+import Insecure from './svg/insecure.vue'
 import Other from './svg/other.vue'
 import StarEmpty from './svg/star-empty.vue'
 import StarFull from './svg/star-full.vue'
@@ -23,6 +24,7 @@ const registry: Record<string, Component> = {
   'file-archive': FileArchive,
   'console': Console,
   'game': Game,
+  'insecure': Insecure,
   'other': Other,
   'star-empty': StarEmpty,
   'star-full': StarFull,

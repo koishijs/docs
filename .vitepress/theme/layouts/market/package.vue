@@ -7,8 +7,11 @@
       <div class="right">
         <h2>
           <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
-          <span v-if="data.verified" class="verified" title="官方认证">
+          <span v-if="data.verified" class="icon verified" title="官方认证">
             <k-icon name="verified"></k-icon>
+          </span>
+          <span v-else-if="data.insecure" class="icon insecure" title="含有不安全的依赖">
+            <k-icon name="insecure"></k-icon>
           </span>
         </h2>
         <div class="rating" :title="rating.toFixed(1)">
@@ -161,24 +164,23 @@ function formatSize(value: number) {
       align-items: center;
 
       a {
+        flex: 0 1 auto;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: 100%;
         overflow: hidden;
         line-height: 1.5rem;
-        display: contents;
+        display: inline-block;
       }
 
-      .verified {
+      .icon {
+        flex: 0 0 auto;
         margin-left: 0.6rem;
         height: 1.125rem;
         width: 1.125rem;
-        vertical-align: -2px;
         position: relative;
         display: inline-block;
 
         .k-icon {
-          color: var(--c-verified);
           height: 100%;
           transition: color 0.3s ease;
           z-index: 10;
@@ -195,6 +197,14 @@ function formatSize(value: number) {
           z-index: 0;
           border-radius: 100%;
           background-color: white;
+        }
+
+        &.verified {
+          color: var(--c-verified);
+        }
+
+        &.insecure {
+          color: var(--c-insecure);
         }
       }
     }
