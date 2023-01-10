@@ -10,8 +10,11 @@
           <span v-if="data.verified" class="icon verified" title="官方认证">
             <k-icon name="verified"></k-icon>
           </span>
-          <span v-else-if="data.insecure" class="icon insecure" title="含有不安全的依赖">
+          <span v-else-if="data.insecure" class="icon insecure" title="不安全">
             <k-icon name="insecure"></k-icon>
+          </span>
+          <span v-else-if="data.manifest.preview" class="icon preview" title="开发中">
+            <k-icon name="preview"></k-icon>
           </span>
         </h2>
         <div class="rating" :title="rating.toFixed(1)">
@@ -200,11 +203,15 @@ function formatSize(value: number) {
         }
 
         &.verified {
-          color: var(--c-verified);
+          color: var(--c-success);
+        }
+
+        &.preview {
+          color: var(--c-warning);
         }
 
         &.insecure {
-          color: var(--c-insecure);
+          color: var(--c-danger);
         }
       }
     }
@@ -217,7 +224,7 @@ function formatSize(value: number) {
       width: fit-content;
 
       .k-icon {
-        color: var(--c-rating);
+        color: var(--c-warning);
         height: 0.875rem;
         transition: color 0.3s ease;
       }

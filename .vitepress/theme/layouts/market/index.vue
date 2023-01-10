@@ -125,16 +125,16 @@ $breakpoint: 760px;
 
 .market-container {
   --c-border: transparent;
-  --c-verified: #67c23a;
-  --c-insecure: #f56c6c;
-  --c-rating: #e49400;
+  --c-success: #67c23a;
+  --c-danger: #f56c6c;
+  --c-warning: #e49400;
 }
 
 html.dark .market-container {
   --c-border: transparent; // var(--vp-c-divider-inverse);
-  --c-verified: #3ba55e;
-  --c-insecure: #ff595a;
-  --c-rating: #f9af1b;
+  --c-success: #3ba55e;
+  --c-danger: #ff595a;
+  --c-warning: #f9af1b;
 }
 
 @media (min-width: 1440px) and (max-width: 1503px) {
