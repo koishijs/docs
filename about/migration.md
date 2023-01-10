@@ -34,13 +34,15 @@
   - [@koishijs/plugin-feedback](../plugins/common/feedback.md)
   - [@koishijs/plugin-recall](../plugins/common/recall.md)
   - [@koishijs/plugin-sudo](../plugins/accessibility/sudo.md)
-  - [@koishijs/plugin-respondent](../plugins/common/respondent.md)
   - [@koishijs/plugin-verifier](../plugins/accessibility/verifier.md)
   - [koishi-plugin-forward](https://forward.koishi.chat)
   - [koishi-plugin-repeater](https://repeater.koishi.chat)
+  - [koishi-plugin-respondent](https://respondent.koishi.chat)
 - koishi-plugin-webui 被拆分为多个插件：
   - @koishijs/client (构建工具)
   - [@koishijs/plugin-console](../plugins/console/index.md)
+  - [@koishijs/plugin-analytics](../plugins/console/analytics.md)
+  - [@koishijs/plugin-insight](../plugins/console/insight.md)
   - [@koishijs/plugin-status](../plugins/console/status.md)
   - 我们还引入了更多控制台插件，请继续阅读下面的介绍
 
@@ -56,7 +58,6 @@
   - [@koishijs/plugin-auth](../plugins/console/auth.md)：用户登录
   - [@koishijs/plugin-commands](../plugins/console/commands.md)：指令管理
   - [@koishijs/plugin-dataview](../plugins/console/dataview.md)：数据库操作
-  - [@koishijs/plugin-insight](../plugins/console/insight.md)：插件依赖图
   - [@koishijs/plugin-logger](../plugins/console/logger.md)：日志管理
   - [@koishijs/plugin-market](../plugins/console/market.md)：插件管理
   - [@koishijs/plugin-sandbox](../plugins/console/sandbox.md)：沙盒调试

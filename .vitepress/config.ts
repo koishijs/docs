@@ -261,6 +261,7 @@ export default async () => defineConfig({
         text: '控制台功能',
         items: [
           makeLink('控制台 (Console)', '/plugins/console/index.md'),
+          makeLink('数据统计 (Analytics)', '/plugins/console/analytics.md'),
           makeLink('用户登录 (Auth)', '/plugins/console/auth.md'),
           makeLink('聊天工具 (Chat)', '/plugins/console/chat.md'),
           makeLink('指令管理 (Commands)', '/plugins/console/commands.md'),

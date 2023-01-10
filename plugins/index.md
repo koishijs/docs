@@ -38,6 +38,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## 控制台功能
 
 - [@koishijs/plugin-console](./console/index.md)：控制台
+- [@koishijs/plugin-analytics](./console/analytics.md)：数据统计
 - [@koishijs/plugin-auth](./console/auth.md)：用户登录
 - [@koishijs/plugin-chat](./console/chat.md)：聊天工具
 - [@koishijs/plugin-commands](./console/commands.md)：指令管理
