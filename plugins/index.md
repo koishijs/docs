@@ -24,7 +24,6 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-echo](./common/echo.md)：发送消息
 - [@koishijs/plugin-feedback](./common/feedback.md)：发送反馈
 - [@koishijs/plugin-recall](./common/recall.md)：撤回消息
-- [@koishijs/plugin-respondent](./common/respondent.md)：快捷回复
 
 ## 辅助功能
 
