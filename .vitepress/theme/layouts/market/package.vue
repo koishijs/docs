@@ -8,13 +8,16 @@
         <h2>
           <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
           <span v-if="data.verified" class="icon verified" title="官方认证">
-            <k-icon name="verified"></k-icon>
+            <k-icon name="verified" @click="$emit('query', 'is:verified')"></k-icon>
           </span>
           <span v-else-if="data.insecure" class="icon insecure" title="不安全">
-            <k-icon name="insecure"></k-icon>
+            <k-icon name="insecure" @click="$emit('query', 'is:insecure')"></k-icon>
           </span>
           <span v-else-if="data.manifest.preview" class="icon preview" title="开发中">
-            <k-icon name="preview"></k-icon>
+            <k-icon name="preview" @click="$emit('query', 'is:preview')"></k-icon>
+          </span>
+          <span v-else-if="data.createdAt >= aWeekAgo" class="icon newborn" title="近期新增">
+            <k-icon name="newborn" @click="$emit('query', 'after:' + aWeekAgo)"></k-icon>
           </span>
         </h2>
         <div class="rating" :title="rating.toFixed(1)">
@@ -66,6 +69,8 @@ import KIcon from '../../components/icon'
 import KMarkdown from '../../components/markdown.vue'
 import md5 from 'spark-md5'
 import { getUsers } from './utils'
+
+const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
 
 const categories = {
   all: '所有插件',
@@ -183,6 +188,7 @@ function formatSize(value: number) {
         width: 1.125rem;
         position: relative;
         display: inline-block;
+        cursor: pointer;
 
         .k-icon {
           height: 100%;
@@ -191,19 +197,7 @@ function formatSize(value: number) {
           position: relative;
         }
 
-        &::before {
-          position: absolute;
-          top: 25%;
-          left: 25%;
-          right: 25%;
-          bottom: 25%;
-          content: '';
-          z-index: 0;
-          border-radius: 100%;
-          background-color: white;
-        }
-
-        &.verified {
+        &.verified, &.newborn {
           color: var(--c-success);
         }
 
@@ -213,6 +207,20 @@ function formatSize(value: number) {
 
         &.insecure {
           color: var(--c-danger);
+        }
+
+        &.verified, &.insecure {
+          &::before {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            right: 25%;
+            bottom: 25%;
+            content: '';
+            z-index: 0;
+            border-radius: 100%;
+            background-color: white;
+          }
         }
       }
     }

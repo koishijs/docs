@@ -7,6 +7,7 @@ import Download from './svg/download.vue'
 import FileArchive from './svg/file-archive.vue'
 import Game from './svg/game.vue'
 import Insecure from './svg/insecure.vue'
+import Newborn from './svg/newborn.vue'
 import Other from './svg/other.vue'
 import Preview from './svg/preview.vue'
 import StarEmpty from './svg/star-empty.vue'
@@ -26,6 +27,7 @@ const registry: Record<string, Component> = {
   'console': Console,
   'game': Game,
   'insecure': Insecure,
+  'newborn': Newborn,
   'other': Other,
   'preview': Preview,
   'star-empty': StarEmpty,

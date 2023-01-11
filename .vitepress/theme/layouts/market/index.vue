@@ -79,6 +79,10 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
     return service.required.includes(name) || service.optional.includes(name)
   } else if (word.startsWith('email:')) {
     return users.some(({ email }) => email === word.slice(6))
+  } else if (word.startsWith('before:')) {
+    return data.createdAt < word.slice(7)
+  } else if (word.startsWith('after:')) {
+    return data.createdAt >= word.slice(6)
   } else if (word.startsWith('is:')) {
     if (word === 'is:verified') return data.verified
     if (word === 'is:insecure') return data.insecure
