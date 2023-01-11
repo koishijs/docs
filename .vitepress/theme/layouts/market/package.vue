@@ -47,10 +47,10 @@
       </template>
       <span class="spacer grow"></span>
       <div class="avatars">
-        <a v-for="({ email, name }, index) in data.contributors"
-          :title="name"
+        <a v-for="({ email, name, username }, index) in getUsers(data)"
+          :title="name || username"
           :key="index"
-          @click="$emit('query', 'author:' + name)">
+          @click="$emit('query', 'email:' + email)">
           <img :src="getAvatar(email)">
         </a>
       </div>
@@ -65,6 +65,7 @@ import { AnalyzedPackage } from '@koishijs/registry'
 import KIcon from '../../components/icon'
 import KMarkdown from '../../components/markdown.vue'
 import md5 from 'spark-md5'
+import { getUsers } from './utils'
 
 const categories = {
   all: '所有插件',

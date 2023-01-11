@@ -35,9 +35,10 @@
 
 <script lang="ts" setup>
 
-import type { AnalyzedPackage, MarketResult } from '@koishijs/registry'
+import type { AnalyzedPackage, MarketResult, User } from '@koishijs/registry'
 import { computed, onMounted, reactive, ref } from 'vue'
 import PackageView from './package.vue'
+import { getUsers } from './utils'
 
 const words = reactive([''])
 
@@ -67,7 +68,7 @@ function onQuery(word: string) {
   words.push('')
 }
 
-function validate(data: AnalyzedPackage, word: string) {
+function validate(data: AnalyzedPackage, word: string, users: User[]) {
   const { locales, service } = data.manifest
   if (word.startsWith('impl:')) {
     return service.implements.includes(word.slice(5))
@@ -76,8 +77,8 @@ function validate(data: AnalyzedPackage, word: string) {
   } else if (word.startsWith('using:')) {
     const name = word.slice(6)
     return service.required.includes(name) || service.optional.includes(name)
-  } else if (word.startsWith('author:')) {
-    return data.contributors.some(({ name }) => name === word.slice(7))
+  } else if (word.startsWith('email:')) {
+    return users.some(({ email }) => email === word.slice(6))
   } else if (word.startsWith('is:')) {
     if (word === 'is:verified') return data.verified
     if (word === 'is:insecure') return data.insecure
@@ -122,7 +123,8 @@ const visible = computed(() => {
 
 const packages = computed(() => {
   return visible.value.filter((data) => {
-    return words.every(word => validate(data, word))
+    const users = getUsers(data)
+    return words.every(word => validate(data, word, users))
   })
 })
 
