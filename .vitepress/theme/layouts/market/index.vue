@@ -2,7 +2,7 @@
   <div class="market-container" v-if="market">
     <h1>插件市场</h1>
     <div class="info">
-      当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ market.objects.length }} 个可用于 v4 版本的插件
+      当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ visible.length }} 个可用于 v4 版本的插件
       <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
     </div>
     <div class="card search-box">
@@ -79,11 +79,17 @@ function validate(data: AnalyzedPackage, word: string) {
   } else if (word.startsWith('author:')) {
     return data.contributors.some(({ name }) => name === word.slice(7))
   } else if (word.startsWith('is:')) {
-    if (word === 'is:verified') {
-      return data.verified
-    } else {
-      return true
-    }
+    if (word === 'is:verified') return data.verified
+    if (word === 'is:insecure') return data.insecure
+    if (word === 'is:preview') return data.manifest.preview
+    return false
+  } else if (word.startsWith('not:')) {
+    if (word === 'not:verified') return !data.verified
+    if (word === 'not:insecure') return !data.insecure
+    if (word === 'not:preview') return !data.manifest.preview
+    return true
+  } else if (word.startsWith('show:')) {
+    return true
   }
 
   if (data.shortname.includes(word)) return true
@@ -107,10 +113,15 @@ onMounted(async () => {
   }
 })
 
-const packages = computed(() => {
+const visible = computed(() => {
   if (!market.value) return []
   return market.value.objects.filter((data) => {
-    if (data.manifest.hidden) return
+    return !data.manifest.hidden || words.includes('show:hidden')
+  })
+})
+
+const packages = computed(() => {
+  return visible.value.filter((data) => {
     return words.every(word => validate(data, word))
   })
 })
