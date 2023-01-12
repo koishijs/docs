@@ -14,9 +14,9 @@ const props = defineProps({
 
 function render() {
   if (props.inline) {
-    return marked.parseInline(props.source || '')
+    return marked.parseInline(props.source || '', { sanitize: true })
   } else {
-    return marked(props.source || '')
+    return marked(props.source || '', { sanitize: true })
   }
 }
 
