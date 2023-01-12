@@ -124,7 +124,7 @@
 
 ### 粗体 (b, strong)
 
-`<b>` 或 `<string>` 元素用于将其中的内容以粗体显示。
+`<b>` 或 `<strong>` 元素用于将其中的内容以粗体显示。
 
 |  | Discord | Kook | OneBot | QQGuild | Telegram |
 |:---:|:---:|:---:|:---:|:---:|:---:|
