@@ -55,7 +55,7 @@ export interface Field<T> {
 - **config:** `Table.Meta` 表的基本配置
   - **config.primary:** `string | string[]` 主键名，默认为 `'id'`
   - **config.unique:** `(string | string[])[]` 值唯一的键名列表
-  - **config.foreign:** `Dict<[string, string]>` 值唯一的键名列表
+  - **config.foreign:** `Dict<[string, string]>` 外键列表
   - **config.autoInc:** `boolean` 是否使用自增主键
 
 扩展一个新的数据表。
