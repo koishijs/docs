@@ -35,9 +35,10 @@ root
   - @koishijs/plugin-\* (官方插件)
   - 其中 \* 是由数字、小写字母和连字符组成的字符串
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
+- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
 - [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
-- 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true`
-- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions)
+- 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
+- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
 
 一个符合上述标准的示例：
 
@@ -65,6 +66,10 @@ root
   ],
   "license": "MIT",                         // 许可证
   "homepage": "https://example.com",        // 主页
+  "repository": {                           // 源码仓库
+    "type": "git",
+    "url": "git+https://github.com/alice/koishi-plugin-example.git"
+  },
   "keywords": ["example"],                  // 关键词
   "peerDependencies": {
     "koishi": "^4.3.2"
@@ -72,10 +77,10 @@ root
 }
 ```
 
-- **author:** 插件作者，通常使用 `名字 <邮箱>` 的格式
-- **maintainers:** 插件维护者，应该是一个数组，其中元素格式同上
+- **contributors:** 插件维护者，应该是一个数组，其中的元素通常使用 `名字 <邮箱>` 的格式
 - **license:** 插件许可证，你可以在 [这里](https://choosealicense.com/licenses/) 了解各种许可证的详细信息
 - **homepage:** 插件主页，可以是一个网址 (比如你的 GitHub 项目地址)
+- **repository:** 插件源码仓库，应该是一个对象，其中 `type` 字段指定仓库类型，`url` 字段指定仓库地址
 - **keywords:** 插件关键词，应该是一个字符串数组，会用于插件市场中的搜索功能
 
 ### koishi 字段
@@ -116,7 +121,7 @@ root
 插件市场中的插件会根据其评分进行排序。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
 
 - 插件是否开源
-- 插件是否包含不安全的依赖
+- 插件是否被标记为不安全 / 开发中
 - 插件的下载量
 - 插件的安装体积
 
