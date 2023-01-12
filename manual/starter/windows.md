@@ -32,7 +32,7 @@ next:
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-点击 Koishi 图标即可启动。等待几秒钟，你的默认浏览器将会打开 Koishi 控制台，现在你可以开始使用 Koishi 了。
+点击 Koishi 图标即可启动。等待几秒钟，Koishi 控制台将会被打开，现在你可以开始使用 Koishi 了。
 
 ## 其他选择
 
