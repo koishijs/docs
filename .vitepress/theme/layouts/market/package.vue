@@ -66,7 +66,7 @@
 import { computed } from 'vue'
 import { AnalyzedPackage } from '@koishijs/registry'
 import KIcon from '../../components/icon'
-import KMarkdown from '../../components/markdown.vue'
+import KMarkdown from 'marked-vue'
 import md5 from 'spark-md5'
 import { getUsers } from './utils'
 
