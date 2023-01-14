@@ -1,5 +1,9 @@
 # 会话选择器
 
+::: tip
+请不要滥用这项功能，在源码中直接书写账号或群号以实现过滤，这将导致其他用户无法使用你的插件。推荐在控制台中使用过滤器。
+:::
+
 一个 **上下文 (Context)** 描述了机器人的一种可能的运行环境。例如，如果一个指令或中间件被绑定在了上面例子中的上下文，那么只有该环境下的事件才会触发对应的回调函数。之前介绍过的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.plugin()` 这些 API 都是上下文类所提供的方法，而我们能在 `app` 上调用这些方法只是因为 `App` 对象本身也是一个上下文而已。
 
 ## 属性选择器
@@ -7,18 +11,18 @@
 我们可以通过 **属性选择器 (Attribute Selector)** 来快速创建新的上下文：
 
 ```ts
-app.user('112233')                  // 选择来自用户 112233 的会话
-app.self('112233')                  // 选择发送给机器人 112233 的会话
-app.guild('445566')                 // 选择来自群组 445566 的会话
-app.channel('778899')               // 选择来自频道 778899 的会话
-app.platform('discord')             // 选择来自平台 discord 的会话
+ctx.user('112233')                  // 选择来自用户 112233 的会话
+ctx.self('112233')                  // 选择发送给机器人 112233 的会话
+ctx.guild('445566')                 // 选择来自群组 445566 的会话
+ctx.channel('778899')               // 选择来自频道 778899 的会话
+ctx.platform('discord')             // 选择来自平台 discord 的会话
 ```
 
 这种写法也支持链式的调用：
 
 ```ts
 // 选择来自平台 discord 中用户 112233 的会话
-app.platform('discord').user('112233')
+ctx.platform('discord').user('112233')
 ```
 
 利用上下文，你可以非常方便地对每个环境进行分别配置：
@@ -28,16 +32,16 @@ declare const callback: Middleware
 declare const listener: (session: Session) => void
 /// ---cut---
 // 在所有环境注册中间件
-app.middleware(callback)
+ctx.middleware(callback)
 
 // 注册指令 my-command，仅对机器人 112233 有效
-app.self('112233').command('my-command')
+ctx.self('112233').command('my-command')
 
 // 当有人申请加群 445566 时触发 listener
-app.guild('445566').on('guild-request', listener)
+ctx.guild('445566').on('guild-request', listener)
 
 // 安装插件 ./my-plugin，仅限 OneBot 平台使用
-app.platform('onebot').plugin(require('./my-plugin'))
+ctx.platform('onebot').plugin(require('./my-plugin'))
 ```
 
 是不是非常方便呢？
@@ -61,18 +65,22 @@ ctx.exclude(session => session.content === '啦啦啦')
 
 ```ts
 // 选择来自群组 1122233 和用户 445566 的会话
-app.guild('112233').intersect(app.user('445566'))
+ctx.guild('112233').intersect(ctx.user('445566'))
 
 // 选择来自群组 1122233 或用户 445566 的会话
-app.guild('112233').union(app.user('445566'))
+ctx.guild('112233').union(ctx.user('445566'))
 
 // 选择来自群组 1122233 的会话，但来自用户 445566 的会话除外
-app.guild('112233').exclude(app.user('445566'))
+ctx.guild('112233').exclude(ctx.user('445566'))
 ```
 
 与选择器方法类似，过滤器方法也会返回一个新的上下文，你可以在其上自由的添加监听器、中间件、指令和插件。
 
-## 配置插件上下文
+<!-- ## 配置插件上下文
+
+::: tip
+此特性只能在配置文件中使用。
+:::
 
 加载插件的时候，我们也可以通过第二个参数选择插件的上下文：
 
@@ -152,4 +160,4 @@ app
 注意到这些属性是与插件的配置项写在一起的。因为这些特殊属性的存在，我们始终建议将插件的配置项设置为一个普通对象 (而不是原始类型或数组等其他类的实例)。
 :::
 
-## 插件组 <Badge text="CLI"/>
+## 插件组 <Badge text="CLI"/> -->
