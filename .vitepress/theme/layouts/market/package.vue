@@ -96,7 +96,7 @@ const props = defineProps<{
 const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
 
 function getAvatar(email: string) {
-  return 'https://cravatar.cn/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '?d=mp'
+  return 'https://cravatar.cn/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '.png?d=mp'
 }
 
 function formatValue(value: number) {
