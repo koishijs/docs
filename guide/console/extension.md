@@ -65,6 +65,7 @@ export default (ctx: Context) => {
 接着修改你的入口文件：
 
 ```ts title=src/index.ts
+import { Context } from '@koishijs/client'
 import { resolve } from 'path'
 
 export const name = 'my-plugin'
