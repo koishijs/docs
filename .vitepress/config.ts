@@ -1,5 +1,4 @@
 import { defineConfig } from '@koishijs/vitepress'
-import { SearchPlugin } from './search'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
@@ -13,6 +12,7 @@ export default async () => defineConfig({
   ],
 
   themeConfig: {
+    indexName: 'docs',
     logo: '/logo.png',
 
     nav: [{
@@ -332,16 +332,5 @@ export default async () => defineConfig({
     editLink: {
       pattern: 'https://github.com/koishijs/docs/edit/main/:path',
     },
-  },
-
-  vite: {
-    plugins: [
-      ...process.env.MEILISEARCH_HOST ? [SearchPlugin({
-        host: process.env.MEILISEARCH_HOST,
-        readKey: process.env.MEILISEARCH_READ_KEY,
-        writeKey: process.env.MEILISEARCH_WRITE_KEY,
-        indexName: 'docs',
-      })] : [],
-    ],
   },
 })

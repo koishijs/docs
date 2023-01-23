@@ -4,7 +4,7 @@
 
 以下实例属性都是只读的。
 
-### ctx.state
+### ctx.scope
 
 - 类型: `State`
 
