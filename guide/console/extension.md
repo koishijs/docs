@@ -65,6 +65,9 @@ export default (ctx: Context) => {
 接着修改你的入口文件：
 
 ```ts title=src/index.ts
+import { Context } from 'koishi'
+// 此处需要导入 @koishijs/plugin-console 以获取类型
+import {} from '@koishijs/plugin-console'
 import { resolve } from 'path'
 
 export const name = 'my-plugin'

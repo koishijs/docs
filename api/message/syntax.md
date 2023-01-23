@@ -151,3 +151,8 @@ ctx.middleware((session) => {
   return session.text('welcome', session)
 })
 ```
+
+下面列举出了一些插值的消息元素与 JSX 语法上的区别：
+
+- 使用 `<!--` 和 `-->` 作为注释，而不是 `{/*` 和 `*/}`
+- `{}` 内只能是取值表达式，而不能是任意 JavaScript 表达式或其他元素
