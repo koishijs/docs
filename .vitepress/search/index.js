@@ -12,18 +12,17 @@ export function SearchPlugin({ host = 'http://localhost:7700', indexName = 'vite
   async function publishIndex() {
     const docs = await buildDocs(config.root);
     await index.deleteAllDocuments()
-    await index.addDocuments(docs)
-    // await index.updateSearchableAttributes(["sentence", "lvl6", "lvl5", "lvl4", "lvl3", "lvl2", "lvl1", "alternate"]);
-     await index.updateSearchableAttributes([
-       "sentence",
-       "lvl6",
-       "lvl5",
-       "lvl4",
-       "lvl3",
-       "lvl2",
-       "lvl1",
-       "alternate",
-     ]);
+    await index.addDocumentsInBatches(docs, 1000)
+    await index.updateSearchableAttributes([
+      "sentence",
+      "lvl6",
+      "lvl5",
+      "lvl4",
+      "lvl3",
+      "lvl2",
+      "lvl1",
+      "alternate",
+    ]);
     await index.updateSortableAttributes(["pageLink"]);
     await index.updateRankingRules([
       'exactness',

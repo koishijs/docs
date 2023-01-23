@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from "vue";
 import { useData } from "vitepress";
 import SearchItem from "./SearchItem.vue";
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
-import { AisInstantSearch, AisSearchBox, AisInfiniteHits, AisStateResults } from 'vue-instantsearch/vue3/cjs'
+import { AisInstantSearch, AisSearchBox, AisInfiniteHits, AisStateResults } from 'vue-instantsearch/vue3/es/index.js'
 import DebounceInput from "./DebounceInput.vue";
 
 const searchClient = instantMeiliSearch(

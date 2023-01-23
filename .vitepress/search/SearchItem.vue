@@ -1,5 +1,5 @@
 <script setup>
-import { AisHighlight } from "vue-instantsearch/vue3/cjs";
+import { AisHighlight } from "vue-instantsearch/vue3/es/index.js";
 import { computed } from "vue";
 import { useData } from "vitepress";
 
