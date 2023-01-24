@@ -40,11 +40,15 @@ ctx.plugin(class {
 
 ```ts title=foo.ts
 // 默认导出类形式的插件
-export interface Config {}
-
-export default class Foo {
-  constructor(ctx: Context, config: Config) {}
+class Foo {
+  constructor(ctx: Context, config: Foo.Config) {}
 }
+
+namespace Foo {
+  export interface Config {}
+}
+
+export default Foo
 ```
 
 ```ts title=bar.ts

@@ -12,25 +12,7 @@
 
 让我们看一个简单的示例。下面的插件将注册一个指令，输出当前插件的配置项。
 
-::: tabs code
-```js no-extra-header
-const { Schema } = require('koishi')
-
-module.exports.name = 'example'
-
-module.exports.schema = Schema.object({
-  foo: Schema.string().required(),
-  bar: Schema.number().default(1),
-})
-
-module.exports.apply = (ctx, config) => {
-  ctx.command('config').action(() => {
-    // 输出当前的配置
-    return `foo: ${config.foo}\nbar: ${config.bar}`
-  })
-}
-```
-```ts no-extra-header
+```ts
 import { Context, Schema } from 'koishi'
 
 export const name = 'example'
@@ -40,7 +22,7 @@ export interface Config {
   bar?: number
 }
 
-export const schema = Schema.object({
+export const Config: Schema<Config> = Schema.object({
   foo: Schema.string().required(),
   bar: Schema.number().default(1),
 })
@@ -52,7 +34,26 @@ export function apply(ctx: Context, config: Config) {
   })
 }
 ```
-:::
+
+需要注意的是，`Config` 应当是导出的插件的一个属性。因此，如果你使用默认导出，推荐你使用 `namespace` 来声明插件的配置：
+
+```ts
+class Example {
+  constructor(ctx: Context, config: Example.Config) {
+    // 这里是插件实现
+  }
+}
+
+namespace Example {
+  export interface Config {}
+
+  export const Config: Schema<Config> = Schema.object({
+    // 这里是配置声明
+  })
+}
+
+export default Foo
+```
 
 ## 更多配置类型
 
