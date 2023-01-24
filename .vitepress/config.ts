@@ -297,6 +297,7 @@ export default async () => defineConfig({
       '/about/': [{
         text: '关于我们',
         items: [
+          makeLink('许可证', '/about/license.md'),
           makeLink('参与讨论', '/about/contact.md'),
           makeLink('团队介绍', '/about/team.md'),
           makeLink('社区资源', '/about/community.md'),
