@@ -66,14 +66,6 @@ export default async () => defineConfig({
           makeLink('使用数据库', '/manual/console/dataview.md'),
         ],
       }, {
-        text: '进阶',
-        items: [
-          makeLink('配置文件', '/manual/advanced/config.md'),
-          makeLink('启动脚本', '/manual/advanced/script.md'),
-          makeLink('工作区开发', '/manual/advanced/workspace.md'),
-          makeLink('发布插件', '/manual/advanced/publish.md'),
-        ],
-      }, {
         text: '配方',
         items: [
           makeLink('服务器部署', '/manual/recipe/server.md'),
@@ -83,6 +75,14 @@ export default async () => defineConfig({
       '/guide/': [{
         items: [
           makeLink('总览', '/guide/'),
+        ],
+      }, {
+        text: '开发上手',
+        items: [
+          makeLink('配置文件', '/guide/develop/config.md'),
+          makeLink('启动脚本', '/guide/develop/script.md'),
+          makeLink('工作区开发', '/guide/develop/workspace.md'),
+          makeLink('发布插件', '/guide/develop/publish.md'),
         ],
       }, {
         text: '交互基础',

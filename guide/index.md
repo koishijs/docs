@@ -7,7 +7,7 @@
 :::
 
 ::: tip
-如果你不知道应该在哪里编写代码，你可能需要先阅读 [创建模板项目](../manual/starter/boilerplate.md) 和 [工作区开发](../manual/advanced/workspace.md) 两节。
+如果你不知道应该在哪里编写代码，你可能需要首先阅读 [创建模板项目](../manual/starter/boilerplate.md)。
 :::
 
 Koishi 是一个强大的机器人框架，因此有大量的内容可供学习。不过请不用担心，我们为学习者提供了一部循序渐进的教程，帮助你从最基础的概念出发，逐步掌握关于 Koishi 的一切——运行原理、开发方式和最佳实践。
@@ -22,7 +22,7 @@ Koishi 是一个 Node.js 框架，因此我们假定你已经拥有了一定的 
 
 TypeScript 是 JavaScript 的超集，前者在后者的基础上额外提供了强大的类型系统，可以让你的代码更加健壮，开发也更加快捷。Koishi 本身就是用 TypeScript 编写的，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。如果你对 TypeScript 不熟悉，这里有一篇 [TypeScript 教程](https://www.typescriptlang.org/zh/docs/handbook/typescript-in-5-minutes.html)。
 
-**本篇指南中的所有代码示例都使用了 TypeScript**。这对于插件开发者来说这并不是必需的。如果你不想用 TypeScript 来开发插件，你可以自行忽略那些类型标注，并使用原生 JavaScript 或其他方言来编写代码。
+本篇指南中的所有代码示例都使用了 TypeScript。这对于插件开发者来说这并不是必需的。如果你不想用 TypeScript 来开发插件，你可以自行忽略那些类型标注，并使用原生 JavaScript 或其他方言来编写代码。
 
 ## 让我们开始吧！
 
