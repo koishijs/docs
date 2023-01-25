@@ -154,7 +154,7 @@ interface Selection {
   - **watch.root:** `string` 要监听的根目录，相对于工作路径
   - **watch.debounce:** `number` 延迟触发更新的等待时间，默认为 `100`
 
-监听文件变化的选项。参见 [模块热替换](../../manual/advanced/script.md#模块热替换) 一节。
+监听文件变化的选项。参见 [模块热替换](../../guide/develop/script.md#模块热替换) 一节。
 
 ### options.timezoneOffset
 

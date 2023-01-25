@@ -36,11 +36,9 @@
 <script lang="ts" setup>
 
 import type { AnalyzedPackage, User } from '@koishijs/registry'
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import PackageView from './package.vue'
-import { market, getUsers, activeCategories } from '../../utils'
-
-const words = reactive([''])
+import { market, getUsers, activeCategory, words, visible } from '../../utils'
 
 function onEnter(event: KeyboardEvent) {
   const last = words[words.length - 1]
@@ -102,7 +100,7 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
 }
 
 const hasWords = computed(() => {
-  return words.filter(w => w).length > 0 || activeCategories.value.size > 0
+  return words.filter(w => w).length || activeCategory.value
 })
 
 const error = ref()
@@ -115,16 +113,9 @@ onMounted(async () => {
   }
 })
 
-const visible = computed(() => {
-  if (!market.value) return []
-  return market.value.objects.filter((data) => {
-    return !data.manifest.hidden || words.includes('show:hidden')
-  })
-})
-
 const packages = computed(() => {
   return visible.value.filter((data) => {
-    if (activeCategories.value.size && !activeCategories.value.has(data.category)) return
+    if (activeCategory.value && activeCategory.value !== data.category) return
     const users = getUsers(data)
     return words.every(word => validate(data, word, users))
   })

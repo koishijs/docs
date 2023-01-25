@@ -7,8 +7,8 @@
         </div>
         <div
           v-for="(title, key) in categories" :key="key"
-          class="category-item" :class="{ active: activeCategories.has(key) }"
-          @click="activeCategories.has(key) ? activeCategories.delete(key) : activeCategories.add(key)"
+          class="category-item" :class="{ active: activeCategory === key }"
+          @click="activeCategory = activeCategory === key ? null : key"
         >
           <span class="icon">
             <k-icon :name="key"></k-icon>
@@ -16,7 +16,7 @@
           <span class="text">
             {{ title }}
             <template v-if="market">
-              ({{ market.objects.filter(item => item.category === key).length }})
+              ({{ visible.filter(item => item.category === key).length }})
             </template>
           </span>
           <span class="spacer"></span>
@@ -30,7 +30,7 @@
 
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
-import { activeCategories, categories, market } from './utils'
+import { activeCategory, categories, market, visible } from './utils'
 import KIcon from './components/icon'
 
 const { frontmatter } = useData()

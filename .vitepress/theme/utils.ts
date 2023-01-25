@@ -1,5 +1,5 @@
 import { AnalyzedPackage, MarketResult, User } from '@koishijs/registry'
-import { ref, Ref } from 'vue'
+import { computed, reactive, ref, Ref } from 'vue'
 
 interface MarketRef extends Ref<MarketResult> {
   refresh: () => Promise<void>
@@ -33,7 +33,16 @@ export const categories = {
   gametool: '游戏工具',
 }
 
-export const activeCategories = ref(new Set())
+export const words = reactive([''])
+
+export const visible = computed(() => {
+  if (!market.value) return []
+  return market.value.objects.filter((data) => {
+    return !data.manifest.hidden || words.includes('show:hidden')
+  })
+})
+
+export const activeCategory = ref<string>()
 
 export function getUsers(data: AnalyzedPackage) {
   const result: Record<string, User> = {}
