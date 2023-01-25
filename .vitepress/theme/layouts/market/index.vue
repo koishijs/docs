@@ -35,10 +35,10 @@
 
 <script lang="ts" setup>
 
-import type { AnalyzedPackage, MarketResult, User } from '@koishijs/registry'
+import type { AnalyzedPackage, User } from '@koishijs/registry'
 import { computed, onMounted, reactive, ref } from 'vue'
 import PackageView from './package.vue'
-import { getUsers } from './utils'
+import { market, getUsers, activeCategories } from '../../utils'
 
 const words = reactive([''])
 
@@ -102,17 +102,14 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
 }
 
 const hasWords = computed(() => {
-  return words.filter(w => w).length > 0
+  return words.filter(w => w).length > 0 || activeCategories.value.size > 0
 })
 
-const market = ref<MarketResult>()
 const error = ref()
 
 onMounted(async () => {
   try {
-    const response = await fetch('https://registry.koishi.chat/market.json')
-    market.value = await response.json()
-    console.log(market.value)
+    market.refresh()
   } catch (err) {
     error.value = err
   }
@@ -127,6 +124,7 @@ const visible = computed(() => {
 
 const packages = computed(() => {
   return visible.value.filter((data) => {
+    if (activeCategories.value.size && !activeCategories.value.has(data.category)) return
     const users = getUsers(data)
     return words.every(word => validate(data, word, users))
   })

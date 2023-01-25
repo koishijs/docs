@@ -68,27 +68,9 @@ import { AnalyzedPackage } from '@koishijs/registry'
 import KIcon from '../../components/icon'
 import KMarkdown from 'marked-vue'
 import md5 from 'spark-md5'
-import { getUsers } from './utils'
+import { getUsers, categories } from '../../utils'
 
 const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
-
-const categories = {
-  adapter: '适配器',
-  ai: '人工智能',
-  console: '控制台',
-  core: '核心功能',
-  extension: '扩展功能',
-  fun: '趣味交互',
-  game: '娱乐玩法',
-  gametool: '游戏工具',
-  image: '图片服务',
-  manage: '管理工具',
-  preset: '行为预设',
-  search: '搜索服务',
-  storage: '存储服务',
-  subscribe: '订阅服务',
-  tool: '实用工具',
-}
 
 function resolveCategory(name?: string) {
   if (categories[name!]) return name
