@@ -2,7 +2,7 @@
   <section class="k-card market-view">
     <div class="header">
       <div class="left">
-        <k-icon :name="resolveCategory(data.manifest.category)"></k-icon>
+        <k-icon :name="resolveCategory(data.category)"></k-icon>
       </div>
       <div class="right">
         <h2>
@@ -73,13 +73,21 @@ import { getUsers } from './utils'
 const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
 
 const categories = {
-  all: '所有插件',
-  other: '未分类',
+  adapter: '适配器',
+  ai: '人工智能',
   console: '控制台',
-  business: '业务功能',
+  core: '核心功能',
+  extension: '扩展功能',
+  fun: '趣味交互',
+  game: '娱乐玩法',
+  gametool: '游戏工具',
+  image: '图片服务',
+  manage: '管理工具',
+  preset: '行为预设',
+  search: '搜索服务',
   storage: '存储服务',
-  tool: '基础工具',
-  game: '娱乐功能',
+  subscribe: '订阅服务',
+  tool: '实用工具',
 }
 
 function resolveCategory(name?: string) {
