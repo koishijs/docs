@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <k-markdown inline class="desc" :source="data.manifest.description.zh || data.manifest.description.en"></k-markdown>
+    <k-markdown inline tag="div" class="desc" :source="data.manifest.description.zh || data.manifest.description.en"></k-markdown>
     <div class="footer">
       <a class="shrink" :href="data.links.npm" target="_blank" rel="noopener noreferrer">
         <k-icon name="tag"></k-icon>{{ data.version }}
@@ -235,6 +235,12 @@ function formatSize(value: number) {
     font-size: 15px;
     flex: 1 1 auto;
     line-height: 1.5;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .footer {

@@ -7,19 +7,18 @@
         </div>
         <div
           v-for="(title, key) in categories" :key="key"
-          class="category-item" :class="{ active: activeCategory === key }"
-          @click="activeCategory = activeCategory === key ? null : key"
-        >
+          class="category-item" :class="{ active: words.includes('category:' + key) }"
+          @click="toggleCategory(key)">
           <span class="icon">
             <k-icon :name="key"></k-icon>
           </span>
           <span class="text">
             {{ title }}
-            <template v-if="market">
-              ({{ visible.filter(item => item.category === key).length }})
-            </template>
           </span>
           <span class="spacer"></span>
+          <span class="count" v-if="market">
+            {{ visible.filter(item => item.category === key || key === 'other' && !(item.category in categories)).length }}
+          </span>
         </div>
       </div>
     </template>
@@ -30,10 +29,22 @@
 
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
-import { activeCategory, categories, market, visible } from './utils'
+import { words, categories, market, visible } from './utils'
 import KIcon from './components/icon'
 
 const { frontmatter } = useData()
+
+function toggleCategory(key: string) {
+  const index = words.findIndex(word => word.startsWith('category:'))
+  if (index === -1) {
+    if (!words[words.length - 1]) words.pop()
+    words.push('category:' + key, '')
+  } else if (words[index] === 'category:' + key) {
+    words.splice(index, 1)
+  } else {
+    words[index] = 'category:' + key
+  }
+}
 
 </script>
 
@@ -88,7 +99,7 @@ const { frontmatter } = useData()
     max-width: 1.25rem;
   }
 
-  .text {
+  .text, .count {
     line-height: 20px;
     font-size: 14px;
     font-weight: 500;

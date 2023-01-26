@@ -31,6 +31,7 @@ export const categories = {
   fun: '趣味交互',
   game: '娱乐玩法',
   gametool: '游戏工具',
+  other: '未分类',
 }
 
 export const words = reactive([''])
@@ -41,8 +42,6 @@ export const visible = computed(() => {
     return !data.manifest.hidden || words.includes('show:hidden')
   })
 })
-
-export const activeCategory = ref<string>()
 
 export function getUsers(data: AnalyzedPackage) {
   const result: Record<string, User> = {}

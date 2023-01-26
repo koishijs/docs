@@ -38,7 +38,7 @@
 import type { AnalyzedPackage, User } from '@koishijs/registry'
 import { computed, onMounted, ref } from 'vue'
 import PackageView from './package.vue'
-import { market, getUsers, activeCategory, words, visible } from '../../utils'
+import { market, getUsers, words, visible, categories } from '../../utils'
 
 function onEnter(event: KeyboardEvent) {
   const last = words[words.length - 1]
@@ -68,7 +68,9 @@ function onQuery(word: string) {
 
 function validate(data: AnalyzedPackage, word: string, users: User[]) {
   const { locales, service } = data.manifest
-  if (word.startsWith('impl:')) {
+  if (word.startsWith('category:')) {
+    return data.category === word.slice(9) || word === 'category:other' && !(data.category in categories)
+  } else if (word.startsWith('impl:')) {
     return service.implements.includes(word.slice(5))
   } else if (word.startsWith('locale:')) {
     return locales.includes(word.slice(7))
@@ -99,9 +101,7 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
   return data.keywords.some(keyword => keyword.includes(word))
 }
 
-const hasWords = computed(() => {
-  return words.filter(w => w).length || activeCategory.value
-})
+const hasWords = computed(() => words.filter(w => w).length > 0)
 
 const error = ref()
 
@@ -115,7 +115,6 @@ onMounted(async () => {
 
 const packages = computed(() => {
   return visible.value.filter((data) => {
-    if (activeCategory.value && activeCategory.value !== data.category) return
     const users = getUsers(data)
     return words.every(word => validate(data, word, users))
   })
