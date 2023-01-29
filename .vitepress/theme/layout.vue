@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :class="extra">
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
       <div class="category-group">
         <div class="title">
@@ -29,10 +29,17 @@
 
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
-import { words, categories, market, visible } from './utils'
+import { computed } from 'vue'
+import { home, words, categories, market, visible } from './utils'
 import KIcon from './components/icon'
 
 const { frontmatter } = useData()
+
+const extra = computed(() => {
+  if (frontmatter.value.layout === 'home') {
+    return [`parity-` + (Math.round(home.position.value) % 2 ? 'odd' : 'even')]
+  }
+})
 
 function toggleCategory(key: string) {
   const index = words.findIndex(word => word.startsWith('category:'))

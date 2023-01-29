@@ -1,6 +1,10 @@
 import { AnalyzedPackage, MarketResult, User } from '@koishijs/registry'
 import { computed, reactive, ref, Ref } from 'vue'
 
+export namespace home {
+  export const position = ref(0)
+}
+
 interface MarketRef extends Ref<MarketResult> {
   refresh: () => Promise<void>
 }

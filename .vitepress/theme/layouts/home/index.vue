@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-home" :class="{ moving }">
+  <div class="container" :class="{ moving }">
     <div class="track track-main" :style="main">
       <slide1 @swipe="move(1)"></slide1>
       <slide2></slide2>
@@ -7,7 +7,7 @@
       <slide4></slide4>
     </div>
     <div class="track track-demo" :style="demo">
-      <carousel :position="position"></carousel>
+      <carousel :position="home.position.value"></carousel>
     </div>
   </div>
 </template>
@@ -19,19 +19,18 @@ import Slide2 from './slide2.vue'
 import Slide3 from './slide3.vue'
 import Slide4 from './slide4.vue'
 import Carousel from './carousel.vue'
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { useEventListener } from '@vueuse/core'
+import { home } from '../../utils'
 
 const { frontmatter } = useData()
 
 const demoCount = computed<number>(() => frontmatter.value.features.length)
 const totalCount = computed(() => demoCount.value + 2)
 
-const position = ref(0)
-
 const main = computed(() => ({
-  transform: `translateY(${-position.value * 100}vh)`,
+  transform: `translateY(${-home.position.value * 100}vh)`,
 }))
 
 function interval(value: number, begin: number, end: number) {
@@ -45,7 +44,7 @@ function interval(value: number, begin: number, end: number) {
 }
 
 const demo = computed(() => ({
-  transform: `translateY(${interval(position.value, 1, demoCount.value) * 100}vh)`,
+  transform: `translateY(${interval(home.position.value, 1, demoCount.value) * 100}vh)`,
 }))
 
 function restrict(value: number) {
@@ -53,7 +52,7 @@ function restrict(value: number) {
 }
 
 function move(offset: number) {
-  position.value = restrict(Math.round(position.value + offset))
+  home.position.value = restrict(Math.round(home.position.value + offset))
 }
 
 function sign(value: number, epsilon = 0) {
@@ -77,8 +76,17 @@ let moving = false
 let startY: number
 let lastY: number
 
+function isMasked(e: Event) {
+  let target = e.target
+  while (target instanceof HTMLElement) {
+    if (target.tagName === 'HEADER') return true
+    target = target.parentElement
+  }
+}
+
 useEventListener('wheel', (e: WheelEvent) => {
   if (e.ctrlKey || e.shiftKey || Math.abs(e.deltaY) < 50) return
+  if (isMasked(e)) return
   const timestamp = Date.now()
   if (timestamp - lastMove >= 100) {
     move(Math.sign(e.deltaY))
@@ -93,10 +101,11 @@ useEventListener('touchstart', (e: TouchEvent) => {
 
 useEventListener('touchmove', (e: TouchEvent) => {
   if (!moving) return
+  if (isMasked(e)) return
   const { clientY } = e.changedTouches[0]
-  const destination = position.value + (lastY - clientY) / innerHeight
-  position.value = restrict(destination)
-  if (position.value === destination) {
+  const destination = home.position.value + (lastY - clientY) / innerHeight
+  home.position.value = restrict(destination)
+  if (home.position.value === destination) {
     // do not prevent default at the top or bottom
     e.preventDefault()
   }
@@ -109,7 +118,7 @@ useEventListener('touchend', (e: TouchEvent) => {
   const deltaY = startY - clientY
   const timestamp = Date.now()
   if (timestamp - lastMove >= 100) {
-    position.value -= (lastY - startY) / innerHeight
+    home.position.value -= (lastY - startY) / innerHeight
     move(sign(deltaY, 50))
   }
   lastMove = timestamp
@@ -119,7 +128,7 @@ useEventListener('touchend', (e: TouchEvent) => {
 
 <style lang="scss" scoped>
 
-.layout-home {
+.container {
   --t-duration: .3s;
   height: 100vh;
   margin-top: calc(0px - var(--vp-nav-height));
