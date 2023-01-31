@@ -1,3 +1,17 @@
+html {
+  --c-border: transparent;
+  --c-success: #67c23a;
+  --c-danger: #f56c6c;
+  --c-warning: #e49400;
+}
+
+html.dark {
+  --c-border: transparent; // var(--vp-c-divider-inverse);
+  --c-success: #3ba55e;
+  --c-danger: #ff595a;
+  --c-warning: #f9af1b;
+}
+
 .layout-home {
   .VPNav {
     background-color: transparent !important;

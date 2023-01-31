@@ -90,13 +90,8 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
   } else if (word.startsWith('is:')) {
     if (word === 'is:verified') return data.verified
     if (word === 'is:insecure') return data.insecure
-    if (word === 'is:preview') return data.manifest.preview
+    if (word === 'is:preview') return !!data.manifest.preview
     return false
-  } else if (word.startsWith('not:')) {
-    if (word === 'not:verified') return !data.verified
-    if (word === 'not:insecure') return !data.insecure
-    if (word === 'not:preview') return !data.manifest.preview
-    return true
   } else if (word.startsWith('show:')) {
     return true
   }
@@ -120,7 +115,14 @@ onMounted(async () => {
 const packages = computed(() => {
   return visible.value.filter((data) => {
     const users = getUsers(data)
-    return words.every(word => validate(data, word, users))
+    return words.every(word => {
+      let negate = false
+      if (word.startsWith('-')) {
+        negate = true
+        word = word.slice(1)
+      }
+      return validate(data, word, users) !== negate
+    })
   })
 })
 
@@ -131,20 +133,6 @@ const packages = computed(() => {
 $max-width: 480px;
 $min-width: 420px;
 $breakpoint: 760px;
-
-.market-container {
-  --c-border: transparent;
-  --c-success: #67c23a;
-  --c-danger: #f56c6c;
-  --c-warning: #e49400;
-}
-
-html.dark .market-container {
-  --c-border: transparent; // var(--vp-c-divider-inverse);
-  --c-success: #3ba55e;
-  --c-danger: #ff595a;
-  --c-warning: #f9af1b;
-}
 
 @media (min-width: 1440px) and (max-width: 1503px) {
   .layout-market .VPContent.has-sidebar {

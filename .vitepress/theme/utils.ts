@@ -22,32 +22,32 @@ market.refresh = async () => {
 
 const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
 
-interface Badge {
+export interface Badge {
   text: string
   check(data: AnalyzedPackage): boolean
-  query(): string
+  query: string
 }
 
 export const badges: Dict<Badge> = {
   verified: {
     text: '官方认证',
     check: data => data.verified,
-    query: () => 'is:verified',
+    query: 'is:verified',
   },
   insecure: {
     text: '不安全',
     check: data => data.insecure,
-    query: () => 'is:insecure',
+    query: 'is:insecure',
   },
   preview: {
     text: '开发中',
     check: data => data.manifest.preview,
-    query: () => 'is:preview',
+    query: 'is:preview',
   },
   newborn: {
     text: '近期新增',
     check: data => data.createdAt >= aWeekAgo,
-    query: () => `created:>${aWeekAgo}`,
+    query: `created:>${aWeekAgo}`,
   },
 }
 

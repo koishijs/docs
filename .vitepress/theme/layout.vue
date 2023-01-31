@@ -2,13 +2,13 @@
   <Layout :class="extra">
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
       <div class="filter-group">
-        <!-- <div class="title">
-          <h2 class="title-text">过滤</h2>
-        </div> -->
+        <div class="title">
+          <h2 class="title-text">筛选</h2>
+        </div>
         <div
           v-for="(badge, key) in badges" :key="key" class="filter-item"
-          :class="{ active: words.includes('is:' + key), disabled: words.includes('not:' + key) }"
-          @click="toggleBadge(key)">
+          :class="{ [key]: true, active: words.includes(badge.query), disabled: words.includes('-' + badge.query) }"
+          @click="toggleBadge(badge.query)">
           <span class="icon"><k-icon :name="key"></k-icon></span>
           <span class="text">{{ badge.text }}</span>
           <span class="spacer"></span>
@@ -25,7 +25,7 @@
           v-for="(title, key) in categories" :key="key" class="filter-item"
           :class="{ active: words.includes('category:' + key) }"
           @click="toggleCategory(key)">
-          <span class="icon"><k-icon :name="key"></k-icon></span>
+          <span class="icon"><k-icon :name="'solid:' + key"></k-icon></span>
           <span class="text">{{ title }}</span>
           <span class="spacer"></span>
           <span class="count" v-if="market">
@@ -65,13 +65,13 @@ function toggleCategory(key: string) {
   }
 }
 
-function toggleBadge(key: string) {
-  const index = words.findIndex(word => word === 'is:' + key || word === 'not:' + key)
+function toggleBadge(word: string) {
+  const index = words.findIndex(x => x === word || x === '-' + word)
   if (index === -1) {
     if (!words[words.length - 1]) words.pop()
-    words.push('is:' + key, '')
-  } else if (words[index] === 'is:' + key) {
-    words[index] = 'not:' + key
+    words.push(word, '')
+  } else if (words[index] === word) {
+    words[index] = '-' + word
   } else {
     words.splice(index, 1)
   }
@@ -116,16 +116,29 @@ function toggleBadge(key: string) {
 
   &.active {
     color: var(--vp-c-brand);
+
+    &.verified, &.newborn {
+      color: var(--c-success);
+    }
+
+    &.preview {
+      color: var(--c-warning);
+    }
+
+    &.insecure {
+      color: var(--c-danger);
+    }
   }
 
   &.disabled {
     opacity: 0.5;
+    text-decoration: line-through 2px;
   }
 
   .icon {
     display: inline-flex;
     width: 1.75rem;
-    margin-right: 6px;
+    margin-right: 4px;
     align-items: center;
     justify-content: center;
   }

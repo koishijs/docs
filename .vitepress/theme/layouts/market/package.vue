@@ -2,13 +2,13 @@
   <section class="k-card market-view">
     <div class="header">
       <div class="left">
-        <k-icon :name="resolveCategory(data.category)"></k-icon>
+        <k-icon :name="'outline:' + resolveCategory(data.category)"></k-icon>
       </div>
       <div class="right">
         <h2>
           <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
           <span v-if="badge" :class="['icon', badge.type]" :title="badge.text">
-            <k-icon :name="badge.type" @click="$emit('query', badge!.query())"></k-icon>
+            <k-icon :name="badge.type" @click="$emit('query', badge!.query)"></k-icon>
           </span>
         </h2>
         <div class="rating" :title="rating.toFixed(1)">
