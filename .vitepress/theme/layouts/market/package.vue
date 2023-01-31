@@ -7,17 +7,8 @@
       <div class="right">
         <h2>
           <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
-          <span v-if="data.verified" class="icon verified" title="官方认证">
-            <k-icon name="verified" @click="$emit('query', 'is:verified')"></k-icon>
-          </span>
-          <span v-else-if="data.insecure" class="icon insecure" title="不安全">
-            <k-icon name="insecure" @click="$emit('query', 'is:insecure')"></k-icon>
-          </span>
-          <span v-else-if="data.manifest.preview" class="icon preview" title="开发中">
-            <k-icon name="preview" @click="$emit('query', 'is:preview')"></k-icon>
-          </span>
-          <span v-else-if="data.createdAt >= aWeekAgo" class="icon newborn" title="近期新增">
-            <k-icon name="newborn" @click="$emit('query', 'after:' + aWeekAgo)"></k-icon>
+          <span v-if="badge" :class="['icon', badge.type]" :title="badge.text">
+            <k-icon :name="badge.type" @click="$emit('query', badge!.query())"></k-icon>
           </span>
         </h2>
         <div class="rating" :title="rating.toFixed(1)">
@@ -68,9 +59,7 @@ import { AnalyzedPackage } from '@koishijs/registry'
 import KIcon from '../../components/icon'
 import KMarkdown from 'marked-vue'
 import md5 from 'spark-md5'
-import { getUsers, categories } from '../../utils'
-
-const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
+import { getUsers, categories, badges } from '../../utils'
 
 function resolveCategory(name?: string) {
   if (categories[name!]) return name
@@ -84,6 +73,12 @@ const props = defineProps<{
 }>()
 
 const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
+
+const badge = computed(() => {
+  for (const type in badges) {
+    if (badges[type].check(props.data)) return { type, ...badges[type] }
+  }
+})
 
 function getAvatar(email: string) {
   return 'https://cravatar.cn/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '.png?d=mp'

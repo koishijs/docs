@@ -1,20 +1,32 @@
 <template>
   <Layout :class="extra">
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
-      <div class="category-group">
+      <div class="filter-group">
+        <!-- <div class="title">
+          <h2 class="title-text">过滤</h2>
+        </div> -->
+        <div
+          v-for="(badge, key) in badges" :key="key" class="filter-item"
+          :class="{ active: words.includes('is:' + key), disabled: words.includes('not:' + key) }"
+          @click="toggleBadge(key)">
+          <span class="icon"><k-icon :name="key"></k-icon></span>
+          <span class="text">{{ badge.text }}</span>
+          <span class="spacer"></span>
+          <span class="count" v-if="market">
+            {{ visible.filter(item => badge.check(item)).length }}
+          </span>
+        </div>
+      </div>
+      <div class="filter-group">
         <div class="title">
           <h2 class="title-text">分类</h2>
         </div>
         <div
-          v-for="(title, key) in categories" :key="key"
-          class="category-item" :class="{ active: words.includes('category:' + key) }"
+          v-for="(title, key) in categories" :key="key" class="filter-item"
+          :class="{ active: words.includes('category:' + key) }"
           @click="toggleCategory(key)">
-          <span class="icon">
-            <k-icon :name="key"></k-icon>
-          </span>
-          <span class="text">
-            {{ title }}
-          </span>
+          <span class="icon"><k-icon :name="key"></k-icon></span>
+          <span class="text">{{ title }}</span>
           <span class="spacer"></span>
           <span class="count" v-if="market">
             {{ visible.filter(item => item.category === key || key === 'other' && !(item.category in categories)).length }}
@@ -30,7 +42,7 @@
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed } from 'vue'
-import { home, words, categories, market, visible } from './utils'
+import { badges, home, words, categories, market, visible } from './utils'
 import KIcon from './components/icon'
 
 const { frontmatter } = useData()
@@ -53,14 +65,28 @@ function toggleCategory(key: string) {
   }
 }
 
+function toggleBadge(key: string) {
+  const index = words.findIndex(word => word === 'is:' + key || word === 'not:' + key)
+  if (index === -1) {
+    if (!words[words.length - 1]) words.pop()
+    words.push('is:' + key, '')
+  } else if (words[index] === 'is:' + key) {
+    words[index] = 'not:' + key
+  } else {
+    words.splice(index, 1)
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
 
-.category-group {
+.filter-group {
   margin-top: 16px;
   border-top: 1px solid var(--vp-c-divider-light);
   padding-top: 16px;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
 }
 
 .title {
@@ -78,12 +104,11 @@ function toggleCategory(key: string) {
   font-weight: 700;
 }
 
-.category-item {
+.filter-item {
   display: flex;
   margin: 4px 0;
   color: var(--vp-c-text-2);
   transition: color 0.5s;
-  justify-content: space-between;
   align-items: center;
   z-index: 2;
   height: 24px;
@@ -91,6 +116,10 @@ function toggleCategory(key: string) {
 
   &.active {
     color: var(--vp-c-brand);
+  }
+
+  &.disabled {
+    opacity: 0.5;
   }
 
   .icon {
@@ -102,14 +131,18 @@ function toggleCategory(key: string) {
   }
 
   svg {
-    height: 1.125rem;
-    max-width: 1.25rem;
+    height: 1rem;
+    max-width: 1.125rem;
   }
 
   .text, .count {
     line-height: 20px;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  .count {
+    margin-right: 4px;
   }
 
   .spacer {

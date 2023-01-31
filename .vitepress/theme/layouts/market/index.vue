@@ -79,10 +79,14 @@ function validate(data: AnalyzedPackage, word: string, users: User[]) {
     return service.required.includes(name) || service.optional.includes(name)
   } else if (word.startsWith('email:')) {
     return users.some(({ email }) => email === word.slice(6))
-  } else if (word.startsWith('before:')) {
-    return data.createdAt < word.slice(7)
-  } else if (word.startsWith('after:')) {
-    return data.createdAt >= word.slice(6)
+  } else if (word.startsWith('updated:<')) {
+    return data.updatedAt < word.slice(9)
+  } else if (word.startsWith('updated:>')) {
+    return data.updatedAt >= word.slice(9)
+  } else if (word.startsWith('created:<')) {
+    return data.createdAt < word.slice(9)
+  } else if (word.startsWith('created:>')) {
+    return data.createdAt >= word.slice(9)
   } else if (word.startsWith('is:')) {
     if (word === 'is:verified') return data.verified
     if (word === 'is:insecure') return data.insecure
@@ -193,23 +197,23 @@ html.dark .market-container {
 
   .search-box {
     display: flex;
+    flex-wrap: wrap;
     margin: 2rem auto 0;
     width: 540px;
     max-width: 540px;
-    height: 3rem;
     border-radius: 1.5rem;
     background-color: var(--vp-c-bg-alt);
     align-items: center;
-    padding: 0 1.2rem;
+    gap: 8px 6px;
+    padding: 0.75rem 1.25rem;
 
     @media (max-width: 663px) {
       width: 100%;
     }
 
     input {
-      height: 3rem;
-      width: 100%;
-      font-size: 1em;
+      height: 1.25rem;
+      font-size: 0.9em;
       background-color: transparent;
       border: none;
       outline: none;
@@ -217,10 +221,7 @@ html.dark .market-container {
 
     .badge {
       flex-shrink: 0;
-    }
-
-    .badge + input {
-      margin-left: 0.4rem;
+      margin-left: 0;
     }
   }
 

@@ -1,4 +1,5 @@
 import { AnalyzedPackage, MarketResult, User } from '@koishijs/registry'
+import { Dict } from 'cosmokit'
 import { computed, reactive, ref, Ref } from 'vue'
 
 export namespace home {
@@ -19,6 +20,37 @@ market.refresh = async () => {
   market.value = await response.json()
 }
 
+const aWeekAgo = new Date(Date.now() - 1000 * 3600 * 24 * 7).toISOString()
+
+interface Badge {
+  text: string
+  check(data: AnalyzedPackage): boolean
+  query(): string
+}
+
+export const badges: Dict<Badge> = {
+  verified: {
+    text: '官方认证',
+    check: data => data.verified,
+    query: () => 'is:verified',
+  },
+  insecure: {
+    text: '不安全',
+    check: data => data.insecure,
+    query: () => 'is:insecure',
+  },
+  preview: {
+    text: '开发中',
+    check: data => data.manifest.preview,
+    query: () => 'is:preview',
+  },
+  newborn: {
+    text: '近期新增',
+    check: data => data.createdAt >= aWeekAgo,
+    query: () => `created:>${aWeekAgo}`,
+  },
+}
+
 export const categories = {
   core: '核心功能',
   adapter: '适配器',
@@ -35,7 +67,6 @@ export const categories = {
   fun: '趣味交互',
   game: '娱乐玩法',
   gametool: '游戏工具',
-  other: '未分类',
 }
 
 export const words = reactive([''])
