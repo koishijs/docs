@@ -10,6 +10,7 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
+    "@koishijs/client-market": "^1.0.0",
     "@koishijs/registry": "^4.4.7",
     "@koishijs/vitepress": "^1.6.1",
     "@types/node": "^18.11.17",

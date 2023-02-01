@@ -3,6 +3,8 @@ html {
   --c-success: #67c23a;
   --c-danger: #f56c6c;
   --c-warning: #e49400;
+  --k-color-primary: var(--vp-c-brand);
+  --k-color-bg-alt: var(--vp-c-bg-alt);
 }
 
 html.dark {

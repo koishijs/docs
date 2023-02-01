@@ -2,20 +2,10 @@
   <div class="market-container" v-if="market">
     <h1>插件市场</h1>
     <div class="info">
-      当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ visible.length }} 个可用于 v4 版本的插件
+      当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
       <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
     </div>
-    <div class="card search-box">
-      <badge type="tip" v-for="(word, index) in words.slice(0, -1)" :key="index" @click="words.splice(index, 1)">{{ word }}</badge>
-      <input
-        placeholder="输入想要查询的插件名"
-        v-model="words[words.length - 1]"
-        @blur="(onEnter as any)"
-        @keydown.escape="onEscape"
-        @keydown.backspace="onBackspace"
-        @keypress.enter.prevent="onEnter"
-        @keypress.space.prevent="onEnter"/>
-    </div>
+    <search-box v-model="words"></search-box>
     <div class="packages">
       <package-view class="card"
         v-for="data in packages"
@@ -35,72 +25,18 @@
 
 <script lang="ts" setup>
 
-import type { AnalyzedPackage, User } from '@koishijs/registry'
 import { computed, onMounted, ref } from 'vue'
 import PackageView from './package.vue'
-import { market, getUsers, words, visible, categories } from '../../utils'
-
-function onEnter(event: KeyboardEvent) {
-  const last = words[words.length - 1]
-  if (!last) return
-  if (words.slice(0, -1).includes(last)) {
-    words.pop()
-  }
-  words.push('')
-}
-
-function onEscape(event: KeyboardEvent) {
-  words[words.length - 1] = ''
-}
-
-function onBackspace(event: KeyboardEvent) {
-  if (words[words.length - 1] === '' && words.length > 1) {
-    event.preventDefault()
-    words.splice(words.length - 2, 1)
-  }
-}
+import { market, words, all, packages } from '../../utils'
+import { SearchBox } from '@koishijs/client-market'
 
 function onQuery(word: string) {
-  if (!words[words.length - 1]) words.pop()
-  if (!words.includes(word)) words.push(word)
-  words.push('')
+  if (!words.value[words.value.length - 1]) words.value.pop()
+  if (!words.value.includes(word)) words.value.push(word)
+  words.value.push('')
 }
 
-function validate(data: AnalyzedPackage, word: string, users: User[]) {
-  const { locales, service } = data.manifest
-  if (word.startsWith('category:')) {
-    return data.category === word.slice(9) || word === 'category:other' && !(data.category! in categories)
-  } else if (word.startsWith('impl:')) {
-    return service.implements.includes(word.slice(5))
-  } else if (word.startsWith('locale:')) {
-    return locales.includes(word.slice(7))
-  } else if (word.startsWith('using:')) {
-    const name = word.slice(6)
-    return service.required.includes(name) || service.optional.includes(name)
-  } else if (word.startsWith('email:')) {
-    return users.some(({ email }) => email === word.slice(6))
-  } else if (word.startsWith('updated:<')) {
-    return data.updatedAt < word.slice(9)
-  } else if (word.startsWith('updated:>')) {
-    return data.updatedAt >= word.slice(9)
-  } else if (word.startsWith('created:<')) {
-    return data.createdAt < word.slice(9)
-  } else if (word.startsWith('created:>')) {
-    return data.createdAt >= word.slice(9)
-  } else if (word.startsWith('is:')) {
-    if (word === 'is:verified') return data.verified
-    if (word === 'is:insecure') return data.insecure
-    if (word === 'is:preview') return !!data.manifest.preview
-    return false
-  } else if (word.startsWith('show:')) {
-    return true
-  }
-
-  if (data.shortname.includes(word)) return true
-  return data.keywords.some(keyword => keyword.includes(word))
-}
-
-const hasWords = computed(() => words.filter(w => w).length > 0)
+const hasWords = computed(() => words.value.filter(w => w).length > 0)
 
 const error = ref()
 
@@ -110,20 +46,6 @@ onMounted(async () => {
   } catch (err) {
     error.value = err
   }
-})
-
-const packages = computed(() => {
-  return visible.value.filter((data) => {
-    const users = getUsers(data)
-    return words.every(word => {
-      let negate = false
-      if (word.startsWith('-')) {
-        negate = true
-        word = word.slice(1)
-      }
-      return validate(data, word, users) !== negate
-    })
-  })
 })
 
 </script>
@@ -183,44 +105,6 @@ $breakpoint: 760px;
     }
   // }
 
-  .search-box {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem auto 0;
-    width: 540px;
-    max-width: 540px;
-    border-radius: 1.5rem;
-    background-color: var(--vp-c-bg-alt);
-    align-items: center;
-    gap: 8px 6px;
-    padding: 0.75rem 1.25rem;
-
-    @media (max-width: 663px) {
-      width: 100%;
-    }
-
-    input {
-      height: 1.25rem;
-      font-size: 0.9em;
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
-
-    .badge {
-      flex-shrink: 0;
-      margin-left: 0;
-    }
-  }
-
-  .badge {
-    cursor: pointer;
-    user-select: none;
-    padding: 2px 6px;
-    color: var(--vp-c-white);
-    font-weight: 500;
-  }
-
   --card-margin: 2rem;
   --card-padding-vertical: 1.5rem;
   --card-padding-horizontal: 1.5rem;
@@ -252,10 +136,6 @@ $breakpoint: 760px;
 
   //     &:last-child {
   //       border-bottom: 1px solid var(--c-border);
-  //     }
-
-  //     .badge-container {
-  //       margin: 1rem 0 1.25rem;
   //     }
   //   }
   // }

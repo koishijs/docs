@@ -2,41 +2,41 @@
   <section class="k-card market-view">
     <div class="header">
       <div class="left">
-        <k-icon :name="'outline:' + resolveCategory(data.category)"></k-icon>
+        <market-icon :name="'outline:' + resolveCategory(data.category)"></market-icon>
       </div>
       <div class="right">
         <h2>
           <a :href="data.links.homepage || data.links.repository" target="_blank" rel="noopener noreferrer">{{ data.shortname }}</a>
           <span v-if="badge" :class="['icon', badge.type]" :title="badge.text">
-            <k-icon :name="badge.type" @click="$emit('query', badge!.query)"></k-icon>
+            <market-icon :name="badge.type" @click="$emit('query', badge!.query)"></market-icon>
           </span>
         </h2>
         <div class="rating" :title="data.rating.toFixed(1)">
-          <k-icon v-for="(_, index) in Array(5).fill(null)" :key="index" :name="index + 0.5 < data.rating ? 'star-full' : 'star-empty'"></k-icon>
+          <market-icon v-for="(_, index) in Array(5).fill(null)" :key="index" :name="index + 0.5 < data.rating ? 'star-full' : 'star-empty'"></market-icon>
         </div>
       </div>
     </div>
     <k-markdown inline tag="div" class="desc" :source="data.manifest.description.zh || data.manifest.description.en"></k-markdown>
     <div class="footer">
       <a class="shrink" :href="data.links.npm" target="_blank" rel="noopener noreferrer">
-        <k-icon name="tag"></k-icon>{{ data.version }}
+        <market-icon name="tag"></market-icon>{{ data.version }}
       </a>
       <template v-if="data.installSize">
         <span class="spacer"></span>
         <a :href="data.links.size" target="_blank" rel="noopener noreferrer">
-          <k-icon name="file-archive"></k-icon>{{ formatSize(data.installSize) }}
+          <market-icon name="file-archive"></market-icon>{{ formatSize(data.installSize) }}
         </a>
       </template>
       <template v-if="data.downloads">
         <span class="spacer"></span>
         <span>
-          <k-icon name="download"></k-icon>{{ data.downloads.lastMonth }}
+          <market-icon name="download"></market-icon>{{ data.downloads.lastMonth }}
         </span>
       </template>
       <template v-if="!data.installSize && !data.downloads">
         <span class="spacer"></span>
         <span>
-          <k-icon name="balance"></k-icon>{{ data.license }}
+          <market-icon name="balance"></market-icon>{{ data.license }}
         </span>
       </template>
       <span class="spacer grow"></span>
@@ -56,15 +56,8 @@
 
 import { computed } from 'vue'
 import { AnalyzedPackage } from '@koishijs/registry'
-import KIcon from '../../components/icon'
 import KMarkdown from 'marked-vue'
-import md5 from 'spark-md5'
-import { getUsers, categories, badges } from '../../utils'
-
-function resolveCategory(name?: string) {
-  if (categories[name!]) return name
-  return 'other'
-}
+import { MarketIcon, getUsers, getAvatar, formatSize, resolveCategory, badges } from '@koishijs/client-market'
 
 defineEmits(['query', 'click'])
 
@@ -77,24 +70,6 @@ const badge = computed(() => {
     if (badges[type].check(props.data)) return { type, ...badges[type] }
   }
 })
-
-function getAvatar(email: string) {
-  return 'https://cravatar.cn/avatar/' + (email ? md5.hash(email.toLowerCase()) : '') + '.png?d=mp'
-}
-
-function formatValue(value: number) {
-  return value >= 100 ? +value.toFixed() : +value.toFixed(1)
-}
-
-function formatSize(value: number) {
-  if (value >= (1 << 20) * 1000) {
-    return formatValue(value / (1 << 30)) + ' GB'
-  } else if (value >= (1 << 10) * 1000) {
-    return formatValue(value / (1 << 20)) + ' MB'
-  } else {
-    return formatValue(value / (1 << 10)) + ' KB'
-  }
-}
 
 </script>
 
@@ -111,7 +86,7 @@ function formatSize(value: number) {
   flex-direction: column;
   gap: 0.75rem;
 
-  .k-icon {
+  .market-icon {
     height: 1em;
     display: inline;
   }
@@ -173,7 +148,7 @@ function formatSize(value: number) {
         display: inline-block;
         cursor: pointer;
 
-        .k-icon {
+        .market-icon {
           height: 100%;
           transition: color 0.3s ease;
           z-index: 10;
@@ -215,7 +190,7 @@ function formatSize(value: number) {
       gap: 0 0.25rem;
       width: fit-content;
 
-      .k-icon {
+      .market-icon {
         color: var(--c-warning);
         height: 0.875rem;
         transition: color 0.3s ease;
@@ -257,7 +232,7 @@ function formatSize(value: number) {
       flex-shrink: 1;
     }
 
-    .k-icon {
+    .market-icon {
       height: 12px;
       width: 16px;
       margin-right: 6px;

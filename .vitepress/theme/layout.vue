@@ -9,11 +9,11 @@
           v-for="(badge, key) in badges" :key="key" class="filter-item"
           :class="{ [key]: true, active: words.includes(badge.query), disabled: words.includes('-' + badge.query) }"
           @click="toggleBadge(badge.query)">
-          <span class="icon"><k-icon :name="key"></k-icon></span>
+          <span class="icon"><market-icon :name="key"></market-icon></span>
           <span class="text">{{ badge.text }}</span>
           <span class="spacer"></span>
           <span class="count" v-if="market">
-            {{ visible.filter(item => badge.check(item)).length }}
+            {{ all.filter(item => badge.check(item)).length }}
           </span>
         </div>
       </div>
@@ -25,11 +25,11 @@
           v-for="(title, key) in categories" :key="key" class="filter-item"
           :class="{ active: words.includes('category:' + key) }"
           @click="toggleCategory(key)">
-          <span class="icon"><k-icon :name="'solid:' + key"></k-icon></span>
+          <span class="icon"><market-icon :name="'solid:' + key"></market-icon></span>
           <span class="text">{{ title }}</span>
           <span class="spacer"></span>
           <span class="count" v-if="market">
-            {{ visible.filter(item => item.category === key || key === 'other' && !(item.category in categories)).length }}
+            {{ all.filter(item => resolveCategory(item.category) === key).length }}
           </span>
         </div>
       </div>
@@ -42,8 +42,8 @@
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed } from 'vue'
-import { badges, home, words, categories, market, visible } from './utils'
-import KIcon from './components/icon'
+import { badges, categories, resolveCategory, MarketIcon } from '@koishijs/client-market'
+import { home, words, market, all } from './utils'
 
 const { frontmatter } = useData()
 
@@ -54,26 +54,26 @@ const extra = computed(() => {
 })
 
 function toggleCategory(key: string) {
-  const index = words.findIndex(word => word.startsWith('category:'))
+  const index = words.value.findIndex(word => word.startsWith('category:'))
   if (index === -1) {
-    if (!words[words.length - 1]) words.pop()
-    words.push('category:' + key, '')
+    if (!words.value[words.value.length - 1]) words.value.pop()
+    words.value.push('category:' + key, '')
   } else if (words[index] === 'category:' + key) {
-    words.splice(index, 1)
+    words.value.splice(index, 1)
   } else {
-    words[index] = 'category:' + key
+    words.value[index] = 'category:' + key
   }
 }
 
 function toggleBadge(word: string) {
-  const index = words.findIndex(x => x === word || x === '-' + word)
+  const index = words.value.findIndex(x => x === word || x === '-' + word)
   if (index === -1) {
-    if (!words[words.length - 1]) words.pop()
-    words.push(word, '')
-  } else if (words[index] === word) {
-    words[index] = '-' + word
+    if (!words.value[words.value.length - 1]) words.value.pop()
+    words.value.push(word, '')
+  } else if (words.value[index] === word) {
+    words.value[index] = '-' + word
   } else {
-    words.splice(index, 1)
+    words.value.splice(index, 1)
   }
 }
 
