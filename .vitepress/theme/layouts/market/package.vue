@@ -11,8 +11,8 @@
             <k-icon :name="badge.type" @click="$emit('query', badge!.query)"></k-icon>
           </span>
         </h2>
-        <div class="rating" :title="rating.toFixed(1)">
-          <k-icon v-for="(_, index) in Array(5).fill(null)" :key="index" :name="index + 0.5 < rating ? 'star-full' : 'star-empty'"></k-icon>
+        <div class="rating" :title="data.rating.toFixed(1)">
+          <k-icon v-for="(_, index) in Array(5).fill(null)" :key="index" :name="index + 0.5 < data.rating ? 'star-full' : 'star-empty'"></k-icon>
         </div>
       </div>
     </div>
@@ -71,8 +71,6 @@ defineEmits(['query', 'click'])
 const props = defineProps<{
   data: AnalyzedPackage,
 }>()
-
-const rating = computed(() => Math.min(Math.max((props.data.score.final - 0.25) * 10, 0), 5))
 
 const badge = computed(() => {
   for (const type in badges) {

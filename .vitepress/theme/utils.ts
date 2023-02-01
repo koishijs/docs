@@ -84,7 +84,7 @@ export function getUsers(data: AnalyzedPackage) {
     result[user.email] ||= user
   }
   if (!data.maintainers.some(user => result[user.email])) {
-    return [data.publisher]
+    return data.maintainers
   }
   return Object.values(result)
 }

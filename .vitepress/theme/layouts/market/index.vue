@@ -69,7 +69,7 @@ function onQuery(word: string) {
 function validate(data: AnalyzedPackage, word: string, users: User[]) {
   const { locales, service } = data.manifest
   if (word.startsWith('category:')) {
-    return data.category === word.slice(9) || word === 'category:other' && !(data.category in categories)
+    return data.category === word.slice(9) || word === 'category:other' && !(data.category! in categories)
   } else if (word.startsWith('impl:')) {
     return service.implements.includes(word.slice(5))
   } else if (word.startsWith('locale:')) {
