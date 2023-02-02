@@ -35,7 +35,7 @@ function onQuery(word: string) {
   words.value.push('')
 }
 
-const hasWords = computed(() => words.value.filter(w => w).length > 0)
+const hasWords = computed(() => words.value.filter(w => w && !w.startsWith('show:') && !w.startsWith('sort:')).length > 0)
 
 const error = ref()
 
@@ -95,7 +95,6 @@ $breakpoint: 760px;
     .card {
       background-color: var(--vp-c-bg-alt);
       border: 1px solid var(--c-border);
-      border-radius: 8px;
     }
 
     .market-view {
@@ -126,6 +125,10 @@ $breakpoint: 760px;
     gap: var(--card-margin);
     margin: var(--card-margin) 0;
     justify-items: center;
+
+    .market-package {
+      border-radius: 8px;
+    }
   }
 
   // @media (max-width: ($breakpoint - 1px)) {
