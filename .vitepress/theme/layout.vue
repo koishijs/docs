@@ -118,15 +118,15 @@ function toggleBadge(word: string) {
     color: var(--vp-c-brand);
 
     &.verified, &.newborn {
-      color: var(--c-success);
+      color: var(--k-color-success);
     }
 
     &.preview {
-      color: var(--c-warning);
+      color: var(--k-color-warning);
     }
 
     &.insecure {
-      color: var(--c-danger);
+      color: var(--k-color-danger);
     }
   }
 

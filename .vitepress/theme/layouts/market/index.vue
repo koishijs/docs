@@ -5,9 +5,9 @@
       当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
       <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
     </div>
-    <search-box v-model="words"></search-box>
+    <market-search class="card" v-model="words"></market-search>
     <div class="packages">
-      <package-view class="card"
+      <market-package class="card"
         v-for="data in packages"
         :key="data.name"
         :data="data" @query="onQuery"/>
@@ -26,9 +26,8 @@
 <script lang="ts" setup>
 
 import { computed, onMounted, ref } from 'vue'
-import PackageView from './package.vue'
 import { market, words, all, packages } from '../../utils'
-import { SearchBox } from '@koishijs/client-market'
+import { MarketSearch, MarketPackage } from '@koishijs/client-market'
 
 function onQuery(word: string) {
   if (!words.value[words.value.length - 1]) words.value.pop()
@@ -161,42 +160,5 @@ $breakpoint: 760px;
   //   }
   }
 }
-
-// html:not(.dark) .market-container .card {
-//   transition: box-shadow 0.3s ease;
-
-//   --shadow-left-1: 0 1px 4px hsl(250deg 40% 40% / 12%);
-//   --shadow-left-2: 0 2px 8px hsl(250deg 40% 40% / 8%);
-//   --shadow-left-3: 0 4px 16px hsl(250deg 40% 40% / 6%);
-//   --shadow-left-4: 0 6px 24px hsl(250deg 40% 40% / 4%);
-//   --shadow-right-1: 1px 1px 4px hsl(250deg 40% 40% / 12%);
-//   --shadow-right-2: 2px 2px 8px hsl(250deg 40% 40% / 8%);
-//   --shadow-right-3: 4px 4px 16px hsl(250deg 40% 40% / 6%);
-//   --shadow-right-4: 6px 6px 24px hsl(250deg 40% 40% / 4%);
-
-//   // @media (min-width: $breakpoint) {
-//     box-shadow: var(--shadow-right-1), var(--shadow-right-3);
-
-//     &:hover {
-//       box-shadow: var(--shadow-right-2), var(--shadow-right-4);
-//     }
-
-//     &:nth-child(2n) {
-//       box-shadow: var(--shadow-left-1), var(--shadow-left-3);
-
-//       &:hover {
-//         box-shadow: var(--shadow-left-2), var(--shadow-left-4);
-//       }
-//     }
-//   // }
-
-//   &.search-box {
-//     box-shadow: var(--shadow-right-1), var(--shadow-right-3);
-
-//     &:hover {
-//       box-shadow: var(--shadow-right-2), var(--shadow-right-4);
-//     }
-//   }
-// }
 
 </style>
