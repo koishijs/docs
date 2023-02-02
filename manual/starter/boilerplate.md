@@ -76,7 +76,7 @@ yarn create koishi
 跟随提示即可完成全套初始化流程。
 
 :::: tip
-由于国内可能无法访问 GitHub，你可能需要科学上网或使用镜像。例如你可以使用 [FastGit](http://fastgit.org/) 或者 [GhProxy](http://ghproxy.com) 作为镜像源，只需在上面的脚本后添加 `-m https://hub.fastgit.xyz` 或者 `-m https://ghproxy.com/github.com` 即可。
+由于国内可能无法访问 GitHub，你可能需要科学上网或使用镜像。例如你可以使用 [FastGit](http://fastgit.org/) 或者 [Github Proxy](http://ghproxy.com) 作为镜像源，只需在上面的脚本后添加 `-m https://hub.fastgit.xyz` 或者 `-m https://ghproxy.com/github.com` 即可。
 ::::
 
 ### 从模板仓库创建
