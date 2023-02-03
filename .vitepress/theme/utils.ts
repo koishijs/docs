@@ -20,6 +20,6 @@ market.refresh = async () => {
   market.value = await response.json()
 }
 
-const { words, packages, all } = useMarket(() => market.value.objects)
+const { words, packages, all } = useMarket(() => market.value?.objects)
 
 export { words, packages, all }
