@@ -2,6 +2,16 @@ import { defineConfig } from '@koishijs/vitepress'
 
 const makeLink = (text: string, link: string) => ({ text, link })
 
+const ecosystem = {
+  text: '插件',
+  items: [
+    makeLink('插件市场', '/market/'),
+    makeLink('分类与评分细则', '/market/guidelines.md'),
+    makeLink('服务类插件导航', '/market/service.md'),
+    makeLink('官方插件一览', '/plugins/'),
+  ],
+}
+
 export default async () => defineConfig({
   title: 'Koishi',
 
@@ -28,13 +38,8 @@ export default async () => defineConfig({
       link: '/api/',
       activeMatch: '^/api/',
     }, {
-      text: '插件',
-      activeMatch: '^/(plugins/|market|ecosystem)',
-      items: [
-        makeLink('插件市场', '/market.md'),
-        makeLink('官方插件索引', '/plugins/'),
-        makeLink('社区插件导航', '/ecosystem.md'),
-      ],
+      ...ecosystem,
+      activeMatch: '^/(plugins|market)/',
     }, {
       text: '更多',
       link: '/about/contact.md',
@@ -214,14 +219,7 @@ export default async () => defineConfig({
         ],
       }],
 
-      '/plugins/': [{
-        text: '插件',
-        items: [
-          makeLink('插件市场', '/market.md'),
-          makeLink('官方插件索引', '/plugins/'),
-          makeLink('社区插件导航', '/ecosystem.md'),
-        ],
-      }, {
+      '/plugins/': [ecosystem, {
         text: '适配器支持',
         items: [
           makeLink('适配器：Discord', '/plugins/adapter/discord.md'),
@@ -276,23 +274,7 @@ export default async () => defineConfig({
         ],
       }],
 
-      '/market.md': [{
-        text: '插件',
-        items: [
-          makeLink('插件市场', '/market.md'),
-          makeLink('官方插件索引', '/plugins/'),
-          makeLink('社区插件导航', '/ecosystem.md'),
-        ],
-      }],
-
-      '/ecosystem.md': [{
-        text: '插件',
-        items: [
-          makeLink('插件市场', '/market.md'),
-          makeLink('官方插件索引', '/plugins/'),
-          makeLink('社区插件导航', '/ecosystem.md'),
-        ],
-      }],
+      '/market/': [ecosystem],
 
       '/about/': [{
         text: '关于我们',

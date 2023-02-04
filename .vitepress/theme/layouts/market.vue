@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 
 import { computed, onMounted, ref } from 'vue'
-import { market, words, all, packages } from '../../utils'
+import { market, words, all, packages } from '../utils'
 import { MarketSearch, MarketPackage } from '@koishijs/client-market'
 
 function onQuery(word: string) {
