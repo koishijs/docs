@@ -2,7 +2,7 @@
   <div class="market-container" v-if="market">
     <h1>插件市场</h1>
     <div class="info">
-      当前共有 {{ hasWords ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
+      当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
       <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
     </div>
     <market-search class="card" v-model="words"></market-search>
@@ -25,8 +25,8 @@
 
 <script lang="ts" setup>
 
-import { computed, onMounted, ref } from 'vue'
-import { market, words, all, packages } from '../utils'
+import { onMounted, ref } from 'vue'
+import { market, words, all, packages, hasFilter } from '../utils'
 import { MarketSearch, MarketPackage } from '@koishijs/client-market'
 
 function onQuery(word: string) {
@@ -34,8 +34,6 @@ function onQuery(word: string) {
   if (!words.value.includes(word)) words.value.push(word)
   words.value.push('')
 }
-
-const hasWords = computed(() => words.value.filter(w => w && !w.startsWith('show:') && !w.startsWith('sort:')).length > 0)
 
 const error = ref()
 
