@@ -54,6 +54,9 @@ yarn add typescript @types/node esbuild esbuild-register -D
 
 ```ts title=index.ts no-extra-header
 import { Context } from 'koishi'
+import console from '@koishijs/plugin-console'
+import * as sandbox from '@koishijs/plugin-sandbox'
+import * as echo from '@koishijs/plugin-echo'
 
 // 创建一个 Koishi 应用
 const ctx = new Context({
@@ -61,9 +64,9 @@ const ctx = new Context({
 })
 
 // 启用上述插件
-ctx.plugin('console')
-ctx.plugin('sandbox')
-ctx.plugin('echo')
+ctx.plugin(console)     // 提供控制台
+ctx.plugin(sandbox)     // 提供调试沙盒
+ctx.plugin(echo)        // 提供回声指令
 
 // 启动应用
 ctx.start()
@@ -100,15 +103,18 @@ yarn add @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
 接着修改你刚刚创建的 `index.ts`。每个机器人相当于启用一个插件：
 
 ```ts title=index.ts
+import onebot from '@koishijs/plugin-adapter-onebot'
+import discord from '@koishijs/plugin-adapter-discord'
+
 // 使用 OneBot 适配器的机器人
-ctx.plugin('adapter-onebot', {
+ctx.plugin(onebot, {
   protocol: 'ws',
   selfId: '123456789',
   endpoint: 'ws://127.0.0.1:6700',
 })
 
 // 使用 OneBot 适配器的另一个机器人，可以有不同的通信方式
-ctx.plugin('adapter-onebot', {
+ctx.plugin(onebot, {
   protocol: 'http',
   selfId: '987654321',
   endpoint: 'http://127.0.0.1:5700',
@@ -116,55 +122,53 @@ ctx.plugin('adapter-onebot', {
 
 // 使用 Discord 适配器的机器人
 // 别忘了在使用之前，先安装相应的插件和完成准备工作
-ctx.plugin('adapter-discord', {
+ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
 ```
 
 ## 添加更多插件
 
-Koishi 插件可以在 [npm](https://www.npmjs.com/) 上获取。要下载的包名与实际书写的插件短名并不完全一样，遵循以下的规则：
+Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
 
-| npm 包名 | 插件名 |
-|:-----:|:-----:|
-| koishi-plugin-**foo** | foo |
-| @koishijs/plugin-**foo** | foo |
-| **@bar**/koishi-plugin-**foo** | @bar/foo |
+- koishi-plugin-foo
+- @koishijs/plugin-foo
+- @bar/koishi-plugin-foo
 
-简单来说就是，从 npm 包名中删去 `koishi-plugin-` 和 `@koishijs/plugin-` 两种前缀，剩下的部分就是你要书写的插件名。这样既保证了用户书写简便，又防止了发布的插件污染命名空间。
+对于社区插件，使用类似的方式安装和加载：
 
-`ctx.plugin()` 也支持传入完整的插件对象，这种写法尽管长了一些，但是对于 TypeScript 用户会有更好的类型支持：
+::: tabs code
+```npm
+# 以 puppeteer 和 forward 插件为例
+npm i koishi-plugin-puppeteer koishi-plugin-forward
+```
+```yarn
+# 以 puppeteer 和 forward 插件为例
+yarn add koishi-plugin-puppeteer koishi-plugin-forward
+```
+:::
 
 ```ts title=index.ts
-import onebot from '@koishijs/plugin-adapter-onebot'
-import * as echo from '@koishijs/plugin-echo'
+import puppeteer from 'koishi-plugin-puppeteer'
+import * as forward from 'koishi-plugin-forward'
 
-ctx.plugin(onebot, {
-  protocol: 'ws',
-  selfId: '123456789',
-  endpoint: 'ws://127.0.0.1:6700',
-})
-
-ctx.plugin(echo)
+ctx.plugin(puppeteer)   // 浏览器服务
+ctx.plugin(forward)     // 消息转发
 ```
 
-请注意到上面的两个插件的导入方式的微妙差异。onebot 插件使用了默认导出，而 echo 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用。虽然这可能产生一些困扰，但对 TypeScript 用户来说，只需注意到写代码时的类型提示就足以确定自己应该采用的写法。
+请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
 
 同理，对于 commonjs 的使用者，如果要使用 `require` 来获取插件对象，也应注意到这种区别：
 
 ```ts title=index.ts
 // 这里的 .default 是不可省略的
-ctx.plugin(require('@koishijs/plugin-adapter-onebot').default, {
-  protocol: 'ws',
-  selfId: '123456789',
-  endpoint: 'ws://127.0.0.1:6700',
-})
+ctx.plugin(require('koishi-plugin-puppeteer').default)
 
 // 这里则不能写上 .default
-ctx.plugin(require('@koishijs/plugin-echo'))
+ctx.plugin(require('koishi-plugin-forward'))
 ```
 
-为了避免混淆，我们建议 commonjs 的使用者直接使用插件的短名安装插件。
+使用其他安装方式的用户不需要关心这些细节，因为模板项目已经帮你处理好了。
 
 ## 添加交互逻辑
 
@@ -210,33 +214,6 @@ import * as ping from './ping'
 ctx.plugin(ping)
 ```
 
-<!-- ## 配置数据库
-
-数据库是机器人开发的常见需求，许多插件本身也要求你安装数据库。在 Koishi 这里，数据库支持也可以通过插件来安装。这里以 MySQL 为例。首先安装所需的依赖：
-
-::: tabs code
-```npm
-npm i @koishijs/plugin-database-mysql
-```
-```yarn
-yarn add @koishijs/plugin-database-mysql
-```
-:::
-
-然后继续修改你的代码，在应用中配置 MySQL 数据库插件：
-
-```ts title=index.ts
-ctx.plugin('database-mysql', {
-  host: '[your-host]',
-  port: 3306,
-  user: 'root',
-  password: '[your-password]',
-  database: '[your-database]',
-})
-```
-
-这样就大功告成了。得益于 Koishi 的内置 ORM，如果一个插件需要数据库支持，那么它只需要编写通用代码。无论你使用的是 MySQL 还是 MongoDB，Koishi 都能使其正常运行。 -->
-
 ## 接下来……
 
-恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [指南](../../guide/)，学习更多的 Koishi 知识。
+恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发教程](../../guide/)，学习更多的 Koishi 知识。
