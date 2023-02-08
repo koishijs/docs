@@ -10,7 +10,7 @@ next:
 # 在容器中使用
 
 ::: tip
-这篇指南假设你已掌握了运维一台服务器所必须的知识，同时了解关于容器化的概念和 [Docker]([https://developer.mozilla.org/zh-CN/docs/Web/JavaScript](https://docs.docker.com/get-started/)) 的基础操作。如果你不具备相关知识，或**不需要**运行在路由器或 NAS 等特殊环境需求，请 [选择其他安装方式](./index.md)。
+Docker 是一个以服务生产环境而开发的应用平台，在使用 Docker 部署之时，我们相信你已经掌握了运维一台服务器所必须的知识，同时也理解了容器化的概念与 Docker 的基础操作。如若不然，在除路由器或 NAS 等特殊环境外，请 [选择其他安装方式](./index.md)。
 :::
 
 Koishi 提供了 [Docker](https://hub.docker.com/r/koishijs/koishi) 镜像，方便你在容器中运行 Koishi。你需要首先安装 [Podman](https://podman.io) 或 [Docker](https://www.docker.com) 来运行容器。
