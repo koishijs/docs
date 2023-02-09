@@ -17,7 +17,7 @@ Koishi 提供了 [Docker](https://hub.docker.com/r/koishijs/koishi) 镜像，方
 
 ## 启动容器
 
-使用以下命令启动容器:
+使用以下命令启动容器：
 
 ::: tabs code
 ```podman
@@ -28,7 +28,7 @@ docker run -p 5140:5140 koishijs/koishi
 ```
 :::
 
-部分插件依赖 [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) 来进行图片渲染，故默认镜像中包含 chromium。如果你认为镜像过大，不需要预装 chromium，可以使用 lite 版本的镜像。
+许多插件依赖 [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) 来进行图片渲染，故默认镜像中包含 Chromium。如果你认为镜像过大，不需要预装 Chromium，我们也提供了轻量版本：
 
 ::: tabs code
 ```podman
@@ -39,12 +39,12 @@ docker run -p 5140:5140 koishijs/koishi:latest-lite
 ```
 :::
 
-启动后将会绑定 koishi 控制台到 5140 端口。
+启动后将会绑定 Koishi 控制台到 5140 端口。
 
-如果你需要持久化，请使用 `-v /some/place:/koishi` 来映射 koishi 的文件。
+如果你需要持久化，请使用 `-v /some/place:/koishi` 来映射 Koishi 的文件。
 
 ::: tips
-由于 node 应用的机制，在持久化文件过后更新容器并不会更新 koishi。如果需要更新 koishi 本体及插件，请前往控制台更新。
+Koishi 本体及其插件都可以控制台完成更新。在持久化文件过后更新容器仅会更新 Chromium 和 Node.js 等的版本。
 :::
 
 ## 安装插件
