@@ -21,11 +21,11 @@ next:
 
 ## 安装 Node.js
 
-<!--@include: ../../snippets/install-node.md-->
+<!--@include: ../../.snippets/install-node.md-->
 
 ## 创建项目
 
-<!--@include: ../../snippets/scaffold.md-->
+<!--@include: ../../.snippets/scaffold.md-->
 
 ## 启动应用
 

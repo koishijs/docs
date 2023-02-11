@@ -4,7 +4,7 @@
 
 ## 安装 Node.js
 
-<!--@include: ../../snippets/install-node.md-->
+<!--@include: ../../.snippets/install-node.md-->
 
 ## 版本控制
 
@@ -32,7 +32,7 @@ git --version           # git version 2.39.1
 
 ## 安装 Koishi
 
-<!--@include: ../../snippets/scaffold.md-->
+<!--@include: ../../.snippets/scaffold.md-->
 
 如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。在后续的几节中我们将学习更多的命令行用法，所以我们可以先关闭 Koishi。只需在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
 
