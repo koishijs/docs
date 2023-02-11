@@ -89,5 +89,5 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 
 ## 了解更多
 
-- 想要了解插件市场的更多细节，请参考 [这篇文档](../../market/guidelines.md)
+- 想要了解插件市场的更多细节，请参考 [分类与评分细则](../../market/guidelines.md)
 - 想要了解更多关于发布 npm 包的知识，请参考 [这篇文档](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)

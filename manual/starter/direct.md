@@ -14,7 +14,7 @@ next:
 :::
 
 ::: tip
-Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
+我们强烈建议使用 [模板项目](./boilerplate.md) 进行 Koishi 开发。如果你不确定自己在做什么，建议先阅读模板项目与其他方案的优势对比。
 :::
 
 虽然现在我们推荐绝大部分用户使用模板项目，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
@@ -23,6 +23,10 @@ Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript �
 
 ::: tip
 Koishi 需要 Node.js (最低 v14，推荐使用 LTS) 运行环境，你需要自己安装它。
+:::
+
+::: tip
+Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
 :::
 
 首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 console, sandbox 和 echo 为例)：

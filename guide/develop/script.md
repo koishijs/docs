@@ -34,7 +34,7 @@ yarn start
 
 ### 启动参数
 
-启动脚本支持 Node.js 的 [命令行参数](https://nodejs.org/api/cli.html)。例如，上面的 `-r` 对应于 `--require`，它将允许你加载 `.yaml` 和 `.yml` 后缀的文件。
+启动脚本支持 Node.js 的 [命令行参数](https://nodejs.org/api/cli.html)。例如，上面的 `-r` 对应于 `--require`，它将允许你加载 `.ts` 和 `.yml` 后缀的文件。
 
 除了 Node.js 的命令行参数，Koishi 还提供了一些额外的参数。我们将在下面逐一介绍。
 
@@ -55,7 +55,7 @@ yarn dev
 ```
 :::
 
-如你所见，`dev` 相当于在 `start` 指令的基础上添加了 `-r esbuild-register` 和 `--watch` 参数。这些参数为我们提供了额外的特性。
+如你所见，`dev` 相当于在 `start` 指令的基础上添加了 `--watch` 等额外的参数。这些参数为我们提供了额外的特性。
 
 ### TypeScript 支持
 
@@ -66,7 +66,7 @@ Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register`
 ```json title=package.json
 {
   "scripts": {
-    "start": "koishi start -r yml-register -r coffeescript/register"
+    "start": "koishi start -r coffeescript/register"
   },
   "devDependencies": {
     "coffeescript": "^2.7.0"
@@ -92,3 +92,19 @@ watch:
   ignore:
     - some-file
 ```
+
+::: tip
+由于部分 Linux 系统有着 8192 个文件的监听数量限制，你可能会发现运行 `yarn dev` 后出现了如下的报错：
+
+```text
+NOSPC: System limit for number of file watchers reached
+```
+
+此时你可以使用下面的命令来增加监听数量限制：
+
+```sh
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
+另一种方案是使用 `yarn dev external/foo` (其中 foo 是你正在开发的插件)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。
+:::
