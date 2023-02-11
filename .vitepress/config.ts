@@ -84,6 +84,7 @@ export default async () => defineConfig({
       }, {
         text: '开发上手',
         items: [
+          makeLink('环境搭建', '/guide/develop/setup.md'),
           makeLink('配置文件', '/guide/develop/config.md'),
           makeLink('启动脚本', '/guide/develop/script.md'),
           makeLink('工作区开发', '/guide/develop/workspace.md'),

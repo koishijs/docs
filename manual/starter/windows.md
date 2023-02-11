@@ -28,6 +28,10 @@ next:
 
 双击 msi 安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
+::: tip
+安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
+:::
+
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
