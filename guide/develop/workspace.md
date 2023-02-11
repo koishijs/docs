@@ -26,7 +26,7 @@ yarn setup [name] [-c]
 
 ```diff{3-6}
 root
-├── plugins
+├── external
 │   └── example
 │       ├── src
 │       │   └── index.ts
@@ -76,8 +76,8 @@ yarn build [...name]
 
 还是以上面的插件 `example` 为例：
 
-- 后端代码将输出到 `plugins/example/lib` 目录
-- 前端代码将输出到 `plugins/example/dist` 目录 (如果存在)
+- 后端代码将输出到 `external/example/lib` 目录
+- 前端代码将输出到 `external/example/dist` 目录 (如果存在)
 
 ## 更新依赖版本
 
@@ -93,3 +93,41 @@ yarn dep
 :::
 
 这将按照每个 `package.json` 中声明的依赖版本进行更新。举个例子，如果某个依赖的版本是 `^1.1.4`，而这个依赖之后发布了新版本 `1.2.3` 和 `2.3.3`，那么运行该指令后，依赖的版本将会被更新为 `^1.2.3`。
+
+## 二次开发
+
+二次开发是指调试或修改其他仓库中的插件。这种情况下，你需要先将对应的仓库克隆到本地，然后在本地进行调试和修改。
+
+### 开发插件
+
+其他人创建的工作区插件可以直接克隆到你的 `external` 目录下。例如，你可以使用下面的命令将 `koishi-plugin-forward` 插件克隆到本地：
+
+::: tabs code
+```npm
+git clone https://github.com/koishijs/koishi-plugin-forward.git external/forward
+npm install
+```
+```yarn
+git clone https://github.com/koishijs/koishi-plugin-forward.git external/forward
+yarn
+```
+:::
+
+### 开发 Koishi
+
+工作区不仅可以用于插件的二次开发，还可以用于开发 Koishi 本身。只需使用下面的命令将 Koishi 仓库克隆到本地：
+
+::: tabs code
+```npm
+git clone https://github.com/koishijs/koishi.git external/koishi
+npm install
+```
+```yarn
+git clone https://github.com/koishijs/koishi.git external/koishi
+yarn
+```
+:::
+
+通常来说，非插件仓库在克隆下来之后还需经过路径配置才可以正常使用。不过不同担心，模板项目支持已经内置了 Koishi 生态中的几个核心仓库 ([koishi](https://github.com/koishijs/koishi), [satori](https://github.com/satorijs/satori), [minato](https://github.com/shigma/minato)) 的路径配置。
+
+完成上述操作后，现在你的 `yarn dev` 已经能直接使用 Koishi 的 TypeScript 源码了！
