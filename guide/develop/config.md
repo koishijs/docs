@@ -12,7 +12,7 @@ YAML 语法中的缩进具有非常重要的意义。如果你不了解 YAML 的
 
 配置文件所在的目录叫**应用目录**。根据你的安装方式，应用目录的位置可能不同：
 
-- 模板项目：你创建的项目目录
+- 模板项目：你创建的项目目录，例如 `D:/dev/koishi-app`
 - 启动器 (zip)：解压目录下 `data/instances/default`
 - 启动器 (msi)：`C:/Users/你的用户名/AppData/Roaming/Koishi/Desktop/data/instances/default`
 - 启动器 (pkg)：`~/Library/Application Support/Koishi/Desktop/data/instances/default`

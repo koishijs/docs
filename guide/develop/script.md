@@ -14,7 +14,7 @@ Koishi 提供了一套命令行工具，用于读取配置文件快速启动应�
 {
   "scripts": {
     "dev": "cross-env NODE_ENV=development koishi start -r esbuild-register -r yml-register --watch",
-    "start": "koishi start -r yml-register"
+    "start": "koishi start"
   }
 }
 ```

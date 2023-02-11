@@ -24,7 +24,13 @@ Git 是一个版本控制工具。我们强烈推荐使用 Git 来管理你的�
 git --version           # git version 2.39.1
 ```
 
-## 安装 VSCode
+## 安装 Koishi
+
+<!--@include: ../../snippets/scaffold.md-->
+
+如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。在后续的几节中我们将学习更多的命令行用法，所以我们可以先关闭 Koishi。只需在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
+
+<!-- ## 安装 VSCode (可选)
 
 所谓工欲善其事，必先利其器，一个好的编辑器可以极大地提高开发效率。我们推荐安装 VSCode 作为编辑器。
 
@@ -32,4 +38,14 @@ git --version           # git version 2.39.1
 
 ![home](/manual/vscode/home.webp)
 
-## 下载 Koishi
+下载完毕后，双击运行。安装过程无需手动配置，一直点击下一步即可完成安装。
+
+安装完成后，VSCode 会自动打开。你将看到一个英文的界面，不过不用担心，我们现在就来安装中文语言包。
+
+在活动栏中点击「Extensions」，并在搜索框中输入「chinese」，你将看到一个写着「中文 (简体)」的插件。点击「Install」按钮进行安装，并根据提示重启 VSCode。现在你的 VSCode 就已经是中文的了。
+
+![home](/manual/vscode/chinese.webp)
+
+要打开刚刚创建的项目，可以在活动栏中点击「资源管理器」→「打开文件夹」，然后选择你刚刚创建的项目文件夹即可。
+
+![home](/manual/vscode/open.webp) -->
