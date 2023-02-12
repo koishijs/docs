@@ -241,21 +241,14 @@ export default async () => defineConfig({
       }, {
         text: '常用功能',
         items: [
+          makeLink('数据管理 (Admin)', '/plugins/common/admin.md'),
+          makeLink('账号绑定 (Bind)', '/plugins/common/bind.md'),
           makeLink('发送广播 (Broadcast)', '/plugins/common/broadcast.md'),
+          makeLink('设置昵称 (Callme)', '/plugins/common/callme.md'),
           makeLink('发送消息 (Echo)', '/plugins/common/echo.md'),
           makeLink('发送反馈 (Feedback)', '/plugins/common/feedback.md'),
+          makeLink('速率限制 (Rate Limit)', '/plugins/common/rate-limit.md'),
           makeLink('撤回消息 (Recall)', '/plugins/common/recall.md'),
-        ],
-      }, {
-        text: '辅助功能',
-        items: [
-          makeLink('数据管理 (Admin)', '/plugins/accessibility/admin.md'),
-          makeLink('账号绑定 (Bind)', '/plugins/accessibility/bind.md'),
-          makeLink('设置昵称 (Callme)', '/plugins/accessibility/callme.md'),
-          makeLink('速率限制 (Rate Limit)', '/plugins/accessibility/rate-limit.md'),
-          makeLink('计划任务 (Schedule)', '/plugins/accessibility/schedule.md'),
-          makeLink('模拟调用 (Sudo)', '/plugins/accessibility/sudo.md'),
-          makeLink('处理申请 (Verifier)', '/plugins/accessibility/verifier.md'),
         ],
       }, {
         text: '控制台功能',

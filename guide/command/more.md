@@ -26,7 +26,7 @@ ctx.command('echo <message:text> 输出收到的信息', { authority: 2 })
 ## 速率限制
 
 ::: tip
-要启用速率限制，你需要安装数据库支持和官方插件 [@koishijs/plugin-rate-limit](../../plugins/accessibility/rate-limit.md)。
+要启用速率限制，你需要安装数据库支持和官方插件 [@koishijs/plugin-rate-limit](../../plugins/common/rate-limit.md)。
 :::
 
 ### maxUsage

@@ -20,20 +20,14 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 
 ## 常用功能
 
+- [@koishijs/plugin-admin](./common/admin.md)：数据管理
+- [@koishijs/plugin-bind](./common/bind.md)：账号绑定
 - [@koishijs/plugin-broadcast](./common/broadcast.md)：发送广播
+- [@koishijs/plugin-callme](./common/callme.md)：设置昵称
 - [@koishijs/plugin-echo](./common/echo.md)：发送消息
 - [@koishijs/plugin-feedback](./common/feedback.md)：发送反馈
+- [@koishijs/plugin-rate-limit](./common/rate-limit.md)：速率控制
 - [@koishijs/plugin-recall](./common/recall.md)：撤回消息
-
-## 辅助功能
-
-- [@koishijs/plugin-admin](./accessibility/admin.md)：数据管理
-- [@koishijs/plugin-bind](./accessibility/bind.md)：账号绑定
-- [@koishijs/plugin-callme](./accessibility/callme.md)：设置昵称
-- [@koishijs/plugin-rate-limit](./accessibility/rate-limit.md)：速率控制
-- [@koishijs/plugin-schedule](./accessibility/schedule.md)：计划任务
-- [@koishijs/plugin-sudo](./accessibility/sudo.md)：模拟调用
-- [@koishijs/plugin-verifier](./accessibility/verifier.md)：处理申请
 
 ## 控制台功能
 

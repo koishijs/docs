@@ -26,18 +26,18 @@
   - [koishi-plugin-assets-smms](https://assets.koishi.chat/plugins/smms.html)
   - 由于这些插件实现了同一个服务，你只需安装其中的一个即可
 - koishi-plugin-common 被拆分为多个插件：
-  - [@koishijs/plugin-admin](../plugins/accessibility/admin.md)
-  - [@koishijs/plugin-bind](../plugins/accessibility/bind.md)
+  - [@koishijs/plugin-admin](../plugins/common/admin.md)
+  - [@koishijs/plugin-bind](../plugins/common/bind.md)
   - [@koishijs/plugin-broadcast](../plugins/common/broadcast.md)
-  - [@koishijs/plugin-callme](../plugins/accessibility/callme.md)
+  - [@koishijs/plugin-callme](../plugins/common/callme.md)
   - [@koishijs/plugin-echo](../plugins/common/echo.md)
   - [@koishijs/plugin-feedback](../plugins/common/feedback.md)
   - [@koishijs/plugin-recall](../plugins/common/recall.md)
-  - [@koishijs/plugin-sudo](../plugins/accessibility/sudo.md)
-  - [@koishijs/plugin-verifier](../plugins/accessibility/verifier.md)
   - [koishi-plugin-forward](https://forward.koishi.chat)
   - [koishi-plugin-repeater](https://repeater.koishi.chat)
   - [koishi-plugin-respondent](https://respondent.koishi.chat)
+  - [koishi-plugin-sudo](https://sudo.koishi.chat)
+  - [koishi-plugin-verifier](https://verifier.koishi.chat)
 - koishi-plugin-webui 被拆分为多个插件：
   - @koishijs/client (构建工具)
   - [@koishijs/plugin-console](../plugins/console/index.md)
