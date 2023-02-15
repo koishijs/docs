@@ -103,8 +103,10 @@ NOSPC: System limit for number of file watchers reached
 此时你可以使用下面的命令来增加监听数量限制：
 
 ```sh
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+echo fs.inotify.max_user_watches=524288 |
+sudo tee -a /etc/sysctl.conf &&
+sudo sysctl -p
 ```
 
-另一种方案是使用 `yarn dev external/foo` (其中 foo 是你正在开发的插件)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。
+另一种方案是使用 `yarn dev external/foo` (其中 foo 是你正在开发的插件目录，参见下一节的工作区指南)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。
 :::

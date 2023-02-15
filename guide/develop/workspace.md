@@ -96,6 +96,14 @@ yarn dep
 
 ## 二次开发
 
+::: tip
+阅读本节前请确保你已经完成 [版本控制](./setup.md#版本控制) 中的全部准备工作。
+:::
+
+::: tip
+如果你想要贡献原始仓库，在开始执行下面的操作之前，请确保你对要开发的仓库有写入权限。如果没有，你应当先创建属于自己的 fork，然后将下面的仓库名称替换为你的 fork 仓库名称。举个例子，假如你的 GitHub 用户名是 `alice`，那么下面你使用的仓库名称应当是 `alice/koishi-plugin-forward` 而不是 `koishijs/koishi-plugin-forward`。
+:::
+
 二次开发是指调试或修改其他仓库中的插件。这种情况下，你需要先将对应的仓库克隆到本地，然后在本地进行调试和修改。
 
 ### 开发插件
@@ -104,12 +112,10 @@ yarn dep
 
 ::: tabs code
 ```npm
-git clone https://github.com/koishijs/koishi-plugin-forward.git external/forward
-npm install
+npm run clone koishijs/koishi-plugin-forward
 ```
 ```yarn
-git clone https://github.com/koishijs/koishi-plugin-forward.git external/forward
-yarn
+yarn clone koishijs/koishi-plugin-forward
 ```
 :::
 
@@ -119,12 +125,10 @@ yarn
 
 ::: tabs code
 ```npm
-git clone https://github.com/koishijs/koishi.git external/koishi
-npm install
+npm run clone koishijs/koishi
 ```
 ```yarn
-git clone https://github.com/koishijs/koishi.git external/koishi
-yarn
+yarn clone koishijs/koishi
 ```
 :::
 
