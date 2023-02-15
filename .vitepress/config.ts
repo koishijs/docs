@@ -74,6 +74,7 @@ export default async () => defineConfig({
       }, {
         text: '配方',
         items: [
+          makeLink('过滤器', '/manual/recipe/filter.md'),
           makeLink('服务器部署', '/manual/recipe/server.md'),
         ],
       }],
