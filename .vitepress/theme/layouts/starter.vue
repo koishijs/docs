@@ -114,11 +114,11 @@ const choices = {
 
   &-select {
     display: grid;
+    background-color: var(--vp-c-bg-alt);
 
     &-item {
       flex: 1;
       cursor: pointer;
-      background-color: var(--vp-c-bg-alt);
       transition: background-color 0.3s ease;
 
       &:hover, &.selected {
@@ -169,10 +169,11 @@ const choices = {
 
     &-development {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
 
       @media (max-width: 719px) {
         grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
       }
     }
 
