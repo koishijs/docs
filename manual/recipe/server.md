@@ -19,7 +19,7 @@ Koishi 应用默认情况下只能在本机访问。如果你希望在本机以�
 ### 使用 Caddy
 
 ```text
-# 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名。（如 koishi.chat）
+# 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名
 # https://caddyserver.com/docs/caddyfile
 :80 {
   reverse_proxy http://127.0.0.1:5140

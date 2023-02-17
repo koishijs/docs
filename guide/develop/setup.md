@@ -89,6 +89,7 @@ git config –-global user.email "you@example.com"
 
 ::: tabs code
 ```npm
+npm i -g create-koishi@latest
 npm init koishi
 ```
 ```yarn
