@@ -43,7 +43,7 @@ docker run -p 5140:5140 koishijs/koishi:latest-lite
 
 如果你需要持久化，请使用 `-v /some/place:/koishi` 来映射 Koishi 的文件。
 
-::: tips
+::: tip
 Koishi 本体及其插件都可以控制台完成更新。在持久化文件过后更新容器仅会更新 Chromium 和 Node.js 等的版本。
 :::
 

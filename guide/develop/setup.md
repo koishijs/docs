@@ -63,6 +63,13 @@ Git 是最普遍使用的版本控制工具。前往 [官网](https://git-scm.co
 git --version           # git version 2.39.1
 ```
 
+最后你还需要设置你的姓名和邮箱。它们将会默认作为你创建的插件的作者，也会出现在你的提交记录中：
+
+```sh
+git config --global user.name "Your Name"
+git config –-global user.email "you@example.com"
+```
+
 ### 注册 GitHub
 
 通常来说我还会建议你注册一个 GitHub 账号。[GitHub](https://github.com) 是一个代码托管平台，我们可以在上面创建仓库来存放我们的代码。由于篇幅有限，请在互联网搜索相关的教程，自行完成注册。如果发现无法注册，也不用担心，你仍然可以在本地进行开发。
