@@ -70,11 +70,19 @@ export default async () => defineConfig({
           makeLink('接入聊天平台', '/manual/console/adapter.md'),
           makeLink('使用数据库', '/manual/console/dataview.md'),
         ],
+      // }, {
+      //   text: '深入',
+      //   items: [
+      //     makeLink('指令系统', '/manual/usage/command.md'),
+      //     makeLink('权限管理', '/manual/usage/authority.md'),
+      //     makeLink('国际化', '/manual/usage/i18n.md'),
+      //     makeLink('过滤器', '/manual/usage/filter.md'),
+      //     makeLink('服务与依赖', '/manual/usage/service.md'),
+      //   ],
       }, {
         text: '配方',
         items: [
-          makeLink('搜索插件市场', '/manual/recipe/market.md'),
-          makeLink('配置过滤器', '/manual/recipe/filter.md'),
+          makeLink('搜索插件市场', '/manual/recipe/search.md'),
           makeLink('服务器部署', '/manual/recipe/server.md'),
         ],
       }],
