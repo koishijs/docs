@@ -6,7 +6,6 @@ const ecosystem = {
   text: '插件',
   items: [
     makeLink('插件市场', '/market/'),
-    makeLink('分类与评分细则', '/market/guidelines.md'),
     makeLink('服务类插件导航', '/market/service.md'),
     makeLink('官方插件一览', '/plugins/'),
   ],
@@ -74,7 +73,8 @@ export default async () => defineConfig({
       }, {
         text: '配方',
         items: [
-          makeLink('过滤器', '/manual/recipe/filter.md'),
+          makeLink('搜索插件市场', '/manual/recipe/market.md'),
+          makeLink('配置过滤器', '/manual/recipe/filter.md'),
           makeLink('服务器部署', '/manual/recipe/server.md'),
         ],
       }],
