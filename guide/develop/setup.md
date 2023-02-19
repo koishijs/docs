@@ -43,6 +43,16 @@ yarn config set registry https://registry.npmmirror.com
 ```
 :::
 
+### 注册 npm
+
+如果你打算发布插件，你还需要注册一个 npm 账号。这一步非常简单，只需前往这里的 [注册页面](https://www.npmjs.com/signup)。填写你的用户名、邮箱和密码，勾选同意协议，点击注册即可。
+
+注册完成后，你就可以在命令行中使用 `npm login` 来登录你的账号：
+
+```sh
+npm login --registry=https://registry.npmjs.org
+```
+
 ## 版本控制
 
 我们强烈推荐使用版本控制系统 (VCS) 来管理你的代码。这一方面允许你在任何时候回退到之前的版本，另一方面也能让你与其他开发者协作。

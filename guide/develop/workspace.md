@@ -59,6 +59,38 @@ export function apply(ctx: Context) {
 <chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
+### 创建私域插件
+
+如果你发现想要创建的插件名称已经被占用了，除了重新想名字或在后面加上数字之外，你还可以改为创建私域插件。私域插件使用你自己的 [npm 用户名](./setup.md#注册-npm) 作为包名前缀，因此不用担心与其他人的插件冲突。
+
+假设你的 npm 用户名是 `alice`，那么你可以使用下面的命令创建一个私域插件工作区：
+
+::: tabs code
+```npm
+npm run setup @alice/example
+```
+```yarn
+yarn setup @alice/example
+```
+:::
+
+此外，你还需要额外修改 `tsconfig.json` 文件。打开这个文件，你将看到下面的内容：
+
+```json {6}
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // "@scope/koishi-plugin-*": ["external/*/src"],
+      "@alice/koishi-plugin-*": ["external/*/src"],
+    },
+  },
+}
+```
+
+找到高亮的一行代码，将其复制一份，并将 `@scope` 替换为你的 npm 用户名，然后将复制的这一行代码前面的注释符号去掉。
+
 ## 构建源代码
 
 上面的插件暂时还只能在开发模式下运行。如果想要在生产模式下使用或发布到插件市场，你需要构建你的源代码。在应用目录运行下面的命令：
