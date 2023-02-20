@@ -12,8 +12,8 @@ Koishi 拥有着强大的指令系统，然而过于复杂的功能也会困扰�
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;echo  输出收到的信息</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
+<p class="indent-1">echo  输出收到的信息</p>
+<p class="indent-1">help  显示帮助信息</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 </chat-panel>
@@ -35,7 +35,7 @@ ctx.command('echo <message:text> 输出收到的信息')
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>可用的选项有：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
+<p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 </chat-message>
 </chat-panel>
 
@@ -59,9 +59,9 @@ ctx.command('echo <message:text>', '输出收到的信息')
 <p>输出收到的信息</p>
 <p>注意：参数请写在最前面，不然会被当成 message 的一部分！</p>
 <p>可用的选项有：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
+<p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 <p>使用示例：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;echo -t 300 Hello World  五分钟后发送 Hello World</p>
+<p class="indent-1">echo -t 300 Hello World  五分钟后发送 Hello World</p>
 </chat-message>
 </chat-panel>
 
@@ -84,7 +84,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
+<p class="indent-1">help  显示帮助信息</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 <chat-message nickname="Alice">bar --foo 123</chat-message>
@@ -97,8 +97,8 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-message nickname="Alice">help -H</chat-message>
 <chat-message nickname="Koishi">
 <p>当前可用的指令有：</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;help  显示帮助信息</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;bar  一条看不见的指令</p>
+<p class="indent-1">help  显示帮助信息</p>
+<p class="indent-1">bar  一条看不见的指令</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 </chat-panel>
