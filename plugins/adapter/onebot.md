@@ -48,10 +48,10 @@
 
 ### 快速启动
 
-默认情况下启用 go-cqhttp 将会有五秒钟的延时，可以使用命令行参数 `faststart` 进行跳过：
+默认情况下启用 go-cqhttp 将会有五秒钟的延时，可以使用命令行参数 `-faststart` 进行跳过：
 
 ```sh
-./go-cqhttp faststart
+./go-cqhttp -faststart
 ```
 
 ### 获取更新
