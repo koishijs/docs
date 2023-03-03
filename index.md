@@ -4,7 +4,7 @@ layout: home
 features:
   - title: 实时监控
     desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
-    image: /manual/console/status
+    image: /manual/console/home
   - title: 简单配置
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings

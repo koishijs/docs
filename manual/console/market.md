@@ -12,17 +12,19 @@
 Koishi 不对非官方插件的安全性做任何保证。请不要随意下载来源不明的插件，因为它们可能导致 Koishi 无法运行，甚至更严重的后果。如果你下载插件后遇到了问题，可以前往用户群或论坛进行反馈。此外，部分插件带有「不安全」标识，安装此类插件将不会受到官方群内的支持。
 :::
 
-前往「插件市场」页面，你将在这里看到所有可下载的插件。在搜索栏中输入 echo，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。等待片刻，插件就已经安装成功了。
+前往「插件市场」页面，你将在这里看到所有可下载的插件。在搜索框中输入 echo，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。等待片刻，插件就已经安装成功了。
 
-![market](/manual/console/market_light.webp) {.light-only}
+![select-version](/manual/console/select-version.light.webp) {.light-only}
 
-![market](/manual/console/market_dark.webp) {.dark-only}
+![select-version](/manual/console/select-version.dark.webp) {.dark-only}
 
 ## 启用和停用插件
 
 插件安装成功以后并不会立即处于运行状态，我们需要对其进行配置。前往「插件配置」页面，左侧栏中列出了已配置的各种插件。其中黑色字体显示的是正在运行的插件，而灰色字体则对应尚未运行的插件。我们可以看到此时 echo 插件确实并未运行。好消息是，echo 插件并没有什么需要配置的地方。我们可以直接点击右上角的「启用插件」，这样 echo 插件就已经处于运行状态了。
 
-<!-- echo -->
+![plugins](/manual/console/plugins.light.webp) {.light-only}
+
+![plugins](/manual/console/plugins.dark.webp) {.dark-only}
 
 要停用 echo 插件同样很简单。点击右上角的「停用插件」，插件变会停止运行。停用插件既不会删除插件的代码，也不会删除插件的配置，你可以随时重新启用它。
 
@@ -34,9 +36,9 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 
 虽然 echo 插件没有需要配置的地方，但更复杂的插件则通常会提供各种配置项，允许使用者控制插件的行为。下图展示了 novelai 插件的配置界面。
 
-![settings](/manual/console/settings_light.webp) {.light-only}
+![settings](/manual/console/settings.light.webp) {.light-only}
 
-![settings](/manual/console/settings_dark.webp) {.dark-only}
+![settings](/manual/console/settings.dark.webp) {.dark-only}
 
 在这个界面中，我们可以看到许多配置项。其中你需要注意：
 
@@ -52,6 +54,10 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 当一个插件被安装完成后，插件市场将自动为你跳转到对应的配置界面。但也有一些进阶操作，允许你手动添加或删除插件的配置。
 
 在「全局配置」或任意分组界面中，点击右上角的「添加插件」将会弹出对话框。在对话框中点击要添加的插件，即可创建一份未启用的插件配置 (请阅读 [维护多份配置](#维护多份配置))。
+
+![select-plugin](/manual/console/select-plugin.light.webp) {.light-only}
+
+![select-plugin](/manual/console/select-plugin.dark.webp) {.dark-only}
 
 在任何插件的配置界面点击右上角的「删除插件」可删除这份配置。此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。
 
@@ -83,6 +89,6 @@ Koishi 提供了插件分组的机制，允许你将插件放入不同的分组�
 
 前往「依赖管理」页面，你可以在这里看到依赖列表，你可以在这里更新你的依赖，当状态显示为「可更新」时，点击右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」即可完成更新。
 
-![dependencies](/manual/console/dependencies_light.webp) {.light-only}
+![dependencies](/manual/console/dependencies.light.webp) {.light-only}
 
-![dependencies](/manual/console/dependencies_dark.webp) {.dark-only}
+![dependencies](/manual/console/dependencies.dark.webp) {.dark-only}

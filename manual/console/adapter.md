@@ -11,8 +11,4 @@ Koishi 使用适配器插件来支持各种聊天平台，对于不同的平台�
 
 Koishi 中预装了一些常用的适配器插件，你可以在插件配置中的 adapter 分组中找到他们，如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。
 
-![adapter](/manual/console/adapter_dark.webp) {.dark-only}
-
-![adapter](/manual/console/adapter_light.webp) {.light-only}
-
 你需要阅读适配器的文档，按照文档中的流程获取 API 或注册账号，参考文档填写插件配置，最后点击屏幕上方的启用插件，这样你就完成了一个平台的接入。
