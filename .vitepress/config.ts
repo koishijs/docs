@@ -257,9 +257,8 @@ export default async () => defineConfig({
           makeLink('发送广播 (Broadcast)', '/plugins/common/broadcast.md'),
           makeLink('设置昵称 (Callme)', '/plugins/common/callme.md'),
           makeLink('发送消息 (Echo)', '/plugins/common/echo.md'),
-          makeLink('发送反馈 (Feedback)', '/plugins/common/feedback.md'),
+          makeLink('查看帮助 (Help)', '/plugins/common/help.md'),
           makeLink('速率限制 (Rate Limit)', '/plugins/common/rate-limit.md'),
-          makeLink('撤回消息 (Recall)', '/plugins/common/recall.md'),
         ],
       }, {
         text: '控制台功能',

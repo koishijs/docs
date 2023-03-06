@@ -20,6 +20,9 @@
 
 为了提供更细粒度的插件功能，我们将部分插件拆分为了多个包进行发布。
 
+- 从核心拆分出下列插件：
+  - [@koishijs/plugin-help](../plugins/common/help.md)
+  - [@koishijs/plugin-rate-limit](../plugins/common/rate-limit.md)
 - koishi-plugin-assets 被拆分为多个插件：
   - [koishi-plugin-assets-local](https://assets.koishi.chat/plugins/local.html)
   - [koishi-plugin-assets-remote](https://assets.koishi.chat/plugins/remote.html)
@@ -31,9 +34,9 @@
   - [@koishijs/plugin-broadcast](../plugins/common/broadcast.md)
   - [@koishijs/plugin-callme](../plugins/common/callme.md)
   - [@koishijs/plugin-echo](../plugins/common/echo.md)
-  - [@koishijs/plugin-feedback](../plugins/common/feedback.md)
-  - [@koishijs/plugin-recall](../plugins/common/recall.md)
+  - [koishi-plugin-feedback](https://feedback.koishi.chat)
   - [koishi-plugin-forward](https://forward.koishi.chat)
+  - [koishi-plugin-recall](https://recall.koishi.chat)
   - [koishi-plugin-repeater](https://repeater.koishi.chat)
   - [koishi-plugin-respondent](https://respondent.koishi.chat)
   - [koishi-plugin-sudo](https://sudo.koishi.chat)

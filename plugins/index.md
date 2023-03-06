@@ -25,9 +25,8 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-broadcast](./common/broadcast.md)：发送广播
 - [@koishijs/plugin-callme](./common/callme.md)：设置昵称
 - [@koishijs/plugin-echo](./common/echo.md)：发送消息
-- [@koishijs/plugin-feedback](./common/feedback.md)：发送反馈
+- [@koishijs/plugin-help](./common/help.md)：查看帮助
 - [@koishijs/plugin-rate-limit](./common/rate-limit.md)：速率控制
-- [@koishijs/plugin-recall](./common/recall.md)：撤回消息
 
 ## 控制台功能
 
