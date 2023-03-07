@@ -303,6 +303,7 @@ export default async () => defineConfig({
           makeLink('v4.8 版本介绍', '/about/releases/v4.8.md'),
           makeLink('v4.9 版本介绍', '/about/releases/v4.9.md'),
           makeLink('v4.10 版本介绍', '/about/releases/v4.10.md'),
+          makeLink('v4.11 版本介绍', '/about/releases/v4.11.md'),
           makeLink('工具链更新', '/about/tool-chain.md'),
         ],
       }, {
