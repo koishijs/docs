@@ -35,11 +35,11 @@ Koishi 的数据库 API 实际上分为两部分：
 ### database.getUser(platform, id, modifier?)
 
 - **platform:** `string` 平台名
-- **id:** `string | string[]` 用户标识符
+- **id:** `string` 用户标识符
 - **modifier:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<User | User[]>` 用户数据
+- 返回值: `Promise<User>` 用户数据
 
-向数据库请求用户数据。如果传入的 id 是一个列表，则返回值也应当是一个列表。
+向数据库请求用户数据。
 
 ### database.setUser(platform, id, data)
 
@@ -53,11 +53,11 @@ Koishi 的数据库 API 实际上分为两部分：
 ### database.getChannel(platform, id, fields?)
 
 - **platform:** `string` 平台名
-- **id:** `string | string[]` 频道标识符
+- **id:** `string` 频道标识符
 - **fields:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<Channel | Channel[]>` 频道数据
+- 返回值: `Promise<Channel>` 频道数据
 
-向数据库请求频道数据。如果传入的 id 是一个列表，则返回值也应当是一个列表。
+向数据库请求频道数据。
 
 ### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
 
