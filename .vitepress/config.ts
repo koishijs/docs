@@ -293,6 +293,7 @@ export default async () => defineConfig({
         items: [
           makeLink('发展史', '/about/history.md'),
           makeLink('从 v3 迁移', '/about/migration.md'),
+          makeLink('版本内迁移', '/about/upgrade.md'),
           makeLink('v4.1 版本介绍', '/about/releases/v4.1.md'),
           makeLink('v4.2 版本介绍', '/about/releases/v4.2.md'),
           makeLink('v4.3 版本介绍', '/about/releases/v4.3.md'),
@@ -304,7 +305,6 @@ export default async () => defineConfig({
           makeLink('v4.9 版本介绍', '/about/releases/v4.9.md'),
           makeLink('v4.10 版本介绍', '/about/releases/v4.10.md'),
           makeLink('v4.11 版本介绍', '/about/releases/v4.11.md'),
-          makeLink('工具链更新', '/about/tool-chain.md'),
         ],
       }, {
         text: '贡献指南',
