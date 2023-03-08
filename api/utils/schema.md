@@ -217,6 +217,10 @@ validate(10)                    // 11
 
 ## 实例方法
 
+::: tip
+请注意：`default` 和 `required` 是互斥的，你只能同时使用其中一个。
+:::
+
 ### schema.required()
 
 声明一个类型不可为空值 (`null` 或 `undefined`)。
