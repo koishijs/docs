@@ -75,7 +75,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 
 在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
 
-参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其括起来，例如：
+参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
@@ -124,3 +124,38 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./filter.md) 一节
 :::
 
+## 子指令
+
+@koishijs/plugin-admin 插件提供了名为 user 的指令，现在让我们调用一下：
+
+<chat-panel>
+<chat-message nickname="Alice">user</chat-message>
+<chat-message nickname="Koishi">
+<p>指令：user</p>
+<p>用户管理</p>
+<p>可用的子指令有：</p>
+<p class="indent-1">authorize  权限管理</p>
+<p class="indent-1">bind  绑定到账号</p>
+<p class="indent-1">user.flag  标记信息</p>
+<p class="indent-1">user.locale  语言偏好</p>
+</chat-message>
+</chat-panel>
+
+这里出现了一个新的概念：子指令。子指令在调用上与普通的指令并没有区别，但它们将不会显示在 `help` 返回的全局指令列表中，而只会显示在父指令 `user` 的帮助信息中。这样设计的目的是为了避免指令列表过于冗长，同时也将指令以一种更清晰的方式进行了组织。
+
+在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `bind`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。在调用时，我们也需要加上这个小数点：
+
+<chat-panel>
+<chat-message nickname="Alice">user.locale en</chat-message>
+<chat-message nickname="Koishi">User data updated.</chat-message>
+</chat-panel>
+
+如果父指令本身没有功能，那么 `user` 和 `user -h` 的效果是一样的。此时，我们也可以使用空格代替小数点进行派生式子指令的调用：
+
+<chat-panel>
+<chat-message nickname="Alice">user locale zh
+</chat-message>
+<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+</chat-panel>
+
+熟悉 Git 的用户可能会发现，这种设计正是借鉴了 Git 的二级指令：当一个指令的功能过于复杂时，我们可以将其拆分为多个子指令，从而使得指令的功能更加清晰。

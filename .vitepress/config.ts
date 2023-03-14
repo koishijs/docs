@@ -81,6 +81,7 @@ export default async () => defineConfig({
       }, {
         text: '配方',
         items: [
+          makeLink('指令调用技巧', '/manual/recipe/execution.md'),
           makeLink('访问数据库', '/manual/recipe/dataview.md'),
           makeLink('维护多份配置', '/manual/recipe/multiple.md'),
           makeLink('搜索插件市场', '/manual/recipe/search.md'),
@@ -113,7 +114,6 @@ export default async () => defineConfig({
         text: '指令系统',
         items: [
           makeLink('指令系统初探', '/guide/command/index.md'),
-          makeLink('指令触发机制', '/guide/command/execution.md'),
           makeLink('查看和编写帮助', '/guide/command/help.md'),
           makeLink('更多功能', '/guide/command/more.md'),
         ],

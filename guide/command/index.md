@@ -123,6 +123,51 @@ ctx.command('my-command')
 <chat-message nickname="Koishi">{ "writer": 0 }</chat-message>
 </chat-panel>
 
+## 更改触发方式
+
+### 指令别名
+
+你可以为一条指令添加别名：
+
+```ts
+ctx.command('echo').alias('say')
+```
+
+这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
+
+### 快捷方式
+
+Koishi 的指令机制虽然能够尽可能避免冲突和误触发，但是也带来了一些麻烦。一方面，一些常用指令的调用会受到指令前缀的限制；另一方面，一些指令可能有较长的选项和参数，但它们调用时却往往是相同的。面对这些情况，**快捷方式 (Shortcut)** 能有效地解决你的问题。
+
+假设你实现了一个货币系统和 rank 指令，调用 `rank wealth --global` 可以实现查看全服所有人财富排行，你可以这样做：
+
+```ts
+ctx.command('rank <type>')
+  .shortcut('全服财富排行', { args: ['wealth'], options: { global: true } })
+```
+
+这样一来，只要输入“全服财富排行”，Koishi 就会自动调用 `rank wealth --global`，回复查询结果了。
+
+通常来说，快捷方式都要求严格匹配（当然删除两端空格和繁简体转化这种程度的模糊匹配是可以做的），但是你也可以让快捷方式允许带参数：
+
+```ts
+ctx.command('buy <item>')
+  .shortcut('购买', { prefix: true, fuzzy: true })
+```
+
+上面程序注册了一个快捷方式，`prefix` 要求在调用时保留指令前缀，而 `fuzzy` 允许这个快捷方式带参数列表。这样一来，只要输入“Koishi，购买物品名”，Koishi 就会自动调用“buy 物品名”了。
+
+除此以外，你还可以使用正则表达式作为快捷方式：
+
+```ts
+ctx.command('market <area>')
+  .shortcut(/^查(.+区)市场$/, { args: ['$1'] })
+```
+
+这样一来，输入“查美区市场”就等价于输入“market 美区”了。
+
+不难看出，使用快捷方式会让你的输入方式更加接近自然语言，也会让你的机器人显得更平易近人。
+
 ## 类型系统
 
 Koishi v3 加入了参数的类型系统。它的作用是规约参数和选项的类型，并在指令执行前就对不合法的调用发出警告。定义一个带类型的参数或选项很简单：
