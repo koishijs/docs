@@ -15,7 +15,7 @@ plugins:
 随后创建一个 `locales` 文件夹，并在其中放置翻译文件：
 
 ```yaml
-# locales/zh.yml
+# locales/zh-CN.yml
 internal:
   low-authority: 啊哦！你的权限不足呢~
 ```

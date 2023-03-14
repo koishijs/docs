@@ -6,15 +6,15 @@
 plugin-root
 ├── src
 │   ├── locales
-│   │   ├── en.yml
-│   │   └── zh.yml
+│   │   ├── en-US.yml
+│   │   └── zh-CN.yml
 │   └── index.ts
 └── package.json
 ```
 
 ```ts index.ts
-ctx.i18n.define('en', require('./locales/en'))
-ctx.i18n.define('zh', require('./locales/zh'))
+ctx.i18n.define('en', require('./locales/en-US'))
+ctx.i18n.define('zh', require('./locales/zh-CN'))
 ```
 
 ::: tip

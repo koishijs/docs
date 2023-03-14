@@ -316,7 +316,6 @@ export default async () => defineConfig({
     },
 
     socialLinks: {
-      discord: 'https://discord.com/invite/xfxYwmd284',
       github: 'https://github.com/koishijs/koishi',
     },
 
