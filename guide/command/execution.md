@@ -2,37 +2,6 @@
 
 本节介绍有关指令调用的一些机制。
 
-### 指令前缀
-
-**指令前缀** 是 Koishi 用于判断一条信息是否为指令的机制。这个机制在不同环境下可以是不同的。假设 `app.config.nickname` 被设置为了“四季酱”，则以下信息都可以触发指令调用：
-
-```sh
-# 私聊状态下
-四季酱 echo hello
-四季酱, echo hello
-echo hello
-
-# 群聊状态下
-四季酱 echo hello
-四季酱, echo hello
-@四季酱 echo hello
-echo hello
-```
-
-你也可以通过修改下列配置项来改变这种行为：
-
-- **[nickname](../../api/core/app.md#options-nickname):** `string | string[]` 如果为空的话，上述几条以 `Koishi` 开头的信息就不会触发指令了。你也可以同时设置多个昵称。
-- **[prefix](../../api/core/app.md#options-prefix):** `string | string[]` 设置为 `.` 可以禁止在群中调用 `echo` 但允许调用 `.echo`。你也可以同时设置多个前缀。
-
-::: tip
-#### nickname 和 prefix 的区别
-
-1. nickname 后需要有 **逗号或空白字符**，再后面才是指令名；prefix 后面 **必须紧跟** 指令名。
-2. nickname 的默认值为 `[]`，因此覆盖这个值不会对原本可用的调用产生任何影响；prefix 的默认值为 `''`，如果覆盖了则会导致非私聊环境下无法直接写指令名进行调用（也就是在非私聊环境下调用指令必须加 nickname 和 prefix 前缀）。
-
-如果想要保留直接写指令名的调用效果，可以设置 prefix 为 `['.', '']`，这样一来不写前缀和写 `.` 做前缀都是可以的。但是也要注意由于是按照从前往后的顺序依次匹配，因此 `''` 必须写在最后一个。
-:::
-
 ### 指令别名
 
 你可以为一条指令添加别名：
