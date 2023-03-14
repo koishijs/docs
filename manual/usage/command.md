@@ -1,10 +1,6 @@
 # 指令系统
 
-::: danger
-此页面尚未编写完成。请过几天再来看看吧~
-:::
-
-在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的，正如你在上一节中看到的例子：
+在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
 
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
@@ -18,15 +14,19 @@
 
 这里的输出与两个插件有关：
 
-- help 指令由 @koishijs/plugin-help 提供，它会根据所有已注册的指令生成帮助信息
-- echo 指令由 @koishijs/plugin-echo 提供，它会将用户的输入原样返回
+- help 指令由 @koishijs/plugin-help 提供，它可以显示指令列表或具体指令的帮助信息
+- echo 指令由 @koishijs/plugin-echo 提供，它可以将用户的输入原样返回
+
+一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。当你安装了更多的插件后，你也就有了更多的指令可供使用。
+
+## 查看帮助
 
 help 指令后还可以添加一个参数，用于查看特定指令的帮助信息：
 
 <chat-panel>
 <chat-message nickname="Alice">help echo</chat-message>
 <chat-message nickname="Koishi">
-<p>echo &lt;message></p>
+<p>指令：echo &lt;message...></p>
 <p>发送消息</p>
 <p>可用的选项有：</p>
 <p class="indent-1">-e, --escape  发送转义消息</p>
@@ -39,7 +39,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>help [command]</p>
+<p>指令：help [command]</p>
 <p>显示帮助信息</p>
 <p>可用的选项有：</p>
 <p class="indent-1">-a, --authority  显示权限设置</p>
@@ -65,12 +65,35 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
 
 <chat-panel>
-<chat-message nickname="Alice">echo -e 1+1&lt;3</chat-message>
+<chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
+<chat-message nickname="Koishi">&lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
+<chat-message nickname="Alice">echo -E &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
 <chat-message nickname="Koishi">
-<p>1+1&amp;lt;3</p>
+<img src="https://koishi.chat/logo.png" width="100"/>
 </chat-message>
 </chat-panel>
 
-糟了！这里怎么会有一串 `&lt;` 这样的乱码？先别急，这正是 `-e` 选项有用的标志。这里出现的乱码其实叫做转义字符，你现在并不需要理解它，我们会在后续的章节进行介绍。
+在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
 
-<!-- 参数除了可以分为必选和可选外，还有一种特殊的类型：变长参数。变长参数可以接受任意多个参数，它们的顺序是不固定的，用户可以按照自己的意愿来输入参数。变长参数一定出现在必选参数和可选参数之后。变长参数的语法与可选参数相同，只是在参数名前面多了一个星号 `*`。 -->
+参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其括起来，例如：
+
+<chat-panel>
+<chat-message nickname="Alice">help "foo bar"</chat-message>
+</chat-panel>
+
+此外，部分选项也可以接受参数。例如，当你安装了翻译插件，你将会获得如下的帮助信息：
+
+<chat-panel>
+<chat-message nickname="Alice">help translate</chat-message>
+<chat-message nickname="Koishi">
+<p>指令：translate &lt;text...></p>
+<p>文本翻译</p>
+<p>可用的选项有：</p>
+<p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
+<p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
+</chat-message>
+<chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
+<chat-message nickname="Koishi">こんにちは世界</chat-message>
+</chat-panel>
+
+在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
