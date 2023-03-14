@@ -23,13 +23,13 @@
 
 - 类型：`string | string[]`
 
-机器人的昵称，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `'恋恋'`，则你可以通过 `恋恋，help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command/execution.md#指令前缀) 一节。
+机器人的昵称，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `'恋恋'`，则你可以通过 `恋恋，help` 来进行 help 指令的调用。参见 [触发前缀](../../manual/usage/command.md#触发前缀) 一节。
 
 ### options.prefix
 
 - 类型：`string | string[]`
 
-指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [指令前缀](../../guide/command/execution.md#指令前缀) 一节。
+指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [触发前缀](../../manual/usage/command.md#触发前缀) 一节。
 
 ### options.delay
 
@@ -87,8 +87,9 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 ### options.minSimilarity
 
 - 类型：`number`
+- 默认值：`1`
 
-用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../guide/command/execution.md#模糊匹配) 一节。
+用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../manual/recipe/execution.md#模糊匹配) 一节。
 
 ### options.request.proxyAgent
 

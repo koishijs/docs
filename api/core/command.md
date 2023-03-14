@@ -22,8 +22,8 @@ Argv 对象会作为 `cmd.action()`, `cmd.userFields()` 等方法的回调函数
   - **config.value:** `any` 选项的[重载值](../../guide/command/#选项的重载)
   - **config.type:** `DomainType` 选项的[类型定义](../../guide/command/#选项的临时类型)
   - **config.hidden:** `boolean` 是否[隐藏选项](../../guide/command/help.md#隐藏指令和选项)
-  - **config.notUsage:** `boolean` 是否[计入调用](../../guide/command/more.md#not-exist)
-  - **config.authority:** `number` 选项的[权限等级](../../guide/command/more.md#authority)
+  - **config.notUsage:** `boolean` 是否[计入调用](../../manual/usage/command.md#速率限制)
+  - **config.authority:** `number` 选项的[权限等级](../../manual/usage/command.md#权限管理)
 - 返回值: `this`
 
 为指令添加一个选项。

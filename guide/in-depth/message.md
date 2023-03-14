@@ -20,7 +20,7 @@
 
 1. 从前缀中匹配 at 机器人，nickname 或 prefix
 2. 预处理消息内容，生成 [`session.parsed`](../../api/core/session.md#session-parsed)
-3. 触发 [before-parse](../../api/core/events.md#事件：before-parse) 事件，尝试解析消息内容 ([快捷方式](../command/execution.md#快捷方式) 的解析也在此处完成)
+3. 触发 [before-parse](../../api/core/events.md#事件：before-parse) 事件，尝试解析消息内容 ([快捷方式](../command/index.md#快捷方式) 的解析也在此处完成)
 4. 如果数据库存在：
     - 触发 [before-attach-channel](../../api/core/events.md#事件：before-attach-channel) 事件
     - 获取频道数据并存储于 [`session.channel`](../../api/core/session.md#session-channel)
@@ -31,7 +31,7 @@
     - 根据 flags 等字段判断是否应该处理该信息，如果不应该则直接返回
     - 触发 [attach-user](../../api/core/events.md#事件：attach-user) 事件 (用户可以在其中同步地更新群和用户数据，或中止执行后续操作)
 5. 如果解析出指令：执行该指令 (下接 [指令执行流程](#指令执行流程))
-6. 尝试解析出候选指令，如果成功则显示候选项 (参见 [模糊匹配](../command/execution.md#模糊匹配))
+6. 尝试解析出候选指令，如果成功则显示候选项 (参见 [模糊匹配](../../manual/recipe/execution.md#模糊匹配))
 
 在以上过程中，无论是解析指令还是出发内置的 before-attach-* 钩子都可能用到 [parse](../../api/core/events.md#事件：parse) 事件。
 

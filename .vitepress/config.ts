@@ -115,7 +115,6 @@ export default async () => defineConfig({
         items: [
           makeLink('指令系统初探', '/guide/command/index.md'),
           makeLink('查看和编写帮助', '/guide/command/help.md'),
-          makeLink('更多功能', '/guide/command/more.md'),
         ],
       }, {
         text: '模块化',
@@ -321,6 +320,12 @@ export default async () => defineConfig({
 
     editLink: {
       pattern: 'https://github.com/koishijs/docs/edit/main/:path',
+    },
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: ['xss'],
     },
   },
 })
