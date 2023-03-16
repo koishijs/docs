@@ -105,16 +105,11 @@ export default async () => defineConfig({
       }, {
         text: '交互基础',
         items: [
-          makeLink('快速上手', '/guide/basic/examples.md'),
-          makeLink('事件系统', '/guide/basic/events.md'),
+          makeLink('编写指令', '/guide/basic/command.md'),
           makeLink('中间件', '/guide/basic/middleware.md'),
+          makeLink('事件系统', '/guide/basic/events.md'),
           makeLink('消息元素', '/guide/basic/element.md'),
-        ],
-      }, {
-        text: '指令系统',
-        items: [
-          makeLink('指令系统初探', '/guide/command/index.md'),
-          makeLink('查看和编写帮助', '/guide/command/help.md'),
+          // makeLink('快速上手', '/guide/basic/examples.md'),
         ],
       }, {
         text: '模块化',

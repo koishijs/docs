@@ -18,10 +18,10 @@ Argv 对象会作为 `cmd.action()`, `cmd.userFields()` 等方法的回调函数
 - **name:** `string` 选项的名字
 - **desc:** `string` 选项的描述
 - **config:** `OptionConfig`
-  - **config.fallback:** `any` 选项的[默认值](../../guide/command/#选项的默认值)
-  - **config.value:** `any` 选项的[重载值](../../guide/command/#选项的重载)
-  - **config.type:** `DomainType` 选项的[类型定义](../../guide/command/#选项的临时类型)
-  - **config.hidden:** `boolean` 是否[隐藏选项](../../guide/command/help.md#隐藏指令和选项)
+  - **config.fallback:** `any` 选项的[默认值](../../guide/basic/command.md#选项的默认值)
+  - **config.value:** `any` 选项的[重载值](../../guide/basic/command.md#选项的重载)
+  - **config.type:** `DomainType` 选项的[类型定义](../../guide/basic/command.md#选项的临时类型)
+  - **config.hidden:** `boolean` 是否[隐藏选项](../../guide/basic/command.md#隐藏指令和选项)
   - **config.notUsage:** `boolean` 是否[计入调用](../../manual/usage/command.md#速率限制)
   - **config.authority:** `number` 选项的[权限等级](../../manual/usage/command.md#权限管理)
 - 返回值: `this`
@@ -123,7 +123,7 @@ type FieldCollector<K extends string> =
 - **config:** [`CommandConfig`](./context.md#ctx-command) 指令的配置
 - 返回值：`Command` 注册或修改的指令
 
-注册或修改子指令。子指令会继承当期指令的上下文。参见[指令的多级结构](../../guide/command/help.md#指令的多级结构)章节。
+注册或修改子指令。子指令会继承当期指令的上下文。参见[指令的多级结构](../../guide/basic/command.md#指令的多级结构)章节。
 
 ### cmd.parse(input)
 

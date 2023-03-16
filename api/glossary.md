@@ -33,7 +33,8 @@
 
 参考：
 
-- [指令系统 / 指令系统初探](../guide/command/)
+- [入门 / 指令系统](../manual/usage/command.md)
+- [交互基础 / 指令开发](../guide/basic/command.md)
 - [API 文档 / 指令 (Command)](./core/command.md)
 
 ## 上下文 (Context)

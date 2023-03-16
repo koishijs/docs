@@ -21,5 +21,5 @@ broadcast foo bar baz     # 向所有频道发送 foo bar baz
 当一个机器人账号同时向多个频道发送广播消息时，为了避免风控，Koishi 会给每条消息发送后添加一段延迟，可以通过 [`delay.broadcast`](../../api/core/app.md#options-delay) 进行配置。
 
 ::: tip 提示
-broadcast 指令的 message 参数是一个 [文本参数](../../guide/command/index.md#文本参数)，因此你应该把所有的选项写到消息前面，否则会被认为是消息的一部分。
+broadcast 指令的 message 参数是一个 [变长参数](../../manual/usage/command.md#参数和选项)，因此你应该把所有的选项写到消息前面，否则会被认为是消息的一部分。
 :::
