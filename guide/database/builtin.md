@@ -11,16 +11,19 @@
 Koishi 内置了下面几个数据库字段：
 
 - **user:** 用户表
-  - **id:** `string` 内部编号
+  - **id:** `id` 用户 ID
   - **name:** `string` 用户昵称
-  - **???:** `string` [平台编号](#平台相关字段)
   - **flag:** `number` 状态标签
   - **authority:** `number` 用户权限
 - **channel:** 频道表
   - **platform:** `string` 平台名
-  - **id:** `string` [平台编号](#平台相关字段)
+  - **id:** `string` [平台账号](#平台相关字段)
   - **flag:** `number` 状态标签
   - **assignee:** `string` 代理者
+- **binding:** 绑定表
+  - **aid:** `id` 用户 ID
+  - **pid:** `string` [平台账号](#平台相关字段)
+  - **platform:** `string` 平台名
 
 下面我们将分别介绍它们。
 

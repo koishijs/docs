@@ -73,7 +73,7 @@ export default async () => defineConfig({
         text: '使用',
         items: [
           makeLink('指令系统', '/manual/usage/command.md'),
-          // makeLink('用户系统', '/manual/usage/user.md'),
+          makeLink('用户管理', '/manual/usage/user.md'),
           // makeLink('国际化', '/manual/usage/i18n.md'),
           // makeLink('过滤器', '/manual/usage/filter.md'),
           // makeLink('服务与依赖', '/manual/usage/service.md'),

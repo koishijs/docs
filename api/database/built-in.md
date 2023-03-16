@@ -11,22 +11,23 @@ Koishi 的数据库 API 实际上分为两部分：
 
 ### User
 
-- **id:** `string` 内部编号
+- **id:** `id` 用户 ID
 - **name:** `string` 用户昵称
-- **flag:** `number` 状态标签
 - **authority:** `number` 用户权限
+
+### Binding
+
+- **aid:** `id` 用户 ID
+- **platform:** `string` 平台名
+- **pid:** `string` 频道账号
 
 ### Channel
 
-- **id:** `string` 频道标识符
-- **flag:** `number` 状态标签
+- **platform:** `string` 平台名
+- **id:** `string` 频道账号
 - **assignee:** `string` 代理者
 
 ## 全局接口
-
-### User.Flag, Channel.Flag
-
-所有用户 / 频道状态标签构成的枚举类型。参见 [状态标签](../../guide/database/builtin.md#状态标签)。
 
 ## 内置实例方法
 
