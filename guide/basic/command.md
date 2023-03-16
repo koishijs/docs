@@ -4,7 +4,7 @@
 在学习本节之前，建议先阅读 [入门 > 指令系统](../../manual/usage/command.md)。
 :::
 
-一个成功的机器人离不开强大的**指令系统**。正因为如此，Koishi 在编写时也广泛研究了许多指令系统的实现，并做成了如今的规模。使用 Koishi，你可以方便地创建和管理各种指令，并能够高效地处理大量指令的并发调用。同时，Koishi 还提供了快捷方式、多级指令、自定义前缀等功能，同时支持调用次数和频率限制，权限管理等高级特性，让你得以高自由度来配置你的机器人。
+正如我们在入门篇中介绍的那样，一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。Koishi 的指令系统能够高效地处理大量消息的并发调用，同时还提供了快捷方式、调用前缀、权限管理、速率限制、本地化等大量功能。因此，只需掌握指令开发并编写少量代码就可以轻松应对各类用户需求。
 
 编写下面的代码，你就实现了一个简单的 echo 指令：
 
@@ -20,22 +20,22 @@ ctx.command('echo <message>')
 
 让我们回头看看这段代码是如何工作的：
 
-- `.command()` 方法定义了一个 echo 指令，其有一个必选参数为 message
-- `.action()` 方法定义了指令触发时的回调函数，第一个参数是一个 Argv 对象，第二个参数是输入的 message
+- `.command()` 方法定义了名为 echo 的指令，其有一个必选参数为 `message`
+- `.action()` 方法定义了指令触发时的回调函数，第一个参数是一个 `Argv` 对象，第二个参数是输入的 `message`
 
 这种链式的结构能够让我们非常方便地定义和扩展指令。稍后我们将看到这两个函数的更多用法，以及更多指令相关的函数。
 
 ## 定义参数
 
-正如你在上面所见的那样，使用 `ctx.command(desc)` 方法可以定义一个指令，其中 `desc` 是一个字符串，包含了**指令名**和**参数列表**。
+正如你在上面所见的那样，使用 `ctx.command(decl)` 方法可以定义一个指令，其中 `decl` 是一个字符串，包含了**指令名**和**参数列表**。
 
-- 指令名可以包含数字、字母、下划线、短横线甚至中文字符，但不应该包含空格、小数点 `.` 或斜杠 `/`。小数点和斜杠的用途参见 [指令的多级结构](#指令的多级结构) 章节。
-- 一个指令可以含有任意个参数。其中 **必选参数** 用尖括号包裹，**可选参数** 用方括号包裹。
+- 指令名可以包含数字、字母、短横线甚至中文，但不应该包含空白字符、小数点 `.` 或斜杠 `/`；小数点和斜杠的用途参见 [指令的多级结构](#指令的多级结构) 章节
+- 一个指令可以含有任意个参数，其中 **必选参数** 用尖括号包裹，**可选参数** 用方括号包裹；这些参数将作为 `action` 回调函数除 `Argv` 以外的的后续参数传入
 
-例如，下面的程序定义了一个拥有三个参数的指令，第一个为必选参数，后面两个为可选参数，它们将分别作为 `action` 回调函数的第 2, 3, 4 个参数：
+例如，下面的程序定义了一个拥有三个参数的指令，第一个为必选参数，后面两个为可选参数，它们将分别作为 `action` 回调函数的第 2~4 个参数：
 
 ```ts
-ctx.command('my-command <arg1> [arg2] [arg3]')
+ctx.command('test <arg1> [arg2] [arg3]')
   .action((_, arg1, arg2, arg3) => { /* do something */ })
 ```
 
@@ -48,160 +48,49 @@ ctx.command('my-command <arg1> [arg2] [arg3]')
 有时我们需要传入未知数量的参数，这时我们可以使用 **变长参数**，它可以通过在括号中前置 `...` 来实现。在下面的例子中，无论传入了多少个参数，都会被放入 `rest` 数组进行处理：
 
 ```ts
-ctx.command('my-command <arg1> [...rest]')
+ctx.command('test <arg1> [...rest]')
   .action((_, arg1, ...rest) => { /* do something */ })
 ```
 
 ### 文本参数
 
 通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。
-在下面的例子中，即使 my-command 后面的内容中含有空格，也会被整体传入 `message` 中：
+在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
 
 ```ts
-ctx.command('my-command <message:text>')
+ctx.command('test <message:text>')
   .action((_, message) => { /* do something */ })
 ```
 
 ::: tip
-文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](#使用引号) 将要输入的文本包裹起来。
+文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](../../manual/recipe/execution.md#使用引号) 将要输入的文本包裹起来。
 :::
 
-## 定义选项
+### 参数的类型
 
-使用 `cmd.option(name, desc)` 函数可以给指令定义参数。这个函数也是可以链式调用的，就像这样：
-
-```ts
-ctx.command('my-command')
-  .option('alpha', '-a')          // 定义一个选项
-  .option('beta', '-b [beta]')    // 定义一个带参数的可选选项
-  .option('gamma', '-c <gamma>')  // 定义一个带参数的必选选项
-  .action(({ options }) => JSON.stringify(options))
-```
-
-<chat-panel>
-<chat-message nickname="Alice">my-command -adb text --gamma=1 --foo-bar baz --no-xyz</chat-message>
-<chat-message nickname="Koishi">{ "alpha": true, "d": true, "beta": "text", "gamma": 1, "fooBar": "baz", "xyz": false }</chat-message>
-</chat-panel>
-
-从上面的例子中我们不难看出 Koishi 指令系统的许多方便的特性：
-
-- 使用注册的多个别名中的任何一个都会被赋值到 `name` 中
-- 选项和参数之间同时支持用空格或等号隔开的语法
-- 单个短横线后跟多个字母时，会把之后的参数赋给最后一个字母（如果需要参数的话）
-- 多字母中如果有短横线，会被自动进行驼峰式处理
-- 类型自动转换：无参数默认为 `true`，如果是数字会转化为数字，其余情况为字符串
-- 支持识别未注册选项，同时会根据传入的命令行推测是否需要参数
-- 如果一个未注册选项以 `no-` 开头，则会自动去除这个前缀并处理为 `false`
-
-在调用 `cmd.option()` 时，你还可以传入第三个参数，它应该是一个对象，用于配置选项的具体特性。它们将在下面逐一介绍。
-
-### 选项的默认值
-
-使用 `fallback` 配置选项的默认值。配置了默认值的选项，如果没有被使用，则会按照注册的默认值进行赋值。
-
-```ts
-ctx.command('my-command')
-  .option('alpha', '-a', { fallback: 100 })
-  .option('beta', '-b', { fallback: 100 })
-  .action(({ options }) => JSON.stringify(options))
-```
-
-<chat-panel>
-<chat-message nickname="Alice">my-command -b 80</chat-message>
-<chat-message nickname="Koishi">{ "alpha": 100, "beta": 80 }</chat-message>
-</chat-panel>
-
-### 选项的重载
-
-将同一个选项注册多次，并结合使用 `value` 配置选项的重载值。如果使用了带有重载值的选项，将按照注册的重载值进行赋值。
-
-```ts
-ctx.command('my-command')
-  .option('writer', '-w <id>')
-  .option('writer', '--anonymous', { value: 0 })
-  .action(({ options }) => JSON.stringify(options))
-```
-
-<chat-panel>
-<chat-message nickname="Alice">my-command --anonymous</chat-message>
-<chat-message nickname="Koishi">{ "writer": 0 }</chat-message>
-</chat-panel>
-
-## 更改触发方式
-
-### 指令别名
-
-你可以为一条指令添加别名：
-
-```ts
-ctx.command('echo').alias('say')
-```
-
-这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
-
-### 快捷方式
-
-Koishi 的指令机制虽然能够尽可能避免冲突和误触发，但是也带来了一些麻烦。一方面，一些常用指令的调用会受到指令前缀的限制；另一方面，一些指令可能有较长的选项和参数，但它们调用时却往往是相同的。面对这些情况，**快捷方式 (Shortcut)** 能有效地解决你的问题。
-
-假设你实现了一个货币系统和 rank 指令，调用 `rank wealth --global` 可以实现查看全服所有人财富排行，你可以这样做：
-
-```ts
-ctx.command('rank <type>')
-  .shortcut('全服财富排行', { args: ['wealth'], options: { global: true } })
-```
-
-这样一来，只要输入“全服财富排行”，Koishi 就会自动调用 `rank wealth --global`，回复查询结果了。
-
-通常来说，快捷方式都要求严格匹配（当然删除两端空格和繁简体转化这种程度的模糊匹配是可以做的），但是你也可以让快捷方式允许带参数：
-
-```ts
-ctx.command('buy <item>')
-  .shortcut('购买', { prefix: true, fuzzy: true })
-```
-
-上面程序注册了一个快捷方式，`prefix` 要求在调用时保留指令前缀，而 `fuzzy` 允许这个快捷方式带参数列表。这样一来，只要输入“Koishi，购买物品名”，Koishi 就会自动调用“buy 物品名”了。
-
-除此以外，你还可以使用正则表达式作为快捷方式：
-
-```ts
-ctx.command('market <area>')
-  .shortcut(/^查(.+区)市场$/, { args: ['$1'] })
-```
-
-这样一来，输入“查美区市场”就等价于输入“market 美区”了。
-
-不难看出，使用快捷方式会让你的输入方式更加接近自然语言，也会让你的机器人显得更平易近人。
-
-## 类型系统
-
-Koishi v3 加入了参数的类型系统。它的作用是规约参数和选项的类型，并在指令执行前就对不合法的调用发出警告。定义一个带类型的参数或选项很简单：
+除去 `text` 以外，Koishi 还支持许多其他的类型。它们的用法与 `text` 无异：
 
 ```ts
 function showValue(value) {
   return `${typeof value} ${JSON.stringify(value)}`
 }
 
-ctx.command('my-command [arg:number]')
+ctx.command('test [arg:number]')
   .option('foo', '<val:string>')
   .action(({ options }, arg) => `${showValue(arg)} ${showValue(options.foo)}`)
 ```
 
 <chat-panel>
-<chat-message nickname="Alice">my-command 100 --foo 200</chat-message>
+<chat-message nickname="Alice">test 100 --foo 200</chat-message>
 <chat-message nickname="Koishi">number 100 string "200"</chat-message>
-<chat-message nickname="Alice">my-command xyz</chat-message>
+<chat-message nickname="Alice">test xyz</chat-message>
 <chat-message nickname="Koishi">参数 arg 输入无效，请提供一个数字。</chat-message>
 </chat-panel>
 
-如你所见，上文所介绍的文本参数也正是一个内置类型。
-
-### 内置类型
-
-目前 Koishi 支持的内置类型有如下：
+目前 Koishi 支持的内置类型如下：
 
 - string: `string` 字符串
 - number: `number` 数值
-- boolean: `boolean` 布尔值（实际上不带参数）
 - text: `string` 贪婪匹配的字符串
 - user: `string` 用户，格式为 `{platform}:{id}`
 - channel: `string` 频道，格式为 `{platform}:{id}`
@@ -209,7 +98,7 @@ ctx.command('my-command [arg:number]')
 - posint: `number` 正整数
 - date: `Date` 日期
 
-### 定义新类型
+<!-- ### 定义新类型
 
 使用 `Argv.createDomain()` 创建新类型：
 
@@ -261,22 +150,7 @@ ctx.command('test [x:positive]').action((_, arg) => arg)
 <chat-panel>
 <chat-message nickname="Alice">test 0.5</chat-message>
 <chat-message nickname="Koishi">参数 x 输入无效，应为整数。</chat-message>
-</chat-panel>
-
-### 选项的临时类型
-
-你可以在 `cmd.option()` 的第三个参数中传入一个 `type` 属性，作为选项的临时类型声明。它可以是像上面的例子一样的回调函数，也可以是一个 `RegExp` 对象，表示传入的选项应当匹配的正则表达式：
-
-```ts
-ctx.command('test')
-  .option('foo', '-f <foo>', { type: /^ba+r$/ })
-  .action(({ options }) => options.foo)
-```
-
-<chat-panel>
-<chat-message nickname="Alice">test -f baaaz</chat-message>
-<chat-message nickname="Koishi">选项 foo 输入无效，请检查语法。</chat-message>
-</chat-panel>
+</chat-panel> -->
 
 <!-- ### 使用检查器
 
@@ -301,6 +175,136 @@ ctx.command('test')
 - command 事件
 
 因此，检查器可以在 `usage` 这样的属性尚未发生更新时进行操作，并提前退出执行流程。 -->
+
+## 定义选项
+
+使用 `cmd.option(name, decl)` 方法可以给指令定义参数。这个方法也是支持链式调用的，就像这样：
+
+```ts
+ctx.command('test')
+  .option('alpha', '-a')          // 定义一个选项
+  .option('beta', '-b [beta]')    // 定义一个带参数的可选选项
+  .option('gamma', '-c <gamma>')  // 定义一个带参数的必选选项
+  .action(({ options }) => JSON.stringify(options))
+```
+
+<chat-panel>
+<chat-message nickname="Alice">test -adb text --gamma=1 --foo-bar baz --no-xyz</chat-message>
+<chat-message nickname="Koishi">{ "alpha": true, "d": true, "beta": "text", "gamma": 1, "fooBar": "baz", "xyz": false }</chat-message>
+</chat-panel>
+
+从上面的例子中我们不难看出 Koishi 指令系统的许多方便的特性：
+
+- 使用注册的多个别名中的任何一个都会被赋值到 `name` 中
+- 选项和参数之间同时支持用空格或等号隔开的语法
+- 单个短横线后跟多个字母时，会把之后的参数赋给最后一个字母（如果需要参数的话）
+- 多字母中如果有短横线，会被自动进行驼峰式处理
+- 类型自动转换：无参数默认为 `true`，如果是数字会转化为数字，其余情况为字符串
+- 支持识别未注册选项，同时会根据传入的命令行推测是否需要参数
+- 如果一个未注册选项以 `no-` 开头，则会自动去除这个前缀并处理为 `false`
+
+在调用 `cmd.option()` 时，你还可以传入第三个参数，它应该是一个对象，用于配置选项的具体特性。它们将在下面逐一介绍。
+
+### 选项的默认值
+
+使用 `fallback` 配置选项的默认值。配置了默认值的选项，如果没有被使用，则会按照注册的默认值进行赋值。
+
+```ts
+ctx.command('test')
+  .option('alpha', '-a', { fallback: 100 })
+  .option('beta', '-b', { fallback: 100 })
+  .action(({ options }) => JSON.stringify(options))
+```
+
+<chat-panel>
+<chat-message nickname="Alice">test -b 80</chat-message>
+<chat-message nickname="Koishi">{ "alpha": 100, "beta": 80 }</chat-message>
+</chat-panel>
+
+### 选项的重载
+
+将同一个选项注册多次，并结合使用 `value` 配置选项的重载值。如果使用了带有重载值的选项，将按照注册的重载值进行赋值。
+
+```ts
+ctx.command('test')
+  .option('writer', '-w <id>')
+  .option('writer', '--anonymous', { value: 0 })
+  .action(({ options }) => JSON.stringify(options))
+```
+
+<chat-panel>
+<chat-message nickname="Alice">test --anonymous</chat-message>
+<chat-message nickname="Koishi">{ "writer": 0 }</chat-message>
+</chat-panel>
+
+### 选项的类型
+
+选项也可以像参数一样设置类型：
+
+```ts
+ctx.command('text')
+  .option('alpha', '-a <value:number>')
+```
+
+除了这种写法外，你还可以传入一个 `type` 属性，作为选项的临时类型声明。它可以是像上面的例子一样的回调函数，也可以是一个 `RegExp` 对象，表示传入的选项应当匹配的正则表达式：
+
+```ts
+ctx.command('test')
+  .option('beta', '-b <value>', { type: /^ba+r$/ })
+  .action(({ options }) => options.beta)
+```
+
+<chat-panel>
+<chat-message nickname="Alice">test -f bar</chat-message>
+<chat-message nickname="Koishi">bar</chat-message>
+<chat-message nickname="Alice">test -f baaaz</chat-message>
+<chat-message nickname="Koishi">选项 beta 输入无效，请检查语法。</chat-message>
+</chat-panel>
+
+## 更改触发方式
+
+### 指令别名
+
+你可以为一条指令添加别名：
+
+```ts
+ctx.command('echo').alias('say')
+```
+
+这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
+
+### 快捷方式
+
+Koishi 的指令机制虽然能够尽可能避免冲突和误触发，但是也带来了一些麻烦。一方面，一些常用指令的调用会受到指令前缀的限制；另一方面，一些指令可能有较长的选项和参数，但它们调用时却往往是相同的。面对这些情况，**快捷方式 (Shortcut)** 能有效地解决你的问题。
+
+假设你实现了一个货币系统和 rank 指令，调用 `rank wealth --global` 可以实现查看全服所有人财富排行，你可以这样做：
+
+```ts
+ctx.command('rank <type>')
+  .shortcut('全服财富排行', { args: ['wealth'], options: { global: true } })
+```
+
+这样一来，只要输入“全服财富排行”，Koishi 就会自动调用 `rank wealth --global`，回复查询结果了。
+
+通常来说，快捷方式都要求严格匹配（当然删除两端空格和繁简体转化这种程度的模糊匹配是可以做的），但是你也可以让快捷方式允许带参数：
+
+```ts
+ctx.command('buy <item>')
+  .shortcut('购买', { prefix: true, fuzzy: true })
+```
+
+上面程序注册了一个快捷方式，`prefix` 要求在调用时保留指令前缀，而 `fuzzy` 允许这个快捷方式带参数列表。这样一来，只要输入“Koishi，购买物品名”，Koishi 就会自动调用“buy 物品名”了。
+
+除此以外，你还可以使用正则表达式作为快捷方式：
+
+```ts
+ctx.command('market <area>')
+  .shortcut(/^查(.+区)市场$/, { args: ['$1'] })
+```
+
+这样一来，输入“查美区市场”就等价于输入“market 美区”了。
+
+不难看出，使用快捷方式会让你的输入方式更加接近自然语言，也会让你的机器人显得更平易近人。
 
 ## 编写帮助
 

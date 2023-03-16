@@ -105,7 +105,7 @@ export default async () => defineConfig({
       }, {
         text: '交互基础',
         items: [
-          makeLink('编写指令', '/guide/basic/command.md'),
+          makeLink('指令开发', '/guide/basic/command.md'),
           makeLink('中间件', '/guide/basic/middleware.md'),
           makeLink('事件系统', '/guide/basic/events.md'),
           makeLink('消息元素', '/guide/basic/element.md'),
