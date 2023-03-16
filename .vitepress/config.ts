@@ -106,8 +106,8 @@ export default async () => defineConfig({
         text: '交互基础',
         items: [
           makeLink('指令开发', '/guide/basic/command.md'),
-          makeLink('中间件', '/guide/basic/middleware.md'),
           makeLink('事件系统', '/guide/basic/events.md'),
+          makeLink('中间件', '/guide/basic/middleware.md'),
           makeLink('消息元素', '/guide/basic/element.md'),
           // makeLink('快速上手', '/guide/basic/examples.md'),
         ],
@@ -116,7 +116,7 @@ export default async () => defineConfig({
         items: [
           makeLink('认识插件', '/guide/plugin/index.md'),
           makeLink('生命周期', '/guide/plugin/lifecycle.md'),
-          makeLink('会话选择器', '/guide/plugin/selector.md'),
+          makeLink('会话过滤器', '/guide/plugin/selector.md'),
           makeLink('服务与依赖', '/guide/plugin/service.md'),
           makeLink('配置模式', '/guide/plugin/schema.md'),
         ],

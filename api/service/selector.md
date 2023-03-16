@@ -1,4 +1,4 @@
-# 会话选择器 (Selector)
+# 会话过滤器 (Selector)
 
 ## 实例属性
 
@@ -6,11 +6,11 @@
 
 - 类型: `(session: Session) => boolean`
 
-当前上下文绑定的会话选择器。
+当前上下文绑定的会话过滤器。
 
 ## 实例方法
 
-有关这里的 API，请参见 [使用上下文](../../guide/plugin/selector.md#会话选择器)。
+有关这里的 API，请参见 [使用上下文](../../guide/plugin/selector.md#会话过滤器)。
 
 ### ctx.any()
 

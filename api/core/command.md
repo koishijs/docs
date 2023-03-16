@@ -105,7 +105,7 @@ type FieldCollector<K extends string> =
 
 ### cmd.shortcut(name, config?)
 
-- **name:** `string | RegExp` 快捷方式名
+- **name:** `string | RegExp` 快捷匹配
 - **config:** `ShortcutConfig`
   - **config.prefix:** `boolean` 调用时要求保留前缀
   - **config.fuzzy:** `boolean` 允许在快捷方式后带参数
