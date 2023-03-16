@@ -4,7 +4,11 @@
 要使用本插件，你需要安装数据库支持。
 :::
 
-@koishijs/plugin-bind 提供了一个指令，允许用户进行跨平台的账号绑定。
+::: tip
+建议配合阅读 [入门 > 跨平台 > 账号绑定](../../manual/usage/platform.md#通过指令绑定) 章节。
+:::
+
+@koishijs/plugin-bind 提供了一个指令，允许用户进行账号绑定。
 
 ## 指令：bind
 

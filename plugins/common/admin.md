@@ -1,7 +1,11 @@
 # 数据管理 (Admin)
 
 ::: tip
-本章中介绍的内容需要你安装数据库支持，同时建议提前阅读 [入门 > 权限管理](../../manual/usage/permission.md) 章节。
+要使用本插件，你需要安装数据库支持。
+:::
+
+::: tip
+建议配合阅读 [入门 > 权限管理](../../manual/usage/permission.md) 章节。
 :::
 
 ## 指令：authorize
