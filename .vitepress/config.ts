@@ -125,7 +125,6 @@ export default async () => defineConfig({
         items: [
           makeLink('使用数据库', '/guide/database/index.md'),
           makeLink('扩展数据模型', '/guide/database/model.md'),
-          makeLink('内置用户系统', '/guide/database/builtin.md'),
           makeLink('按需加载和自动更新', '/guide/database/observer.md'),
           makeLink('编写数据库插件', '/guide/database/writing.md'),
         ],

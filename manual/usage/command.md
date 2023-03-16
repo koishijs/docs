@@ -135,15 +135,13 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 <p>用户管理</p>
 <p>可用的子指令有：</p>
 <p class="indent-1">authorize  权限管理</p>
-<p class="indent-1">bind  绑定到账号</p>
-<p class="indent-1">user.flag  标记信息</p>
 <p class="indent-1">user.locale  语言偏好</p>
 </chat-message>
 </chat-panel>
 
 这里出现了一个新的概念：子指令。子指令在调用上与普通的指令并没有区别，但它们将不会显示在 `help` 返回的全局指令列表中，而只会显示在父指令 `user` 的帮助信息中。这样设计的目的是为了避免指令列表过于冗长，同时也将指令以一种更清晰的方式进行了组织。
 
-在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `bind`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。在调用时，我们也需要加上这个小数点：
+在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `authorize`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。在调用时，我们也需要加上这个小数点：
 
 <chat-panel>
 <chat-message nickname="Alice">user.locale en</chat-message>
