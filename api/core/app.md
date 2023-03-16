@@ -76,7 +76,7 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 - 类型：`boolean | ((session: Session) => boolean)`
 - 默认值：`true`
 
-当获取不到频道数据时，是否使用接受者作为代理者。
+当获取不到频道数据时，是否将接收到消息的机器人设置为该频道的受理人。
 
 ### options.prettyErrors
 

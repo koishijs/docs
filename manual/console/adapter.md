@@ -2,11 +2,11 @@
 
 Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。
 
-## 接入指南
+一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
 
 对于不同的平台，你需要做好相应的准备工作。以下是各个平台的接入指南。
 
-### Discord
+## Discord
 
 1. 前往 [开发者后台](https://discord.com/developers/applications)，登录账号创建一个应用
 2. 点击「Bot」并创建一个新的机器人，保存这个页面中的 `token` (请注意不要泄露)
@@ -16,7 +16,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
-### 飞书
+## 飞书
 
 1. 在 [开发者后台](https://open.feishu.cn/app/) 点击「新建企业自建应用」，点击应用名称进入应用详情页
 2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段
@@ -28,7 +28,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-feishu](../../plugins/adapter/feishu.md)
 
-### KOOK
+## KOOK
 
 1. 前往 [开发者平台](https://developer.kookapp.cn/)，前往「应用」并点击「新建」
 2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
@@ -36,7 +36,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
-### OneBot
+## OneBot
 
 这里只介绍最常见的 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 配置方法。
 
@@ -46,7 +46,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
-### QQ 频道
+## QQ 频道
 
 1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
 2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
@@ -55,7 +55,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
-### Telegram
+## Telegram
 
 1. 搜索 **@botfather** (有个官方认证的符号) 并进入聊天界面
 2. 输入 `/start` 后，会出现一个使用菜单，你可以使用这里指令对你的机器人进行配置
@@ -64,17 +64,3 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 5. 创建完毕后，你会获得一个 `token` (请注意不要泄露)，将其填入插件配置即可使用
 
 参考：[@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
-
-## 多机器人
-
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。
-
-由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
-
-### 受让人机制
-
-默认情况下，同一个 Koishi 应用接入的多个机器人账号在同一个频道内，只有一个机器人会响应用户的消息。这是为了防止消息重复发送和循环触发等问题。这个负责响应消息的机器人被称为该频道的「受让人」。默认情况下，第一个收到该频道的消息的机器人会自动成为受让人。
-
-### 用户账号绑定
-
-用户也可以借助 [bind](../../plugins/common/bind.md) 插件实现跨平台的账号绑定。将多个账号相互绑定后，用户在任何一个账号上访问机器人时，都会被视为同一个用户，其数据也会被共享。

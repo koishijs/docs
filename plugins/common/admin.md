@@ -28,7 +28,6 @@ authorize 3 -u @123456789           # 通过指定用户名方式
 authorize 3 -u @onebot:123456789    # 指定具体的平台和用户名
 ```
 
-
 ## 指令：assign
 
 - 基本语法：`assign [bot]`
@@ -37,15 +36,15 @@ authorize 3 -u @onebot:123456789    # 指定具体的平台和用户名
   - `-c, --channel` 指定目标频道（不在群组内使用时必须指定）
   - `-r, --remove` 重置设置
 
-assign 指令可用于设置频道的 [代理者](../../guide/database/builtin.md#平台相关字段)。该指令 4 级权限才能调用。
+assign 指令可用于设置频道的 [受理人](../../manual/usage/platform.md#受理人机制)。该指令 4 级权限才能调用。
 
 如果 `-c [channel]` 缺省，则表示目标频道为当前频道（因此私聊状态下不能缺省）；如果 `bot` 缺省，则表示当前接收消息的机器人账号。举个例子，如果要设定一个频道 A 的代理者为 B，下面的两种做法是等价的：
 
 1. 私聊机器人 B，发送 `assign -c #A`
 2. 在频道 A 中发送 `assign @B`（假设 B 能收到此消息）
 
-## 指令：user.flag
-## 指令：channel.flag
+## 指令：user.flag <badge text="已废弃" type="danger"/>
+## 指令：channel.flag <badge text="已废弃" type="danger"/>
 
 - 基本语法：`xxx.flag [...names]`
 - 选项：
