@@ -6,26 +6,22 @@
 
 参考：
 
-- [跨平台 / 使用适配器](../guide/adapter/)
-- [API 文档 / 适配器](./core/adapter.md)
+- [入门 > 接入聊天平台](../manual/console/adapter.md)
+- [开发 > 使用适配器](../guide/adapter/index.md)
+- [API > 适配器](./core/adapter.md)
 
 ## 应用 (App)
 
 参考：
 
-- [API 文档 / 应用 (App)](./core/app.md)
+- [开发 > 配置文件](../guide/develop/config.md)
+- [API > 应用](./core/app.md)
 
 ## 机器人 (Bot)
 
 参考：
 
-- [API 文档 / 机器人 (Bot)](./core/bot.md)
-
-## 缓存 (Cache)
-
-参考：
-
-- [更多功能 / 使用缓存数据]()
+- [API > 机器人](./core/bot.md)
 
 ## 频道 (Channel)
 
@@ -33,29 +29,30 @@
 
 参考：
 
-- [入门 / 指令系统](../manual/usage/command.md)
-- [交互基础 / 指令开发](../guide/basic/command.md)
-- [API 文档 / 指令 (Command)](./core/command.md)
+- [入门 > 指令系统](../manual/usage/command.md)
+- [开发 > 指令开发](../guide/basic/command.md)
+- [API > 指令](./core/command.md)
 
 ## 上下文 (Context)
 
 参考：
 
-- [复用性 / 使用上下文](../guide/plugin/selector.md)
-- [API 文档 / 上下文 (Context)](./core/context.md)
+- [开发 > 使用上下文](../guide/plugin/selector.md)
+- [API > 上下文](./core/context.md)
 
 ## 数据库 (Database)
 
 参考：
 
-- [数据库 / 使用数据库](../guide/database/)
-- [API 文档 / 数据库 (Database)](./database/built-in.md)
+- [开发 > 使用数据库](../guide/database/)
+- [API > 数据库](./database/built-in.md)
 
 ## 事件 (Events)
 
 参考：
 
-- [API 文档 / 事件 (Events)](./core/events.md)
+- [开发 > 事件系统](../guide/basic/events.md)
+- [API > 事件](./core/events.md)
 
 ## 群组 (Guild)
 
@@ -63,26 +60,26 @@
 
 参考：
 
-- [API 文档 / 输出日志 (Logger)](./utils/logger.md)
+- [API > 输出日志](./utils/logger.md)
 
 ## 中间件 (Middleware)
 
 参考：
 
-- [交互基础 / 中间件](../guide/basic/middleware.md)
+- [开发 > 中间件](../guide/basic/middleware.md)
 
 ## 数据模型 (Model)
 
 参考：
 
-- [数据库 / 扩展数据模型](../guide/database/model.md#扩展数据模型)
-- [API 文档 / 数据模型 (Model)](./database/model.md)
+- [开发 > 扩展数据模型](../guide/database/model.md#扩展数据模型)
+- [API > 数据模型](./database/model.md)
 
 ## 观察者 (Observer)
 
 参考：
 
-- [API 文档 / 观察者 (Observer)](./utils/observer.md)
+- [API > 观察者](./utils/observer.md)
 
 ## 平台 (Platform)
 
@@ -90,7 +87,7 @@
 
 参考：
 
-- [复用性 / 使用插件](../guide/plugin/)
+- [开发 > 使用插件](../guide/plugin/)
 
 ## 协议 (Protocol)
 
@@ -98,21 +95,21 @@
 
 参考：
 
-- [内置服务 / 网络服务 (Router)](./service/router.md)
+- [API > 网络服务](./service/router.md)
 
 ## 配置模式 (Schema)
 
 参考：
 
-- [模块化 / 定义配置模式](../guide/plugin/schema.md)
-- [API 文档 / 配置模式](./utils/schema.md)
+- [开发 > 配置模式](../guide/plugin/schema.md)
+- [API > 配置模式](./utils/schema.md)
 
 ## 消息元素 (Element)
 
 参考：
 
-- [交互基础 / 消息元素](../guide/basic/element.md)
-- [API 文档 / 消息元素](./message/syntax.md)
+- [开发 > 消息元素](../guide/basic/element.md)
+- [API > 消息元素](./message/syntax.md)
 
 ## 服务 (Service)
 
@@ -120,7 +117,7 @@
 
 参考：
 
-- [模块化 / 服务与依赖](../guide/plugin/service.md)
+- [开发 > 服务与依赖](../guide/plugin/service.md)
 
 ## 会话 (Session)
 
@@ -128,7 +125,7 @@
 
 参考：
 
-- [交互基础 / 事件系统](../guide/basic/events.md)
-- [API 文档 / 会话 (Session)](./core/session.md)
+- [开发 > 事件系统](../guide/basic/events.md)
+- [API > 会话](./core/session.md)
 
 ## 用户 (User)
