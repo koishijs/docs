@@ -27,7 +27,7 @@ Koishi 的数据库 API 实际上分为两部分：
 - **platform:** `string` 平台名
 - **id:** `string` 频道账号
 - **flag:** `number` 状态标签
-- **assignee:** `string` [受理人](../../manual/usage/platform.md#受理人机制)
+- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
 
 ## 全局接口
 
