@@ -75,8 +75,8 @@ export default async () => defineConfig({
           makeLink('指令系统', '/manual/usage/command.md'),
           makeLink('跨平台', '/manual/usage/platform.md'),
           makeLink('权限管理', '/manual/usage/permission.md'),
+          makeLink('过滤器', '/manual/usage/filter.md'),
           // makeLink('国际化', '/manual/usage/i18n.md'),
-          // makeLink('过滤器', '/manual/usage/filter.md'),
           // makeLink('服务与依赖', '/manual/usage/service.md'),
         ],
       }, {
