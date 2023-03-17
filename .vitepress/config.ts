@@ -81,11 +81,16 @@ export default async () => defineConfig({
       }, {
         text: '配方',
         items: [
-          makeLink('指令调用技巧', '/manual/recipe/execution.md'),
+          makeLink('指令进阶技巧', '/manual/recipe/execution.md'),
           makeLink('访问数据库', '/manual/recipe/dataview.md'),
           makeLink('维护多份配置', '/manual/recipe/multiple.md'),
           makeLink('搜索插件市场', '/manual/recipe/search.md'),
           makeLink('服务器部署', '/manual/recipe/server.md'),
+        ],
+      }, {
+        text: '附录',
+        items: [
+          makeLink('系统要求', '/manual/appendix/system.md'),
         ],
       }],
 
