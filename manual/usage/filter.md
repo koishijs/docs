@@ -1,4 +1,4 @@
-# 过滤器 <badge text="beta" type="warning"/>
+# 过滤器
 
 ::: danger
 此页面尚未完成。请过几天再来看看吧~

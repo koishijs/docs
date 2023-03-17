@@ -64,23 +64,33 @@ Koishi 官方目前提供了两个插件实现账号绑定，我们将逐一介�
 
 接着，再次进入「插件配置」界面，并点击 auth 插件。这里我们会看到有一个「管理员设置」：
 
-[图]
+![plugin-auth](/manual/console/plugin-auth.light.webp) {.light-only}
+
+![plugin-auth](/manual/console/plugin-auth.dark.webp) {.dark-only}
 
 填写你自己准备好的密码，然后点击「启用插件」。此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
 
-[图]
+![login-password](/manual/console/login-password.light.webp) {.light-only}
+
+![login-password](/manual/console/login-password.dark.webp) {.dark-only}
 
 ### 控制台登录 (普通用户)
 
-如果你是机器人的普通用户，而机器人也开放了控制台。那么你也通过控制台来绑定自己的平台账号。首先进入控制台，你会发现只有寥寥几个页面是能访问的。这是因为你尚未登录。
+如果你是机器人的普通用户，而机器人也开放了控制台。那么你也通过控制台来绑定自己的平台账号。进入控制台，你会发现只有寥寥几个页面是能访问的。这是因为你尚未登录。
 
 点击左下角的「登录」按钮，选择「平台账户登录」，并输入你的平台名和用户 ID。点击「获取验证码」，并把页面中出现的验证码通过上述账号私聊发送给机器人，即可完成登录。
 
-[图]
+![login-platform](/manual/console/login-platform.light.webp) {.light-only}
+
+![login-platform](/manual/console/login-platform.dark.webp) {.dark-only}
 
 ### 在控制台中绑定
 
-登录完成时，你会被重定向到个人页面。在这个页面中你可以修改自己的用户名和密码。普通用户第一次登录只能使用平台账户登录，而设置了密码后就可以使用用户密码登录了。
+登录完成后，你会被重定向到个人页面。在这个页面中你可以修改自己的用户名和密码。普通用户第一次登录只能使用平台账户登录，而设置了用户名和密码后，点击右上角的「应用更改」，未来就可以使用用户密码登录了。
+
+![profile](/manual/console/profile.light.webp) {.light-only}
+
+![profile](/manual/console/profile.dark.webp) {.dark-only}
 
 除了修改用户名密码外，你还可以在这个页面中绑定平台用户。点击「平台账号绑定」右侧的「添加」按钮，并使用你要绑定的账号完成一遍类似平台账户登录的流程，就大功告成了。
 
