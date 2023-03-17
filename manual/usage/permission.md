@@ -24,7 +24,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 安装 [admin](../../plugins/common/admin.md) 插件。该插件提供了名为 `authorize` 的指令，可以设置其他用户的权限等级：
 
 <chat-panel>
-<chat-message nickname="Alice">authorize 2 -u @Bob</chat-message>
+<chat-message nickname="Alice">authorize -u @Bob 2</chat-message>
 <chat-message nickname="Koishi">用户数据已修改。</chat-message>
 </chat-panel>
 
