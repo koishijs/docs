@@ -26,6 +26,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-callme](./common/callme.md)：设置昵称
 - [@koishijs/plugin-echo](./common/echo.md)：发送消息
 - [@koishijs/plugin-help](./common/help.md)：查看帮助
+- [@koishijs/plugin-inspect](./common/inspect.md)：会话信息
 - [@koishijs/plugin-rate-limit](./common/rate-limit.md)：速率控制
 
 ## 控制台功能

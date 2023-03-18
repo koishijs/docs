@@ -256,6 +256,7 @@ export default async () => defineConfig({
           makeLink('设置昵称 (Callme)', '/plugins/common/callme.md'),
           makeLink('发送消息 (Echo)', '/plugins/common/echo.md'),
           makeLink('查看帮助 (Help)', '/plugins/common/help.md'),
+          makeLink('会话信息 (Inspect)', '/plugins/common/inspect.md'),
           makeLink('速率限制 (Rate Limit)', '/plugins/common/rate-limit.md'),
         ],
       }, {
