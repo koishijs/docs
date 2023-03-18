@@ -119,7 +119,7 @@ send('get-greeting').then(data => {
 
 ## 权限管理
 
-当你引入了 @koishijs/plugin-auth 插件之后，你可以为你的页面访问和数据交互引入鉴权机制：
+当你引入了 @koishijs/plugin-login 插件之后，你可以为你的页面访问和数据交互引入鉴权机制：
 
 ```ts
 // 只有已登录并且权限等级不低于 3 的用户才能访问此接口

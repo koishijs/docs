@@ -58,10 +58,10 @@
   - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
 - 控制台相关 (部分插件也可脱离控制台使用)：
-  - [@koishijs/plugin-auth](../plugins/console/auth.md)：用户登录
   - [@koishijs/plugin-commands](../plugins/console/commands.md)：指令管理
   - [@koishijs/plugin-dataview](../plugins/console/dataview.md)：数据库操作
   - [@koishijs/plugin-logger](../plugins/console/logger.md)：日志管理
+  - [@koishijs/plugin-login](../plugins/console/login.md)：用户登录
   - [@koishijs/plugin-market](../plugins/console/market.md)：插件管理
   - [@koishijs/plugin-sandbox](../plugins/console/sandbox.md)：沙盒调试
 

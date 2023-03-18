@@ -42,15 +42,15 @@ Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」�
 
 ## 控制台登录
 
-[auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。此外，该插件还自带了一个管理员账号，对于刚刚搭建好 Koishi 的用户来说，这是最方便的提权方式。
+[login](../../plugins/console/login.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。此外，该插件还自带了一个管理员账号，对于刚刚搭建好 Koishi 的用户来说，这是最方便的提权方式。
 
 ### 配置登录插件
 
-进入「插件配置」界面，并点击 auth 插件。这里我们会看到有一个「管理员设置」：
+进入「插件配置」界面，并点击 login 插件。这里我们会看到有一个「管理员设置」：
 
-![plugin-auth](/manual/console/plugin-auth.light.webp) {.light-only}
+![plugin-login](/manual/console/plugin-login.light.webp) {.light-only}
 
-![plugin-auth](/manual/console/plugin-auth.dark.webp) {.dark-only}
+![plugin-login](/manual/console/plugin-login.dark.webp) {.dark-only}
 
 填写你自己准备好的密码，然后点击「启用插件」。此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
 
