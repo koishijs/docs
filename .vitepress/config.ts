@@ -146,7 +146,7 @@ export default async () => defineConfig({
         items: [
           makeLink('多语言支持', '/guide/i18n/index.md'),
           makeLink('编写翻译文件', '/guide/i18n/translation.md'),
-          makeLink('使用预设模板', '/guide/i18n/presets.md'),
+          // makeLink('使用预设模板', '/guide/i18n/presets.md'),
           makeLink('接入 Crowdin', '/guide/i18n/crowdin.md'),
         ],
       }, {
