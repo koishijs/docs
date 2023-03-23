@@ -13,7 +13,7 @@ Koishi 提供了一套命令行工具，用于读取配置文件快速启动应�
 ```json title=package.json
 {
   "scripts": {
-    "dev": "cross-env NODE_ENV=development koishi start -r esbuild-register -r yml-register --watch",
+    "dev": "cross-env NODE_ENV=development koishi start -r esbuild-register -r yml-register",
     "start": "koishi start"
   }
 }
@@ -55,7 +55,7 @@ yarn dev
 ```
 :::
 
-如你所见，`dev` 相当于在 `start` 指令的基础上添加了 `--watch` 等额外的参数。这些参数为我们提供了额外的特性。
+如你所见，`dev` 相当于在 `start` 指令的基础上添加了额外的参数和环境变量。这些参数为我们启用了额外的特性，而环境变量则能影响插件的部分配置。
 
 ### TypeScript 支持
 
@@ -82,15 +82,19 @@ Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register`
 
 ### 模块热替换
 
-如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！`--watch` 参数实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
+如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！内置插件 @koishijs/plugin-hmr 实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
 
 这里的行为也可以在配置文件中进行定制：
 
 ```yaml title=koishi.yml
-watch:
-  # 要忽略的文件列表，支持 glob patterns
-  ignore:
-    - some-file
+plugins:
+  group:develop:
+    $if: env.NODE_ENV === 'development'
+    hmr:
+      root: '.'
+      # 要忽略的文件列表，支持 glob patterns
+      ignore:
+        - some-file
 ```
 
 ::: tip
@@ -108,5 +112,5 @@ sudo tee -a /etc/sysctl.conf &&
 sudo sysctl -p
 ```
 
-另一种方案是使用 `yarn dev external/foo` (其中 foo 是你正在开发的插件目录，参见下一节的工作区指南)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。
+另一种方案是只监听部分子路径，例如将 `root` 改为 `external/foo` (其中 `foo` 是你正在开发的插件目录，参见下一节的工作区指南)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。当你同时开发多个插件时，你也可以将 `root` 改成一个数组来使用。
 :::

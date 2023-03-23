@@ -119,3 +119,13 @@ plugins:
 ```sh title=.env
 DISCORD_TOKEN = xxx
 ```
+
+环境变量的另一个作用是条件判断。例如官方提供的模板项目里：
+
+```yaml title=koishi.yml
+plugins:
+  desktop:
+    $if: env.KOISHI_AGENT?.includes('Desktop')
+```
+
+这样一来，只有当你使用桌面客户端启动 Koishi 时，这个插件才会被启用。
