@@ -10,7 +10,9 @@
       <market-package class="card"
         v-for="data in packages"
         :key="data.name"
-        :data="data" @query="onQuery"/>
+        :data="data"
+        @query="onQuery"
+        gravatar="https://cravatar.cn"/>
     </div>
   </div>
   <div class="market-container loading" v-else>
