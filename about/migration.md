@@ -8,8 +8,8 @@
 
 - koishi-core 与 node 解耦后更名为 @koishijs/core
 - koishi-utils 与 node 解耦后更名为 @koishijs/utils
+- 配置文件加载相关功能独立为 @koishijs/loader
 - koishi 为上述库加上 node 相关代码的整合
-- 原来的 koishi 现在更名为 @koishijs/cli
 - **现存的官方插件都改为 @koishijs/plugin-xxx**
 - **所有官方适配器也调整为插件**，名称与上一条一致
 - koishi-test-utils 被拆分为多个部分：
@@ -51,9 +51,14 @@
 
 ### 新增的包
 
+- 开发相关：
+  - @koishijs/plugin-hmr：提供插件级别的热重载功能
 - 命令行相关：
   - create-koishi：可结合 npm init 或 yarn create 使用，用于快速搭建项目
   - @koishijs/scripts：用于模板项目的命令行工具
+- 适配器相关：
+  - [@koishijs/plugin-adapter-feishu](../plugins/adapter/feishu.md)：飞书适配器
+  - [@koishijs/plugin-adapter-qqguild](../plugins/adapter/qqguild.md)：QQ 频道适配器
 - 数据库相关：
   - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
@@ -64,6 +69,8 @@
   - [@koishijs/plugin-login](../plugins/console/login.md)：用户登录
   - [@koishijs/plugin-market](../plugins/console/market.md)：插件管理
   - [@koishijs/plugin-sandbox](../plugins/console/sandbox.md)：沙盒调试
+- 杂项：
+  - [@koishijs/plugin-inspect](../plugins/common/inspect.md)：会话信息
 
 ### 移除的包
 
@@ -72,7 +79,7 @@
 - [koishi-plugin-chess](https://github.com/koishijs/koishi-plugin-chess) (社区维护)
 - [koishi-plugin-image-search](https://github.com/koishijs/koishi-plugin-image-search) (社区维护)
 - ~~[koishi-plugin-tomon](https://github.com/koishijs/koishi-plugin-tomon)~~ (已归档)
-- [koishi-plugin-tools](https://github.com/koishijs/koishi-plugin-tools) (社区维护)
+- [koishi-plugin-tools](https://github.com/koishijs/koishi-plugin-tools) (拆分后由社区维护)
 - ~~[koishi-plugin-monitor](https://github.com/koishijs/koishi-plugin-monitor)~~ (已归档)
 
 ## 核心功能变更

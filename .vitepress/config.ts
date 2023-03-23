@@ -13,6 +13,7 @@ const ecosystem = {
 
 export default async () => defineConfig({
   title: 'Koishi',
+  description: '创建跨平台、可扩展、高性能的机器人',
 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -264,7 +265,6 @@ export default async () => defineConfig({
         items: [
           makeLink('控制台 (Console)', '/plugins/console/index.md'),
           makeLink('数据统计 (Analytics)', '/plugins/console/analytics.md'),
-          makeLink('聊天工具 (Chat)', '/plugins/console/chat.md'),
           makeLink('指令管理 (Commands)', '/plugins/console/commands.md'),
           makeLink('数据库操作 (Dataview)', '/plugins/console/dataview.md'),
           makeLink('插件依赖图 (Insight)', '/plugins/console/insight.md'),
