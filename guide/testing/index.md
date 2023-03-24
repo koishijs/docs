@@ -30,10 +30,11 @@ yarn add mocha chai @koishijs/plugin-mock -D
 接着创建存放测试文件的 `tests` 目录，并在其中新建一个 `index.spec.js` 文件，开始编写你的单元测试：
 
 ```ts title=tests/index.spec.js no-extra-header
-import { App } from 'koishi'
+import { Context } from 'koishi'
 import mock from '@koishijs/plugin-mock'
 
-const app = new App()
+const app = new Context()
+
 app.plugin(mock)
 ```
 
@@ -68,10 +69,10 @@ module.exports = {
 ```ts no-extra-header
 /// <reference types="mocha" />
 // ---cut---
-import { App } from 'koishi'
+import { Context } from 'koishi'
 import mock from '@koishijs/plugin-mock'
 
-const app = new App()
+const app = new Context()
 app.plugin(mock)
 
 // 创建一个 userId 为 123 的私聊客户端
@@ -88,6 +89,7 @@ app.middleware(({ content }, next) => {
 
 // 这一句不能少，要等待 app 启动完成
 before(() => app.start())
+after(() => app.stop())
 
 it('example 1', async () => {
   // 将“天王盖地虎”发送给机器人将会获得“宝塔镇河妖”的回复
@@ -106,11 +108,11 @@ it('example 1', async () => {
 @koishijs/plugin-database-memory 是 Koishi 的一个基于内存的数据库实现，非常适合用于单元测试。
 
 ```ts no-extra-header
-import { App } from 'koishi'
+import { Context } from 'koishi'
 import mock from '@koishijs/plugin-mock'
 import memory from '@koishijs/plugin-database-memory'
 
-const app = new App()
+const app = new Context()
 app.plugin(mock)
 app.plugin(memory)
 
@@ -129,6 +131,8 @@ before(async () => {
   await app.mock.initUser('123', 1)
   await app.mock.initUser('456', 2)
 })
+
+after(() => app.stop())
 
 it('example 2', async () => {
   // 用户 123 尝试调用 foo 指令，但是权限不足

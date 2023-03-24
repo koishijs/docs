@@ -223,11 +223,6 @@ export default async () => defineConfig({
           makeLink('随机操作 (Random)', '/api/utils/random.md'),
           makeLink('其他工具 (Misc)', '/api/utils/misc.md'),
         ],
-      }, {
-        text: '测试工具',
-        items: [
-          makeLink('模拟环境 (Mock)', '/api/testing/'),
-        ],
       }],
 
       '/plugins/': [ecosystem, {
@@ -274,6 +269,11 @@ export default async () => defineConfig({
           makeLink('插件管理 (Market)', '/plugins/console/market.md'),
           makeLink('沙箱调试 (Sandbox)', '/plugins/console/sandbox.md'),
           makeLink('运行状态 (Status)', '/plugins/console/status.md'),
+        ],
+      }, {
+        text: '开发工具',
+        items: [
+          makeLink('测试工具 (Mock)', '/plugins/develop/mock.md'),
         ],
       }],
 
