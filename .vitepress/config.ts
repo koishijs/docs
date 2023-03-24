@@ -89,9 +89,10 @@ export default async () => defineConfig({
           makeLink('公网部署', '/manual/recipe/server.md'),
         ],
       }, {
-        text: '附录',
+        text: '启动器',
         items: [
-          makeLink('系统要求', '/manual/appendix/system.md'),
+          makeLink('系统要求', '/manual/launcher/system.md'),
+          makeLink('命令行工具', '/manual/launcher/cli.md'),
         ],
       }],
 
