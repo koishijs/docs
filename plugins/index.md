@@ -42,3 +42,8 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-market](./console/market.md)：插件管理
 - [@koishijs/plugin-sandbox](./console/sandbox.md)：沙箱调试
 - [@koishijs/plugin-status](./console/status.md)：运行状态
+
+## 开发工具
+
+- [@koishijs/plugin-hmr](./develop/hmr.md)：热重载
+- [@koishijs/plugin-mock](./develop/mock.md)：测试工具

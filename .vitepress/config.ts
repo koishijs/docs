@@ -273,6 +273,7 @@ export default async () => defineConfig({
       }, {
         text: '开发工具',
         items: [
+          makeLink('模块热替换 (HMR)', '/plugins/develop/hmr.md'),
           makeLink('测试工具 (Mock)', '/plugins/develop/mock.md'),
         ],
       }],
