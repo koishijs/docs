@@ -67,8 +67,8 @@ footer:
     items:
       - text: Discord
         link: /plugins/adapter/discord.html
-      - text: Feishu (飞书)
-        link: /plugins/adapter/feishu.html
+      - text: Lark (飞书)
+        link: /plugins/adapter/lark.html
       - text: Kook (开黑啦)
         link: /plugins/adapter/kook.html
       - text: OneBot (QQ)

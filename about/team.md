@@ -22,7 +22,7 @@
 ### MaikoTan
 
 - Translations
-- satorijs/adapter-feishu
+- satorijs/adapter-lark
 - https://github.com/maikotan
 
 ## 团队成员

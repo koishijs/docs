@@ -57,7 +57,7 @@
   - create-koishi：可结合 npm init 或 yarn create 使用，用于快速搭建项目
   - @koishijs/scripts：用于模板项目的命令行工具
 - 适配器相关：
-  - [@koishijs/plugin-adapter-feishu](../plugins/adapter/feishu.md)：飞书适配器
+  - [@koishijs/plugin-adapter-lark](../plugins/adapter/lark.md)：飞书适配器
   - [@koishijs/plugin-adapter-qqguild](../plugins/adapter/qqguild.md)：QQ 频道适配器
 - 数据库相关：
   - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现

@@ -16,9 +16,9 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
-## 飞书
+## Lark / 飞书
 
-1. 在 [开发者后台](https://open.feishu.cn/app/) 点击「新建企业自建应用」，点击应用名称进入应用详情页
+1. 在开发者后台 ([飞书](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) 点击「新建企业自建应用」，点击应用名称进入应用详情页
 2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段
 3. 点击事件订阅，获取 Encrypt Key 和 Verification Token 值，填写到插件配置对应字段
 4. 在事件订阅页面，确保添加了 `接收消息v2.0` (`im.message.receive_v1`) 事件
@@ -26,7 +26,7 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 6. 将第 5 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的「请求地址配置」中，并点击完成
 7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确
 
-参考：[@koishijs/plugin-adapter-feishu](../../plugins/adapter/feishu.md)
+参考：[@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
 ## KOOK
 
