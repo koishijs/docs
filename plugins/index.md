@@ -40,7 +40,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-logger](./console/logger.md)：日志管理
 - [@koishijs/plugin-login](./console/login.md)：用户登录
 - [@koishijs/plugin-market](./console/market.md)：插件管理
-- [@koishijs/plugin-sandbox](./console/sandbox.md)：沙箱调试
+- [@koishijs/plugin-sandbox](./console/sandbox.md)：沙盒调试
 - [@koishijs/plugin-status](./console/status.md)：运行状态
 
 ## 开发工具

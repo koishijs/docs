@@ -151,89 +151,30 @@ ctx.emit(thisArg, 'custom-event', arg1, arg2, ...rest)
 
 触发事件时传入的一参数如果是对象，则会作为事件回调函数的 `this`。并且如果这个对象有 `Context.filter` 属性，那么这个属性将被用于过滤触发上下文。对应的值是一个函数，传入一个上下文对象，返回一个 boolean 表示是否应该在该上下文上触发该事件。而上面介绍的会话事件只是一种特殊情况而已。
 
-<!-- ### 延时发送
+## 扩展事件系统
 
-如果你需要连续发送多条消息，那么在各条消息之间留下一定的时间间隔是很重要的：一方面它可以防止消息刷屏和消息错位（后发的条消息呈现在先发的消息前面），提高了阅读体验；另一方面它能够有效降低机器人发送消息的频率，防止被平台误封。这个时候，`session.sendQueued()` 可以解决你的问题。
+在本节的最后，我们来聊聊插件扩展的事件系统。
 
-```ts
-// 发送两条消息，中间间隔一段时间，这个时间由系统计算决定
-await session.sendQueued('message1')
-await session.sendQueued('message2')
+如果你是插件的开发者，想要自定义一些事件，那么只需要在你的插件中添加下面的代码：
 
-// 清空等待队列
-await session.cancelQueued()
-```
-
-你也可以在发送时手动定义等待的时长：
-
-```ts
-import { Time } from 'koishi'
-
-// 如果消息队列非空，在前一条消息发送完成后 1s 发送本消息
-await session.sendQueued('message3', Time.second)
-
-// 清空等待队列，并设定下一条消息发送距离现在至少 0.5s
-await session.cancelQueued(0.5 * Time.second)
-```
-
-事实上，对于不同的消息长度，系统等待的时间也是不一样的，你可以通过配置项修改这个行为：
-
-```yaml
-delay:
-  # 消息里每有一个字符就等待 0.02s
-  character: 20
-  # 每条消息至少等待 0.5s
-  message: 500
-```
-
-这样一来，一段长度为 60 个字符的消息发送后，下一条消息发送前就需要等待 1.2 秒了。
-
-### 等待用户输入
-
-当你需要进行一些交互式操作时，可以使用 `session.prompt()`：
-
-```ts
-// @errors: 1108
-await session.send('请输入用户名：')
-
-const name = await session.prompt()
-if (!name) return '输入超时。'
-
-// 执行后续操作
-await ctx.database.setUser(session.platform, session.userId, { name })
-return `${name}，请多指教！`
-```
-
-你可以给这个方法传入一个 `timeout` 参数，或使用 `delay.prompt` 配置项，来作为等待的时间。
-
-### 发送广播消息
-
-有的时候你可能希望向多个频道同时发送消息，我们也专门设计了相关的接口。
-
-```ts
-// 使用当前机器人账户向多个频道发送消息
-await session.bot.broadcast(['123456', '456789'], content)
-
-// 如果你有多个账号，请使用 ctx.broadcast，并在频道编号前加上平台名称
-await ctx.broadcast(['onebot:123456', 'discord:456789'], content)
-
-// 或者直接将消息发给所有频道
-await ctx.broadcast(content)
-```
-
-如果你希望广播消息的发送也有时间间隔的话，可以使用 `delay.broadcast` 配置项。
-
-### 执行指令
-
-我们还可以实用 `session.execute()` 来让用户执行某条指令：
-
-```ts
-// 当用户输入“查看帮助”时，执行 help 指令
-ctx.middleware((session, next) => {
-  if (session.content === '查看帮助') {
-    return session.execute('help', next)
-  } else {
-    return next()
+```ts{5}
+declare module 'koishi' {
+  interface Events {
+    // 方法名称对应自定义事件的名称
+    // 方法签名对应事件的回调函数签名
+    'kook/message-btn-click'(...args: any[]): void
   }
-})
-``` -->
+}
+```
+
+如果你监听的事件由其他插件扩展而来，那么你同样需要通过一行额外的代码来导入相应的类型：
+
+```ts{4}
+// 从 @koishijs/plugin-adapter-kook 导入事件类型
+// 这里的 import {} from 会在编译时被删除，不会影响运行时的行为
+// 请不要写成 import '@koishijs/plugin-adapter-kook'
+import {} from '@koishijs/plugin-adapter-kook'
+
+// 如果没有上面的类型导入，下面的代码会报错
+ctx.on('kook/message-btn-click', callback)
+```
