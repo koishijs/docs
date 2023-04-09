@@ -35,6 +35,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-analytics](./console/analytics.md)：数据统计
 - [@koishijs/plugin-commands](./console/commands.md)：指令管理
 - [@koishijs/plugin-dataview](./console/dataview.md)：数据库操作
+- [@koishijs/plugin-explorer](./console/explorer.md)：资源管理器
 - [@koishijs/plugin-insight](./console/insight.md)：插件依赖图
 - [@koishijs/plugin-locales](./console/locales.md)：本地翻译
 - [@koishijs/plugin-logger](./console/logger.md)：日志管理

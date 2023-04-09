@@ -263,6 +263,7 @@ export default async () => defineConfig({
           makeLink('数据统计 (Analytics)', '/plugins/console/analytics.md'),
           makeLink('指令管理 (Commands)', '/plugins/console/commands.md'),
           makeLink('数据库操作 (Dataview)', '/plugins/console/dataview.md'),
+          makeLink('资源管理器 (Explorer)', '/plugins/console/explorer.md'),
           makeLink('插件依赖图 (Insight)', '/plugins/console/insight.md'),
           makeLink('本地翻译 (Locales)', '/plugins/console/locales.md'),
           makeLink('日志管理 (Logger)', '/plugins/console/logger.md'),
