@@ -2,7 +2,6 @@
 
 - 标有 <badge text="会话"/> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
 - 标有 <badge text="会话+广播"/> 的组件只能在会话环境或 `ctx.broadcast()` 中使用
-- 标有 <badge text="无限制"/> 的组件可以在任何环境下使用
 
 ## 核心组件
 
@@ -69,7 +68,7 @@ foo:
 <chat-message nickname="Koishi">剩余时间：1 分钟 55 秒</chat-message>
 </chat-panel>
 
-### 随机选取 (random) <badge text="无限制"/> <badge type="warning" text="实验性"/>
+### 随机选取 (random) <badge type="warning" text="实验性"/>
 
 选择随机的子元素。
 
@@ -84,7 +83,7 @@ foo:
 <chat-message nickname="Koishi">此次抛硬币的结果是反面</chat-message>
 </chat-panel>
 
-### 复数 (plural) <badge text="无限制"/> <badge type="warning" text="实验性"/>
+### 复数 (plural) <badge type="warning" text="实验性"/>
 
 - **count:** 用于判断的数值
 
@@ -106,8 +105,6 @@ You have <plural count={count}>
 
 ## 扩展组件
 
-### 网页渲染 (html) <badge text="无限制"/>
+### 网页渲染 (html)
 
-### 内容审查 (censor) <badge text="无限制"/>
-
-### Markdown (markdown) <badge text="无限制"/>
+### 内容审查 (censor)
