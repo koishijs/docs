@@ -420,7 +420,7 @@ await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
 
 ## 常见问题
 
-#### 我不知道应该下载 release 中的哪一个文件。
+#### 问题：我不知道应该下载 release 中的哪一个文件。
 
 在终端执行：
 
@@ -435,19 +435,19 @@ node -e "console.log(process.arch)"
 - arm64: arm64
 - arm: armv7
 
-#### 我的 go-cqhttp 初次启动时并没有生成 config.yml。
+#### 问题：我的 go-cqhttp 初次启动时并没有生成 config.yml。
 
 请检查你的 go-cqhttp 是否为最新版本。
 
-#### 使用 HTTP 或反向 WebSocket 时无法接收消息，同时 go-cqhttp 有报错。
+#### 问题：使用 HTTP 或反向 WebSocket 时无法接收消息，同时 go-cqhttp 有报错。
 
 请检查你的配置是否正确。尤其注意以下几点：
 
-- koishi.yml 中的 `selfId` 必须写并且必须是字符串
-- 如果你使用 HTTP：请不要忘记配置 post，同时默认情况下 post 的 `url` 字段应该包含 `/onebot`
+- `koishi.yml` 中的 `selfId` 必须写并且必须是字符串
+- 如果你使用 HTTP：请不要忘记配置 `post`，同时默认情况下 `post` 的 `url` 字段应该包含 `/onebot`
 - 如果你使用反向 WebSocket：默认情况下 `universal` 字段应该包含 `/onebot`
 
-#### 发送消息时提示「账号可能被风控」。
+#### 问题：发送消息时提示「账号可能被风控」。
 
 以下内容摘自 [Mrs4s/go-cqhttp#211](https://github.com/Mrs4s/go-cqhttp/issues/211#issuecomment-812059109) 和 [Mrs4s/go-cqhttp#633](https://github.com/Mrs4s/go-cqhttp/issues/633)：
 
@@ -459,12 +459,12 @@ node -e "console.log(process.arch)"
 - 不要在新设备登录不久发长信息 / xml / json 信息，以 100 字内的信息最佳
 - 不要过分使用敏感操作
 
-#### 为什么其他平台的适配器名字都与平台一致，只有 QQ 对应 OneBot？
+#### 问题：为什么其他平台的适配器名字都与平台一致，只有 QQ 对应 OneBot？
 
 这是由多方原因共同导致的。
 
 首先，许多平台都公开了自己的机器人接口，只有腾讯官方对机器人采取封杀的态度。因此只有 QQ 的适配器是基于第三方协议实现的，OneBot 正是这个协议的名字。而第三方协议远远不止一个，所以不应该用 QQ 这个笼统的名称。在未来也可能出现其他面向 QQ 的适配器。
 
-反过来，OneBot 作为一个协议，未来也可能支持更多的聊天平台。届时只需有 @koishijs/plugin-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。
+反过来，OneBot 作为一个协议，未来也可能支持更多的聊天平台。届时只需有 @koishijs/plugin-adapter-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。
 
-但尽管这么说，从目前来看，当我们在讨论用 Koishi 实现 QQ 机器人时，都默认采用这个协议。
+就目前而言，当我们在讨论用 Koishi 实现 QQ 机器人时，都默认指代这个协议。

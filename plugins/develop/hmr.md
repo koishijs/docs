@@ -25,7 +25,7 @@
 - 类型：`string | string[]`
 - 默认值：`['**/node_modules/**', '**/.git/**', '**/logs/**']`
 
-要忽略的文件或目录。使用 [Glob Patterns](https://github.com/micromatch/micromatch) 语法。
+要忽略的文件或目录。支持 [Glob Patterns](https://github.com/micromatch/micromatch) 语法。
 
 ### debounce
 

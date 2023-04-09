@@ -45,5 +45,5 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 
 ## 开发工具
 
-- [@koishijs/plugin-hmr](./develop/hmr.md)：热重载
+- [@koishijs/plugin-hmr](./develop/hmr.md)：模块热替换
 - [@koishijs/plugin-mock](./develop/mock.md)：测试工具
