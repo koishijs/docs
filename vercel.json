@@ -1,8 +1,12 @@
 {
   "redirects": [
     {
-      "source": "/:path((?!zh-CN|en-US).*)",
-      "destination": "/zh-CN/:path"
+      "source": "/:path((?!zh-CN|en-US).*).html",
+      "destination": "/zh-CN/:path.html"
+    },
+    {
+      "source": "/:path((?!zh-CN|en-US).*)/",
+      "destination": "/zh-CN/:path/"
     }
   ],
   "github": {

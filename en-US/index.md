@@ -1,6 +1,14 @@
 ---
 layout: home
 
+links:
+  starter: /zh-CN/manual/starter/
+
+home:
+  desc: 创建跨平台、可扩展、高性能的机器人
+  primary: Get Started
+  secondary: Learn More
+
 features:
   - title: 实时监控
     desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
@@ -19,6 +27,10 @@ features:
     image: /manual/console/sandbox
 
 development:
+  title: 专为开发者打造
+  desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
+
+advantages:
   - title: 类型支持
     desc: Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档。
     link: /

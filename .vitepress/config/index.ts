@@ -1,23 +1,17 @@
 import { defineConfig } from '@koishijs/vitepress'
 import { makeLink } from './utils'
 
-const ecosystemCN = {
-  text: '插件',
-  items: [
-    makeLink('插件市场', '/zh-CN/market/'),
-    makeLink('服务类插件导航', '/zh-CN/market/service.md'),
-    makeLink('官方插件一览', '/zh-CN/plugins/'),
-  ],
-}
+const ecosystemCN = makeLink('插件', '/zh-CN', () => [
+  makeLink('插件市场', '/market/'),
+  makeLink('服务类插件导航', '/market/service.md'),
+  makeLink('官方插件一览', '/plugins/'),
+])
 
-const ecosystemUS = {
-  text: 'Plugins',
-  items: [
-    makeLink('Plugin market', '/en-US/market/'),
-    makeLink('服务类插件导航', '/en-US/market/service.md'),
-    makeLink('官方插件一览', '/en-US/plugins/'),
-  ],
-}
+const ecosystemUS = makeLink('Plugins', '/en-US', () => [
+  makeLink('Plugin market', '/market/'),
+  makeLink('服务类插件导航', '/market/service.md'),
+  makeLink('官方插件一览', '/plugins/'),
+])
 
 export default async () => defineConfig({
   title: 'Koishi',
@@ -153,150 +147,127 @@ export default async () => defineConfig({
             // ]),
           ],
     
-          '/zh-CN/api/': [{
-            items: [
-              makeLink('总览', '/zh-CN/api/'),
-              // makeLink('术语表', '/zh-CN/api/glossary.md'),
-            ],
-          }, {
-            text: '核心模块',
-            items: [
-              makeLink('适配器 (Adapter)', '/zh-CN/api/core/adapter.md'),
-              makeLink('应用 (App)', '/zh-CN/api/core/app.md'),
-              makeLink('机器人 (Bot)', '/zh-CN/api/core/bot.md'),
-              makeLink('指令 (Command)', '/zh-CN/api/core/command.md'),
-              makeLink('上下文 (Context)', '/zh-CN/api/core/context.md'),
-              makeLink('事件 (Events)', '/zh-CN/api/core/events.md'),
-              makeLink('会话 (Session)', '/zh-CN/api/core/session.md'),
-            ],
-          }, {
-            text: '消息元素',
-            items: [
-              makeLink('语法规范', '/zh-CN/api/message/syntax.md'),
-              makeLink('标准元素', '/zh-CN/api/message/elements.md'),
-              makeLink('内置组件', '/zh-CN/api/message/components.md'),
-              makeLink('渲染 API', '/zh-CN/api/message/api.md'),
-            ],
-          }, {
-            text: '内置服务',
-            items: [
-              makeLink('机器人 (Bots)', '/zh-CN/api/service/bots.md'),
-              makeLink('国际化 (I18n)', '/zh-CN/api/service/i18n.md'),
-              makeLink('事件系统 (Lifecycle)', '/zh-CN/api/service/lifecycle.md'),
-              makeLink('插件系统 (Registry)', '/zh-CN/api/service/registry.md'),
-              makeLink('选择器 (Selector)', '/zh-CN/api/service/selector.md'),
-              makeLink('网络服务 (Router)', '/zh-CN/api/service/router.md'),
-              makeLink('网络请求 (HTTP)', '/zh-CN/api/service/http.md'),
-            ],
-          }, {
-            text: '数据库',
-            items: [
-              makeLink('内置数据结构', '/zh-CN/api/database/built-in.md'),
-              makeLink('数据库操作 (Database)', '/zh-CN/api/database/database.md'),
-              makeLink('数据模型 (Model)', '/zh-CN/api/database/model.md'),
-              makeLink('查询表达式 (Query)', '/zh-CN/api/database/query.md'),
-              makeLink('求值表达式 (Eval)', '/zh-CN/api/database/evaluation.md'),
-            ],
-          }, {
-            text: '其他功能',
-            items: [
-              makeLink('配置模式 (Schema)', '/zh-CN/api/utils/schema.md'),
-              makeLink('观察者 (Observer)', '/zh-CN/api/utils/observer.md'),
-              makeLink('输出日志 (Logger)', '/zh-CN/api/utils/logger.md'),
-              makeLink('随机操作 (Random)', '/zh-CN/api/utils/random.md'),
-              makeLink('其他工具 (Misc)', '/zh-CN/api/utils/misc.md'),
-            ],
-          }],
+          '/zh-CN/api/': [
+            makeLink('', '/zh-CN/api', () => [
+              makeLink('总览', '/'),
+              // makeLink('术语表', '/glossary.md'),
+            ]),
+            makeLink('核心模块', '/zh-CN/api/core', () => [
+              makeLink('适配器 (Adapter)', '/adapter.md'),
+              makeLink('应用 (App)', '/app.md'),
+              makeLink('机器人 (Bot)', '/bot.md'),
+              makeLink('指令 (Command)', '/command.md'),
+              makeLink('上下文 (Context)', '/context.md'),
+              makeLink('事件 (Events)', '/events.md'),
+              makeLink('会话 (Session)', '/session.md'),
+            ]),
+            makeLink('消息元素', '/zh-CN/api/message', () => [
+              makeLink('语法规范', '/syntax.md'),
+              makeLink('标准元素', '/elements.md'),
+              makeLink('内置组件', '/components.md'),
+              makeLink('渲染 API', '/api.md'),
+            ]),
+            makeLink('内置服务', '/zh-CN/api/service', () => [
+              makeLink('机器人 (Bots)', '/bots.md'),
+              makeLink('国际化 (I18n)', '/i18n.md'),
+              makeLink('事件系统 (Lifecycle)', '/lifecycle.md'),
+              makeLink('插件系统 (Registry)', '/registry.md'),
+              makeLink('选择器 (Selector)', '/selector.md'),
+              makeLink('网络服务 (Router)', '/router.md'),
+              makeLink('网络请求 (HTTP)', '/http.md'),
+            ]),
+            makeLink('数据库', '/zh-CN/api/database', () => [
+              makeLink('内置数据结构', '/built-in.md'),
+              makeLink('数据库操作 (Database)', '/database.md'),
+              makeLink('数据模型 (Model)', '/model.md'),
+              makeLink('查询表达式 (Query)', '/query.md'),
+              makeLink('求值表达式 (Eval)', '/evaluation.md'),
+            ]),
+            makeLink('其他功能', '/zh-CN/api/utils', () => [
+              makeLink('配置模式 (Schema)', '/schema.md'),
+              makeLink('观察者 (Observer)', '/observer.md'),
+              makeLink('输出日志 (Logger)', '/logger.md'),
+              makeLink('随机操作 (Random)', '/random.md'),
+              makeLink('其他工具 (Misc)', '/misc.md'),
+            ]),
+          ],
     
-          '/zh-CN/plugins/': [ecosystemCN, {
-            text: '适配器支持',
-            items: [
-              makeLink('适配器：Discord', '/zh-CN/plugins/adapter/discord.md'),
-              makeLink('适配器：Kook', '/zh-CN/plugins/adapter/kook.md'),
-              makeLink('适配器：Lark', '/zh-CN/plugins/adapter/lark.md'),
-              makeLink('适配器：OneBot', '/zh-CN/plugins/adapter/onebot.md'),
-              makeLink('适配器：QQGuild', '/zh-CN/plugins/adapter/qqguild.md'),
-              makeLink('适配器：Telegram', '/zh-CN/plugins/adapter/telegram.md'),
-            ],
-          }, {
-            text: '数据库支持',
-            items: [
-              makeLink('数据库：Memory', '/zh-CN/plugins/database/memory.md'),
-              makeLink('数据库：MongoDB', '/zh-CN/plugins/database/mongo.md'),
-              makeLink('数据库：MySQL', '/zh-CN/plugins/database/mysql.md'),
-              makeLink('数据库：SQLite', '/zh-CN/plugins/database/sqlite.md'),
-            ],
-          }, {
-            text: '常用功能',
-            items: [
-              makeLink('数据管理 (Admin)', '/zh-CN/plugins/common/admin.md'),
-              makeLink('账号绑定 (Bind)', '/zh-CN/plugins/common/bind.md'),
-              makeLink('发送广播 (Broadcast)', '/zh-CN/plugins/common/broadcast.md'),
-              makeLink('设置昵称 (Callme)', '/zh-CN/plugins/common/callme.md'),
-              makeLink('发送消息 (Echo)', '/zh-CN/plugins/common/echo.md'),
-              makeLink('查看帮助 (Help)', '/zh-CN/plugins/common/help.md'),
-              makeLink('会话信息 (Inspect)', '/zh-CN/plugins/common/inspect.md'),
-              makeLink('速率限制 (Rate Limit)', '/zh-CN/plugins/common/rate-limit.md'),
-            ],
-          }, {
-            text: '控制台功能',
-            items: [
-              makeLink('控制台 (Console)', '/zh-CN/plugins/console/index.md'),
-              makeLink('数据统计 (Analytics)', '/zh-CN/plugins/console/analytics.md'),
-              makeLink('指令管理 (Commands)', '/zh-CN/plugins/console/commands.md'),
-              makeLink('数据库操作 (Dataview)', '/zh-CN/plugins/console/dataview.md'),
-              makeLink('资源管理器 (Explorer)', '/zh-CN/plugins/console/explorer.md'),
-              makeLink('插件依赖图 (Insight)', '/zh-CN/plugins/console/insight.md'),
-              makeLink('本地翻译 (Locales)', '/zh-CN/plugins/console/locales.md'),
-              makeLink('日志管理 (Logger)', '/zh-CN/plugins/console/logger.md'),
-              makeLink('用户登录 (Login)', '/zh-CN/plugins/console/login.md'),
-              makeLink('插件管理 (Market)', '/zh-CN/plugins/console/market.md'),
-              makeLink('沙箱调试 (Sandbox)', '/zh-CN/plugins/console/sandbox.md'),
-              makeLink('运行状态 (Status)', '/zh-CN/plugins/console/status.md'),
-            ],
-          }, {
-            text: '开发工具',
-            items: [
-              makeLink('模块热替换 (HMR)', '/zh-CN/plugins/develop/hmr.md'),
-              makeLink('测试工具 (Mock)', '/zh-CN/plugins/develop/mock.md'),
-            ],
-          }],
+          '/zh-CN/plugins/': [
+            ecosystemCN,
+            makeLink('适配器支持', '/zh-CN/plugins/adapter', () => [
+              makeLink('适配器：Discord', '/discord.md'),
+              makeLink('适配器：Kook', '/kook.md'),
+              makeLink('适配器：Lark', '/lark.md'),
+              makeLink('适配器：OneBot', '/onebot.md'),
+              makeLink('适配器：QQGuild', '/qqguild.md'),
+              makeLink('适配器：Telegram', '/telegram.md'),
+            ]),
+            makeLink('数据库支持', '/zh-CN/plugins/database', () => [
+              makeLink('数据库：Memory', '/memory.md'),
+              makeLink('数据库：MongoDB', '/mongo.md'),
+              makeLink('数据库：MySQL', '/mysql.md'),
+              makeLink('数据库：SQLite', '/sqlite.md'),
+            ]),
+            makeLink('常用功能', '/zh-CN/plugins/common', () => [
+              makeLink('数据管理 (Admin)', '/admin.md'),
+              makeLink('账号绑定 (Bind)', '/bind.md'),
+              makeLink('发送广播 (Broadcast)', '/broadcast.md'),
+              makeLink('设置昵称 (Callme)', '/callme.md'),
+              makeLink('发送消息 (Echo)', '/echo.md'),
+              makeLink('查看帮助 (Help)', '/help.md'),
+              makeLink('会话信息 (Inspect)', '/inspect.md'),
+              makeLink('速率限制 (Rate Limit)', '/rate-limit.md'),
+            ]),
+            makeLink('控制台功能', '/zh-CN/plugins/console', () => [
+              makeLink('控制台 (Console)', '/index.md'),
+              makeLink('数据统计 (Analytics)', '/analytics.md'),
+              makeLink('指令管理 (Commands)', '/commands.md'),
+              makeLink('数据库操作 (Dataview)', '/dataview.md'),
+              makeLink('资源管理器 (Explorer)', '/explorer.md'),
+              makeLink('插件依赖图 (Insight)', '/insight.md'),
+              makeLink('本地翻译 (Locales)', '/locales.md'),
+              makeLink('日志管理 (Logger)', '/logger.md'),
+              makeLink('用户登录 (Login)', '/login.md'),
+              makeLink('插件管理 (Market)', '/market.md'),
+              makeLink('沙箱调试 (Sandbox)', '/sandbox.md'),
+              makeLink('运行状态 (Status)', '/status.md'),
+            ]),
+            makeLink('开发工具', '/zh-CN/plugins/develop', () => [
+              makeLink('模块热替换 (HMR)', '/hmr.md'),
+              makeLink('测试工具 (Mock)', '/mock.md'),
+            ]),
+          ],
     
           '/zh-CN/market/': [ecosystemCN],
     
-          '/zh-CN/about/': [{
-            text: '关于我们',
-            items: [
-              makeLink('许可证', '/zh-CN/about/license.md'),
-              makeLink('参与讨论', '/zh-CN/about/contact.md'),
-              makeLink('团队介绍', '/zh-CN/about/team.md'),
-              makeLink('社区资源', '/zh-CN/about/community.md'),
-            ],
-          }, {
-            text: '更新与迁移',
-            items: [
-              makeLink('发展史', '/zh-CN/about/history.md'),
-              makeLink('从 v3 迁移', '/zh-CN/about/migration.md'),
-              makeLink('版本内迁移', '/zh-CN/about/upgrade.md'),
-              makeLink('v4.1 版本介绍', '/zh-CN/about/releases/v4.1.md'),
-              makeLink('v4.2 版本介绍', '/zh-CN/about/releases/v4.2.md'),
-              makeLink('v4.3 版本介绍', '/zh-CN/about/releases/v4.3.md'),
-              makeLink('v4.4 版本介绍', '/zh-CN/about/releases/v4.4.md'),
-              makeLink('v4.5 版本介绍', '/zh-CN/about/releases/v4.5.md'),
-              makeLink('v4.6 版本介绍', '/zh-CN/about/releases/v4.6.md'),
-              makeLink('v4.7 版本介绍', '/zh-CN/about/releases/v4.7.md'),
-              makeLink('v4.8 版本介绍', '/zh-CN/about/releases/v4.8.md'),
-              makeLink('v4.9 版本介绍', '/zh-CN/about/releases/v4.9.md'),
-              makeLink('v4.10 版本介绍', '/zh-CN/about/releases/v4.10.md'),
-              makeLink('v4.11 版本介绍', '/zh-CN/about/releases/v4.11.md'),
-            ],
-          }, {
-            text: '贡献指南',
-            items: [
-              makeLink('项目结构', '/zh-CN/about/contribute/structure.md'),
-              makeLink('文档贡献指南', '/zh-CN/about/contribute/docs.md'),
-            ],
-          }],
+          '/zh-CN/about/': [
+            makeLink('关于我们', '/zh-CN/about', () => [
+              makeLink('许可证', '/license.md'),
+              makeLink('参与讨论', '/contact.md'),
+              makeLink('团队介绍', '/team.md'),
+              makeLink('社区资源', '/community.md'),
+            ]),
+            makeLink('更新与迁移', '/zh-CN/about', () => [
+              makeLink('发展史', '/history.md'),
+              makeLink('从 v3 迁移', '/migration.md'),
+              makeLink('版本内迁移', '/upgrade.md'),
+              makeLink('v4.1 版本介绍', '/releases/v4.1.md'),
+              makeLink('v4.2 版本介绍', '/releases/v4.2.md'),
+              makeLink('v4.3 版本介绍', '/releases/v4.3.md'),
+              makeLink('v4.4 版本介绍', '/releases/v4.4.md'),
+              makeLink('v4.5 版本介绍', '/releases/v4.5.md'),
+              makeLink('v4.6 版本介绍', '/releases/v4.6.md'),
+              makeLink('v4.7 版本介绍', '/releases/v4.7.md'),
+              makeLink('v4.8 版本介绍', '/releases/v4.8.md'),
+              makeLink('v4.9 版本介绍', '/releases/v4.9.md'),
+              makeLink('v4.10 版本介绍', '/releases/v4.10.md'),
+              makeLink('v4.11 版本介绍', '/releases/v4.11.md'),
+            ]),
+            makeLink('贡献指南', '/zh-CN/about/contribute', () => [
+              makeLink('项目结构', '/structure.md'),
+              makeLink('文档贡献指南', '/docs.md'),
+            ]),
+          ],
         },
       },
     },

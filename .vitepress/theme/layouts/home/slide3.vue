@@ -1,11 +1,11 @@
 <template>
   <div class="screen screen-development">
     <div class="introduction">
-      <h2>专为开发者打造</h2>
-      <p>Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。</p>
+      <h2>{{ frontmatter.development.title }}</h2>
+      <p>{{ frontmatter.development.desc }}</p>
     </div>
     <div class="advantages">
-      <div class="advantage" v-for="feat in frontmatter.development" :key="feat.title">
+      <div class="advantage" v-for="feat in frontmatter.advantages" :key="feat.title">
         <span class="icon">
           <svg :viewBox="feat.icon.viewBox">
             <path :d="feat.icon.path" fill="currentColor"/>

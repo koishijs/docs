@@ -2,11 +2,11 @@
   <div class="screen screen-cover">
     <h1><span class="koi">Koi</span>shi.js</h1>
     <p class="desc">
-      创建跨平台、可扩展、高性能的机器人
+      {{ frontmatter.home.desc }}
     </p>
     <div class="actions">
-      <a class="action-button primary" :href="withBase('/manual/starter/')">Get Started</a>
-      <a class="action-button secondary" @click="$emit('swipe', 1)">Learn More</a>
+      <a class="action-button primary" :href="frontmatter.links.starter">{{ frontmatter.home.primary }}</a>
+      <a class="action-button secondary" @click="$emit('swipe', 1)">{{ frontmatter.home.secondary }}</a>
     </div>
     <svg aria-hidden="true" focusable="false" role="img" viewBox="0 0 320 512">
       <g>
@@ -19,9 +19,11 @@
 
 <script lang="ts" setup>
 
-import { withBase } from 'vitepress'
+import { useData } from 'vitepress'
 
 defineEmits(['swipe'])
+
+const { frontmatter } = useData()
 
 </script>
 
