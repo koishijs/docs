@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/:path((?!(zh-CN|en-US)/).*)",
+      "destination": "/zh-CN/:path"
+    }
+  ],
   "github": {
     "silent": true
   }
