@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/:path((?!(zh-CN|en-US)/).*)",
+      "source": "/:path((?!zh-CN|en-US).*)",
       "destination": "/zh-CN/:path"
     }
   ],

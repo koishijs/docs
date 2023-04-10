@@ -96,80 +96,62 @@ export default async () => defineConfig({
             ]),
           ],
     
-          '/zh-CN/guide/': [{
-            items: [
-              makeLink('总览', '/zh-CN/guide/'),
-            ],
-          }, {
-            text: '开发上手',
-            items: [
-              makeLink('环境搭建', '/zh-CN/guide/develop/setup.md'),
-              makeLink('配置文件', '/zh-CN/guide/develop/config.md'),
-              makeLink('启动脚本', '/zh-CN/guide/develop/script.md'),
-              makeLink('工作区开发', '/zh-CN/guide/develop/workspace.md'),
-              makeLink('发布插件', '/zh-CN/guide/develop/publish.md'),
-            ],
-          }, {
-            text: '交互基础',
-            items: [
-              makeLink('指令开发', '/zh-CN/guide/basic/command.md'),
-              makeLink('事件系统', '/zh-CN/guide/basic/events.md'),
-              makeLink('中间件', '/zh-CN/guide/basic/middleware.md'),
-              makeLink('消息元素', '/zh-CN/guide/basic/element.md'),
-              makeLink('进阶用法', '/zh-CN/guide/basic/advanced.md'),
-            ],
-          }, {
-            text: '模块化',
-            items: [
-              makeLink('认识插件', '/zh-CN/guide/plugin/index.md'),
-              makeLink('生命周期', '/zh-CN/guide/plugin/lifecycle.md'),
-              makeLink('会话过滤器', '/zh-CN/guide/plugin/selector.md'),
-              makeLink('服务与依赖', '/zh-CN/guide/plugin/service.md'),
-              makeLink('配置模式', '/zh-CN/guide/plugin/schema.md'),
-            ],
-          }, {
-            text: '数据库',
-            items: [
-              makeLink('使用数据库', '/zh-CN/guide/database/index.md'),
-              makeLink('扩展数据模型', '/zh-CN/guide/database/model.md'),
-              makeLink('按需加载和自动更新', '/zh-CN/guide/database/observer.md'),
-              makeLink('编写数据库插件', '/zh-CN/guide/database/writing.md'),
-            ],
-          }, {
-            text: '跨平台',
-            items: [
-              makeLink('使用适配器', '/zh-CN/guide/adapter/index.md'),
-              makeLink('使用机器人', '/zh-CN/guide/adapter/bot.md'),
-              makeLink('跨平台账号绑定', '/zh-CN/guide/adapter/binding.md'),
-              makeLink('编写适配器插件', '/zh-CN/guide/adapter/writing.md'),
-            ],
-          }, {
-            text: '国际化',
-            items: [
-              makeLink('多语言支持', '/zh-CN/guide/i18n/index.md'),
-              makeLink('编写翻译文件', '/zh-CN/guide/i18n/translation.md'),
-              // makeLink('使用预设模板', '/zh-CN/guide/i18n/presets.md'),
-              makeLink('接入 Crowdin', '/zh-CN/guide/i18n/crowdin.md'),
-            ],
-          }, {
-            text: '控制台开发',
-            items: [
-              makeLink('使用控制台', '/zh-CN/guide/console/index.md'),
-              makeLink('编写扩展', '/zh-CN/guide/console/extension.md'),
-              makeLink('数据交互', '/zh-CN/guide/console/data.md'),
-            ],
-          }, {
-            text: '测试工具',
-            items: [
-              makeLink('单元测试', '/zh-CN/guide/testing/index.md'),
-            ],
-          // }, {
-          //   text: '深入底层',
-          //   items: [
-          //     makeLink('模块组织', '/zh-CN/guide/in-depth/module.md'),
-          //     makeLink('消息处理', '/zh-CN/guide/in-depth/message.md'),
-          //   ],
-          }],
+          '/zh-CN/guide/': [
+            makeLink('', '/zh-CN/guide', () => [
+              makeLink('总览', '/'),
+            ]),
+            makeLink('开发上手', '/zh-CN/guide/develop', () => [
+              makeLink('环境搭建', '/setup.md'),
+              makeLink('配置文件', '/config.md'),
+              makeLink('启动脚本', '/script.md'),
+              makeLink('工作区开发', '/workspace.md'),
+              makeLink('发布插件', '/publish.md'),
+            ]),
+            makeLink('交互基础', '/zh-CN/guide/basic', () => [
+              makeLink('指令开发', '/command.md'),
+              makeLink('事件系统', '/events.md'),
+              makeLink('中间件', '/middleware.md'),
+              makeLink('消息元素', '/element.md'),
+              makeLink('进阶用法', '/advanced.md'),
+            ]),
+            makeLink('模块化', '/zh-CN/guide/plugin', () => [
+              makeLink('认识插件', '/'),
+              makeLink('生命周期', '/lifecycle.md'),
+              makeLink('会话过滤器', '/selector.md'),
+              makeLink('服务与依赖', '/service.md'),
+              makeLink('配置模式', '/schema.md'),
+            ]),
+            makeLink('数据库', '/zh-CN/guide/database', () => [
+              makeLink('使用数据库', '/'),
+              makeLink('扩展数据模型', '/model.md'),
+              makeLink('按需加载和自动更新', '/observer.md'),
+              makeLink('编写数据库插件', '/writing.md'),
+            ]),
+            makeLink('跨平台', '/zh-CN/guide/adapter', () => [
+              makeLink('使用适配器', '/index.md'),
+              makeLink('使用机器人', '/bot.md'),
+              makeLink('跨平台账号绑定', '/binding.md'),
+              makeLink('编写适配器插件', '/writing.md'),
+            ]),
+            makeLink('国际化', '/zh-CN/guide/i18n', () => [
+              makeLink('多语言支持', '/index.md'),
+              makeLink('编写翻译文件', '/translation.md'),
+              // makeLink('使用预设模板', '/presets.md'),
+              makeLink('接入 Crowdin', '/crowdin.md'),
+            ]),
+            makeLink('控制台开发', '/zh-CN/guide/console', () => [
+              makeLink('使用控制台', '/index.md'),
+              makeLink('编写扩展', '/extension.md'),
+              makeLink('数据交互', '/data.md'),
+            ]),
+            makeLink('测试工具', '/zh-CN/guide/testing', () => [
+              makeLink('单元测试', '/index.md'),
+            ]),
+            // makeLink('深入底层', '/zh-CN/guide/in-depth', () => [
+            //   makeLink('模块组织', '/module.md'),
+            //   makeLink('消息处理', '/message.md'),
+            // ]),
+          ],
     
           '/zh-CN/api/': [{
             items: [
@@ -323,7 +305,6 @@ export default async () => defineConfig({
       label: 'English',
       lang: 'en-US',
       themeConfig: {
-
         nav: [{
           text: 'Manual',
           link: '/en-US/manual/introduction.md',
@@ -346,54 +327,45 @@ export default async () => defineConfig({
         }],
     
         sidebar: {
-          '/en-US/manual/': [{
-            items: [
-              makeLink('Introduction', '/en-US/manual/introduction.md'),
-            ],
-          }, {
-            items: [
-              makeLink('Getting Started', '/en-US/manual/starter/'),
-              makeLink('为 Windows 安装', '/en-US/manual/starter/windows.md'),
-              makeLink('为 macOS 安装', '/en-US/manual/starter/macos.md'),
-              makeLink('为 Linux 安装', '/en-US/manual/starter/linux.md'),
-              makeLink('为 Android 安装', '/en-US/manual/starter/android.md'),
-              makeLink('在容器中使用', '/en-US/manual/starter/docker.md'),
-              makeLink('创建模板项目', '/en-US/manual/starter/boilerplate.md'),
-              makeLink('作为依赖调用', '/en-US/manual/starter/direct.md'),
-            ],
-          }, {
-            text: 'Console',
-            items: [
-              makeLink('认识控制台', '/en-US/manual/console/index.md'),
-              makeLink('安装和配置插件', '/en-US/manual/console/market.md'),
-              makeLink('在沙盒中聊天', '/en-US/manual/console/sandbox.md'),
-              makeLink('接入聊天平台', '/en-US/manual/console/adapter.md'),
-            ],
-          }, {
-            text: 'Usage',
-            items: [
-              makeLink('Command', '/en-US/manual/usage/command.md'),
-              makeLink('Cross-Platform', '/en-US/manual/usage/platform.md'),
-              makeLink('Permission', '/en-US/manual/usage/permission.md'),
-              makeLink('Filter', '/en-US/manual/usage/filter.md'),
-              makeLink('Internationalization', '/en-US/manual/usage/i18n.md'),
-            ],
-          }, {
-            text: 'Recipe',
-            items: [
-              makeLink('指令进阶技巧', '/en-US/manual/recipe/execution.md'),
-              makeLink('访问数据库', '/en-US/manual/recipe/dataview.md'),
-              makeLink('维护多份配置', '/en-US/manual/recipe/multiple.md'),
-              makeLink('搜索插件市场', '/en-US/manual/recipe/search.md'),
-              makeLink('公网部署', '/en-US/manual/recipe/server.md'),
-            ],
-          }, {
-            text: 'Launcher',
-            items: [
-              makeLink('System Requirements', '/en-US/manual/launcher/system.md'),
-              makeLink('CLI', '/en-US/manual/launcher/cli.md'),
-            ],
-          }],
+          '/en-US/manual/': [
+            makeLink('', '/en-US/manual', () => [
+              makeLink('Introduction', '/introduction.md'),
+            ]),
+            makeLink('', '/en-US/manual/starter', () => [
+              makeLink('Getting Started', '/'),
+              makeLink('为 Windows 安装', '/windows.md'),
+              makeLink('为 macOS 安装', '/macos.md'),
+              makeLink('为 Linux 安装', '/linux.md'),
+              makeLink('为 Android 安装', '/android.md'),
+              makeLink('在容器中使用', '/docker.md'),
+              makeLink('创建模板项目', '/boilerplate.md'),
+              makeLink('作为依赖调用', '/direct.md'),
+            ]),
+            makeLink('Console', '/en-US/manual/console', () => [
+              makeLink('认识控制台', '/index.md'),
+              makeLink('安装和配置插件', '/market.md'),
+              makeLink('在沙盒中聊天', '/sandbox.md'),
+              makeLink('接入聊天平台', '/adapter.md'),
+            ]),
+            makeLink('Usage', '/en-US/manual/usage', () => [
+              makeLink('Command', '/command.md'),
+              makeLink('Cross-Platform', '/platform.md'),
+              makeLink('Permission', '/permission.md'),
+              makeLink('Filter', '/filter.md'),
+              makeLink('Internationalization', '/i18n.md'),
+            ]),
+            makeLink('Recipe', '/en-US/manual/recipe', () => [
+              makeLink('指令进阶技巧', '/execution.md'),
+              makeLink('访问数据库', '/dataview.md'),
+              makeLink('维护多份配置', '/multiple.md'),
+              makeLink('搜索插件市场', '/search.md'),
+              makeLink('公网部署', '/server.md'),
+            ]),
+            makeLink('Launcher', '/en-US/manual/launcher', () => [
+              makeLink('System Requirements', '/system.md'),
+              makeLink('CLI', '/cli.md'),
+            ]),
+          ],
     
           '/en-US/guide/': [{
             items: [
