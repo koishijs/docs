@@ -7,6 +7,10 @@
     {
       "source": "/:path((?!zh-CN|en-US).*)/",
       "destination": "/zh-CN/:path/"
+    },
+    {
+      "source": "/",
+      "destination": "/zh-CN/"
     }
   ],
   "github": {
