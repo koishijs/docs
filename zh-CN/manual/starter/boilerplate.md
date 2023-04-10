@@ -1,10 +1,10 @@
 ---
 prev:
   text: 选择安装方式
-  link: /manual/starter/
+  link: /zh-CN/manual/starter/
 next:
   text: 认识控制台
-  link: /manual/console/
+  link: /zh-CN/manual/console/
 ---
 
 # 创建模板项目

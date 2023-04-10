@@ -1,10 +1,10 @@
 ---
 prev:
   text: 选择安装方式
-  link: /manual/starter/
+  link: /en-US/manual/starter/
 next:
   text: 认识控制台
-  link: /manual/console/
+  link: /en-US/manual/console/
 ---
 
 # 为 macOS 安装

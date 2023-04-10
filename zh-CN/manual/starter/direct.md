@@ -1,10 +1,10 @@
 ---
 prev:
   text: 选择安装方式
-  link: /manual/starter/
+  link: /zh-CN/manual/starter/
 next:
   text: 指南
-  link: /guide/
+  link: /zh-CN/guide/
 ---
 
 # 作为依赖调用

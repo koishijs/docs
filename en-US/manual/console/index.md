@@ -1,7 +1,7 @@
 ---
 prev:
   text: 选择安装方式
-  link: /manual/starter/
+  link: /en-US/manual/starter/
 ---
 
 # 认识控制台
