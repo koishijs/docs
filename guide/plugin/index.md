@@ -1,6 +1,6 @@
 # 认识插件
 
-模块化是 Koishi 的核心特性。借助插件系统，Koishi 得以将各种功能解耦出来，并以模块的形式分发。在入门篇中我们已经学习了基础的插件开发范例。本章将介绍更多的模块化编写方式，并介绍一些场景下的最佳实践。
+模块化是 Koishi 的核心特性。借助插件系统，Koishi 得以将各种功能解耦出来，并以模块的形式分发。在「开发上手」中我们已经体验了基础的插件开发范例。本章将介绍更多的模块化编写方式，并介绍一些场景下的最佳实践。
 
 ## 插件的基本形式
 
@@ -60,7 +60,7 @@ export const name = 'Bar'
 export function apply(ctx: Context, config: Config) {}
 ```
 
-## 嵌套插件
+## 嵌套的插件
 
 Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子模块，再将调用这些子模块的一个新插件作为入口模块，就像这样：
 
@@ -79,65 +79,6 @@ export function apply(ctx: Context) {
 
 当你在开发较为复杂的功能时，可以将插件分解成多个独立的子插件，并在入口文件中依次加载这些子插件。许多大型插件都采用了这种写法。
 
-## 停用插件
-
-`ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
-
-通常来说一个插件的效应应该是永久的，但如果你想在运行时卸载一个插件，应该怎么做？你可以使用 `ctx.dispose()` 方法来解决：
-
-```ts
-import { Context } from 'koishi'
-
-function callback(ctx: Context) {
-  // 编写你的插件逻辑
-  ctx.on('message', callback1)
-  ctx.command('foo').action(callback2)
-  ctx.middleware(callback3)
-  ctx.plugin(require('another-plugin'))
-}
-
-// 加载插件
-const fork = app.plugin(callback)
-
-// 卸载这个插件，取消上述全部效果
-fork.dispose()
-```
-
-对于可重用的插件，`fork.dispose()` 也只会停用 `fork` 对应的那一次。如果你想停用每一次的效果，可以使用 `ctx.registry.delete()`：
-
-```ts
-// 移除可重用插件的全部分支
-ctx.registry.delete(plugin)
-```
-
-## 清除副作用
-
-当插件上下文被停用时，会触发名为 `dispose` 的生命周期事件。它可以用来清除插件的副作用。
-
-绝大部分 `Context` 方法都已经是 disposable 了，所以你并不需要担心这些方法带来的副作用。然而，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。下面是一个例子：
-
-```ts
-// 一个示例的服务器插件
-import { Context } from 'koishi'
-import { createServer } from 'http'
-
-export function apply(ctx: Context, options) {
-  const server = createServer()
-
-  ctx.on('ready', () => {
-    // 在插件启动时监听端口
-    server.listen(1234)
-  })
-
-  ctx.on('dispose', () => {
-    // 在插件停用时关闭端口
-    server.close()
-  })
-}
-```
-
-这里的 `ready` 和 `dispose` 被称为 **生命周期事件**，我们将会在下一节中进一步介绍。
-
 ## 在配置文件中加载
 
 一个模块可以作为插件被 Koishi 的配置文件加载，其需要满足以下两条中的一条：
@@ -155,25 +96,21 @@ export function apply(ctx: Context, options) {
 
 ```yaml title=koishi.yml
 plugins:
-  ./local:
   console:
   dialogue:
     prefix: '#'
 ```
 
-这里的键对应插件的路径，值则为插件的配置。这个路径允许两种写法：
+这里的键对应插件的路径，值则为插件的配置。这个路径的解析逻辑如下：
 
-- 如果是一个绝对路径或者相对路径，则我们会相对配置文件所在的目录进行解析
-- 其他情况下我们将其视为包名，忽略 `koishi-plugin-` 以及 `@koishijs/plugin-` 的前缀，并考虑 scope 带来的影响，具体来说：
-  - 对于 foo，我们将尝试读取 @koishijs/plugin-foo 和 koishi-plugin-foo
-  - 对于 @foo/bar，我们将尝试读取 @foo/koishi-plugin-bar
+- 对于 foo，我们将尝试读取 @koishijs/plugin-foo 和 koishi-plugin-foo
+- 对于 @foo/bar，我们将尝试读取 @foo/koishi-plugin-bar
 
 换言之，上述配置文件相当于下面的代码：
 
 ```ts
-app.plugin(require('./local'))
 app.plugin(require('@koishijs/plugin-console').default)
 app.plugin(require('koishi-plugin-dialogue'), { prefix: '#' })
 ```
 
-在这个例子中，local 是一个本地插件；console 是官方插件，并且使用了默认导出；dialogue 是社区插件，并且使用了导出整体。配置文件使你得以无视这些区别，每个插件的加载方式都会由 CLI 自动检测。
+在这个例子中，console 是官方插件，并且使用了默认导出；dialogue 是社区插件，并且使用了导出整体。配置文件使你得以无视这些区别，每个插件的加载方式都会由 CLI 自动检测。

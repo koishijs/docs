@@ -172,16 +172,16 @@ Koishi 封装了一套事件系统。其基本用法与 Node.js 自带的 [Event
 
 - **触发方式:** parallel
 
-应用启动时触发。如果应用已经处于启动状态，则会立即触发。参见 [生命周期](../../guide/plugin/lifecycle.md#dispose-事件)。
+应用启动时触发。如果应用已经处于启动状态，则会立即触发。参见 [异步加载](../../guide/plugin/lifecycle.md#异步加载与-ready-事件)。
 
 ### 事件：dispose
 
 - **触发方式:** parallel
 
-应用被关闭或插件被卸载时触发。参见 [生命周期](../../guide/plugin/lifecycle.md#dispose-事件)。
+插件被卸载时触发。参见 [清除副作用](../../guide/plugin/lifecycle.md#清除副作用)。
 
 ::: warning
-请注意，dispose 事件的目的是清理副作用而不是确保数据保存。当 Koishi 进程崩溃或是被强行中止时，dispose 事件都可能不会触发。为了保护你的数据，你应当在每一次修改后立即上传数据，而不是在 dispose 中处理收尾工作。
+请注意，`dispose` 事件的目的是清理副作用而不是确保数据保存。当 Koishi 进程崩溃或是被强行中止时，`dispose` 事件都可能不会触发。为了保护你的数据，你应当在每一次修改后立即上传数据，而不是在 `dispose` 中处理收尾工作。
 :::
 
 ### 事件：service
