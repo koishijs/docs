@@ -1,8 +1,8 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/:path((?!zh-CN|en-US).*)",
-      "destination": "/zh-CN/:path*"
+      "destination": "/zh-CN/:path"
     }
   ],
   "github": {

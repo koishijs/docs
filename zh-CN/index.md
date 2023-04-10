@@ -42,39 +42,39 @@ footer:
   - text: 起步
     items:
       - text: 为 Windows 安装
-        link: /manual/starter/windows.html
+        link: /zh-CN/manual/starter/windows.html
       - text: 为 macOS 安装
-        link: /manual/starter/macos.html
+        link: /zh-CN/manual/starter/macos.html
       - text: 为 Linux 安装
-        link: /manual/starter/linux.html
+        link: /zh-CN/manual/starter/linux.html
       - text: 为 Android 安装
-        link: /manual/starter/android.html
+        link: /zh-CN/manual/starter/android.html
       - text: 在容器中使用
-        link: /manual/starter/docker.html
+        link: /zh-CN/manual/starter/docker.html
       - text: 创建模板项目
-        link: /manual/starter/boilerplate.html
+        link: /zh-CN/manual/starter/boilerplate.html
       - text: 作为依赖调用
-        link: /manual/starter/direct.html
+        link: /zh-CN/manual/starter/direct.html
   - text: 文档
     items:
       - text: 开发指南
-        link: /guide/
+        link: /zh-CN/guide/
       - text: API 文档
-        link: /api/
+        link: /zh-CN/api/
       - text: 官方插件
-        link: /plugins/
+        link: /zh-CN/plugins/
   - text: 平台
     items:
       - text: Discord
-        link: /plugins/adapter/discord.html
+        link: /zh-CN/plugins/adapter/discord.html
       - text: Lark (飞书)
-        link: /plugins/adapter/lark.html
+        link: /zh-CN/plugins/adapter/lark.html
       - text: Kook (开黑啦)
-        link: /plugins/adapter/kook.html
+        link: /zh-CN/plugins/adapter/kook.html
       - text: OneBot (QQ)
-        link: /plugins/adapter/onebot.html
+        link: /zh-CN/plugins/adapter/onebot.html
       - text: QQ 频道
-        link: /plugins/adapter/qqguild.html
+        link: /zh-CN/plugins/adapter/qqguild.html
       - text: Telegram
-        link: /plugins/adapter/telegram.html
+        link: /zh-CN/plugins/adapter/telegram.html
 ---

@@ -6,11 +6,11 @@
     <div :class="chooserUsage">
       <div class="chooser">
         <div class="chooser-header chooser-cell">
-          <span>我使用 Koishi……</span>
+          <span>{{ frontmatter.caption }}</span>
         </div>
         <div class="chooser-select chooser-select-usage">
           <div class="chooser-select-item chooser-cell"
-            v-for="(value, key) in choices" :key="key"
+            v-for="(value, key) in frontmatter.choices" :key="key"
             :class="{ selected: chooserUsage === key }"
             @click="chooserUsage = key">
             <span class="hint"></span>{{ value.text }}
@@ -21,11 +21,11 @@
       <transition>
         <div class="chooser" :key="chooserUsage">
           <div class="chooser-header chooser-cell">
-            <span>{{ choices[chooserUsage].caption }}</span>
+            <span>{{ frontmatter.choices[chooserUsage].caption }}</span>
           </div>
           <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
             <a class="chooser-select-item chooser-cell"
-              v-for="(value, key) in choices[chooserUsage].children" :key="key"
+              v-for="(value, key) in frontmatter.choices[chooserUsage].children" :key="key"
               :href="withBase(value)">
               <span class="hint"></span>{{ key }}
             </a>
@@ -39,29 +39,9 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import { withBase } from 'vitepress'
+import { withBase, useData } from 'vitepress'
 const chooserUsage = ref('production')
-const choices = {
-  production: {
-    text: '用于搭建机器人服务',
-    caption: '我的运行环境是……',
-    children: {
-      'Windows': '/manual/starter/windows.html',
-      'macOS': '/manual/starter/macos.html',
-      'Linux': '/manual/starter/linux.html',
-      'Android': '/manual/starter/android.html',
-      'Docker': '/manual/starter/docker.html',
-    },
-  },
-  development: {
-    text: '用于开发',
-    caption: '我希望 Koishi 作为……',
-    children: {
-      '一个独立的项目': '/manual/starter/boilerplate.html',
-      '其他 Node 项目的依赖': '/manual/starter/direct.html',
-    },
-  },
-}
+const { frontmatter } = useData()
 
 </script>
 
