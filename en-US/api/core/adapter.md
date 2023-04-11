@@ -1,4 +1,4 @@
-# 适配器 (Adapter)
+# Adapter
 
 本章将介绍与适配器相关的内容，这是一个相当底层的概念，因此如果你并不打算编写一个平台实现，你完全可以跳过本章节。
 
@@ -20,7 +20,7 @@
   - **redirect:** `Function` 由 Bot 配置项推断采用的协议的回调函数
 - 返回值: `Plugin`
 
-创建一个适配器插件。参见 [编写适配器插件](../../guide/adapter/writing.md) 一节。
+创建一个适配器插件。创建一个适配器插件。参见 [编写适配器插件](../../guide/adapter/writing.md) 一节。
 
 ## 类：Adapter
 
@@ -98,4 +98,4 @@ export interface WebSocketClientOptions {
 - **bot:** `Bot` 机器人实例
 - 返回值: `void`
 
-WebSocket 连接成功建立后的回调函数。你需要实现这个方法，并在其中手动调用 `bot.resolve()` 回调函数表示已经连接成功。
+WebSocket 连接成功建立后的回调函数。WebSocket 连接成功建立后的回调函数。你需要实现这个方法，并在其中手动调用 `bot.resolve()` 回调函数表示已经连接成功。
