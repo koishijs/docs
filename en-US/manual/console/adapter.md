@@ -1,22 +1,22 @@
 # Collaborate with Chat Platforms
 
-Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。
+Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。The commonly used adapter plugins have been pre-installed in Keisha, you can find them in the "Adapter" tag in Plugin Configuration page.If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
+一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件).User data is shared by multiple bots that connected to the same chat platform.So you could easily switch between bot accounts to achieve a load balance.
 
-对于不同的平台，你需要做好相应的准备工作。以下是各个平台的接入指南。以下是各个平台的接入指南。
+对于不同的平台，你需要做好相应的准备工作。以下是各个平台的接入指南。The following is a guide to connect your bot in various platforms.
 
 ## Discord
 
-1. 前往 [开发者后台](https://discord.com/developers/applications)，登录账号创建一个应用
-2. 点击「Bot」并创建一个新的机器人，保存这个页面中的 `token` (请注意不要泄露)
-3. 要将机器人拉进你的服务器，点击「OAuth2」，并在网址生成器中勾选 Bot 和机器人所需要的权限
-4. 打开生成的链接，选择你具有管理权限的服务器，就成功把机器人添加进去了
-5. 将上面的 `token` 填入插件配置即可使用
+1. Go to [Discord Developer Portal](https://discord.com/developers/applications), log yourself in and then create an application.
+2. Click "Bot" and then create a new Bot, copy the `token` in this page (DO NOT share it to anyone).
+3. To invite your bot into your server, click "OAuth2" and check the permissions that required for your bot in URL Generator, make sure "Bot" to be checked.
+4. Open the link that you generated above, select the server that you have the admin permissions, then you could add your bot into the server successfully.
+5. Enter the `token` into the plugin configuration.
 
-参考：[@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
+See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
-## Lark / 飞书
+## Lark / Feishu
 
 1. 在开发者后台 ([飞书](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) 点击「新建企业自建应用」，点击应用名称进入应用详情页
 2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段
