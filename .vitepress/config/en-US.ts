@@ -181,6 +181,7 @@ export default defineLocale({
           makeLink('Discord', '/discord.md'),
           makeLink('Kook', '/kook.md'),
           makeLink('Lark', '/lark.md'),
+          makeLink('Mail', '/mail.md'),
           makeLink('OneBot', '/onebot.md'),
           makeLink('QQGuild', '/qqguild.md'),
           makeLink('Telegram', '/telegram.md'),

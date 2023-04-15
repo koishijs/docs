@@ -181,6 +181,7 @@ export default defineLocale({
           makeLink('适配器：Discord', '/discord.md'),
           makeLink('适配器：Kook', '/kook.md'),
           makeLink('适配器：Lark', '/lark.md'),
+          makeLink('适配器：Mail', '/mail.md'),
           makeLink('适配器：OneBot', '/onebot.md'),
           makeLink('适配器：QQGuild', '/qqguild.md'),
           makeLink('适配器：Telegram', '/telegram.md'),
