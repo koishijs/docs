@@ -20,5 +20,5 @@ This project is still working in progress.Some features may not be available.
 ## Download
 
 - [Download Standard Package (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
-- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
+- [Download Extension Package (.apk)](https://k.ilharp.cc/android-full.apk)
+- [View More Versions](https://github.com/koishijs/koishi-android/releases)
