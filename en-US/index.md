@@ -3,16 +3,16 @@ layout: home
 links:
   starter: /zh-CN/manual/starter/
 home:
-  desc: 创建跨平台、可扩展、高性能的机器人
+  desc: Multi-platform, extensive, high-performance chatbot
   primary: Get Started
   secondary: Learn More
 features:
   - 
-    title: 实时监控
+    title: Real time monitoring
     desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
     image: /manual/console/home
   - 
-    title: 简单配置
+    title: Simple configuration
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings
   - 
@@ -20,7 +20,7 @@ features:
     desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
     image: /manual/console/market
   - 
-    title: 数据库
+    title: Database embedded
     desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
     image: /manual/console/database
   - 
@@ -28,11 +28,11 @@ features:
     desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
     image: /manual/console/sandbox
 development:
-  title: 专为开发者打造
+  title: Made for developers
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
   - 
-    title: 类型支持
+    title: Typescript supporting
     desc: Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档。
     link: /
     icon:
