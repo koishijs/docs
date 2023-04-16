@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Choose Installation Method
+  text: Installation
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
