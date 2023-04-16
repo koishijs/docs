@@ -1,20 +1,19 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
-  text: 认识控制台
+  text: About Koishi Console
   link: /en-US/manual/console/
 ---
 
-# 创建模板项目
+# Create Template Project
 
 ::: tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
-:::
+If you want to learn about other installation method, please visit [Choose Installation Method](./index.md)。
 :::
 
-本节将介绍我们最推荐的 Koishi 开发方案——创建模板项目。相比直接从零搭建，模板项目的优势在于：相比直接从零搭建，模板项目的优势在于：
+In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi.Comparing to build up a project from scratch, there are advantages with the template:
 
 - 创建完成即是拥有带完整控制台体验的项目，一键创建各种模板插件
 - 支持直接加载 TypeScript，你可以尽情享受代码提示和类型检查带来的便利
