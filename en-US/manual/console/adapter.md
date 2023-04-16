@@ -1,6 +1,6 @@
 # Collaborate with Chat Platforms
 
-Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。The commonly used adapter plugins have been pre-installed in Keisha, you can find them in the "Adapter" tag in Plugin Configuration page.If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
+Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the "Adapter" tag in Plugin Configuration page.If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
 
 一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件).User data is shared by multiple bots that connected to the same chat platform.So you could easily switch between bot accounts to achieve a load balance.
 
