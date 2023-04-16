@@ -1,6 +1,6 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 ---
 
