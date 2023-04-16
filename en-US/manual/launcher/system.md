@@ -29,7 +29,7 @@
 
 ### Windows 10
 
-| 产品                                  | 核心                   | 窗口                   | 增强                   |
+| Product                             | Core                 | Window               | Enhance              |
 | ----------------------------------- | -------------------- | -------------------- | -------------------- |
 | Version 1507                        | :x:                  | :x:                  | :x:                  |
 | Version 1511                        | :x:                  | :x:                  | :x:                  |
@@ -74,7 +74,7 @@
 
 ### Windows 11
 
-| 产品           | 核心                   | 窗口                   | 增强                   |
+| Product      | Core                 | Window               | Enhance              |
 | ------------ | -------------------- | -------------------- | -------------------- |
 | Version 21H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Version 22H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
