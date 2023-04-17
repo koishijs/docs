@@ -1,11 +1,11 @@
 {
   "redirects": [
     {
-      "source": "/:path((?!zh-CN|en-US).*).html",
+      "source": "/:path((?!zh-CN|en-US|de-DE|fr-FR|ja-JP).*).html",
       "destination": "/zh-CN/:path.html"
     },
     {
-      "source": "/:path((?!zh-CN|en-US).*)/",
+      "source": "/:path((?!zh-CN|en-US|de-DE|fr-FR|ja-JP).*)/",
       "destination": "/zh-CN/:path/"
     },
     {
