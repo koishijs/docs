@@ -1,16 +1,16 @@
 # @koishijs/plugin-adapter-onebot
 
 ::: warning
-尽管 Koishi 使用了 [MIT](https://choosealicense.com/licenses/mit/) 协议，但 OneBot 相关框架普遍使用了基于 [AGPL 3.0](https://choosealicense.com/licenses/agpl-3.0/) 的协议。因此如果你使用 @koishijs/plugin-adapter-onebot 运行你的机器人，你将可能受到 AGPL 3.0 协议的限制，必须将你的代码开源并保持同协议。Koishi 及其作者对使用上述框架或违反上述限制的行为所可能造成的一切后果概不负责。
+尽管 Koishi 使用了 [MIT](https://choosealicense.com/licenses/mit/) 协议，但 OneBot 相关框架普遍使用了基于 [AGPL 3.0](https://choosealicense.com/licenses/agpl-3.0/) 的协议。因此如果你使用 @koishijs/plugin-adapter-onebot 运行你的机器人，你将可能受到 AGPL 3.0 协议的限制，必须将你的代码开源并保持同协议。Koishi 及其作者对使用上述框架或违反上述限制的行为所可能造成的一切后果概不负责。 :::因此如果你使用 @koishijs/plugin-adapter-onebot 运行你的机器人，你将可能受到 AGPL 3.0 协议的限制，必须将你的代码开源并保持同协议。Koishi 及其作者对使用上述框架或违反上述限制的行为所可能造成的一切后果概不负责。
 :::
 
-[OneBot](https://github.com/howmanybots/onebot) 是一个聊天机器人应用接口标准，目前可用于 QQ 聊天机器人的实现。你可以使用下列实现该协议的框架：
+[OneBot](https://github.com/howmanybots/onebot) 是一个聊天机器人应用接口标准，目前可用于 QQ 聊天机器人的实现。你可以使用下列实现该协议的框架：你可以使用下列实现该协议的框架：
 
 - [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)（推荐）
 - [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)
 - [richardchien/coolq-http-api](https://github.com/richardchien/coolq-http-api)（配合 [iTXTech/mirai-native](https://github.com/iTXTech/mirai-native) 使用）
 
-我们推荐使用 go-cqhttp。**在本文的后续部分我们只会介绍 go-cqhttp 的使用方法**。有对其他框架感兴趣的同学也可以自行探索。
+我们推荐使用 go-cqhttp。我们推荐使用 go-cqhttp。**在本文的后续部分我们只会介绍 go-cqhttp 的使用方法**。有对其他框架感兴趣的同学也可以自行探索。有对其他框架感兴趣的同学也可以自行探索。
 
 与此同时，OneBot 协议规定了四种不同的通信方式：
 
@@ -19,7 +19,7 @@
 - 正向 WebSocket：OneBot 作为 WebSocket 服务端，接受用户连接，提供 API 调用和事件推送服务
 - 反向 WebSocket：OneBot 作为 WebSocket 客户端，主动连接用户配置的 URL，提供 API 调用和事件推送服务
 
-我们推荐使用正向 WebSocket，这种通信方式操作简便，且拥有相对较高的性能。在本文的后续部分我们将介绍每一种通信方式的配置方法。
+我们推荐使用正向 WebSocket，这种通信方式操作简便，且拥有相对较高的性能。在本文的后续部分我们将介绍每一种通信方式的配置方法。在本文的后续部分我们将介绍每一种通信方式的配置方法。
 
 ## 安装与运行
 
@@ -30,6 +30,7 @@
 
 ```sh
 未找到配置文件，正在为您生成配置文件中！
+未找到配置文件，正在为您生成配置文件中！
 请选择你需要的通信方式:
   1: HTTP 通信
   2: 正向 WebSocket 通信
@@ -38,7 +39,7 @@
 默认配置文件已生成，请修改 config.yml 后重新启动。
 ```
 
-4. 根据 [配置参考](#go-cqhttp-配置参考) 中的说明修改 config.yml 文件。之后再次输入 `./go-cqhttp` 并运行：
+4. 根据 [配置参考](#go-cqhttp-配置参考) 中的说明修改 config.yml 文件。之后再次输入 `./go-cqhttp` 并运行：之后再次输入 `./go-cqhttp` 并运行：
 
 ```sh
 [INFO]: 登录成功 欢迎使用: balabala
@@ -140,7 +141,7 @@ dnf install ffmpeg ffmpeg-devel
 - 类型：`string`
 - 默认值：`'/onebot'`
 
-服务器监听的路径。仅用于 HTTP 通信方式。
+服务器监听的路径。仅用于 HTTP 通信方式。仅用于 HTTP 通信方式。
 
 ### options.secret
 
@@ -298,7 +299,7 @@ export default {
 
 你可以通过 `bot.internal` 或 `session.onebot` 访问到内部 API，参见 [调用机器人](../../guide/adapter/index.md)。
 
-下面展示了目前已经实现的 API 列表。如要了解细节请自行点击对应方法的链接进行查阅。
+下面展示了目前已经实现的 API 列表。如要了解细节请自行点击对应方法的链接进行查阅。如要了解细节请自行点击对应方法的链接进行查阅。
 
 ### OneBot v11 标准 API
 
@@ -400,11 +401,11 @@ export default {
 
 ### 使用异步调用
 
-OneBot 提出了 **异步调用** 的概念，当 OneBot 服务器受到异步调用请求时，如果调用正确，将直接返回 200。这样做的好处是，如果某些操作有较长的耗时（例如发送含有大量图片的消息或清空数据目录等）或你不关心调用结果，使用异步调用可以有效防止阻塞。下面说明了异步调用和普通调用的关系：
+OneBot 提出了 **异步调用** 的概念，当 OneBot 服务器受到异步调用请求时，如果调用正确，将直接返回 200。这样做的好处是，如果某些操作有较长的耗时（例如发送含有大量图片的消息或清空数据目录等）或你不关心调用结果，使用异步调用可以有效防止阻塞。下面说明了异步调用和普通调用的关系：这样做的好处是，如果某些操作有较长的耗时（例如发送含有大量图片的消息或清空数据目录等）或你不关心调用结果，使用异步调用可以有效防止阻塞。下面说明了异步调用和普通调用的关系：
 
 ![async-method](/async-method.png)
 
-但是另一方面，你也无法得知异步调用是否成功被执行。与此同时，没有副作用的异步调用也毫无意义（因为这些调用本身就是为了获取某些信息，但是异步调用是无法获取调用结果的）。因此，Koishi 为除此以外的所有异步调用都提供了 API，它们的调用接口与非异步的版本除了在方法后面加了一个 Async 外没有任何区别：
+但是另一方面，你也无法得知异步调用是否成功被执行。但是另一方面，你也无法得知异步调用是否成功被执行。与此同时，没有副作用的异步调用也毫无意义（因为这些调用本身就是为了获取某些信息，但是异步调用是无法获取调用结果的）。因此，Koishi 为除此以外的所有异步调用都提供了 API，它们的调用接口与非异步的版本除了在方法后面加了一个 Async 外没有任何区别：因此，Koishi 为除此以外的所有异步调用都提供了 API，它们的调用接口与非异步的版本除了在方法后面加了一个 Async 外没有任何区别：
 
 ```ts
 // 普通版本
@@ -415,7 +416,7 @@ await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
 ```
 
 ::: tip
-虽然异步调用方法的名字以 Async 结尾，但是其他方法也是异步函数，它们都会返回一个 Promise 对象。取这样的名字只是为了与 OneBot 保持一致。
+虽然异步调用方法的名字以 Async 结尾，但是其他方法也是异步函数，它们都会返回一个 Promise 对象。取这样的名字只是为了与 OneBot 保持一致。 :::取这样的名字只是为了与 OneBot 保持一致。
 :::
 
 ## 常见问题
@@ -441,7 +442,7 @@ node -e "console.log(process.arch)"
 
 #### 问题：使用 HTTP 或反向 WebSocket 时无法接收消息，同时 go-cqhttp 有报错。
 
-请检查你的配置是否正确。尤其注意以下几点：
+请检查你的配置是否正确。尤其注意以下几点：尤其注意以下几点：
 
 - `koishi.yml` 中的 `selfId` 必须写并且必须是字符串
 - 如果你使用 HTTP：请不要忘记配置 `post`，同时默认情况下 `post` 的 `url` 字段应该包含 `/onebot`
@@ -451,7 +452,7 @@ node -e "console.log(process.arch)"
 
 以下内容摘自 [Mrs4s/go-cqhttp#211](https://github.com/Mrs4s/go-cqhttp/issues/211#issuecomment-812059109) 和 [Mrs4s/go-cqhttp#633](https://github.com/Mrs4s/go-cqhttp/issues/633)：
 
-风控也是分种类的，有 xml 消息被风控，有 json 消息被风控，也有发消息全部被风控。官方客户端正常那可以尝试更换 device.json 文件。再次声明，风控是随机事件，有人挂三五个月都不会被风控，有人天天被风控。是否风控由腾讯根据网络环境，设备，发送的消息来判断。
+风控也是分种类的，有 xml 消息被风控，有 json 消息被风控，也有发消息全部被风控。官方客户端正常那可以尝试更换 device.json 文件。再次声明，风控是随机事件，有人挂三五个月都不会被风控，有人天天被风控。是否风控由腾讯根据网络环境，设备，发送的消息来判断。官方客户端正常那可以尝试更换 device.json 文件。再次声明，风控是随机事件，有人挂三五个月都不会被风控，有人天天被风控。是否风控由腾讯根据网络环境，设备，发送的消息来判断。
 
 这里留下几个建议:
 
@@ -463,8 +464,8 @@ node -e "console.log(process.arch)"
 
 这是由多方原因共同导致的。
 
-首先，许多平台都公开了自己的机器人接口，只有腾讯官方对机器人采取封杀的态度。因此只有 QQ 的适配器是基于第三方协议实现的，OneBot 正是这个协议的名字。而第三方协议远远不止一个，所以不应该用 QQ 这个笼统的名称。在未来也可能出现其他面向 QQ 的适配器。
+首先，许多平台都公开了自己的机器人接口，只有腾讯官方对机器人采取封杀的态度。首先，许多平台都公开了自己的机器人接口，只有腾讯官方对机器人采取封杀的态度。因此只有 QQ 的适配器是基于第三方协议实现的，OneBot 正是这个协议的名字。而第三方协议远远不止一个，所以不应该用 QQ 这个笼统的名称。在未来也可能出现其他面向 QQ 的适配器。而第三方协议远远不止一个，所以不应该用 QQ 这个笼统的名称。在未来也可能出现其他面向 QQ 的适配器。
 
-反过来，OneBot 作为一个协议，未来也可能支持更多的聊天平台。届时只需有 @koishijs/plugin-adapter-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。
+反过来，OneBot 作为一个协议，未来也可能支持更多的聊天平台。届时只需有 @koishijs/plugin-adapter-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。届时只需有 @koishijs/plugin-adapter-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。
 
 就目前而言，当我们在讨论用 Koishi 实现 QQ 机器人时，都默认指代这个协议。
