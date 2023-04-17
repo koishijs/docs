@@ -4,10 +4,6 @@
 
 默认情况下配置文件的格式为 [YAML](https://en.wikipedia.org/wiki/YAML)，它是一种易于阅读和编辑的文本格式，你可以用任何文本编辑器打开。
 
-::: tip
-YAML 语法中的缩进具有非常重要的意义。如果你不了解 YAML 的语法，请不要随意修改配置文件，否则可能会导致应用无法启动。
-:::
-
 ## 应用目录
 
 配置文件所在的目录叫**应用目录**。根据你的安装方式，应用目录的位置可能不同：
@@ -47,7 +43,7 @@ plugins:
   dialogue:
 ```
 
-具体而言，配置文件中包含三种内容：
+具体而言，配置文件中包含的内容如下。
 
 ### 全局设置
 
@@ -81,15 +77,34 @@ plugins:
 ```yaml koishi.yml
 plugins:
   group:official:
+    # 一层嵌套插件组下的 help 插件
+    help:
     group:console:
       # 两层嵌套插件组下的 market 插件
       market:
 ```
 
+### 元信息
+
+一些以 `$` 开头的属性会记录插件和插件组的元信息。例如：
+
+```yaml koishi.yml
+plugins:
+  group:console:
+    # 在控制台中折叠该插件组
+    $collapsed: true
+    status:
+      # 仅对于 onebot 平台启用该插件
+      $filter:
+        $eq:
+          - $: platform
+          - onebot
+```
+
 ## 修改配置文件
 
 ::: tip
-如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在[这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html)中学习 YAML 的语法。
+如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在 [这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html) 中学习 YAML 的语法。
 :::
 
 当你启动 Koishi 应用时，Koishi 会读取上述配置文件并加载所需的插件。反过来，如果你想调整 Koishi 及其插件的行为，你就需要修改这个配置文件。
