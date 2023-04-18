@@ -15,7 +15,7 @@ If you want to learn about other installation method, please visit [Choose Insta
 
 In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi.Comparing to build up a project from scratch, there are advantages with the template:
 
-- 创建完成即是拥有带完整控制台体验的项目，一键创建各种模板插件
+- Create a project with full console experience and plugin templates with one key
 - 支持直接加载 TypeScript，你可以尽情享受代码提示和类型检查带来的便利
 - 支持插件热重载，你可以在不重启应用的情况下修改插件代码，并获得即时的反馈
 - 支持二次开发，你可以将你自己的机器人与其他人的插件进行联合调试
