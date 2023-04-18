@@ -3,16 +3,16 @@ layout: home
 links:
   starter: /zh-CN/manual/starter/
 home:
-  desc: Multi-platform, extensive, high-performance chatbot
+  desc: 创建跨平台、可扩展、高性能的机器人
   primary: Get Started
   secondary: Learn More
 features:
   - 
-    title: Real time monitoring
+    title: 实时监控
     desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
     image: /manual/console/home
   - 
-    title: Simple configuration
+    title: 简单配置
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings
   - 
@@ -20,7 +20,7 @@ features:
     desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
     image: /manual/console/market
   - 
-    title: Database embedded
+    title: 数据库
     desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
     image: /manual/console/database
   - 
@@ -28,11 +28,11 @@ features:
     desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
     image: /manual/console/sandbox
 development:
-  title: Made for developers
+  title: 专为开发者打造
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
   - 
-    title: Typescript supporting
+    title: 类型支持
     desc: Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档。
     link: /
     icon:
@@ -54,61 +54,61 @@ advantages:
       path: M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z
 footer:
   - 
-    text: Get Started
+    text: 起步
     items:
       - 
-        text: Install for Windows
-        link: /en-US/manual/starter/windows.html
+        text: 为 Windows 安装
+        link: /zh-CN/manual/starter/windows.html
       - 
-        text: Install for macOS
-        link: /en-US/manual/starter/macos.html
+        text: 为 macOS 安装
+        link: /zh-CN/manual/starter/macos.html
       - 
-        text: Install for Linux
-        link: /en-US/manual/starter/linux.html
+        text: 为 Linux 安装
+        link: /zh-CN/manual/starter/linux.html
       - 
-        text: Install for Android
-        link: /en-US/manual/starter/android.html
+        text: 为 Android 安装
+        link: /zh-CN/manual/starter/android.html
       - 
         text: 在容器中使用
-        link: /en-US/manual/starter/docker.html
+        link: /zh-CN/manual/starter/docker.html
       - 
         text: 创建模板项目
-        link: /en-US/manual/starter/boilerplate.html
+        link: /zh-CN/manual/starter/boilerplate.html
       - 
         text: 作为依赖调用
-        link: /en-US/manual/starter/direct.html
+        link: /zh-CN/manual/starter/direct.html
   - 
-    text: Document
+    text: 文档
     items:
       - 
-        text: Developer Guide
-        link: /en-US/guide/
+        text: 开发指南
+        link: /zh-CN/guide/
       - 
-        text: API
-        link: /en-US/api/
+        text: API 文档
+        link: /zh-CN/api/
       - 
-        text: Official Plugins
-        link: /en-US/plugins/
+        text: 官方插件
+        link: /zh-CN/plugins/
   - 
-    text: Platforms
+    text: 平台
     items:
       - 
         text: Discord
-        link: /en-US/plugins/adapter/discord.html
+        link: /zh-CN/plugins/adapter/discord.html
       - 
         text: Lark (飞书)
-        link: /en-US/plugins/adapter/lark.html
+        link: /zh-CN/plugins/adapter/lark.html
       - 
         text: Kook (开黑啦)
-        link: /en-US/plugins/adapter/kook.html
+        link: /zh-CN/plugins/adapter/kook.html
       - 
         text: OneBot (QQ)
-        link: /en-US/plugins/adapter/onebot.html
+        link: /zh-CN/plugins/adapter/onebot.html
       - 
         text: QQ 频道
-        link: /en-US/plugins/adapter/qqguild.html
+        link: /zh-CN/plugins/adapter/qqguild.html
       - 
         text: Telegram
-        link: /en-US/plugins/adapter/telegram.html
+        link: /zh-CN/plugins/adapter/telegram.html
 ---
 

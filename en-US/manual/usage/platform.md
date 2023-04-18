@@ -1,4 +1,4 @@
-# 跨平台
+# Cross Platform
 
 Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」是指什么呢？Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」是指什么呢？这并不单单是指 Koishi 支持多个运行平台，而是指 Koishi 能够同时接入多个聊天平台，并提供最原生的体验：
 
@@ -8,7 +8,7 @@ Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」�
 
 现在就让我们来说说这件事。
 
-## 基础概念
+## Basic Concepts
 
 **平台 (Platform)** 是指聊天平台，比如 QQ、Discord 等。同一平台内的用户间具有相互发送消息的能力，而不同平台的用户间则没有。对于 Rocket Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。同一平台内的用户间具有相互发送消息的能力，而不同平台的用户间则没有。对于 Rocket Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。
 
@@ -29,16 +29,16 @@ Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」�
 <chat-panel>
 <chat-message nickname="Alice">inspect</chat-message>
 <chat-message nickname="Koishi">
-<p>平台名：discord</p>
-<p>消息 ID：1085992290352373951</p>
-<p>频道 ID：835804172850561094</p>
-<p>群组 ID：811975252883800125</p>
-<p>用户 ID：811972350065115208</p>
-<p>自身 ID：952190117479600159</p>
+<p>Platform: discord</p>
+<p>Message ID: 1085992290352373951</p>
+<p>Channel ID: 835804172850561094</p>
+<p>Guild ID: 811975252883800125</p>
+<p>User ID: 811972350065115208</p>
+<p>Self ID: 952190117479600159</p>
 </chat-message>
 </chat-panel>
 
-如果你要做账号绑定，这里的「平台名」和「用户 ID」会很有用。
+If you want to bind your account, the platform name and user ID here will be useful.
 
 ## 控制台登录
 
