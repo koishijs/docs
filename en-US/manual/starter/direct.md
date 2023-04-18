@@ -3,18 +3,18 @@ prev:
   text: Installation
   link: /en-US/manual/starter/
 next:
-  text: 指南
+  text: Guide
   link: /en-US/guide/
 ---
 
-# 作为依赖调用
+# Use as Dependency
 
 ::: warning
-这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。 :::如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
+This guide assumes that you know about secondary knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you just started learning JavaScript development recently, or are not interested in coding, please [Choose Other Installation Methods](./index.md).
 :::
 
 ::: warning
-我们强烈建议使用模板项目进行 Koishi 开发。如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。 :::如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。
+It is strongly recommended to use template project for developing Koishi. If you are not sure what you are doing, it is recommended to read [Template Project](./boilerplate.md) first.
 :::
 
 虽然现在我们推荐绝大部分用户使用模板项目，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
