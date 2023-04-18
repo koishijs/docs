@@ -54,19 +54,19 @@ advantages:
       path: M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z
 footer:
   - 
-    text: 起步
+    text: Get Started
     items:
       - 
-        text: 为 Windows 安装
+        text: Install for Windows
         link: /en-US/manual/starter/windows.html
       - 
-        text: 为 macOS 安装
+        text: Install for macOS
         link: /en-US/manual/starter/macos.html
       - 
-        text: 为 Linux 安装
+        text: Install for Linux
         link: /en-US/manual/starter/linux.html
       - 
-        text: 为 Android 安装
+        text: Install for Android
         link: /en-US/manual/starter/android.html
       - 
         text: 在容器中使用
@@ -78,19 +78,19 @@ footer:
         text: 作为依赖调用
         link: /en-US/manual/starter/direct.html
   - 
-    text: 文档
+    text: Document
     items:
       - 
-        text: 开发指南
+        text: Developer Guide
         link: /en-US/guide/
       - 
-        text: API 文档
+        text: API
         link: /en-US/api/
       - 
-        text: 官方插件
+        text: Official Plugins
         link: /en-US/plugins/
   - 
-    text: 平台
+    text: Platforms
     items:
       - 
         text: Discord
