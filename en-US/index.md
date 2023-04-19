@@ -1,30 +1,30 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /en-US/manual/starter/
 home:
   desc: Cross-platform Chatbot Framework Made With Love
   primary: Get Started
   secondary: Learn More
 features:
   - 
-    title: Real time monitoring
-    desc: With the dashboard of Koishi, you can monitor the status of your bot
+    title: Real-time Monitoring
+    desc: Monitor the status of your bot in real-time with Koishi dashboard.
     image: /manual/console/home
   - 
-    title: Simple configuration
-    desc: With variety of configurations and simple operating, you can customize your bot easily.
+    title: Simple Configuration
+    desc: Customize your bot easily with variety of plugins and graphic user interface operation.
     image: /manual/console/settings
   - 
-    title: 生态丰富
-    desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
+    title: Power of Community
+    desc: A huge number of plugins available for Koishi, you could find almost everything in the Koishi Marketplace.
     image: /manual/console/market
   - 
-    title: Database embedded
-    desc: With multi-driven, high-performance database, Koishi is easily to process a million grade of data.
+    title: Various Database Support
+    desc: Koishi handles easily a million of data with a multi-driven and high-performance database.
     image: /manual/console/database
   - 
-    title: Instant preview
+    title: Lightning Fast Preview
     desc: When installing or configuring any plugin, you can instantly start a simulated chat and preview effects in Koishi sandboxes.
     image: /manual/console/sandbox
 development:
