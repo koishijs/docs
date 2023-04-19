@@ -5,27 +5,25 @@
 ::: tip
 下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
 :::
-:::
 
 ::: tip
 即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
 :::
-:::
 
 ## Windows
 
-同一产品只列出了其最高版本。同一产品只列出了其最高版本。未列出的版本一律视为不支持。
+同一产品只列出了其最高版本。未列出的版本一律视为不支持。
 
 ### Windows 8.1
 
-| Product                        | Core                 | Window               | Enhance |
-| ------------------------------ | -------------------- | -------------------- | ------- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:     |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:     |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:     |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:     |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:     |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:     |
+| Product                        | Core                 | Window               | Enhancement |
+| ------------------------------ | -------------------- | -------------------- | ----------- |
+| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:         |
+| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:         |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:         |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:         |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:         |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:         |
 
 ### Windows 10
 
