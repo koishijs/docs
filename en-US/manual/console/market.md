@@ -1,15 +1,15 @@
-# 安装和配置插件
+# Install and Configure Plugins
 
 ::: tip
 本节将介绍「插件市场」「插件配置」和「依赖管理」页面的使用方法。
 :::
 
-项目启动成功后，会自动为你打开一个浏览器界面。你可以使用界面中的控制台进行一系列操作，包括修改配置、安装插件、更新插件和添加机器人等。我们将以 echo 插件为例来演示插件的安装与配置。echo 插件的功能是提供一个 echo 指令，它会将用户的输入原样输出给用户。
+When the project is started successfully, a browser interface will be automatically opened. You can use the console in the interface to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the echo plugin for example. The function of the echo plugin is to provide an echo command that will export the user's input as an output to the user.
 
-## 安装插件
+## Install Plugins
 
 ::: warning
-Koishi 不对非官方插件的安全性做任何保证。请不要随意下载来源不明的插件，因为它们可能导致 Koishi 无法运行，甚至更严重的后果。如果你下载插件后遇到了问题，可以前往用户群或论坛进行反馈。此外，部分插件带有「不安全」标识，安装此类插件将不会受到官方群内的支持。
+Koishi does not provide any assurance about the security of unofficial plugins. Do not download plugins from unknown sources at will, as they may cause Koishi unable to run, or even more serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
 前往「插件市场」页面，你将在这里看到所有可下载的插件。在搜索框中输入 echo，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。等待片刻，插件就已经安装成功了。
@@ -18,7 +18,7 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 
 ![select-version](/manual/console/select-version.dark.webp) {.dark-only}
 
-## 启用和停用插件
+## Enable and Disable Plugins
 
 插件安装成功以后并不会立即处于运行状态，我们需要对其进行配置。前往「插件配置」页面，左侧栏中列出了已配置的各种插件。其中<span class="light-only">黑色</span><span class="dark-only">白色</span>字体显示的是正在运行的插件，而灰色字体则对应尚未运行的插件。
 
@@ -30,7 +30,7 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 
 要停用 echo 插件同样很简单。点击右上角的「停用插件」，插件变会停止运行。停用插件既不会删除插件的代码，也不会删除插件的配置，你可以随时重新启用它。
 
-## 配置插件
+## Configure Plugins
 
 ::: warning
 在配置插件的过程中，请大家记住这个原则：**如果没有必要，那么不要改动任何配置**。Koishi 预装了许多插件，你在插件配置页面中看到的每一个插件都实现了 Koishi 的一部分基础功能。包括我们已经用到的「插件市场」和「插件配置」页面本身也是由预装的 market 插件来提供的。所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
@@ -47,15 +47,15 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 - 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-light)">红色</span> 的提示条，它们必须被正确填写才能启动插件
 - 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-brand)">紫色</span> 的提示条，它们会在你点击「启用插件」或「保存配置」按钮后保存；如果你想放弃这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」来使该配置恢复到上次保存时的状态
 
-## 管理插件
+## Manage Plugins
 
-### 分组管理
+### Manage Groups
 
 Koishi 提供了插件分组的机制，允许你将插件放入不同的分组统一管理。一个刚刚创建好的 Koishi 实例已经预先配置了一些分组，而新安装的插件将自动添加到插件列表的底部，不属于任何分组。你可以将在左侧栏中拖动插件，改变插件的排列顺序或移至别的分组内部。
 
 你同样可以创建新的分组。在「全局配置」或任意分组界面中，点击右上角的「创建分组」按钮，你将创建一个新的插件分组。分组可以在左侧栏中点击小三角来控制展开和收起，还可以配置 [过滤器](../usage/filter.md)，你由此得以获得了同时控制一组插件行为的能力。
 
-### 添加更多插件
+### Add more Plugins
 
 ::: tip
 通常情况下，一个插件只能同时运行一份配置。请参考 [维护多份配置](../recipe/multiple.md) 章节。
@@ -67,7 +67,7 @@ Koishi 提供了插件分组的机制，允许你将插件放入不同的分组�
 
 ![select-plugin](/manual/console/select-plugin.dark.webp) {.dark-only}
 
-### 删除插件或分组
+### Remove Plugin or Group
 
 ::: warning
 注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。请谨慎操作。
@@ -75,7 +75,7 @@ Koishi 提供了插件分组的机制，允许你将插件放入不同的分组�
 
 在任何插件的配置界面点击右上角的「删除插件」可删除这份配置。与之类似，在分组的配置界面点击右上角的「删除分组」可删除这个分组。删除分组时，分组内的所有插件也会一并删除。
 
-## 更新和卸载插件
+## Update and Uninstall Plugins
 
 前往「依赖管理」页面，你可以在这里看到依赖列表，你可以在这里更新你的依赖，当状态显示为「可更新」时，点击右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」即可完成更新。
 
