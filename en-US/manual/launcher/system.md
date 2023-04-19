@@ -1,31 +1,29 @@
 # System Requirements
 
-本节列出了 Koishi 启动器所需要的系统版本及该版本所支持的功能。
+This section lists the required system version of the Koishi launchers and the features that it supports on that version.
 
 ::: tip
-下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
-:::
+The table below only valid for Koishi launchers, the Koishi itself could run on almost any environment.
 :::
 
 ::: tip
-即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
-:::
+Even if your operating system is not supported by the Koishi official, you could also go to the [forum](https://k.ilharp.cc) and choose the compatible version provided by the community, or use the [template project](../starter/boilerplate.md) instead. Koishi official would not take the responsibility of the usability and security of the community launchers.
 :::
 
 ## Windows
 
-同一产品只列出了其最高版本。同一产品只列出了其最高版本。未列出的版本一律视为不支持。
+We only listed the latest version in a product line. The unlisted version should be considered unsupported.
 
 ### Windows 8.1
 
-| Product                        | Core                 | Window               | Enhance |
-| ------------------------------ | -------------------- | -------------------- | ------- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:     |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:     |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:     |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:     |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:     |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:     |
+| Product                        | Core                 | Window               | Enhancement |
+| ------------------------------ | -------------------- | -------------------- | ----------- |
+| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:         |
+| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:         |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:         |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:         |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:         |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:         |
 
 ### Windows 10
 

@@ -3,7 +3,6 @@
 ::: tip
 本节中的源码位于 [inaba](https://github.com/shigma/inaba)。
 :::
-:::
 
 ## 基本用法
 
@@ -58,14 +57,14 @@ random.pick([1, 2, 3])          // 随机选取一个元素
 - **count:** `number` 元素个数
 - 返回值: `T` 挑出的元素
 
-从数组中随机挑出一个或多个元素，不改变原数组。从数组中随机挑出一个或多个元素，不改变原数组。如果未传入 `count`，则返回一个元素；否则返回一个包含 `count` 个元素的数组。
+从数组中随机挑出一个或多个元素，不改变原数组。如果未传入 `count`，则返回一个元素；否则返回一个包含 `count` 个元素的数组。
 
 ### Random.shuffle(array)
 
 - **array:** `T[]` 数组
 - 返回值: `T[]` 新的数组
 
-随机打乱数组中的元素，返回新的数组。随机打乱数组中的元素，返回新的数组。此操作不修改原数组，相当于 `Random.pick(array, array.length)`。
+随机打乱数组中的元素，返回新的数组。此操作不修改原数组，相当于 `Random.pick(array, array.length)`。
 
 ### Random.weightedPick(weights)
 

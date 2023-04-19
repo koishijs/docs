@@ -1,10 +1,10 @@
-# 介绍
+# Introduction
 
-Koishi 是一个跨平台、可扩展、高性能的跨平台聊天机器人框架。
+Koishi is a cross-platform, extensive, high-performance cross-platform chatbot framework.
 
-它的名字和图标设计来源于东方 Project 中的角色古明地恋 (Komeiji Koishi)。古明地恋是一个会做出无意识举动的角色，取这个名字既象征着聊天机器人的主题，也蕴含了开发者为之倾注的热爱。古明地恋是一个会做出无意识举动的角色，取这个名字既象征着聊天机器人的主题，也蕴含了开发者为之倾注的热爱。
+The name and icon design are inspired from Komeiji Koishi, who is a character in Touhou Project. Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
 
-## 特性
+## Features
 
 ### 开箱即用
 
@@ -16,9 +16,9 @@ Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟�
 
 ### 生态丰富
 
-经过了长达四年的迭代，Koishi 已经发展出了丰富的插件生态和与之匹配的健壮系统。近 200 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。近 200 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
+经过了长达四年的迭代，Koishi 已经发展出了丰富的插件生态和与之匹配的健壮系统。近 200 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
 
-### 专为开发者打造
+### Made for developers
 
 Koishi 更为开发者准备了众多专业功能，使插件开发者得以在各种复杂需求中构建规模化的解决方案。
 

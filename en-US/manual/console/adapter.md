@@ -1,10 +1,10 @@
 # Collaborate with Chat Platforms
 
-Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到他们。如果这里没有你想要的适配器，你可以在插件市场中搜索并添加更多适配器。The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the "Adapter" tag in Plugin Configuration page.If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
+Koishi uses adapter plugins to support various chat platforms. The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the "Adapter" tag in Plugin Configuration page. If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件).User data is shared by multiple bots that connected to the same chat platform.So you could easily switch between bot accounts to achieve a load balance.
+一个 Koishi 应用可以同时接入多个聊天平台的多个账号。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件). User data is shared by multiple bots that connected to the same chat platform. So you could easily switch between bot accounts to achieve a load balance.
 
-对于不同的平台，你需要做好相应的准备工作。以下是各个平台的接入指南。The following is a guide to connect your bot in various platforms.
+对于不同的平台，你需要做好相应的准备工作。The following is a guide to connect your bot in various platforms.
 
 ## Discord
 
@@ -26,7 +26,7 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 6. 将第 5 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的「请求地址配置」中，并点击完成
 7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确
 
-参考：[@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
+See also: [@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
 ## KOOK
 
@@ -34,7 +34,7 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
 3. 将上面的 `token` 填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
+See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
 ## OneBot
 
@@ -44,16 +44,16 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 2. 开启 `gocqhttp.enable` 选项
 3. 点击「启用」，并跟随提示完成后续配置
 
-参考：[@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
+See also: [@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
-## QQ 频道
+## QQ Guild
 
 1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
 2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
 3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据
 4. 将上面的基本数据填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
+See also: [@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
 ## Telegram
 
@@ -63,4 +63,4 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 4. 使用 `/setprivacy` 开启 Privacy Mode (不然机器人只能收到特定消息)
 5. 创建完毕后，你会获得一个 `token` (请注意不要泄露)，将其填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
+See also: [@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)

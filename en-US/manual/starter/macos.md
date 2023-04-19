@@ -3,22 +3,21 @@ prev:
   text: Installation
   link: /en-US/manual/starter/
 next:
-  text: 认识控制台
+  text: About Koishi Console
   link: /en-US/manual/console/
 ---
 
 # Install for macOS
 
 ::: tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+If you want to learn about other installation method, please visit [Choose Installation Method](./index.md)。
 :::
-:::
 
-## 下载
+## Download
 
-- [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
-- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+- [Installer (.pkg)](https://k.ilharp.cc/osx.pkg)
+- [View More Versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## 其他选择
+## Other Methods
 
-找不到适合你的安装包？找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+Could not find an installation package for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).

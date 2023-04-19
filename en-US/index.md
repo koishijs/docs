@@ -1,38 +1,38 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /en-US/manual/starter/
 home:
-  desc: Multi-platform, extensive, high-performance chatbot
+  desc: Cross-platform Chatbot Framework Made With Love
   primary: Get Started
   secondary: Learn More
 features:
   - 
-    title: Real time monitoring
-    desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
+    title: Real-time Monitoring
+    desc: Monitor the status of your bot in real-time with Koishi dashboard.
     image: /manual/console/home
   - 
-    title: Simple configuration
-    desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
+    title: Simple Configuration
+    desc: Customize your bot easily with variety of plugins and graphic user interface operation.
     image: /manual/console/settings
   - 
-    title: 生态丰富
-    desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
+    title: Power of Community
+    desc: A huge number of plugins available for Koishi, you could find almost everything in the Koishi Marketplace.
     image: /manual/console/market
   - 
-    title: Database embedded
-    desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
+    title: Various Database Support
+    desc: Koishi handles easily a million of data with a multi-driven and high-performance database.
     image: /manual/console/database
   - 
-    title: 即刻预览
-    desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
+    title: Lightning Fast Preview
+    desc: When installing or configuring any plugin, you can instantly start a simulated chat and preview effects in Koishi sandboxes.
     image: /manual/console/sandbox
 development:
   title: Made for developers
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
   - 
-    title: Typescript supporting
+    title: TypeScript supporting
     desc: Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档。
     link: /
     icon:
@@ -46,8 +46,8 @@ advantages:
       viewBox: 0 0 448 512
       path: M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z
   - 
-    title: 模块热重载
-    desc: 开发 Koishi 插件时，只需轻点保存即可热重载，无需频繁重启机器人，如同前端开发一样丝滑顺畅。
+    title: HMR supporting
+    desc: When developing a Koishi plugin, the only thing you need is saving the file. No need to reboot robots frequently. Swipe smoothly like front-end development.
     link: /
     icon:
       viewBox: 0 0 576 512
@@ -69,16 +69,16 @@ footer:
         text: Install for Android
         link: /en-US/manual/starter/android.html
       - 
-        text: 在容器中使用
+        text: Install for Container
         link: /en-US/manual/starter/docker.html
       - 
-        text: 创建模板项目
+        text: Create a boilerplate
         link: /en-US/manual/starter/boilerplate.html
       - 
-        text: 作为依赖调用
+        text: Install as a dependency
         link: /en-US/manual/starter/direct.html
   - 
-    text: Document
+    text: Documentations
     items:
       - 
         text: Developer Guide
@@ -96,16 +96,16 @@ footer:
         text: Discord
         link: /en-US/plugins/adapter/discord.html
       - 
-        text: Lark (飞书)
+        text: Lark
         link: /en-US/plugins/adapter/lark.html
       - 
-        text: Kook (开黑啦)
+        text: Kook
         link: /en-US/plugins/adapter/kook.html
       - 
         text: OneBot (QQ)
         link: /en-US/plugins/adapter/onebot.html
       - 
-        text: QQ 频道
+        text: QQ Guild
         link: /en-US/plugins/adapter/qqguild.html
       - 
         text: Telegram

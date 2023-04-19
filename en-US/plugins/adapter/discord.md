@@ -44,7 +44,7 @@
 - 类型: `number`
 - 默认值: `GUILD_MESSAGES | GUILD_MESSAGE_REACTIONS | DIRECT_MESSAGES | DIRECT_MESSAGE_REACTIONS`
 
-需要订阅的机器人事件。需要订阅的机器人事件。这是一个以 bitset 形式表达的正整数，每一位代表一类事件。
+需要订阅的机器人事件。这是一个以 bitset 形式表达的正整数，每一位代表一类事件。
 
 参考：[Gateway Intents](https://discord.com/developers/docs/topics/gateway#gateway-intents)
 
