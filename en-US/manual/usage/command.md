@@ -53,7 +53,7 @@ In the usages above, we have encountered two new concepts：**Argument** and **O
 
 参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
 
-For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. 让我们看看如果不填必选参数会怎么样：
+For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. Let's see what will happen if the required parameter is missing:
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
@@ -124,7 +124,7 @@ For example, command `help` has an optional argument which indicates the name of
 3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./filter.md) 一节
 :::
 
-## 子指令
+## Subcommands
 
 [admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
 
@@ -162,17 +162,17 @@ For example, command `help` has an optional argument which indicates the name of
 至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./i18n.md) 一节再详细介绍。
 :::
 
-## 指令管理
+## Command Management
 
 打开控制台，我们会在活动栏中找到名为「指令管理」的页面。你可以在这里查看当前所有指令的列表，并对指令的行为进行设置。
 
-### 设置别名
+### Set Aliases
 
 点进任意指令的详情页，首先就能看到「名称设置」，这里展示了指令的全部别名。每个别名都能被用来触发指令，而第一个别名则会作为默认名称显示在帮助中。
 
 你可以在这里添加或删除别名，也可以将任意别名设置为默认的显示名称。例如，在 `echo` 指令中点击「添加别名」，输入 `复读`，然后点击「设为默认」，这样一来，用户在帮助中看到的就是 `复读` 而不是 `echo` 了。
 
-### 添加子指令
+### Add Subcommands
 
 在左侧栏中，你可以将任何指令 (派生式指令除外) 拖至其他指令的下方，这将使得前者成为后者的子指令。例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令或是 [`usage`](../../plugins/common/rate-limit.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
 
@@ -186,10 +186,10 @@ For example, command `help` has an optional argument which indicates the name of
 
 关于用户权限，请参考 [权限管理](./permission.md) 一节。
 
-### 速率限制
+### Rate Limits
 
-::: tip
-此部分功能由 [rate-limit](../../plugins/common/rate-limit.md) 插件提供。
+:::tip
+This feature is provided by [rate-limit](../../plugins/common/rate-limit.md) plugin.
 :::
 
 有些指令 (例如签到抽卡，限制次数的 API 调用等) 我们并不希望被无限调用，这时我们可以通过 `maxUsage` 设置每天访问额度的上限。当超出总次数后，机器人将回复「调用次数已达上限」。
