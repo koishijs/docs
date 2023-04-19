@@ -7,17 +7,12 @@ The table below only valid for Koishi launchers, the Koishi itself could run on 
 :::
 
 ::: tip
-Even if your operating system is not supported by the Koishi official, you could also go to the
-
-forum</0> and choose the compatible version provided by the community, or use the [template project](../starter/boilerplate.md) instead. Koishi official would not take the responsibility of the usability and security of the community launchers. :::  </p> 
-
-
+Even if your operating system is not supported by the Koishi official, you could also go to the [forum](https://k.ilharp.cc) and choose the compatible version provided by the community, or use the [template project](../starter/boilerplate.md) instead. Koishi official would not take the responsibility of the usability and security of the community launchers.
+:::
 
 ## Windows
 
 We only listed the latest version in a product line. The unlisted version should be considered unsupported.
-
-
 
 ### Windows 8.1
 
@@ -29,9 +24,6 @@ We only listed the latest version in a product line. The unlisted version should
 | Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:         |
 | Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:         |
 | Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:         |
-
-
-
 
 ### Windows 10
 
@@ -77,9 +69,6 @@ We only listed the latest version in a product line. The unlisted version should
 | Windows Server IoT 2019             | :x:                  | :x:                  | :x:                  |
 | Windows Server IoT 2019 for Storage | :x:                  | :x:                  | :x:                  |
 | Windows Server IoT 2022             | :x:                  | :x:                  | :x:                  |
-
-
-
 
 ### Windows 11
 
