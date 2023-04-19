@@ -1,10 +1,10 @@
 # Install and Configure Plugins
 
 ::: tip
-本节将介绍「插件市场」「插件配置」和「依赖管理」页面的使用方法。
+This section will introduce the use method of "Marketplace", "Plugin Configurations" and "Dependency Management" pages.
 :::
 
-When the project is started successfully, a browser interface will be automatically opened. You can use the console in the interface to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the echo plugin for example. The function of the echo plugin is to provide an echo command that will export the user's input as an output to the user.
+When the project is started successfully, a browser interface will be automatically opened. You can use the console in the interface to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
 
 ## Install Plugins
 
@@ -12,7 +12,7 @@ When the project is started successfully, a browser interface will be automatica
 Koishi does not provide any assurance about the security of unofficial plugins. Do not download plugins from unknown sources at will, as they may cause Koishi unable to run, or even more serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
-前往「插件市场」页面，你将在这里看到所有可下载的插件。在搜索框中输入 echo，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。等待片刻，插件就已经安装成功了。
+Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter "echo" in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog. Wait for a moment, and the plugin will be installed successfully.
 
 ![select-version](/manual/console/select-version.light.webp) {.light-only}
 
@@ -20,7 +20,7 @@ Koishi does not provide any assurance about the security of unofficial plugins. 
 
 ## Enable and Disable Plugins
 
-插件安装成功以后并不会立即处于运行状态，我们需要对其进行配置。前往「插件配置」页面，左侧栏中列出了已配置的各种插件。其中<span class="light-only">黑色</span><span class="dark-only">白色</span>字体显示的是正在运行的插件，而灰色字体则对应尚未运行的插件。
+After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configurations" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span>fonts show plugins that are running, while grey fonts show plugins that are not running yet.
 
 ![plugins](/manual/console/plugins.light.webp) {.light-only}
 
