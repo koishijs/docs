@@ -1,10 +1,10 @@
 # Command Line Tools
 
-对于不使用图形化界面的用户，Koishi 启动器提供了命令行工具 `koi`，可以用来创建、管理和运行 Koishi。
+For users who don't use graphical interfaces, there is a command line tool called `koi` provided by Koishi Launcher can be used to create, manage and launch koishi.
 
-如果你下载得到的文件类似 `koi-xxx.appimage` 的话，直接把下面介绍的 `koi` 替换成这个文件名就可以了。
+If the name of the file that you downloaded is something like `koi-xxx.appimage`, you could replace the `koi` at the following commands as the name before running the command.
 
-| 命令                    | 功能                             |
+| Command               | Functions                      |
 | --------------------- | ------------------------------ |
 | `koi run daemon`      | 无守护启动，如果你是在面板服里创建自定义脚本的话就用这条命令 |
 | `koi daemon start`    | 启动守护                           |
