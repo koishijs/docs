@@ -1,20 +1,20 @@
 # Chat in Sandbox
 
-安装完了插件后，我们可以立即体验插件的效果。安装完了插件后，我们可以立即体验插件的效果。只需前往「沙盒」页面，我们就可以模拟与机器人的对话。
+Once the Sandbox plugin is installed, we could use the plugin immediately. Go to the "Sandbox" page, we can simulate a conversation with bots.
 
-## 模拟对话
+## Chat Simulation
 
-首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (我们可以看到新用户叫 Alice)，此时屏幕右侧会出现空白的聊天界面。点击屏幕下方的对话框，输入「help」，并按回车键发送。你会立即在聊天界面中看到机器人的回复。help 是一个内置指令，它的功能是列出当前所有可用的指令。因此，我们在回复中可以看到 echo 和 help。点击屏幕下方的对话框，输入「help」，并按回车键发送。你会立即在聊天界面中看到机器人的回复。help 是一个内置指令，它的功能是列出当前所有可用的指令。因此，我们在回复中可以看到 echo 和 help。
+First, click the "Add User" button in the upper left corner to create a virtual user, which is named Alice for example. Then, you would see a blank chat UI on the right side. Click the input box at the bottom of the chat UI, enter "help" (without quotes) and then press Enter key. You will see a reply message from bot immediately. "help" is a built-in command that lists all available commands at the moment. Therefore, we could see "echo" and "help" commands in the response.
 
-这里的 echo 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。
+The "echo" here is the plugin we have just installed, which displays a line of text that the user just entered. Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-## 管理虚拟用户
+## Virtual Users Management
 
-刚刚我们模拟的是私聊模式下与机器人的对话。如果我们想要模拟群聊，那我们可以再次点击「添加用户」以创建更多的用户。随后，在顶部切换到「群聊模式」。这样，你就可以控制多个虚拟用户与机器人聊天了。如果你要体验的插件是下棋一类的多人交互插件，这会非常有用。如果我们想要模拟群聊，那我们可以再次点击「添加用户」以创建更多的用户。随后，在顶部切换到「群聊模式」。这样，你就可以控制多个虚拟用户与机器人聊天了。如果你要体验的插件是下棋一类的多人交互插件，这会非常有用。
+We just simulated a private chat with bot. If you want to simulate a group chat, then we could click "Add User" again to create more virtual users. Then, switch to "Group Chat" at the top of the screen. At this moment, you could control multiple virtual users to chat with the bot. 如果你要体验的插件是下棋一类的多人交互插件，这会非常有用。
 
 除此以外，如果某些指令需要一定的 [权限等级](../usage/permission.md)，你也可以切换到「用户设置」中进行调整。
 
