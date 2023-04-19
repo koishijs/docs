@@ -14,16 +14,16 @@ The "echo" here is the plugin we have just installed, which displays a line of t
 
 ## Virtual Users Management
 
-We just simulated a private chat with bot. If you want to simulate a group chat, then we could click "Add User" again to create more virtual users. Then, switch to "Group Chat" at the top of the screen. At this moment, you could control multiple virtual users to chat with the bot. 如果你要体验的插件是下棋一类的多人交互插件，这会非常有用。
+We just simulated a private chat with bot. If you want to simulate a group chat, then we could click "Add User" again to create more virtual users. Then, switch to "Group Chat" at the top of the screen. At this moment, you could control multiple virtual users to chat with the bot. This would be useful when you want to test a multiplayer plugin like chess.
 
-除此以外，如果某些指令需要一定的 [权限等级](../usage/permission.md)，你也可以切换到「用户设置」中进行调整。
+Additionally, you could also set the [Authority](../usage/permission.md) of a virtual user in the "User Settings" page when commands require it.
 
-## 为什么不是真实环境？
+## Why Not Real Platform?
 
-有些人可能会问，直接在真实环境中测试插件不是更好吗？
+So, why don't we test plugins in a real chat platform rather than a sandbox?
 
-与真实环境相比，沙盒的真正优势在于它可以让你快速地测试插件的效果，而不需要在真实环境中进行大量的调试。更糟糕的是，一旦这些功能触发了机器人的敏感行为，你的真实账号还存在被封禁的风险。因此，沙盒是一个非常有用的调试工具。更糟糕的是，一旦这些功能触发了机器人的敏感行为，你的真实账号还存在被封禁的风险。因此，沙盒是一个非常有用的调试工具。
+Comparing a real environment, the sandbox allows you to test the plugin immediately without a lot of debugging work in the real environment. What's worse, if some features of your bot disobeyed the ToS that your bot account hosted, your account may be blocked. Therefore, the sandbox is useful here.
 
-如果你是插件的开发者而非使用者，沙盒功能的意义则更大了：得益于 Koishi 的热重载机制，每次修改插件源码后，你只需要按下保存，即可立即在沙盒中体验修改后的效果。这允许你进行快速的迭代开发，而根本不需要准备真实环境的账号。这允许你进行快速的迭代开发，而根本不需要准备真实环境的账号。
+如果你是插件的开发者而非使用者，沙盒功能的意义则更大了：得益于 Koishi 的热重载机制，每次修改插件源码后，你只需要按下保存，即可立即在沙盒中体验修改后的效果。这允许你进行快速的迭代开发，而根本不需要准备真实环境的账号。
 
-当然，沙盒并不能模拟所有真实聊天环境，因此有些插件的效果可能无法在沙盒中体验。因此下一节，我们就来介绍如何接入真实的聊天环境。因此下一节，我们就来介绍如何接入真实的聊天环境。
+当然，沙盒并不能模拟所有真实聊天环境，因此有些插件的效果可能无法在沙盒中体验。因此下一节，我们就来介绍如何接入真实的聊天环境。
