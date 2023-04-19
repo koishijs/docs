@@ -26,7 +26,7 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 6. 将第 5 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的「请求地址配置」中，并点击完成
 7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确
 
-参考：[@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
+See also: [@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
 ## KOOK
 
@@ -34,7 +34,7 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
 3. 将上面的 `token` 填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
+See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
 ## OneBot
 
@@ -44,16 +44,16 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 2. 开启 `gocqhttp.enable` 选项
 3. 点击「启用」，并跟随提示完成后续配置
 
-参考：[@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
+See also: [@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
-## QQ 频道
+## QQ Guild
 
 1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
 2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
 3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据
 4. 将上面的基本数据填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
+See also: [@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
 ## Telegram
 
@@ -63,4 +63,4 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 4. 使用 `/setprivacy` 开启 Privacy Mode (不然机器人只能收到特定消息)
 5. 创建完毕后，你会获得一个 `token` (请注意不要泄露)，将其填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
+See also: [@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
