@@ -1,4 +1,4 @@
-# Network Deployment
+# Deployment
 
 ::: warning
 It is vulnerable when you expose your Koishi on the Internet. 你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
