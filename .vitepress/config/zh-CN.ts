@@ -8,7 +8,7 @@ const ecosystem = makeLink('插件', '/zh-CN', () => [
 ])
 
 export default defineLocale({
-  label: '中文 (简体)',
+  label: '简体中文',
   lang: 'zh-CN',
   themeConfig: {
     nav: [{
