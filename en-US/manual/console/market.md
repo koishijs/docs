@@ -20,7 +20,7 @@ Go to the "Marketplace" page, where you will see all downloadable plugins here. 
 
 ## Enable and Disable Plugins
 
-After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configurations" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span>fonts show plugins that are running, while grey fonts show plugins that are not running yet.
+After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configurations" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span>fonts show plugins that are running, while gray fonts show plugins that are not running yet.
 
 ![plugins](/manual/console/plugins.light.webp) {.light-only}
 
