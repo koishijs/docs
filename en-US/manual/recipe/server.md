@@ -1,7 +1,7 @@
 # Network Deployment
 
 ::: warning
-将 Koishi 暴露在公网上可能会导致你的服务器受到攻击。你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
+It is vulnerable when you expose your Koishi on the Internet. 你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
 :::
 
 Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
