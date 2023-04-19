@@ -5,41 +5,41 @@ Koishi のデータベース APIは2種類に分けています：
 - @koishijs/coreで定義される組み込みデータ構造
 - minatoで提供されたORMインターフェース
 
-这一页中将仅展示第一部分的内容。
+このページでは１つ目のAPIについて説明します。
 
-## 内置表
+## 組み込みテーブル
 
 ### User
 
-- **id:** `id` 用户 ID
-- **name:** `string` 用户昵称
-- **flag:** `number` 状态标签
-- **authority:** `number` 用户权限
+- **id:** `id` ユーザー ID
+- **name:** `string` ユーザー名
+- **flag:** `number` ステータスフラグ
+- **authority:** `number` ユーザー権限
 
 ### Binding
 
-- **aid:** `id` 用户 ID
-- **platform:** `string` 平台名
-- **pid:** `string` 频道账号
+- **aid:** `id` ユーザー ID
+- **platform:** `string` プラットフォーム名
+- **pid:** `string` チャンネルアカウント
 
 ### Channel
 
-- **platform:** `string` 平台名
-- **id:** `string` 频道账号
-- **flag:** `number` 状态标签
-- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
+- **platform:** `string` プラットフォーム名
+- **id:** `string` チャンネルアカウント
+- **flag:** `number` ステータスフラグ
+- **assignee:** `string` [担当者](../../manual/usage/permission.md#受理人机制)
 
-## 全局接口
+## グローバルインターフェイス
 
 ### User.Flag, Channel.Flag <badge text="已废弃" type="danger"/>
 
-所有用户 / 频道状态标签构成的枚举类型。
+すべてのユーザー/チャンネルステータスフラグで構成された列挙型です。
 
-Koishi 使用**状态标签**来管理用户和群的可能状态。状态标签是一个正整数，它的每一个二进制位表示一种可能状态的开启或关闭。在 Koishi 中，这些状态通过一个枚举类型来进行辨别和修改。以下是内置的状态标签列表：
+Koishi では**ステータスフラグ**を使用してユーザーとグループの可能なステータスを管理します。ステータスフラグは正の整数で、各バイナリは可能なステータスのオンとオフを意味します。Koishi では、列挙型を通してこれらのステータスの識別と変更が行われています。組み込みステータスフラグを以下に示します：
 
-- **User.Flag.ignore:** 不响应用户的任何消息
-- **Channel.Flag.ignore:** 不响应频道内的任何消息
-- **Channel.Flag.silent:** 不主动向频道发送任何消息
+- **User.Flag.ignore:** ユーザーのすべてのメッセージには応答しません
+- **Channel.Flag.ignore:** チャンネルのすべてのメッセージには応答しません
+- **Channel.Flag.silent:** チャンネルに自発的にメッセージを送信しません
 
 利用位运算操作符，你可以用下面的方法辨别和修改状态信息：
 
