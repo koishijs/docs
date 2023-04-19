@@ -3,17 +3,17 @@ layout: home
 links:
   starter: /zh-CN/manual/starter/
 home:
-  desc: Multi-platform, extensive, high-performance chatbot
+  desc: Cross-platform Chatbot Framework Made With Love
   primary: Get Started
   secondary: Learn More
 features:
   - 
     title: Real time monitoring
-    desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
+    desc: With the dashboard of Koishi, you can monitor the status of your bot
     image: /manual/console/home
   - 
     title: Simple configuration
-    desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
+    desc: With variety of configurations and simple operating, you can customize your bot easily.
     image: /manual/console/settings
   - 
     title: 生态丰富
@@ -21,11 +21,11 @@ features:
     image: /manual/console/market
   - 
     title: Database embedded
-    desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
+    desc: With multi-driven, high-performance database, Koishi is easily to process a million grade of data.
     image: /manual/console/database
   - 
     title: Instant preview
-    desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
+    desc: When installing or configuring any plugin, you can instantly start a simulated chat and preview effects in Koishi sandboxes.
     image: /manual/console/sandbox
 development:
   title: Made for developers
@@ -47,7 +47,7 @@ advantages:
       path: M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z
   - 
     title: HMR supporting
-    desc: 开发 Koishi 插件时，只需轻点保存即可热重载，无需频繁重启机器人，如同前端开发一样丝滑顺畅。
+    desc: When developing a Koishi plugin, the only thing you need is saving the file. No need to reboot robots frequently. Swipe smoothly like front-end development.
     link: /
     icon:
       viewBox: 0 0 576 512
@@ -78,7 +78,7 @@ footer:
         text: Install as a dependency
         link: /en-US/manual/starter/direct.html
   - 
-    text: Document
+    text: Documentations
     items:
       - 
         text: Developer Guide
