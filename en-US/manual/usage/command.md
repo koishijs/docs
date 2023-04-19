@@ -47,13 +47,13 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 </chat-message>
 </chat-panel>
 
-## 参数和选项
+## Arguments and Options
 
-在上面的用法中，我们接触到了两个新的概念：**参数 (Argument)** 和 **选项 (Option)**。
+In the usages above, we have encountered two new concepts：**Argument** and **Option**.
 
 参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
 
-例如，help 指令共有一个参数，它是可选参数，表示要查看的指令名；echo 指令也有一个参数，它是必选参数，表示要发送的消息。让我们看看如果不填必选参数会怎么样：
+For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. 让我们看看如果不填必选参数会怎么样：
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
