@@ -1,11 +1,11 @@
 ---
 layout: starter
 sidebar: false
-caption: Koishi を使用する目的は……
+caption: 私がKoishiを使って……
 choices:
   production:
-    text: ボットサービスを構築するため
-    caption: 実行環境は……
+    text: ボットサービスを構築します
+    caption: 私の実行環境は……
     children:
       Windows: /ja-JP/manual/starter/windows.html
       macOS: /ja-JP/manual/starter/macos.html
@@ -13,13 +13,13 @@ choices:
       Android: /ja-JP/manual/starter/android.html
       Docker: /ja-JP/manual/starter/docker.html
   development:
-    text: 開発するため
-    caption: 我希望 Koishi 作为……
+    text: 開発します
+    caption: 私は Koishi を……として使いたいです
     children:
-      一个独立的项目: /zh-CN/manual/starter/boilerplate.html
-      其他 Node 项目的依赖: /zh-CN/manual/starter/direct.html
+      一个独立的项目: /ja-JP/manual/starter/boilerplate.html
+      其他 Node 项目的依赖: /ja-JP/manual/starter/direct.html
 ---
 
-# 选择安装方式
+# インストール方法の選択
 
-Koishi 提供了多种安装方式，你可以根据自己的需求选择：
+Koishi はいくつかのインストール方法を提供しており、使い用途に応じて選択してください。
