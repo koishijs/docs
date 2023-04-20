@@ -1,11 +1,11 @@
 ---
 layout: starter
 sidebar: false
-caption: 我使用 Koishi……
+caption: Как вы использовали Koishi?
 choices:
   production:
-    text: 用于搭建机器人服务
-    caption: 我的运行环境是……
+    text: Как вот-вот
+    caption: В......
     children:
       Windows: /zh-CN/manual/starter/windows.html
       macOS: /zh-CN/manual/starter/macos.html
