@@ -83,24 +83,24 @@ session.channel.flag &= ~Channel.Flag.silent
 - **platform:** `string` プラットフォーム名
 - **id:** `string` チャンネル識別子
 - **fields:** `QueryModifier<User.Field>` クエリ修飾子
-- 返回值: `Promise<Channel>` 频道数据
+- 戻り値: `Promise<Channel>` チャンネルデータ
 
-向数据库请求频道数据。
+データベースにチャンネルデータをリクエストします。
 
 ### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
 
-- **fields:** `ChannelField[]` 请求的字段，默认为全部字段
-- **platform:** `string` 平台名，默认为全平台
-- **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
-- 返回值: `Promise<Channel[]>` 频道数据列表
+- **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
+- **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
+- **assignees:** `string[]` 代理人リスト。デフォルトは現在実行されているすべてのボットです。
+- 戻り値: `Promise<Channel[]>` チャンネルデータリスト
 
-向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
+データベースに特定のボットが管理するすべでのチャンネルデータをリクエストします。ここにある二つの引数のどちらを選んでも、正しく認識されます。
 
 ### database.setChannel(platform, id, data)
 
-- **platform:** `string` 平台名
-- **id:** `number` 频道标识符
-- **data:** `Channel` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **platform:** `string` プラットフォーム名
+- **id:** `number` チャンネル識別子
+- **data:** `Channel` 修正・追加するデータ
+- 戻り値: `Promise<void>`
 
-向数据库修改或添加频道数据。
+データベースにチャンネルデータを修正・追加します。
