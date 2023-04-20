@@ -3,11 +3,11 @@ prev:
   text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
-  text: Guide
+  text: Developing Guide
   link: /en-US/guide/
 ---
 
-# Use as Dependency
+# Use as a Dependency
 
 ::: warning
 This guide assumes that you know about secondary knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you just started learning JavaScript development recently, or are not interested in coding, please [Choose Other Installation Methods](./index.md).
