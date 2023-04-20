@@ -53,7 +53,7 @@ Koishiは、様々なチャットアプリをサポートするためにアダ�
 3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据
 4. 将上面的基本数据填入插件配置即可使用
 
-参考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
+参照：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
 ## Telegram
 
