@@ -67,7 +67,7 @@ session.channel.flag &= ~Channel.Flag.silent
 - **modifier:** `QueryModifier<User.Field>` クエリ修飾子
 - 戻り値: `Promise<User>` ユーザーデータ
 
-ユーザーデータをデータベースにリクエストします。
+データベースにユーザーデータをリクエストします。
 
 ### database.setUser(platform, id, data)
 
@@ -76,13 +76,13 @@ session.channel.flag &= ~Channel.Flag.silent
 - **data:** `User` 変更・追加するデータ
 - 戻り値: `Promise<void>`
 
-向数据库修改或添加用户数据。
+データベースにユーザーデータを修正・追加します。
 
 ### database.getChannel(platform, id, fields?)
 
-- **platform:** `string` 平台名
-- **id:** `string` 频道标识符
-- **fields:** `QueryModifier<User.Field>` 请求修饰符
+- **platform:** `string` プラットフォーム名
+- **id:** `string` チャンネル識別子
+- **fields:** `QueryModifier<User.Field>` クエリ修飾子
 - 返回值: `Promise<Channel>` 频道数据
 
 向数据库请求频道数据。
