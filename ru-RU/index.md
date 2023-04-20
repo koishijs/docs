@@ -1,7 +1,7 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /ru-RU/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
   primary: Начать
