@@ -1,19 +1,19 @@
 ---
 layout: starter
 sidebar: false
-caption: 我使用 Koishi……
+caption: Koishi を使用する目的は……
 choices:
   production:
-    text: 用于搭建机器人服务
-    caption: 我的运行环境是……
+    text: ボットサービスを構築するため
+    caption: 実行環境は……
     children:
-      Windows: /zh-CN/manual/starter/windows.html
-      macOS: /zh-CN/manual/starter/macos.html
-      Linux: /zh-CN/manual/starter/linux.html
-      Android: /zh-CN/manual/starter/android.html
-      Docker: /zh-CN/manual/starter/docker.html
+      Windows: /ja-JP/manual/starter/windows.html
+      macOS: /ja-JP/manual/starter/macos.html
+      Linux: /ja-JP/manual/starter/linux.html
+      Android: /ja-JP/manual/starter/android.html
+      Docker: /ja-JP/manual/starter/docker.html
   development:
-    text: 用于开发
+    text: 開発するため
     caption: 我希望 Koishi 作为……
     children:
       一个独立的项目: /zh-CN/manual/starter/boilerplate.html
