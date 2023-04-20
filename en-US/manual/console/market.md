@@ -33,10 +33,10 @@ It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the uppe
 ## Configure Plugins
 
 ::: warning
-In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi preloaded many plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. 所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
+In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi have many built-in plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. All built-in plugins are well configured, so you don't need to modify them anymore. 随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
 :::
 
-虽然 echo 插件没有需要配置的地方，但更复杂的插件则通常会提供各种配置项，允许使用者控制插件的行为。下图展示了 novelai 插件的配置界面。
+While the "echo" plugin does not require configuration, more complex plugins often provide configurations that allow users to control the behavior of plugins. 下图展示了 novelai 插件的配置界面。
 
 ![settings](/manual/console/settings.light.webp) {.light-only}
 
