@@ -26,14 +26,14 @@ After the plugin is successfully installed, it will not be enabled immediately, 
 
 ![plugins](/manual/console/plugins.dark.webp) {.dark-only}
 
-我们可以看到此时 echo 插件确实并未运行，并且右侧的详情页也一片空白。这说明 echo 插件并没有什么需要配置的地方。我们可以直接点击右上角的「启用插件」，这样 echo 插件就已经处于运行状态了。
+We can see that the "echo" plugin is not running, and the "details" page on the right side is empty. It shows that the "echo" plugin has nothing to configure. We can directly click "Enable Plugin" in the upper right corner, then the "echo" plugin will be already running.
 
-要停用 echo 插件同样很简单。点击右上角的「停用插件」，插件变会停止运行。停用插件既不会删除插件的代码，也不会删除插件的配置，你可以随时重新启用它。
+It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the upper right corner, then the plugin will stop running. Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
 
 ## Configure Plugins
 
 ::: warning
-在配置插件的过程中，请大家记住这个原则：**如果没有必要，那么不要改动任何配置**。Koishi 预装了许多插件，你在插件配置页面中看到的每一个插件都实现了 Koishi 的一部分基础功能。包括我们已经用到的「插件市场」和「插件配置」页面本身也是由预装的 market 插件来提供的。所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
+In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi 预装了许多插件，你在插件配置页面中看到的每一个插件都实现了 Koishi 的一部分基础功能。包括我们已经用到的「插件市场」和「插件配置」页面本身也是由预装的 market 插件来提供的。所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
 :::
 
 虽然 echo 插件没有需要配置的地方，但更复杂的插件则通常会提供各种配置项，允许使用者控制插件的行为。下图展示了 novelai 插件的配置界面。
