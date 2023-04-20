@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Installation
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
   text: Guide
@@ -129,7 +129,7 @@ ctx.plugin(discord, {
 })
 ```
 
-## 添加更多插件
+## Add More Plugins
 
 Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：通常插件会遵循下面的名称：
 
