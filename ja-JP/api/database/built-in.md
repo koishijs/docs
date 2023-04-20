@@ -27,7 +27,7 @@ Koishi のデータベース APIは2種類に分けています：
 - **platform:** `string` プラットフォーム名
 - **id:** `string` チャンネルアカウント
 - **flag:** `number` ステータスフラグ
-- **assignee:** `string` [担当者](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [代理人](../../manual/usage/permission.md#受理人机制)
 
 ## グローバルインターフェイス
 
@@ -37,44 +37,44 @@ Koishi のデータベース APIは2種類に分けています：
 
 Koishi では**ステータスフラグ**を使用してユーザーとグループの可能なステータスを管理します。ステータスフラグは正の整数で、各バイナリは可能なステータスのオンとオフを意味します。Koishi では、列挙型を通してこれらのステータスの識別と変更が行われています。組み込みステータスフラグを以下に示します：
 
-- **User.Flag.ignore:** ユーザーのすべてのメッセージには応答しません
-- **Channel.Flag.ignore:** チャンネルのすべてのメッセージには応答しません
+- **User.Flag.ignore:** ユーザーのすべてのメッセージに応答しません
+- **Channel.Flag.ignore:** チャンネルのすべてのメッセージに応答しません
 - **Channel.Flag.silent:** チャンネルで自発的にメッセージを送信しません
 
-利用位运算操作符，你可以用下面的方法辨别和修改状态信息：
+ビット演算子を使用することで、以下のようにステータスの識別と変更ができます：
 
 ```ts
 import { Channel } from 'koishi'
 
-// 判断会话用户是否被设置了 ignore 状态
+// ユーザーが ignore ステータスに設定されたどうかを判断します
 if (session.channel.flag & Channel.Flag.ignore) {}
 
-// 为频道设置一个 ignore 状态
+// チャンネルに ignore ステータスを設定します
 session.channel.flag |= Channel.Flag.ignore
 
-// 为频道取消一个 silent 状态
+// チャンネルに silent ステータスを外します
 session.channel.flag &= ~Channel.Flag.silent
 ```
 
-## 内置实例方法
+## 組み込みインスタンスメソッド
 
-下列实例方法直接由 @koishijs/core 提供实现。
+以下のインスタンスメソッドは @koishijs/core で実装されます。
 
 ### database.getUser(platform, id, modifier?)
 
-- **platform:** `string` 平台名
-- **id:** `string` 用户标识符
-- **modifier:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<User>` 用户数据
+- **platform:** `string` プラットフォーム名
+- **id:** `string` ユーザー識別子
+- **modifier:** `QueryModifier<User.Field>` クエリ修飾子
+- 戻り値: `Promise<User>` ユーザーデータ
 
-向数据库请求用户数据。
+ユーザーデータをデータベースにリクエストします。
 
 ### database.setUser(platform, id, data)
 
-- **platform:** `string` 平台名
-- **id:** `string` 用户标识符
-- **data:** `User` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **platform:** `string` プラットフォーム名
+- **id:** `string` ユーザー識別子
+- **data:** `User` 変更・追加するデータ
+- 戻り値: `Promise<void>`
 
 向数据库修改或添加用户数据。
 
