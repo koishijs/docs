@@ -1,7 +1,7 @@
 # Install and Configure Plugins
 
 ::: tip
-This section will introduce the use method of "Marketplace", "Plugin Configurations" and "Dependency Management" pages.
+This section will introduce the use method of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
 :::
 
 When the project is started successfully, a browser interface will be automatically opened. You can use the console in the interface to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
@@ -20,7 +20,7 @@ Go to the "Marketplace" page, where you will see all downloadable plugins here. 
 
 ## Enable and Disable Plugins
 
-After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configurations" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span>fonts show plugins that are running, while gray fonts show plugins that are not running yet.
+After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span>fonts show plugins that are running, while gray fonts show plugins that are not running yet.
 
 ![plugins](/manual/console/plugins.light.webp) {.light-only}
 
@@ -33,7 +33,7 @@ It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the uppe
 ## Configure Plugins
 
 ::: warning
-In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi 预装了许多插件，你在插件配置页面中看到的每一个插件都实现了 Koishi 的一部分基础功能。包括我们已经用到的「插件市场」和「插件配置」页面本身也是由预装的 market 插件来提供的。所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
+In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi preloaded many plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. 所有的预装插件均已配置完善，你不需要对它们进行任何修改。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行 (甚至错误地添加了某些插件也会导致 Koishi 无法运行)。
 :::
 
 虽然 echo 插件没有需要配置的地方，但更复杂的插件则通常会提供各种配置项，允许使用者控制插件的行为。下图展示了 novelai 插件的配置界面。
