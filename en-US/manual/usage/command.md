@@ -34,16 +34,16 @@ An optional parameter followed with help command could be used to view the detai
 </chat-message>
 </chat-panel>
 
-You might find that the help itself is a command as well, so is it possible to use help to show the help message of help itself?答案是肯定的：
+You might find that the help itself is a command as well, so is it possible to use help to show the help message of help itself? The answer is positive:
 
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：help [command]</p>
-<p>显示帮助信息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-a, --authority  显示权限设置</p>
-<p class="indent-1">-H, --show-hidden  查看隐藏的选项和指令</p>
+<p>Command: help [command]</p>
+<p>Display help information</p>
+<p>Available options:</p>
+<p class="indent-1">-a, --authority  show authority requirements</p>
+<p class="indent-1">-H, --show-hidden  show hidden options and commands</p>
 </chat-message>
 </chat-panel>
 
@@ -51,14 +51,14 @@ You might find that the help itself is a command as well, so is it possible to u
 
 In the usages above, we have encountered two new concepts：**Argument** and **Option**.
 
-参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
+There are two types of parameters: required parameters, quoted by a pair of chevrons `<>`; and optional parameters, quoted by a pair of brackets `[]`. A command may have arbitrary parameters, their orders are fixed, which means that users should enter the parameters in the order that pre-defined by the command. Required parameters must be precedent before optional parameters. When user enters fewer parameters than the required parameters that the plugin requires, the plugin should often print errors. When user enters extra parameters, they would be ignored generally.
 
 For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. Let's see what will happen if the required parameter is missing:
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>请输入要发送的文本。</p>
+<p>Please enter text to be sent.</p>
 </chat-message>
 </chat-panel>
 
