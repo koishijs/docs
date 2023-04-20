@@ -13,7 +13,7 @@ choices:
       Android: /en-US/manual/starter/android.html
       Docker: /en-US/manual/starter/docker.html
   development:
-    text: Development
+    text: Developing
     caption: I Wish to Use Koishi as...
     children:
       一个独立的项目: /en-US/manual/starter/boilerplate.html
@@ -22,4 +22,4 @@ choices:
 
 # Choose Installation Method
 
-Koishi offers multiple installations, you can choose one depends on your own demand:
+Koishi offers multiple installation methods, you can choose one depending on your own demand:

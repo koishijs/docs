@@ -4,7 +4,7 @@ prev:
   link: /en-US/manual/starter/
 ---
 
-# 认识控制台
+# About Koishi Console
 
 Koishi 的一个核心特性是强大的控制台。控制台是一个对用户非常友好的图形界面，封装了 Koishi 的绝大多数功能：
 

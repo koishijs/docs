@@ -27,7 +27,7 @@ Koishi のデータベース APIは2種類に分けています：
 - **platform:** `string` プラットフォーム名
 - **id:** `string` チャンネルアカウント
 - **flag:** `number` ステータスフラグ
-- **assignee:** `string` [担当者](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [代理人](../../manual/usage/permission.md#受理人机制)
 
 ## グローバルインターフェイス
 
@@ -37,70 +37,70 @@ Koishi のデータベース APIは2種類に分けています：
 
 Koishi では**ステータスフラグ**を使用してユーザーとグループの可能なステータスを管理します。ステータスフラグは正の整数で、各バイナリは可能なステータスのオンとオフを意味します。Koishi では、列挙型を通してこれらのステータスの識別と変更が行われています。組み込みステータスフラグを以下に示します：
 
-- **User.Flag.ignore:** ユーザーのすべてのメッセージには応答しません
-- **Channel.Flag.ignore:** チャンネルのすべてのメッセージには応答しません
-- **Channel.Flag.silent:** チャンネルに自発的にメッセージを送信しません
+- **User.Flag.ignore:** ユーザーのすべてのメッセージに応答しません
+- **Channel.Flag.ignore:** チャンネルのすべてのメッセージに応答しません
+- **Channel.Flag.silent:** チャンネルで自発的にメッセージを送信しません
 
-利用位运算操作符，你可以用下面的方法辨别和修改状态信息：
+ビット演算子を使用することで、以下のようにステータスの識別と変更ができます：
 
 ```ts
 import { Channel } from 'koishi'
 
-// 判断会话用户是否被设置了 ignore 状态
+// ユーザーが ignore ステータスに設定されたどうかを判断します
 if (session.channel.flag & Channel.Flag.ignore) {}
 
-// 为频道设置一个 ignore 状态
+// チャンネルに ignore ステータスを設定します
 session.channel.flag |= Channel.Flag.ignore
 
-// 为频道取消一个 silent 状态
+// チャンネルに silent ステータスを外します
 session.channel.flag &= ~Channel.Flag.silent
 ```
 
-## 内置实例方法
+## 組み込みインスタンスメソッド
 
-下列实例方法直接由 @koishijs/core 提供实现。
+以下のインスタンスメソッドは @koishijs/core で実装されます。
 
 ### database.getUser(platform, id, modifier?)
 
-- **platform:** `string` 平台名
-- **id:** `string` 用户标识符
-- **modifier:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<User>` 用户数据
+- **platform:** `string` プラットフォーム名
+- **id:** `string` ユーザー識別子
+- **modifier:** `QueryModifier<User.Field>` クエリ修飾子
+- 戻り値: `Promise<User>` ユーザーデータ
 
-向数据库请求用户数据。
+データベースにユーザーデータをリクエストします。
 
 ### database.setUser(platform, id, data)
 
-- **platform:** `string` 平台名
-- **id:** `string` 用户标识符
-- **data:** `User` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **platform:** `string` プラットフォーム名
+- **id:** `string` ユーザー識別子
+- **data:** `User` 変更・追加するデータ
+- 戻り値: `Promise<void>`
 
-向数据库修改或添加用户数据。
+データベースにユーザーデータを修正・追加します。
 
 ### database.getChannel(platform, id, fields?)
 
-- **platform:** `string` 平台名
-- **id:** `string` 频道标识符
-- **fields:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<Channel>` 频道数据
+- **platform:** `string` プラットフォーム名
+- **id:** `string` チャンネル識別子
+- **fields:** `QueryModifier<User.Field>` クエリ修飾子
+- 戻り値: `Promise<Channel>` チャンネルデータ
 
-向数据库请求频道数据。
+データベースにチャンネルデータをリクエストします。
 
 ### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
 
-- **fields:** `ChannelField[]` 请求的字段，默认为全部字段
-- **platform:** `string` 平台名，默认为全平台
-- **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
-- 返回值: `Promise<Channel[]>` 频道数据列表
+- **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
+- **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
+- **assignees:** `string[]` 代理人リスト。デフォルトは現在実行されているすべてのボットです。
+- 戻り値: `Promise<Channel[]>` チャンネルデータリスト
 
-向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
+データベースに特定のボットが管理するすべでのチャンネルデータをリクエストします。ここにある二つの引数のどちらを選んでも、正しく認識されます。
 
 ### database.setChannel(platform, id, data)
 
-- **platform:** `string` 平台名
-- **id:** `number` 频道标识符
-- **data:** `Channel` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **platform:** `string` プラットフォーム名
+- **id:** `number` チャンネル識別子
+- **data:** `Channel` 修正・追加するデータ
+- 戻り値: `Promise<void>`
 
-向数据库修改或添加频道数据。
+データベースにチャンネルデータを修正・追加します。

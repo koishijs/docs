@@ -20,7 +20,7 @@ features:
     desc: A huge number of plugins available for Koishi, you could find almost everything in the Koishi Marketplace.
     image: /manual/console/market
   - 
-    title: Various Database Support
+    title: Database Integration
     desc: Koishi handles easily a million of data with a multi-driven and high-performance database.
     image: /manual/console/database
   - 
@@ -78,10 +78,10 @@ footer:
         text: Install as a dependency
         link: /en-US/manual/starter/direct.html
   - 
-    text: Documentations
+    text: Documentation
     items:
       - 
-        text: Developer Guide
+        text: Developing Guide
         link: /en-US/guide/
       - 
         text: API

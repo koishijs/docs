@@ -4,7 +4,7 @@ For users who don't use graphical interfaces, there is a command line tool calle
 
 If the name of the file that you downloaded is something like `koi-xxx.appimage`, you could replace the `koi` at the following commands as the name before running the command.
 
-| Command               | Functions                            |
+| Command               | Function                             |
 | --------------------- | ------------------------------------ |
 | `koi run daemon`      | Launch Koishi without a daemon       |
 | `koi daemon start`    | Launch the daemon                    |

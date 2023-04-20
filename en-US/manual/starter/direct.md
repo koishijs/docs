@@ -1,13 +1,13 @@
 ---
 prev:
-  text: Installation
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
-  text: Guide
+  text: Developing Guide
   link: /en-US/guide/
 ---
 
-# Use as Dependency
+# Use as a Dependency
 
 ::: warning
 This guide assumes that you know about secondary knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you just started learning JavaScript development recently, or are not interested in coding, please [Choose Other Installation Methods](./index.md).
@@ -129,7 +129,7 @@ ctx.plugin(discord, {
 })
 ```
 
-## 添加更多插件
+## Add More Plugins
 
 Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：通常插件会遵循下面的名称：
 
@@ -218,4 +218,4 @@ ctx.plugin(ping)
 
 ## 接下来……
 
-恭喜你已经掌握了 Koishi 的基本用法！恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
