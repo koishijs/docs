@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Installation
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
@@ -10,10 +10,10 @@ next:
 # Create Template Project
 
 ::: tip
-If you want to learn about other installation method, please visit [Choose Installation Method](./index.md)。
+If you want to learn about other installation method, please visit [Choose Installation Method](./index.md).
 :::
 
-In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi.Comparing to build up a project from scratch, there are advantages with the template:
+In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
 
 - One-key Template Project. Create a project with full console experience and plugin templates with just one key
 - Fully TypeScript support. Enjoy the benefits of code hints and type checks.
@@ -105,5 +105,5 @@ yarn start
 
 Congratulations that you have learnt the basic of Koishi! What's next:
 
-- If you want to learn to the Koishi Console, please visit [Acknowledge Koishi Console](../console/index.md)
-- If you want to develop your plugin immediately, please visit [Development Tutorial](../../guide/index.md)
+- If you want to learn to the Koishi Console, please visit [About Koishi Console](../console/index.md)
+- If you want to develop your plugin immediately, please visit [Development Guide](../../guide/index.md)
