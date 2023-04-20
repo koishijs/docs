@@ -51,17 +51,17 @@ In this page, we can see many configurations, where you need to take note of:
 
 ### Manage Groups
 
-Koishi provides a function of plugin groups that allows you to place plugins into different groups for unified management. A newly created Koishi instance has already been pre-configured some groups, and newly installed plugins will be automatically added to the bottom of the plugin list without belonging to any group. 你可以在左侧栏中拖动插件，来改变插件的排列顺序或移至别的分组内部。
+Koishi provides a function of plugin groups that allows you to place plugins into different groups for unified management. A newly created Koishi instance has already been pre-configured some groups, and newly installed plugins will be automatically added to the bottom of the plugin list without belonging to any group. You can drag plugins in the left column to change the sequence of plugins or move them into another group.
 
-你同样可以创建新的分组。在「全局配置」或任意分组界面中，点击右上角的「创建分组」按钮，你将创建一个新的插件分组。分组可以在左侧栏中点击小三角来控制展开和收起，还可以配置 [过滤器](../usage/filter.md)，你由此得以获得了同时控制一组插件行为的能力。
+You can also create new groups. In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner, and you will create a new plugin group. The small triangle in the left column can be used to control the expanding and collapsing of the group. You can also configure [filters](../usage/filter.md) that allow you to control the behavior of a group of plugins simultaneously.
 
 ### Add more Plugins
 
 ::: tip
-通常情况下，一个插件只能同时运行一份配置。请参考 [维护多份配置](../recipe/multiple.md) 章节。
+Normally, a plugin can only run one configuration at once. Please refer to the [Maintaining Multiple Configurations](../recipe/multiple.md) section.
 :::
 
-如果某个已安装的插件并未显示在插件列表中，你也可以手动添加它。在「全局配置」或任意分组界面中，点击右上角的「添加插件」将会弹出对话框。在对话框中点击要添加的插件，即可创建一份未启用的插件配置。
+If an installed plugin is not shown in the plugin list, you can also add it manually. In "Global Configuration" or in any group page, click the "Add Plugin" button in the top right corner will eject a dialog box. Click on the plugin to be added in the dialog box to create a plugin configuration which is not enabled.
 
 ![select-plugin](/manual/console/select-plugin.light.webp) {.light-only}
 
@@ -70,7 +70,7 @@ Koishi provides a function of plugin groups that allows you to place plugins int
 ### Remove Plugin or Group
 
 ::: warning
-注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。请谨慎操作。
+Warning: this action cannot be undone. If you want to restore the previous configuration, you can only manually add it again. Please be careful.
 :::
 
 在任何插件的配置界面点击右上角的「删除插件」可删除这份配置。与之类似，在分组的配置界面点击右上角的「删除分组」可删除这个分组。删除分组时，分组内的所有插件也会一并删除。
