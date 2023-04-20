@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Installation
+  text: Choose Installation Method
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
@@ -10,11 +10,11 @@ next:
 # Install for Android
 
 ::: tip
-If you want to learn about other installation method, please visit [Choose Installation Method](./index.md)。
+If you want to learn about other installation method, please visit [Choose Installation Method](./index.md).
 :::
 
 ::: danger
-This project is still working in progress.Some features may not be available.
+This project is still working in progress. Some features may not be available.
 :::
 
 ## Download
