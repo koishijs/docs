@@ -13,6 +13,7 @@
 
 你也可以尝试搜索 Translation Management System 或 Localization Platform 等关键词，整个互联网上有无数的本地化管理平台等着你去发掘。
 :::
+:::
 
 ## 注册及登录 Crowdin
 
@@ -20,6 +21,7 @@
 
 :::tip
 如果你还是学生，并且成功申请了 GitHub 的学生开发包 (Student Pack)，在你使用 GitHub 账号成功登录 Crowdin 后会自动获赠价值 1500 美元的 1 年 Bronze 计划。
+:::
 :::
 
 ## 创建本地化项目
@@ -29,11 +31,13 @@
 ::: tip
 若你的项目是开放源代码的，并且活跃了 4 个月及以上，你可以申请 Crowdin 的开源项目许可。当你成功创建项目后，填写[这个表单](https://crowdin.com/page/open-source-project-setup-request)，Crowdin 的客服人员会帮助你。
 :::
+:::
 
 在新建项目界面，需要填写项目名称 (推荐和插件或机器人的名称一致)，选择是否公开项目，设置源语言和目标语言，然后点击创建项目按钮。
 
 :::tip
 公开项目意味着所有 Crowdin 用户都能搜索到你的项目，也可以看到你的项目的所有内容，也可以向项目贡献翻译。如果你是通过开源项目免费许可的方式创建的项目，则只能创建公开项目。
+:::
 :::
 
 ### 项目结构
@@ -94,6 +98,7 @@ Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用�
 
 ::: tip
 `crowdin.yml` 中的配置项不仅适用于 Crowdin CLI，还可以在上述的代码仓库集成中发挥作用，Crowdin 会自动读取该文件以确定翻译的范围。
+:::
 :::
 
 推荐在项目目录下的 `crowdin.yml` 文件中配置好文件筛选器，并且在 `$HOME/.crowdin.yml` 文件中存储你的 Crowdin 密钥等敏感信息，然后你就可以简单地运行 `crowdin upload sources` 上传源文件，而不需要每次都打出冗长的包含通配符的文件路径了。
