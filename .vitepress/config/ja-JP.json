@@ -197,7 +197,7 @@
               "link": "/ja-JP/guide/develop/config.md"
             },
             {
-              "text": "スクリプトを実行",
+              "text": "スクリプトを実行する",
               "link": "/ja-JP/guide/develop/script.md"
             },
             {
@@ -205,20 +205,20 @@
               "link": "/ja-JP/guide/develop/workspace.md"
             },
             {
-              "text": "プラグインの公開",
+              "text": "プラグイン公開",
               "link": "/ja-JP/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "インタラクションの基礎",
           "items": [
             {
-              "text": "指令开发",
+              "text": "コマンド開発",
               "link": "/ja-JP/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "イベントシステム",
               "link": "/ja-JP/guide/basic/events.md"
             },
             {
@@ -226,32 +226,32 @@
               "link": "/ja-JP/guide/basic/middleware.md"
             },
             {
-              "text": "消息元素",
+              "text": "メッセージエレメント",
               "link": "/ja-JP/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "アドバンスト",
               "link": "/ja-JP/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "モジュール化",
           "items": [
             {
-              "text": "认识插件",
+              "text": "プラグインを理解する",
               "link": "/ja-JP/guide/plugin/"
             },
             {
-              "text": "生命周期",
+              "text": "ライフサイクル",
               "link": "/ja-JP/guide/plugin/lifecycle.md"
             },
             {
-              "text": "会话过滤器",
+              "text": "セッションフィルター",
               "link": "/ja-JP/guide/plugin/selector.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "サービスと依存性",
               "link": "/ja-JP/guide/plugin/service.md"
             },
             {
@@ -261,14 +261,14 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "データベース",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "データベースを使用する",
               "link": "/ja-JP/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "データモデルを拡張する",
               "link": "/ja-JP/guide/database/model.md"
             },
             {
@@ -368,7 +368,7 @@
               "link": "/ja-JP/api/core/app.md"
             },
             {
-              "text": "ロボット",
+              "text": "ボット",
               "link": "/ja-JP/api/core/bot.md"
             },
             {
