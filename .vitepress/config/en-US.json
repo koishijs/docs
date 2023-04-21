@@ -186,22 +186,22 @@
           ]
         },
         {
-          "text": "开发上手",
+          "text": "Developing Guide",
           "items": [
             {
-              "text": "环境搭建",
-              "link": "/zh-CN/guide/develop/setup.md"
+              "text": "Setup Environment",
+              "link": "/en-US/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
-              "link": "/zh-CN/guide/develop/config.md"
+              "text": "Configuration File",
+              "link": "/en-US/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
-              "link": "/zh-CN/guide/develop/script.md"
+              "text": "Bootstrap Script",
+              "link": "/en-US/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "Workspace Development",
               "link": "/zh-CN/guide/develop/workspace.md"
             },
             {
@@ -315,33 +315,33 @@
             },
             {
               "text": "接入 Crowdin",
-              "link": "/zh-CN/guide/i18n/crowdin.md"
+              "link": "/en-US/guide/i18n/crowdin.md"
             }
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "Console Plugin Development",
           "items": [
             {
-              "text": "使用控制台",
-              "link": "/zh-CN/guide/console/index.md"
+              "text": "Using Koishi Console",
+              "link": "/en-US/guide/console/index.md"
             },
             {
-              "text": "编写扩展",
-              "link": "/zh-CN/guide/console/extension.md"
+              "text": "Extend Console",
+              "link": "/en-US/guide/console/extension.md"
             },
             {
-              "text": "数据交互",
-              "link": "/zh-CN/guide/console/data.md"
+              "text": "Data Exchange",
+              "link": "/en-US/guide/console/data.md"
             }
           ]
         },
         {
-          "text": "测试工具",
+          "text": "Debugging",
           "items": [
             {
-              "text": "单元测试",
-              "link": "/zh-CN/guide/testing/index.md"
+              "text": "Unit Tests",
+              "link": "/en-US/guide/testing/index.md"
             }
           ]
         }
@@ -351,17 +351,17 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
-              "link": "/zh-CN/api/"
+              "text": "Overview",
+              "link": "/en-US/api/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "Core Modules",
           "items": [
             {
-              "text": "适配器 (Adapter)",
-              "link": "/zh-CN/api/core/adapter.md"
+              "text": "Adapter",
+              "link": "/en-US/api/core/adapter.md"
             },
             {
               "text": "应用 (App)",
