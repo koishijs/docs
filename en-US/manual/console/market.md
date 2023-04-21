@@ -77,7 +77,7 @@ You can click "Remove Plugin" in the top right corner of any plugin to remove it
 
 ## Update and Uninstall Plugins
 
-前往「依赖管理」页面，你可以在这里看到依赖列表，你可以在这里更新你的依赖，当状态显示为「可更新」时，点击右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」即可完成更新。
+Go to the "Dependency Management" page. Here you can see a list of dependencies, and you can update them here. When the status shows "Updatable", you can click the "Modify" button on the right, select the version you need in the top left corner of the popup dialog, and click "Update" in the bottom right corner to complete your update.
 
 ![dependencies](/manual/console/dependencies.light.webp) {.light-only}
 
