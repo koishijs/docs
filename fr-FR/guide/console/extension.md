@@ -98,7 +98,7 @@ plugins:
 
 ## 构建代码
 
-调试好你的扩展后，下一步就是构建了。调试好你的扩展后，下一步就是构建了。修改你的 package.json：
+调试好你的扩展后，下一步就是构建了。修改你的 package.json：
 
 ```json title=package.json
 {
