@@ -1,6 +1,10 @@
 import { defineConfig } from '@koishijs/vitepress'
-import zhCN from './zh-CN'
-import enUS from './en-US'
+import deDE from './de-DE.json'
+import enUS from './en-US.json'
+import frFR from './fr-FR.json'
+import jaJP from './ja-JP.json'
+import ruRU from './ru-RU.json'
+import zhCN from './zh-CN.json'
 
 export default async () => defineConfig({
   title: 'Koishi',
@@ -13,8 +17,14 @@ export default async () => defineConfig({
   ],
 
   locales: {
-    'zh-CN': zhCN,
     'en-US': enUS,
+    'zh-CN': zhCN,
+    ...(process.env.VERCEL_ENV === 'preview' ? {
+      'de-DE': deDE,
+      'fr-FR': frFR,
+      'ja-JP': jaJP,
+      'ru-RU': ruRU,
+    } : {}),
   },
 
   themeConfig: {
