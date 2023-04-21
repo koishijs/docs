@@ -25,7 +25,7 @@ While it is recommended to use the Template Project for most users, but it would
 Koishi is written with TypeScript, so TypeScript would be the first class programming language when you are developing Koishi. In the following section of documents, we will use TypeScript as example language. If you are writing vanilla JavaScript or other JavaScript dialects, you could modify your own code based on the example code.
 :::
 
-Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended) as the runtime environment.You should install it manually.Here we suppose you have it installed already.
+Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended) as the runtime environment. You should install it manually.Here we suppose you have it installed already.
 
 Initialize a directly as your bot, install Koishi and common plugins, here we would install several official plugins as example: console, sandbox and echo.
 
@@ -131,7 +131,7 @@ ctx.plugin(discord, {
 
 ## Add More Plugins
 
-Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：通常插件会遵循下面的名称：通常插件会遵循下面的名称：
+Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
 
 - koishi-plugin-foo
 - @koishijs/plugin-foo
@@ -158,7 +158,7 @@ ctx.plugin(puppeteer)   // 浏览器服务
 ctx.plugin(forward)     // 消息转发
 ```
 
-请注意到上面的两个插件的导入方式的微妙差异。请注意到上面的两个插件的导入方式的微妙差异。请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
+请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
 
 同理，对于 commonjs 的使用者，如果要使用 `require` 来获取插件对象，也应注意到这种区别：
 
@@ -192,7 +192,7 @@ ctx.on('message', (session) => {
 <chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
-不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：
+不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
@@ -218,4 +218,4 @@ ctx.plugin(ping)
 
 ## 接下来……
 
-恭喜你已经掌握了 Koishi 的基本用法！恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
