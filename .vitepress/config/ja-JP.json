@@ -85,7 +85,7 @@
               "link": "/ja-JP/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "パッケージとして",
               "link": "/ja-JP/manual/starter/direct.md"
             }
           ]
@@ -98,11 +98,11 @@
               "link": "/ja-JP/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "プラグインのインストールと設定",
               "link": "/ja-JP/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
+              "text": "サンドボックスでチャット",
               "link": "/ja-JP/manual/console/sandbox.md"
             },
             {
@@ -112,22 +112,22 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "使い方",
           "items": [
             {
-              "text": "指令系统",
+              "text": "コマンドシステム",
               "link": "/ja-JP/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "クロスプラットフォーム",
               "link": "/ja-JP/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
+              "text": "権限管理",
               "link": "/ja-JP/manual/usage/permission.md"
             },
             {
-              "text": "过滤器",
+              "text": "フィルター",
               "link": "/ja-JP/manual/usage/filter.md"
             },
             {
@@ -137,39 +137,39 @@
           ]
         },
         {
-          "text": "配方",
+          "text": "レシピ",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "コマンドの上級技",
               "link": "/ja-JP/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "データベースにアクセス",
               "link": "/ja-JP/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "マルチ設定",
               "link": "/ja-JP/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "プラグインの検索",
               "link": "/ja-JP/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "デプロイメント",
               "link": "/ja-JP/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "ランチャー",
           "items": [
             {
-              "text": "系统要求",
+              "text": "システム要件",
               "link": "/ja-JP/manual/launcher/system.md"
             },
             {
-              "text": "命令行工具",
+              "text": "コマンドラインツール",
               "link": "/ja-JP/manual/launcher/cli.md"
             }
           ]
@@ -180,32 +180,32 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "概要",
               "link": "/ja-JP/guide/"
             }
           ]
         },
         {
-          "text": "开发上手",
+          "text": "開発入門",
           "items": [
             {
-              "text": "环境搭建",
+              "text": "環境構築",
               "link": "/ja-JP/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
+              "text": "設定ファイル",
               "link": "/ja-JP/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
+              "text": "スクリプトを実行",
               "link": "/ja-JP/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "ワークスペース",
               "link": "/ja-JP/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "プラグインの公開",
               "link": "/ja-JP/guide/develop/publish.md"
             }
           ]
@@ -222,7 +222,7 @@
               "link": "/ja-JP/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "ミドルウェア",
               "link": "/ja-JP/guide/basic/middleware.md"
             },
             {
@@ -285,7 +285,7 @@
           "text": "跨平台",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "アダプターを使用する",
               "link": "/ja-JP/guide/adapter/index.md"
             },
             {
@@ -360,19 +360,19 @@
           "text": "核心模块",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "アダプター",
               "link": "/ja-JP/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "アプリ",
               "link": "/ja-JP/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "ロボット",
               "link": "/ja-JP/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "コマンド",
               "link": "/ja-JP/api/core/command.md"
             },
             {
