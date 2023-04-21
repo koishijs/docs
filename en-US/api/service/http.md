@@ -1,6 +1,6 @@
-# HTTP
+# 网络请求 (HTTP)
 
-`ctx.http` is a built-in service that encapsulates network request APIs based on [axios](https://github.com/axios/axios).
+`ctx.http` 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。
 
 你可能会有这样的疑问：为什么不直接使用 axios，而是使用 `ctx.http`？这是因为许多插件都需要发起网络请求，而诸如代理、超时等配置又通常是插件无关的。因此我们为这些通用需求提供了 [全局的配置项](../../api/core/app.html#options-request-proxyagent)，各个插件则只需要调用 `ctx.http` 即可。
 
