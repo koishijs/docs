@@ -6,6 +6,34 @@ import jaJP from './ja-JP.json'
 import ruRU from './ru-RU.json'
 import zhCN from './zh-CN.json'
 
+function transformLocale(prefix: string, source: any) {
+  if (Array.isArray(source)) {
+    return source.map(item => transformLocale(prefix, item))
+  }
+
+  const result: any = {}
+  for (const key in source) {
+    const value = source[key]
+    if (typeof value === 'string') {
+      if (key === 'link') {
+        result[key] = prefix + value
+      } else if (key === 'activeMatch') {
+        result[key] = '^' + prefix + value
+      } else {
+        result[key] = value
+      }
+    } else if (key === 'sidebar') {
+      result[key] = {}
+      for (const prop in value) {
+        result[key][prefix + prop] = transformLocale(prefix, value[prop])
+      }
+    } else {
+      result[key] = transformLocale(prefix, value)
+    }
+  }
+  return result
+}
+
 export default async () => defineConfig({
   title: 'Koishi',
   description: '创建跨平台、可扩展、高性能的机器人',
@@ -17,13 +45,13 @@ export default async () => defineConfig({
   ],
 
   locales: {
-    'en-US': enUS,
-    'zh-CN': zhCN,
+    'en-US': transformLocale('/en-US', enUS),
+    'zh-CN': transformLocale('/zh-CN', zhCN),
     ...(process.env.VERCEL_ENV === 'preview' ? {
-      'de-DE': deDE,
-      'fr-FR': frFR,
-      'ja-JP': jaJP,
-      'ru-RU': ruRU,
+      'de-DE': transformLocale('/de-DE', deDE),
+      'fr-FR': transformLocale('/fr-FR', frFR),
+      'ja-JP': transformLocale('/ja-JP', jaJP),
+      'ru-RU': transformLocale('/ru-RU', ruRU),
     } : {}),
   },
 
