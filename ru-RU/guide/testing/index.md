@@ -8,10 +8,10 @@
 - 能够有效避免风控带来的损失
 - 便于调试与错误定位
 
-本章将介绍官方插件 `@koishijs/plugin-mock`。你可以用它来快速检验你编写的 Koishi 插件。
+本章将介绍官方插件 `@koishijs/plugin-mock`。你可以用它来快速检验你编写的 Koishi 插件。你可以用它来快速检验你编写的 Koishi 插件。
 
 ::: tip
-本节中介绍的样例用到了 [Mocha](https://mochajs.org/) 和 [Chai](https://www.chaijs.com/)。它们都是比较通用的测试库和断言库，但并非绑定 @koishijs/plugin-mock 一同使用。你也可以根据你的喜好选择其他工具，比如 [Jest](https://jestjs.io/) 等等。
+本节中介绍的样例用到了 [Mocha](https://mochajs.org/) 和 [Chai](https://www.chaijs.com/)。它们都是比较通用的测试库和断言库，但并非绑定 @koishijs/plugin-mock 一同使用。你也可以根据你的喜好选择其他工具，比如 [Jest](https://jestjs.io/) 等等。 :::它们都是比较通用的测试库和断言库，但并非绑定 @koishijs/plugin-mock 一同使用。你也可以根据你的喜好选择其他工具，比如 [Jest](https://jestjs.io/) 等等。
 :::
 
 ## 准备工作
@@ -64,7 +64,7 @@ module.exports = {
 
 ## 模拟会话消息
 
-对于聊天机器人来说最常见的需求是处理用户的消息。为此，我们提供了 **客户端 (Client)** 对象，用于模拟特定频道和用户的输入：
+对于聊天机器人来说最常见的需求是处理用户的消息。对于聊天机器人来说最常见的需求是处理用户的消息。为此，我们提供了 **客户端 (Client)** 对象，用于模拟特定频道和用户的输入：
 
 ```ts no-extra-header
 /// <reference types="mocha" />
@@ -137,6 +137,10 @@ after(() => app.stop())
 it('example 2', async () => {
   // 用户 123 尝试调用 foo 指令，但是权限不足
   await client1.shouldReply('foo', '权限不足。')
+
+  // 用户 456 得以正常调用 foo 指令
+  await client2.shouldReply('foo', 'bar')
+})')
 
   // 用户 456 得以正常调用 foo 指令
   await client2.shouldReply('foo', 'bar')
