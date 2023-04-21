@@ -15,7 +15,7 @@ If you want to learn about other installation method, please visit [Choose Insta
 
 In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
 
-- One-key Template Project. Create a project with full console experience and plugin templates with just one key
+- Create a project with full console experience and plugin templates with just one key
 - Fully TypeScript support. Enjoy the benefits of code hints and type checks.
 - Plugins Hot Reload. Get immediately feedback while changing plugin code without restarting the app.
 - Support Secondary Development. You could connect your own bot and others' plugins for debugging.
@@ -68,7 +68,7 @@ yarn config set registry https://registry.npmmirror.com
 Open a command line, cd to the directory that you want to create a Koishi template project.
 
 ::: tip
-The working directory path should not be absurdly long, also it is recommended to use a path that contains ASCII characters only. For example:
+The working directory path should not be absurdly long, also it is recommended to use a path that contains ASCII characters only. For example:For example:
 
 - Windows: `C:\dev` or `D:\dev`
 - Other operating systems: `~/dev`
