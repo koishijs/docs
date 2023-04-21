@@ -14,7 +14,7 @@
 - **param:** `any[]` 事件的参数
 - 返回值: `boolean` 匹配结果
 
-同时触发所有 event 事件的能够匹配 session 对象的回调函数。emit 为同步，parallel 为异步。
+同时触发所有 event 事件的能够匹配 session 对象的回调函数。emit 为同步，parallel 为异步。emit 为同步，parallel 为异步。
 
 ### ctx.bail(session?, event, ...param)
 ### ctx.serial(session?, event, ...param)
@@ -34,7 +34,7 @@
 - **param:** `any[]` 事件的参数
 - 返回值: `boolean` 匹配结果
 
-依次触发所有 event 事件的能够匹配 session 对象的回调函数。每次用得到的返回值覆盖下一轮调用的第一个参数，并在所有函数执行完后返回最终结果。chain 为同步，waterfall 为异步。
+依次触发所有 event 事件的能够匹配 session 对象的回调函数。依次触发所有 event 事件的能够匹配 session 对象的回调函数。每次用得到的返回值覆盖下一轮调用的第一个参数，并在所有函数执行完后返回最终结果。chain 为同步，waterfall 为异步。chain 为同步，waterfall 为异步。
 
 ### ctx.on(event, listener, prepend?)
 
