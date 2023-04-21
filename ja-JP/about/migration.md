@@ -5,6 +5,7 @@
 ::: tip 重要
 请开发者直接依赖 koishi 而非 @koishijs/core 进行开发。
 :::
+:::
 
 - koishi-core 与 node 解耦后更名为 @koishijs/core
 - koishi-utils 与 node 解耦后更名为 @koishijs/utils

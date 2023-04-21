@@ -5,9 +5,11 @@
 ::: tip
 下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
 :::
+:::
 
 ::: tip
 即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
+:::
 :::
 
 ## Windows

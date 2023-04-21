@@ -2,9 +2,9 @@
 
 Koishi uses adapter plugins to support various chat platforms. The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the "Adapter" tag in Plugin Configuration page. If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件). User data is shared by multiple bots that connected to the same chat platform. So you could easily switch between bot accounts to achieve a load balance.
+一个 Koishi 应用可以同时接入多个聊天平台的多个账号。一个 Koishi 应用可以同时接入多个聊天平台的多个账号。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件).User data is shared by multiple bots that connected to the same chat platform.So you could easily switch between bot accounts to achieve a load balance.
 
-对于不同的平台，你需要做好相应的准备工作。The following is a guide to connect your bot in various platforms.
+对于不同的平台，你需要做好相应的准备工作。The following is a guide to connect your bot in various platforms.The following is a guide to connect your bot in various platforms.
 
 ## Discord
 

@@ -44,7 +44,7 @@ interface Element {
 - **context:** `object` 插值上下文
 - 返回值: `Element[]` 消息元素数组
 
-解析一段文本内的全部消息元素。其中的纯文本将会解析成 `text` 类型。
+解析一段文本内的全部消息元素。其中的纯文本将会解析成 `text` 类型。其中的纯文本将会解析成 `text` 类型。
 
 当传入 `context` 对象时，将会自动识别源文本中的插值语法并进行替换。
 
@@ -54,7 +54,7 @@ interface Element {
 - **query:** `string` 选择器
 - 返回值: `Element[]` 消息元素数组
 
-使用选择器在一段文本或消息元素数组中查找。支持的语法包括：
+使用选择器在一段文本或消息元素数组中查找。支持的语法包括：支持的语法包括：
 
 - 通配选择器 `*`
 - 元素选择器 `type`
@@ -74,7 +74,7 @@ interface Element {
 - **session:** `Session` 会话对象
 - 返回值: `string | Element[]` 转换后的文本或消息元素数组
 
-将一段文本或消息元素数组中的所有消息元素按照规则进行转换。转换规则的定义方式如下：
+将一段文本或消息元素数组中的所有消息元素按照规则进行转换。转换规则的定义方式如下：转换规则的定义方式如下：
 
 ```ts
 type Fragment = string | Element | (string | Element)[]
@@ -85,7 +85,7 @@ type Transformer = boolean | ((
 ) => Fragment)
 ```
 
-返回值会与传入的参数保持相同类型。如果传入了字符串，则会先使用 [`h.parse()`](#h-parse) 进行解析，并在转换完成后重新序列化。
+返回值会与传入的参数保持相同类型。返回值会与传入的参数保持相同类型。如果传入了字符串，则会先使用 [`h.parse()`](#h-parse) 进行解析，并在转换完成后重新序列化。
 
 ### h.transformAsync(source, rules, session?)
 
@@ -94,7 +94,7 @@ type Transformer = boolean | ((
 - **session:** `Session` 会话对象
 - 返回值: `Promise<string | Element[]>` 转换后的文本或消息元素数组
 
-与 [`h.transform()`](#h-transform) 类似，但转换规则可以是异步的，同一层级的各元素的转换将同时进行。转换规则的定义方式如下：
+与 [`h.transform()`](#h-transform) 类似，但转换规则可以是异步的，同一层级的各元素的转换将同时进行。转换规则的定义方式如下：转换规则的定义方式如下：
 
 ```ts
 type AsyncTransformer = boolean | ((
