@@ -3,9 +3,8 @@
 ::: warning
 It is vulnerable when you expose your Koishi on the Internet. 你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
 :::
-:::
 
-Koishi 应用默认情况下只能在本机访问。Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
+Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
 
 - Allow more people to access your Koishi console
 - 使用作为 Webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
@@ -14,13 +13,13 @@ Koishi 应用默认情况下只能在本机访问。Koishi 应用默认情况下
 
 ## Direct Exposure
 
-点击控制台左侧的「插件配置」，选择「全局配置」并将 `host` 修改为 `0.0.0.0`，随后点击右上角的「重载配置」。点击控制台左侧的「插件配置」，选择「全局配置」并将 `host` 修改为 `0.0.0.0`，随后点击右上角的「重载配置」。等待 Koishi 重启之后，你就可以使用 `IP:端口` 的方式，在局域网内任意设备的浏览器上访问到 Koishi 控制台了。
+点击控制台左侧的「插件配置」，选择「全局配置」并将 `host` 修改为 `0.0.0.0`，随后点击右上角的「重载配置」。等待 Koishi 重启之后，你就可以使用 `IP:端口` 的方式，在局域网内任意设备的浏览器上访问到 Koishi 控制台了。
 
 如果你已经准备了域名，你还需要同时将 `selfUrl` 修改为能访问到 Koishi 实例的地址。
 
 ## Reverse Proxy
 
-如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
+如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
 
 ### 使用 Caddy
 
@@ -68,4 +67,4 @@ server {
 
 ### 添加备案信息
 
-如果你的服务器在国内，你需要在控制台中添加备案信息，才能在公网上顺利访问。此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
+如果你的服务器在国内，你需要在控制台中添加备案信息，才能在公网上顺利访问。此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
