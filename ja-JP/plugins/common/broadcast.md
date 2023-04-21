@@ -3,6 +3,7 @@
 ::: tip
 要使用本插件，你需要安装数据库支持。
 :::
+:::
 
 ## 指令：broadcast
 
@@ -22,4 +23,5 @@ broadcast foo bar baz     # 向所有频道发送 foo bar baz
 
 ::: tip 提示
 broadcast 指令的 message 参数是一个 [变长参数](../../manual/usage/command.md#参数和选项)，因此你应该把所有的选项写到消息前面，否则会被认为是消息的一部分。
+:::
 :::
