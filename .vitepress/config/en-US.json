@@ -57,7 +57,7 @@
           "text": "",
           "items": [
             {
-              "text": "Getting Started",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
@@ -112,7 +112,7 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Usage",
           "items": [
             {
               "text": "Command System",
@@ -211,7 +211,7 @@
           ]
         },
         {
-          "text": "交互基础",
+          "text": "Essentials",
           "items": [
             {
               "text": "指令开发",
@@ -236,7 +236,7 @@
           ]
         },
         {
-          "text": "模块化",
+          "text": "Modulization",
           "items": [
             {
               "text": "认识插件",
@@ -261,14 +261,14 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "Databases",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "Work with Databases",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "Extend Data Model",
               "link": "/guide/database/model.md"
             },
             {
@@ -282,7 +282,7 @@
           ]
         },
         {
-          "text": "跨平台",
+          "text": "Cross Platform",
           "items": [
             {
               "text": "使用适配器",
@@ -303,7 +303,7 @@
           ]
         },
         {
-          "text": "国际化",
+          "text": "Internationalization",
           "items": [
             {
               "text": "多语言支持",
@@ -340,7 +340,7 @@
           "text": "Debugging",
           "items": [
             {
-              "text": "Unit Tests",
+              "text": "Unit Testing",
               "link": "/guide/testing/index.md"
             }
           ]
@@ -364,44 +364,44 @@
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "App",
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "Bot",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "Command",
               "link": "/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "Context",
               "link": "/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "Events",
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "Session",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "消息元素",
+          "text": "Message Element",
           "items": [
             {
               "text": "语法规范",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "Standard Elements",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "Built-in Components",
               "link": "/api/message/components.md"
             },
             {
@@ -411,40 +411,40 @@
           ]
         },
         {
-          "text": "内置服务",
+          "text": "Built-in Services",
           "items": [
             {
-              "text": "机器人 (Bots)",
+              "text": "Bots",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "I18n",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "事件系统 (Lifecycle)",
+              "text": "Lifecycle",
               "link": "/api/service/lifecycle.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "Registry",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "选择器 (Selector)",
+              "text": "Selector",
               "link": "/api/service/selector.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "Router",
               "link": "/api/service/router.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "HTTP",
               "link": "/api/service/http.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "Databases",
           "items": [
             {
               "text": "内置数据结构",
@@ -455,40 +455,40 @@
               "link": "/api/database/database.md"
             },
             {
-              "text": "数据模型 (Model)",
+              "text": "Data Model",
               "link": "/api/database/model.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Query Expression",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Evaluation",
               "link": "/api/database/evaluation.md"
             }
           ]
         },
         {
-          "text": "其他功能",
+          "text": "Utilities",
           "items": [
             {
-              "text": "配置模式 (Schema)",
+              "text": "Schema",
               "link": "/api/utils/schema.md"
             },
             {
-              "text": "观察者 (Observer)",
+              "text": "Observer",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "Logger",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "Random",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "其他工具 (Misc)",
+              "text": "Miscellaneous",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -496,72 +496,72 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Plugin market",
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "Service Plugins",
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
         },
         {
-          "text": "适配器支持",
+          "text": "Adapter",
           "items": [
             {
-              "text": "适配器：Discord",
+              "text": "Adapter: Discord",
               "link": "/plugins/adapter/discord.md"
             },
             {
-              "text": "适配器：Kook",
+              "text": "Adapter: Kook",
               "link": "/plugins/adapter/kook.md"
             },
             {
-              "text": "适配器：Lark",
+              "text": "Adapter: Lark",
               "link": "/plugins/adapter/lark.md"
             },
             {
-              "text": "适配器：Mail",
+              "text": "Adapter: Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
-              "text": "适配器：OneBot",
+              "text": "Adapter: OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "适配器：QQGuild",
+              "text": "Adapter: QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
-              "text": "适配器：Telegram",
+              "text": "Adapter: Telegram",
               "link": "/plugins/adapter/telegram.md"
             }
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "Database",
           "items": [
             {
-              "text": "数据库：Memory",
+              "text": "Database: Memory",
               "link": "/plugins/database/memory.md"
             },
             {
-              "text": "数据库：MongoDB",
+              "text": "Database: MongoDB",
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "数据库：MySQL",
+              "text": "Database: MySQL",
               "link": "/plugins/database/mysql.md"
             },
             {
-              "text": "数据库：SQLite",
+              "text": "Database: SQLite",
               "link": "/plugins/database/sqlite.md"
             }
           ]
@@ -672,18 +672,18 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Plugin market",
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "Service Plugins",
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
@@ -691,14 +691,14 @@
       ],
       "/about/": [
         {
-          "text": "关于我们",
+          "text": "About",
           "items": [
             {
-              "text": "许可证",
+              "text": "License",
               "link": "/about/license.md"
             },
             {
-              "text": "参与讨论",
+              "text": "Discussion",
               "link": "/about/contact.md"
             },
             {
@@ -706,81 +706,81 @@
               "link": "/about/team.md"
             },
             {
-              "text": "社区资源",
+              "text": "Community Resources",
               "link": "/about/community.md"
             }
           ]
         },
         {
-          "text": "更新与迁移",
+          "text": "Updates",
           "items": [
             {
-              "text": "发展史",
+              "text": "History",
               "link": "/about/history.md"
             },
             {
-              "text": "从 v3 迁移",
+              "text": "Migrate from v3",
               "link": "/about/migration.md"
             },
             {
-              "text": "版本内迁移",
+              "text": "Migrate within v4",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "v4.1 版本介绍",
+              "text": "Release Notes: v4.1",
               "link": "/about/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "Release Notes: v4.2",
               "link": "/about/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "Release Notes: v4.3",
               "link": "/about/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "Release Notes: v4.4",
               "link": "/about/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "Release Notes: v4.5",
               "link": "/about/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "Release Notes: v4.6",
               "link": "/about/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "Release Notes: v4.7",
               "link": "/about/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "Release Notes: v4.8",
               "link": "/about/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "Release Notes: v4.9",
               "link": "/about/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介绍",
+              "text": "Release Notes: v4.10",
               "link": "/about/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "Release Notes: v4.11",
               "link": "/about/releases/v4.11.md"
             }
           ]
         },
         {
-          "text": "贡献指南",
+          "text": "Contributing",
           "items": [
             {
-              "text": "项目结构",
+              "text": "Infrastructure",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "文档贡献指南",
+              "text": "Documentation",
               "link": "/about/contribute/docs.md"
             }
           ]
