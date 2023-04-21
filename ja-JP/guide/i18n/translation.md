@@ -20,11 +20,9 @@ ctx.i18n.define('zh', require('./locales/zh-CN'))
 ::: tip
 在上面的例子中我们使用了 yaml 作为翻译文件的格式。这是因为它的语法简洁美观，非常适合本地化开发。你也可以采用 json 等任何你喜欢的格式进行开发。
 :::
-:::
 
 ::: warning
 Node.js 并不支持直接加载 yaml / yml 后缀的文件，但我们可以通过适当的 [register](https://nodejs.org/api/cli.html#-r---require-module) 解决这个问题。对此我们的官方脚手架已经内置了相应的支持。
-:::
 :::
 
 ## 指令本地化
