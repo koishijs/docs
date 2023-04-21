@@ -5,6 +5,7 @@ Koishi 提供了一套命令行工具，用于读取配置文件快速启动应�
 ::: tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
 :::
+:::
 
 ## 基本用法
 
@@ -79,6 +80,7 @@ Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register`
 ::: danger
 我们并不推荐使用高级语言来编写配置文件，因为动态的配置无法支持环境变量、配置热重载和插件市场等特性。大部分情况下我们建议仅将 `-r` 用于开发目的。
 :::
+:::
 
 ### 模块热替换
 
@@ -91,8 +93,7 @@ plugins:
   group:develop:
     $if: env.NODE_ENV === 'development'
     hmr:
-      root: '.'
-      # 要忽略的文件列表，支持 glob patterns
+      root: '.' # 要忽略的文件列表，支持 glob patterns
       ignore:
         - some-file
 ```
@@ -113,4 +114,5 @@ sudo sysctl -p
 ```
 
 另一种方案是只监听部分子路径，例如将 `root` 改为 `external/foo` (其中 `foo` 是你正在开发的插件目录，参见下一节的工作区指南)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。当你同时开发多个插件时，你也可以将 `root` 改成一个数组来使用。
+:::
 :::
