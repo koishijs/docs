@@ -3,7 +3,6 @@
 ::: warning
 尽管 Koishi 使用了 [MIT](https://choosealicense.com/licenses/mit/) 协议，但 OneBot 相关框架普遍使用了基于 [AGPL 3.0](https://choosealicense.com/licenses/agpl-3.0/) 的协议。因此如果你使用 @koishijs/plugin-adapter-onebot 运行你的机器人，你将可能受到 AGPL 3.0 协议的限制，必须将你的代码开源并保持同协议。Koishi 及其作者对使用上述框架或违反上述限制的行为所可能造成的一切后果概不负责。
 :::
-:::
 
 [OneBot](https://github.com/howmanybots/onebot) 是一个聊天机器人应用接口标准，目前可用于 QQ 聊天机器人的实现。你可以使用下列实现该协议的框架：
 
@@ -30,7 +29,6 @@
 3. 输入 `./go-cqhttp` 并运行，此时将提示：
 
 ```sh
-未找到配置文件，正在为您生成配置文件中！
 未找到配置文件，正在为您生成配置文件中！
 请选择你需要的通信方式:
   1: HTTP 通信
@@ -418,7 +416,6 @@ await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
 
 ::: tip
 虽然异步调用方法的名字以 Async 结尾，但是其他方法也是异步函数，它们都会返回一个 Promise 对象。取这样的名字只是为了与 OneBot 保持一致。
-:::
 :::
 
 ## 常见问题
