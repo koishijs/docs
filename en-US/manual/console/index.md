@@ -9,11 +9,11 @@ prev:
 Koishi 的一个核心特性是强大的控制台。控制台是一个对用户非常友好的图形界面，封装了 Koishi 的绝大多数功能：
 
 - 状态监控、数据统计
-- 配置插件
-- 安装、卸载和更新插件
-- 管理指令、数据库、输出文本
-- 模拟聊天
-- 查看日志
+- Configure Plugins
+- Install, Uninstall and Update Plugins
+- Manage Commands, Database and Output Text
+- Simulate Chat
+- Display Logs
 
 ## 控制台界面
 
