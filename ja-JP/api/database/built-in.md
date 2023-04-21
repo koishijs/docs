@@ -89,9 +89,9 @@ session.channel.flag &= ~Channel.Flag.silent
 
 ### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
 
-- **fields:** `ChannelField[]` リクエストするフィールド。 デフォルトはすべてのフィールドです。
-- **platform:** `string` プラットフォーム名。 デフォルトはすべてのプラットフォームです。
-- **assignees:** `string[]` 代理人リスト。 デフォルトは現在実行されているすべてのボットです。
+- **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
+- **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
+- **assignees:** `string[]` 代理人リスト。デフォルトは現在実行されているすべてのボットです。
 - 戻り値: `Promise<Channel[]>` チャンネルデータリスト
 
 データベースに特定のボットが管理するすべでのチャンネルデータをリクエストします。ここにある二つの引数のどちらを選んでも、正しく認識されます。
