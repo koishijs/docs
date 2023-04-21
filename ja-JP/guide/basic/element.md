@@ -11,12 +11,14 @@
 ::: tabs code
 ```tsx title=JSX
 // 欢迎 @用户名 入群！
+// 欢迎 @用户名 入群！
 session.send(<>欢迎 <at id={userId}/> 入群！</>)
 
 // 发送一张 Koishi 图标
 session.send(<image url="https://koishi.chat/logo.png"/>)
 ```
 ```ts title=API
+// 欢迎 @用户名 入群！
 // 欢迎 @用户名 入群！
 session.send('欢迎 ' + h('at', { id: session.userId }) + ' 入群！')
 
@@ -56,6 +58,7 @@ h('p', 'hello', h('image', { url }))
 虽然大部分情况下你可能并不想这么做 (看起来很怪不是吗)，但事实上这两种写法也是可以混用的。例如，你可以在 JSX 中使用 `h` 函数：
 
 ```tsx
+// 欢迎 @用户名 入群！
 // 欢迎 @用户名 入群！
 <>欢迎 {h('at', { id: userId })} 入群！</>
 ```
