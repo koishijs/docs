@@ -73,7 +73,7 @@ If an installed plugin is not shown in the plugin list, you can also add it manu
 Warning: this action cannot be undone. If you want to restore the previous configuration, you can only manually add it again. Please be careful.
 :::
 
-在任何插件的配置界面点击右上角的「删除插件」可删除这份配置。与之类似，在分组的配置界面点击右上角的「删除分组」可删除这个分组。删除分组时，分组内的所有插件也会一并删除。
+You can click "Remove Plugin" in the top right corner of any plugin to remove its configuration. Similarly, you can remove a plugin group by clicking "Remove Group" in the top right corner of its configuration page. When removing groups, all plugins in the group will also be deleted.
 
 ## Update and Uninstall Plugins
 
