@@ -3,8 +3,9 @@
 ::: tip
 使用方法请参见 [开发 > 单元测试](../../guide/testing/index.md) 章节。
 :::
+:::
 
-@koishijs/plugin-mock 包含了被 Koishi 使用的测试工具。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。
+@koishijs/plugin-mock 包含了被 Koishi 使用的测试工具。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。
 
 ## 类：Mock
 
@@ -35,7 +36,7 @@
 - **authority:** `number` 权限等级
 - **data:** `Partial<User>` 其他用户数据
 
-在数据库中初始化一个用户。等价于 `database.create('user', { mock: id, authority, ...data })`。
+在数据库中初始化一个用户。在数据库中初始化一个用户。等价于 `database.create('user', { mock: id, authority, ...data })`。
 
 ### mock.initChannel(id, assignee?, data?)
 
@@ -43,20 +44,20 @@
 - **assignee:** `string` 频道代理人
 - **data:** `Partial<Channel>` 其他频道数据
 
-在数据库中初始化一个频道。等价于 `database.create('channel', { platform: 'mock', id, assignee, ...data })`。
+在数据库中初始化一个频道。在数据库中初始化一个频道。等价于 `database.create('channel', { platform: 'mock', id, assignee, ...data })`。
 
 ## 类：Client
 
-**客户端 (Client)** 是对发往同一上下文的多次消息的一个抽象。它使用 `mock.client()` 方法创建，并借助 `mock.receive()` 实现其功能。
+**客户端 (Client)** 是对发往同一上下文的多次消息的一个抽象。它使用 `mock.client()` 方法创建，并借助 `mock.receive()` 实现其功能。它使用 `mock.client()` 方法创建，并借助 `mock.receive()` 实现其功能。
 
 ::: warning
-这个类下的大部分方法的返回都基于 [session.send](../../api/core/session.md#session-send) 方法和 [`middleware`](../../api/core/events.md#事件-middleware) 事件。在提供了极大方便的同时，会话也存在一些限制。如果你的插件存在以下几种特殊情况之一：
+这个类下的大部分方法的返回都基于 [session.send](../../api/core/session.md#session-send) 方法和 [`middleware`](../../api/core/events.md#事件-middleware) 事件。在提供了极大方便的同时，会话也存在一些限制。如果你的插件存在以下几种特殊情况之一：在提供了极大方便的同时，会话也存在一些限制。如果你的插件存在以下几种特殊情况之一：
 
 - 使用了异步的 message 事件监听器
 - 中间件和指令中可能存在未阻塞的异步操作
 - 直接调用 Bot API 而非 session.send
 
-这个类的方法可能会返回预料之外的结果。当然，如果要测试这些特殊情况，我们也有其他的解决方案。
+这个类的方法可能会返回预料之外的结果。当然，如果要测试这些特殊情况，我们也有其他的解决方案。 :::当然，如果要测试这些特殊情况，我们也有其他的解决方案。
 :::
 
 ### client.receive(content)
