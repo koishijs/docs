@@ -276,71 +276,71 @@
               "link": "/ja-JP/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "データベースプラグインの作成",
               "link": "/ja-JP/guide/database/writing.md"
             }
           ]
         },
         {
-          "text": "跨平台",
+          "text": "クロスプラットフォーム",
           "items": [
             {
               "text": "アダプターを使用する",
               "link": "/ja-JP/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "ボットを使用する",
               "link": "/ja-JP/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
+              "text": "クロスプラットフォームのアカウント連携",
               "link": "/ja-JP/guide/adapter/binding.md"
             },
             {
-              "text": "编写适配器插件",
+              "text": "アダプタープラグインの作成",
               "link": "/ja-JP/guide/adapter/writing.md"
             }
           ]
         },
         {
-          "text": "国际化",
+          "text": "国際化",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "多言語対応",
               "link": "/ja-JP/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "翻訳ファイルの作成",
               "link": "/ja-JP/guide/i18n/translation.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Crowdin との連携",
               "link": "/ja-JP/guide/i18n/crowdin.md"
             }
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "コンソール開発",
           "items": [
             {
-              "text": "使用控制台",
+              "text": "コンソールを使用する",
               "link": "/ja-JP/guide/console/index.md"
             },
             {
-              "text": "编写扩展",
+              "text": "拡張機能の作成",
               "link": "/ja-JP/guide/console/extension.md"
             },
             {
-              "text": "数据交互",
+              "text": "データ通信",
               "link": "/ja-JP/guide/console/data.md"
             }
           ]
         },
         {
-          "text": "测试工具",
+          "text": "テストツール",
           "items": [
             {
-              "text": "单元测试",
+              "text": "ユニットテスト",
               "link": "/ja-JP/guide/testing/index.md"
             }
           ]
@@ -351,13 +351,13 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "概要",
               "link": "/ja-JP/api/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "コアモジュール",
           "items": [
             {
               "text": "アダプター",
@@ -376,21 +376,21 @@
               "link": "/ja-JP/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "コンテキスト",
               "link": "/ja-JP/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "イベント",
               "link": "/ja-JP/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "セッション",
               "link": "/ja-JP/api/core/session.md"
             }
           ]
         },
         {
-          "text": "消息元素",
+          "text": "メッセージエレメント",
           "items": [
             {
               "text": "语法规范",
