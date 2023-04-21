@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: インストール方法の選択
+  link: /ja-JP/manual/starter/
 next:
-  text: 认识控制台
-  link: /zh-CN/manual/console/
+  text: コンソールについて
+  link: /ja-JP/manual/console/
 ---
 
-# 在容器中使用
+# コンテナーで実行
 
 ::: warning
 Docker 等容器化软件是以服务生产环境而开发的应用平台，在使用此类软件部署之时，我们相信你已经掌握了运维一台服务器所必须的知识，同时也理解了容器化的概念与相关软件的基础操作。如若不然，在除路由器或 NAS 等特殊环境外，请 [选择其他安装方式](./index.md)。

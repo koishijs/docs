@@ -1,49 +1,49 @@
 # Command System
 
-在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
+After learning the basic usage of the Koishi Console, we can now talk about how to talk with bots! Let's start with the example from the previous section:
 
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">echo  发送消息</p>
-<p class="indent-1">help  显示帮助信息</p>
-<p>输入“帮助 指令名”查看特定指令的语法和使用示例。</p>
+<p>Available commands:</p>
+<p class="indent-1">echo  Send messages</p>
+<p class="indent-1">help  Show help</p>
+<p>Type "help &lt;command&gt;" to see syntax and examples for a specific command.</p>
 </chat-message>
 </chat-panel>
 
-这里的输出与两个插件有关：
+The output relates to two plugins:
 
-- help 指令由 [help](../../plugins/common/help.md) 插件提供，它可以显示指令列表或具体指令的帮助信息
-- echo 指令由 [echo](../../plugins/common/echo.md) 插件提供，它可以将用户的输入原样返回
+- The help command is provided by [help](../../plugins/common/help.md), which could display help information about a list of every command or detail for a specific command.
+- The echo command is provided by [echo](../../plugins/common/echo.md), which could return the input from users.
 
-一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。当你安装了更多的插件后，你也就有了更多的指令可供使用。
+Most of the features of a Koishi bot are provided to users by commands. More plugins you have installed, there would be more commands available.
 
-## 查看帮助
+## Display Help Information
 
-help 指令后还可以添加一个参数，用于查看特定指令的帮助信息：
+An optional parameter followed with help command could be used to view the detail of specific commands:
 
 <chat-panel>
 <chat-message nickname="Alice">help echo</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：echo &lt;message...></p>
-<p>发送消息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-e, --escape  发送转义消息</p>
-<p class="indent-1">-E, --unescape  发送反转义消息</p>
+<p>Command: echo &lt;message...&gt;</p>
+<p>Send messages</p>
+<p>Available options:</p>
+<p class="indent-1">-e, --escape  Escape characters in message</p>
+<p class="indent-1">-E, --unescape  Unescape characters in message</p>
 </chat-message>
 </chat-panel>
 
-那么细心的小伙伴可能会发现，既然 help 本身也是一个指令，那我能不能用来查看 help 自己的帮助信息呢？答案是肯定的：
+You might find that the help itself is a command as well, so is it possible to use help to show the help message of help itself? The answer is positive:
 
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：help [command]</p>
-<p>显示帮助信息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-a, --authority  显示权限设置</p>
-<p class="indent-1">-H, --show-hidden  查看隐藏的选项和指令</p>
+<p>Command: help [command]</p>
+<p>Display help information</p>
+<p>Available options:</p>
+<p class="indent-1">-a, --authority  show authority requirements</p>
+<p class="indent-1">-H, --show-hidden  show hidden options and commands</p>
 </chat-message>
 </chat-panel>
 
@@ -51,14 +51,14 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 
 In the usages above, we have encountered two new concepts：**Argument** and **Option**.
 
-参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
+There are two types of parameters: required parameters, quoted by a pair of chevrons `<>`; and optional parameters, quoted by a pair of brackets `[]`. A command may have arbitrary parameters, their orders are fixed, which means that users should enter the parameters in the order that pre-defined by the command. Required parameters must be precedent before optional parameters. When user enters fewer parameters than the required parameters that the plugin requires, the plugin should often print errors. When user enters extra parameters, they would be ignored generally.
 
 For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. Let's see what will happen if the required parameter is missing:
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>请输入要发送的文本。</p>
+<p>Please enter text to be sent.</p>
 </chat-message>
 </chat-panel>
 
