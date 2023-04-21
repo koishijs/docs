@@ -4,12 +4,12 @@
   "themeConfig": {
     "nav": [
       {
-        "text": "Getting Started",
+        "text": "Manual",
         "link": "/en-US/manual/introduction.md",
         "activeMatch": "^/en-US/manual/"
       },
       {
-        "text": "Development",
+        "text": "Develop",
         "link": "/en-US/guide/",
         "activeMatch": "^/en-US/guide/"
       },
@@ -22,7 +22,7 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "Marketplace",
+            "text": "Plugin market",
             "link": "/en-US/market/"
           },
           {
@@ -37,7 +37,7 @@
         "activeMatch": "^/en-US/(plugins|market)/"
       },
       {
-        "text": "More",
+        "text": "About",
         "link": "/en-US/about/contact.md",
         "activeMatch": "^/en-US/about/"
       }
