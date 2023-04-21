@@ -3,6 +3,7 @@
 ::: tip
 使用方法请参见 [开发 > 单元测试](../../guide/testing/index.md) 章节。
 :::
+:::
 
 @koishijs/plugin-mock 包含了被 Koishi 使用的测试工具。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。
 
@@ -57,6 +58,7 @@
 - 直接调用 Bot API 而非 session.send
 
 这个类的方法可能会返回预料之外的结果。当然，如果要测试这些特殊情况，我们也有其他的解决方案。
+:::
 :::
 
 ### client.receive(content)
