@@ -118,8 +118,8 @@
 ### bot.$createWebhook(channelId, data)
 - **channelId:** `string` ID
 - **data:** `{
-name: string;
-avatar?: string
+  name: string;
+  avatar?: string
 }` 提交内容
 
 创建 Webhook。
@@ -127,8 +127,8 @@ avatar?: string
 ### bot.$modifyWebhook(channelId, data)
 - **channelId:** `string` ID
 - **data:** `{
-name: string;
-avatar?: string
+  name: string;
+  avatar?: string
 }` 提交内容
 
 修改 Webhook。
