@@ -1,21 +1,21 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: インストール方法の選択
+  link: /ja-JP/manual/starter/
 next:
-  text: 认识控制台
-  link: /zh-CN/manual/console/
+  text: コンソールについて
+  link: /ja-JP/manual/console/
 ---
 
-# 为 Windows 安装
+# Windows にインストール
 
 ::: tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+その他のインストール方法を知りたい場合、[インストール方法の選択](./index.md) に進んでください。
 :::
 
-## 下载
+## ダウンロード
 
-- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [インストールパッケージ (.msi)](https://k.ilharp.cc/win.msi)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## 安装
