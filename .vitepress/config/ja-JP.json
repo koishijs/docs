@@ -2,6 +2,60 @@
   "label": "日本語",
   "lang": "ja-JP",
   "themeConfig": {
+    "outlineTitle": "目录",
+    "lastUpdatedText": "上次更新",
+    "editLink": {
+      "text": "このページを編集する"
+    },
+    "docFooter": {
+      "prev": "次のページ",
+      "next": "前のページ"
+    },
+    "docsearch": {
+      "placeholder": "ドキュメントを検索する",
+      "translations": {
+        "button": {
+          "buttonText": "検索",
+          "buttonAriaLabel": "検索"
+        },
+        "modal": {
+          "searchBox": {
+            "resetButtonTitle": "清除查询条件",
+            "resetButtonAriaLabel": "清除查询条件",
+            "cancelButtonText": "取消",
+            "cancelButtonAriaLabel": "取消"
+          },
+          "startScreen": {
+            "recentSearchesTitle": "検索履歴",
+            "noRecentSearchesText": "検索履歴はありません",
+            "saveRecentSearchButtonTitle": "検索履歴に保存する",
+            "removeRecentSearchButtonTitle": "検索履歴から削除する",
+            "favoriteSearchesTitle": "お気に入り",
+            "removeFavoriteSearchButtonTitle": "お気に入りから外す"
+          },
+          "errorScreen": {
+            "titleText": "无法获取结果",
+            "helpText": "ネットワーク接続を確認してみてください"
+          },
+          "footer": {
+            "selectText": "選択",
+            "navigateText": "切り替え",
+            "closeText": "閉じる",
+            "searchByText": "作成者を検索する"
+          },
+          "noResultsScreen": {
+            "noResultsText": "関連結果が見つかりませんでした",
+            "suggestedQueryText": "你可以尝试查询",
+            "reportMissingResultsText": "你认为该查询应该有结果？",
+            "reportMissingResultsLinkText": "点击反馈"
+          }
+        }
+      }
+    },
+    "darkModeSwitchLabel": "外观",
+    "sidebarMenuLabel": "メニュー",
+    "returnToTopLabel": "先頭に戻る",
+    "langMenuLabel": "言語",
     "nav": [
       {
         "text": "はじめに",
@@ -48,7 +102,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "紹介",
               "link": "/manual/introduction.md"
             }
           ]
@@ -57,119 +111,119 @@
           "text": "",
           "items": [
             {
-              "text": "起步",
+              "text": "はじめに",
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Windows にインストール",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Macos にインストール",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Linux にインストール",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Android にインストール",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "コンテナーで実行",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "テンプレートプロジェクトの作成",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "パッケージとして使う",
               "link": "/manual/starter/direct.md"
             }
           ]
         },
         {
-          "text": "控制台",
+          "text": "コンソール",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "コンソールについて",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "プラグインのインストールと設定",
               "link": "/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
+              "text": "サンドボックスでのチャット",
               "link": "/manual/console/sandbox.md"
             },
             {
-              "text": "接入聊天平台",
+              "text": "チャットアプリに接続",
               "link": "/manual/console/adapter.md"
             }
           ]
         },
         {
-          "text": "使用",
+          "text": "使い方",
           "items": [
             {
-              "text": "指令系统",
+              "text": "コマンドシステム",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "クロスプラットフォーム",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
+              "text": "権限管理",
               "link": "/manual/usage/permission.md"
             },
             {
-              "text": "过滤器",
+              "text": "フィルター",
               "link": "/manual/usage/filter.md"
             },
             {
-              "text": "国际化",
+              "text": "国際化",
               "link": "/manual/usage/i18n.md"
             }
           ]
         },
         {
-          "text": "配方",
+          "text": "レシピ",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "コマンド (アドバンスト)",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "データベースにアクセス",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "マルチ設定",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "プラグインマーケットでの検索",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "デプロイメント",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "ランチャー",
           "items": [
             {
-              "text": "系统要求",
+              "text": "システム要件",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "命令行工具",
+              "text": "コマンドラインツール",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -180,167 +234,167 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "概要",
               "link": "/guide/"
             }
           ]
         },
         {
-          "text": "开发上手",
+          "text": "開発入門",
           "items": [
             {
-              "text": "环境搭建",
+              "text": "環境構築",
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
+              "text": "設定ファイル",
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
+              "text": "スクリプトを実行する",
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "ワークスペースでの開発",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "プラグインを公開する",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "インタラクションの基礎",
           "items": [
             {
-              "text": "指令开发",
+              "text": "コマンドの開発",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "イベントシステム",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "ミドルウェア",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "消息元素",
+              "text": "メッセージ要素",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "アドバンスト",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "モジュール化",
           "items": [
             {
-              "text": "认识插件",
+              "text": "プラグインを理解する",
               "link": "/guide/plugin/"
             },
             {
-              "text": "生命周期",
+              "text": "ライフサイクル",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "会话过滤器",
+              "text": "セッションフィルター",
               "link": "/guide/plugin/selector.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "サービスと依存性",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "配置模式",
+              "text": "スキーマ",
               "link": "/guide/plugin/schema.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "データベース",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "データベースを使用する",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "データモデルを拡張する",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
+              "text": "遅延初期化と自動更新",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "データベースプラグインの作成",
               "link": "/guide/database/writing.md"
             }
           ]
         },
         {
-          "text": "跨平台",
+          "text": "クロスプラットフォーム",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "アダプターを使用する",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "ボットを使用する",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
+              "text": "クロスプラットフォームのアカウント連携",
               "link": "/guide/adapter/binding.md"
             },
             {
-              "text": "编写适配器插件",
+              "text": "アダプタープラグインの作成",
               "link": "/guide/adapter/writing.md"
             }
           ]
         },
         {
-          "text": "国际化",
+          "text": "国際化",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "多言語対応",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "翻訳ファイルの作成",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Crowdin との連携",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "コンソール開発",
           "items": [
             {
-              "text": "使用控制台",
+              "text": "コンソールを使用する",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "编写扩展",
+              "text": "拡張機能の作成",
               "link": "/guide/console/extension.md"
             },
             {
-              "text": "数据交互",
+              "text": "データ通信",
               "link": "/guide/console/data.md"
             }
           ]
         },
         {
-          "text": "测试工具",
+          "text": "テストツール",
           "items": [
             {
-              "text": "单元测试",
+              "text": "ユニットテスト",
               "link": "/guide/testing/index.md"
             }
           ]
@@ -351,132 +405,132 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "概要",
               "link": "/api/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "コアモジュール",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "アダプター",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "アプリ",
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "ボット",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "コマンド",
               "link": "/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "コンテキスト",
               "link": "/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "イベント",
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "セッション",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "消息元素",
+          "text": "メッセージ要素",
           "items": [
             {
-              "text": "语法规范",
+              "text": "構文規則",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "標準要素",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "組み込みコンポーネント",
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "レンダリング API",
               "link": "/api/message/api.md"
             }
           ]
         },
         {
-          "text": "内置服务",
+          "text": "組み込みサービス",
           "items": [
             {
-              "text": "机器人 (Bots)",
+              "text": "ボット",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "国際化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "事件系统 (Lifecycle)",
+              "text": "イベントシステム (Lifecycle)",
               "link": "/api/service/lifecycle.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "プラグインシステム (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "选择器 (Selector)",
+              "text": "セレクター",
               "link": "/api/service/selector.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "ネットワークサービス (Router)",
               "link": "/api/service/router.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "ネットワークリクエスト (HTTP)",
               "link": "/api/service/http.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "データベース",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "組み込みデータ構造",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "データベース操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
-              "text": "数据模型 (Model)",
+              "text": "データモデル (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "クエリ式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "評価式 (Eval)",
               "link": "/api/database/evaluation.md"
             }
           ]
         },
         {
-          "text": "其他功能",
+          "text": "その他の機能",
           "items": [
             {
-              "text": "配置模式 (Schema)",
+              "text": "スキーマ",
               "link": "/api/utils/schema.md"
             },
             {
-              "text": "观察者 (Observer)",
+              "text": "オブザーバー",
               "link": "/api/utils/observer.md"
             },
             {
@@ -496,7 +550,7 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "プラグイン",
           "items": [
             {
               "text": "插件市场",
@@ -507,7 +561,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
@@ -516,7 +570,7 @@
           "text": "适配器支持",
           "items": [
             {
-              "text": "适配器：Discord",
+              "text": "アダプター：Discord",
               "link": "/plugins/adapter/discord.md"
             },
             {
@@ -532,32 +586,32 @@
               "link": "/plugins/adapter/mail.md"
             },
             {
-              "text": "适配器：OneBot",
+              "text": "アダプター：OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "适配器：QQGuild",
+              "text": "アダプター：QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
-              "text": "适配器：Telegram",
+              "text": "アダプター：Telegram",
               "link": "/plugins/adapter/telegram.md"
             }
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "データベース対応",
           "items": [
             {
-              "text": "数据库：Memory",
+              "text": "データベース：Memory",
               "link": "/plugins/database/memory.md"
             },
             {
-              "text": "数据库：MongoDB",
+              "text": "データベース：MongoDB",
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "数据库：MySQL",
+              "text": "データベース：MySQL",
               "link": "/plugins/database/mysql.md"
             },
             {
@@ -672,7 +726,7 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "プラグイン",
           "items": [
             {
               "text": "插件市场",
@@ -683,7 +737,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
@@ -698,15 +752,15 @@
               "link": "/about/license.md"
             },
             {
-              "text": "参与讨论",
+              "text": "ディスカッションに参加",
               "link": "/about/contact.md"
             },
             {
-              "text": "团队介绍",
+              "text": "チーム紹介",
               "link": "/about/team.md"
             },
             {
-              "text": "社区资源",
+              "text": "コミュニティリソース",
               "link": "/about/community.md"
             }
           ]

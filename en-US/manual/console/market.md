@@ -4,12 +4,12 @@
 This section will introduce the usage of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
 :::
 
-When the project is started successfully, a browser interface will be automatically opened. You can use Koishi Console to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
+When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show how to install and configure plugins with the "echo" plugin for example. The "echo" plugin provides an "echo" command that will take the text that user inputs and then send it back in the same context.
 
 ## Install Plugins
 
 ::: warning
-Koishi does not provide any assurance about the security of unofficial plugins. Do not download plugins from unknown sources at will, as they may cause Koishi to crash, or even more serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
+We Koishi team doesn't warrant the availability of third party plugins. Plugins from unknown sources may break Koishi to crash, or have very serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
 Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter "echo" in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog. Wait for a moment, and the plugin will be installed successfully.
@@ -73,7 +73,7 @@ If an installed plugin is not shown in the plugin list, you can also add it manu
 Warning: this action cannot be undone. If you want to restore the previous configuration, you can only manually add it again. Please be careful.
 :::
 
-在任何插件的配置界面点击右上角的「删除插件」可删除这份配置。Similarly, you can remove a plugin group by clicking "Remove Group" in the top right corner of its configuration page. When removing groups, all plugins in the group will also be deleted.
+Click Remove Plugin button in the top right corner in the configuration page of any plugin to remove the plugin configuration. Similarly, you can remove a plugin group by clicking "Remove Group" in the top right corner of its configuration page. When removing groups, all plugins in the group will also be deleted.
 
 ## Update and Uninstall Plugins
 

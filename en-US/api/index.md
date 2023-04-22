@@ -6,11 +6,11 @@
 
 由 @koishijs/core 提供的 API：
 
-- [适配器 (Adapter)](./core/adapter.md)
-- [应用 (App)](./core/app.md)
+- [Adapter](./core/adapter.md)
+- [App](./core/app.md)
 - [机器人 (Bot)](./core/bot.md)
 - [指令 (Command)](./core/command.md)
-- [上下文 (Context)](./core/context.md)
+- [Context](./core/context.md)
 - [事件 (Events)](./core/events.md)
 - [会话 (Session)](./core/session.md)
 

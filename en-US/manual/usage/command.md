@@ -58,11 +58,11 @@ For example, command `help` has an optional argument which indicates the name of
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>Please enter text to be sent.</p>
+<p>Please type to send</p>
 </chat-message>
 </chat-panel>
 
-选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
+The behavior would be affected by the options as well. An option usually starts with `-` or `--`, followed by a fixed word without any spaces, the word is the name of the option. There are no order requirements between options, but generally we should put options before parameters. Let's try out!
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,32 +73,32 @@ For example, command `help` has an optional argument which indicates the name of
 </chat-message>
 </chat-panel>
 
-在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
+In the example above, the option `-E` that we used changed the outputs. We will talk about it in detail in the next section.
 
-参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
+In addition to being required and optional, the arguments can be divided into fixed and variable length. A variable-length argument would be fed all characters including whitespace characters, while a fixed-length one stops feeding when it reads whitespace characters. The variable-length argument is defined by `...` follows the parameter name. For example, the argument of `echo` is variable-length. If it is required to pass whitespace characters into a fixed-length argument, you can wrap the whole argument into quotes, just like:
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
 </chat-panel>
 
-此外，部分选项也可以接受参数。例如，当你安装了翻译插件，你将会获得如下的帮助信息：
+Additionally, options might require parameters as well. You should see a help information as below when you have any translate plugin installed.
 
 <chat-panel>
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：translate &lt;text...></p>
-<p>文本翻译</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
-<p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
+<p>Command: translate &lt;text...&gt;</p>
+<p>Translate Text</p>
+<p>Available options:</p>
+<p class="indent-1">-s, --source &lt;lang&gt; Source Language (Auto-detect by default)</p>
+<p class="indent-1">-t, --target &lt;lang&gt; Target Language (Chinese by default)</p>
 </chat-message>
-<chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
+<chat-message nickname="Alice">translate -t ja Hello, world</chat-message>
 <chat-message nickname="Koishi">こんにちは世界</chat-message>
 </chat-panel>
 
-在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
+Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the target language as Japanese, while the source language option remains default still.
 
-## 触发前缀
+## Command Prefix
 
 然而，如果仅仅通过一个词就能触发指令，在群聊环境下非常容易出现误触。为了避免这种情况，Koishi 引入了前缀触发的概念。在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
 
@@ -178,7 +178,7 @@ For example, command `help` has an optional argument which indicates the name of
 
 点击右上角的加号按钮，我们可以创建一个新指令。这个新指令自然是没有行为的，它的主要目的是作为其他指令的父指令，已获得更好的展示效果。对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
 
-### 权限管理
+### Authority Management
 
 在「名称设置」下方还有更多的配置项，我们可以在这里进一步配置指令对用户的访问权限。例如，将 echo 指令的 `authority` 设置为 `2`，那么将只有 2 级以上权限的用户才能调用该指令。
 

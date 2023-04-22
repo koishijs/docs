@@ -1,6 +1,6 @@
 ---
 prev:
-  text: インストール方法
+  text: インストーラーを選択
   link: /ja-JP/manual/starter/
 next:
   text: コンソールについて

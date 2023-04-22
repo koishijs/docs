@@ -2,7 +2,7 @@
 
 本页收集了一些 Koishi 设计中的重要概念，按字母表序排列。如果你在阅读文档时对某个概念感到迷惑，可以随时回到这里查看解释。
 
-## 适配器 (Adapter)
+## Adapter
 
 参考：
 
@@ -10,7 +10,7 @@
 - [开发 > 使用适配器](../guide/adapter/index.md)
 - [API > 适配器](./core/adapter.md)
 
-## 应用 (App)
+## App
 
 参考：
 
@@ -33,7 +33,7 @@
 - [开发 > 指令开发](../guide/basic/command.md)
 - [API > 指令](./core/command.md)
 
-## 上下文 (Context)
+## Context
 
 参考：
 
