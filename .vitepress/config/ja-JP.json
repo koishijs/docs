@@ -516,7 +516,7 @@
           "text": "适配器支持",
           "items": [
             {
-              "text": "适配器：Discord",
+              "text": "アダプター：Discord",
               "link": "/plugins/adapter/discord.md"
             },
             {
