@@ -16,8 +16,8 @@ If you want to learn about other installation method, please visit [Choose Insta
 ## Download
 
 - [Installer (.pkg)](https://k.ilharp.cc/osx.pkg)
-- [View More Versions](https://github.com/koishijs/koishi-desktop/releases)
+- [Other Downloads](https://github.com/koishijs/koishi-desktop/releases)
 
-## Other Methods
+## Other Downloads
 
 Could not find an installation package for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).
