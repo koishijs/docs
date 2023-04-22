@@ -25,9 +25,10 @@
           </div>
           <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
             <a class="chooser-select-item chooser-cell"
-              v-for="(value, key) in frontmatter.choices[chooserUsage].children" :key="key"
-              :href="withBase(value)">
-              <span class="hint"></span>{{ key }}
+              v-for="({ text, link }, index) in frontmatter.choices[chooserUsage].children"
+              :key="index"
+              :href="withBase(link)">
+              <span class="hint"></span>{{ text }}
             </a>
           </div>
         </div>
