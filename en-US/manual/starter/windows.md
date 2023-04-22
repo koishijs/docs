@@ -20,7 +20,7 @@ If you want to learn about other installation method, please visit [Choose Insta
 
 ## Install
 
-It is recommended to install Koishi from the installer, which would deal with most of the problems automatically.You should choose this method in general.
+It is recommended to install Koishi from the installer, which would deal with most of the problems automatically. You should choose this method in general.
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
@@ -36,8 +36,8 @@ The installation might cost more than 10 minutes on some devices, please be pati
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-Click the Koishi icon to launch it.The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
+Click the Koishi icon to launch it. The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
 ## Other Methods
 
-Could not find an installation package suitable for you?You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).
+Could not find an installation package suitable for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).

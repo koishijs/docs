@@ -1,6 +1,6 @@
 # App
 
-**应用 (App)** 是 [Context](./context.md) 的一个子类，它是程序的入口，管理着全部机器人的信息。除了 Context 中已有的属性和方法以外，App 还提供了下面的属性和方法：除了 Context 中已有的属性和方法以外，App 还提供了下面的属性和方法：
+**应用 (App)** 是 [Context](./context.md) 的一个子类，它是程序的入口，管理着全部机器人的信息。除了 Context 中已有的属性和方法以外，App 还提供了下面的属性和方法：
 
 ## Constructor Options
 
@@ -11,7 +11,7 @@
 - 类型：`string`
 - 默认值：`'localhost'`
 
-服务器监听的 IP 地址。服务器监听的 IP 地址。如果将此设置为 `0.0.0.0` 将监听所有地址，包括局域网和公网地址。
+服务器监听的 IP 地址。如果将此设置为 `0.0.0.0` 将监听所有地址，包括局域网和公网地址。
 
 ### options.port
 
@@ -29,7 +29,7 @@
 
 - 类型：`string | string[]`
 
-指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [触发前缀](../../manual/usage/command.md#触发前缀) 一节。
+指令前缀字符，可以是字符串或字符串数组。将用于指令前缀的匹配。例如，如果配置该选项为 `.`，则你可以通过 `.help` 来进行 help 指令的调用。参见 [触发前缀](../../manual/usage/command.md#触发前缀) 一节。
 
 ### options.delay
 
@@ -55,14 +55,14 @@ interface DelayOptions {
 
 - 类型：`string`
 
-Koishi 服务暴露在公网的地址。Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
+Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
 
 ### options.maxListeners
 
 - 类型：`number`
 - 默认值：`64`
 
-每种钩子的最大数量。每种钩子的最大数量。如果超过这个数量，Koishi 会认定为发生了内存泄漏，将产生一个警告。
+每种钩子的最大数量。如果超过这个数量，Koishi 会认定为发生了内存泄漏，将产生一个警告。
 
 ### options.autoAuthorize
 
@@ -82,14 +82,14 @@ Koishi 服务暴露在公网的地址。Koishi 服务暴露在公网的地址。
 
 - 类型：`boolean`
 
-启用报错优化模式。启用报错优化模式。在此模式下 Koishi 会对程序抛出的异常进行整理，过滤掉框架内部的调用记录，输出更易读的提示信息。默认值为 `true`。默认值为 `true`。
+启用报错优化模式。在此模式下 Koishi 会对程序抛出的异常进行整理，过滤掉框架内部的调用记录，输出更易读的提示信息。默认值为 `true`。
 
 ### options.minSimilarity
 
 - 类型：`number`
 - 默认值：`1`
 
-用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../manual/recipe/execution.md#模糊匹配) 一节。
+用于模糊匹配的相似系数，应该是一个 0 到 1 之间的数值。数值越高，模糊匹配越严格。设置为 1 可以完全禁用模糊匹配。参见 [模糊匹配](../../manual/recipe/execution.md#模糊匹配) 一节。
 
 ### options.request.proxyAgent
 
@@ -105,7 +105,7 @@ Koishi 服务暴露在公网的地址。Koishi 服务暴露在公网的地址。
 
 - 类型：`Record<string, any>`
 
-要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见 [认识插件](../../guide/plugin/) 一章。
+要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见 [认识插件](../../guide/plugin/) 一章。
 
 我们还支持配置插件的上下文选择器：
 
@@ -133,7 +133,7 @@ interface Selection {
 - 类型：`number | object`
 - 默认值：`{}`
 
-默认的输出等级。默认的输出等级。参见 [设置输出等级](../utils/logger.md#logger-level) 一节。
+默认的输出等级。参见 [设置输出等级](../utils/logger.md#logger-level) 一节。
 
 #### options.logger.showTime
 
@@ -147,7 +147,7 @@ interface Selection {
 - 类型：`boolean`
 - 默认值：初始未设置，在 ready 事件触发后修改为 `!options.logTime`
 
-是否标注相邻两次输出的时间差。参见 [输出时间](../utils/logger.md#not-exist) 一节。输出日志所使用的时间格式。参见 [输出时间](../utils/logger.md#not-exist) 一节。
+是否标注相邻两次输出的时间差。参见 [输出时间](../utils/logger.md#not-exist) 一节。
 
 ### options.watch
 
@@ -155,7 +155,7 @@ interface Selection {
   - **watch.root:** `string` 要监听的根目录，相对于工作路径
   - **watch.debounce:** `number` 延迟触发更新的等待时间，默认为 `100`
 
-监听文件变化的选项。监听文件变化的选项。参见 [模块热替换](../../guide/develop/script.md#模块热替换) 一节。
+监听文件变化的选项。参见 [模块热替换](../../guide/develop/script.md#模块热替换) 一节。
 
 ### options.timezoneOffset
 

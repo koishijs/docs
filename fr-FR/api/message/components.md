@@ -22,7 +22,7 @@ foo<execute>echo 123</execute>bar
 输出子元素并等待用户输入，并使用输入内容替换此元素。
 
 ```html
-你输入的内容为：<prompt>请输入一段文本。</prompt></prompt>
+你输入的内容为：<prompt>请输入一段文本。</prompt>
 ```
 
 <chat-panel>

@@ -12,11 +12,9 @@ next:
 ::: warning
 这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
 :::
-:::
 
 ::: warning
 我们强烈建议使用模板项目进行 Koishi 开发。如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。
-:::
 :::
 
 虽然现在我们推荐绝大部分用户使用模板项目，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
@@ -25,7 +23,6 @@ next:
 
 ::: tip
 Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
-:::
 :::
 
 Koishi 需要 [Node.js](https://nodejs.org/) (最低 v14，推荐使用 LTS) 运行环境，你需要自己安装它。这里我们假定你已经安装完成了。
@@ -219,6 +216,6 @@ import * as ping from './ping'
 ctx.plugin(ping)
 ```
 
-## 接下来…
+## 接下来……
 
 恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。

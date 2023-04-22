@@ -13,7 +13,6 @@
 ::: tip
 本节中介绍的样例用到了 [Mocha](https://mochajs.org/) 和 [Chai](https://www.chaijs.com/)。它们都是比较通用的测试库和断言库，但并非绑定 @koishijs/plugin-mock 一同使用。你也可以根据你的喜好选择其他工具，比如 [Jest](https://jestjs.io/) 等等。
 :::
-:::
 
 ## 准备工作
 

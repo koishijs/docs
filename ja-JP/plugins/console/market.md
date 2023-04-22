@@ -13,7 +13,6 @@
 
 你可以填入我们的官方镜像：<https://registry.koishi.chat/index.json>。
 :::
-:::
 
 ### search.timeout
 

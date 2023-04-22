@@ -3,7 +3,6 @@
 ::: warning 注意
 由于 QQ 频道官方对机器人附加了大量限制，因此如果你仅仅想要接入频道，我们更推荐使用真实账号而不是申请机器人。借助 [OneBot](./onebot.md) 适配器，我们将得以在频道中使用更多的功能。
 :::
-:::
 
 QQ 频道官方 SDK 适配器，基于 [@qq-guild-sdk/core](https://www.npmjs.com/package/@qq-guild-sdk/core) 实现。
 

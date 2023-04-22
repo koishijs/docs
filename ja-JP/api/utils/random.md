@@ -3,7 +3,6 @@
 ::: tip
 本节中的源码位于 [inaba](https://github.com/shigma/inaba)。
 :::
-:::
 
 ## 基本用法
 

@@ -37,7 +37,6 @@ Koishi 中的服务可以分为大致三种类型。对于每一种我都给出�
 
 ```ts title=plugin-dialogue.ts
 // 标准错误答案！别抄这个！
-别抄这个！
 export const name = 'dialogue'
 
 export function apply(ctx: Context) {
@@ -97,7 +96,6 @@ ctx.plugin({
 ::: tip
 请务必使用回调函数中的 ctx 而不是外层的 ctx，不然在服务被热重载时可能会引发内存泄漏。
 :::
-:::
 
 ### 最佳实践
 
@@ -105,7 +103,6 @@ ctx.plugin({
 
 ```ts title=plugin-dialogue.ts
 // 正确答案！抄这个！
-抄这个！
 export const name = 'dialogue'
 
 // 对于整体依赖的服务，使用 using 属性声明依赖关系

@@ -7,7 +7,7 @@
 - **label:** `string` 对象的标签，用于标识
 - 返回值: `Observed<T>`
 
-创建一个观察者对象。创建一个观察者对象。目前只支持从普通对象创建（不支持 Array / Set / Map）。
+创建一个观察者对象。目前只支持从普通对象创建（不支持 Array / Set / Map）。
 
 ## observed.$diff
 
