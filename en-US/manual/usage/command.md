@@ -87,7 +87,7 @@ For example, command `help` has an optional argument which indicates the name of
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
 <p>指令：translate &lt;text...></p>
-<p>文本翻译</p>
+<p>Text Translations</p>
 <p>可用的选项有：</p>
 <p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
 <p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
