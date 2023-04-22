@@ -33,8 +33,8 @@
 
 ## 数据库 API
 
-- [内置数据结构](./database/built-in.md)
-- [数据库操作 (Database)](./database/database.md)
+- [組み込みデータ構造](./database/built-in.md)
+- [データベース操作 (Database)](./database/database.md)
 - [数据模型 (Model)](./database/model.md)
 - [查询表达式 (Query)](./database/query.md)
 - [求值表达式 (Evaluation)](./database/evaluation.md)
