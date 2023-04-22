@@ -8,8 +8,8 @@
       "text": "编辑此页面"
     },
     "docFooter": {
-      "prev": "下一页",
-      "next": "上一页"
+      "prev": "上一页",
+      "next": "下一页"
     },
     "docsearch": {
       "placeholder": "搜索文档",
@@ -111,7 +111,7 @@
           "text": "",
           "items": [
             {
-              "text": "起步",
+              "text": "安装",
               "link": "/manual/starter/"
             },
             {
@@ -570,31 +570,31 @@
           "text": "适配器支持",
           "items": [
             {
-              "text": "适配器：Discord",
+              "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
             {
-              "text": "适配器：Kook",
+              "text": "Kook",
               "link": "/plugins/adapter/kook.md"
             },
             {
-              "text": "适配器：Lark",
+              "text": "Lark",
               "link": "/plugins/adapter/lark.md"
             },
             {
-              "text": "适配器：Mail",
+              "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
-              "text": "适配器：OneBot",
+              "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "适配器：QQGuild",
+              "text": "QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
-              "text": "适配器：Telegram",
+              "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
             }
           ]
@@ -603,19 +603,19 @@
           "text": "数据库支持",
           "items": [
             {
-              "text": "数据库：Memory",
+              "text": "Memory",
               "link": "/plugins/database/memory.md"
             },
             {
-              "text": "数据库：MongoDB",
+              "text": "MongoDB",
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "数据库：MySQL",
+              "text": "MySQL",
               "link": "/plugins/database/mysql.md"
             },
             {
-              "text": "数据库：SQLite",
+              "text": "SQLite",
               "link": "/plugins/database/sqlite.md"
             }
           ]
