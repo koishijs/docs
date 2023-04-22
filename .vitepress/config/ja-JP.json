@@ -156,7 +156,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "デプロイメント",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -205,142 +205,142 @@
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "プラグインを公開する",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "インタラクションの基礎",
           "items": [
             {
-              "text": "指令开发",
+              "text": "コマンドの開発",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "イベントシステム",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "ミドルウェア",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "消息元素",
+              "text": "メッセージ要素",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "アドバンスト",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "モジュール化",
           "items": [
             {
-              "text": "认识插件",
+              "text": "プラグインを理解する",
               "link": "/guide/plugin/"
             },
             {
-              "text": "生命周期",
+              "text": "ライフサイクル",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "会话过滤器",
+              "text": "セッションフィルター",
               "link": "/guide/plugin/selector.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "サービスと依存性",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "配置模式",
+              "text": "スキーマ",
               "link": "/guide/plugin/schema.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "データベース",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "データベースを使用する",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "データモデルを拡張する",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
+              "text": "遅延初期化と自動更新",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "データベースプラグインの作成",
               "link": "/guide/database/writing.md"
             }
           ]
         },
         {
-          "text": "跨平台",
+          "text": "クロスプラットフォーム",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "アダプターを使用する",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "ボットを使用する",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
+              "text": "クロスプラットフォームのアカウント連携",
               "link": "/guide/adapter/binding.md"
             },
             {
-              "text": "编写适配器插件",
+              "text": "アダプタープラグインの作成",
               "link": "/guide/adapter/writing.md"
             }
           ]
         },
         {
-          "text": "国际化",
+          "text": "国際化",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "多言語対応",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "翻訳ファイルの作成",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Crowdin との連携",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "コンソール開発",
           "items": [
             {
-              "text": "使用控制台",
+              "text": "コンソールを使用する",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "编写扩展",
+              "text": "拡張機能の作成",
               "link": "/guide/console/extension.md"
             },
             {
-              "text": "数据交互",
+              "text": "データ通信",
               "link": "/guide/console/data.md"
             }
           ]
         },
         {
-          "text": "测试工具",
+          "text": "テストツール",
           "items": [
             {
-              "text": "单元测试",
+              "text": "ユニットテスト",
               "link": "/guide/testing/index.md"
             }
           ]
@@ -532,32 +532,32 @@
               "link": "/plugins/adapter/mail.md"
             },
             {
-              "text": "适配器：OneBot",
+              "text": "アダプター：OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "适配器：QQGuild",
+              "text": "アダプター：QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
-              "text": "适配器：Telegram",
+              "text": "アダプター：Telegram",
               "link": "/plugins/adapter/telegram.md"
             }
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "データベース対応",
           "items": [
             {
-              "text": "数据库：Memory",
+              "text": "データベース：Memory",
               "link": "/plugins/database/memory.md"
             },
             {
-              "text": "数据库：MongoDB",
+              "text": "データベース：MongoDB",
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "数据库：MySQL",
+              "text": "データベース：MySQL",
               "link": "/plugins/database/mysql.md"
             },
             {
