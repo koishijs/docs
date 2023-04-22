@@ -32,7 +32,7 @@ See also: [@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
 1. 前往 [开发者平台](https://developer.kookapp.cn/)，前往「应用」并点击「新建」
 2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
-3. 将上面的 `token` 填入插件配置即可使用
+3. Enter the `token` into the plugin configuration.
 
 See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
