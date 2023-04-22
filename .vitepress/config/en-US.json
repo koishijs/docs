@@ -205,7 +205,7 @@
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "Publishing Plugins",
               "link": "/guide/develop/publish.md"
             }
           ]
@@ -214,23 +214,23 @@
           "text": "Essentials",
           "items": [
             {
-              "text": "指令开发",
+              "text": "Command",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "Lifecycle",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "Middleware",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "消息元素",
+              "text": "Message Element",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "Advanced Usage",
               "link": "/guide/basic/advanced.md"
             }
           ]
@@ -239,23 +239,23 @@
           "text": "Modulization",
           "items": [
             {
-              "text": "认识插件",
+              "text": "About Plugin",
               "link": "/guide/plugin/"
             },
             {
-              "text": "生命周期",
+              "text": "Lifecycle",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "会话过滤器",
+              "text": "Selectors",
               "link": "/guide/plugin/selector.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "Service & Dependency",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "配置模式",
+              "text": "Configuration Pattern",
               "link": "/guide/plugin/schema.md"
             }
           ]
@@ -272,11 +272,11 @@
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
+              "text": "Lazy Initialization & Auto-update",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "Database Plugin",
               "link": "/guide/database/writing.md"
             }
           ]
@@ -285,19 +285,19 @@
           "text": "Cross Platform",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "Work with Adapters",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "Work with Bot",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
+              "text": "Account Connection across Platforms",
               "link": "/guide/adapter/binding.md"
             },
             {
-              "text": "编写适配器插件",
+              "text": "Adapter Plugins",
               "link": "/guide/adapter/writing.md"
             }
           ]
@@ -306,15 +306,15 @@
           "text": "Internationalization",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "Internationalization",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "Localization Files",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Localize with Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -393,7 +393,7 @@
           "text": "Message Element",
           "items": [
             {
-              "text": "语法规范",
+              "text": "Syntax Specification",
               "link": "/api/message/syntax.md"
             },
             {
@@ -405,7 +405,7 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "Render API",
               "link": "/api/message/api.md"
             }
           ]
@@ -447,11 +447,11 @@
           "text": "Databases",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "Built-in Data Structure",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Database",
               "link": "/api/database/database.md"
             },
             {
@@ -567,63 +567,63 @@
           ]
         },
         {
-          "text": "常用功能",
+          "text": "Common Functions",
           "items": [
             {
-              "text": "数据管理 (Admin)",
+              "text": "Data Management (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "账号绑定 (Bind)",
+              "text": "Account Connection (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "发送广播 (Broadcast)",
+              "text": "Broadcasting (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "设置昵称 (Callme)",
+              "text": "Nickname Setting (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "发送消息 (Echo)",
+              "text": "Send Messages (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "查看帮助 (Help)",
+              "text": "Display Help (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "会话信息 (Inspect)",
+              "text": "Session Inspector (Inspect)",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "速率限制 (Rate Limit)",
+              "text": "Rate Limiting (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
         {
-          "text": "控制台功能",
+          "text": "Console Functions",
           "items": [
             {
-              "text": "控制台 (Console)",
+              "text": "Console (Console)",
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据统计 (Analytics)",
+              "text": "Data Analytics (Analytics)",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "指令管理 (Commands)",
+              "text": "Command Management (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
+              "text": "Database Management (Dataview)",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "Resource Manager (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
