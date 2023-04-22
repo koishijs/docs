@@ -78,7 +78,7 @@ footer:
         text: 作为依赖调用
         link: /zh-CN/manual/starter/direct.html
   - 
-    text: 文档
+    text: ドキュメント
     items:
       - 
         text: 开发指南
