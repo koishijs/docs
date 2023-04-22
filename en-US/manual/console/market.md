@@ -4,7 +4,7 @@
 This section will introduce the usage of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
 :::
 
-When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. You can use Koishi Console to perform a series of actions, including modifying configurations, installing plugins, updating plugins and adding bots. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
+When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
 
 ## Install Plugins
 
