@@ -627,44 +627,44 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "Dependencies Graph (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "Localization Management (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "Logs Management (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "用户登录 (Login)",
+              "text": "User Authorization (Login)",
               "link": "/plugins/console/login.md"
             },
             {
-              "text": "插件管理 (Market)",
+              "text": "Plugin Manager (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Development Sandboxing (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "Running Status (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
         },
         {
-          "text": "开发工具",
+          "text": "Developer Tools",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "Module Hot Replacement (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Application Mocking (Mock)",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -702,7 +702,7 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "团队介绍",
+              "text": "Meet Our Team",
               "link": "/about/team.md"
             },
             {
