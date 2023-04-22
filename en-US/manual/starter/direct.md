@@ -216,6 +216,6 @@ import * as ping from './ping'
 ctx.plugin(ping)
 ```
 
-## 接下来……
+## What's next……
 
-恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+Congratulations that you have learnt the basic of Koishi! 接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
