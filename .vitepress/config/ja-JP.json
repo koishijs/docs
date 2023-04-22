@@ -48,7 +48,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "紹介",
               "link": "/manual/introduction.md"
             }
           ]
@@ -61,19 +61,19 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Windows にインストール",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Macos にインストール",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Linux にインストール",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Android にインストール",
               "link": "/manual/starter/android.md"
             },
             {
@@ -91,10 +91,10 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "コンソール",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "コンソールについて",
               "link": "/manual/console/index.md"
             },
             {
@@ -165,7 +165,7 @@
           "text": "启动器",
           "items": [
             {
-              "text": "系统要求",
+              "text": "システム要件",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -186,7 +186,7 @@
           ]
         },
         {
-          "text": "开发上手",
+          "text": "開発入門",
           "items": [
             {
               "text": "环境搭建",
@@ -360,11 +360,11 @@
           "text": "核心模块",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "アダプター",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "アプリ",
               "link": "/api/core/app.md"
             },
             {
