@@ -1,6 +1,7 @@
 {
   "label": "English",
   "lang": "en-US",
+  "description": "Cross-platform Chatbot Framework Made With Love",
   "themeConfig": {
     "outlineTitle": "ON THIS PAGE",
     "lastUpdatedText": "Last updated",
@@ -240,7 +241,7 @@
           ]
         },
         {
-          "text": "Developing Guide",
+          "text": "开发起步",
           "items": [
             {
               "text": "Setup Environment",
