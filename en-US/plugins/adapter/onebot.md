@@ -418,7 +418,7 @@ await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
 虽然异步调用方法的名字以 Async 结尾，但是其他方法也是异步函数，它们都会返回一个 Promise 对象。取这样的名字只是为了与 OneBot 保持一致。
 :::
 
-## 常见问题
+## FAQ
 
 #### 问题：我不知道应该下载 release 中的哪一个文件。
 
