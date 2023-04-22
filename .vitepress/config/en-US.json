@@ -2,14 +2,14 @@
   "label": "English",
   "lang": "en-US",
   "themeConfig": {
-    "outlineTitle": "On this page",
+    "outlineTitle": "ON THIS PAGE",
     "lastUpdatedText": "Last updated",
     "editLink": {
       "text": "Edit this page"
     },
     "docFooter": {
-      "prev": "上一页",
-      "next": "下一页"
+      "prev": "Previous",
+      "next": "Next"
     },
     "docsearch": {
       "placeholder": "Search the documentation",
@@ -272,7 +272,7 @@
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "Lifecycle",
+              "text": "Event",
               "link": "/guide/basic/events.md"
             },
             {
@@ -309,13 +309,13 @@
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "Configuration Pattern",
+              "text": "Config Schema",
               "link": "/guide/plugin/schema.md"
             }
           ]
         },
         {
-          "text": "Databases",
+          "text": "Database",
           "items": [
             {
               "text": "Work with Databases",
