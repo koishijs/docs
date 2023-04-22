@@ -19,7 +19,7 @@
         "activeMatch": "/api/"
       },
       {
-        "text": "插件",
+        "text": "plugin",
         "items": [
           {
             "text": "插件市场",
@@ -131,7 +131,7 @@
               "link": "/manual/usage/filter.md"
             },
             {
-              "text": "国际化",
+              "text": "Internationalisation",
               "link": "/manual/usage/i18n.md"
             }
           ]
@@ -169,7 +169,7 @@
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "命令行工具",
+              "text": "L'outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -303,7 +303,7 @@
           ]
         },
         {
-          "text": "国际化",
+          "text": "Internationalisation",
           "items": [
             {
               "text": "多语言支持",
@@ -496,7 +496,7 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "plugin",
           "items": [
             {
               "text": "插件市场",
@@ -672,7 +672,7 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "plugin",
           "items": [
             {
               "text": "插件市场",
