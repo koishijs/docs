@@ -1,6 +1,7 @@
 {
   "label": "简体中文",
   "lang": "zh-CN",
+  "description": "创建跨平台、可扩展、高性能的机器人",
   "themeConfig": {
     "outlineTitle": "目录",
     "lastUpdatedText": "上次更新",
@@ -240,7 +241,7 @@
           ]
         },
         {
-          "text": "开发上手",
+          "text": "开发起步",
           "items": [
             {
               "text": "环境搭建",

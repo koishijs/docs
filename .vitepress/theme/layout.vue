@@ -11,7 +11,7 @@
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed } from 'vue'
-import { MarketFilter } from '@koishijs/client-market'
+import { MarketFilter } from '@koishijs/market'
 import { home, words, all } from './utils'
 
 const { frontmatter } = useData()

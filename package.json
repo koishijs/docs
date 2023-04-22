@@ -10,13 +10,13 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
-    "@koishijs/client-market": "^1.2.3",
+    "@koishijs/market": "^1.2.4",
     "@koishijs/registry": "^4.6.0",
     "@koishijs/vitepress": "^1.9.0",
     "@types/node": "^18.15.3",
     "@types/spark-md5": "^3.0.2",
     "cross-env": "^7.0.3",
-    "koishi": "^4.12.5",
+    "koishi": "^4.12.6",
     "marked-vue": "^1.2.2",
     "sass": "^1.59.3",
     "typescript": "^4.9.5",

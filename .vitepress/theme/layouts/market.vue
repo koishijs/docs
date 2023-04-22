@@ -29,7 +29,7 @@
 
 import { onMounted, ref } from 'vue'
 import { market, words, all, packages, hasFilter } from '../utils'
-import { MarketSearch, MarketPackage } from '@koishijs/client-market'
+import { MarketSearch, MarketPackage } from '@koishijs/market'
 
 function onQuery(word: string) {
   if (!words.value[words.value.length - 1]) words.value.pop()

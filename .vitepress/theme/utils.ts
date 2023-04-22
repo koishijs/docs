@@ -1,5 +1,5 @@
 import { MarketResult } from '@koishijs/registry'
-import { useMarket } from '@koishijs/client-market'
+import { useMarket } from '@koishijs/market'
 import { ref, Ref } from 'vue'
 
 export namespace home {
