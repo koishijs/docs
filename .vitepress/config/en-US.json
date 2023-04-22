@@ -2,6 +2,19 @@
   "label": "English",
   "lang": "en-US",
   "themeConfig": {
+    "outlineTitle": "On this page",
+    "lastUpdatedText": "Last updated",
+    "editLink": {
+      "text": "Edit this page on GitHub"
+    },
+    "docFooter": {
+      "prev": "Previous page",
+      "next": "Next page"
+    },
+    "darkModeSwitchLabel": "Appearance",
+    "sidebarMenuLabel": "Menu",
+    "returnToTopLabel": "Return to top",
+    "langMenuLabel": "Change language",
     "nav": [
       {
         "text": "Manual",
