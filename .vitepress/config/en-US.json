@@ -2,60 +2,60 @@
   "label": "English",
   "lang": "en-US",
   "themeConfig": {
-    "outlineTitle": "目录",
-    "lastUpdatedText": "上次更新",
+    "outlineTitle": "On this page",
+    "lastUpdatedText": "Last updated",
     "editLink": {
-      "text": "编辑此页面"
+      "text": "Edit this page"
     },
     "docFooter": {
-      "prev": "下一页",
-      "next": "上一页"
+      "prev": "Next Page",
+      "next": "Previous Page"
     },
     "docsearch": {
-      "placeholder": "搜索文档",
+      "placeholder": "Search the documentation",
       "translations": {
         "button": {
-          "buttonText": "搜索",
-          "buttonAriaLabel": "搜索"
+          "buttonText": "Search",
+          "buttonAriaLabel": "Search"
         },
         "modal": {
           "searchBox": {
-            "resetButtonTitle": "清除查询条件",
-            "resetButtonAriaLabel": "清除查询条件",
-            "cancelButtonText": "取消",
-            "cancelButtonAriaLabel": "取消"
+            "resetButtonTitle": "Clear the query",
+            "resetButtonAriaLabel": "Clear the query",
+            "cancelButtonText": "Cancel",
+            "cancelButtonAriaLabel": "Cancel"
           },
           "startScreen": {
-            "recentSearchesTitle": "搜索历史",
-            "noRecentSearchesText": "没有搜索历史",
-            "saveRecentSearchButtonTitle": "保存至搜索历史",
-            "removeRecentSearchButtonTitle": "从搜索历史中移除",
-            "favoriteSearchesTitle": "收藏",
-            "removeFavoriteSearchButtonTitle": "从收藏中移除"
+            "recentSearchesTitle": "Recent",
+            "noRecentSearchesText": "No recent searches",
+            "saveRecentSearchButtonTitle": "Save this search",
+            "removeRecentSearchButtonTitle": "Remove this search from history",
+            "favoriteSearchesTitle": "Favorite",
+            "removeFavoriteSearchButtonTitle": "Remove from favorites"
           },
           "errorScreen": {
-            "titleText": "无法获取结果",
-            "helpText": "你可能需要检查你的网络连接"
+            "titleText": "Unable to fetch results",
+            "helpText": "You might want to check your network connection."
           },
           "footer": {
-            "selectText": "选择",
-            "navigateText": "切换",
-            "closeText": "关闭",
-            "searchByText": "搜索提供者"
+            "selectText": "to select",
+            "navigateText": "to navigate",
+            "closeText": "to close",
+            "searchByText": "search by"
           },
           "noResultsScreen": {
-            "noResultsText": "无法找到相关结果",
-            "suggestedQueryText": "你可以尝试查询",
-            "reportMissingResultsText": "你认为该查询应该有结果？",
-            "reportMissingResultsLinkText": "点击反馈"
+            "noResultsText": "No results for",
+            "suggestedQueryText": "Try searching for",
+            "reportMissingResultsText": "Believe this query should return results?",
+            "reportMissingResultsLinkText": "Let us know."
           }
         }
       }
     },
-    "darkModeSwitchLabel": "外观",
-    "sidebarMenuLabel": "菜单",
-    "returnToTopLabel": "返回顶部",
-    "langMenuLabel": "语言",
+    "darkModeSwitchLabel": "Appearance",
+    "sidebarMenuLabel": "Menu",
+    "returnToTopLabel": "Return to top",
+    "langMenuLabel": "Change language",
     "nav": [
       {
         "text": "Manual",
