@@ -351,13 +351,13 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "概要",
               "link": "/api/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "コアモジュール",
           "items": [
             {
               "text": "アダプター",
@@ -368,32 +368,32 @@
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "ボット",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "コマンド",
               "link": "/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "コンテキスト",
               "link": "/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "イベント",
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "セッション",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "消息元素",
+          "text": "メッセージ要素",
           "items": [
             {
-              "text": "语法规范",
+              "text": "構文規則",
               "link": "/api/message/syntax.md"
             },
             {
@@ -447,11 +447,11 @@
           "text": "数据库",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "組み込みデータ構造",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "データベース操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
@@ -496,7 +496,7 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "プラグイン",
           "items": [
             {
               "text": "插件市场",
@@ -507,7 +507,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
@@ -672,7 +672,7 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "プラグイン",
           "items": [
             {
               "text": "插件市场",
@@ -683,7 +683,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
@@ -702,11 +702,11 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "团队介绍",
+              "text": "チーム紹介",
               "link": "/about/team.md"
             },
             {
-              "text": "社区资源",
+              "text": "コミュニティリソース",
               "link": "/about/community.md"
             }
           ]
