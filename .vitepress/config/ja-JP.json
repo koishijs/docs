@@ -5,18 +5,18 @@
     "outlineTitle": "目录",
     "lastUpdatedText": "上次更新",
     "editLink": {
-      "text": "编辑此页面"
+      "text": "このページを編集する"
     },
     "docFooter": {
-      "prev": "下一页",
-      "next": "上一页"
+      "prev": "次のページ",
+      "next": "前のページ"
     },
     "docsearch": {
-      "placeholder": "搜索文档",
+      "placeholder": "ドキュメントを検索する",
       "translations": {
         "button": {
-          "buttonText": "搜索",
-          "buttonAriaLabel": "搜索"
+          "buttonText": "検索",
+          "buttonAriaLabel": "検索"
         },
         "modal": {
           "searchBox": {
@@ -26,25 +26,25 @@
             "cancelButtonAriaLabel": "取消"
           },
           "startScreen": {
-            "recentSearchesTitle": "搜索历史",
-            "noRecentSearchesText": "没有搜索历史",
-            "saveRecentSearchButtonTitle": "保存至搜索历史",
-            "removeRecentSearchButtonTitle": "从搜索历史中移除",
-            "favoriteSearchesTitle": "收藏",
-            "removeFavoriteSearchButtonTitle": "从收藏中移除"
+            "recentSearchesTitle": "検索履歴",
+            "noRecentSearchesText": "検索履歴はありません",
+            "saveRecentSearchButtonTitle": "検索履歴に保存する",
+            "removeRecentSearchButtonTitle": "検索履歴から削除する",
+            "favoriteSearchesTitle": "お気に入り",
+            "removeFavoriteSearchButtonTitle": "お気に入りから外す"
           },
           "errorScreen": {
             "titleText": "无法获取结果",
-            "helpText": "你可能需要检查你的网络连接"
+            "helpText": "ネットワーク接続を確認してみてください"
           },
           "footer": {
-            "selectText": "选择",
-            "navigateText": "切换",
-            "closeText": "关闭",
-            "searchByText": "搜索提供者"
+            "selectText": "選択",
+            "navigateText": "切り替え",
+            "closeText": "閉じる",
+            "searchByText": "作成者を検索する"
           },
           "noResultsScreen": {
-            "noResultsText": "无法找到相关结果",
+            "noResultsText": "関連結果が見つかりませんでした",
             "suggestedQueryText": "你可以尝试查询",
             "reportMissingResultsText": "你认为该查询应该有结果？",
             "reportMissingResultsLinkText": "点击反馈"
@@ -53,9 +53,9 @@
       }
     },
     "darkModeSwitchLabel": "外观",
-    "sidebarMenuLabel": "菜单",
-    "returnToTopLabel": "返回顶部",
-    "langMenuLabel": "语言",
+    "sidebarMenuLabel": "メニュー",
+    "returnToTopLabel": "先頭に戻る",
+    "langMenuLabel": "言語",
     "nav": [
       {
         "text": "はじめに",
@@ -451,21 +451,21 @@
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "標準要素",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "組み込みコンポーネント",
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "レンダリング API",
               "link": "/api/message/api.md"
             }
           ]
         },
         {
-          "text": "内置服务",
+          "text": "組み込みサービス",
           "items": [
             {
               "text": "机器人 (Bots)",
