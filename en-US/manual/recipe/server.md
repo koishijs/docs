@@ -4,7 +4,7 @@
 It is vulnerable when you expose your Koishi on the Internet. 你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
 :::
 
-Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
+Koishi apps can only be accessed from localhost by default. 而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
 
 - Allow more people to access your Koishi console
 - 使用作为 Webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
@@ -19,9 +19,9 @@ Koishi 应用默认情况下只能在本机访问。而对于某些需求，你�
 
 ## Reverse Proxy
 
-如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
+Reverse proxies are useful if you have more complex needs such as SSL and server name etc. Common solutions include nginx, Caddy, etc. 使用反向代理时，你不需要修改上述 `host` 配置项。
 
-### 使用 Caddy
+### Use Caddy
 
 ```text
 # 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名
@@ -31,7 +31,7 @@ Koishi 应用默认情况下只能在本机访问。而对于某些需求，你�
 }
 ```
 
-### 使用 nginx
+### Use nginx
 
 下面给出一段 nginx 配置作为参考：
 
@@ -43,10 +43,10 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-  # server_name, port, ssl 等设置
+  # server_name, port, ssl, etc.
 
   location / {
-    # 这里的 5140 对应 Koishi 实例的端口
+    # 5140 corresponds to app.config.port
     proxy_pass http://127.0.0.1:5140/;
     proxy_redirect off;
     proxy_set_header X-Real-IP $remote_addr;
@@ -61,7 +61,7 @@ server {
 }
 ```
 
-## What's next……
+## What's next...
 
 完成初步配置以后，有一些额外的社区插件可以帮助你更好地部署 Koishi 控制台。
 
