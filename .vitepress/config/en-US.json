@@ -2,14 +2,14 @@
   "label": "English",
   "lang": "en-US",
   "themeConfig": {
-    "outlineTitle": "On this page",
+    "outlineTitle": "ON THIS PAGE",
     "lastUpdatedText": "Last updated",
     "editLink": {
       "text": "Edit this page"
     },
     "docFooter": {
-      "prev": "Next Page",
-      "next": "Previous Page"
+      "prev": "Previous",
+      "next": "Next"
     },
     "docsearch": {
       "placeholder": "Search the documentation",
@@ -111,7 +111,7 @@
           "text": "",
           "items": [
             {
-              "text": "Installation",
+              "text": "Install",
               "link": "/manual/starter/"
             },
             {
@@ -272,7 +272,7 @@
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "Lifecycle",
+              "text": "Event",
               "link": "/guide/basic/events.md"
             },
             {
@@ -309,13 +309,13 @@
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "Configuration Pattern",
+              "text": "Config Schema",
               "link": "/guide/plugin/schema.md"
             }
           ]
         },
         {
-          "text": "Databases",
+          "text": "Database",
           "items": [
             {
               "text": "Work with Databases",
@@ -498,7 +498,7 @@
           ]
         },
         {
-          "text": "Databases",
+          "text": "Database",
           "items": [
             {
               "text": "Built-in Data Structure",
@@ -570,31 +570,31 @@
           "text": "Adapter",
           "items": [
             {
-              "text": "Adapter: Discord",
+              "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
             {
-              "text": "Adapter: Kook",
+              "text": "Kook",
               "link": "/plugins/adapter/kook.md"
             },
             {
-              "text": "Adapter: Lark",
+              "text": "Lark",
               "link": "/plugins/adapter/lark.md"
             },
             {
-              "text": "Adapter: Mail",
+              "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
-              "text": "Adapter: OneBot",
+              "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "Adapter: QQGuild",
+              "text": "QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
-              "text": "Adapter: Telegram",
+              "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
             }
           ]
@@ -603,25 +603,25 @@
           "text": "Database",
           "items": [
             {
-              "text": "Database: Memory",
+              "text": "Memory",
               "link": "/plugins/database/memory.md"
             },
             {
-              "text": "Database: MongoDB",
+              "text": "MongoDB",
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "Database: MySQL",
+              "text": "MySQL",
               "link": "/plugins/database/mysql.md"
             },
             {
-              "text": "Database: SQLite",
+              "text": "SQLite",
               "link": "/plugins/database/sqlite.md"
             }
           ]
         },
         {
-          "text": "Common Functions",
+          "text": "Common",
           "items": [
             {
               "text": "Data Management (Admin)",
@@ -658,7 +658,7 @@
           ]
         },
         {
-          "text": "Console Functions",
+          "text": "Console",
           "items": [
             {
               "text": "Console (Console)",

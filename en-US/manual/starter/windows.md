@@ -16,7 +16,7 @@ If you want to learn about other installation method, please visit [Choose Insta
 ## Download
 
 - [Installer (.msi)](https://k.ilharp.cc/win.msi)
-- [View More Versions](https://github.com/koishijs/koishi-desktop/releases)
+- [Other Downloads](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Install
 
@@ -38,6 +38,6 @@ The installation might cost more than 10 minutes on some devices, please be pati
 
 Click the Koishi icon to launch it. The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
-## Other Methods
+## Other Downloads
 
 Could not find an installation package suitable for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).

@@ -7,17 +7,31 @@ choices:
     text: Как вот-вот
     caption: В......
     children:
-      Windows: /zh-CN/manual/starter/windows.html
-      macOS: /zh-CN/manual/starter/macos.html
-      Linux: /zh-CN/manual/starter/linux.html
-      Android: /zh-CN/manual/starter/android.html
-      Docker: /zh-CN/manual/starter/docker.html
+      - 
+        text: Windows
+        link: /zh-CN/manual/starter/windows.html
+      - 
+        text: macOS
+        link: /zh-CN/manual/starter/macos.html
+      - 
+        text: Linux
+        link: /zh-CN/manual/starter/linux.html
+      - 
+        text: Android
+        link: /zh-CN/manual/starter/android.html
+      - 
+        text: Docker
+        link: /zh-CN/manual/starter/docker.html
   development:
     text: 用于开发
     caption: 我希望 Koishi 作为……
     children:
-      一个独立的项目: /zh-CN/manual/starter/boilerplate.html
-      其他 Node 项目的依赖: /zh-CN/manual/starter/direct.html
+      - 
+        text: 一个独立的项目
+        link: /zh-CN/manual/starter/boilerplate.html
+      - 
+        text: 其他 Node 项目的依赖
+        link: /zh-CN/manual/starter/direct.html
 ---
 
 # 选择安装方式

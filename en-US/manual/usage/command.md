@@ -184,7 +184,7 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
-关于用户权限，请参考 [权限管理](./permission.md) 一节。
+For user permissions, refer to [permissions management](./permission.md) section.
 
 ### Rate Limits
 

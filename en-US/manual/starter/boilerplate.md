@@ -106,4 +106,4 @@ yarn start
 Congratulations that you have learnt the basic of Koishi! What's next:
 
 - If you want to learn to the Koishi Console, please visit [About Koishi Console](../console/index.md)
-- 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
+- If you want to develop your own plugin, please visit [Developing Guide](../../guide/index.md).
