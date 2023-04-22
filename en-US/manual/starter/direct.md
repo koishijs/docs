@@ -17,7 +17,7 @@ This guide assumes that you know about secondary knowledge of [JavaScript](https
 It is strongly recommended to use template project for developing Koishi. If you are not sure what you are doing, it is recommended to read [Template Project](./boilerplate.md) first.
 :::
 
-While it is recommended to use the Template Project for most users, but it would be more flexible when you directly embed Koishi as a dependency for your complicated application.
+虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
 
 ## Initialize Your Project
 
