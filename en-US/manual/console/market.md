@@ -4,12 +4,12 @@
 This section will introduce the usage of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
 :::
 
-When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show the installation and configuration of plugins with the "echo" plugin for example. The function of the "echo" plugin is to provide an "echo" command that will export the user's input as an output to the user.
+When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show how to install and configure plugins with the "echo" plugin for example. The "echo" plugin provides an "echo" command that will take the text that user inputs and then send it back in the same context.
 
 ## Install Plugins
 
 ::: warning
-Koishi does not provide any assurance about the security of unofficial plugins. Do not download plugins from unknown sources at will, as they may cause Koishi to crash, or even more serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
+We Koishi team doesn't warrant the availability of third party plugins. Plugins from unknown sources may break Koishi to crash, or have very serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
 Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter "echo" in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog. Wait for a moment, and the plugin will be installed successfully.
