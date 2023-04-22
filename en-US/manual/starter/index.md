@@ -4,8 +4,8 @@ sidebar: false
 caption: I use Koishi for...
 choices:
   production:
-    text: Building Chat Bot Service
-    caption: My Software Environment is...
+    text: Building chatbot service
+    caption: I use Koishi on...
     children:
       - 
         text: Windows
@@ -24,13 +24,13 @@ choices:
         link: /en-US/manual/starter/docker.html
   development:
     text: Developing
-    caption: I Wish to Use Koishi as...
+    caption: I use Koishi as...
     children:
       - 
-        text: 一个独立的项目
+        text: A standalone project
         link: /en-US/manual/starter/boilerplate.html
       - 
-        text: 其他 Node 项目的依赖
+        text: A dependency for other Node projects
         link: /en-US/manual/starter/direct.html
 ---
 
