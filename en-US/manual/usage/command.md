@@ -58,11 +58,11 @@ For example, command `help` has an optional argument which indicates the name of
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>Please enter text to be sent.</p>
+<p>Please type to send</p>
 </chat-message>
 </chat-panel>
 
-选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
+The behavior would be affected by the options as well. An option usually starts with `-` or `--`, followed by a fixed word without any spaces, the word is the name of the option. There are no order requirements between options, but generally we should put options before parameters. Let's try out!
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,9 +73,9 @@ For example, command `help` has an optional argument which indicates the name of
 </chat-message>
 </chat-panel>
 
-在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
+In the example above, the option `-E` that we used changed the outputs. We will talk about it in detail in the next section.
 
-参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
+In addition to being required and optional, the arguments can be divided into fixed and variable length. A variable-length argument would be fed all characters including whitespace characters, while a fixed-length one stops feeding when it reads whitespace characters. The variable-length argument is defined by `...` follows the parameter name. For example, the argument of `echo` is variable-length. 如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
