@@ -30,7 +30,7 @@ choices:
         text: A standalone project
         link: /en-US/manual/starter/boilerplate.html
       - 
-        text: A dependency for other Node projects
+        text: A dependency for other projects
         link: /en-US/manual/starter/direct.html
 ---
 
