@@ -1,62 +1,6 @@
 {
-  "label": "English",
-  "lang": "en-US",
   "description": "Cross-platform Chatbot Framework Made With Love",
   "themeConfig": {
-    "outlineTitle": "ON THIS PAGE",
-    "lastUpdatedText": "Last updated",
-    "editLink": {
-      "text": "Edit this page"
-    },
-    "docFooter": {
-      "prev": "Previous",
-      "next": "Next"
-    },
-    "docsearch": {
-      "placeholder": "Search the documentation",
-      "translations": {
-        "button": {
-          "buttonText": "Search",
-          "buttonAriaLabel": "Search"
-        },
-        "modal": {
-          "searchBox": {
-            "resetButtonTitle": "Clear the query",
-            "resetButtonAriaLabel": "Clear the query",
-            "cancelButtonText": "Cancel",
-            "cancelButtonAriaLabel": "Cancel"
-          },
-          "startScreen": {
-            "recentSearchesTitle": "Recent",
-            "noRecentSearchesText": "No recent searches",
-            "saveRecentSearchButtonTitle": "Save this search",
-            "removeRecentSearchButtonTitle": "Remove this search from history",
-            "favoriteSearchesTitle": "Favorite",
-            "removeFavoriteSearchButtonTitle": "Remove from favorites"
-          },
-          "errorScreen": {
-            "titleText": "Unable to fetch results",
-            "helpText": "You might want to check your network connection."
-          },
-          "footer": {
-            "selectText": "to select",
-            "navigateText": "to navigate",
-            "closeText": "to close",
-            "searchByText": "search by"
-          },
-          "noResultsScreen": {
-            "noResultsText": "No results for",
-            "suggestedQueryText": "Try searching for",
-            "reportMissingResultsText": "Believe this query should return results?",
-            "reportMissingResultsLinkText": "Let us know."
-          }
-        }
-      }
-    },
-    "darkModeSwitchLabel": "Appearance",
-    "sidebarMenuLabel": "Menu",
-    "returnToTopLabel": "Return to top",
-    "langMenuLabel": "Change language",
     "nav": [
       {
         "text": "Manual",

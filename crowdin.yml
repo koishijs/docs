@@ -4,5 +4,7 @@ pull_request_labels:
 files:
   - source: /zh-CN/**/*.md
     translation: /%locale%/**/%file_name%.md
+    ignore:
+      - /zh-CN/contribute/docs.md
   - source: /.vitepress/config/zh-CN.json
     translation: /.vitepress/config/%locale%.json
