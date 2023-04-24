@@ -30,10 +30,10 @@ choices:
         text: A standalone project
         link: /en-US/manual/starter/boilerplate.html
       - 
-        text: A dependency for other Node projects
+        text: A dependency for other projects
         link: /en-US/manual/starter/direct.html
 ---
 
-# Choose Installation Method
+# Installation
 
 Koishi offers multiple installation methods, you can choose one depending on your own demand:

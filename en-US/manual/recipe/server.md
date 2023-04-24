@@ -1,15 +1,15 @@
 # Deployment
 
 ::: warning
-It is vulnerable when you expose your Koishi on the Internet. 你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
+It is vulnerable when you expose your Koishi on the Internet. You might need to limit the accessibility with [User Authorization](../usage/platform.md#控制台登录) or something else.
 :::
 
-Koishi apps can only be accessed from localhost by default. 而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
+Koishi apps can only be accessed from localhost by default. You might need to access the Koishi Console or services provided by other plugins on the Internet.
 
 - Allow more people to access your Koishi console
-- 使用作为 Webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
+- Use plugins as servers for webhooks (for example [github](https://github.koishi.chat))
 
-本节教程将指导你完成 Koishi 应用的公网部署。
+This section would guide you in completing the deployment for a Koishi application.
 
 ## Direct Exposure
 
