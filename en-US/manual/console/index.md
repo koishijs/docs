@@ -8,12 +8,12 @@ prev:
 
 One of the key feature in Koishi is Console.Console is a graphical interface which is very friendly for users. And there are majority functions in the console.
 
-- Monitor the status and view the statistics.
-- Configure Plugins
-- Install, Uninstall and Update Plugins
-- Manage Commands, Database and Output Text
-- Simulate Chat
-- Display Logs
+- Monitor the status and view the statistics
+- Configure plugins
+- Install, uninstall and update plugins
+- Manage commands, database and localization
+- Simulate chat
+- Display logs
 
 ## Console User Interface
 
@@ -25,4 +25,4 @@ The console UI contains two parts: the left side is a sidebar, which is used to 
 
 ![home](/manual/console/home.dark.webp) {.dark-only}
 
-We will introduce the functions and usages for other interfaces in the next few pages
+We will further introduce the usage of each page in the following sections.
