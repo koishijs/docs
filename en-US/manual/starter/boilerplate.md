@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Choose Installation Method
+  text: Install Koishi Launcher
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
@@ -10,7 +10,7 @@ next:
 # Create Template Project
 
 ::: tip
-If you want to learn about other installation method, please visit [Choose Installation Method](./index.md).
+If you want to learn about other installation method, please visit [Install Koishi Launcher](./index.md).
 :::
 
 In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
