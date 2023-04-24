@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Install Koishi Launcher
+  text: Installation
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
@@ -10,7 +10,7 @@ next:
 # Install for Android
 
 ::: tip
-If you want to learn about other installation method, please visit [Install Koishi Launcher](./index.md).
+If you want to learn about other installation method, please visit [Installation](./index.md).
 :::
 
 ::: danger
