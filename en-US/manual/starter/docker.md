@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Install Koishi Launcher
+  text: Installation
   link: /en-US/manual/starter/
 next:
   text: About Koishi Console
