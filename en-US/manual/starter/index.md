@@ -34,6 +34,6 @@ choices:
         link: /en-US/manual/starter/direct.html
 ---
 
-# Install Koishi Launcher
+# Installation
 
 Koishi offers multiple installation methods, you can choose one depending on your own demand:
