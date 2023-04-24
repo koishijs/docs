@@ -2,9 +2,9 @@
 
 Koishi uses adapter plugins to support various chat platforms. The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the "Adapter" tag in Plugin Configuration page. If you didn't find one adapter you need, you could also search for and add other adapters from Plugin Market.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件). User data is shared by multiple bots that connected to the same chat platform. So you could easily switch between bot accounts to achieve a load balance.
+A Koishi process is able to connect to multiple accounts of different chat platforms. One plugin configurations are bound with one bot account, you could add any new plugin configurations according to [Add More Plugins](./market.md#添加更多插件). User data is shared by multiple bots that connected to the same chat platform. So you could easily switch between bot accounts to achieve a load balance.
 
-对于不同的平台，你需要做好相应的准备工作。The following is a guide to connect your bot in various platforms.
+There are different configuration work that you need to do with different platforms. The following is a guide to connect your bot in various platforms.
 
 ## Discord
 
@@ -18,13 +18,13 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
 ## Lark / Feishu
 
-1. 在开发者后台 ([飞书](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) 点击「新建企业自建应用」，点击应用名称进入应用详情页
-2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段
-3. 点击事件订阅，获取 Encrypt Key 和 Verification Token 值，填写到插件配置对应字段
-4. 在事件订阅页面，确保添加了 `接收消息v2.0` (`im.message.receive_v1`) 事件
-5. 按实际情况配置插件或机器人全局的 `selfUrl` 值，然后启动插件
-6. 将第 5 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的「请求地址配置」中，并点击完成
-7. 若第 6 步的 URL 验证未通过，请检查你所配置的地址是否正确
+1. Go to the Developer Console ([Feishu](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) and click "Create Custom App", and then click the name of the Custom App that you just created to get into the application management page.
+2. Click "Credentials & Basic Info" on the left side, copy the value of App ID and App Secret, then paste them into the plugin configuration items accordingly.
+3. Click "Event Subscription", copy the value of Encrypt Key and Verification Token, then paste them into the plugin configuration items accordingly.
+4. In the event subscription page, enable the `Receive message v2.0` (`im.message.receive_v1`) event.
+5. Configure the `selfUrl` of the plugin itself or of the global with your actual environment requirement, then enable the plugin.
+6. Take the value in step 5 appended with the value of `path`, paste into the "Request URL" in the "Event Subscription" page in the Lark Developer Console.
+7. If you didn't pass the URL challenge that Lark requires, please make sure you have configured the URL correctly.
 
 See also: [@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
