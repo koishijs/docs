@@ -1,6 +1,6 @@
 ---
 prev:
-  text: Install Koishi Launcher
+  text: Installation
   link: /en-US/manual/starter/
 ---
 
@@ -15,11 +15,11 @@ One of the key feature in Koishi is Console.Console is a graphical interface whi
 - Simulate Chat
 - Display Logs
 
-## 控制台界面
+## Console User Interface
 
 The console will be opened automatically after you have successfully installed a template project or the launcher.
 
-控制台的界面主要分为两部分，左侧是活动栏，用来切换右边的界面，右边默认打开的是仪表盘页面。在宽屏设备的下方还有一个状态栏，主要用来显示机器人的运行状态。
+The console UI contains two parts: the left side is a sidebar, which is used to toggle the interfaces on the right side; the right side is a dashboard which is opened by default. There is also a status bar which is used to show the running status of bots at the bottom on a wide screen.
 
 ![home](/manual/console/home.light.webp) {.light-only}
 
