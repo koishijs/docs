@@ -25,4 +25,4 @@ The console UI contains two parts: the left side is a sidebar, which is used to 
 
 ![home](/manual/console/home.dark.webp) {.dark-only}
 
-We will further introduce the usage of each page in the following sections.
+在接下来的几节中会逐一介绍各界面的功能和使用。
