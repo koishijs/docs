@@ -30,7 +30,7 @@ choices:
         text: A standalone project
         link: /en-US/manual/starter/boilerplate.html
       - 
-        text: A dependency for other projects
+        text: 其他项目的依赖
         link: /en-US/manual/starter/direct.html
 ---
 
