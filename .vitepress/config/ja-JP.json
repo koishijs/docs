@@ -483,11 +483,11 @@
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "ランダム生成 (Random)",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "其他工具 (Misc)",
+              "text": "雑用ツール (Misc)",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -569,35 +569,35 @@
           "text": "一般機能",
           "items": [
             {
-              "text": "数据管理 (Admin)",
+              "text": "データ管理 (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "账号绑定 (Bind)",
+              "text": "アカウント連携 (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "发送广播 (Broadcast)",
+              "text": "ブロードキャスト (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "设置昵称 (Callme)",
+              "text": "ニックネーム設定 (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "发送消息 (Echo)",
+              "text": "メッセージ送信 (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "查看帮助 (Help)",
+              "text": "ヘルプ表示 (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "会话信息 (Inspect)",
+              "text": "セッション点検 (Inspect)",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "速率限制 (Rate Limit)",
+              "text": "レイト制限 (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
@@ -606,51 +606,51 @@
           "text": "コンソール関連",
           "items": [
             {
-              "text": "控制台 (Console)",
+              "text": "コンソール支援 (Console)",
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据统计 (Analytics)",
+              "text": "データ統計 (Analytics)",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "指令管理 (Commands)",
+              "text": "コマンド管理 (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
+              "text": "データベース管理 (Dataview)",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "ファイル管理 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "プラグイン可視 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "ローカライズ翻訳 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "ログ出力 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "用户登录 (Login)",
+              "text": "ユーザー認証 (Login)",
               "link": "/plugins/console/login.md"
             },
             {
-              "text": "插件管理 (Market)",
+              "text": "プラグイン管理 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "チャット擬似 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "ステータス表示 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
@@ -659,11 +659,11 @@
           "text": "開発者ツール",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "モジュールホット置換 (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "テスト機能 (Mock)",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -714,7 +714,7 @@
           "text": "更新と移行",
           "items": [
             {
-              "text": "发展史",
+              "text": "発展史",
               "link": "/about/history.md"
             },
             {
