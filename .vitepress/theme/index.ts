@@ -1,29 +1,59 @@
 import { defineTheme } from '@koishijs/vitepress/client'
-import { defineComponent } from 'vue'
-import KMarkdown from 'marked-vue'
-import home from './layouts/home/index.vue'
-import market from './layouts/market.vue'
-import starter from './layouts/starter.vue'
+import { defineAsyncComponent } from 'vue'
+import Markdown from 'marked-vue'
+import Schema from 'schemastery'
+import Form from 'schemastery-vue'
 import Layout from './layout.vue'
+import {
+  ElButton,
+  ElCheckbox,
+  ElColorPicker,
+  ElDatePicker,
+  ElDropdown,
+  ElDropdownItem,
+  ElDropdownMenu,
+  ElInput,
+  ElInputNumber,
+  ElRadio,
+  ElScrollbar,
+  ElSelect,
+  ElSlider,
+  ElSwitch,
+  ElTimePicker,
+  ElTooltip,
+} from 'element-plus'
+
+import 'element-plus/dist/index.css'
 import './index.scss'
+
+globalThis.Schema = Schema
 
 export default defineTheme({
   layouts: {
-    home,
-    market,
-    starter,
+    home: defineAsyncComponent(() => import('./layouts/home/index.vue')),
+    market: defineAsyncComponent(() => import('./layouts/market.vue')),
+    starter: defineAsyncComponent(() => import('./layouts/starter.vue')),
+    schema: defineAsyncComponent(() => import('./layouts/schema/index.vue')),
   },
   Layout,
   enhanceApp({ app }) {
-    app.component('k-markdown', KMarkdown)
-    app.component('el-tooltip', defineComponent({
-      props: {
-        content: String,
-        placement: String,
-      },
-      setup(props, { slots }) {
-        return () => slots.default?.()
-      },
-    }))
+    app.use(Form)
+    app.use(ElButton)
+    app.use(ElCheckbox)
+    app.use(ElColorPicker)
+    app.use(ElDatePicker)
+    app.use(ElDropdown)
+    app.use(ElDropdownItem)
+    app.use(ElDropdownMenu)
+    app.use(ElInput)
+    app.use(ElInputNumber)
+    app.use(ElRadio)
+    app.use(ElScrollbar)
+    app.use(ElSelect)
+    app.use(ElSlider)
+    app.use(ElSwitch)
+    app.use(ElTimePicker)
+    app.use(ElTooltip)
+    app.component('k-markdown', Markdown)
   },
 })
