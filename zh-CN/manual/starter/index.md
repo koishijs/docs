@@ -24,7 +24,7 @@ choices:
     children:
       - text: 一个独立的项目
         link: /zh-CN/manual/starter/boilerplate.html
-      - text: 其他 Node 项目的依赖
+      - text: 其他项目的依赖
         link: /zh-CN/manual/starter/direct.html
 ---
 
