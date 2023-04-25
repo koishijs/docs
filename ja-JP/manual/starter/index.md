@@ -30,7 +30,7 @@ choices:
         text: 一个独立的项目
         link: /ja-JP/manual/starter/boilerplate.html
       - 
-        text: 其他 Node 项目的依赖
+        text: 其他项目的依赖
         link: /ja-JP/manual/starter/direct.html
 ---
 
