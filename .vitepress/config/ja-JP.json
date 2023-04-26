@@ -626,11 +626,11 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "プラグイン可視 (Insight)",
+              "text": "プラグイン関係可視化 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "ローカライズ翻訳 (Locales)",
+              "text": "メッセージ地域化 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
@@ -646,7 +646,7 @@
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "チャット擬似 (Sandbox)",
+              "text": "サンドボックス環境 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
