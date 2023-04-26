@@ -597,7 +597,7 @@
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "レイト制限 (Rate Limit)",
+              "text": "レート制限 (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
@@ -626,7 +626,7 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "プラグイン関係可視化 (Insight)",
+              "text": "プラグイン依存可視化 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
