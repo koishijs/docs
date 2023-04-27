@@ -1,5 +1,4 @@
 ---
-class: immersive
 layout: schema
 code: |
   Schema.object({

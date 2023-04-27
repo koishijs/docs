@@ -80,7 +80,7 @@ const input = computed(() => {
 
   > .left-container {
     box-sizing: border-box;
-    border-right: 1px solid var(--vp-c-divider);
+    // border-right: 1px solid var(--vp-c-divider);
     display: flex;
     flex-direction: column;
     max-width: 50%;

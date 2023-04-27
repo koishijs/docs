@@ -33,12 +33,29 @@ html.dark {
   }
 }
 
-.Layout.immersive {
+.Layout.schema {
   .VPContent {
     padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: 960px) {
+      padding-left: var(--vp-sidebar-width);
+    }
   }
 
-  .VPNavBar.has-sidebar .container .content {
+  .VPNavBar.has-sidebar {
     display: none;
+  }
+
+  .VPSidebar {
+    padding-left: 32px;
+    width: var(--vp-sidebar-width);
+  }
+
+  .vp-sidebar-view {
+    @media (min-width: 960px) {
+      padding-top: 0;
+    }
   }
 }

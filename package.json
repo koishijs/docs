@@ -22,7 +22,7 @@
     "element-plus": "2.3.4",
     "koishi": "^4.12.6",
     "marked-vue": "^1.2.2",
-    "schemastery-form": "^4.0.0-alpha.0",
+    "schemastery-vue": "^4.0.0-alpha.0",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.73"
   }
