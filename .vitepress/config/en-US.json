@@ -1,6 +1,11 @@
 {
   "description": "Cross-platform Chatbot Framework Made With Love",
   "themeConfig": {
+    "editLink": {
+      "text": "在 GitHub 编辑此页面",
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
+    },
+    "navText": "导航",
     "nav": [
       {
         "text": "Manual",
@@ -684,6 +689,99 @@
             {
               "text": "Official Plugins",
               "link": "/plugins/"
+            }
+          ]
+        }
+      ],
+      "/schema/": [
+        {
+          "text": "元信息",
+          "items": [
+            {
+              "text": ".description()",
+              "link": "/schema/meta/description.md"
+            },
+            {
+              "text": ".required()",
+              "link": "/schema/meta/required.md"
+            },
+            {
+              "text": ".default()",
+              "link": "/schema/meta/default.md"
+            },
+            {
+              "text": ".role()",
+              "link": "/schema/meta/role.md"
+            },
+            {
+              "text": ".hidden()",
+              "link": "/schema/meta/hidden.md"
+            }
+          ]
+        },
+        {
+          "text": "基础类型",
+          "items": [
+            {
+              "text": "Number",
+              "link": "/schema/basic/number.md"
+            },
+            {
+              "text": "String",
+              "link": "/schema/basic/string.md"
+            },
+            {
+              "text": "Boolean",
+              "link": "/schema/basic/boolean.md"
+            },
+            {
+              "text": "Bitset",
+              "link": "/schema/basic/bitset.md"
+            },
+            {
+              "text": "Array",
+              "link": "/schema/basic/array.md"
+            },
+            {
+              "text": "Dict",
+              "link": "/schema/basic/dict.md"
+            },
+            {
+              "text": "Tuple",
+              "link": "/schema/basic/tuple.md"
+            },
+            {
+              "text": "Object",
+              "link": "/schema/basic/object.md"
+            }
+          ]
+        },
+        {
+          "text": "高级类型",
+          "items": [
+            {
+              "text": "Intersect",
+              "link": "/schema/advanced/intersect.md"
+            },
+            {
+              "text": "Union (Select)",
+              "link": "/schema/advanced/union-select.md"
+            },
+            {
+              "text": "Union (Arbitrary)",
+              "link": "/schema/advanced/union-arbitrary.md"
+            },
+            {
+              "text": "Union (Tagged 1)",
+              "link": "/schema/advanced/union-tagged-1.md"
+            },
+            {
+              "text": "Union (Tagged 2)",
+              "link": "/schema/advanced/union-tagged-2.md"
+            },
+            {
+              "text": "Transform",
+              "link": "/schema/advanced/transform.md"
             }
           ]
         }
