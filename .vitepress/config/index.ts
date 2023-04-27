@@ -64,10 +64,6 @@ export default async () => defineConfig({
     socialLinks: {
       github: 'https://github.com/koishijs/koishi',
     },
-
-    editLink: {
-      pattern: 'https://github.com/koishijs/docs/edit/main/:path',
-    },
   },
 
   vite: {

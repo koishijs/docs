@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-starter">
+  <div class="starter-container">
     <div class="vp-doc">
       <content />
     </div>
@@ -48,7 +48,7 @@ const { frontmatter } = useData()
 
 <style lang="scss" scoped>
 
-.layout-starter {
+.starter-container {
   height: 100vh;
   box-sizing: border-box;
   display: flex;

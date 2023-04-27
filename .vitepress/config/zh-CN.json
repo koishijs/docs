@@ -1,6 +1,10 @@
 {
   "description": "创建跨平台、可扩展、高性能的机器人",
   "themeConfig": {
+    "editLink": {
+      "text": "在 GitHub 编辑此页面",
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
+    },
     "nav": [
       {
         "text": "入门",

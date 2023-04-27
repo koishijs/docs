@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-schema">
+  <div class="schema-container">
     <div class="left-container">
       <section class="theme-default-content">
         <el-scrollbar>
@@ -68,7 +68,7 @@ const input = computed(() => {
 
 <style lang="scss">
 
-.layout-schema {
+.schema-container {
   position: relative;
   height: 100vh;
   box-sizing: border-box;
