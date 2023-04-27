@@ -3,7 +3,7 @@
     <template v-if="frontmatter.layout === 'schema'" #sidebar-nav-before>
       <VPNavBarTitle></VPNavBarTitle>
       <div class="group">
-        <VPSidebarItem :item="{ text: '导航', items: theme.nav.filter(item => item.link) }" :depth="0"></VPSidebarItem>
+        <VPSidebarItem :item="navItem" :depth="0"></VPSidebarItem>
       </div>
     </template>
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
@@ -23,6 +23,11 @@ import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
 import { home, words, all } from './utils'
 
 const { frontmatter, theme } = useData()
+
+const navItem = computed(() => ({
+  text: theme.value.navText || '导航',
+  items: theme.value.nav.filter(item => item.link),
+}))
 
 const extra = computed(() => {
   if (frontmatter.value.layout === 'home') {
