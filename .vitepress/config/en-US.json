@@ -2,10 +2,10 @@
   "description": "Cross-platform Chatbot Framework Made With Love",
   "themeConfig": {
     "editLink": {
-      "text": "在 GitHub 编辑此页面",
-      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
+      "text": "Translate this page on Crowdin",
+      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-en"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
         "text": "Manual",
@@ -695,7 +695,7 @@
       ],
       "/schema/": [
         {
-          "text": "元信息",
+          "text": "Meta Information",
           "items": [
             {
               "text": ".description()",
@@ -757,7 +757,7 @@
           ]
         },
         {
-          "text": "高级类型",
+          "text": "Advanced Types",
           "items": [
             {
               "text": "Intersect",
