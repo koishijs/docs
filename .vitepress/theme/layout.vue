@@ -1,5 +1,11 @@
 <template>
   <Layout :class="extra">
+    <template v-if="frontmatter.layout === 'schema'" #sidebar-nav-before>
+      <VPNavBarTitle></VPNavBarTitle>
+      <div class="group">
+        <VPSidebarItem :item="navItem" :depth="0"></VPSidebarItem>
+      </div>
+    </template>
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
       <market-filter v-model="words" :data="all"></market-filter>
     </template>
@@ -12,9 +18,16 @@ import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { MarketFilter } from '@koishijs/market'
+import VPNavBarTitle from '@theme-default/components/VPNavBarTitle.vue'
+import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
 import { home, words, all } from './utils'
 
-const { frontmatter } = useData()
+const { frontmatter, theme } = useData()
+
+const navItem = computed(() => ({
+  text: theme.value.navText || '导航',
+  items: theme.value.nav.filter(item => item.link),
+}))
 
 const extra = computed(() => {
   if (frontmatter.value.layout === 'home') {

@@ -1,3 +1,5 @@
+@import './element.scss';
+
 html {
   --c-border: transparent;
   --k-color-success: #67c23a;
@@ -16,24 +18,6 @@ html.dark {
   --k-color-warning: #f9af1b;
 }
 
-.layout-home {
-  .VPNav {
-    background-color: transparent !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-  }
-
-  .VPNavBar {
-    border-bottom: none !important;
-  }
-
-  &.parity-odd {
-    .VPNavScreen {
-      background-color: var(--vp-c-bg-alt);
-    }
-  }
-}
-
 .markdown {
   a:hover {
     text-decoration: underline;
@@ -46,5 +30,32 @@ html.dark {
     border-radius: 3px;
     overflow-wrap: break-word;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.Layout.layout-schema {
+  .VPContent {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: 960px) {
+      padding-left: var(--vp-sidebar-width);
+    }
+  }
+
+  .VPNavBar.has-sidebar {
+    display: none;
+  }
+
+  .VPSidebar {
+    padding-left: 32px;
+    width: var(--vp-sidebar-width);
+  }
+
+  .vp-sidebar-view {
+    @media (min-width: 960px) {
+      padding-top: 0;
+    }
   }
 }

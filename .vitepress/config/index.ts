@@ -34,6 +34,8 @@ function transformLocale(prefix: string, source: any) {
   return result
 }
 
+const isDev = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview'
+
 export default async () => defineConfig({
   title: 'Koishi',
   description: '创建跨平台、可扩展、高性能的机器人',
@@ -47,7 +49,7 @@ export default async () => defineConfig({
   locales: {
     'en-US': transformLocale('/en-US', enUS),
     'zh-CN': transformLocale('/zh-CN', zhCN),
-    ...(process.env.VERCEL_ENV === 'preview' ? {
+    ...(isDev ? {
       'de-DE': transformLocale('/de-DE', deDE),
       'fr-FR': transformLocale('/fr-FR', frFR),
       'ja-JP': transformLocale('/ja-JP', jaJP),
@@ -61,10 +63,6 @@ export default async () => defineConfig({
 
     socialLinks: {
       github: 'https://github.com/koishijs/koishi',
-    },
-
-    editLink: {
-      pattern: 'https://github.com/koishijs/docs/edit/main/:path',
     },
   },
 
