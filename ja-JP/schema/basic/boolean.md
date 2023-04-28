@@ -6,9 +6,9 @@ code: |
   }).description('配置项')
 ---
 
-# Boolean
+# 布尔值 (Boolean)
 
-以开关的形式表达 boolean 类型的值。
+`Schema.boolean()` 以开关的形式表达一个布尔值。
 
 ```ts
 export default Schema.object({
