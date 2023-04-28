@@ -59,6 +59,10 @@ const schema = computed(() => {
 const initial = ref(null)
 const config = ref(null)
 
+watch(schema, () => {
+  config.value = null
+})
+
 const output = computed(() => {
   try {
     return schema.value(config.value)
@@ -118,8 +122,9 @@ const input = computed(() => {
     section:not(.theme-default-content) {
       code {
         white-space: pre-wrap;
-        color: var(--shiki-color-text);
-        background-color: var(--shiki-color-background);
+        color: var(--shiki-token-text);
+        font-size: var(--vp-code-font-size);
+        line-height: var(--vp-code-line-height);
       }
     }
   }
