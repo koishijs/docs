@@ -1,23 +1,23 @@
 :root {
   // override element
-  --el-text-color-regular: var(--fg1);
-  --el-text-color-primary: var(--fg3);
-  --el-input-text-color: var(--fg1);
-  --el-border-color: var(--vp-c-divider);
-  --el-border-color-hover: var(--c-brand-dark);
-  --el-border-color-base: var(--vp-c-divider);
-  --el-border-color-light: var(--c-divider-light);
-  --el-border-color-lighter: var(--c-divider-light);
-  --el-border-color-extra-light: var(--c-divider-light);
-  --el-color-primary: var(--brand);
-  --el-color-success: var(--green);
-  --el-color-warning: var(--yellow);
-  --el-color-error: var(--red);
-  --el-color-white: var(--white);
-  --el-color-black: var(--fg1);
-  --el-bg-color: var(--bg0);
-  --el-fill-color-light: var(--c-bg-soft);
-  --el-bg-color-overlay: var(--c-bg);
+  --el-text-color-regular: var(--vp-c-text-1);
+  --el-text-color-primary: var(--vp-c-text-3);
+  --el-input-text-color: var(--vp-c-text-1);
+  --el-border-color: var(--vp-c-border);
+  --el-border-color-hover: var(--vp-c-brand);
+  --el-border-color-base: var(--vp-c-border);
+  --el-border-color-light: var(--vp-c-divider);
+  --el-border-color-lighter: var(--vp-c-divider);
+  --el-border-color-extra-light: var(--vp-c-divider);
+  --el-color-primary: var(--vp-c-brand);
+  --el-color-success: var(--k-color-success);
+  --el-color-warning: var(--k-color-warning);
+  --el-color-error: var(--k-color-danger);
+  --el-color-white: var(--vp-c-bg);
+  --el-color-black: var(--vp-c-fg);
+  --el-bg-color: var(--vp-c-bg);
+  --el-fill-color-light: var(--vp-c-bg-soft);
+  --el-bg-color-overlay: var(--vp-c-bg);
   --el-fill-color-blank: transparent;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .el-radio__label {
-  --el-color-primary: var(--active);
+  --el-color-primary: var(--vp-c-brand);
   padding-top: 1px;
 }
 

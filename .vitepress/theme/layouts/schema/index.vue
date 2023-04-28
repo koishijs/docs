@@ -47,7 +47,14 @@ import Json from './json.vue'
 
 const { frontmatter } = useData()
 
-const schema = computed(() => eval(frontmatter.value.code))
+const schema = computed(() => {
+  try {
+    return eval(frontmatter.value.code)
+  } catch (e) {
+    console.error(e)
+    return null
+  }
+})
 
 const initial = ref(null)
 const config = ref(null)
@@ -136,6 +143,14 @@ const input = computed(() => {
 
     form {
       padding: 1rem 2rem;
+    }
+
+    :not(pre) > code {
+      border-radius: 4px;
+      padding: 3px 6px;
+      color: var(--vp-c-text-code);
+      background-color: var(--vp-c-mute);
+      transition: color 0.5s, background-color 0.5s;
     }
   }
 
