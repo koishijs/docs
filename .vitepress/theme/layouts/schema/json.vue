@@ -10,17 +10,19 @@
     <span style="color: var(--shiki-token-punctuation)">)</span>
   </template>
   <template v-else-if="(data instanceof Array)">
-    <span style="color: var(--shiki-token-punctuation)">[ </span>
+    <span style="color: var(--shiki-token-punctuation)">[</span>
     <template v-for="(value, index) in data" :key="index">
-      <span style="color: var(--shiki-token-punctuation)" v-if="index">, </span>
+      <span style="color: var(--shiki-token-punctuation)" v-if="index">,</span>
+      <span>&nbsp;</span>
       <json :data="value"></json>
     </template>
     <span style="color: var(--shiki-token-punctuation)"> ]</span>
   </template>
   <template v-else>
-    <span style="color: var(--shiki-token-punctuation)">{ </span>
+    <span style="color: var(--shiki-token-punctuation)">{</span>
     <template v-for="([key, value], index) in Object.entries(data)" :key="index">
-      <span style="color: var(--shiki-token-punctuation)" v-if="index">, </span>
+      <span style="color: var(--shiki-token-punctuation)" v-if="index">,</span>
+      <span>&nbsp;</span>
       <span style="color: var(--shiki-token-parameter)">"{{ key }}"</span>:
       <json :data="value"></json>
     </template>

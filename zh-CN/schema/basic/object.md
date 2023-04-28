@@ -12,7 +12,9 @@ code: |
 
 # Object
 
-Object 类型描述了一个具有给定属性的对象。默认情况下所有属性都是可选的，可以通过 `.required()` 来声明一个必需属性。
+`Schema.object()` 描述了一个具有给定属性的对象。
+
+默认情况下所有属性都是可选的，可以通过 `.required()` 来声明一个必需属性。
 
 ```ts
 export default Schema.object({
@@ -21,5 +23,5 @@ export default Schema.object({
   baz: Schema.object({
     qux: Schema.boolean(),
   }),
-}).description('配置项')
+})
 ```

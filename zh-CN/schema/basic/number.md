@@ -9,7 +9,7 @@ code: |
 
 # 数值 (Number)
 
-`Schema.number()` 用于表达一个数值，支持输入框和滑块。
+`Schema.number()` 描述了一个数值，支持输入框和滑块。
 
 ```ts
 export default Schema.object({
