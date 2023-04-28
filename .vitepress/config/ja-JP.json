@@ -760,23 +760,23 @@
           "text": "高度な型",
           "items": [
             {
-              "text": "共通集合 (Intersect)",
+              "text": "共通部分 (Intersect)",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "合併集合 - 選択 (Union - Select)",
+              "text": "和集合 - 選択 (Union - Select)",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "合併集合 - 任意 (Union - Arbitrary)",
+              "text": "和集合 - 任意 (Union - Arbitrary)",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union (Tagged 1)",
+              "text": "和集合 - 構造依存 1 (Union - Tagged 1)",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union (Tagged 2)",
+              "text": "和集合 - 構造依存 2 (Union - Tagged 2)",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
