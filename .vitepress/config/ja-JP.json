@@ -2,7 +2,7 @@
   "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
   "themeConfig": {
     "editLink": {
-      "text": "このページを編集する",
+      "text": "Crowdin でこのページの翻訳を修正する",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
     },
     "navText": "ナビゲーション",
@@ -764,11 +764,11 @@
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union (Select)",
+              "text": "合併集合 - 選択 (Union - Select)",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union (Arbitrary)",
+              "text": "合併集合 - 任意 (Union - Arbitrary)",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
