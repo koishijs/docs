@@ -2,7 +2,7 @@
   "description": "创建跨平台、可扩展、高性能的机器人",
   "themeConfig": {
     "editLink": {
-      "text": "在 GitHub 编辑此页面",
+      "text": "Übersetzen dieser Seite auf Crowdin",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-de"
     },
     "navText": "导航",
