@@ -2,10 +2,10 @@
   "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
   "themeConfig": {
     "editLink": {
-      "text": "在 GitHub 编辑此页面",
+      "text": "このページを編集する",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
     },
-    "navText": "导航",
+    "navText": "ナビゲーション",
     "nav": [
       {
         "text": "はじめに",
@@ -695,7 +695,7 @@
       ],
       "/schema/": [
         {
-          "text": "元信息",
+          "text": "メタ情報",
           "items": [
             {
               "text": ".description()",
@@ -720,47 +720,47 @@
           ]
         },
         {
-          "text": "基础类型",
+          "text": "基本の型",
           "items": [
             {
-              "text": "Number",
+              "text": "数値 (Number)",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "String",
+              "text": "文字列 (String)",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "Boolean",
+              "text": "論理型 (Boolean)",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "Bitset",
+              "text": "ビットセット (Bitset)",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "Array",
+              "text": "配列 (Array)",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "Dict",
+              "text": "辞書型 (Dict)",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "Tuple",
+              "text": "タプル (Tuple)",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "Object",
+              "text": "オブジェクト (Object)",
               "link": "/schema/basic/object.md"
             }
           ]
         },
         {
-          "text": "高级类型",
+          "text": "高度な型",
           "items": [
             {
-              "text": "Intersect",
+              "text": "共通集合 (Intersect)",
               "link": "/schema/advanced/intersect.md"
             },
             {
@@ -780,7 +780,7 @@
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform",
+              "text": "変換 (Transform)",
               "link": "/schema/advanced/transform.md"
             }
           ]
