@@ -16,7 +16,7 @@ code: |
   }).description('配置项')
 ---
 
-# Union (Arbitrary)
+# 合併集合 - 任意 (Union - Arbitrary)
 
 Union 同样支持多种不同类型的联合。你需要给每个子类型提供一个 description，它们会作为表单中呈现的选项。
 
