@@ -31,23 +31,27 @@ Initialize a directly as your bot, install Koishi and common plugins, here we wo
 
 ::: tabs code
 ```npm
-# Initialize project
+# 初始化项目
 npm init
 
-# Install Koishi and plugins
-npm i koishi @koishijs/plugin-console @koishijs/plugin-sandbox @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+npm i koishi @koishijs/plugin-console \
+             @koishijs/plugin-sandbox \
+             @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this if you don't use TypeScript)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
 ```yarn
-# Initialize project
+# 初始化项目
 yarn init
 
-# Install Koishi and plugins
-yarn add koishi @koishijs/plugin-console @koishijs/plugin-sandbox @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+yarn add koishi @koishijs/plugin-console \
+                @koishijs/plugin-sandbox \
+                @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this if you don't use TypeScript)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
 :::
