@@ -1,6 +1,11 @@
 {
   "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
   "themeConfig": {
+    "editLink": {
+      "text": "Crowdin でこのページの翻訳を修正する",
+      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
+    },
+    "navText": "ナビゲーション",
     "nav": [
       {
         "text": "はじめに",
@@ -593,11 +598,11 @@
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "セッション点検 (Inspect)",
+              "text": "セッション情報 (Inspect)",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "レイト制限 (Rate Limit)",
+              "text": "レート制限 (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
@@ -626,11 +631,11 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "プラグイン可視 (Insight)",
+              "text": "プラグイン依存可視化 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "ローカライズ翻訳 (Locales)",
+              "text": "メッセージ地域化 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
@@ -646,7 +651,7 @@
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "チャット擬似 (Sandbox)",
+              "text": "サンドボックス環境 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
@@ -688,6 +693,99 @@
           ]
         }
       ],
+      "/schema/": [
+        {
+          "text": "メタ情報",
+          "items": [
+            {
+              "text": ".description()",
+              "link": "/schema/meta/description.md"
+            },
+            {
+              "text": ".required()",
+              "link": "/schema/meta/required.md"
+            },
+            {
+              "text": ".default()",
+              "link": "/schema/meta/default.md"
+            },
+            {
+              "text": ".role()",
+              "link": "/schema/meta/role.md"
+            },
+            {
+              "text": ".hidden()",
+              "link": "/schema/meta/hidden.md"
+            }
+          ]
+        },
+        {
+          "text": "基本の型",
+          "items": [
+            {
+              "text": "数値 (Number)",
+              "link": "/schema/basic/number.md"
+            },
+            {
+              "text": "文字列 (String)",
+              "link": "/schema/basic/string.md"
+            },
+            {
+              "text": "論理型 (Boolean)",
+              "link": "/schema/basic/boolean.md"
+            },
+            {
+              "text": "ビットセット (Bitset)",
+              "link": "/schema/basic/bitset.md"
+            },
+            {
+              "text": "配列 (Array)",
+              "link": "/schema/basic/array.md"
+            },
+            {
+              "text": "辞書型 (Dict)",
+              "link": "/schema/basic/dict.md"
+            },
+            {
+              "text": "タプル (Tuple)",
+              "link": "/schema/basic/tuple.md"
+            },
+            {
+              "text": "オブジェクト (Object)",
+              "link": "/schema/basic/object.md"
+            }
+          ]
+        },
+        {
+          "text": "高度な型",
+          "items": [
+            {
+              "text": "共通集合 (Intersect)",
+              "link": "/schema/advanced/intersect.md"
+            },
+            {
+              "text": "合併集合 - 選択 (Union - Select)",
+              "link": "/schema/advanced/union-select.md"
+            },
+            {
+              "text": "合併集合 - 任意 (Union - Arbitrary)",
+              "link": "/schema/advanced/union-arbitrary.md"
+            },
+            {
+              "text": "Union (Tagged 1)",
+              "link": "/schema/advanced/union-tagged-1.md"
+            },
+            {
+              "text": "Union (Tagged 2)",
+              "link": "/schema/advanced/union-tagged-2.md"
+            },
+            {
+              "text": "変換 (Transform)",
+              "link": "/schema/advanced/transform.md"
+            }
+          ]
+        }
+      ],
       "/about/": [
         {
           "text": "Koishi 開発チームについて",
@@ -714,7 +812,7 @@
           "text": "更新と移行",
           "items": [
             {
-              "text": "発展史",
+              "text": "歴史",
               "link": "/about/history.md"
             },
             {
