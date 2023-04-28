@@ -698,60 +698,60 @@
           "text": "Meta Information",
           "items": [
             {
-              "text": "必需 (Required)",
+              "text": "Required",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认 (Default)",
+              "text": "Default",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "描述 (Description)",
+              "text": "Description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "外观 (Role)",
+              "text": "Role",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏 (Hidden)",
+              "text": "Hidden",
               "link": "/schema/meta/hidden.md"
             }
           ]
         },
         {
-          "text": "基础类型",
+          "text": "Base Types",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "Number",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字符串 (String)",
+              "text": "String",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "Boolean",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "位集 (Bitset)",
+              "text": "Bitset",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dictionary",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object",
               "link": "/schema/basic/object.md"
             }
           ]
