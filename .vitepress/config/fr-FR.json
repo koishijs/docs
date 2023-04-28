@@ -695,26 +695,26 @@
       ],
       "/schema/": [
         {
-          "text": "元信息",
+          "text": "通用概念",
           "items": [
             {
-              "text": "必需 (Required)",
+              "text": "必需与可选",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认 (Default)",
+              "text": "默认值",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "描述 (Description)",
+              "text": "标题与描述",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "外观 (Role)",
+              "text": "配置项外观",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏 (Hidden)",
+              "text": "隐藏配置项",
               "link": "/schema/meta/hidden.md"
             },
             {
