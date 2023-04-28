@@ -716,6 +716,10 @@
             {
               "text": "隐藏 (Hidden)",
               "link": "/schema/meta/hidden.md"
+            },
+            {
+              "text": "嵌套类型",
+              "link": "/schema/meta/nested.md"
             }
           ]
         },
@@ -739,20 +743,20 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "数组 (Array)",
-              "link": "/schema/basic/array.md"
-            },
-            {
-              "text": "字典 (Dict)",
-              "link": "/schema/basic/dict.md"
+              "text": "对象 (Object)",
+              "link": "/schema/basic/object.md"
             },
             {
               "text": "元组 (Tuple)",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "对象 (Object)",
-              "link": "/schema/basic/object.md"
+              "text": "字典 (Dict)",
+              "link": "/schema/basic/dict.md"
+            },
+            {
+              "text": "数组 (Array)",
+              "link": "/schema/basic/array.md"
             }
           ]
         },
