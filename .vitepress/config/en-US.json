@@ -695,26 +695,26 @@
       ],
       "/schema/": [
         {
-          "text": "Meta Information",
+          "text": "通用概念",
           "items": [
             {
-              "text": "Required",
+              "text": "必需与可选",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "Default",
+              "text": "默认值",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "Description",
+              "text": "标题与描述",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "Role",
+              "text": "配置项外观",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "Hidden",
+              "text": "隐藏配置项",
               "link": "/schema/meta/hidden.md"
             },
             {
