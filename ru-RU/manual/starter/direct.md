@@ -35,7 +35,9 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v14，推荐使用 LTS) 运
 npm init
 
 # 安装 Koishi 和相关插件
-npm i koishi @koishijs/plugin-console @koishijs/plugin-sandbox @koishijs/plugin-echo
+npm i koishi @koishijs/plugin-console \
+             @koishijs/plugin-sandbox \
+             @koishijs/plugin-echo
 
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
@@ -45,7 +47,9 @@ npm i typescript @types/node esbuild esbuild-register -D
 yarn init
 
 # 安装 Koishi 和相关插件
-yarn add koishi @koishijs/plugin-console @koishijs/plugin-sandbox @koishijs/plugin-echo
+yarn add koishi @koishijs/plugin-console \
+                @koishijs/plugin-sandbox \
+                @koishijs/plugin-echo
 
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
