@@ -764,28 +764,32 @@
           "text": "高级类型",
           "items": [
             {
-              "text": "Intersect",
+              "text": "Intersect：分组",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union (Select)",
+              "text": "Union：单选框",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union (Arbitrary)",
+              "text": "Union：联合类型",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union (Tagged 1)",
+              "text": "Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union (Tagged 2)",
+              "text": "Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform",
+              "text": "Transform：输入转换",
               "link": "/schema/advanced/transform.md"
+            },
+            {
+              "text": "Computed：条件求值",
+              "link": "/schema/advanced/computed.md"
             }
           ]
         }
