@@ -13,7 +13,7 @@ code: |
   ])
 ---
 
-# Intersect
+# Intersect：分组
 
 Intersect 类型可用于合并多个类型。一种最常见的用法是将配置项分为多组显示。
 

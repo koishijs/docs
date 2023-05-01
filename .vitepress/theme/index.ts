@@ -2,13 +2,14 @@ import { defineTheme } from '@koishijs/vitepress/client'
 import { defineAsyncComponent } from 'vue'
 import Markdown from 'marked-vue'
 import Schema from 'schemastery'
-import Form from 'schemastery-vue'
+import components from '@koishijs/components'
 import Layout from './layout.vue'
 import {
   ElButton,
   ElCheckbox,
   ElColorPicker,
   ElDatePicker,
+  ElDialog,
   ElDropdown,
   ElDropdownItem,
   ElDropdownMenu,
@@ -23,6 +24,7 @@ import {
   ElTooltip,
 } from 'element-plus'
 
+import '@koishijs/core'
 import 'element-plus/dist/index.css'
 import './index.scss'
 
@@ -37,11 +39,12 @@ export default defineTheme({
   },
   Layout,
   enhanceApp({ app }) {
-    app.use(Form)
+    app.use(components)
     app.use(ElButton)
     app.use(ElCheckbox)
     app.use(ElColorPicker)
     app.use(ElDatePicker)
+    app.use(ElDialog)
     app.use(ElDropdown)
     app.use(ElDropdownItem)
     app.use(ElDropdownMenu)

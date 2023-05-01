@@ -41,7 +41,6 @@
 <script setup lang="ts">
 
 import { computed, ref, watch } from 'vue'
-import { clone } from 'schemastery-vue'
 import { useData } from 'vitepress'
 import Json from './json.vue'
 
@@ -66,13 +65,17 @@ watch(schema, () => {
 const output = computed(() => {
   try {
     return schema.value(config.value)
-  } catch (e) {}
+  } catch (e) {
+    return e.message
+  }
 })
 
 const input = computed(() => {
   try {
     return JSON.parse(JSON.stringify(config.value))
-  } catch (e) {}
+  } catch (e) {
+    return e.message
+  }
 })
 
 </script>

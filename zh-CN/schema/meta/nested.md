@@ -5,11 +5,11 @@ code: |
     foo: Schema.object({
       bar: Schema.array(
         Schema.object({
-          baz: Schema.number().description('在这里填写数值。'),
+          baz: Schema.number().required().description('在右侧填写数值。'),
         }).description('这是数组的元素，它本身又是一个对象。'),
-      ).default([{}]).description('这是一个嵌套属性，类型为数组。'),
+      ).default([{ baz: 114514 }]).description('这是一个嵌套属性，类型为数组。'),
       qux: Schema.dict(
-        Schema.string().required().description('在这里填写字符串。'),
+        Schema.string().required().description('在右侧填写字符串。'),
       ).default({ welcome: 'Hello World' }).description('这是一个嵌套属性，类型为字典。'),
     }),
   }).description('配置项')
@@ -24,12 +24,14 @@ code: |
 ```ts
 Schema.object({
   foo: Schema.object({
-    bar: Schema.array(
-      Schema.object({
-        baz: Schema.number(),
-      }),
-    ),
-    qux: Schema.dict(String),
+    bar: Schema
+      .array(Schema.object({
+        baz: Schema.number().required(),
+      }))
+      .default([{ baz: 114514 }]),
+    qux: Schema
+      .dict(String)
+      .default({ welcome: 'Hello World' }),
   }),
 })
 ```
