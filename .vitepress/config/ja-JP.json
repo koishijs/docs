@@ -764,28 +764,32 @@
           "text": "高度な型",
           "items": [
             {
-              "text": "共通部分 (Intersect)",
+              "text": "Intersect：分组",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "和集合 - 選択 (Union - Select)",
+              "text": "Union：单选框",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "和集合 - 任意 (Union - Arbitrary)",
+              "text": "Union：联合类型",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "和集合 - 構造依存 1 (Union - Tagged 1)",
+              "text": "Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "和集合 - 構造依存 2 (Union - Tagged 2)",
+              "text": "Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "変換 (Transform)",
+              "text": "Transform：输入转换",
               "link": "/schema/advanced/transform.md"
+            },
+            {
+              "text": "Computed：条件求值",
+              "link": "/schema/advanced/computed.md"
             }
           ]
         }
