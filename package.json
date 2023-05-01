@@ -13,16 +13,16 @@
     "@vueuse/core": "9.13.0"
   },
   "devDependencies": {
-    "@koishijs/components": "^1.0.1",
-    "@koishijs/core": "^4.12.6",
+    "@koishijs/components": "^1.0.2",
+    "@koishijs/core": "^4.12.7",
     "@koishijs/market": "^1.2.4",
     "@koishijs/registry": "^4.6.0",
-    "@koishijs/vitepress": "^2.0.5",
+    "@koishijs/vitepress": "^2.0.7",
     "@types/node": "^18.16.0",
     "@types/spark-md5": "^3.0.2",
     "cross-env": "^7.0.3",
     "element-plus": "2.3.4",
-    "koishi": "^4.12.6",
+    "koishi": "^4.12.7",
     "marked-vue": "^1.2.3",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.73"

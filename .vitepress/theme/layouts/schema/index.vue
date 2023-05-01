@@ -29,11 +29,13 @@
     </div>
 
     <section class="right-container">
-      <el-scrollbar>
-        <form>
-          <k-schema :schema="schema" :initial="initial" v-model="config"></k-schema>
-        </form>
-      </el-scrollbar>
+      <client-only>
+        <el-scrollbar>
+          <form>
+            <k-schema :schema="schema" :initial="initial" v-model="config"></k-schema>
+          </form>
+        </el-scrollbar>
+      </client-only>
     </section>
   </div>
 </template>
