@@ -1,5 +1,28 @@
 {
   "description": "Cross-platform Chatbot Framework Made With Love",
+  "head": [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "/logo.png"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "manifest",
+        "href": "/zh-CN/manifest.json"
+      }
+    ],
+    [
+      "meta",
+      {
+        "name": "theme-color",
+        "content": "#5546a3"
+      }
+    ]
+  ],
   "themeConfig": {
     "editLink": {
       "text": "Translate this page on Crowdin",
