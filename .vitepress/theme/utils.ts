@@ -1,5 +1,4 @@
 import { MarketResult } from '@koishijs/registry'
-import { useMarket } from '@koishijs/market'
 import { ref, Ref } from 'vue'
 
 export namespace home {
@@ -20,6 +19,4 @@ market.refresh = async () => {
   market.value = await response.json()
 }
 
-const { words, packages, all, hasFilter } = useMarket(() => market.value?.objects)
-
-export { words, packages, all, hasFilter }
+export const words = ref<string[]>([])

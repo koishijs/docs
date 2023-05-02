@@ -15,6 +15,7 @@ import {
   ElDropdownMenu,
   ElInput,
   ElInputNumber,
+  ElPagination,
   ElRadio,
   ElScrollbar,
   ElSelect,
@@ -50,6 +51,7 @@ export default defineTheme({
     app.use(ElDropdownMenu)
     app.use(ElInput)
     app.use(ElInputNumber)
+    app.use(ElPagination)
     app.use(ElRadio)
     app.use(ElScrollbar)
     app.use(ElSelect)

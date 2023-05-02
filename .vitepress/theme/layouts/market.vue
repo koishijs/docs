@@ -1,21 +1,21 @@
 <template>
-  <div class="market-container" v-if="market">
-    <h1>插件市场</h1>
-    <div class="info">
-      当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
-      <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
-    </div>
-    <market-search class="card" v-model="words"></market-search>
-    <div class="packages">
-      <market-package class="card"
-        v-for="data in packages"
-        :key="data.name"
-        :data="data"
-        @query="onQuery"
-        gravatar="https://cravatar.cn"/>
-    </div>
-  </div>
-  <div class="market-container loading" v-else>
+  <market-list
+    gravatar="https://cravatar.cn"
+    v-if="market"
+    v-model="words"
+    :data="market.objects"
+  >
+    <template #header="{ hasFilter, all, packages }">
+      <h1>插件市场</h1>
+      <div class="info">
+        当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
+        <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
+      </div>
+      <market-search class="k-card" v-model="words"></market-search>
+    </template>
+  </market-list>
+
+  <div class="loading" v-else>
     <div v-if="error">
       插件市场加载失败。
     </div>
@@ -28,14 +28,8 @@
 <script lang="ts" setup>
 
 import { onMounted, ref } from 'vue'
-import { market, words, all, packages, hasFilter } from '../utils'
-import { MarketSearch, MarketPackage } from '@koishijs/market'
-
-function onQuery(word: string) {
-  if (!words.value[words.value.length - 1]) words.value.pop()
-  if (!words.value.includes(word)) words.value.push(word)
-  words.value.push('')
-}
+import { market, words } from '../utils'
+import { MarketList, MarketSearch } from '@koishijs/market'
 
 const error = ref()
 
@@ -61,9 +55,15 @@ $breakpoint: 760px;
   }
 }
 
-.market-container {
+.k-card {
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-alt);
+  border: 1px solid var(--c-border);
+}
+
+.market-list {
   margin: calc(0px - var(--vp-nav-height)) 0 0;
-  padding: var(--vp-nav-height) 0 2rem 2rem;
+  padding: var(--vp-nav-height) 0 0 2rem;
   min-height: 100vh;
   max-width: var(--vp-layout-max-width);
 
@@ -91,18 +91,6 @@ $breakpoint: 760px;
     text-align: center;
   }
 
-  // @media (min-width: $breakpoint) {
-    .card {
-      background-color: var(--vp-c-bg-alt);
-      border: 1px solid var(--c-border);
-    }
-
-    .market-view {
-      display: flex;
-      flex-direction: column;
-    }
-  // }
-
   --card-margin: 2rem;
   --card-padding-vertical: 1.5rem;
   --card-padding-horizontal: 1.5rem;
@@ -119,48 +107,13 @@ $breakpoint: 760px;
     --card-padding-horizontal: 0.875rem;
   }
 
-  .packages {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
-    gap: var(--card-margin);
-    margin: var(--card-margin) 0;
-    justify-items: center;
-
-    .market-package {
-      border-radius: 8px;
-    }
-  }
-
-  // @media (max-width: ($breakpoint - 1px)) {
-  //   .market-view {
-  //     padding: 0.25rem 0;
-  //     border-top: 1px solid var(--c-border);
-
-  //     &:last-child {
-  //       border-bottom: 1px solid var(--c-border);
-  //     }
-  //   }
-  // }
-
   @media (max-width: 480px) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 
-    // .search-box {
-    //   width: calc(100% - 1rem);
-    // }
-
     .info .timestamp {
       display: none;
     }
-
-  //   .market-view {
-  //     padding: 0;
-  //   }
-
-  //   .market-view > * {
-  //     padding: 0 1rem;
-  //   }
   }
 }
 

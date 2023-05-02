@@ -20,6 +20,8 @@
   --el-fill-color-light: var(--vp-c-bg);
   --el-bg-color-overlay: var(--vp-c-bg);
   --el-fill-color-blank: transparent;
+  --el-disabled-bg-color: var(--vp-c-bg-alt);
+  --el-fill-color: var(--vp-c-bg-alt);
 }
 
 .el-dropdown__popper {

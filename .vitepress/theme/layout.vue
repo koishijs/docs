@@ -7,7 +7,7 @@
       </div>
     </template>
     <template v-if="frontmatter.layout === 'market'" #sidebar-nav-after>
-      <market-filter v-model="words" :data="all"></market-filter>
+      <market-filter v-model="words" :data="getSorted(market?.objects || [], words)"></market-filter>
     </template>
   </Layout>
 </template>
@@ -17,10 +17,10 @@
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed } from 'vue'
-import { MarketFilter } from '@koishijs/market'
+import { getSorted, MarketFilter } from '@koishijs/market'
 import VPNavBarTitle from '@theme-default/components/VPNavBarTitle.vue'
 import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
-import { home, words, all } from './utils'
+import { home, market, words } from './utils'
 
 const { frontmatter, theme } = useData()
 
