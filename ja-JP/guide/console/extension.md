@@ -42,9 +42,9 @@ export default (ctx: Context) => {
 
 ```vue title=client/custom-page.vue
 <template>
-    <k-layout>
-        <k-card>扩展内容</k-card>
-    </k-layout>
+  <k-layout>
+    <k-card>扩展内容</k-card>
+  </k-layout>
 </template>
 ```
 
