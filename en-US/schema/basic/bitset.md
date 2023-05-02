@@ -10,10 +10,14 @@ code: |
 
 # Bitset
 
-以 Bitset 的形式表达一个整数，通常每一位表达某种特征。
+`Schema.bitset()` 以多选框的形式描述了一个整数，通常每一位表达某种特征。
 
 ```ts
-enum Intents { FOO = 1, BAR = 2, QUX = 4 }
+const enum Intents {
+  FOO = 1,
+  BAR = 2,
+  QUX = 4,
+}
 
 export default Schema.object({
   intents: Schema.bitset(Intents)

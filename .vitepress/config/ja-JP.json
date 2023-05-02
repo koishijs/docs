@@ -695,27 +695,31 @@
       ],
       "/schema/": [
         {
-          "text": "メタ情報",
+          "text": "通用概念",
           "items": [
             {
-              "text": ".description()",
-              "link": "/schema/meta/description.md"
-            },
-            {
-              "text": ".required()",
+              "text": "必需与可选",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": ".default()",
+              "text": "默认值",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": ".role()",
+              "text": "标题与描述",
+              "link": "/schema/meta/description.md"
+            },
+            {
+              "text": "配置项外观",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": ".hidden()",
+              "text": "隐藏配置项",
               "link": "/schema/meta/hidden.md"
+            },
+            {
+              "text": "嵌套类型",
+              "link": "/schema/meta/nested.md"
             }
           ]
         },
@@ -723,36 +727,36 @@
           "text": "基本の型",
           "items": [
             {
-              "text": "数値 (Number)",
+              "text": "数值 (Number)",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "文字列 (String)",
+              "text": "字符串 (String)",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "論理型 (Boolean)",
+              "text": "布尔值 (Boolean)",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "ビットセット (Bitset)",
+              "text": "位集 (Bitset)",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "配列 (Array)",
-              "link": "/schema/basic/array.md"
+              "text": "对象 (Object)",
+              "link": "/schema/basic/object.md"
             },
             {
-              "text": "辞書型 (Dict)",
-              "link": "/schema/basic/dict.md"
-            },
-            {
-              "text": "タプル (Tuple)",
+              "text": "元组 (Tuple)",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "オブジェクト (Object)",
-              "link": "/schema/basic/object.md"
+              "text": "字典 (Dict)",
+              "link": "/schema/basic/dict.md"
+            },
+            {
+              "text": "数组 (Array)",
+              "link": "/schema/basic/array.md"
             }
           ]
         },
@@ -760,28 +764,32 @@
           "text": "高度な型",
           "items": [
             {
-              "text": "共通集合 (Intersect)",
+              "text": "Intersect：分组",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "合併集合 - 選択 (Union - Select)",
+              "text": "Union：单选框",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "合併集合 - 任意 (Union - Arbitrary)",
+              "text": "Union：联合类型",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union (Tagged 1)",
+              "text": "Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union (Tagged 2)",
+              "text": "Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "変換 (Transform)",
+              "text": "Transform：输入转换",
               "link": "/schema/advanced/transform.md"
+            },
+            {
+              "text": "Computed：条件求值",
+              "link": "/schema/advanced/computed.md"
             }
           ]
         }

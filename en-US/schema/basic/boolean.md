@@ -8,7 +8,7 @@ code: |
 
 # Boolean
 
-以开关的形式表达 boolean 类型的值。
+`Schema.boolean()` 以开关的形式描述了一个布尔值。
 
 ```ts
 export default Schema.object({

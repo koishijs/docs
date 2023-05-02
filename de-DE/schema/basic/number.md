@@ -7,9 +7,9 @@ code: |
   }).description('配置项')
 ---
 
-# Number
+# 数值 (Number)
 
-用于表达 number 类型的值，支持输入框和滑块。
+`Schema.number()` 描述了一个数值，支持输入框和滑块。
 
 ```ts
 export default Schema.object({
