@@ -1,5 +1,28 @@
 {
   "description": "创建跨平台、可扩展、高性能的机器人",
+  "head": [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "/logo.png"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "manifest",
+        "href": "/zh-CN/manifest.json"
+      }
+    ],
+    [
+      "meta",
+      {
+        "name": "theme-color",
+        "content": "#5546a3"
+      }
+    ]
+  ],
   "themeConfig": {
     "editLink": {
       "text": "在 GitHub 编辑此页面",
