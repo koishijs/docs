@@ -19,4 +19,4 @@ market.refresh = async () => {
   market.value = await response.json()
 }
 
-export const words = ref<string[]>([])
+export const words = ref<string[]>([''])

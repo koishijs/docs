@@ -15,12 +15,12 @@
     </template>
   </market-list>
 
-  <div class="loading" v-else>
+  <div class="market-loading" v-else>
     <div v-if="error">
       插件市场加载失败。
     </div>
     <div v-else>
-      正在加载插件市场...
+      正在加载插件市场……
     </div>
   </div>
 </template>
@@ -61,6 +61,15 @@ $breakpoint: 760px;
   border: 1px solid var(--c-border);
 }
 
+.market-loading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin-top: calc(0px - var(--vp-nav-height));
+}
+
 .market-list {
   margin: calc(0px - var(--vp-nav-height)) 0 0;
   padding: var(--vp-nav-height) 0 0 2rem;
@@ -69,13 +78,6 @@ $breakpoint: 760px;
 
   @media (max-width: 1439px) {
     padding-right: 2rem;
-  }
-
-  &.loading {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
   }
 
   h1 {
