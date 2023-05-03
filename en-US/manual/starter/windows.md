@@ -22,9 +22,9 @@ If you want to learn about other installation method, please visit [Installation
 
 It is recommended to install Koishi from the installer, which would deal with most of the problems automatically. You should choose this method in general.
 
-![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
+![msi-installer](../../../shared/manual/windows/msi-installer-dark.webp) {.dark-only}
 
-![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
+![msi-installer](../../../shared/manual/windows/msi-installer-light.webp) {.light-only}
 
 Double-click on the MSI installer and go through the installation by clicking "Next" buttons. You would find Koishi in the Start Menu after the installation.
 
@@ -32,9 +32,9 @@ Double-click on the MSI installer and go through the installation by clicking "N
 The installation might cost more than 10 minutes on some devices, please be patient.
 :::
 
-![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
+![start-menu](../../../shared/manual/windows/start-menu-dark.webp) {.dark-only}
 
-![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
+![start-menu](../../../shared/manual/windows/start-menu-light.webp) {.light-only}
 
 Click the Koishi icon to launch it. The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
