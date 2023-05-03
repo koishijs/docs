@@ -8,9 +8,9 @@ First, click the "Add User" button in the upper left corner to create a virtual 
 
 The "echo" here is the plugin we have just installed, which displays a line of text that the user just entered. Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
 
-![sandbox](/manual/console/sandbox.light.webp) {.light-only}
+![sandbox](../../../shared/manual/console/sandbox.light.webp) {.light-only}
 
-![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
+![sandbox](../../../shared/manual/console/sandbox.dark.webp) {.dark-only}
 
 ## Virtual Users Management
 
