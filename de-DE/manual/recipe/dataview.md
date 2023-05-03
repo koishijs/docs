@@ -6,9 +6,9 @@
 
 控制台左侧的数据库选项提供了一个数据库面板，你可以在这里对 Koishi 的数据库进行查看、新增、修改或是删除。通常这里包含了各用户和频道的信息，以及 bot 在各频道发送消息的频率记录。
 
-![database](/manual/console/database.light.webp) {.light-only}
+![database](../../../shared/manual/console/database.light.webp) {.light-only}
 
-![database](/manual/console/database.dark.webp) {.dark-only}
+![database](../../../shared/manual/console/database.dark.webp) {.dark-only}
 
 有时你可能希望或需要手动对数据库进行操作，比如使用 `Admin` 插件中的 `authorize` 指令为用户设定权限时，操作者默认必须拥有 4 级以上的权限。
 
