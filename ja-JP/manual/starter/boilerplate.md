@@ -30,9 +30,9 @@ Koishi は [Node.js](https://nodejs.org/) (最低v14、LTS推奨)ランタイム
 
 まず、 [Node.js](https://nodejs.org/) の公式サイトにアクセスしましょう：
 
-![home](/manual/nodejs/home-dark.webp) {.dark-only}
+![home](../../../shared/manual/nodejs/home-dark.webp) {.dark-only}
 
-![home](/manual/nodejs/home-light.webp) {.light-only}
+![home](../../../shared/manual/nodejs/home-light.webp) {.light-only}
 
 ここには２つの大きなボタンがありますが，それぞれ **LTS(長期サポート版)** と **Current(最新版)** を意味します。より安定したLTSバージョンをおすすめします。ボタンをクリックしてインストーラーをダウンロードしてください。
 
