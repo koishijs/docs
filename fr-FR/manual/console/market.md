@@ -14,17 +14,17 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 
 前往「插件市场」页面，你将在这里看到所有可下载的插件。在搜索框中输入 echo，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。等待片刻，插件就已经安装成功了。
 
-![select-version](/manual/console/select-version.light.webp) {.light-only}
+![select-version](../../../shared/manual/console/select-version.light.webp) {.light-only}
 
-![select-version](/manual/console/select-version.dark.webp) {.dark-only}
+![select-version](../../../shared/manual/console/select-version.dark.webp) {.dark-only}
 
 ## 启用和停用插件
 
 插件安装成功以后并不会立即处于运行状态，我们需要对其进行配置。前往「插件配置」页面，左侧栏中列出了已配置的各种插件。其中<span class="light-only">黑色</span><span class="dark-only">白色</span>字体显示的是正在运行的插件，而灰色字体则对应尚未运行的插件。
 
-![plugins](/manual/console/plugins.light.webp) {.light-only}
+![plugins](../../../shared/manual/console/plugins.light.webp) {.light-only}
 
-![plugins](/manual/console/plugins.dark.webp) {.dark-only}
+![plugins](../../../shared/manual/console/plugins.dark.webp) {.dark-only}
 
 我们可以看到此时 echo 插件确实并未运行，并且右侧的详情页也一片空白。这说明 echo 插件并没有什么需要配置的地方。我们可以直接点击右上角的「启用插件」，这样 echo 插件就已经处于运行状态了。
 
@@ -38,9 +38,9 @@ Koishi 不对非官方插件的安全性做任何保证。请不要随意下载�
 
 虽然 echo 插件没有需要配置的地方，但更复杂的插件则通常会提供各种配置项，允许使用者控制插件的行为。下图展示了 novelai 插件的配置界面。
 
-![settings](/manual/console/settings.light.webp) {.light-only}
+![settings](../../../shared/manual/console/settings.light.webp) {.light-only}
 
-![settings](/manual/console/settings.dark.webp) {.dark-only}
+![settings](../../../shared/manual/console/settings.dark.webp) {.dark-only}
 
 在这个界面中，我们可以看到许多配置项。其中你需要注意：
 
@@ -63,9 +63,9 @@ Koishi 提供了插件分组的机制，允许你将插件放入不同的分组�
 
 如果某个已安装的插件并未显示在插件列表中，你也可以手动添加它。在「全局配置」或任意分组界面中，点击右上角的「添加插件」将会弹出对话框。在对话框中点击要添加的插件，即可创建一份未启用的插件配置。
 
-![select-plugin](/manual/console/select-plugin.light.webp) {.light-only}
+![select-plugin](../../../shared/manual/console/select-plugin.light.webp) {.light-only}
 
-![select-plugin](/manual/console/select-plugin.dark.webp) {.dark-only}
+![select-plugin](../../../shared/manual/console/select-plugin.dark.webp) {.dark-only}
 
 ### 删除插件或分组
 
@@ -79,6 +79,6 @@ Koishi 提供了插件分组的机制，允许你将插件放入不同的分组�
 
 前往「依赖管理」页面，你可以在这里看到依赖列表，你可以在这里更新你的依赖，当状态显示为「可更新」时，点击右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」即可完成更新。
 
-![dependencies](/manual/console/dependencies.light.webp) {.light-only}
+![dependencies](../../../shared/manual/console/dependencies.light.webp) {.light-only}
 
-![dependencies](/manual/console/dependencies.dark.webp) {.dark-only}
+![dependencies](../../../shared/manual/console/dependencies.dark.webp) {.dark-only}
