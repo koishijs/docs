@@ -20,9 +20,9 @@
 
 Koishi 不仅支持在插件层级设置过滤器，某些配置项还支持在不同的会话下取不同的值。以全局设置为例，我们可以看到 `prefix`, `autoAssign` 等配置项的右侧有一个「…」按钮：
 
-![computed](/manual/console/computed.dark.webp) {.dark-only}
+![computed](../../../shared/manual/console/computed.dark.webp) {.dark-only}
 
-![computed](/manual/console/computed.light.webp) {.light-only}
+![computed](../../../shared/manual/console/computed.light.webp) {.light-only}
 
 点击这个「…」按钮，即可将普通的配置项变成一个计算属性。我们可以配置一系列满足某个过滤器以后的取值，以及一个不满足任何情况下的默认值。
 
