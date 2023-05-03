@@ -48,15 +48,15 @@ Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」�
 
 进入「插件配置」界面，并点击 login 插件。这里我们会看到有一个「管理员设置」：
 
-![plugin-login](/manual/console/plugin-login.light.webp) {.light-only}
+![plugin-login](../../../shared/manual/console/plugin-login.light.webp) {.light-only}
 
-![plugin-login](/manual/console/plugin-login.dark.webp) {.dark-only}
+![plugin-login](../../../shared/manual/console/plugin-login.dark.webp) {.dark-only}
 
 填写你自己准备好的密码，然后点击「启用插件」。此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
 
-![login-password](/manual/console/login-password.light.webp) {.light-only}
+![login-password](../../../shared/manual/console/login-password.light.webp) {.light-only}
 
-![login-password](/manual/console/login-password.dark.webp) {.dark-only}
+![login-password](../../../shared/manual/console/login-password.dark.webp) {.dark-only}
 
 ### 普通用户登录
 
@@ -64,9 +64,9 @@ Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」�
 
 点击左下角的「登录」按钮，选择「平台账号登录」，并输入你的平台名和用户 ID。点击「获取验证码」，并把页面中出现的验证码通过上述账号私聊发送给机器人，即可完成登录。
 
-![login-platform](/manual/console/login-platform.light.webp) {.light-only}
+![login-platform](../../../shared/manual/console/login-platform.light.webp) {.light-only}
 
-![login-platform](/manual/console/login-platform.dark.webp) {.dark-only}
+![login-platform](../../../shared/manual/console/login-platform.dark.webp) {.dark-only}
 
 登录完成后，你会被重定向到个人页面。在这个页面中你可以修改自己的用户名和密码。普通用户第一次登录只能使用平台账号登录，而设置了用户名和密码后，点击右上角的「应用更改」，未来就可以使用用户密码登录了。
 
@@ -80,9 +80,9 @@ Koishi 官方目前提供了两个插件实现账号绑定，我们将逐一介�
 
 登录控制台后，任何用户都可以在个人页面中绑定平台账号。点击「平台账号绑定」右侧的「添加」按钮，并使用你要绑定的账号完成一遍类似平台账号登录的流程，就大功告成了。
 
-![profile](/manual/console/profile.light.webp) {.light-only}
+![profile](../../../shared/manual/console/profile.light.webp) {.light-only}
 
-![profile](/manual/console/profile.dark.webp) {.dark-only}
+![profile](../../../shared/manual/console/profile.dark.webp) {.dark-only}
 
 如果要解除绑定，点击对应平台账号右侧的「解绑」即可。
 
