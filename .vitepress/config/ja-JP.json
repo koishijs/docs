@@ -1,5 +1,28 @@
 {
   "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
+  "head": [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "/logo.png"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "manifest",
+        "href": "/zh-CN/manifest.json"
+      }
+    ],
+    [
+      "meta",
+      {
+        "name": "theme-color",
+        "content": "#5546a3"
+      }
+    ]
+  ],
   "themeConfig": {
     "editLink": {
       "text": "Crowdin でこのページの翻訳を修正する",
