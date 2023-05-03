@@ -30,9 +30,9 @@ Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended)
 
 Firstly, we should go to the official website of [Node.js](https://nodejs.org/):
 
-![home](/manual/nodejs/home-dark.webp) {.dark-only}
+![home](../../../shared/manual/nodejs/home-dark.webp) {.dark-only}
 
-![home](/manual/nodejs/home-light.webp) {.light-only}
+![home](../../../shared/manual/nodejs/home-light.webp) {.light-only}
 
 So we see here are two green buttons, which are **LTS (Long-term Support version)** and **Current (the Latest version)**. The stable LTS version is recommended. Click the button to download the installer.
 
