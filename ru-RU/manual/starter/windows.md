@@ -22,9 +22,9 @@ next:
 
 通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
-![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
+![msi-installer](../../../shared/manual/windows/msi-installer-dark.webp) {.dark-only}
 
-![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
+![msi-installer](../../../shared/manual/windows/msi-installer-light.webp) {.light-only}
 
 双击 msi 安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
@@ -32,9 +32,9 @@ next:
 安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
 :::
 
-![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
+![start-menu](../../../shared/manual/windows/start-menu-dark.webp) {.dark-only}
 
-![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
+![start-menu](../../../shared/manual/windows/start-menu-light.webp) {.light-only}
 
 点击 Koishi 图标即可启动。等待几秒钟，Koishi 控制台将会被打开，现在你可以开始使用 Koishi 了。
 
