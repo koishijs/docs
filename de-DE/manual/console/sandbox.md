@@ -8,9 +8,9 @@
 
 这里的 echo 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。
 
-![sandbox](/manual/console/sandbox.light.webp) {.light-only}
+![sandbox](../../../shared/manual/console/sandbox.light.webp) {.light-only}
 
-![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
+![sandbox](../../../shared/manual/console/sandbox.dark.webp) {.dark-only}
 
 ## 管理虚拟用户
 
