@@ -10,9 +10,9 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v14，推荐使用 LTS) 运
 
 首先我们前往 [Node.js](https://nodejs.org/) 的官方网站：
 
-![home](/manual/nodejs/home-dark.webp) {.dark-only}
+![home](../../../shared/manual/nodejs/home-dark.webp) {.dark-only}
 
-![home](/manual/nodejs/home-light.webp) {.light-only}
+![home](../../../shared/manual/nodejs/home-light.webp) {.light-only}
 
 在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。我们建议你选择更加稳定的 LTS 版本，点击按钮即可下载安装包。
 
@@ -61,7 +61,7 @@ npm login --registry=https://registry.npmjs.org
 
 Git 是最普遍使用的版本控制工具。前往 [官网](https://git-scm.com/downloads)，点击右上角的青色按钮下载安装包。
 
-![downloads](/manual/git/downloads.webp)
+![downloads](../../../shared/manual/git/downloads.webp)
 
 国内的 Windows 用户也可以选择从 [镜像](https://registry.npmmirror.com/binary.html?path=git-for-windows/) 下载。如果不知道下载哪个版本，可以在上面的官网中看到 (比如现在是 2.39.1)。
 
@@ -118,7 +118,7 @@ yarn create koishi
 
 同样是前往 [官网](https://code.visualstudio.com/) 进行下载。点击左侧的蓝色下载按钮。
 
-![home](/manual/vscode/home.webp)
+![home](../../../shared/manual/vscode/home.webp)
 
 下载完毕后，双击运行。安装过程无需手动配置，一直点击下一步即可完成安装。
 
@@ -126,8 +126,8 @@ yarn create koishi
 
 在活动栏中点击「Extensions」，并在搜索框中输入「chinese」，你将看到一个写着「中文 (简体)」的插件。点击「Install」按钮进行安装，并根据提示重启 VSCode。现在你的 VSCode 就已经是中文的了。
 
-![home](/manual/vscode/chinese.webp)
+![home](../../../shared/manual/vscode/chinese.webp)
 
 要打开刚刚创建的项目，可以在活动栏中点击「资源管理器」→「打开文件夹」，然后选择你刚刚创建的项目文件夹即可。
 
-![home](/manual/vscode/open.webp) -->
+![home](../../../shared/manual/vscode/open.webp) -->
