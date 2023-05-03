@@ -14,17 +14,17 @@ We Koishi team doesn't warrant the availability of third party plugins. Plugins 
 
 Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter "echo" in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog. Wait for a moment, and the plugin will be installed successfully.
 
-![select-version](/manual/console/select-version.light.webp) {.light-only}
+![select-version](../../../shared/manual/console/select-version.light.webp) {.light-only}
 
-![select-version](/manual/console/select-version.dark.webp) {.dark-only}
+![select-version](../../../shared/manual/console/select-version.dark.webp) {.dark-only}
 
 ## Enable and Disable Plugins
 
 After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span> fonts show plugins that are running, while gray fonts show plugins that are not running yet.
 
-![plugins](/manual/console/plugins.light.webp) {.light-only}
+![plugins](../../../shared/manual/console/plugins.light.webp) {.light-only}
 
-![plugins](/manual/console/plugins.dark.webp) {.dark-only}
+![plugins](../../../shared/manual/console/plugins.dark.webp) {.dark-only}
 
 We can see that the "echo" plugin is not running, and the "details" page on the right side is empty. It shows that the "echo" plugin has nothing to configure. We can directly click "Enable Plugin" in the upper right corner, then the "echo" plugin will be already running.
 
@@ -38,9 +38,9 @@ In configuring plugins, please remember this principle: **Don't change any confi
 
 While the "echo" plugin does not require configuration, more complex plugins often provide configurations that allow users to control the behavior of plugins. The picture below shows the configuration page of the "novelai" plugin.
 
-![settings](/manual/console/settings.light.webp) {.light-only}
+![settings](../../../shared/manual/console/settings.light.webp) {.light-only}
 
-![settings](/manual/console/settings.dark.webp) {.dark-only}
+![settings](../../../shared/manual/console/settings.dark.webp) {.dark-only}
 
 In this page, we can see many configurations, where you need to take note of:
 
@@ -63,9 +63,9 @@ Normally, a plugin can only run one configuration at once. Please refer to the [
 
 If an installed plugin is not shown in the plugin list, you can also add it manually. In "Global Configuration" or in any group page, click the "Add Plugin" button in the top right corner will eject a dialog box. Click on the plugin to be added in the dialog box to create a plugin configuration which is not enabled.
 
-![select-plugin](/manual/console/select-plugin.light.webp) {.light-only}
+![select-plugin](../../../shared/manual/console/select-plugin.light.webp) {.light-only}
 
-![select-plugin](/manual/console/select-plugin.dark.webp) {.dark-only}
+![select-plugin](../../../shared/manual/console/select-plugin.dark.webp) {.dark-only}
 
 ### Remove Plugin or Group
 
@@ -79,6 +79,6 @@ Click Remove Plugin button in the top right corner in the configuration page of 
 
 Go to the "Dependency Management" page. Here you can see a list of dependencies, and you can update them here. When the status shows "Updatable", you can click the "Modify" button on the right, select the version you need in the top left corner of the popup dialog, and click "Update" in the bottom right corner to complete your update.
 
-![dependencies](/manual/console/dependencies.light.webp) {.light-only}
+![dependencies](../../../shared/manual/console/dependencies.light.webp) {.light-only}
 
-![dependencies](/manual/console/dependencies.dark.webp) {.dark-only}
+![dependencies](../../../shared/manual/console/dependencies.dark.webp) {.dark-only}
