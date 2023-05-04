@@ -56,6 +56,8 @@ jobs:
   build-vercel:
     runs-on: ubuntu-latest
 
+    if: ${{ !contains(github.event.head_commit.message, 'New translations') }}
+
     steps:
       - name: Check out
         uses: actions/checkout@v3
