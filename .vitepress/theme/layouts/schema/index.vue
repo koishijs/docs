@@ -142,15 +142,6 @@ const input = computed(() => {
       font-weight: 600;
     }
 
-    h2 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .schema-item + h2, .schema-group + h2 {
-      margin-top: 2rem;
-    }
-
     form {
       padding: 1rem 2rem;
     }

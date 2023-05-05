@@ -13,7 +13,7 @@
     "@vueuse/core": "9.13.0"
   },
   "devDependencies": {
-    "@koishijs/components": "^1.0.3",
+    "@koishijs/components": "^1.0.4",
     "@koishijs/core": "^4.12.7",
     "@koishijs/market": "^3.0.0",
     "@koishijs/registry": "^4.6.1",

@@ -2,7 +2,7 @@
   "description": "创建跨平台、可扩展、高性能的机器人",
   "head": [
     ["link", { "rel": "icon", "href": "/logo.png" }],
-    ["link", { "rel": "manifest", "href": "/zh-CN/manifest.json" }],
+    ["link", { "rel": "manifest", "href": "/manifest/zh-CN.json" }],
     ["meta", { "name": "theme-color", "content": "#5546a3" }]
   ],
   "themeConfig": {

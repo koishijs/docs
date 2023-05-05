@@ -7,6 +7,7 @@ import Layout from './layout.vue'
 import {
   ElButton,
   ElCheckbox,
+  ElCollapseTransition,
   ElColorPicker,
   ElDatePicker,
   ElDialog,
@@ -43,6 +44,7 @@ export default defineTheme({
     app.use(components)
     app.use(ElButton)
     app.use(ElCheckbox)
+    app.use(ElCollapseTransition)
     app.use(ElColorPicker)
     app.use(ElDatePicker)
     app.use(ElDialog)
