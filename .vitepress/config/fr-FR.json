@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/zh-CN/manifest.json"
+        "href": "/manifest/zh-CN.json"
       }
     ],
     [
