@@ -2,24 +2,24 @@
   "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
   "head": [
     [
-      "link",
+      "",
       {
-        "rel": "icon",
-        "href": "/logo.png"
+        "rel": "",
+        "href": ""
       }
     ],
     [
-      "link",
+      "",
       {
-        "rel": "manifest",
-        "href": "/manifest/zh-CN.json"
+        "rel": "",
+        "href": ""
       }
     ],
     [
-      "meta",
+      "",
       {
-        "name": "theme-color",
-        "content": "#5546a3"
+        "name": "",
+        "content": ""
       }
     ]
   ],
@@ -718,31 +718,31 @@
       ],
       "/schema/": [
         {
-          "text": "通用概念",
+          "text": "",
           "items": [
             {
-              "text": "必需与可选",
-              "link": "/schema/meta/required.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "默认值",
-              "link": "/schema/meta/default.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "标题与描述",
-              "link": "/schema/meta/description.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "配置项外观",
+              "text": "",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏配置项",
+              "text": "",
               "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "嵌套类型",
-              "link": "/schema/meta/nested.md"
+              "text": "",
+              "link": ""
             }
           ]
         },
@@ -750,36 +750,36 @@
           "text": "基本の型",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字符串 (String)",
+              "text": "",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "位集 (Bitset)",
+              "text": "",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
-              "link": "/schema/basic/object.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "元组 (Tuple)",
-              "link": "/schema/basic/tuple.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "字典 (Dict)",
-              "link": "/schema/basic/dict.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "数组 (Array)",
-              "link": "/schema/basic/array.md"
+              "text": "",
+              "link": ""
             }
           ]
         },
@@ -787,32 +787,32 @@
           "text": "高度な型",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
-              "link": "/schema/advanced/computed.md"
+              "text": "",
+              "link": ""
             }
           ]
         }
