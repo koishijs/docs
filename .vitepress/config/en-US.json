@@ -2,24 +2,24 @@
   "description": "Cross-platform Chatbot Framework Made With Love",
   "head": [
     [
-      "",
+      "link",
       {
-        "rel": "",
-        "href": ""
+        "rel": "icon",
+        "href": "/logo.png"
       }
     ],
     [
-      "",
+      "link",
       {
-        "rel": "",
-        "href": ""
+        "rel": "manifest",
+        "href": "/manifest/en-US.json"
       }
     ],
     [
-      "",
+      "meta",
       {
-        "name": "",
-        "content": ""
+        "name": "theme-color",
+        "content": "#5546a3"
       }
     ]
   ],
@@ -718,31 +718,31 @@
       ],
       "/schema/": [
         {
-          "text": "",
+          "text": "General Concepts",
           "items": [
             {
-              "text": "",
+              "text": "Required and Optional",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "",
+              "text": "Default Value",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "",
+              "text": "Title and Description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "",
+              "text": "Configuration Appearance",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "",
+              "text": "Hidden Configuration",
               "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Nested Type",
+              "link": "/schema/meta/nested.md"
             }
           ]
         },
@@ -766,20 +766,20 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Object",
+              "link": "/schema/basic/object.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Tuple",
+              "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Dictionary",
+              "link": "/schema/basic/dict.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Array",
+              "link": "/schema/basic/array.md"
             }
           ]
         },
@@ -787,32 +787,32 @@
           "text": "Advanced Types",
           "items": [
             {
-              "text": "",
+              "text": "Intersect",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "",
+              "text": "Union: Radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "",
+              "text": "Union: Joint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "",
+              "text": "Union: Tagged 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "",
+              "text": "Union: Tagged 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "",
+              "text": "Transformation",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "",
-              "link": ""
+              "text": "Computed",
+              "link": "/schema/advanced/computed.md"
             }
           ]
         }
