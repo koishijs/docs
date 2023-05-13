@@ -10,10 +10,10 @@ next:
 # Install for Container
 
 ::: warning
-Docker 等容器化软件是以服务生产环境而开发的应用平台，在使用此类软件部署之时，我们相信你已经掌握了运维一台服务器所必须的知识，同时也理解了容器化的概念与相关软件的基础操作。如若不然，在除路由器或 NAS 等特殊环境外，请 [选择其他安装方式](./index.md)。
+Containerized software products like Docker are developed for production environment. We will assume that you have enough acknowledgement for managing a server as well as the concept of "Containerization" or the common operations for these software products. It is not recommended for those who don't have enough acknowledgement unless they are installing Koishi on routers or NAS. Please [Choose Other Installation Methods](./index.md).
 :::
 
-Koishi 提供了 [Docker](https://hub.docker.com/r/koishijs/koishi) 镜像，方便你在容器中运行 Koishi。你需要首先安装 [Podman](https://podman.io) 或 [Docker](https://www.docker.com) 来运行容器。
+Koishi provides an [official Docker image](https://hub.docker.com/r/koishijs/koishi), which would convenient running Koishi in a container. You may need to install [Podman](https://podman.io) or [Docker](https://www.docker.com) first.
 
 ## Start container
 
