@@ -40,9 +40,9 @@ See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
 We will only talk about the most widely-used approach to configure [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
-1. 在 `selfId` 填写机器人账号
-2. 开启 `gocqhttp.enable` 选项
-3. 点击「启用」，并跟随提示完成后续配置
+1. Fill in the bot account ID in `selfId` field.
+2. Enable the  `gocqhttp.enable` option.
+3. Click "Enable" button, then follow the prompted tutorial to complete the configuration.
 
 See also: [@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
