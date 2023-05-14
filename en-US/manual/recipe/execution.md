@@ -1,8 +1,8 @@
-# 指令进阶技巧
+# Advanced Command Tricks
 
-## 使用引号
+## Quotes
 
-Koishi 会自动将引号 (半角或者全角) 中的内容视为一个整体。这在很多场景中都非常有用，下面举出了一些典型的例子：
+Koishi would regard the content in quotes (whatever full-width or half-width) as a single parameter. This would be useful in many cases, for example:
 
 - 当希望传入带空格的参数时 (默认行为是只解析空格前面的部分)
 - 当希望传入以 `-` 开头的参数时 (默认的行为是解析成下一个选项)
