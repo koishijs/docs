@@ -3,7 +3,7 @@ import { defineAsyncComponent } from 'vue'
 import Markdown from 'marked-vue'
 import Schema from 'schemastery'
 import components from '@koishijs/components'
-import Layout from './layout.vue'
+import { createI18n } from 'vue-i18n'
 import {
   ElButton,
   ElCheckbox,
@@ -25,6 +25,7 @@ import {
   ElTimePicker,
   ElTooltip,
 } from 'element-plus'
+import Layout from './layout.vue'
 
 import '@koishijs/core'
 import 'element-plus/dist/index.css'
@@ -41,6 +42,12 @@ export default defineTheme({
   },
   Layout,
   enhanceApp({ app }) {
+    const i18n = createI18n({
+      legacy: false,
+      locale: 'zh-CN',
+      fallbackLocale: '',
+    })
+
     app.use(components)
     app.use(ElButton)
     app.use(ElCheckbox)
@@ -61,6 +68,7 @@ export default defineTheme({
     app.use(ElSwitch)
     app.use(ElTimePicker)
     app.use(ElTooltip)
+    app.use(i18n)
     app.component('k-markdown', Markdown)
   },
 })

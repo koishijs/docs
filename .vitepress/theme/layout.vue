@@ -16,13 +16,19 @@
 
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { getSorted, MarketFilter } from '@koishijs/market'
 import VPNavBarTitle from '@theme-default/components/VPNavBarTitle.vue'
 import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
 import { home, market, words } from './utils'
 
-const { frontmatter, theme } = useData()
+const { frontmatter, localeIndex, theme } = useData()
+const composer = useI18n()
+
+watch(localeIndex, () => {
+  composer.locale.value = localeIndex.value
+}, { immediate: true })
 
 const navItem = computed(() => ({
   text: theme.value.navText || '导航',
