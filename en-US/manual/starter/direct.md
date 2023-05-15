@@ -17,7 +17,7 @@ This guide assumes that you know about secondary knowledge of [JavaScript](https
 It is strongly recommended to use template project for developing Koishi. If you are not sure what you are doing, it is recommended to read [Template Project](./boilerplate.md) first.
 :::
 
-虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
+While it is recommended to use the [boilerplate project](./boilerplate.md) for most users, it would be more flexible when you directly embed Koishi as a dependency for your complicated application.
 
 ## Initialize Your Project
 
@@ -31,27 +31,27 @@ Initialize a directly as your bot, install Koishi and common plugins, here we wo
 
 ::: tabs code
 ```npm
-# 初始化项目
+# Initialize project
 npm init
 
-# 安装 Koishi 和相关插件
+# Install Koishi and plugins
 npm i koishi @koishijs/plugin-console \
              @koishijs/plugin-sandbox \
              @koishijs/plugin-echo
 
-# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
+# Install TypeScript and related packages (skip this if you don't use TypeScript)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
 ```yarn
-# 初始化项目
+# Initialize project
 yarn init
 
-# 安装 Koishi 和相关插件
+# Install Koishi and plugins
 yarn add koishi @koishijs/plugin-console \
                 @koishijs/plugin-sandbox \
                 @koishijs/plugin-echo
 
-# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
+# Install TypeScript and related packages (skip this if you don't use TypeScript)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
 :::
@@ -106,28 +106,28 @@ yarn add @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
 ```
 :::
 
-Then modify the `index.ts` you just created. 每个机器人相当于启用一个插件：
+Then modify the `index.ts` you just created. Every time you activated an adapter plugin instance, a new bot instance would be created:
 
 ```ts title=index.ts
 import onebot from '@koishijs/plugin-adapter-onebot'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// 使用 OneBot 适配器的机器人
+// Apply the OneBot adapter to create a bot instance
 ctx.plugin(onebot, {
   protocol: 'ws',
   selfId: '123456789',
   endpoint: 'ws://127.0.0.1:6700',
 })
 
-// 使用 OneBot 适配器的另一个机器人，可以有不同的通信方式
+// Apply the OneBot adapter to create another bot instance
 ctx.plugin(onebot, {
   protocol: 'http',
   selfId: '987654321',
   endpoint: 'http://127.0.0.1:5700',
 })
 
-// 使用 Discord 适配器的机器人
-// 别忘了在使用之前，先安装相应的插件和完成准备工作
+// Apply the Discord adapter to create a bot instance
+// You should install the corresponding plugins and complete the preparing process
 ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
@@ -135,17 +135,17 @@ ctx.plugin(discord, {
 
 ## Add More Plugins
 
-Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
+Koishi plugins could be installed from [npm](https://www.npmjs.com). Normally the name of Koishi plugins should follow the patterns described below:
 
 - koishi-plugin-foo
 - @koishijs/plugin-foo
 - @bar/koishi-plugin-foo
 
-对于社区插件，使用类似的方式安装和加载：
+As for community plugins, you could install and apply in a similar way:
 
 ::: tabs code
 ```npm
-# 以 puppeteer 和 forward 插件为例
+# As the example, install puppeteer and forward plugins
 npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
 ```yarn
