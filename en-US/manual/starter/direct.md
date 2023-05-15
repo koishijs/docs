@@ -149,7 +149,7 @@ As for community plugins, you could install and apply in a similar way:
 npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
 ```yarn
-# 以 puppeteer 和 forward 插件为例
+# As the example, install puppeteer and forward plugins
 yarn add koishi-plugin-puppeteer koishi-plugin-forward
 ```
 :::
@@ -158,8 +158,8 @@ yarn add koishi-plugin-puppeteer koishi-plugin-forward
 import puppeteer from 'koishi-plugin-puppeteer'
 import * as forward from 'koishi-plugin-forward'
 
-ctx.plugin(puppeteer)   // 浏览器服务
-ctx.plugin(forward)     // 消息转发
+ctx.plugin(puppeteer)   // browser-related service
+ctx.plugin(forward)     // message forwarding
 ```
 
 请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
@@ -176,7 +176,7 @@ ctx.plugin(require('koishi-plugin-forward'))
 
 使用其他安装方式的用户不需要关心这些细节，因为模板项目已经帮你处理好了。
 
-## 添加交互逻辑
+## Apply Interaction
 
 除了已经封装好的插件外，我们还可以添加自己的交互逻辑：
 
