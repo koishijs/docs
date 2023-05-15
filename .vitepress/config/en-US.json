@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/zh-CN/manifest.json"
+        "href": "/manifest/en-US.json"
       }
     ],
     [
@@ -718,30 +718,30 @@
       ],
       "/schema/": [
         {
-          "text": "通用概念",
+          "text": "General Concepts",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "Required and Optional",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认值",
+              "text": "Default Value",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "Title and Description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Configuration Appearance",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏配置项",
+              "text": "Hidden Configuration",
               "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "Nested Type",
               "link": "/schema/meta/nested.md"
             }
           ]
@@ -766,19 +766,19 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dictionary",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array",
               "link": "/schema/basic/array.md"
             }
           ]
@@ -787,31 +787,31 @@
           "text": "Advanced Types",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union: Radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union: Joint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union: Tagged 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union: Tagged 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transformation",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed",
               "link": "/schema/advanced/computed.md"
             }
           ]
