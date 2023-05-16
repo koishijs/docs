@@ -31,16 +31,17 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 
 ## 控制台功能
 
-- [@koishijs/plugin-console](./console/index.md)：控制台
+- [@koishijs/plugin-auth](./console/auth.md)：用户登录
 - [@koishijs/plugin-analytics](./console/analytics.md)：数据统计
 - [@koishijs/plugin-commands](./console/commands.md)：指令管理
+- [@koishijs/plugin-config](./console/config.md)：插件配置
+- [@koishijs/plugin-console](./console/index.md)：控制台
 - [@koishijs/plugin-dataview](./console/dataview.md)：数据库操作
 - [@koishijs/plugin-explorer](./console/explorer.md)：资源管理器
 - [@koishijs/plugin-insight](./console/insight.md)：插件依赖图
 - [@koishijs/plugin-locales](./console/locales.md)：本地翻译
 - [@koishijs/plugin-logger](./console/logger.md)：日志管理
-- [@koishijs/plugin-login](./console/login.md)：用户登录
-- [@koishijs/plugin-market](./console/market.md)：插件管理
+- [@koishijs/plugin-market](./console/market.md)：插件市场
 - [@koishijs/plugin-sandbox](./console/sandbox.md)：沙盒调试
 - [@koishijs/plugin-status](./console/status.md)：运行状态
 
