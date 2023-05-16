@@ -634,52 +634,56 @@
           "text": "コンソール関連",
           "items": [
             {
-              "text": "コンソール支援 (Console)",
-              "link": "/plugins/console/index.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "データ統計 (Analytics)",
-              "link": "/plugins/console/analytics.md"
+              "text": "",
+              "link": ""
             },
             {
               "text": "コマンド管理 (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "データベース管理 (Dataview)",
-              "link": "/plugins/console/dataview.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "ファイル管理 (Explorer)",
-              "link": "/plugins/console/explorer.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "プラグイン依存可視化 (Insight)",
-              "link": "/plugins/console/insight.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "メッセージ地域化 (Locales)",
-              "link": "/plugins/console/locales.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "ログ出力 (Logger)",
-              "link": "/plugins/console/logger.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "ユーザー認証 (Login)",
-              "link": "/plugins/console/login.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "プラグイン管理 (Market)",
-              "link": "/plugins/console/market.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "サンドボックス環境 (Sandbox)",
-              "link": "/plugins/console/sandbox.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "ステータス表示 (Status)",
-              "link": "/plugins/console/status.md"
+              "text": "",
+              "link": ""
+            },
+            {
+              "text": "",
+              "link": ""
             }
           ]
         },
