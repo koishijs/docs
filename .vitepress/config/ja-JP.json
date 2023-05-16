@@ -25,7 +25,7 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "Crowdin でこのページの翻訳を修正する",
+      "text": "Crowdin でこのページを翻訳する",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
     },
     "navText": "ナビゲーション",
