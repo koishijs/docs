@@ -634,52 +634,56 @@
           "text": "Console",
           "items": [
             {
-              "text": "Console (Console)",
-              "link": "/plugins/console/index.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Data Analytics (Analytics)",
-              "link": "/plugins/console/analytics.md"
+              "text": "",
+              "link": ""
             },
             {
               "text": "Command Management (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "Database Management (Dataview)",
-              "link": "/plugins/console/dataview.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Resource Manager (Explorer)",
-              "link": "/plugins/console/explorer.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Dependencies Graph (Insight)",
-              "link": "/plugins/console/insight.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Localization Management (Locales)",
-              "link": "/plugins/console/locales.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Logs Management (Logger)",
-              "link": "/plugins/console/logger.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "User Authorization (Login)",
-              "link": "/plugins/console/login.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Plugin Manager (Market)",
-              "link": "/plugins/console/market.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Development Sandboxing (Sandbox)",
-              "link": "/plugins/console/sandbox.md"
+              "text": "",
+              "link": ""
             },
             {
-              "text": "Running Status (Status)",
-              "link": "/plugins/console/status.md"
+              "text": "",
+              "link": ""
+            },
+            {
+              "text": "",
+              "link": ""
             }
           ]
         },
