@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/zh-CN/manifest.json"
+        "href": "/manifest/zh-CN.json"
       }
     ],
     [
@@ -25,7 +25,7 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "Crowdin でこのページの翻訳を修正する",
+      "text": "Crowdin でこのページを翻訳する",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
     },
     "navText": "ナビゲーション",
@@ -634,51 +634,55 @@
           "text": "コンソール関連",
           "items": [
             {
-              "text": "コンソール支援 (Console)",
-              "link": "/plugins/console/index.md"
+              "text": "数据统计 (Analytics)",
+              "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "データ統計 (Analytics)",
-              "link": "/plugins/console/analytics.md"
+              "text": "用户登录 (Auth)",
+              "link": "/plugins/console/auth.md"
             },
             {
               "text": "コマンド管理 (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "データベース管理 (Dataview)",
+              "text": "插件配置 (Config)",
+              "link": "/plugins/console/config.md"
+            },
+            {
+              "text": "控制台 (Console)",
+              "link": "/plugins/console/index.md"
+            },
+            {
+              "text": "数据库操作 (Dataview)",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "ファイル管理 (Explorer)",
+              "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "プラグイン依存可視化 (Insight)",
+              "text": "插件依赖图 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "メッセージ地域化 (Locales)",
+              "text": "本地翻译 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "ログ出力 (Logger)",
+              "text": "日志管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "ユーザー認証 (Login)",
-              "link": "/plugins/console/login.md"
-            },
-            {
-              "text": "プラグイン管理 (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "サンドボックス環境 (Sandbox)",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "ステータス表示 (Status)",
+              "text": "运行状态 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
