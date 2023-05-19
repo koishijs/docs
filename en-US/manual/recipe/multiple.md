@@ -1,8 +1,8 @@
-# 维护多份配置
+# Multiple Configuration Maintenance
 
-有很多情况下你会想要维护同一个插件的多份配置：
+Sometimes you might want to maintain different configurations of a plugin, for example:
 
-- 你希望同时运行多个插件实例
+- Multiple plugin instances in the same time
 - 你希望在合适的时机切换另一份插件配置
 - 你希望在不同的群中使用不同的插件配置
 
