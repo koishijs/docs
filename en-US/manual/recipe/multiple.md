@@ -4,9 +4,9 @@ Sometimes you might want to maintain different configurations of a plugin, for e
 
 - Multiple plugin instances in the same time
 - Switch between configurations at the certain time
-- 你希望在不同的群中使用不同的插件配置
+- Use different configurations for different channels
 
-不同的需求往往有不同的解决方案，因此我无法给你统一的答案。但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
+Solutions can be varied for different demands,so there is no a unique answer. 但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
 
 ## Single Instance
 
