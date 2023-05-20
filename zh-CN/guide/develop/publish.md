@@ -92,7 +92,7 @@ root
   "homepage": "https://example.com",        // 主页
   "repository": {                           // 源码仓库
     "type": "git",
-    "url": "git+https://github.com/alice/koishi-plugin-example.git"
+    "url": "https://github.com/alice/koishi-plugin-example.git"
   },
   "keywords": ["example"],                  // 关键词
   "peerDependencies": {
