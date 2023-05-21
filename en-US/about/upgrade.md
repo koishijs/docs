@@ -44,3 +44,37 @@
 1. 安装最新版本的 @koishijs/plugin-hmr
 2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#模块热替换) 中提到的部分
 3. 移除 `package.json` 文件中 `scripts.dev` 的 `--watch` 参数
+
+## 插件市场迁移 <badge>v4.13.0</badge>
+
+在 4.13.0 版本中，我们将 @koishijs/plugin-market 插件分拆为了两个插件 market 和 config。其中 market 负责「插件市场」和「依赖管理」页面，而 config 则负责「插件配置」页面。直接将 market 插件更新到 2.0.0 或以上版本的用户会发现自己的「插件配置」页面消失，此时你需要执行下列操作完成升级：
+
+1. 首先确保你的 market 插件是最新版 (应该是 2.0.0 以上版本)
+2. 打开「插件市场」页面，安装最新版的 config 插件
+3. 打开「资源管理器」页面，找到 `koishi.yml` 页面，打开并编辑：
+
+```yaml
+host: 127.0.0.1
+port: 5140
+maxPort: 5149
+plugins:
+  ...
+    ...
+    config: {}         # 加一行在这里，注意左侧缩进与 market 对齐
+    market:
+      ...
+    ...
+```
+
+4. 点击右上角的保存按钮
+5. 重新启动 Koishi 实例
+
+## 国际化迁移 <badge>v4.13.0</badge>
+
+在 4.13.0 版本中，我们也引入了多语言的回退机制。这意味者，所有涉及语言配置的地方都需要从单一的语言字符串修改为数组。具体包括以下几个地方：
+
+- 应用配置项 `locale` → `i18n.locales`
+- 用户和频道的数据结构 `locale` → `locales`
+- 会话对象的属性 `locale` → `locales`
+
+用户无需留意这些改动，但开发者如果使用了上述 API 则需要进行迁移。
