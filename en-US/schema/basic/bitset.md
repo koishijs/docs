@@ -8,7 +8,7 @@ code: |
   }).description('配置项')
 ---
 
-# Bitset
+# 位集 (Bitset)
 
 `Schema.bitset()` 以多选框的形式描述了一个整数，通常每一位表达某种特征。
 
