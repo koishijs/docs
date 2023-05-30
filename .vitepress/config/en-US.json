@@ -496,26 +496,51 @@
           ]
         },
         {
-          "text": "Utilities",
+          "text": "Koishi Console",
           "items": [
             {
-              "text": "Schema",
+              "text": "控制台架构",
+              "link": "/api/console/index.md"
+            },
+            {
+              "text": "服务端 API",
+              "link": "/api/console/server.md"
+            },
+            {
+              "text": "上下文 API",
+              "link": "/api/console/context.md"
+            },
+            {
+              "text": "组合式 API",
+              "link": "/api/console/composition.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/console/component.md"
+            }
+          ]
+        },
+        {
+          "text": "其他功能",
+          "items": [
+            {
+              "text": "配置模式 (Schema)",
               "link": "/api/utils/schema.md"
             },
             {
-              "text": "Observer",
+              "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "Logger",
+              "text": "输出日志 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "Random",
+              "text": "随机操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "Miscellaneous",
+              "text": "其他工具 (Misc)",
               "link": "/api/utils/misc.md"
             }
           ]
