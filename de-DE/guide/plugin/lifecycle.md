@@ -29,7 +29,7 @@ function callback(ctx: Context) {
 }
 
 // 加载插件
-const fork = app.plugin(callback)
+const fork = ctx.plugin(callback)
 
 // 停用这个插件，取消上述全部副作用
 fork.dispose()
@@ -69,3 +69,108 @@ export function apply(ctx: Context, config) {
 ```
 
 ## 可重用性与 `fork` 事件
+
+### 可重用插件
+
+到此为止，我们所介绍的插件开发都限定在插件只能同时启用一份的情况。如果你想要在同一个应用中同时启用多份插件，会发生什么呢？
+
+```ts
+function callback() {
+  console.log('called')
+}
+
+ctx.plugin(callback)
+ctx.plugin(callback)
+```
+
+执行上面的代码，你会发现 `called` 只会被打印一次。这是因为 `ctx.plugin()` 会检测插件是否已经被加载：如果是，则会直接返回之前的 `Fork` 对象，而不会再次执行插件的逻辑。
+
+采用这种设计的主要原因是，插件往往会占用某些外部资源，因此重复启用会导致预期之外的问题。例如，一个插件注册了某个指令，如果重复启用，那么这个指令也会被重复注册，这显然是不合理的。
+
+但另一方面，如果你真的有这样的需求，Koishi 也提供了方法：只需声明插件的 `reusable` 属性为 `true` 即可。参考下面的例子：
+
+```ts title=reply.ts
+export const name = 'reply'
+export const reusable = true    // 声明此插件可重用
+
+export interface Config {
+  input: string
+  output: string
+}
+
+export function apply(ctx: Context, config: Config) {
+  ctx.middleware((session, next) => {
+    // 当用户发送 input 时，回复 output
+    if (session.message === config.input) {
+      return config.output
+    }
+    return next()
+  })
+}
+```
+
+然后我们可以多次调用此插件了：
+
+```ts title=app.ts
+import * as reply from './reply'
+
+ctx.plugin(reply, { input: '天王盖地虎', output: '宝塔镇河妖' })
+ctx.plugin(reply, { input: '宫廷玉液酒', output: '一百八一杯' })
+```
+
+如果你在开发类形式的插件，那么可以在类的静态属性中声明 `reusable`，效果是一样的：
+
+```ts title=bar.ts
+export default class Bar {
+  static reusable = true
+  constructor(ctx: Context) {}
+}
+```
+
+### 维护共享状态
+
+一种更复杂的情况是，我们既需要插件可重用，又需要维护一些共享状态。例如，我们能否编写一个指令，使得它总是返回插件被调用的次数呢？这时候 `fork` 事件就派上用场了：
+
+```ts title=count.ts
+export const name = 'count'
+
+export function apply(ctx: Context) {
+  let count = 0         // 这里保存了共享状态
+
+  ctx.command('count').action(() => {
+    return `此插件已被调用 ${count} 次。`
+  })
+
+  ctx.on('fork', (ctx) => {
+    count += 1
+    ctx.on('dispose', () => {
+      count -= 1
+    })
+  })
+}
+```
+
+我们可以看到，上面的插件并没有声明 `reusable` 属性，取而代之的是监听了 `fork` 事件。`fork` 是一个生命周期时间，当插件每次被调用时都会触发。因此，我们可以在 `fork` 事件中对共享状态进行更新。
+
+在这个例子中，我们每创建一个新的 `Fork` 对象，就会增加一次 `count`；而每当 `Fork` 对象被停用，就会减少一次 `count`；当用户调用指令时，我们只需要返回 `count` 的值即可。
+
+`fork` 事件实际上将插件分割成了两个不同的作用域。外侧的代码仍然只会被执行一次，而内侧的代码则会被执行多次。因此，只需将指令的注册放在外侧作用域中，这样就不用担心重复注册的问题了。
+
+`fork` 事件的回调函数与插件本身类似，也接受 `ctx` 和 `config` 两个参数，对应于该次调用时传入插件的参数。外侧和内侧的 `ctx` 含义不同，请格外注意。
+
+最后，让我们回到 `reusable` 属性。你会发现，其实这个属性只是 `fork` 事件的语法糖。下面两种写法是等价的：
+
+```ts
+ctx.plugin({
+  reusable: true,
+  apply: (ctx) => {
+    ctx.command('foo')
+  },
+})
+
+ctx.plugin((ctx) => {
+  ctx.on('fork', (ctx) => {
+    ctx.command('foo')
+  })
+})
+```
