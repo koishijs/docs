@@ -5,10 +5,12 @@ html {
   --k-color-success: #67c23a;
   --k-color-danger: #f56c6c;
   --k-color-warning: #e49400;
-  --k-color-primary: var(--vp-c-text-1);
-  --k-color-secondary: var(--vp-c-text-2);
-  --k-color-active: var(--vp-c-brand);
-  --k-color-border: var(--vp-c-divider);
+  --k-text-dark: var(--vp-c-text-1);
+  --k-text-normal: var(--vp-c-text-2);
+  --k-color-primary: var(--vp-c-brand);
+  --k-color-border: var(--vp-c-border);
+  --k-color-divider: var(--vp-c-divider);
+  --k-fill-normal: var(--k-color-primary);
 }
 
 html.dark {
@@ -26,7 +28,7 @@ html.dark {
   code {
     color: var(--fg2);
     padding: 0.25rem 0.5rem;
-    background-color: var(--page-bg);
+    background-color: var(--vp-c-mute);
     border-radius: 3px;
     overflow-wrap: break-word;
     transition: background-color 0.3s ease, color 0.3s ease;

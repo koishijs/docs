@@ -157,3 +157,20 @@ export function apply(ctx: Context) {
 `fork` 事件实际上将插件分割成了两个不同的作用域。外侧的代码仍然只会被执行一次，而内侧的代码则会被执行多次。因此，只需将指令的注册放在外侧作用域中，这样就不用担心重复注册的问题了。
 
 `fork` 事件的回调函数与插件本身类似，也接受 `ctx` 和 `config` 两个参数，对应于该次调用时传入插件的参数。外侧和内侧的 `ctx` 含义不同，请格外注意。
+
+最后，让我们回到 `reusable` 属性。你会发现，其实这个属性只是 `fork` 事件的语法糖。下面两种写法是等价的：
+
+```ts
+ctx.plugin({
+  reusable: true,
+  apply: (ctx) => {
+    ctx.command('foo')
+  },
+})
+
+ctx.plugin((ctx) => {
+  ctx.on('fork', (ctx) => {
+    ctx.command('foo')
+  })
+})
+```
