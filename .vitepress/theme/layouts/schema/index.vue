@@ -28,7 +28,7 @@
       </section>
     </div>
 
-    <section class="right-container">
+    <section class="right-container" v-if="schema">
       <client-only>
         <el-scrollbar>
           <form>
@@ -91,7 +91,7 @@ const input = computed(() => {
   display: flex;
 
   > * {
-    flex: 1;
+    flex: 1 0 50%;
   }
 
   > .left-container {
@@ -99,7 +99,6 @@ const input = computed(() => {
     // border-right: 1px solid var(--vp-c-divider);
     display: flex;
     flex-direction: column;
-    max-width: 50%;
     background-color: var(--code-bg-color);
 
     section {
