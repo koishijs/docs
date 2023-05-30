@@ -496,26 +496,51 @@
           ]
         },
         {
-          "text": "その他の機能",
+          "text": "コンソール",
           "items": [
             {
-              "text": "スキーマ",
+              "text": "控制台架构",
+              "link": "/api/console/index.md"
+            },
+            {
+              "text": "服务端 API",
+              "link": "/api/console/server.md"
+            },
+            {
+              "text": "上下文 API",
+              "link": "/api/console/context.md"
+            },
+            {
+              "text": "组合式 API",
+              "link": "/api/console/composition.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/console/component.md"
+            }
+          ]
+        },
+        {
+          "text": "其他功能",
+          "items": [
+            {
+              "text": "配置模式 (Schema)",
               "link": "/api/utils/schema.md"
             },
             {
-              "text": "オブザーバー",
+              "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "ログ出力 (Logger)",
+              "text": "输出日志 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "ランダム生成 (Random)",
+              "text": "随机操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "雑用ツール (Misc)",
+              "text": "其他工具 (Misc)",
               "link": "/api/utils/misc.md"
             }
           ]
