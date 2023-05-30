@@ -42,11 +42,11 @@ If you want to bind your account, the platform name and user ID here will be use
 
 ## 控制台登录
 
-[login](../../plugins/console/login.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。此外，该插件还自带了一个管理员账号，对于刚刚搭建好 Koishi 的用户来说，这是最方便的提权方式。
+[auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。此外，该插件还自带了一个管理员账号，对于刚刚搭建好 Koishi 的用户来说，这是最方便的提权方式。
 
 ### 配置登录插件
 
-进入「插件配置」界面，并点击 login 插件。这里我们会看到有一个「管理员设置」：
+进入「插件配置」界面，并点击 auth 插件。这里我们会看到有一个「管理员设置」：
 
 ![plugin-login](/manual/console/plugin-login.light.webp) {.light-only}
 

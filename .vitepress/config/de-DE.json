@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/zh-CN/manifest.json"
+        "href": "/manifest/zh-CN.json"
       }
     ],
     [
@@ -496,6 +496,31 @@
           ]
         },
         {
+          "text": "控制台",
+          "items": [
+            {
+              "text": "控制台架构",
+              "link": "/api/console/index.md"
+            },
+            {
+              "text": "服务端 API",
+              "link": "/api/console/server.md"
+            },
+            {
+              "text": "上下文 API",
+              "link": "/api/console/context.md"
+            },
+            {
+              "text": "组合式 API",
+              "link": "/api/console/composition.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/console/component.md"
+            }
+          ]
+        },
+        {
           "text": "其他功能",
           "items": [
             {
@@ -634,16 +659,24 @@
           "text": "控制台功能",
           "items": [
             {
-              "text": "控制台 (Console)",
-              "link": "/plugins/console/index.md"
-            },
-            {
               "text": "数据统计 (Analytics)",
               "link": "/plugins/console/analytics.md"
             },
             {
+              "text": "用户登录 (Auth)",
+              "link": "/plugins/console/auth.md"
+            },
+            {
               "text": "指令管理 (Commands)",
               "link": "/plugins/console/commands.md"
+            },
+            {
+              "text": "插件配置 (Config)",
+              "link": "/plugins/console/config.md"
+            },
+            {
+              "text": "控制台 (Console)",
+              "link": "/plugins/console/index.md"
             },
             {
               "text": "数据库操作 (Dataview)",
@@ -666,11 +699,7 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "用户登录 (Login)",
-              "link": "/plugins/console/login.md"
-            },
-            {
-              "text": "插件管理 (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
@@ -780,6 +809,10 @@
             {
               "text": "数组 (Array)",
               "link": "/schema/basic/array.md"
+            },
+            {
+              "text": "路径 (Path)",
+              "link": "/schema/basic/path.md"
             }
           ]
         },
@@ -813,6 +846,10 @@
             {
               "text": "Computed：条件求值",
               "link": "/schema/advanced/computed.md"
+            },
+            {
+              "text": "Dynamic：动态类型",
+              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }

@@ -1,14 +1,14 @@
-# 维护多份配置
+# Multiple Configuration Maintenance
 
-有很多情况下你会想要维护同一个插件的多份配置：
+Sometimes you might want to maintain different configurations of a plugin, for example:
 
-- 你希望同时运行多个插件实例
-- 你希望在合适的时机切换另一份插件配置
-- 你希望在不同的群中使用不同的插件配置
+- Multiple plugin instances in the same time
+- Switch between configurations at the certain time
+- Use different configurations for different channels
 
-不同的需求往往有不同的解决方案，因此我无法给你统一的答案。但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
+Solutions can be varied for different demands,so there is no a unique answer. 但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
 
-## Single instance
+## Single Instance
 
 In each Koishi application, some plugins can be enabled multiple instances, others can't. It is not the defects of the plugin, but the expected behavior.事实上，插件的作者可以指定具体哪些功能可以被独立地启用。这表现在插件上就是两种不同的类型：那些可以同时启用多份的插件被称为可重用插件，反之则称为不可重用插件。
 
@@ -18,6 +18,6 @@ In each Koishi application, some plugins can be enabled multiple instances, othe
 
 对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/filter.md) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#多实例) 方案。
 
-## 多实例
+## Multiple Instances
 
 另一种方案是同时运行多个 Koishi 应用。这样做的好处是，你可以在不同的应用中使用完全不同的插件配置，甚至启用完全不同的插件组合。但与之相对的，你需要额外维护多个应用，而且每个应用都需要一个独立的端口。

@@ -39,25 +39,25 @@ ctx.plugin(class {
 对于对象形式的插件，你还可以额外提供一个 `name` 属性作为插件的名称。对于函数和类形式的插件来说，插件名称便是函数名或类名。具名插件有助于更好地描述插件的功能，并被用于插件关系可视化中，实际上不会影响任何运行时的行为。
 
 ```ts title=foo.ts
-// 默认导出类形式的插件
-class Foo {
-  constructor(ctx: Context, config: Foo.Config) {}
-}
-
-namespace Foo {
-  export interface Config {}
-}
-
-export default Foo
-```
-
-```ts title=bar.ts
 // 整体导出对象形式的插件
 export interface Config {}
 
-export const name = 'Bar'
+export const name = 'Foo'
 
 export function apply(ctx: Context, config: Config) {}
+```
+
+```ts title=bar.ts
+// 默认导出类形式的插件
+class Bar {
+  constructor(ctx: Context, config: Bar.Config) {}
+}
+
+namespace Bar {
+  export interface Config {}
+}
+
+export default Bar
 ```
 
 ## 嵌套的插件

@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/zh-CN/manifest.json"
+        "href": "/manifest/en-US.json"
       }
     ],
     [
@@ -496,26 +496,51 @@
           ]
         },
         {
-          "text": "Utilities",
+          "text": "Koishi Console",
           "items": [
             {
-              "text": "Schema",
+              "text": "控制台架构",
+              "link": "/api/console/index.md"
+            },
+            {
+              "text": "服务端 API",
+              "link": "/api/console/server.md"
+            },
+            {
+              "text": "上下文 API",
+              "link": "/api/console/context.md"
+            },
+            {
+              "text": "组合式 API",
+              "link": "/api/console/composition.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/console/component.md"
+            }
+          ]
+        },
+        {
+          "text": "其他功能",
+          "items": [
+            {
+              "text": "配置模式 (Schema)",
               "link": "/api/utils/schema.md"
             },
             {
-              "text": "Observer",
+              "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "Logger",
+              "text": "输出日志 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "Random",
+              "text": "随机操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "Miscellaneous",
+              "text": "其他工具 (Misc)",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -634,51 +659,55 @@
           "text": "Console",
           "items": [
             {
-              "text": "Console (Console)",
-              "link": "/plugins/console/index.md"
+              "text": "数据统计 (Analytics)",
+              "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "Data Analytics (Analytics)",
-              "link": "/plugins/console/analytics.md"
+              "text": "用户登录 (Auth)",
+              "link": "/plugins/console/auth.md"
             },
             {
               "text": "Command Management (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "Database Management (Dataview)",
+              "text": "插件配置 (Config)",
+              "link": "/plugins/console/config.md"
+            },
+            {
+              "text": "控制台 (Console)",
+              "link": "/plugins/console/index.md"
+            },
+            {
+              "text": "数据库操作 (Dataview)",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "Resource Manager (Explorer)",
+              "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "Dependencies Graph (Insight)",
+              "text": "插件依赖图 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "Localization Management (Locales)",
+              "text": "本地翻译 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "Logs Management (Logger)",
+              "text": "日志管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "User Authorization (Login)",
-              "link": "/plugins/console/login.md"
-            },
-            {
-              "text": "Plugin Manager (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Development Sandboxing (Sandbox)",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "Running Status (Status)",
+              "text": "运行状态 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
@@ -718,30 +747,30 @@
       ],
       "/schema/": [
         {
-          "text": "通用概念",
+          "text": "General Concepts",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "Required and Optional",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认值",
+              "text": "Default Value",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "Title and Description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Configuration Appearance",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏配置项",
+              "text": "Hidden Configuration",
               "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "Nested Type",
               "link": "/schema/meta/nested.md"
             }
           ]
@@ -766,20 +795,24 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dictionary",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array",
               "link": "/schema/basic/array.md"
+            },
+            {
+              "text": "路径 (Path)",
+              "link": "/schema/basic/path.md"
             }
           ]
         },
@@ -787,32 +820,36 @@
           "text": "Advanced Types",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union: Radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union: Joint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union: Tagged 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union: Tagged 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transformation",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed",
               "link": "/schema/advanced/computed.md"
+            },
+            {
+              "text": "Dynamic：动态类型",
+              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }

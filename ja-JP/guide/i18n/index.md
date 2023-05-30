@@ -39,7 +39,7 @@ ctx.middleware((session, next) => {
 现在，如果我们希望它在某个频道使用英文，我们只需设置这个频道的属性：
 
 ```ts
-channel.locale = 'en'
+channel.locales = ['en']
 ```
 
 <chat-panel>
@@ -99,10 +99,10 @@ ctx.i18n.define('en', { hello: 'Hello, {author.username}!' })
 
 默认情况下的渲染优先级依次为：
 
-- 频道语言 (`session.channel.locale`)
-- 群组语言 (`session.guild.locale`)
-- 用户语言 (`session.user.locale`)
-- 默认语言 (`app.config.locale`)
+- 频道语言 (`session.channel.locales`)
+- 群组语言 (`session.guild.locales`)
+- 用户语言 (`session.user.locales`)
+- 默认语言 (`app.config.i18n.locales`)
 - 无语言 (`''`)
 - 其他任何语言
 
