@@ -478,6 +478,31 @@
           ]
         },
         {
+          "text": "控制台",
+          "items": [
+            {
+              "text": "控制台架构",
+              "link": "/api/console/index.md"
+            },
+            {
+              "text": "服务端 API",
+              "link": "/api/console/server.md"
+            },
+            {
+              "text": "上下文 API",
+              "link": "/api/console/context.md"
+            },
+            {
+              "text": "组合式 API",
+              "link": "/api/console/compisition.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/console/component.md"
+            }
+          ]
+        },
+        {
           "text": "其他功能",
           "items": [
             {

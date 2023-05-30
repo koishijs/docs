@@ -21,7 +21,7 @@
 - [内置组件](./message/components.md)
 - [渲染 API](./message/api.md)
 
-## 服务 API
+## 内置服务
 
 - [机器人管理 (Bots)](./service/bots.md)
 - [网络请求 (HTTP)](./service/http.md)
@@ -31,7 +31,7 @@
 - [网络服务 (Router)](./service/router.md)
 - [会话选择器 (Selector)](./service/selector.md)
 
-## 数据库 API
+## 数据库
 
 - [内置数据结构](./database/built-in.md)
 - [数据库操作 (Database)](./database/database.md)
@@ -39,7 +39,15 @@
 - [查询表达式 (Query)](./database/query.md)
 - [求值表达式 (Evaluation)](./database/evaluation.md)
 
-## 其他内置 API
+## 控制台
+
+- [控制台基本架构](./console/index.md)
+- [服务端 API](./console/server.md)
+- [上下文 API](./console/context.md)
+- [组合式 API](./console/composition.md)
+- [内置组件](./console/component.md)
+
+## 其他工具
 
 由其他官方库提供的 API：
 
