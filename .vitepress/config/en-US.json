@@ -809,6 +809,10 @@
             {
               "text": "Array",
               "link": "/schema/basic/array.md"
+            },
+            {
+              "text": "路径 (Path)",
+              "link": "/schema/basic/path.md"
             }
           ]
         },
@@ -842,6 +846,10 @@
             {
               "text": "Computed",
               "link": "/schema/advanced/computed.md"
+            },
+            {
+              "text": "Dynamic：动态类型",
+              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }
