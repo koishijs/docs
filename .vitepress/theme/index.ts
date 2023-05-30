@@ -26,6 +26,7 @@ import {
   ElTooltip,
 } from 'element-plus'
 import Layout from './layout.vue'
+import Overview from './overview.vue'
 
 import '@koishijs/core'
 import 'element-plus/dist/index.css'
@@ -70,5 +71,6 @@ export default defineTheme({
     app.use(ElTooltip)
     app.use(i18n)
     app.component('k-markdown', Markdown)
+    app.component('vp-overview', Overview)
   },
 })

@@ -46,6 +46,15 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
+        "text": "演练场",
+        "items": [
+          {
+            "text": "配置模式",
+            "link": "/schema/"
+          }
+        ]
+      },
+      {
         "text": "更多",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
@@ -728,6 +737,14 @@
         }
       ],
       "/schema/": [
+        {
+          "items": [
+            {
+              "text": "总览",
+              "link": "/schema/index.md"
+            }
+          ]
+        },
         {
           "text": "通用概念",
           "items": [

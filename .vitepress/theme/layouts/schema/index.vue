@@ -9,7 +9,7 @@
         </el-scrollbar>
       </section>
 
-      <section>
+      <section v-if="schema">
         <header>Input</header>
         <main>
           <code>
@@ -18,7 +18,7 @@
         </main>
       </section>
 
-      <section>
+      <section v-if="schema">
         <header>Output</header>
         <main>
           <code>
