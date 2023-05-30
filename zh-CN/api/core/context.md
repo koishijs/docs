@@ -1,22 +1,43 @@
 # 上下文 (Context)
 
-**上下文 (Context)** 是 Koishi 的重要概念。你的每一个插件，中间件，监听器和指令都被绑定在上下文上。
+**上下文 (Context)** 是 Koishi 的核心概念。Koishi 的绝大多数功能也直接通过上下文提供，包括插件、中间件、监听器和指令等。
 
-::: tip
-#### 提示
+## 混入属性和方法
 
-你可能正在寻找某些上下文 API 但并没有在这里找到，这是因为 Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文属性和方法都**通过混入的方式搭载在了服务上**。你可以前往服务部分看到更多上下文中可用的 API。如果你想快速找到某个具体的 API，请善用搜索功能。
-:::
 
-## 实例属性
+Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文属性和方法都**通过混入的方式搭载在了服务上**。以下的属性和方法是由内置服务混入的，你可以像使用实例属性和方法一样使用它们。这些 API 的具体用法在服务文档中详细介绍，你可以点击对应的链接前往查看。
+
+- [ctx.any](../service/selector.md#ctx-any)
+- [ctx.bail](../service/lifecycle.md#ctx-bail)
+- [ctx.before](../service/lifecycle.md#ctx-before)
+- [ctx.bots](../service/bots.md)
+- [ctx.broadcast](../service/bots.md#ctx-broadcast)
+- [ctx.emit](../service/lifecycle.md#ctx-emit)
+- [ctx.exclude](../service/selector.md#ctx-exclude)
+- [ctx.filter](../service/selector.md#ctx-filter)
+- [ctx.http](../service/http.md)
+- [ctx.i18n](../service/i18n.md)
+- [ctx.intersect](../service/selector.md#ctx-intersect)
+- [ctx.middleware](../service/lifecycle.md#ctx-middleware)
+- [ctx.never](../service/selector.md#ctx-never)
+- [ctx.off](../service/lifecycle.md#ctx-off)
+- [ctx.on](../service/lifecycle.md#ctx-on)
+- [ctx.once](../service/lifecycle.md#ctx-once)
+- [ctx.parallel](../service/lifecycle.md#ctx-parallel)
+- [ctx.plugin](../service/registry.md#ctx-plugin)
+- [ctx.router](../service/router.md)
+- [ctx.scope](../service/registry.md#ctx-scope)
+- [ctx.serial](../service/lifecycle.md#ctx-serial)
+- [ctx.union](../service/selector.md#ctx-union)
+- [ctx.using](../service/registry.md#ctx-using)
+
+## 实例属性和方法
 
 ### ctx.baseDir
 
 - 类型: `string`
 
 当前的 Koishi 默认路径。如果你使用配置文件，则这个路径是配置文件所在的路径；否则这个路径是当前工作路径。
-
-## 实例方法
 
 ### ctx.extend(meta)
 
@@ -25,12 +46,12 @@
 
 以当前上下文为原型创建一个新上下文。`meta` 中的属性将覆盖当前上下文的属性。
 
-### ctx.isolate(names)
+<!-- ### ctx.isolate(names)
 
 - **keys:** `string[]` 隔离的服务列表
 - 返回值: `this`
 
-以当前上下文为原型创建一个新上下文。`keys` 中指定的服务将在新的上下文中被隔离，其他服务仍然与当前上下文共享。参见 [服务的共享与隔离](../../guide/plugin/service.md#服务的共享与隔离)。
+以当前上下文为原型创建一个新上下文。`keys` 中指定的服务将在新的上下文中被隔离，其他服务仍然与当前上下文共享。参见 [服务的共享与隔离](../../guide/plugin/service.md#服务的共享与隔离)。 -->
 
 ### ctx.command(def, desc?, config?)
 

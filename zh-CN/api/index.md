@@ -41,7 +41,7 @@
 
 ## 控制台
 
-- [控制台基本架构](./console/index.md)
+- [控制台架构](./console/index.md)
 - [服务端 API](./console/server.md)
 - [上下文 API](./console/context.md)
 - [组合式 API](./console/composition.md)
