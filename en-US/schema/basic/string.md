@@ -10,7 +10,7 @@ code: |
   }).description('配置项')
 ---
 
-# String
+# 字符串 (String)
 
 `Schema.string()` 描述了一个字符串，支持多种特殊外观。
 

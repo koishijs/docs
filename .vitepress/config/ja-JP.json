@@ -64,7 +64,16 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "さらに表示",
+        "text": "演练场",
+        "items": [
+          {
+            "text": "配置模式",
+            "link": "/schema/"
+          }
+        ]
+      },
+      {
+        "text": "更多",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -747,6 +756,14 @@
       ],
       "/schema/": [
         {
+          "items": [
+            {
+              "text": "概要",
+              "link": "/schema/index.md"
+            }
+          ]
+        },
+        {
           "text": "通用概念",
           "items": [
             {
@@ -776,7 +793,7 @@
           ]
         },
         {
-          "text": "基本の型",
+          "text": "基础类型",
           "items": [
             {
               "text": "数值 (Number)",
@@ -817,7 +834,7 @@
           ]
         },
         {
-          "text": "高度な型",
+          "text": "高级类型",
           "items": [
             {
               "text": "Intersect：分组",
