@@ -73,10 +73,21 @@ const { frontmatter } = useData()
 
     .links {
       flex: 1 1 0;
+      flex-wrap: nowrap;
       height: 0;
       width: 100%;
+      margin-top: 70px;
       padding: calc(var(--vp-nav-height-mobile) + 1rem) 2rem 1rem;
       justify-content: flex-start;
+
+      .group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0 3rem;
+        padding-left: 25%;
+      }
     }
 
     .copyright {
