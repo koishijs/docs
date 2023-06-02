@@ -140,7 +140,7 @@ declare module 'koishi' {
 ctx.emit(session, 'custom-event', arg1, arg2, ...rest)
 ```
 
-过滤触发上下文的效果将在 [会话过滤器](../plugin/selector.md) 一节中详细介绍。
+过滤触发上下文的效果将在 [过滤器](../plugin/filter.md) 一节中详细介绍。
 
 更一般地，即使是不使用会话的事件也能主动选择触发的上下文，其语法完全一致：
 
