@@ -164,13 +164,21 @@ export function apply(ctx: Context) {
 ctx.plugin({
   reusable: true,
   apply: (ctx) => {
-    ctx.command('foo')
+    ctx.middleware(callback)
   },
 })
 
 ctx.plugin((ctx) => {
   ctx.on('fork', (ctx) => {
-    ctx.command('foo')
+    ctx.middleware(callback)
   })
 })
 ```
+
+## 重新认识上下文
+
+从学习 Koishi 开发的一开始，我们就已经接触到了 **上下文 (Context)** 这个概念。我们所熟悉的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.command()` 等等 API 都是上下文类所提供的方法。而在本节中，我们进一步看到，上下文在插件开发中扮演着非常重要的角色。
+
+上下文描述了机器人的一种可能的运行环境，而插件则是在这个环境中运行的。每个插件的上下文互不相同，这才保证了插件的副作用可以被有效地回收。
+
+对于完整的运行环境有许多的刻画方式，而副作用的回收正是其中的一个维护。基于副作用的上下文也可以称为插件上下文。在接下来的章节中，我们还将看到运行环境的其他刻画维度，包括基于依赖的服务上下文和基于过滤器的会话上下文。
