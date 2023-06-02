@@ -43,7 +43,7 @@
       {
         "text": "API",
         "link": "/api/",
-        "activeMatch": "/api/"
+        "activeMatch": "/(api|schema)/"
       },
       {
         "text": "Plugins",
@@ -62,15 +62,6 @@
           }
         ],
         "activeMatch": "/(plugins|market)/"
-      },
-      {
-        "text": "演练场",
-        "items": [
-          {
-            "text": "配置模式",
-            "link": "/schema/"
-          }
-        ]
       },
       {
         "text": "更多",
@@ -279,20 +270,20 @@
               "link": "/guide/plugin/"
             },
             {
-              "text": "Lifecycle",
-              "link": "/guide/plugin/lifecycle.md"
+              "text": "配置构型",
+              "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "Selectors",
-              "link": "/guide/plugin/selector.md"
+              "text": "生命周期",
+              "link": "/guide/plugin/lifecycle.md"
             },
             {
               "text": "Service & Dependency",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "Config Schema",
-              "link": "/guide/plugin/schema.md"
+              "text": "过滤器",
+              "link": "/guide/plugin/filter.md"
             }
           ]
         },
@@ -393,7 +384,17 @@
           ]
         },
         {
-          "text": "Core Modules",
+          "text": "演练场",
+          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "items": [
+            {
+              "text": "配置构型",
+              "link": "/schema/"
+            }
+          ]
+        },
+        {
+          "text": "核心模块",
           "items": [
             {
               "text": "Adapter",
@@ -404,11 +405,11 @@
               "link": "/api/core/app.md"
             },
             {
-              "text": "Bot",
+              "text": "机器人 (Bot)",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "Command",
+              "text": "指令 (Command)",
               "link": "/api/core/command.md"
             },
             {
@@ -416,20 +417,20 @@
               "link": "/api/core/context.md"
             },
             {
-              "text": "Events",
+              "text": "事件 (Events)",
               "link": "/api/core/events.md"
             },
             {
-              "text": "Session",
+              "text": "会话 (Session)",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "Message Element",
+          "text": "消息元素",
           "items": [
             {
-              "text": "Syntax Specification",
+              "text": "语法规范",
               "link": "/api/message/syntax.md"
             },
             {
@@ -437,69 +438,69 @@
               "link": "/api/message/elements.md"
             },
             {
-              "text": "Built-in Components",
+              "text": "内置组件",
               "link": "/api/message/components.md"
             },
             {
-              "text": "Render API",
+              "text": "渲染 API",
               "link": "/api/message/api.md"
             }
           ]
         },
         {
-          "text": "Built-in Services",
+          "text": "内置服务",
           "items": [
             {
-              "text": "Bots",
+              "text": "机器人 (Bots)",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "I18n",
+              "text": "过滤器 (Filer)",
+              "link": "/api/service/filter.md"
+            },
+            {
+              "text": "网络请求 (HTTP)",
+              "link": "/api/service/http.md"
+            },
+            {
+              "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "Lifecycle",
+              "text": "事件系统 (Lifecycle)",
               "link": "/api/service/lifecycle.md"
             },
             {
-              "text": "Registry",
+              "text": "插件系统 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "Selector",
-              "link": "/api/service/selector.md"
-            },
-            {
-              "text": "Router",
+              "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
-            },
-            {
-              "text": "HTTP",
-              "link": "/api/service/http.md"
             }
           ]
         },
         {
-          "text": "Database",
+          "text": "Database Integration",
           "items": [
             {
-              "text": "Built-in Data Structure",
+              "text": "内置数据结构",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "Database",
+              "text": "数据库操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
-              "text": "Data Model",
+              "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "Query Expression",
+              "text": "查询表达式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "Evaluation",
+              "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
             }
           ]
@@ -532,10 +533,6 @@
         {
           "text": "其他功能",
           "items": [
-            {
-              "text": "配置模式 (Schema)",
-              "link": "/api/utils/schema.md"
-            },
             {
               "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
@@ -756,15 +753,16 @@
       ],
       "/schema/": [
         {
+          "text": "演练场",
           "items": [
             {
-              "text": "Overview",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "通用概念",
+          "text": "核心概念",
           "items": [
             {
               "text": "必需与可选",
