@@ -67,7 +67,7 @@ h('p', 'hello', h('image', { url }))
 h('message', <image url="https://koishi.chat/logo.png"/>)
 ```
 
-## 标准元素
+## Standard Elements
 
 Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需求。例如：
 
