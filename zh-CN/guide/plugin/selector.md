@@ -1,14 +1,16 @@
 # 会话过滤器
 
-::: tip
-请不要滥用这项功能，在源码中直接书写账号或群号以实现过滤，这将导致其他用户无法使用你的插件。推荐在控制台中使用过滤器。
+一个 **上下文 (Context)** 描述了机器人的一种可能的运行环境。之前介绍过的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.command()` 这些 API 都是上下文类所提供的方法。
+
+默认情况下，一个会话事件、中间件或者指令都对所有的会话生效。但如果我们希望这些功能只对部分群聊或者用户生效，我们就需要用到 **会话过滤器**。
+
+## 属性过滤器
+
+::: warning
+请不要滥用这项功能：在源码中直接书写账号或群号会导致隐私泄露，并且其他用户无法使用你的插件。推荐在控制台中使用过滤器或使用条件求值。
 :::
 
-一个 **上下文 (Context)** 描述了机器人的一种可能的运行环境。例如，如果一个指令或中间件被绑定在了上面例子中的上下文，那么只有该环境下的事件才会触发对应的回调函数。之前介绍过的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.plugin()` 这些 API 都是上下文类所提供的方法。
-
-## 属性选择器
-
-我们可以通过 **属性选择器 (Attribute Selector)** 来快速创建新的上下文：
+让我们先从最简单的会话过滤器开始。**属性过滤器**可以用来快速创建满足特定条件的子上下文：
 
 ```ts
 ctx.user('112233')                  // 选择来自用户 112233 的会话
@@ -46,9 +48,9 @@ ctx.platform('onebot').plugin(require('./my-plugin'))
 
 是不是非常方便呢？
 
-## 条件选择器
+## 条件过滤器
 
-如果感觉简单的会话过滤器无法满足你的需求，你也可以给一个上下文添加 **条件选择器 (Condition Selector)**：它传入一个会话对象，并返回一个布尔类型。过滤器有三种添加方式：
+如果简单的会话过滤器无法满足你的需求，你也可以给一个上下文添加**条件过滤器**：它传入一个会话对象，并返回一个布尔类型。条件过滤器有三种添加方式：
 
 ```ts
 // 满足当前上下文条件，且消息内容为“啦啦啦”
@@ -76,35 +78,35 @@ ctx.guild('112233').exclude(ctx.user('445566'))
 
 与选择器方法类似，过滤器方法也会返回一个新的上下文，你可以在其上自由的添加监听器、中间件、指令和插件。
 
-<!-- ## 配置插件上下文
+## 插件级的过滤器
 
-::: tip
-此特性只能在配置文件中使用。
-:::
+如果你遵循了模块化的开发理念，你的插件应该具有较为独立的功能。那么此时，你的插件内部其实并不需要使用过滤器，而是在插件加载时指定一次即可。在这种情况下，Koishi 提供了直接在配置文件中指定过滤器的方法：
 
-加载插件的时候，我们也可以通过第二个参数选择插件的上下文：
-
-```ts
-ctx.plugin('repeater', {
-  // 仅在 onebot 平台下 2 个特定频道内注册插件
-  $platform: 'onebot',
-  $channel: ['123456', '456789'],
-
-  // 插件的配置
-  onRepeat: {
-    minTimes: 3,
-    probability: 0.5,
-  },
-})
+```yaml title=koishi.yml
+plugins:
+  repeater:
+    $filter:
+      # 仅在 onebot 平台下 2 个特定频道内注册插件
+      $and:
+        - $eq:
+            - $: platform
+            - onebot
+        - $in:
+            - $: channel
+            - - '123456'
+              - '456789'
+    onRepeat:
+      minTimes: 3
+      probability: 0.5
 ```
 
 这相当于
 
 ```ts
 ctx
-  .platform('onebot')
-  .channel('123456', '456789')
-  .plugin('repeater', {
+  .intersect(app.platform('onebot'))
+  .intersect(app.channel('123456', '456789'))
+  .plugin(require('koishi-plugin-repeater'), {
     onRepeat: {
       minTimes: 3,
       probability: 0.5,
@@ -112,52 +114,21 @@ ctx
   })
 ```
 
-这种写法也同样支持过滤器，并且它最大的好处是可以被写进配置文件中：
+我必须承认这种写法并不是很简便，但事实上它设计出来也不是让你手写的。在控制台的「插件配置」界面我们提供了图形化的过滤器配置，你可以在那里轻松地配置每个插件的会话过滤器。这个图形化界面对插件组也同样有效。
 
-::: tabs code
-```yaml
-plugins:
-  eval:
-    # 禁止 discord 平台触发，除非是特定调用者访问
-    $or:
-      - $user: '123456789'
-      - $not:
-          $platform: 'discord'
+特别地，如果你的插件不涉及任何会话，不需要设置会话过滤器，你也可以在插件中手动声明 `filter` 属性为 `false` (声明方式与插件的 [名称](./index.md#模块化的插件)、[可重用](./lifecycle.md#可重用插件) 都类似)：
 
-    # 插件的配置
-    scriptLoader: 'esbuild'
-```
 ```ts
-export default {
-  plugins: {
-    eval: {
-      // 禁止 discord 平台触发，除非是特定调用者访问
-      $or: [
-        { $user: '123456789' },
-        { $not: { $platform: 'discord' } },
-      ],
+// 作为导出整体的函数插件
+export const name = 'Foo'
+export const filter = false
+export function apply(ctx: Context) {}
+```
 
-      // 插件的配置
-      scriptLoader: 'esbuild',
-    },
-  },
+```ts
+// 作为默认导出的类插件
+export default class Bar {
+  static filter = false
+  constructor(ctx: Context) {}
 }
 ```
-:::
-
-这相当于
-
-```ts
-app
-  .user('123456789')
-  .union(app.exclude(app.platform('discord')))
-  .plugin('eval', {
-    scriptLoader: 'esbuild',
-  })
-```
-
-::: tip
-注意到这些属性是与插件的配置项写在一起的。因为这些特殊属性的存在，我们始终建议将插件的配置项设置为一个普通对象 (而不是原始类型或数组等其他类的实例)。
-:::
-
-## 插件组 <Badge text="CLI"/> -->
