@@ -1,5 +1,10 @@
 @import './element.scss';
 
+@mixin apply-color($name, $base) {
+  --k-color-#{$name}: #{$base};
+  --k-color-#{$name}-fade: #{fade-out($base, 0.9)};
+}
+
 html {
   --c-border: transparent;
   --k-color-success: #67c23a;
@@ -11,13 +16,22 @@ html {
   --k-color-border: var(--vp-c-border);
   --k-color-divider: var(--vp-c-divider);
   --k-fill-normal: var(--k-color-primary);
+  --color-transition: all 0.3s ease;
+
+  // @include apply-color(primary, #409eff);
+  // @include apply-color(secondary, #909399);
+  @include apply-color(success, #67c23a);
+  @include apply-color(warning, #e49400);
+  @include apply-color(danger, #f56c6c);
 }
 
 html.dark {
   --c-border: transparent; // var(--vp-c-divider-inverse);
-  --k-color-success: #3ba55e;
-  --k-color-danger: #ff595a;
-  --k-color-warning: #f9af1b;
+  // @include apply-color(primary, #7459ff);
+  // @include apply-color(secondary, #4f545c);
+  @include apply-color(success, #3ba55e);
+  @include apply-color(warning, #f9af1b);
+  @include apply-color(danger, #ff595a);
 }
 
 .markdown {
