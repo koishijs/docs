@@ -25,7 +25,7 @@
       {
         "text": "API",
         "link": "/api/",
-        "activeMatch": "/api/"
+        "activeMatch": "/(api|schema)/"
       },
       {
         "text": "插件",
@@ -44,15 +44,6 @@
           }
         ],
         "activeMatch": "/(plugins|market)/"
-      },
-      {
-        "text": "演练场",
-        "items": [
-          {
-            "text": "配置构型",
-            "link": "/schema/"
-          }
-        ]
       },
       {
         "text": "更多",
@@ -375,6 +366,16 @@
           ]
         },
         {
+          "text": "演练场",
+          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "items": [
+            {
+              "text": "配置构型",
+              "link": "/schema/"
+            }
+          ]
+        },
+        {
           "text": "核心模块",
           "items": [
             {
@@ -514,10 +515,6 @@
         {
           "text": "其他功能",
           "items": [
-            {
-              "text": "配置构型 (Schema)",
-              "link": "/api/utils/schema.md"
-            },
             {
               "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
@@ -738,15 +735,16 @@
       ],
       "/schema/": [
         {
+          "text": "演练场",
           "items": [
             {
-              "text": "总览",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "通用概念",
+          "text": "核心概念",
           "items": [
             {
               "text": "必需与可选",
