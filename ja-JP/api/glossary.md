@@ -37,7 +37,7 @@
 
 参考：
 
-- [开发 > 使用上下文](../guide/plugin/selector.md)
+- [开发 > 认识插件](../guide/plugin/index.md)
 - [API > 上下文](./core/context.md)
 
 ## 数据库 (Database)
@@ -97,12 +97,12 @@
 
 - [API > 网络服务](./service/router.md)
 
-## 配置模式 (Schema)
+## 配置构型 (Schema)
 
 参考：
 
-- [开发 > 配置模式](../guide/plugin/schema.md)
-- [API > 配置模式](./utils/schema.md)
+- [开发 > 配置构型](../guide/plugin/schema.md)
+- [演练场 > 配置构型](../schema/index.md)
 
 ## 消息元素 (Element)
 
