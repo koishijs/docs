@@ -37,7 +37,7 @@
 
 参考：
 
-- [开发 > 使用上下文](../guide/plugin/selector.md)
+- [开发 > 认识插件](../guide/plugin/index.md)
 - [API > 上下文](./core/context.md)
 
 ## 数据库 (Database)
