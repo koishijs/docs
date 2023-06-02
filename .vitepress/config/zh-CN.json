@@ -49,7 +49,7 @@
         "text": "演练场",
         "items": [
           {
-            "text": "配置模式",
+            "text": "配置构型",
             "link": "/schema/"
           }
         ]
@@ -261,7 +261,7 @@
               "link": "/guide/plugin/"
             },
             {
-              "text": "配置模式",
+              "text": "配置构型",
               "link": "/guide/plugin/schema.md"
             },
             {
@@ -515,7 +515,7 @@
           "text": "其他功能",
           "items": [
             {
-              "text": "配置模式 (Schema)",
+              "text": "配置构型 (Schema)",
               "link": "/api/utils/schema.md"
             },
             {
