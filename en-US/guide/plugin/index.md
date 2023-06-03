@@ -6,8 +6,8 @@ Modular is a fundamental feature in Koishi.With the plugin system, Koishi was ab
 
 A plugin needs to be one of three basic forms:
 
-1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的选项
-2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的选项
+1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的配置项
+2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的配置项
 3. An object which has a `apply` method of the object and the method is the function in the first form
 
 而一个插件在被加载时，则相当于进行了上述函数的调用。Therefore, the four formulations below are basic equivalent:
