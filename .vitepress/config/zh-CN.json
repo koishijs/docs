@@ -362,6 +362,10 @@
             {
               "text": "总览",
               "link": "/api/"
+            },
+            {
+              "text": "术语表",
+              "link": "/api/glossary.md"
             }
           ]
         },
