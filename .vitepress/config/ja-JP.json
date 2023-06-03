@@ -380,6 +380,10 @@
             {
               "text": "概要",
               "link": "/api/"
+            },
+            {
+              "text": "术语表",
+              "link": "/api/glossary.md"
             }
           ]
         },
@@ -455,7 +459,11 @@
               "link": "/api/service/bots.md"
             },
             {
-              "text": "过滤器 (Filer)",
+              "text": "事件系统 (Events)",
+              "link": "/api/service/events.md"
+            },
+            {
+              "text": "过滤器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
@@ -465,10 +473,6 @@
             {
               "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
-            },
-            {
-              "text": "事件系统 (Lifecycle)",
-              "link": "/api/service/lifecycle.md"
             },
             {
               "text": "插件系统 (Registry)",
