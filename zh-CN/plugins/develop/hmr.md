@@ -1,7 +1,7 @@
 # @koishijs/plugin-hmr
 
 ::: tip
-使用方法请参见 [开发 > 启动脚本 > 模块热替换](../../guide/develop/script.md#模块热替换) 章节。
+使用方法请参见 [开发 > 开发起步 > 启动脚本](../../guide/develop/script.md#模块热替换) 章节。
 :::
 
 ## 配置项
