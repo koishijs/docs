@@ -1,5 +1,9 @@
 # 认识插件
 
+::: tip
+在学习本章之前，建议先阅读 [入门 > 安装和配置插件](../../manual/console/market.md)。
+:::
+
 Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
 
 ## Basic Forms of Plugins
