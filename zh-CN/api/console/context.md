@@ -14,17 +14,17 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 以下的属性和方法是由服务混入的。你可以就像使用实例属性和方法一样使用它们。这些 API 的具体用法在对应的服务文档中详细介绍，你可以点击链接前往查看。
 
-- [ctx.bail](../service/lifecycle.md#ctx-bail)
-- [ctx.before](../service/lifecycle.md#ctx-before)
-- [ctx.emit](../service/lifecycle.md#ctx-emit)
-- [ctx.middleware](../service/lifecycle.md#ctx-middleware)
-- [ctx.off](../service/lifecycle.md#ctx-off)
-- [ctx.on](../service/lifecycle.md#ctx-on)
-- [ctx.once](../service/lifecycle.md#ctx-once)
-- [ctx.parallel](../service/lifecycle.md#ctx-parallel)
+- [ctx.bail](../service/events.md#ctx-bail)
+- [ctx.before](../service/events.md#ctx-before)
+- [ctx.emit](../service/events.md#ctx-emit)
+- [ctx.middleware](../service/events.md#ctx-middleware)
+- [ctx.off](../service/events.md#ctx-off)
+- [ctx.on](../service/events.md#ctx-on)
+- [ctx.once](../service/events.md#ctx-once)
+- [ctx.parallel](../service/events.md#ctx-parallel)
 - [ctx.plugin](../service/registry.md#ctx-plugin)
 - [ctx.scope](../service/registry.md#ctx-scope)
-- [ctx.serial](../service/lifecycle.md#ctx-serial)
+- [ctx.serial](../service/events.md#ctx-serial)
 - [ctx.using](../service/registry.md#ctx-using)
 
 ## 实例方法

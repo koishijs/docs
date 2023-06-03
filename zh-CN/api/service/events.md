@@ -1,4 +1,4 @@
-# 事件系统 (Lifecycle)
+# 事件系统 (Events)
 
 ::: tip
 相关指南：[事件系统](../../guide/basic/events.md)

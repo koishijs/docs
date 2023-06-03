@@ -37,14 +37,20 @@
 - [开发 > 交互基础 > 指令开发](../guide/basic/command.md)
 - [API > 核心模块 > 指令](./core/command.md)
 
+## 控制台 (Console)
+
+- [入门 > 认识控制台](../manual/console/index.md)
+- [开发 > 控制台](../guide/console/index.md)
+- [API > 控制台](./console/index.md)
+
 ## 上下文 (Context)
 
-- [开发 > 模块化 > 认识插件](../guide/plugin/index.md)
-- [开发 > 模块化 > 生命周期](../guide/plugin/lifecycle.md)
+- [开发 > 模块化](../guide/plugin/index.md)
 - [API > 核心模块 > 上下文](./core/context.md)
 
 ## 数据库 (Database)
 
+- [入门 > 访问数据库](../manual/recipe/dataview.md)
 - [开发 > 数据库 > 使用数据库](../guide/database/index.md)
 - [API > 数据库](./database/built-in.md)
 
@@ -52,7 +58,7 @@
 
 - [开发 > 交互基础 > 事件系统](../guide/basic/events.md)
 - [API > 核心模块 > 事件](./core/events.md)
-- [API > 内置服务 > 事件系统](./service/lifecycle.md)
+- [API > 内置服务 > 事件系统](./service/events.md)
 
 ## 过滤器 (Filter)
 
@@ -65,6 +71,12 @@
 群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 QQ)：一个群组内有且仅有一个群聊频道。私聊频道不属于任何群组。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
+
+## 生命周期 (Lifecycle)
+
+- [开发 > 模块化 > 生命周期](../guide/plugin/lifecycle.md)
+- [API > 核心模块 > 事件](./core/events.html#生命周期事件)
+- [API > 内置服务 > 插件系统](./service/registry.md)
 
 ## 中间件 (Middleware)
 
@@ -84,6 +96,7 @@
 ## 插件 (Plugin)
 
 - [开发 > 模块化 > 认识插件](../guide/plugin/index.md)
+- [API > 内置服务 > 插件系统](./service/registry.md)
 
 ## 协议 (Protocol)
 
