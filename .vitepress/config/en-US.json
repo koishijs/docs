@@ -347,19 +347,23 @@
           ]
         },
         {
-          "text": "Console Plugin Development",
+          "text": "Koishi Console",
           "items": [
             {
-              "text": "Using Koishi Console",
+              "text": "扩展控制台",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "Extend Console",
-              "link": "/guide/console/extension.md"
+              "text": "数据交互",
+              "link": "/guide/console/data.md"
             },
             {
-              "text": "Data Exchange",
-              "link": "/guide/console/data.md"
+              "text": "客户端开发",
+              "link": "/guide/console/client.md"
+            },
+            {
+              "text": "主题开发",
+              "link": "/guide/console/theme.md"
             }
           ]
         },
