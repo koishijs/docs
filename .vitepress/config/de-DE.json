@@ -43,7 +43,7 @@
       {
         "text": "API",
         "link": "/api/",
-        "activeMatch": "/api/"
+        "activeMatch": "/(api|schema)/"
       },
       {
         "text": "插件",
@@ -62,15 +62,6 @@
           }
         ],
         "activeMatch": "/(plugins|market)/"
-      },
-      {
-        "text": "演练场",
-        "items": [
-          {
-            "text": "配置模式",
-            "link": "/schema/"
-          }
-        ]
       },
       {
         "text": "更多",
@@ -279,20 +270,20 @@
               "link": "/guide/plugin/"
             },
             {
-              "text": "生命周期",
-              "link": "/guide/plugin/lifecycle.md"
+              "text": "配置构型",
+              "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "会话过滤器",
-              "link": "/guide/plugin/selector.md"
+              "text": "生命周期",
+              "link": "/guide/plugin/lifecycle.md"
             },
             {
               "text": "服务与依赖",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "配置模式",
-              "link": "/guide/plugin/schema.md"
+              "text": "过滤器",
+              "link": "/guide/plugin/filter.md"
             }
           ]
         },
@@ -356,19 +347,23 @@
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "控制台",
           "items": [
             {
-              "text": "使用控制台",
+              "text": "扩展控制台",
               "link": "/guide/console/index.md"
-            },
-            {
-              "text": "编写扩展",
-              "link": "/guide/console/extension.md"
             },
             {
               "text": "数据交互",
               "link": "/guide/console/data.md"
+            },
+            {
+              "text": "客户端开发",
+              "link": "/guide/console/client.md"
+            },
+            {
+              "text": "主题开发",
+              "link": "/guide/console/theme.md"
             }
           ]
         },
@@ -389,6 +384,20 @@
             {
               "text": "总览",
               "link": "/api/"
+            },
+            {
+              "text": "术语表",
+              "link": "/api/glossary.md"
+            }
+          ]
+        },
+        {
+          "text": "演练场",
+          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "items": [
+            {
+              "text": "配置构型",
+              "link": "/schema/"
             }
           ]
         },
@@ -454,28 +463,28 @@
               "link": "/api/service/bots.md"
             },
             {
-              "text": "国际化 (I18n)",
-              "link": "/api/service/i18n.md"
+              "text": "事件系统 (Events)",
+              "link": "/api/service/events.md"
             },
             {
-              "text": "事件系统 (Lifecycle)",
-              "link": "/api/service/lifecycle.md"
+              "text": "过滤器 (Filter)",
+              "link": "/api/service/filter.md"
+            },
+            {
+              "text": "网络请求 (HTTP)",
+              "link": "/api/service/http.md"
+            },
+            {
+              "text": "国际化 (I18n)",
+              "link": "/api/service/i18n.md"
             },
             {
               "text": "插件系统 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "选择器 (Selector)",
-              "link": "/api/service/selector.md"
-            },
-            {
               "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
-            },
-            {
-              "text": "网络请求 (HTTP)",
-              "link": "/api/service/http.md"
             }
           ]
         },
@@ -532,10 +541,6 @@
         {
           "text": "其他功能",
           "items": [
-            {
-              "text": "配置模式 (Schema)",
-              "link": "/api/utils/schema.md"
-            },
             {
               "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
@@ -756,15 +761,16 @@
       ],
       "/schema/": [
         {
+          "text": "演练场",
           "items": [
             {
-              "text": "总览",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "通用概念",
+          "text": "核心概念",
           "items": [
             {
               "text": "必需与可选",

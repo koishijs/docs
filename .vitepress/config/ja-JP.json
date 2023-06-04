@@ -43,7 +43,7 @@
       {
         "text": "API",
         "link": "/api/",
-        "activeMatch": "/api/"
+        "activeMatch": "/(api|schema)/"
       },
       {
         "text": "プラグイン",
@@ -62,15 +62,6 @@
           }
         ],
         "activeMatch": "/(plugins|market)/"
-      },
-      {
-        "text": "演练场",
-        "items": [
-          {
-            "text": "配置模式",
-            "link": "/schema/"
-          }
-        ]
       },
       {
         "text": "更多",
@@ -279,20 +270,20 @@
               "link": "/guide/plugin/"
             },
             {
-              "text": "ライフサイクル",
-              "link": "/guide/plugin/lifecycle.md"
+              "text": "配置构型",
+              "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "セッションフィルター",
-              "link": "/guide/plugin/selector.md"
+              "text": "生命周期",
+              "link": "/guide/plugin/lifecycle.md"
             },
             {
               "text": "サービスと依存性",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "スキーマ",
-              "link": "/guide/plugin/schema.md"
+              "text": "过滤器",
+              "link": "/guide/plugin/filter.md"
             }
           ]
         },
@@ -356,19 +347,23 @@
           ]
         },
         {
-          "text": "コンソール開発",
+          "text": "コンソール",
           "items": [
             {
-              "text": "コンソールを使用する",
+              "text": "扩展控制台",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "拡張機能の作成",
-              "link": "/guide/console/extension.md"
+              "text": "数据交互",
+              "link": "/guide/console/data.md"
             },
             {
-              "text": "データ通信",
-              "link": "/guide/console/data.md"
+              "text": "客户端开发",
+              "link": "/guide/console/client.md"
+            },
+            {
+              "text": "主题开发",
+              "link": "/guide/console/theme.md"
             }
           ]
         },
@@ -389,98 +384,112 @@
             {
               "text": "概要",
               "link": "/api/"
+            },
+            {
+              "text": "术语表",
+              "link": "/api/glossary.md"
             }
           ]
         },
         {
-          "text": "コアモジュール",
+          "text": "演练场",
+          "desc": "我们专门为一些 API 提供了交互式的演练场。",
           "items": [
             {
-              "text": "アダプター",
+              "text": "配置构型",
+              "link": "/schema/"
+            }
+          ]
+        },
+        {
+          "text": "核心模块",
+          "items": [
+            {
+              "text": "适配器 (Adapter)",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "アプリ",
+              "text": "应用 (App)",
               "link": "/api/core/app.md"
             },
             {
-              "text": "ボット",
+              "text": "机器人 (Bot)",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "コマンド",
+              "text": "指令 (Command)",
               "link": "/api/core/command.md"
             },
             {
-              "text": "コンテキスト",
+              "text": "上下文 (Context)",
               "link": "/api/core/context.md"
             },
             {
-              "text": "イベント",
+              "text": "事件 (Events)",
               "link": "/api/core/events.md"
             },
             {
-              "text": "セッション",
+              "text": "会话 (Session)",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "メッセージ要素",
+          "text": "消息元素",
           "items": [
             {
-              "text": "構文規則",
+              "text": "语法规范",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "標準要素",
+              "text": "标准元素",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "組み込みコンポーネント",
+              "text": "内置组件",
               "link": "/api/message/components.md"
             },
             {
-              "text": "レンダリング API",
+              "text": "渲染 API",
               "link": "/api/message/api.md"
             }
           ]
         },
         {
-          "text": "組み込みサービス",
+          "text": "内置服务",
           "items": [
             {
-              "text": "ボット",
+              "text": "机器人 (Bots)",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "国際化 (I18n)",
+              "text": "事件系统 (Events)",
+              "link": "/api/service/events.md"
+            },
+            {
+              "text": "过滤器 (Filter)",
+              "link": "/api/service/filter.md"
+            },
+            {
+              "text": "网络请求 (HTTP)",
+              "link": "/api/service/http.md"
+            },
+            {
+              "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "イベントシステム (Lifecycle)",
-              "link": "/api/service/lifecycle.md"
-            },
-            {
-              "text": "プラグインシステム (Registry)",
+              "text": "插件系统 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "セレクター",
-              "link": "/api/service/selector.md"
-            },
-            {
-              "text": "ネットワークサービス (Router)",
+              "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
-            },
-            {
-              "text": "ネットワークリクエスト (HTTP)",
-              "link": "/api/service/http.md"
             }
           ]
         },
         {
-          "text": "データベース",
+          "text": "数据库",
           "items": [
             {
               "text": "組み込みデータ構造",
@@ -491,15 +500,15 @@
               "link": "/api/database/database.md"
             },
             {
-              "text": "データモデル (Model)",
+              "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "クエリ式 (Query)",
+              "text": "查询表达式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "評価式 (Eval)",
+              "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
             }
           ]
@@ -532,10 +541,6 @@
         {
           "text": "其他功能",
           "items": [
-            {
-              "text": "配置模式 (Schema)",
-              "link": "/api/utils/schema.md"
-            },
             {
               "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
@@ -756,15 +761,16 @@
       ],
       "/schema/": [
         {
+          "text": "演练场",
           "items": [
             {
-              "text": "概要",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "通用概念",
+          "text": "核心概念",
           "items": [
             {
               "text": "必需与可选",

@@ -41,3 +41,7 @@ export default Schema.intersect([
   ]),
 ])
 ```
+
+::: tip
+请注意这个例子中对于 `default()` 和 `required()` 的使用。由于配置项默认情况下都是可选的，所以下方的 `type` 配置项如果类型与上方的默认值不同，就必须加上 `required()`。在这个例子中，`type` 本来就是一个必需属性，所以下方的每一个 `type` 都必须加上 `required()`。
+:::

@@ -1,13 +1,17 @@
 # 认识插件
 
+::: tip
+在学习本章之前，建议先阅读 [入门 > 安装和配置插件](../../manual/console/market.md)。
+:::
+
 Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
 
 ## Basic Forms of Plugins
 
 A plugin needs to be one of three basic forms:
 
-1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的选项
-2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的选项
+1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的配置项
+2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的配置项
 3. An object which has a `apply` method of the object and the method is the function in the first form
 
 而一个插件在被加载时，则相当于进行了上述函数的调用。Therefore, the four formulations below are basic equivalent:

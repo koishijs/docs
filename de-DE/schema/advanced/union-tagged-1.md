@@ -35,3 +35,7 @@ export default Schema.intersect([
   ])
 ])
 ```
+
+::: tip
+请注意这个例子中对于 `default()` 和 `required()` 的使用。由于配置项默认情况下都是可选的，所以下方的 `enabled` 如果类型与上方的默认值不同，就必须加上 `required()`；反过来，如果相同，你就不应该加上 `required()` (你甚至可以缺省不写，这就是为什么最下面出现了一个空白的 `object({})`)。
+:::

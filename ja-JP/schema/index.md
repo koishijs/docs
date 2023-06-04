@@ -2,6 +2,6 @@
 layout: schema
 ---
 
-# 配置模式
+# スキーマ
 
 <vp-overview/>

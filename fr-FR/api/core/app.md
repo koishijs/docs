@@ -105,26 +105,10 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 - 类型：`Record<string, any>`
 
-要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见 [认识插件](../../guide/plugin/) 一章。
+要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见：
 
-我们还支持配置插件的上下文选择器：
-
-```ts
-type SelectorValue = boolean | string | string[]
-
-interface Selection {
-  $user: SelectorValue
-  $channel: SelectorValue
-  $group: SelectorValue
-  $private: SelectorValue
-  $self: SelectorValue
-  $platform: SelectorValue
-  $union: Selection[]
-  $except: Selection
-}
-```
-
-参见 [在配置文件中使用选择器](../../guide/plugin/selector.md#在配置文件中使用选择器) 一节。
+- [配置文件](../../guide/develop/config.md)
+- [认识插件](../../guide/plugin/index.md)
 
 ### options.logger
 
