@@ -347,19 +347,23 @@
           ]
         },
         {
-          "text": "控制台开发",
+          "text": "控制台",
           "items": [
             {
-              "text": "使用控制台",
+              "text": "扩展控制台",
               "link": "/guide/console/index.md"
-            },
-            {
-              "text": "编写扩展",
-              "link": "/guide/console/extension.md"
             },
             {
               "text": "数据交互",
               "link": "/guide/console/data.md"
+            },
+            {
+              "text": "客户端开发",
+              "link": "/guide/console/client.md"
+            },
+            {
+              "text": "主题开发",
+              "link": "/guide/console/theme.md"
             }
           ]
         },
