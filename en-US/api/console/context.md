@@ -40,3 +40,13 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 ### ctx.settings()
 
 ### ctx.slot()
+
+### ctx.theme(options)
+
+- **options.id:** `string` 主题标识符 (必须以 `-dark` 或 `-light` 结尾)
+- **options.name:** `string` 主题名称
+- **options.components:** `Dict<Component>` 主题提供的布局组件
+
+定义一个新的主题。
+
+参考：[主题开发](../../guide/console/theme.md)

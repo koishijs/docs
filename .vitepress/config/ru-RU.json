@@ -330,23 +330,6 @@
           ]
         },
         {
-          "text": "国际化",
-          "items": [
-            {
-              "text": "多语言支持",
-              "link": "/guide/i18n/index.md"
-            },
-            {
-              "text": "编写翻译文件",
-              "link": "/guide/i18n/translation.md"
-            },
-            {
-              "text": "接入 Crowdin",
-              "link": "/guide/i18n/crowdin.md"
-            }
-          ]
-        },
-        {
           "text": "Консоль",
           "items": [
             {
@@ -364,6 +347,23 @@
             {
               "text": "主题开发",
               "link": "/guide/console/theme.md"
+            }
+          ]
+        },
+        {
+          "text": "国际化",
+          "items": [
+            {
+              "text": "多语言支持",
+              "link": "/guide/i18n/index.md"
+            },
+            {
+              "text": "编写翻译文件",
+              "link": "/guide/i18n/translation.md"
+            },
+            {
+              "text": "接入 Crowdin",
+              "link": "/guide/i18n/crowdin.md"
             }
           ]
         },
@@ -435,27 +435,6 @@
           ]
         },
         {
-          "text": "消息元素",
-          "items": [
-            {
-              "text": "语法规范",
-              "link": "/api/message/syntax.md"
-            },
-            {
-              "text": "标准元素",
-              "link": "/api/message/elements.md"
-            },
-            {
-              "text": "内置组件",
-              "link": "/api/message/components.md"
-            },
-            {
-              "text": "渲染 API",
-              "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
           "text": "内置服务",
           "items": [
             {
@@ -485,6 +464,27 @@
             {
               "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
+            }
+          ]
+        },
+        {
+          "text": "消息元素",
+          "items": [
+            {
+              "text": "语法规范",
+              "link": "/api/message/syntax.md"
+            },
+            {
+              "text": "标准元素",
+              "link": "/api/message/elements.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/message/components.md"
+            },
+            {
+              "text": "渲染 API",
+              "link": "/api/message/api.md"
             }
           ]
         },

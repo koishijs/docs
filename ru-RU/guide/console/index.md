@@ -4,34 +4,31 @@
 在学习本章之前，建议先阅读 [入门 > 认识控制台](../../manual/console/index.md)。
 :::
 
-## 创建扩展
-
-::: tabs code
-```npm
-npm i @koishijs/client @koishijs/plugin-console -D
-```
-```yarn
-yarn add @koishijs/client @koishijs/plugin-console -D
-```
+::: tip
+本节在 [工作区开发](../develop/workspace.md#创建新插件) 所创建插件的基础上修改。
 :::
 
-在项目中新建这几个文件：
+## 创建扩展
+
+在插件目录中新建这几个文件：
 
 ```diff
-└── my-plugin
-+   ├── client
-+   │   ├── index.ts
-+   │   ├── custom-page.vue
-+   │   └── tsconfig.json
-    ├── src
-    │   └── index.ts
-    ├── package.json
-    └── tsconfig.json
+root
+└── external
+    └── example
++       ├── client
++       │   ├── index.ts
++       │   ├── page.vue
++       │   └── tsconfig.json
+        ├── src
+        │   └── index.ts
+        ├── package.json
+        └── tsconfig.json
 ```
 
 ```ts title=client/index.ts no-extra-header
 import { Context } from '@koishijs/client'
-import Page from './custom-page.vue'
+import Page from './page.vue'
 
 export default (ctx: Context) => {
   // 此 Context 非彼 Context
@@ -44,7 +41,7 @@ export default (ctx: Context) => {
 }
 ```
 
-```vue title=client/custom-page.vue
+```vue title=client/page.vue
 <template>
   <k-layout>
     <k-card>扩展内容</k-card>
@@ -65,6 +62,19 @@ export default (ctx: Context) => {
     ],
   },
   "include": ["."],
+}
+```
+
+然后修改插件的 `package.json`，添加以下依赖：
+
+```json title=package.json
+{
+  "peerDependencies": {
+    "@koishijs/plugin-console": "^5.11.0"
+  },
+  "devDependencies": {
+    "@koishijs/client": "^5.11.0"
+  }
 }
 ```
 
@@ -89,44 +99,4 @@ export function apply(ctx: Context) {
 }
 ```
 
-## 调试模式
-
-启动应用，并配置 console 插件进入调试模式：
-
-```yaml
-plugins:
-  console:
-    devMode: true
-  my-plugin:
-```
-
-你就可以在网页中看到自己刚刚创建的页面了。
-
-## 构建代码
-
-调试好你的扩展后，下一步就是构建了。修改你的 package.json：
-
-```json title=package.json
-{
-  "files": [
-    "lib",    // 我们假设 src 目录编译到 lib 目录
-    "dist",   // 这里的 dist 目录就是留给 client 的
-  ],
-  "scripts": {
-    // @koishijs/client 提供了一个指令 koishi-console build
-    // 它可以用来构建 client 目录中的扩展台扩展到 dist 目录
-    "build:console": "koishi-console build",
-  },
-}
-```
-
-然后运行上面的脚本就大功告成啦：
-
-::: tabs code
-```npm
-npm run build:console
-```
-```yarn
-yarn build:console
-```
-:::
+启动应用，并在控制台中配置你的插件。现在你已经可以在网页中看到并调试自己刚刚创建的页面了。
