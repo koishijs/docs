@@ -1,6 +1,6 @@
 # 数据交互
 
-前后端的数据交互基本是通过 WebSocket 实现的。为了适应不同的场景，我们提供了多种数据交互的形式。
+Koishi 控制台前后端的数据交互基本是通过 WebSocket 实现的。为了适应不同的场景，我们提供了多种数据交互的形式。
 
 ## 被动推送
 
@@ -46,7 +46,7 @@ export function apply(ctx: Context) {
 
 ```ts title=client/index.ts no-extra-header
 import { Context } from '@koishijs/client'
-import Page from './custom-page.vue'
+import Page from './page.vue'
 
 export default (ctx: Context) => {
   ctx.page({
@@ -59,7 +59,7 @@ export default (ctx: Context) => {
 }
 ```
 
-```vue client/custom-page.vue
+```vue client/page.vue
 <template>
   <!-- 这里应该有类型支持，并且支持数据响应式变化 -->
   <k-card>{{ store.custom }}</k-card>
@@ -100,7 +100,7 @@ export function apply(ctx: Context) {
 }
 ```
 
-```vue title=client/custom-page.vue
+```vue title=client/page.vue
 <template>
   <k-card>{{ greeting }}</k-card>
 </template>
