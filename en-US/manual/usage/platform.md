@@ -70,41 +70,41 @@ Enter your Platform Name and User ID when you clicked the lower left Login butto
 
 Once you are logged in, you will be redirected to your personal page.In this page you can change your username and password.Ordinary users can only log in with their platform account for the first time, and after setting a username and password, click "Apply Changes" in the upper right corner to log in with a user password in the future.
 
-## 账号绑定
+## Account Binding
 
-Koishi 支持账号绑定，即一个 Koishi 账号可以同时对应多个平台用户。完成绑定后，你无论在哪个平台上与机器人交互，数据都会被共享。
+Koishi supports account binding. This means that one Koishi account can correspond to multiple platform users at the same time.No matter what platform you are interacting with the bot on, the data will be shared once the binding is complete.
 
-Koishi 官方目前提供了两个插件实现账号绑定，我们将逐一介绍。
+Koishi currently offers two official plugins for account binding, which we will introduce one by one.
 
-### 在控制台中绑定
+### Binding in the console
 
-登录控制台后，任何用户都可以在个人页面中绑定平台账号。点击「平台账号绑定」右侧的「添加」按钮，并使用你要绑定的账号完成一遍类似平台账号登录的流程，就大功告成了。
+Any user can bind a platform account to their personal page after logging in to the console.Click the "Add" button to the right of "Platform Account Binding" and complete the process by logging in with the account you want to bind, and you're done.
 
 ![profile](/manual/console/profile.light.webp) {.light-only}
 
 ![profile](/manual/console/profile.dark.webp) {.dark-only}
 
-如果要解除绑定，点击对应平台账号右侧的「解绑」即可。
+Click the "Disconnect" button on the right side of the platform account if you wish to disconnect.
 
-### 通过指令绑定
+### Binding by command
 
-[bind](../../plugins/common/bind.md) 插件通过指令也实现了账号绑定。使用要绑定的平台账号向机器人发送 `bind`：
+[bind](../../plugins/common/bind.md) The plugin also implements the binding of accounts by means of a command.Using the platform account you want to bind to, send `bind` to the bot:
 
 <chat-panel>
 <chat-message nickname="Alice">bind</chat-message>
 <chat-message nickname="Koishi">
-<p>指令 bind 可用于在多个平台间绑定用户数据。绑定过程中，原始平台的用户数据将完全保留，而目标平台的用户数据将被原始平台的数据所覆盖。</p>
-<p>请确认当前平台是你的目标平台，并在 5 分钟内使用你的账号在原始平台内向机器人发送以下文本：</p>
+<p>You can use the bind command for binding user data across multiple platforms.During the binding process, the user data on the original platform is completely preserved, while the user data on the target platform is overwritten with the data on the original platform.</p>
+<p>Please confirm that the current platform is your target platform and send the following text to the bot on the original platform using your account within 5 minutes:</p>
 <p>Koishi/123456</p>
 </chat-message>
 </chat-panel>
 
-跟随提示，使用原始平台账号向机器人发送 `Koishi/123456`。如果你的第一条消息是私聊消息，那么此时绑定已经完成。如果你的第一条消息是群聊消息，则机器人会再次让你进行一遍确认：
+Using the original platform account, follow the prompt and send `Koishi/123456` to the bot.The binding is complete at this point if your first message is a private chat message.The bot will ask you to confirm again if your first message is a guild chat message:
 
 <chat-panel>
 <chat-message nickname="Alice">Koishi/123456</chat-message>
 <chat-message nickname="Koishi">
-<p>令牌核验成功！下面将进行第二步操作。</p>
+<p>Token verification successful!The second step is described below.</p>
 <p>请在 5 分钟内使用你的账号在目标平台内向机器人发送以下文本：</p>
 <p>Koishi/654321</p>
 <p>注意：当前平台是你的原始平台，这里的用户数据将覆盖目标平台的数据。</p>
