@@ -105,12 +105,12 @@ Using the original platform account, follow the prompt and send `Koishi/123456` 
 <chat-message nickname="Alice">Koishi/123456</chat-message>
 <chat-message nickname="Koishi">
 <p>Token verification successful!The second step is described below.</p>
-<p>请在 5 分钟内使用你的账号在目标平台内向机器人发送以下文本：</p>
+<p>Please use your account to send the following text to the bot on the target platform within the next 5 minutes:</p>
 <p>Koishi/654321</p>
-<p>注意：当前平台是你的原始平台，这里的用户数据将覆盖目标平台的数据。</p>
+<p>Attention: The current platform is your original platform, the user data here will overwrite the data of the target platform.</p>
 </chat-message>
 </chat-panel>
 
-再次跟随提示，使用目标平台账号向机器人发送 `Koishi/654321`，即可完成绑定。
+Follow the prompts again and send `Koishi/654321` to the bot using the target platform account to complete the binding.
 
-绑定完成后，你可以随时在目标平台向机器人发送 `bind -r` 来解除绑定状态。
+Once the binding is complete, you can unbind the state at any time by sending `bind -r` to the robot from the target platform.
