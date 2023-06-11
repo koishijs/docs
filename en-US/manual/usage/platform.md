@@ -1,26 +1,26 @@
-# Cross Platform
+# Cross-Platform
 
-Koishi 说自己是一个「跨平台」的框架，但是这个「跨平台」是指什么呢？这并不单单是指 Koishi 支持多个运行平台，而是指 Koishi 能够同时接入多个聊天平台，并提供最原生的体验：
+Koishi describes itself as a "cross-platform" framework, but what does this "cross-platform" mean?This doesn't just mean that Koishi supports multiple running platforms, but that Koishi can access multiple chat platforms simultaneously and provide the most native experience possible:
 
-- Koishi 提供了统一的接口，你可以在任何聊天平台上享受完整的 Koishi 生态
-- Koishi 应用可以同时接入多个聊天平台，用户可以在任意平台上与你的机器人进行交互
-- Koishi 原生地支持了跨平台账号绑定，这使得用户可以带着全部数据进行无感迁移
+- Koishi provides a unified interface so you can enjoy the full Koishi ecosystem on any chat platform
+- Koishi app can access multiple chat platforms at the same time, so users can interact with your bot on any platform
+- Koishi has native support for cross-platform account binding, which allows users to take all of their data with them for a seamless migration experience.
 
-现在就让我们来说说这件事。
+Let's talk about this now.
 
 ## Basic Concepts
 
-**平台 (Platform)** 是指聊天平台，比如 QQ、Discord 等。同一平台内的用户间具有相互发送消息的能力，而不同平台的用户间则没有。对于 Rocket Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。
+**Platform(Platform)** is a chat platform, such as QQ, Discord, etc.Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
 
-**机器人 (Bot)** 是指由 Koishi 操控的平台用户。这里的用户不一定是真实用户，也可以是部分平台专门提供的机器人用户。其他用户通过与机器人进行交互来体验 Koishi 的各项功能。
+**Bot(Bot)** is a platform user controlled by Koishi.The user here is not necessarily a real user. It can also be a bot user, which is provided by some platforms.By interacting with the robot, other users experience Koishi's functions.
 
-**适配器 (Adapter)** 是指实现了平台协议，能够让机器人接入平台的插件。通常来说一个适配器实例对应了一个机器人用户，同时启用多个适配器就实现了多个机器人的同时接入。
+**Adapters (Adapter)** are plugins that implement the platform protocol and enable robots to access the platform.In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
 
-**消息 (Message)** 是字面意义上的消息。通常是文本或富文本格式的，有时也会包含图片、语音等媒体资源。在 Koishi 中，消息通过消息元素进行统一编码。
+**Message(Message)** is literally a message.It is usually text or rich text format, and sometimes includes media resources such as images and audio, etc.Koishi uniformly encodes messages using message elements.
 
-**频道 (Channel)** 是消息的集合。一个频道包含了具备时间、逻辑顺序的一系列消息。频道又分为私聊频道和群聊频道，其中私聊频道有且仅有两人参与，而群聊频道可以有任意多人参与。
+**Channel(Channel)** is a collection of messages.A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
 
-**群组 (Guild)** 是平台用户的集合。一个群组通常会同时包含一组用户和频道，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 QQ)：一个群组内有且仅有一个群聊频道。私聊频道不属于任何群组。
+**Guilds (Guilds)** are collections of platform users.A guild will typically contain both a set of Users and Channels, and be managed by some of them using a permission-based mechanism.In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
 
 ### 获取会话信息
 
