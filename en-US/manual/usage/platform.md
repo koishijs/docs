@@ -22,9 +22,9 @@ Let's talk about this now.
 
 **Guilds (Guilds)** are collections of platform users.A guild will typically contain both a set of Users and Channels, and be managed by some of them using a permission-based mechanism.In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
 
-### 获取会话信息
+### Get session information
 
-对于一个来自聊天平台的会话，Koishi 会通过平台、消息、频道、用户、机器人的 ID 来进行识别。如果不知道这些值是什么，可以启用 [inspect](../../plugins/common/inspect.md) 插件。使用要绑定的平台账号向机器人发送 `inspect` (这里不要使用沙盒，不然只能获得沙盒用户的数据)，就可以获得会话信息：
+Koishi identifies by platform, message, channel, user, and bot ID for a session from a chat platform.If you don't know what these values are, you can enable the [inspect](../../plugins/common/inspect.md) plugin.Send `inspect` to the bot using the platform account you want to bind to (don't use the sandbox here, or you'll only get the sandboxed user's data) to get the session information:
 
 <chat-panel>
 <chat-message nickname="Alice">inspect</chat-message>
@@ -40,35 +40,35 @@ Let's talk about this now.
 
 If you want to bind your account, the platform name and user ID here will be useful.
 
-## 控制台登录
+## Console Login
 
-[auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。此外，该插件还自带了一个管理员账号，对于刚刚搭建好 Koishi 的用户来说，这是最方便的提权方式。
+The [auth](../../plugins/console/auth.md) plugin allows any user to log in and manage their Koishi account from the console.In addition, the plugin comes with an administrator account, which is the most convenient way to raise the rights of users who have just built Koishi.
 
-### 配置登录插件
+### Configure Login Plugin
 
-进入「插件配置」界面，并点击 auth 插件。这里我们会看到有一个「管理员设置」：
+Click on the Auth plugin in the Plugin Configuration screen.At this point we will see that there is an "Administrator Settings" tab.
 
 ![plugin-login](/manual/console/plugin-login.light.webp) {.light-only}
 
 ![plugin-login](/manual/console/plugin-login.dark.webp) {.dark-only}
 
-填写你自己准备好的密码，然后点击「启用插件」。此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
+Enter the password you've prepared. Click "Activate plugin".Select "User Password Login", enter the username (default `admin` if you haven't changed it) and password you just configured, and click "Login" to enter your personal page.
 
 ![login-password](/manual/console/login-password.light.webp) {.light-only}
 
 ![login-password](/manual/console/login-password.dark.webp) {.dark-only}
 
-### 普通用户登录
+### Ordinary user login
 
-如果你是机器人的普通用户，而机器人也配置了控制台登录插件，那么当你初次进入控制台，会发现只有寥寥几个页面是能访问的。这是因为你尚未登录。
+If you are a regular user of the bot and the bot is configured with the console login plugin, then when you first enter the console, you will find that only a few pages are accessible.The reason for this is that you do not have a login.
 
-点击左下角的「登录」按钮，选择「平台账号登录」，并输入你的平台名和用户 ID。点击「获取验证码」，并把页面中出现的验证码通过上述账号私聊发送给机器人，即可完成登录。
+Enter your Platform Name and User ID when you clicked the lower left Login button and selected Platform Account Login.Click "Get Verification Code" and send the verification code that appears on the page to the bot via the private chat of the account above to complete the registration.
 
 ![login-platform](/manual/console/login-platform.light.webp) {.light-only}
 
 ![login-platform](/manual/console/login-platform.dark.webp) {.dark-only}
 
-登录完成后，你会被重定向到个人页面。在这个页面中你可以修改自己的用户名和密码。普通用户第一次登录只能使用平台账号登录，而设置了用户名和密码后，点击右上角的「应用更改」，未来就可以使用用户密码登录了。
+Once you are logged in, you will be redirected to your personal page.In this page you can change your username and password.Ordinary users can only log in with their platform account for the first time, and after setting a username and password, click "Apply Changes" in the upper right corner to log in with a user password in the future.
 
 ## 账号绑定
 
