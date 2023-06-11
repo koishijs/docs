@@ -91,7 +91,7 @@ git config –-global user.email "you@example.com"
 ::: tip
 这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
 
-- Windows：`C:\dev` 或者 `D:\dev`
+- Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
 :::
 
