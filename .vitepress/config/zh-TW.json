@@ -1,15 +1,15 @@
 {
-  "description": "创建跨平台、可扩展、高性能的机器人",
+  "description": "創建跨平臺、可擴展、高性能的機器人",
   "head": [
     [
-      "link",
+      "連結",
       {
         "rel": "icon",
         "href": "/logo.png"
       }
     ],
     [
-      "link",
+      "連結",
       {
         "rel": "manifest",
         "href": "/manifest/zh-CN.json"
