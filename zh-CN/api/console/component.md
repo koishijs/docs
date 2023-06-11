@@ -11,3 +11,7 @@
 ## `<k-form>`
 
 ## `<k-layout>`
+
+## `<k-slot>`
+
+## `<k-status>`
