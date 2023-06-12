@@ -1,24 +1,24 @@
 ---
 prev:
-  text: Installation
-  link: /en-US/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: About Koishi Console
-  link: /en-US/manual/console/
+  text: 认识控制台
+  link: /zh-CN/manual/console/
 ---
 
-# Install for Android
+# 为 Android 安装
 
 ::: tip
-If you want to learn about other installation method, please visit [Installation](./index.md).
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
 ::: danger
-This project is still working in progress. Some features may not be available.
+此项目仍在早期开发中。部分功能可能不可用。
 :::
 
-## Download
+## 下载
 
-- [Download Standard Package (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [Download Extension Package (.apk)](https://k.ilharp.cc/android-full.apk)
-- [Other Downloads](https://github.com/koishijs/koishi-android/releases)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
+- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
