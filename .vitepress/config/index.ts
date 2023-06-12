@@ -10,6 +10,7 @@ export default async () => defineConfig({
     'en-US': require('./en-US'),
     'zh-CN': require('./zh-CN'),
     ...(isDev ? {
+      'zh-TW': require('./zh-TW'),
       'de-DE': require('./de-DE'),
       'fr-FR': require('./fr-FR'),
       'ja-JP': require('./ja-JP'),
