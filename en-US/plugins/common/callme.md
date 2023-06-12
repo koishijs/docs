@@ -1,4 +1,4 @@
-# 设置昵称 (Callme)
+# Nickname Setting (Callme)
 
 ::: tip
 要使用本插件，你需要安装数据库支持。
