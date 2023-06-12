@@ -1,4 +1,4 @@
-# 内置数据结构
+# Built-in Data Structure
 
 Koishi 的数据库 API 实际上分为两部分：
 
