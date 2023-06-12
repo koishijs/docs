@@ -1,10 +1,6 @@
 # 上下文 API
 
 ::: warning
-此页文档正在施工，内容尚未完成。
-:::
-
-::: warning
 请注意：本文档介绍的是控制台客户端的 `Context`，而非 Koishi 本身的 `Context`。要查看后者的 API 文档请 [前往这里](../core/context.md)。
 :::
 
@@ -29,9 +25,25 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 ## 实例方法
 
-### ctx.action(options) <badge type="warning" text="实验性" />
+### ctx.action(id, options) <badge type="warning" text="实验性" />
 
-### ctx.menu(items) <badge type="warning" text="实验性" />
+- **id:** `string` 动作标识符
+- **options.disabled:** `(() => boolean)?` 是否隐藏
+- **options.action:** `Function` 回调函数函数
+
+注册一个动作。
+
+### ctx.menu(id, items) <badge type="warning" text="实验性" />
+
+- **id:** `string` 菜单标识符
+- **items:** `MenuItem[]` 菜单项列表
+  - **items[].id:** `string` 动作标识符
+  - **items[].label:** `MaybeGetter<string>?` 菜单项名称
+  - **items[].type:** `MaybeGetter<string>?` 菜单项类型
+  - **items[].icon:** `MaybeGetter<string>?` 菜单项图标
+  - **items[].order:** `number?` 排列优先级
+
+注册一个菜单。
 
 ### ctx.page(options)
 
