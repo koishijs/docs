@@ -1,4 +1,4 @@
-# 输出日志 (Logger)
+# Logger
 
 ## new Logger(name)
 
