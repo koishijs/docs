@@ -1,4 +1,4 @@
-# 内置组件
+# Built-in Components
 
 ::: warning
 此页文档正在施工，内容尚未完成。
