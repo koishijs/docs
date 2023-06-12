@@ -1,27 +1,27 @@
-# Deployment
+# 公网部署
 
 ::: warning
-It is vulnerable when you expose your Koishi on the Internet. You might need to limit the accessibility with [User Authorization](../usage/platform.md#控制台登录) or something else.
+将 Koishi 暴露在公网上可能会导致你的服务器受到攻击。你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
 :::
 
-Koishi apps can only be accessed from localhost by default. You might need to access the Koishi Console or services provided by other plugins on the Internet.
+Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
 
-- Allow more people to access your Koishi console
-- Use plugins as servers for webhooks (for example [github](https://github.koishi.chat))
+- 让更多人访问到你的 Koishi 控制台
+- 使用作为 Webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
 
-This section would guide you in completing the deployment for a Koishi application.
+本节教程将指导你完成 Koishi 应用的公网部署。
 
-## Direct Exposure
+## 直接暴露
 
 点击控制台左侧的「插件配置」，选择「全局配置」并将 `host` 修改为 `0.0.0.0`，随后点击右上角的「重载配置」。等待 Koishi 重启之后，你就可以使用 `IP:端口` 的方式，在局域网内任意设备的浏览器上访问到 Koishi 控制台了。
 
 如果你已经准备了域名，你还需要同时将 `selfUrl` 修改为能访问到 Koishi 实例的地址。
 
-## Reverse Proxy
+## 反向代理
 
-Reverse proxies are useful if you have more complex needs such as SSL and server name etc. Common solutions include nginx, Caddy, etc. 使用反向代理时，你不需要修改上述 `host` 配置项。
+如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
 
-### Use Caddy
+### 使用 Caddy
 
 ```text
 # 如果你希望使用域名，并自动签发 SSL 证书，请将下方 :80 改为你的域名
@@ -31,7 +31,7 @@ Reverse proxies are useful if you have more complex needs such as SSL and server
 }
 ```
 
-### Use nginx
+### 使用 nginx
 
 下面给出一段 nginx 配置作为参考：
 
@@ -43,10 +43,10 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-  # server_name, port, ssl, etc.
+  # server_name, port, ssl 等设置
 
   location / {
-    # 5140 corresponds to app.config.port
+    # 这里的 5140 对应 Koishi 实例的端口
     proxy_pass http://127.0.0.1:5140/;
     proxy_redirect off;
     proxy_set_header X-Real-IP $remote_addr;
@@ -61,7 +61,7 @@ server {
 }
 ```
 
-## What's next...
+## 接下来……
 
 完成初步配置以后，有一些额外的社区插件可以帮助你更好地部署 Koishi 控制台。
 
