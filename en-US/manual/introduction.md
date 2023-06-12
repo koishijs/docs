@@ -11,8 +11,8 @@ The name and icon design are inspired from [Komeiji Koishi](https://zh.touhouwik
 Koishi provides a highly convenient Web UI which is called Koishi Console that allows you to set up your own chatbot in just a few minutes without any programming knowledge.
 
 - Plugin Marketplace. You could easily download and install plugins in the console without any programming knowledge
-- 支持 QQ，Telegram，Discord 等主流聊天平台，支持多账户和跨平台数据互通
-- 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
+- Multiple Platform Supports. Koishi supports mainstream chat platforms such as QQ, Telegram, and Discord. Data should be exchangeable between different platforms and accounts.
+- Real-time Monitoring. Monitor the running status or change the behavior of the chatbot anytime through the control panel, and even chat as the bot account itself
 
 ### Power of Community
 
