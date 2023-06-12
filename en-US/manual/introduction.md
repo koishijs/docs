@@ -6,7 +6,7 @@ The name and icon design are inspired from [Komeiji Koishi](https://en.touhouwik
 
 ## Features
 
-### Out of box
+### Out-of-the-box Experience
 
 Koishi provides a highly convenient Web UI which is called Koishi Console that allows you to set up your own chatbot in just a few minutes without any programming knowledge.
 
@@ -18,7 +18,7 @@ Koishi provides a highly convenient Web UI which is called Koishi Console that a
 
 After four years of iteration, Koishi has developed a rich plugin ecosystem and a robust system that matches it. Nearly 200 official and community plugins cover all aspects of chatbot ecosystem, such as platform support, database, resource storage, web UI console, state management as well as specific business functions. Whether your goal is to build a large-scale interactive application or a lightweight assistant chatbot, Koishi provides you with the best practices. We have also detailed documents for you in case that you are worried about the complexity of the massive functions through plugins.
 
-### Made for developers
+### Made for Developers
 
 In addition, there are many professional functions for developers built in Koishi, allowing plugin developers to build scalable solutions for various complex requirements.
 
