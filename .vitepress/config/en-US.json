@@ -1,5 +1,5 @@
 {
-  "description": "Cross-platform Chatbot Framework Made With Love",
+  "description": "创建跨平台、可扩展、高性能的机器人",
   "head": [
     [
       "link",
@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/manifest/en-US.json"
+        "href": "/manifest/zh-CN.json"
       }
     ],
     [
@@ -25,18 +25,18 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "Translate this page on Crowdin",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-en"
+      "text": "在 GitHub 编辑此页面",
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "Navigation",
+    "navText": "导航",
     "nav": [
       {
-        "text": "Manual",
+        "text": "入门",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "Develop",
+        "text": "开发",
         "link": "/guide/",
         "activeMatch": "/guide/"
       },
@@ -46,18 +46,18 @@
         "activeMatch": "/(api|schema)/"
       },
       {
-        "text": "Plugins",
+        "text": "插件",
         "items": [
           {
-            "text": "Plugin market",
+            "text": "插件市场",
             "link": "/market/"
           },
           {
-            "text": "Service Plugins",
+            "text": "服务类插件导航",
             "link": "/market/service.md"
           },
           {
-            "text": "Official Plugins",
+            "text": "官方插件一览",
             "link": "/plugins/"
           }
         ],
@@ -75,7 +75,7 @@
           "text": "",
           "items": [
             {
-              "text": "Introduction",
+              "text": "介绍",
               "link": "/manual/introduction.md"
             }
           ]
@@ -84,119 +84,119 @@
           "text": "",
           "items": [
             {
-              "text": "Install",
+              "text": "安装",
               "link": "/manual/starter/"
             },
             {
-              "text": "Install for Windows",
+              "text": "为 Windows 安装",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "Install for macOS",
+              "text": "为 macOS 安装",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "Install for Linux",
+              "text": "为 Linux 安装",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "Install for Android",
+              "text": "为 Android 安装",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "Install for Container",
+              "text": "在容器中使用",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "Create Template Project",
+              "text": "创建模板项目",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "Use as a Dependency",
+              "text": "作为依赖调用",
               "link": "/manual/starter/direct.md"
             }
           ]
         },
         {
-          "text": "Console",
+          "text": "控制台",
           "items": [
             {
-              "text": "About Koishi Console",
+              "text": "认识控制台",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "Install and Configure Plugins",
+              "text": "安装和配置插件",
               "link": "/manual/console/market.md"
             },
             {
-              "text": "Chat in Sandbox",
+              "text": "在沙盒中聊天",
               "link": "/manual/console/sandbox.md"
             },
             {
-              "text": "Collaborate with Chat Platforms",
+              "text": "接入聊天平台",
               "link": "/manual/console/adapter.md"
             }
           ]
         },
         {
-          "text": "Usage",
+          "text": "使用",
           "items": [
             {
-              "text": "Command System",
+              "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "Cross Platform",
+              "text": "跨平台",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "Authority Management",
+              "text": "权限管理",
               "link": "/manual/usage/permission.md"
             },
             {
-              "text": "Filters",
+              "text": "过滤器",
               "link": "/manual/usage/filter.md"
             },
             {
-              "text": "Internationalization",
+              "text": "国际化",
               "link": "/manual/usage/i18n.md"
             }
           ]
         },
         {
-          "text": "Recipe",
+          "text": "配方",
           "items": [
             {
-              "text": "Advanced Command Tricks",
+              "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Database Access",
+              "text": "访问数据库",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "Multiple Configuration Maintenance",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "Search Marketplace",
+              "text": "搜索插件市场",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "Deployment",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "Launcher",
+          "text": "启动器",
           "items": [
             {
-              "text": "System Requirements",
+              "text": "系统要求",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "Command Line Tools",
+              "text": "命令行工具",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -207,78 +207,78 @@
           "text": "",
           "items": [
             {
-              "text": "Overview",
+              "text": "总览",
               "link": "/guide/"
             }
           ]
         },
         {
-          "text": "Getting Started",
+          "text": "开发起步",
           "items": [
             {
-              "text": "Setup Environment",
+              "text": "环境搭建",
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "Configuration File",
+              "text": "配置文件",
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "Bootstrap Script",
+              "text": "启动脚本",
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "Workspace Development",
+              "text": "工作区开发",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "Publishing Plugins",
+              "text": "发布插件",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "Essentials",
+          "text": "交互基础",
           "items": [
             {
-              "text": "Command",
+              "text": "指令开发",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "Event",
+              "text": "事件系统",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "Middleware",
+              "text": "中间件",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "Message Element",
+              "text": "消息元素",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "Advanced Usage",
+              "text": "进阶用法",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "Modulization",
+          "text": "模块化",
           "items": [
             {
-              "text": "About Plugin",
+              "text": "认识插件",
               "link": "/guide/plugin/"
             },
             {
-              "text": "Schema",
+              "text": "配置构型",
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "Lifecycle",
+              "text": "生命周期",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "Service & Dependency",
+              "text": "服务与依赖",
               "link": "/guide/plugin/service.md"
             },
             {
@@ -288,49 +288,49 @@
           ]
         },
         {
-          "text": "Database",
+          "text": "数据库",
           "items": [
             {
-              "text": "Work with Databases",
+              "text": "使用数据库",
               "link": "/guide/database/"
             },
             {
-              "text": "Extend Data Model",
+              "text": "扩展数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "Lazy Initialization & Auto-update",
+              "text": "按需加载和自动更新",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "Database Plugin",
+              "text": "编写数据库插件",
               "link": "/guide/database/writing.md"
             }
           ]
         },
         {
-          "text": "Cross Platform",
+          "text": "跨平台",
           "items": [
             {
-              "text": "Work with Adapters",
+              "text": "使用适配器",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "Work with Bot",
+              "text": "使用机器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "Account Connection across Platforms",
+              "text": "跨平台账号绑定",
               "link": "/guide/adapter/binding.md"
             },
             {
-              "text": "Adapter Plugins",
+              "text": "编写适配器插件",
               "link": "/guide/adapter/writing.md"
             }
           ]
         },
         {
-          "text": "Koishi Console",
+          "text": "控制台",
           "items": [
             {
               "text": "扩展控制台",
@@ -351,7 +351,7 @@
           ]
         },
         {
-          "text": "Internationalization",
+          "text": "国际化",
           "items": [
             {
               "text": "多语言支持",
@@ -368,10 +368,10 @@
           ]
         },
         {
-          "text": "Debugging",
+          "text": "测试工具",
           "items": [
             {
-              "text": "Unit Testing",
+              "text": "单元测试",
               "link": "/guide/testing/index.md"
             }
           ]
@@ -382,7 +382,7 @@
           "text": "",
           "items": [
             {
-              "text": "Overview",
+              "text": "总览",
               "link": "/api/"
             },
             {
@@ -405,11 +405,11 @@
           "text": "核心模块",
           "items": [
             {
-              "text": "Adapter",
+              "text": "适配器 (Adapter)",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "App",
+              "text": "应用 (App)",
               "link": "/api/core/app.md"
             },
             {
@@ -421,7 +421,7 @@
               "link": "/api/core/command.md"
             },
             {
-              "text": "Context",
+              "text": "上下文 (Context)",
               "link": "/api/core/context.md"
             },
             {
@@ -475,7 +475,7 @@
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "Standard Elements",
+              "text": "标准元素",
               "link": "/api/message/elements.md"
             },
             {
@@ -489,7 +489,7 @@
           ]
         },
         {
-          "text": "Database Integration",
+          "text": "数据库",
           "items": [
             {
               "text": "内置数据结构",
@@ -514,7 +514,7 @@
           ]
         },
         {
-          "text": "Koishi Console",
+          "text": "控制台",
           "items": [
             {
               "text": "控制台架构",
@@ -562,24 +562,24 @@
       ],
       "/plugins/": [
         {
-          "text": "Plugins",
+          "text": "插件",
           "items": [
             {
-              "text": "Plugin market",
+              "text": "插件市场",
               "link": "/market/"
             },
             {
-              "text": "Service Plugins",
+              "text": "服务类插件导航",
               "link": "/market/service.md"
             },
             {
-              "text": "Official Plugins",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
         },
         {
-          "text": "Adapter",
+          "text": "适配器支持",
           "items": [
             {
               "text": "Discord",
@@ -612,7 +612,7 @@
           ]
         },
         {
-          "text": "Database",
+          "text": "数据库支持",
           "items": [
             {
               "text": "Memory",
@@ -633,44 +633,44 @@
           ]
         },
         {
-          "text": "Common",
+          "text": "常用功能",
           "items": [
             {
-              "text": "Data Management (Admin)",
+              "text": "数据管理 (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "Account Connection (Bind)",
+              "text": "账号绑定 (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "Broadcasting (Broadcast)",
+              "text": "发送广播 (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "Nickname Setting (Callme)",
+              "text": "设置昵称 (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "Send Messages (Echo)",
+              "text": "发送消息 (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "Display Help (Help)",
+              "text": "查看帮助 (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "Session Inspector (Inspect)",
+              "text": "会话信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "Rate Limiting (Rate Limit)",
+              "text": "速率限制 (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
         {
-          "text": "Console",
+          "text": "控制台功能",
           "items": [
             {
               "text": "数据统计 (Analytics)",
@@ -681,7 +681,7 @@
               "link": "/plugins/console/auth.md"
             },
             {
-              "text": "Command Management (Commands)",
+              "text": "指令管理 (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
@@ -727,14 +727,14 @@
           ]
         },
         {
-          "text": "Developer Tools",
+          "text": "开发工具",
           "items": [
             {
-              "text": "Module Hot Replacement (HMR)",
+              "text": "模块热替换 (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "Application Mocking (Mock)",
+              "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -742,18 +742,18 @@
       ],
       "/market/": [
         {
-          "text": "Plugins",
+          "text": "插件",
           "items": [
             {
-              "text": "Plugin market",
+              "text": "插件市场",
               "link": "/market/"
             },
             {
-              "text": "Service Plugins",
+              "text": "服务类插件导航",
               "link": "/market/service.md"
             },
             {
-              "text": "Official Plugins",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -761,10 +761,10 @@
       ],
       "/schema/": [
         {
-          "text": "Playground",
+          "text": "演练场",
           "items": [
             {
-              "text": "Schema",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
@@ -879,96 +879,96 @@
       ],
       "/about/": [
         {
-          "text": "About",
+          "text": "关于我们",
           "items": [
             {
-              "text": "License",
+              "text": "许可证",
               "link": "/about/license.md"
             },
             {
-              "text": "Discussion",
+              "text": "参与讨论",
               "link": "/about/contact.md"
             },
             {
-              "text": "Meet Our Team",
+              "text": "团队介绍",
               "link": "/about/team.md"
             },
             {
-              "text": "Community Resources",
+              "text": "社区资源",
               "link": "/about/community.md"
             }
           ]
         },
         {
-          "text": "Updates",
+          "text": "更新与迁移",
           "items": [
             {
-              "text": "History",
+              "text": "发展史",
               "link": "/about/history.md"
             },
             {
-              "text": "Migrate from v3",
+              "text": "从 v3 迁移",
               "link": "/about/migration.md"
             },
             {
-              "text": "Migrate within v4",
+              "text": "版本内迁移",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "Release Notes: v4.1",
+              "text": "v4.1 版本介绍",
               "link": "/about/releases/v4.1.md"
             },
             {
-              "text": "Release Notes: v4.2",
+              "text": "v4.2 版本介绍",
               "link": "/about/releases/v4.2.md"
             },
             {
-              "text": "Release Notes: v4.3",
+              "text": "v4.3 版本介绍",
               "link": "/about/releases/v4.3.md"
             },
             {
-              "text": "Release Notes: v4.4",
+              "text": "v4.4 版本介绍",
               "link": "/about/releases/v4.4.md"
             },
             {
-              "text": "Release Notes: v4.5",
+              "text": "v4.5 版本介绍",
               "link": "/about/releases/v4.5.md"
             },
             {
-              "text": "Release Notes: v4.6",
+              "text": "v4.6 版本介绍",
               "link": "/about/releases/v4.6.md"
             },
             {
-              "text": "Release Notes: v4.7",
+              "text": "v4.7 版本介绍",
               "link": "/about/releases/v4.7.md"
             },
             {
-              "text": "Release Notes: v4.8",
+              "text": "v4.8 版本介绍",
               "link": "/about/releases/v4.8.md"
             },
             {
-              "text": "Release Notes: v4.9",
+              "text": "v4.9 版本介绍",
               "link": "/about/releases/v4.9.md"
             },
             {
-              "text": "Release Notes: v4.10",
+              "text": "v4.10 版本介绍",
               "link": "/about/releases/v4.10.md"
             },
             {
-              "text": "Release Notes: v4.11",
+              "text": "v4.11 版本介绍",
               "link": "/about/releases/v4.11.md"
             }
           ]
         },
         {
-          "text": "Contributing",
+          "text": "贡献指南",
           "items": [
             {
-              "text": "Infrastructure",
+              "text": "项目结构",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "Documentation",
+              "text": "文档贡献指南",
               "link": "/about/contribute/docs.md"
             }
           ]
