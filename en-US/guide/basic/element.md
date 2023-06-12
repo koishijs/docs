@@ -1,4 +1,4 @@
-# 消息元素
+# Message Element
 
 当然，一个聊天平台所能发送或接收的内容往往不只有纯文本。为此，我们引入了 **消息元素 (Element)** 的概念。
 
@@ -67,7 +67,7 @@ h('p', 'hello', h('image', { url }))
 h('message', <image url="https://koishi.chat/logo.png"/>)
 ```
 
-## 标准元素
+## Standard Elements
 
 Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需求。例如：
 
