@@ -1,9 +1,5 @@
 # 客户端开发
 
-::: warning
-此页文档正在施工，部分内容尚未完成。
-:::
-
 ## 布局组件
 
 为了方便控制台开发，Koishi 也提供了一些组件。其中的一部分你已经在前面的两节中见过了。
@@ -109,3 +105,80 @@ config.value.wallpaper.image
 ```
 
 ## 动作与菜单 <badge type="warning" text="实验性" />
+
+控制台的许多地方都会用到菜单，其中大家最熟悉的便是每个页面标题栏右侧的菜单按钮。除此以外，部分页面还提供了上下文菜单。想要定义菜单，我们首先需要了解 **动作 (Action)** 这一概念。
+
+控制台中可以执行的任何一个操作都可以视为一个动作。每个动作都有着唯一的标识符，例如 `explorer.save` 表示保存当前文件、`explorer.refresh` 表示刷新文件列表等等。已知动作标识符的情况下，可以通过 [`ctx.menu()`](../../api/console/context.md#ctx-menu) 来描述一个菜单，并在 `<k-layout>` 中引用它：
+
+```ts client/index.ts
+ctx.menu('explorer', [{
+  id: '.save',
+  icon: 'save',
+  label: '保存',
+}, {
+  id: '.refresh',
+  icon: 'refresh',
+  label: '刷新',
+}])
+```
+
+```vue page.vue
+<template>
+  <!-- 在页面中指定菜单 -->
+  <k-layout menu="explorer">
+    页面内容
+  </k-layout>
+</template>
+```
+
+当然，光有菜单还不够，我们还需要实现上面的动作。这可以通过 [`ctx.action()`](../../api/console/context.md#ctx-action) 来完成：
+
+```vue
+<script lang="ts" setup>
+import { send, useContext } from '@koishijs/client'
+
+const ctx = useContext()
+
+// 实现菜单动作
+ctx.action('explorer.save', {
+  disabled: () => content === oldContent,
+  action: () => send('explorer/write', filename, content),
+})
+</script>
+```
+
+如果要实现上下文菜单，同样需要首先在入口文件中描述菜单项：
+
+```ts client/index.ts
+ctx.menu('entry', [{
+  id: '.rename',
+  label: '重命名',
+}, {
+  id: '.remove',
+  label: '删除',
+}])
+```
+
+然后在组件中使用 [`useMenu()`](../../api/console/composition.md#usemenu) 来获取菜单项的点击事件：
+
+```vue
+<template>
+  <!-- 这里显示了文件列表 -->
+  <div v-for="entry in entries">
+    <!-- 右击任意文件名会呼出上述菜单 -->
+    <div @contextmenu.stop="trigger($event, entry)">{{ entry.filename }}</div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { useContext, useMenu } from '@koishijs/client'
+
+const ctx = useContext()
+const trigger = useMenu('entry')
+
+// 实现菜单动作
+ctx.action('entry.remove', {
+  action: ({ entry }) => send('explorer/remove', entry.filename),
+})
+</script>
+```
