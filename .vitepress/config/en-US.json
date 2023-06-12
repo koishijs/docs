@@ -46,7 +46,7 @@
         "activeMatch": "/(api|schema)/"
       },
       {
-        "text": "Plugins",
+        "text": "plugin",
         "items": [
           {
             "text": "Plugin market",
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "text": "Console",
+          "text": "Koishi Console",
           "items": [
             {
               "text": "About Koishi Console",
@@ -330,7 +330,7 @@
           ]
         },
         {
-          "text": "Console",
+          "text": "Koishi Console",
           "items": [
             {
               "text": "扩展控制台",
@@ -514,7 +514,7 @@
           ]
         },
         {
-          "text": "Console",
+          "text": "Koishi Console",
           "items": [
             {
               "text": "控制台架构",
@@ -562,7 +562,7 @@
       ],
       "/plugins/": [
         {
-          "text": "Plugins",
+          "text": "plugin",
           "items": [
             {
               "text": "Plugin market",
@@ -742,7 +742,7 @@
       ],
       "/market/": [
         {
-          "text": "Plugins",
+          "text": "plugin",
           "items": [
             {
               "text": "Plugin market",
