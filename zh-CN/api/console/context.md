@@ -29,22 +29,48 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 ## 实例方法
 
-### ctx.action()
+### ctx.action(options) <badge type="warning" text="实验性" />
 
-### ctx.menu()
+### ctx.menu(items) <badge type="warning" text="实验性" />
 
-### ctx.page()
+### ctx.page(options)
 
-### ctx.settings()
+- **options.id:** `string?` 页面标识符
+- **options.path:** `string` 页面路由
+- **options.name:** `MaybeRefOrGetter<string>` 页面名称
+- **options.desc:** `MaybeRefOrGetter<string>?` 页面描述
+- **options.icon:** `MaybeRefOrGetter<string>?` 页面图标
+- **options.position:** `'top' | 'bottom'` 图标在活动栏中的位置
+- **options.order:** `number?` 排列优先级
+- **options.disabled:** `(() => boolean)?` 是否隐藏
+- **options.component:** `Component` 页面组件
 
-### ctx.slot()
+注册一个页面。
+
+### ctx.settings(options) <badge type="warning" text="实验性" />
+
+- **options.type:** `string` 所属类别
+- **options.title:** `string?` 类别名称
+- **options.order:** `number?` 排列优先级
+- **options.disabled:** `(() => boolean)?` 是否隐藏
+- **options.schema:** `Schema?` 配置构型
+- **options.component:** `Component?` 配置组件
+
+扩展用户设置。当使用了 `component` 时，`schema` 会被忽略。
+
+### ctx.slot(options)
+
+- **options.type:** `string` 插槽名称
+- **options.order:** `number?` 排列优先级
+- **options.disabled:** `(() => boolean)?` 是否隐藏
+- **options.component:** `Component` 注入组件
+
+向特定插槽注入组件。
 
 ### ctx.theme(options)
 
 - **options.id:** `string` 主题标识符 (必须以 `-dark` 或 `-light` 结尾)
 - **options.name:** `string` 主题名称
-- **options.components:** `Dict<Component>` 主题提供的布局组件
+- **options.components:** `Dict<Component>?` 主题提供的布局组件
 
 定义一个新的主题。
-
-参考：[主题开发](../../guide/console/theme.md)
