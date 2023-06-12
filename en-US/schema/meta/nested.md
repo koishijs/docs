@@ -15,7 +15,7 @@ code: |
   }).description('配置项')
 ---
 
-# 嵌套类型
+# Nested Type
 
 一些类型 (例如 [Object](../basic/object.md) 和 [Array](../basic/array.md)) 允许将其他类型作为参数传入，形成新的组合类型。你可以任意嵌套这些类型，以满足更复杂的需求。
 
