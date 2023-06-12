@@ -1,4 +1,4 @@
-# 查询表达式 (Query)
+# Query Expression
 
 ## 逻辑运算
 
