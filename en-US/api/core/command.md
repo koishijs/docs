@@ -1,4 +1,4 @@
-# 指令 (Command)
+# Command
 
 指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例，它含有下面的方法：
 
