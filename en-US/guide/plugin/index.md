@@ -4,17 +4,17 @@
 在学习本章之前，建议先阅读 [入门 > 安装和配置插件](../../manual/console/market.md)。
 :::
 
-Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
+模块化是 Koishi 的核心特性。借助插件系统，Koishi 得以将各种功能解耦出来，并以模块的形式分发。在「开发上手」中我们已经体验了基础的插件开发范例。本章将介绍更多的模块化编写方式，并介绍一些场景下的最佳实践。
 
-## Basic Forms of Plugins
+## 插件的基本形式
 
-A plugin needs to be one of three basic forms:
+一个插件需要是以下三种基本形式之一：
 
 1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的配置项
 2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的配置项
-3. An object which has a `apply` method of the object and the method is the function in the first form
+3. 一个对象，其中的 `apply` 方法是第一种形式中所说的函数
 
-而一个插件在被加载时，则相当于进行了上述函数的调用。Therefore, the four formulations below are basic equivalent:
+而一个插件在被加载时，则相当于进行了上述函数的调用。因此，下面的四种写法是基本等价的：
 
 ```ts
 declare const callback: Middleware
@@ -36,7 +36,7 @@ ctx.plugin(class {
 
 看起来插件似乎只是将函数调用换了一种写法，但这种写法能够帮助我们将多个逻辑组合在一起并模块化，同时可以在插件内部对所需的选项进行初始化，这些都能极大地提高了代码的可维护性。
 
-## Modular Plugins
+## 模块化的插件
 
 插件化最大的好处就是可以把不同的功能写在不同的模块中。此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容)。
 
@@ -83,7 +83,7 @@ export function apply(ctx: Context) {
 
 当你在开发较为复杂的功能时，可以将插件分解成多个独立的子插件，并在入口文件中依次加载这些子插件。许多大型插件都采用了这种写法。
 
-## Load plugins in the config file
+## 在配置文件中加载
 
 一个模块可以作为插件被 Koishi 的配置文件加载，其需要满足以下两条中的一条：
 
