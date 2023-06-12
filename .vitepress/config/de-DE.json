@@ -517,10 +517,6 @@
           "text": "控制台",
           "items": [
             {
-              "text": "控制台架构",
-              "link": "/api/console/index.md"
-            },
-            {
               "text": "服务端 API",
               "link": "/api/console/server.md"
             },
