@@ -1,8 +1,8 @@
-# 应用 (App)
+# App
 
 **应用 (App)** 是 [Context](./context.md) 的一个子类，它是程序的入口，管理着全部机器人的信息。除了 Context 中已有的属性和方法以外，App 还提供了下面的属性和方法：
 
-## 构造函数选项
+## Constructor Options
 
 通过 `new App(options)` 创建一个 App 实例。
 
@@ -107,8 +107,8 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见：
 
-- [配置文件](../../guide/develop/config.md)
-- [认识插件](../../guide/plugin/index.md)
+- [Configuration File](../../guide/develop/config.md)
+- [About Plugin](../../guide/plugin/index.md)
 
 ### options.logger
 
