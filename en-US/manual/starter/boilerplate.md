@@ -10,12 +10,12 @@ next:
 # Create a boilerplate
 
 ::: tip
-If you want to learn about other installation method, please visit [Choose Installation Method](./index.md).
+If you want to learn about other installation method, please visit [Installation](./index.md).
 :::
 
 In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
 
-- One-key Template Project. Create a project with full console experience and plugin templates with just one key
+- Template One-click Creation. Create a project with full console experience and plugin templates with only one click
 - Fully TypeScript support. Enjoy the benefits of code hints and type checks.
 - Plugins Hot Reload. Get immediately feedback while changing plugin code without restarting the app.
 - Support Secondary Development. You could connect your own bot and others' plugins for debugging.
