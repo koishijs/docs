@@ -1,28 +1,28 @@
 ---
 prev:
-  text: Installation
-  link: /en-US/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 ---
 
-# About Koishi Console
+# 认识控制台
 
-One of the key feature in Koishi is Console.Console is a graphical interface which is very friendly for users. And there are majority functions in the console.
+Koishi 的一个核心特性是强大的控制台。控制台是一个对用户非常友好的图形界面，封装了 Koishi 的绝大多数功能：
 
-- Monitor the status and view the statistics
-- Configure plugins
-- Install, uninstall and update plugins
-- Manage commands, database and localization
-- Simulate chat
-- Display logs
+- 状态监控、数据统计
+- 配置插件
+- 安装、卸载和更新插件
+- 管理指令、数据库、输出文本
+- 模拟聊天
+- 查看日志
 
-## Console User Interface
+## 控制台界面
 
-The console will be opened automatically after you have successfully installed a template project or the launcher.
+在您成功安装了模板项目或启动器后，控制台将自动打开。
 
-The console UI contains two parts: the left side is a sidebar, which is used to toggle the interfaces on the right side; the right side is a dashboard which is opened by default. There is also a status bar which is used to show the running status of bots at the bottom on a wide screen.
+控制台的界面主要分为两部分，左侧是活动栏，用来切换右边的界面，右边默认打开的是仪表盘页面。在宽屏设备的下方还有一个状态栏，主要用来显示机器人的运行状态。
 
 ![home](/manual/console/home.light.webp) {.light-only}
 
 ![home](/manual/console/home.dark.webp) {.dark-only}
 
-We will further introduce the usage of each page in the following sections.
+在接下来的几节中会逐一介绍各界面的功能和使用。
