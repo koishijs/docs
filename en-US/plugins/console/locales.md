@@ -1,4 +1,4 @@
-# 本地翻译 (Locales)
+# Localization Management (Locales)
 
 ::: tip
 使用方法请参见 [入门 > 国际化 > 本地化文本](../../manual/usage/i18n.md#本地化文本) 一节。
