@@ -8,9 +8,9 @@ The name and icon design are inspired from [Komeiji Koishi](https://zh.touhouwik
 
 ### Out of box
 
-Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟之内搭建自己的聊天机器人。
+Koishi provides a highly convenient Web UI which is called Koishi Console that allows you to set up your own chatbot in just a few minutes without any programming knowledge.
 
-- 提供在线插件市场，即使没有任何编程基础，也能轻松在控制台中下载安装插件
+- Plugin Marketplace. You could easily download and install plugins in the console without any programming knowledge
 - 支持 QQ，Telegram，Discord 等主流聊天平台，支持多账户和跨平台数据互通
 - 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
 
