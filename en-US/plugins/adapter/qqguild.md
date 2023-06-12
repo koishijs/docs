@@ -67,7 +67,7 @@ QQ 频道官方 SDK 适配器，基于 [@qq-guild-sdk/core](https://www.npmjs.co
 
 验证方式。
 
-## FAQ
+## 常见问题
 
 - Q: 如何创建官方机器人?
 - A: 使用该 [官方网站](https://bot.q.qq.com/open/#/type?appType=2) 注册。
