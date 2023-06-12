@@ -4,7 +4,7 @@
 
 标有 <badge text="内置"/> 的 API 已经由 @koishijs/core 提供，适配器可以覆盖对应的方法，但是无需自行实现。
 
-## Constructor Options
+## 构造函数选项
 
 不同的适配器可能对应了不同的 Bot 配置项，但是有一些配置项是公用的：
 
