@@ -1,68 +1,68 @@
-# Command System
+# 指令系统
 
-After learning the basic usage of the Koishi Console, we can now talk about how to talk with bots! Let's start with the example from the previous section:
+在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
 
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>Available commands:</p>
-<p class="indent-1">echo  Send messages</p>
-<p class="indent-1">help  Show help</p>
-<p>Type "help &lt;command&gt;" to see syntax and examples for a specific command.</p>
+<p>当前可用的指令有：</p>
+<p class="indent-1">echo  发送消息</p>
+<p class="indent-1">help  显示帮助信息</p>
+<p>输入“帮助 指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 </chat-panel>
 
-The output relates to two plugins:
+这里的输出与两个插件有关：
 
-- The help command is provided by [help](../../plugins/common/help.md), which could display help information about a list of every command or detail for a specific command.
-- The echo command is provided by [echo](../../plugins/common/echo.md), which could return the input from users.
+- help 指令由 [help](../../plugins/common/help.md) 插件提供，它可以显示指令列表或具体指令的帮助信息
+- echo 指令由 [echo](../../plugins/common/echo.md) 插件提供，它可以将用户的输入原样返回
 
-Most of the features of a Koishi bot are provided to users by commands. More plugins you have installed, there would be more commands available.
+一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。当你安装了更多的插件后，你也就有了更多的指令可供使用。
 
-## Display Help Information
+## 查看帮助
 
-An optional parameter followed with help command could be used to view the detail of specific commands:
+help 指令后还可以添加一个参数，用于查看特定指令的帮助信息：
 
 <chat-panel>
 <chat-message nickname="Alice">help echo</chat-message>
 <chat-message nickname="Koishi">
-<p>Command: echo &lt;message...&gt;</p>
-<p>Send messages</p>
-<p>Available options:</p>
-<p class="indent-1">-e, --escape  Escape characters in message</p>
-<p class="indent-1">-E, --unescape  Unescape characters in message</p>
+<p>指令：echo &lt;message...></p>
+<p>发送消息</p>
+<p>可用的选项有：</p>
+<p class="indent-1">-e, --escape  发送转义消息</p>
+<p class="indent-1">-E, --unescape  发送反转义消息</p>
 </chat-message>
 </chat-panel>
 
-You might find that the help itself is a command as well, so is it possible to use help to show the help message of help itself? The answer is positive:
+那么细心的小伙伴可能会发现，既然 help 本身也是一个指令，那我能不能用来查看 help 自己的帮助信息呢？答案是肯定的：
 
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>Command: help [command]</p>
-<p>Display help information</p>
-<p>Available options:</p>
-<p class="indent-1">-a, --authority  show authority requirements</p>
-<p class="indent-1">-H, --show-hidden  show hidden options and commands</p>
+<p>指令：help [command]</p>
+<p>显示帮助信息</p>
+<p>可用的选项有：</p>
+<p class="indent-1">-a, --authority  显示权限设置</p>
+<p class="indent-1">-H, --show-hidden  查看隐藏的选项和指令</p>
 </chat-message>
 </chat-panel>
 
-## Arguments and Options
+## 参数和选项
 
-In the usages above, we have encountered two new concepts：**Argument** and **Option**.
+在上面的用法中，我们接触到了两个新的概念：**参数 (Argument)** 和 **选项 (Option)**。
 
-There are two types of parameters: required parameters, quoted by a pair of chevrons `<>`; and optional parameters, quoted by a pair of brackets `[]`. A command may have arbitrary parameters, their orders are fixed, which means that users should enter the parameters in the order that pre-defined by the command. Required parameters must be precedent before optional parameters. When user enters fewer parameters than the required parameters that the plugin requires, the plugin should often print errors. When user enters extra parameters, they would be ignored generally.
+参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
 
-For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. Let's see what will happen if the required parameter is missing:
+例如，help 指令共有一个参数，它是可选参数，表示要查看的指令名；echo 指令也有一个参数，它是必选参数，表示要发送的消息。让我们看看如果不填必选参数会怎么样：
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>Please type to send</p>
+<p>请输入要发送的文本。</p>
 </chat-message>
 </chat-panel>
 
-The behavior would be affected by the options as well. An option usually starts with `-` or `--`, followed by a fixed word without any spaces, the word is the name of the option. There are no order requirements between options, but generally we should put options before parameters. Let's try out!
+选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,32 +73,32 @@ The behavior would be affected by the options as well. An option usually starts 
 </chat-message>
 </chat-panel>
 
-In the example above, the option `-E` that we used changed the outputs. We will talk about it in detail in the next section.
+在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
 
-In addition to being required and optional, the arguments can be divided into fixed and variable length. A variable-length argument would be fed all characters including whitespace characters, while a fixed-length one stops feeding when it reads whitespace characters. The variable-length argument is defined by `...` follows the parameter name. For example, the argument of `echo` is variable-length. If it is required to pass whitespace characters into a fixed-length argument, you can wrap the whole argument into quotes, just like:
+参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
 </chat-panel>
 
-Additionally, options might require parameters as well. You should see a help information as below when you have any translate plugin installed.
+此外，部分选项也可以接受参数。例如，当你安装了翻译插件，你将会获得如下的帮助信息：
 
 <chat-panel>
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
-<p>Command: translate &lt;text...&gt;</p>
-<p>Translate Text</p>
-<p>Available options:</p>
-<p class="indent-1">-s, --source &lt;lang&gt; Source Language (Auto-detect by default)</p>
-<p class="indent-1">-t, --target &lt;lang&gt; Target Language (Chinese by default)</p>
+<p>指令：translate &lt;text...></p>
+<p>文本翻译</p>
+<p>可用的选项有：</p>
+<p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
+<p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
 </chat-message>
-<chat-message nickname="Alice">translate -t ja Hello, world</chat-message>
+<chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
 <chat-message nickname="Koishi">こんにちは世界</chat-message>
 </chat-panel>
 
-Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the target language as Japanese, while the source language option remains default still.
+在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
 
-## Command Prefix
+## 触发前缀
 
 然而，如果仅仅通过一个词就能触发指令，在群聊环境下非常容易出现误触。为了避免这种情况，Koishi 引入了前缀触发的概念。在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
 
@@ -124,7 +124,7 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./filter.md) 一节
 :::
 
-## Subcommands
+## 子指令
 
 [admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
 
@@ -162,34 +162,34 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./i18n.md) 一节再详细介绍。
 :::
 
-## Command Management
+## 指令管理
 
 打开控制台，我们会在活动栏中找到名为「指令管理」的页面。你可以在这里查看当前所有指令的列表，并对指令的行为进行设置。
 
-### Set Aliases
+### 设置别名
 
 点进任意指令的详情页，首先就能看到「名称设置」，这里展示了指令的全部别名。每个别名都能被用来触发指令，而第一个别名则会作为默认名称显示在帮助中。
 
 你可以在这里添加或删除别名，也可以将任意别名设置为默认的显示名称。例如，在 `echo` 指令中点击「添加别名」，输入 `复读`，然后点击「设为默认」，这样一来，用户在帮助中看到的就是 `复读` 而不是 `echo` 了。
 
-### Add Subcommands
+### 添加子指令
 
 在左侧栏中，你可以将任何指令 (派生式指令除外) 拖至其他指令的下方，这将使得前者成为后者的子指令。例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令或是 [`usage`](../../plugins/common/rate-limit.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
 
 点击右上角的加号按钮，我们可以创建一个新指令。这个新指令自然是没有行为的，它的主要目的是作为其他指令的父指令，已获得更好的展示效果。对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
 
-### Authority Management
+### 权限管理
 
 在「名称设置」下方还有更多的配置项，我们可以在这里进一步配置指令对用户的访问权限。例如，将 echo 指令的 `authority` 设置为 `2`，那么将只有 2 级以上权限的用户才能调用该指令。
 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
-For user permissions, refer to [permissions management](./permission.md) section.
+关于用户权限，请参考 [权限管理](./permission.md) 一节。
 
-### Rate Limits
+### 速率限制
 
-:::tip
-This feature is provided by [rate-limit](../../plugins/common/rate-limit.md) plugin.
+::: tip
+此部分功能由 [rate-limit](../../plugins/common/rate-limit.md) 插件提供。
 :::
 
 有些指令 (例如签到抽卡，限制次数的 API 调用等) 我们并不希望被无限调用，这时我们可以通过 `maxUsage` 设置每天访问额度的上限。当超出总次数后，机器人将回复「调用次数已达上限」。
