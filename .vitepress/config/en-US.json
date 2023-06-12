@@ -26,7 +26,7 @@
   "themeConfig": {
     "editLink": {
       "text": "Translate this page on Crowdin",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-en"
+      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-enus"
     },
     "navText": "Navigation",
     "nav": [
@@ -46,7 +46,7 @@
         "activeMatch": "/(api|schema)/"
       },
       {
-        "text": "plugin",
+        "text": "Plugins",
         "items": [
           {
             "text": "Plugin market",
@@ -517,10 +517,6 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "控制台架构",
-              "link": "/api/console/index.md"
-            },
-            {
               "text": "服务端 API",
               "link": "/api/console/server.md"
             },
@@ -562,7 +558,7 @@
       ],
       "/plugins/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Plugin market",
@@ -742,7 +738,7 @@
       ],
       "/market/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Plugin market",
