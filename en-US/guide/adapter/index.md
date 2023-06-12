@@ -1,4 +1,4 @@
-# 使用适配器
+# Work with Adapters
 
 ::: danger 注意
 此页文档正在施工，其中的内容可能不是最新。
