@@ -1,4 +1,4 @@
-# 发送广播 (Broadcast)
+# Broadcasting (Broadcast)
 
 ::: tip
 要使用本插件，你需要安装数据库支持。
