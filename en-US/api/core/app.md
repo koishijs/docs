@@ -1,8 +1,8 @@
-# App
+# 应用 (App)
 
 **应用 (App)** 是 [Context](./context.md) 的一个子类，它是程序的入口，管理着全部机器人的信息。除了 Context 中已有的属性和方法以外，App 还提供了下面的属性和方法：
 
-## Constructor Options
+## 构造函数选项
 
 通过 `new App(options)` 创建一个 App 实例。
 
