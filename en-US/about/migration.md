@@ -5,7 +5,6 @@
 ::: tip 重要
 请开发者直接依赖 koishi 而非 @koishijs/core 进行开发。
 :::
-:::
 
 - koishi-core 与 node 解耦后更名为 @koishijs/core
 - koishi-utils 与 node 解耦后更名为 @koishijs/utils
@@ -76,7 +75,7 @@
 
 ### 移除的包
 
-下列包由于使用场景和用途的限制，不再进行官方维护。这些包会继续留在 Koishi 组织中。这些包会继续留在 Koishi 组织中。
+下列包由于使用场景和用途的限制，不再进行官方维护。这些包会继续留在 Koishi 组织中。
 
 - [koishi-plugin-chess](https://github.com/koishijs/koishi-plugin-chess) (社区维护)
 - [koishi-plugin-image-search](https://github.com/koishijs/koishi-plugin-image-search) (社区维护)
@@ -149,7 +148,7 @@ export default {
 }
 ```
 
-同时我们也调整了一些机器人配置项，并支持了一些全新的特性。下面举一些例子：下面举一些例子：
+同时我们也调整了一些机器人配置项，并支持了一些全新的特性。下面举一些例子：
 
 ```yaml title=koishi.yml
 plugins:
