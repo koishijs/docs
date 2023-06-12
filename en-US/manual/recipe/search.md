@@ -1,14 +1,14 @@
-# Search Marketplace
+# 搜索插件市场
 
 Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
-## Search Terms
+## 搜索词
 
 除去含有冒号的特殊语法外，你输入的搜索词会被用于查询：
 
-- Plugin name
-- Plugin description
-- Plugin keywords
+- 插件名称
+- 插件描述
+- 插件的关键词
 
 ## 插件标识
 
@@ -26,9 +26,9 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
 
-## Plugin Categories
+## 插件分类
 
-We currently offer 14 base categories. They are:
+我们目前提供了 14 个基础分类。它们分别是：
 
 - `category:core`：核心功能
 - `category:adapter`：适配器
@@ -47,7 +47,7 @@ We currently offer 14 base categories. They are:
 
 插件的分类由 Koishi 团队成员负责维护，通常在插件发布后的一周内完成。极少数插件不会属于任何类别。如果你认为你的插件没有被正确分类，可以提交议题进行反馈。
 
-## Sort Plugins
+## 插件排序
 
 插件市场中的插件会默认根据其评分进行排序。评分是一个 0~5 之间的数值，并在四舍五入后会显示为星星的个数。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
 
