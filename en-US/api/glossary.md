@@ -2,23 +2,23 @@
 
 本页收集了一些 Koishi 设计中的重要概念，按字母表序排列。如果你在阅读文档时对某个概念感到迷惑，可以随时回到这里查看解释。
 
-## Adapter
+## 适配器 (Adapter)
 
-适配器是指实现了平台协议，能够让机器人接入平台的插件。In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
+适配器是指实现了平台协议，能够让机器人接入平台的插件。通常来说一个适配器实例对应了一个机器人用户，同时启用多个适配器就实现了多个机器人的同时接入。
 
 - [入门 > 接入聊天平台](../manual/console/adapter.md)
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 - [开发 > 跨平台 > 使用适配器](../guide/adapter/index.md)
 - [API > 核心模块 > 适配器](./core/adapter.md)
 
-## App
+## 应用 (App)
 
 - [开发 > 开发起步 > 配置文件](../guide/develop/config.md)
 - [API > 核心模块 > 应用](./core/app.md)
 
 ## 机器人 (Bot)
 
-机器人是指由 Koishi 操控的平台用户。The user here is not necessarily a real user. It can also be a bot user, which is provided by some platforms.By interacting with the robot, other users experience Koishi's functions.
+机器人是指由 Koishi 操控的平台用户。这里的用户不一定是真实用户，也可以是部分平台专门提供的机器人用户。其他用户通过与机器人进行交互来体验 Koishi 的各项功能。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 - [开发 > 交互基础 > 进阶用法](../guide/basic/advanced.html#机器人对象)
@@ -27,7 +27,7 @@
 
 ## 频道 (Channel)
 
-频道是消息的集合。A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
+频道是消息的集合。一个频道包含了具备时间、逻辑顺序的一系列消息。频道又分为私聊频道和群聊频道，其中私聊频道有且仅有两人参与，而群聊频道可以有任意多人参与。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 
@@ -43,7 +43,7 @@
 - [开发 > 控制台](../guide/console/index.md)
 - [API > 控制台](./console/index.md)
 
-## Context
+## 上下文 (Context)
 
 - [开发 > 模块化](../guide/plugin/index.md)
 - [API > 核心模块 > 上下文](./core/context.md)
@@ -68,7 +68,7 @@
 
 ## 群组 (Guild)
 
-群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
+群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 QQ)：一个群组内有且仅有一个群聊频道。私聊频道不属于任何群组。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 
@@ -89,7 +89,7 @@
 
 ## 平台 (Platform)
 
-平台是指聊天平台，比如 QQ、Discord 等。Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
+平台是指聊天平台，比如 QQ、Discord 等。同一平台内的用户间具有相互发送消息的能力，而不同平台的用户间则没有。对于 Rocket Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 
