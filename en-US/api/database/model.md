@@ -1,4 +1,4 @@
-# 数据模型 (Model)
+# Data Model
 
 ## 数据类型
 
