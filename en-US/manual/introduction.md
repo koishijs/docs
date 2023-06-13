@@ -22,9 +22,9 @@ After four years of iteration, Koishi has developed a rich plugin ecosystem and 
 
 In addition, there are many professional functions for developers built in Koishi, allowing plugin developers to build scalable solutions for various complex requirements.
 
-- Fully Typed: Koishi is completely developed based on TypeScript, with first-class type system and code auto-complete that allow you to write code without even looking at the documentation
-- Unit Testing: All core functions have passed unit test case, not only ensuring the reliability of the core functions of Koishi, but also providing developers with a series of best practices for testing plugins and solving problems
-- Hot Module Reload: When developing Koishi plugins, you could just save the modification into the files, Koishi would reload plugins for you automatically, making it as smooth as front-end development
+- Fully Typed: Koishi is completely developed based on TypeScript, with first-class type system and code auto-complete that allow you to write code without even looking at the documentation.
+- Unit Testing: All core functions have passed unit test case, not only ensuring the reliability of the core functions of Koishi, but also providing developers with a series of best practices for testing plugins and solving problems.
+- Hot Module Reload: When developing Koishi plugins, you could just save the modification into the files, Koishi would reload plugins for you automatically, making it as smooth as front-end development.
 
 ## Get Started
 
