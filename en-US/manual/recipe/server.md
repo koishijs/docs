@@ -61,7 +61,7 @@ server {
 }
 ```
 
-## What's next...
+## What's Next...
 
 完成初步配置以后，有一些额外的社区插件可以帮助你更好地部署 Koishi 控制台。
 

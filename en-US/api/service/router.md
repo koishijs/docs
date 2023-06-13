@@ -1,4 +1,4 @@
-# 网络服务 (Router)
+# Router
 
 ::: tip
 Koishi 默认情况下并不会监听任何端口，如要启用网络服务请记得配置 [`options.port`](../core/app.md#options-port)。

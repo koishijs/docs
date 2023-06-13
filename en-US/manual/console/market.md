@@ -30,7 +30,7 @@ We can see that the "echo" plugin is not running, and the "details" page on the 
 
 It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the upper right corner, then the plugin will stop running. Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
 
-## Configure Plugins
+## Configure plugins
 
 ::: warning
 In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi have many built-in plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. All built-in plugins are well configured, so you don't need to modify them anymore. Changing the configuration of plugins and removing built-in plugins at will, even if add some plugins wrongly may cause Koishi to crash.
@@ -55,7 +55,7 @@ Koishi provides a function of plugin groups that allows you to place plugins int
 
 You can also create new groups. In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner, and you will create a new plugin group. The small triangle in the left column can be used to control the expanding and collapsing of the group. You can also configure [filters](../usage/filter.md) that allow you to control the behavior of a group of plugins simultaneously.
 
-### Add more Plugins
+### Add More Plugins
 
 ::: tip
 Normally, a plugin can only run one configuration at once. Please refer to the [Maintaining Multiple Configurations](../recipe/multiple.md) section.

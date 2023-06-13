@@ -1,15 +1,15 @@
-# 访问数据库
+# Database Access
 
 ::: tip
-直接对数据库进行操作时需要小心谨慎哦~
+Be careful when directly manipulating the database!
 :::
 
-控制台左侧的数据库选项提供了一个数据库面板，你可以在这里对 Koishi 的数据库进行查看、新增、修改或是删除。通常这里包含了各用户和频道的信息，以及 bot 在各频道发送消息的频率记录。
+The database panel in the console's left-hand menu allows you to view, add, modify, or delete data in Koishi's database. In general, the database includes information about users and channels, as well as the records of the bot's message-sending frequency in each channel.
 
 ![database](/manual/console/database.light.webp) {.light-only}
 
 ![database](/manual/console/database.dark.webp) {.dark-only}
 
-有时你可能希望或需要手动对数据库进行操作，比如使用 `Admin` 插件中的 `authorize` 指令为用户设定权限时，操作者默认必须拥有 4 级以上的权限。
+Sometimes you may need to manually manipulate the database, such as when using the `authorize` command in the `Admin` plugin to set user permissions, the operator must have at least level 4 permissions by default.
 
-这时我们可以进入控制台的 `数据库` 页面中，在 `user` 表中的对应平台（如 onebot）列下方，找到你自己的账号（需要先在平台至少向 Bot 发送一条消息），然后将其对应的 authority 从 1 修改为 大于等于 4 的数值。这样这个账号就拥有更高的权限啦，现在试试使用 authorize 指令为好友提升权限吧~
+To achieve this, you could go to the `Dataview` page in the console, find your own account under the corresponding platform (such as onebot) in the `user` table (you may need to send a message to the bot on the platform first), and then modify its corresponding `authority` value from the default value 1 to a value greater than or equal to 4. This will give your account a higher privilege, so now try using the `authorize` command to elevate the privilege of other accounts you want.

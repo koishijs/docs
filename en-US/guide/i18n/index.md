@@ -1,4 +1,4 @@
-# 多语言支持
+# Internationalization
 
 ::: warning
 多语言支持目前属于实验性功能。

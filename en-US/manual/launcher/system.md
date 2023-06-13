@@ -16,14 +16,14 @@ We only listed the latest version in a product line. The unlisted version should
 
 ### Windows 8.1
 
-| Product                        | Core                 | Window               | Enhancement |
-| ------------------------------ | -------------------- | -------------------- | ----------- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:         |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:         |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:         |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:         |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:         |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:         |
+| Product                        | Core                 | Window               | Enhance |
+| ------------------------------ | -------------------- | -------------------- | ------- |
+| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:     |
+| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:     |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:     |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:     |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:     |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:     |
 
 ### Windows 10
 

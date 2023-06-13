@@ -1,4 +1,4 @@
-# 过滤器
+# Filters
 
 ::: tip
 在学习本节之前，建议先阅读 [入门 > 过滤器](../../manual/usage/filter.md)。

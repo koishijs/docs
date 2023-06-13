@@ -16,7 +16,7 @@
 - [开发 > 开发起步 > 配置文件](../guide/develop/config.md)
 - [API > 核心模块 > 应用](./core/app.md)
 
-## 机器人 (Bot)
+## Bot
 
 机器人是指由 Koishi 操控的平台用户。The user here is not necessarily a real user. It can also be a bot user, which is provided by some platforms.By interacting with the robot, other users experience Koishi's functions.
 
@@ -31,13 +31,13 @@
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 
-## 指令 (Command)
+## Command
 
 - [入门 > 指令系统](../manual/usage/command.md)
 - [开发 > 交互基础 > 指令开发](../guide/basic/command.md)
 - [API > 核心模块 > 指令](./core/command.md)
 
-## 控制台 (Console)
+## Console (Console)
 
 - [入门 > 认识控制台](../manual/console/index.md)
 - [开发 > 控制台](../guide/console/index.md)
@@ -54,7 +54,7 @@
 - [开发 > 数据库 > 使用数据库](../guide/database/index.md)
 - [API > 数据库](./database/built-in.md)
 
-## 事件 (Events)
+## Events
 
 - [开发 > 交互基础 > 事件系统](../guide/basic/events.md)
 - [API > 核心模块 > 事件](./core/events.md)
@@ -82,7 +82,7 @@
 
 - [开发 > 交互基础 > 中间件](../guide/basic/middleware.md)
 
-## 数据模型 (Model)
+## Data Model
 
 - [开发 > 数据库 > 扩展数据模型](../guide/database/model.md#扩展数据模型)
 - [API > 数据库 > 数据模型](./database/model.md)
@@ -123,7 +123,7 @@
 - [开发 > 模块化 > 服务与依赖](../guide/plugin/service.md)
 - [API > 核心模块 > 上下文](./core/context.md#混入属性和方法)
 
-## 会话 (Session)
+## Session
 
 会话对象封装了一次上报事件所含有的属性以及其上的可用操作。你会在事件，中间件和指令的回调函数中用到它。此外，会话对象还提供了许多实用方法，足以满足绝大部分的使用场景。
 

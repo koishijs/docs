@@ -1,4 +1,4 @@
-# 指令开发
+# Command
 
 ::: tip
 在学习本节之前，建议先阅读 [入门 > 指令系统](../../manual/usage/command.md)。
@@ -325,7 +325,7 @@ ctx.command('echo <message:text> 输出收到的信息')
 <chat-message nickname="Koishi">
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
-<p>可用的选项有：</p>
+<p>Available options:</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 </chat-message>
 </chat-panel>
@@ -349,9 +349,9 @@ ctx.command('echo <message:text>', '输出收到的信息')
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>注意：参数请写在最前面，不然会被当成 message 的一部分！</p>
-<p>可用的选项有：</p>
+<p>Available options:</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
-<p>使用示例：</p>
+<p>Examples:</p>
 <p class="indent-1">echo -t 300 Hello World  五分钟后发送 Hello World</p>
 </chat-message>
 </chat-panel>
@@ -372,8 +372,8 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">help  显示帮助信息</p>
+<p>Available commands:</p>
+<p class="indent-1">help  Show help</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 <chat-message nickname="Alice">help bar</chat-message>
@@ -390,8 +390,8 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help -H</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">help  显示帮助信息</p>
+<p>Available commands:</p>
+<p class="indent-1">help  Show help</p>
 <p class="indent-1">bar  一条看不见的指令</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
@@ -399,7 +399,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-message nickname="Koishi">
 <p>指令：bar</p>
 <p>一条看不见的指令</p>
-<p>可用的选项有：</p>
+<p>Available options:</p>
 <p class="indent-1">--foo &lt;text>  一个看不见的选项</p>
 </chat-message>
 </chat-panel>

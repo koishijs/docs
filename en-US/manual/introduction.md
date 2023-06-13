@@ -2,30 +2,30 @@
 
 Koishi is a cross-platform, extensive, high-performance cross-platform chatbot framework.
 
-它的名字和图标设计来源于东方 Project 中的角色 [古明地恋 (Komeiji Koishi)](https://zh.touhouwiki.net/wiki/古明地恋)。Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
+The name and icon design are inspired from [Komeiji Koishi](https://en.touhouwiki.net/wiki/Koishi_Komeiji), who is a character in Touhou Project. Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
 
 ## Features
 
-### 开箱即用
+### Out-of-the-box Experience
 
-Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟之内搭建自己的聊天机器人。
+Koishi provides a highly convenient Web UI which is called Koishi Console that allows you to set up your own chatbot in just a few minutes without any programming knowledge.
 
-- 提供在线插件市场，即使没有任何编程基础，也能轻松在控制台中下载安装插件
-- 支持 QQ，Telegram，Discord 等主流聊天平台，支持多账户和跨平台数据互通
-- 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
+- Plugin Marketplace. You could easily download and install plugins in the console without any programming knowledge
+- Multiple Platform Supports. Koishi supports mainstream chat platforms such as QQ, Telegram, and Discord. Data should be exchangeable between different platforms and accounts.
+- Real-time Monitoring. Monitor the running status or change the behavior of the chatbot anytime through the control panel, and even chat as the bot account itself
 
 ### Power of Community
 
-经过了长达四年的迭代，Koishi 已经发展出了丰富的插件生态和与之匹配的健壮系统。近 200 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
+After four years of iteration, Koishi has developed a rich plugin ecosystem and a robust system that matches it. Nearly 200 official and community plugins cover all aspects of chatbot ecosystem, such as platform support, database, resource storage, web UI console, state management as well as specific business functions. Whether your goal is to build a large-scale interactive application or a lightweight assistant chatbot, Koishi provides you with the best practices. We have also detailed documents for you in case that you are worried about the complexity of the massive functions through plugins.
 
-### Made for developers
+### Made for Developers
 
-Koishi 更为开发者准备了众多专业功能，使插件开发者得以在各种复杂需求中构建规模化的解决方案。
+In addition, there are many professional functions for developers built in Koishi, allowing plugin developers to build scalable solutions for various complex requirements.
 
-- 类型支持：Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档
-- 单元测试：所有核心功能均已经通过单元测试，既确保了可靠性，也为开发者提供了一套测试插件和定位问题的最佳实践
-- 模块热重载：开发 Koishi 插件时，只需轻点保存即可热重载，无需频繁重启机器人，如同前端开发一样丝滑顺畅
+- Fully Typed: Koishi is completely developed based on TypeScript, with first-class type system and code auto-complete that allow you to write code without even looking at the documentation
+- Unit Testing: All core functions have passed unit test case, not only ensuring the reliability of the core functions of Koishi, but also providing developers with a series of best practices for testing plugins and solving problems
+- Hot Module Reload: When developing Koishi plugins, you could just save the modification into the files, Koishi would reload plugins for you automatically, making it as smooth as front-end development
 
 ## Get Started
 
-点击前往 [起步](./starter/)，开启你的 Koishi 之旅。
+Click [Getting Started](./starter/) to start your journey with Koishi.

@@ -1,4 +1,4 @@
-# 内置组件
+# Built-in Components
 
 - 标有 <badge text="会话"/> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
 - 标有 <badge text="会话+广播"/> 的组件只能在会话环境或 `ctx.broadcast()` 中使用

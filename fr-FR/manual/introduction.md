@@ -1,12 +1,12 @@
-# 介绍
+# Introduction
 
-Koishi 是一个跨平台、可扩展、高性能的跨平台聊天机器人框架。
+Koishi est un cadre de développement de chatbots performant, extensible et multiplateforme.
 
-它的名字和图标设计来源于东方 Project 中的角色 [古明地恋 (Komeiji Koishi)](https://zh.touhouwiki.net/wiki/古明地恋)。古明地恋是一个会做出无意识举动的角色，取这个名字既象征着聊天机器人的主题，也蕴含了开发者为之倾注的热爱。
+Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](https://fr.touhouwiki.net/wiki/Koishi_Komeiji) de la série de jeux vidéo Touhou Project. Koishi Komeiji manipule l'inconscient, ce qui symbolise le thème d'un chatbot ainsi que l'amour des développeurs de Koishi pour celui-ci.
 
-## 特性
+## Fonctionnalités
 
-### 开箱即用
+### Prêt à l’emploi
 
 Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟之内搭建自己的聊天机器人。
 
@@ -14,11 +14,11 @@ Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟�
 - 支持 QQ，Telegram，Discord 等主流聊天平台，支持多账户和跨平台数据互通
 - 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
 
-### 生态丰富
+### Écologie riche
 
 经过了长达四年的迭代，Koishi 已经发展出了丰富的插件生态和与之匹配的健壮系统。近 200 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
 
-### 专为开发者打造
+### Conçu pour les développeurs
 
 Koishi 更为开发者准备了众多专业功能，使插件开发者得以在各种复杂需求中构建规模化的解决方案。
 

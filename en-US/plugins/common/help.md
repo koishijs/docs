@@ -1,4 +1,4 @@
-# 查看帮助 (Help)
+# Display Help (Help)
 
 ::: tip
 使用方法请参见 [入门 > 指令系统 > 查看帮助](../../manual/usage/command.md#查看帮助) 章节。

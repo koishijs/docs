@@ -29,13 +29,13 @@ Lastly, there is another interpolation approach in the [koishi-plugin-eval](http
 
 ## Fuzzy Matching
 
-在日常的使用中，我们也难免会遇到打错的情况，这时 Koishi 还会自动根据相近的指令名进行纠错提醒：
+In the daily use, it is not surprise that you make typos. In this case, Koishi would show hints based on similar commands:
 
 <chat-panel>
 <chat-message nickname="Alice">ecko hello</chat-message>
-<chat-message nickname="Koishi">没有此命令。你要找的是不是“echo”？发送空行或句号以调用推测的指令。</chat-message>
+<chat-message nickname="Koishi">Command not found.Do you mean echo?Send a period to apply the suggestion.</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">hello</chat-message>
 </chat-panel>
 
-如果想调整模糊匹配的程度，你还可以修改配置项 [minSimilarity](../../api/core/app.md#options-minsimilarity)。是不是很方便呢？
+You could also change the value of [minSimilarity](../../api/core/app.md#options-minsimilarity) in the global configuration to adjust the threshold of the fuzzy matching. Very convenient, isn't it?

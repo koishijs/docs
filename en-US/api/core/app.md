@@ -107,8 +107,8 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见：
 
-- [配置文件](../../guide/develop/config.md)
-- [认识插件](../../guide/plugin/index.md)
+- [Configuration File](../../guide/develop/config.md)
+- [About Plugin](../../guide/plugin/index.md)
 
 ### options.logger
 

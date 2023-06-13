@@ -386,7 +386,7 @@
               "link": "/api/"
             },
             {
-              "text": "术语表",
+              "text": "用語集",
               "link": "/api/glossary.md"
             }
           ]
@@ -516,10 +516,6 @@
         {
           "text": "コンソール",
           "items": [
-            {
-              "text": "控制台架构",
-              "link": "/api/console/index.md"
-            },
             {
               "text": "服务端 API",
               "link": "/api/console/server.md"

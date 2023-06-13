@@ -1,1 +1,1 @@
-# 跨平台账号绑定
+# Account Connection across Platforms

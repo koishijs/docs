@@ -1,4 +1,4 @@
-# 数据交互
+# Data Exchange
 
 Koishi 控制台前后端的数据交互基本是通过 WebSocket 实现的。为了适应不同的场景，我们提供了多种数据交互的形式。
 
@@ -117,7 +117,7 @@ send('get-greeting').then(data => {
 </script>
 ```
 
-## 权限管理
+## Permission Management
 
 当你引入了 @koishijs/plugin-auth 插件之后，你可以为你的页面访问和数据交互引入鉴权机制：
 

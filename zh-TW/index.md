@@ -3,7 +3,7 @@ layout: home
 links:
   starter: /zh-CN/manual/starter/
 home:
-  desc: 创建跨平台、可扩展、高性能的机器人
+  desc: 創建跨平臺、可擴展、高性能的機器人
   primary: Get Started
   secondary: Learn More
 features:

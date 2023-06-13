@@ -1,4 +1,4 @@
-# 扩展控制台
+# Console Extension
 
 ::: tip
 在学习本章之前，建议先阅读 [入门 > 认识控制台](../../manual/console/index.md)。

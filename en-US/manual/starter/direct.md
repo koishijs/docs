@@ -7,7 +7,7 @@ next:
   link: /en-US/guide/
 ---
 
-# Use as a Dependency
+# Install as a dependency
 
 ::: warning
 This guide assumes that you know about secondary knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you just started learning JavaScript development recently, or are not interested in coding, please [Choose Other Installation Methods](./index.md).
@@ -220,6 +220,6 @@ import * as ping from './ping'
 ctx.plugin(ping)
 ```
 
-## What's next...
+## What's Next...
 
-Congratulations that you have learnt the basic of Koishi! 接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+Congratulations on mastering the basic of Koishi! 接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。

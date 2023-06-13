@@ -7,7 +7,7 @@ next:
   link: /en-US/manual/console/
 ---
 
-# Create Template Project
+# Create a boilerplate
 
 ::: tip
 If you want to learn about other installation method, please visit [Installation](./index.md).
@@ -15,7 +15,7 @@ If you want to learn about other installation method, please visit [Installation
 
 In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
 
-- One-key Template Project. Create a project with full console experience and plugin templates with just one key
+- Template One-click Creation. Create a project with full console experience and plugin templates with only one click
 - Fully TypeScript support. Enjoy the benefits of code hints and type checks.
 - Plugins Hot Reload. Get immediately feedback while changing plugin code without restarting the app.
 - Support Secondary Development. You could connect your own bot and others' plugins for debugging.
@@ -101,9 +101,9 @@ yarn start
 ```
 :::
 
-## What's Next
+## What's Next...
 
-Congratulations that you have learnt the basic of Koishi! What's next:
+Congratulations on mastering the basic of Koishi! Moving forward:
 
-- If you want to learn to the Koishi Console, please visit [About Koishi Console](../console/index.md)
-- If you want to develop your own plugin, please visit [Developing Guide](../../guide/index.md).
+- If you're interested in learning how to use the Koishi Console, please proceed to [About Koishi Console](../console/index.md).
+- If you're interested in developing your own plugin immediately, please proceed to the [Developing Guide](../../guide/index.md).

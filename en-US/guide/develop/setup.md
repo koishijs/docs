@@ -1,38 +1,38 @@
-# 环境搭建
+# Setup Environment
 
 本节将介绍推荐的开发环境搭建流程。如果某些软件已经安装完成，可以跳过对应的步骤。
 
-## 安装 Node.js
+## Install Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v14，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended) as the runtime environment. You should install it manually.
 
-### 下载安装包
+### Download Installer
 
-首先我们前往 [Node.js](https://nodejs.org/) 的官方网站：
+Firstly, we should go to the official website of [Node.js](https://nodejs.org/):
 
 ![home](/manual/nodejs/home-dark.webp) {.dark-only}
 
 ![home](/manual/nodejs/home-light.webp) {.light-only}
 
-在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。我们建议你选择更加稳定的 LTS 版本，点击按钮即可下载安装包。
+So we see here are two green buttons, which are **LTS (Long-term Support version)** and **Current (the Latest version)**. The stable LTS version is recommended. Click the button to download the installer.
 
-随后，运行下载好的安装包，根据提示完成整个安装流程即可。
+Then, launch the installer you just downloaded, complete the installation process.
 
-### 安装包管理器
+### NPM
 
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
+[NPM](https://www.npmjs.com/) is the built-in package manager of Node.js, you could use it directly. We also recommend the powerful [Yarn](https://classic.yarnpkg.com/) as the package manager. It is very simple to install Yarn, just enter the following command into command line.
 
 ```sh
-# 安装 yarn
+# install yarn
 npm i -g yarn
 
-# 查看版本
+# check yarn version
 yarn -v
 ```
 
-### 配置镜像源
+### Configure Registry Mirror
 
-如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
+If you live in Chinese mainland, it might be very slow when you download dependencies from npm or yarn. Therefore, it is recommended to configure a registry mirror to speed up the installation process.
 
 ::: tabs code
 ```npm
@@ -86,16 +86,16 @@ git config –-global user.email "you@example.com"
 
 ## 安装 Koishi
 
-打开命令行，并进入你想要创建 Koishi 项目的目录。
+Open a command line, cd to the directory that you want to create a Koishi template project.
 
 ::: tip
-这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
+The working directory path should not be absurdly long, also it is recommended to use a path that contains ASCII characters only. For example:
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
-- 其他操作系统：`~/dev`
+- Other operating systems: `~/dev`
 :::
 
-输入下面的命令以创建 Koishi 项目：
+Enter the following command to create Koishi template project:
 
 ::: tabs code
 ```npm
@@ -107,9 +107,9 @@ yarn create koishi
 ```
 :::
 
-跟随提示即可完成全套初始化流程。
+Follow the prompts and finalize the initialization process.
 
-如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
+If you have successfully finalized the operations above, your application should be already launched, the Koishi Console Web UI should be also opened. 接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
 
 
 <!-- ## 安装 VSCode (可选)

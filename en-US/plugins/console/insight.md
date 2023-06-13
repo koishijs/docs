@@ -1,2 +1,2 @@
-# 插件依赖图 (Insight)
+# Dependencies Graph (Insight)
 

@@ -40,7 +40,7 @@ You might find that the help itself is a command as well, so is it possible to u
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
 <p>Command: help [command]</p>
-<p>Display help information</p>
+<p>Show help</p>
 <p>Available options:</p>
 <p class="indent-1">-a, --authority  show authority requirements</p>
 <p class="indent-1">-H, --show-hidden  show hidden options and commands</p>
@@ -132,7 +132,7 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 <chat-message nickname="Alice">user</chat-message>
 <chat-message nickname="Koishi">
 <p>指令：user</p>
-<p>用户管理</p>
+<p>User Management</p>
 <p>可用的子指令有：</p>
 <p class="indent-1">authorize  权限管理</p>
 <p class="indent-1">user.locale  语言偏好</p>
@@ -178,7 +178,7 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 
 点击右上角的加号按钮，我们可以创建一个新指令。这个新指令自然是没有行为的，它的主要目的是作为其他指令的父指令，已获得更好的展示效果。对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
 
-### Authority Management
+### Permission Management
 
 在「名称设置」下方还有更多的配置项，我们可以在这里进一步配置指令对用户的访问权限。例如，将 echo 指令的 `authority` 设置为 `2`，那么将只有 2 级以上权限的用户才能调用该指令。
 

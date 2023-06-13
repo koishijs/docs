@@ -1,5 +1,5 @@
 {
-  "description": "创建跨平台、可扩展、高性能的机器人",
+  "description": "Un cadre de développement de chatbots performant, extensible et multiplateforme",
   "head": [
     [
       "link",
@@ -75,7 +75,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "Introduction",
               "link": "/manual/introduction.md"
             }
           ]
@@ -516,10 +516,6 @@
         {
           "text": "Console",
           "items": [
-            {
-              "text": "控制台架构",
-              "link": "/api/console/index.md"
-            },
             {
               "text": "服务端 API",
               "link": "/api/console/server.md"

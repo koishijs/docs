@@ -1,4 +1,4 @@
-# 网络请求 (HTTP)
+# HTTP
 
 `ctx.http` 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。
 

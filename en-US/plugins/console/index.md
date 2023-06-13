@@ -1,4 +1,4 @@
-# 控制台 (Console)
+# Console (Console)
 
 ## 配置项
 

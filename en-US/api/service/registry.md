@@ -1,4 +1,4 @@
-# 插件系统 (Registry)
+# Registry
 
 ## 实例属性
 

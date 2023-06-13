@@ -1,4 +1,4 @@
-# 启动脚本
+# Bootstrap Script
 
 Koishi 提供了一套命令行工具，用于读取配置文件快速启动应用。
 

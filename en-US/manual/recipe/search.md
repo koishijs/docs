@@ -1,6 +1,6 @@
 # Search Marketplace
 
-Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
+There are many plugins in the Koishi marketplace. A set of search query syntax was provided in order to make the searching experience smooth and convinient. 你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
 ## Search Terms
 

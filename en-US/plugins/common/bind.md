@@ -1,4 +1,4 @@
-# 账号绑定 (Bind)
+# Account Connection (Bind)
 
 ::: tip
 要使用本插件，你需要安装数据库支持。

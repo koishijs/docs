@@ -20,4 +20,4 @@ If you want to learn about other installation method, please visit [Installation
 
 ## Other Downloads
 
-Could not find an installation package for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).
+Could not find an installation package suitable for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).

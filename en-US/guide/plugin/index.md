@@ -1,4 +1,4 @@
-# 认识插件
+# About Plugin
 
 ::: tip
 在学习本章之前，建议先阅读 [入门 > 安装和配置插件](../../manual/console/market.md)。
