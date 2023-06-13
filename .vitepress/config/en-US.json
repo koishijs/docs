@@ -49,7 +49,7 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "Plugin market",
+            "text": "Plugin Market",
             "link": "/market/"
           },
           {
@@ -341,11 +341,11 @@
               "link": "/guide/console/data.md"
             },
             {
-              "text": "客户端开发",
+              "text": "Client Components",
               "link": "/guide/console/client.md"
             },
             {
-              "text": "主题开发",
+              "text": "Theme Extension",
               "link": "/guide/console/theme.md"
             }
           ]
@@ -393,7 +393,7 @@
         },
         {
           "text": "Playground",
-          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "desc": "We have an interactive playground for some APIs.",
           "items": [
             {
               "text": "Schema",
@@ -446,7 +446,7 @@
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "Filter",
               "link": "/api/service/filter.md"
             },
             {
@@ -517,15 +517,15 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "Server API",
               "link": "/api/console/server.md"
             },
             {
-              "text": "上下文 API",
+              "text": "Context API",
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "Composable API",
               "link": "/api/console/composition.md"
             },
             {
@@ -673,7 +673,7 @@
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "用户登录 (Auth)",
+              "text": "User Authorization (Auth)",
               "link": "/plugins/console/auth.md"
             },
             {
@@ -681,7 +681,7 @@
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "插件配置 (Config)",
+              "text": "Plugin Configuration (Config)",
               "link": "/plugins/console/config.md"
             },
             {
@@ -709,7 +709,7 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Plugin Marketplace (Market)",
               "link": "/plugins/console/market.md"
             },
             {
@@ -766,7 +766,7 @@
           ]
         },
         {
-          "text": "核心概念",
+          "text": "Core Concepts",
           "items": [
             {
               "text": "Required and Optional",
@@ -830,7 +830,7 @@
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路径 (Path)",
+              "text": "Path",
               "link": "/schema/basic/path.md"
             }
           ]
@@ -867,7 +867,7 @@
               "link": "/schema/advanced/computed.md"
             },
             {
-              "text": "Dynamic：动态类型",
+              "text": "Dynamic",
               "link": "/schema/advanced/dynamic.md"
             }
           ]
