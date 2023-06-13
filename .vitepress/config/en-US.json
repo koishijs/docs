@@ -333,7 +333,7 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "扩展控制台",
+              "text": "Console Extension",
               "link": "/guide/console/index.md"
             },
             {
