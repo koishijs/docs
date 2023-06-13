@@ -108,11 +108,11 @@
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "Create a boilerplate",
+              "text": "Create Template Project",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "Install as a dependency",
+              "text": "Use as a Dependency",
               "link": "/manual/starter/direct.md"
             }
           ]
