@@ -41,7 +41,7 @@
 
 - [入门 > 认识控制台](../manual/console/index.md)
 - [开发 > 控制台](../guide/console/index.md)
-- [API > 控制台](./console/index.md)
+- [API > 控制台](./console/server.md)
 
 ## Context
 
