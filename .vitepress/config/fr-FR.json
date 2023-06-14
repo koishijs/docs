@@ -57,14 +57,14 @@
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Officielles",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "Plus",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -569,7 +569,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
@@ -749,7 +749,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
