@@ -9,29 +9,29 @@ choices:
     children:
       - 
         text: Windows
-        link: /zh-CN/manual/starter/windows.html
+        link: /fr-FR/manual/starter/windows.html
       - 
         text: macOS
-        link: /zh-CN/manual/starter/macos.html
+        link: /fr-FR/manual/starter/macos.html
       - 
         text: Linux
-        link: /zh-CN/manual/starter/linux.html
+        link: /fr-FR/manual/starter/linux.html
       - 
         text: Android
-        link: /zh-CN/manual/starter/android.html
+        link: /fr-FR/manual/starter/android.html
       - 
         text: Docker
-        link: /zh-CN/manual/starter/docker.html
+        link: /fr-FR/manual/starter/docker.html
   development:
     text: 用于开发
     caption: 我希望 Koishi 作为……
     children:
       - 
         text: 一个独立的项目
-        link: /zh-CN/manual/starter/boilerplate.html
+        link: /fr-FR/manual/starter/boilerplate.html
       - 
         text: 其他项目的依赖
-        link: /zh-CN/manual/starter/direct.html
+        link: /fr-FR/manual/starter/direct.html
 ---
 
 # 选择安装方式
