@@ -37,27 +37,35 @@
       },
       {
         "text": "開発",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
-      },
-      {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
+        "items": [
+          {
+            "text": "指南",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "演练场：配置构型",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
         "text": "プラグイン",
         "items": [
           {
-            "text": "プラグインマーケットプレイス",
+            "text": "插件市场",
             "link": "/market/"
           },
           {
-            "text": "サービス型プラグイン一覧",
+            "text": "服务类插件导航",
             "link": "/market/service.md"
           },
           {
-            "text": "公式プラグイン一覧",
+            "text": "官方插件一览",
             "link": "/plugins/"
           }
         ],
@@ -556,6 +564,33 @@
           ]
         }
       ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "概要",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
+        }
+      ],
       "/plugins/": [
         {
           "text": "プラグイン",
@@ -569,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "公式プラグイン一覧",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -749,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "公式プラグイン一覧",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
