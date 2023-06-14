@@ -4,7 +4,7 @@ prev:
   link: /ru-RU/manual/starter/
 next:
   text: 指南
-  link: /zh-CN/guide/
+  link: /ru-RU/guide/
 ---
 
 # 作为依赖调用
