@@ -1,7 +1,7 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /fr-FR/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
   primary: Get Started
@@ -58,57 +58,57 @@ footer:
     items:
       - 
         text: 为 Windows 安装
-        link: /zh-CN/manual/starter/windows.html
+        link: /fr-FR/manual/starter/windows.html
       - 
         text: 为 macOS 安装
-        link: /zh-CN/manual/starter/macos.html
+        link: /fr-FR/manual/starter/macos.html
       - 
         text: 为 Linux 安装
-        link: /zh-CN/manual/starter/linux.html
+        link: /fr-FR/manual/starter/linux.html
       - 
         text: 为 Android 安装
-        link: /zh-CN/manual/starter/android.html
+        link: /fr-FR/manual/starter/android.html
       - 
         text: 在容器中使用
-        link: /zh-CN/manual/starter/docker.html
+        link: /fr-FR/manual/starter/docker.html
       - 
         text: 创建模板项目
-        link: /zh-CN/manual/starter/boilerplate.html
+        link: /fr-FR/manual/starter/boilerplate.html
       - 
         text: 作为依赖调用
-        link: /zh-CN/manual/starter/direct.html
+        link: /fr-FR/manual/starter/direct.html
   - 
     text: 文档
     items:
       - 
         text: 开发指南
-        link: /zh-CN/guide/
+        link: /fr-FR/guide/
       - 
         text: API 文档
-        link: /zh-CN/api/
+        link: /fr-FR/api/
       - 
         text: 官方插件
-        link: /zh-CN/plugins/
+        link: /fr-FR/plugins/
   - 
     text: 平台
     items:
       - 
         text: Discord
-        link: /zh-CN/plugins/adapter/discord.html
+        link: /fr-FR/plugins/adapter/discord.html
       - 
         text: Lark (飞书)
-        link: /zh-CN/plugins/adapter/lark.html
+        link: /fr-FR/plugins/adapter/lark.html
       - 
         text: Kook (开黑啦)
-        link: /zh-CN/plugins/adapter/kook.html
+        link: /fr-FR/plugins/adapter/kook.html
       - 
         text: OneBot (QQ)
-        link: /zh-CN/plugins/adapter/onebot.html
+        link: /fr-FR/plugins/adapter/onebot.html
       - 
         text: QQ 频道
-        link: /zh-CN/plugins/adapter/qqguild.html
+        link: /fr-FR/plugins/adapter/qqguild.html
       - 
         text: Telegram
-        link: /zh-CN/plugins/adapter/telegram.html
+        link: /fr-FR/plugins/adapter/telegram.html
 ---
 
