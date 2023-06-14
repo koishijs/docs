@@ -37,13 +37,21 @@
       },
       {
         "text": "开发",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
-      },
-      {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
+        "items": [
+          {
+            "text": "指南",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "演练场：配置构型",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
         "text": "插件",
@@ -554,6 +562,33 @@
               "link": "/api/utils/misc.md"
             }
           ]
+        }
+      ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "总览",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
         }
       ],
       "/plugins/": [
