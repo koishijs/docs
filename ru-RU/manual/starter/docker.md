@@ -4,7 +4,7 @@ prev:
   link: /ru-RU/manual/starter/
 next:
   text: 认识控制台
-  link: /zh-CN/manual/console/
+  link: /ru-RU/manual/console/
 ---
 
 # 在容器中使用

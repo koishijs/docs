@@ -58,57 +58,57 @@ footer:
     items:
       - 
         text: 为 Windows 安装
-        link: /zh-CN/manual/starter/windows.html
+        link: /ru-RU/manual/starter/windows.html
       - 
         text: 为 macOS 安装
-        link: /zh-CN/manual/starter/macos.html
+        link: /ru-RU/manual/starter/macos.html
       - 
         text: 为 Linux 安装
-        link: /zh-CN/manual/starter/linux.html
+        link: /ru-RU/manual/starter/linux.html
       - 
         text: 为 Android 安装
-        link: /zh-CN/manual/starter/android.html
+        link: /ru-RU/manual/starter/android.html
       - 
         text: 在容器中使用
-        link: /zh-CN/manual/starter/docker.html
+        link: /ru-RU/manual/starter/docker.html
       - 
         text: 创建模板项目
-        link: /zh-CN/manual/starter/boilerplate.html
+        link: /ru-RU/manual/starter/boilerplate.html
       - 
         text: 作为依赖调用
-        link: /zh-CN/manual/starter/direct.html
+        link: /ru-RU/manual/starter/direct.html
   - 
     text: Документы
     items:
       - 
         text: 开发指南
-        link: /zh-CN/guide/
+        link: /ru-RU/guide/
       - 
         text: API 文档
-        link: /zh-CN/api/
+        link: /ru-RU/api/
       - 
         text: 官方插件
-        link: /zh-CN/plugins/
+        link: /ru-RU/plugins/
   - 
     text: Платформы
     items:
       - 
         text: Discord
-        link: /zh-CN/plugins/adapter/discord.html
+        link: /ru-RU/plugins/adapter/discord.html
       - 
         text: Lark (飞书)
-        link: /zh-CN/plugins/adapter/lark.html
+        link: /ru-RU/plugins/adapter/lark.html
       - 
         text: Kook (开黑啦)
-        link: /zh-CN/plugins/adapter/kook.html
+        link: /ru-RU/plugins/adapter/kook.html
       - 
         text: OneBot (QQ)
-        link: /zh-CN/plugins/adapter/onebot.html
+        link: /ru-RU/plugins/adapter/onebot.html
       - 
         text: QQ 频道
-        link: /zh-CN/plugins/adapter/qqguild.html
+        link: /ru-RU/plugins/adapter/qqguild.html
       - 
         text: Telegram
-        link: /zh-CN/plugins/adapter/telegram.html
+        link: /ru-RU/plugins/adapter/telegram.html
 ---
 

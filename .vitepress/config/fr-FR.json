@@ -12,7 +12,7 @@
       "link",
       {
         "rel": "manifest",
-        "href": "/manifest/zh-CN.json"
+        "href": "/manifest/fr-FR.json"
       }
     ],
     [
@@ -28,15 +28,15 @@
       "text": "Traduire cette page sur Crowdin",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-fr"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
-        "text": "入门",
+        "text": "Démarrage",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "开发",
+        "text": "Développement",
         "link": "/guide/",
         "activeMatch": "/guide/"
       },
@@ -49,22 +49,22 @@
         "text": "plugin",
         "items": [
           {
-            "text": "插件市场",
+            "text": "Place de Marché",
             "link": "/market/"
           },
           {
-            "text": "服务类插件导航",
+            "text": "Plugins Services",
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Officielles",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "Plus",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -569,7 +569,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
@@ -749,7 +749,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]

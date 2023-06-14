@@ -1,10 +1,10 @@
 ---
 prev:
   text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  link: /fr-FR/manual/starter/
 next:
   text: 认识控制台
-  link: /zh-CN/manual/console/
+  link: /fr-FR/manual/console/
 ---
 
 # 为 Windows 安装
