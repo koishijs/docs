@@ -37,34 +37,42 @@
       },
       {
         "text": "Développement",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
-      },
-      {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
+        "items": [
+          {
+            "text": "指南",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "演练场：配置构型",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
         "text": "plugin",
         "items": [
           {
-            "text": "Place de Marché",
+            "text": "插件市场",
             "link": "/market/"
           },
           {
-            "text": "Plugins Services",
+            "text": "服务类插件导航",
             "link": "/market/service.md"
           },
           {
-            "text": "Plugins Officielles",
+            "text": "官方插件一览",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "Plus",
+        "text": "更多",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -556,6 +564,33 @@
           ]
         }
       ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "总览",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
+        }
+      ],
       "/plugins/": [
         {
           "text": "plugin",
@@ -569,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "Plugins Officielles",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -749,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "Plugins Officielles",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
