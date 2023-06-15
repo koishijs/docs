@@ -1,6 +1,6 @@
 # Introduction
 
-Koishi 是一个跨平台、可扩展、高性能的聊天机器人框架。
+Koishi is a cross-platform, extensive, high-performance chatbot framework.
 
 The name and icon design are inspired from [Komeiji Koishi](https://en.touhouwiki.net/wiki/Koishi_Komeiji), who is a character in Touhou Project. Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
 
