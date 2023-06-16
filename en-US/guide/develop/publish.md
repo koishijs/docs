@@ -22,10 +22,10 @@ root
 ```
 
 ::: tip
-请注意 `package.json` 文件不是唯一的，它在应用目录和每个插件目录都会存在。please make sure the file you've opened is the one in the corresponding plugin folder.
+There is a `package.json` file in your workspace root and in each plugin folder, please make sure the file you've opened is the one in the corresponding plugin folder.
 :::
 
-打开上述文件，你会看到它大概长这样：
+2. You can see in the opened file:
 
 ```json title=package.json
 {
@@ -35,7 +35,7 @@ root
 }
 ```
 
-其中最重要的属性有两个：`name` 是要发布的包名，`version` 是包的版本号。这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
+When publishing your plugin, it must have a `name` and `version`. 这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
 
 ::: tip
 请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
