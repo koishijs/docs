@@ -1,14 +1,14 @@
 # Publishing Plugins
 
-To make your plugin more to others, you should publish it as a npm.只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
+Your plugin should be published onto npm before being available to Koishi users. But there are extra requirements for a valid plugin to be listed in the [plugin marketplace](../../market/).
 
 ::: tip
-本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
+These commands are should be run in the [application directory](./config.md#应用目录).
 :::
 
-## 准备工作
+## Be Prepared
 
-首先让我们关注工作区目录中的 `package.json` 文件。这个文件非常重要，它包含了要发布插件的一切元信息。
+1. See the `package.json` in your workspace directory.It contains all the meta information of your plugin.
 
 ```diff{6}
 root
@@ -16,9 +16,9 @@ root
 │   └── example
 │       ├── src
 │       │   └── index.ts
-│       └── package.json        # 你应该修改这里
+│       └── package.json        # here
 ├── koishi.yml
-└── package.json                # 而不是这里
+└── package.json                # do not here
 ```
 
 ::: tip
