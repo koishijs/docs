@@ -43,7 +43,7 @@ Each package name and updated version number is unique.If you use a duplicate na
 
 ## More information
 
-The `package.json` is more than just name and version of the plugin. It also includes dependencies, description, contributors, license, keywords, and other information. These are part of the plugin too, so whenever you change them, you have to [update the version first](#更新插件版本) and [then publish again](#发布插件).
+The `package.json` is more than just name and version of the plugin. It also includes dependencies, description, contributors, license, keywords, and other information. These are part of the plugin too, so whenever you change them, it is important that you update a version first and then publish again.
 
 ### Requirements
 
@@ -61,10 +61,10 @@ The `package.json` in your plugin should meet the requirements below to appear i
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
 - [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) should follow [semver](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
 - [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) should include `koishi`
-- 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
-- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
+- Do not set [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) to `true`, otherwise your plugin cannot be published to npm
+- Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) your plugin, unless you have a good reason to do so. For example, if you want to republish the plugin with a different name, you can use it to hide the old plugin on the marketplace.
 
-一个符合上述标准的示例：
+Example:
 
 ```json title=package.json
 {
@@ -84,17 +84,17 @@ The `package.json` in your plugin should meet the requirements below to appear i
 {
   "name": "koishi-plugin-example",
   "version": "1.0.0",
-  "contributors": [                         // 贡献者
+  "contributors": [
     "Alice <alice@gmail.com>",
     "Bob <bob@gmail.com>"
   ],
-  "license": "MIT",                         // 许可证
-  "homepage": "https://example.com",        // 主页
-  "repository": {                           // 源码仓库
+  "license": "MIT",
+  "homepage": "https://example.com",
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/alice/koishi-plugin-example.git"
   },
-  "keywords": ["example"],                  // 关键词
+  "keywords": ["example"],
   "peerDependencies": {
     "koishi": "^4.3.2"
   }
