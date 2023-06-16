@@ -3,7 +3,7 @@
 Your plugin should be published onto npm before being available to Koishi users. But there are extra requirements for a valid plugin to be listed in the [plugin marketplace](../../market/).
 
 ::: tip
-These commands are should be run in the [application directory](./config.md#应用目录).
+These commands are should be run in the [workspace root](./config.md#应用目录).
 :::
 
 ## Prerequisite
@@ -22,7 +22,7 @@ root
 ```
 
 ::: tip
-There is a `package.json` file in your workspace root and in each plugin folder, please make sure the file you've opened is the one in the corresponding plugin folder.
+There is a `package.json` file in your workspace root and in each plugin folder, please make sure the file opened is the one in the corresponding plugin folder.
 :::
 
 2. The following structure is an example of the above file:
@@ -38,7 +38,7 @@ There is a `package.json` file in your workspace root and in each plugin folder,
 When publishing your plugin, the property `name` and `version` are required. You can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
 
 ::: tip
-You need a unique package name and an updated version number. If you use a duplicate name or number, If you use a duplicate name or number, you will get an error message and have to change them.
+Each package name and updated version number is unique.If you use a duplicate name or number,  will get an error message and have to change them.
 :::
 
 ## More information
@@ -48,19 +48,19 @@ The `package.json` is more than just name and version of the plugin. It also inc
 ### Requirements
 
 ::: tip
-使用模板项目创建的插件一定是符合要求的，因此你可以跳过这一节。
+If your plugin created using the boilerplate, you can skip this section.
 :::
 
-要想显示在插件市场中，插件的 `package.json` 需要满足以下基本要求：
+The `package.json` in your plugin should meet the requirements below to appear in the marketplace:
 
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 必须符合以下格式之一：
+- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) should match one of these formats:
   - koishi-plugin-\*
   - @bar/koishi-plugin-\*
-  - @koishijs/plugin-\* (官方插件)
-  - 其中 \* 是由数字、小写字母和连字符组成的字符串
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
-- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
+  - @koishijs/plugin-\* (Official)
+  - \* is a string of digits, lowercase letters and dashes
+- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
+- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) should follow [semver](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
+- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) should include `koishi`
 - 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
 - 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
 
