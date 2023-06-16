@@ -25,18 +25,18 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "在 GitHub 编辑此页面",
+      "text": "在 Crowdin 上翻譯此頁面",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-zhtw"
     },
-    "navText": "导航",
+    "navText": "導覽",
     "nav": [
       {
-        "text": "入门",
+        "text": "入門",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "开发",
+        "text": "開發",
         "items": [
           {
             "text": "指南",
@@ -54,7 +54,7 @@
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "插件",
+        "text": "外掛程式",
         "items": [
           {
             "text": "插件市场",
