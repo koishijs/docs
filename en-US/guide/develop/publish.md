@@ -6,9 +6,9 @@ Your plugin should be published onto npm before being available to Koishi users.
 These commands are should be run in the [application directory](./config.md#应用目录).
 :::
 
-## Be Prepared
+## Prerequisite
 
-1. See the `package.json` in your workspace directory. It contains all the meta information of your plugin.
+1. Let’s start with the `package.json` file in your workspace directory.This file is crucial as it has all the meta information for publishing your plugin.
 
 ```diff{6}
 root
@@ -25,7 +25,7 @@ root
 There is a `package.json` file in your workspace root and in each plugin folder, please make sure the file you've opened is the one in the corresponding plugin folder.
 :::
 
-2. You can see in the opened file:
+2. The following structure is an example of the above file:
 
 ```json title=package.json
 {
@@ -35,10 +35,10 @@ There is a `package.json` file in your workspace root and in each plugin folder,
 }
 ```
 
-When publishing your plugin, it must have a `name` and `version`. 这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
+When publishing your plugin, the property `name` and `version` are required. You can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
 
 ::: tip
-请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
+You need a unique package name and an updated version number. If you use a duplicate name or number, If you use a duplicate name or number, you will get an error message and have to change them.
 :::
 
 ## 补充更多信息
