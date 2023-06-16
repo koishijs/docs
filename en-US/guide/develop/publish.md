@@ -35,7 +35,7 @@ There is a `package.json` file in your workspace root and in each plugin folder,
 }
 ```
 
-When publishing your plugin, the property `name` and `version` are required. You can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
+When publishing your plugin, the property `name` and `version` are required. We can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
 
 ::: tip
 Each package name and updated version number is unique.If you use a duplicate name or number,  will get an error message and have to change them.
@@ -48,7 +48,7 @@ The `package.json` is more than just name and version of the plugin. It also inc
 ### Requirements
 
 ::: tip
-If your plugin created using the boilerplate, you can skip this section.
+If your plugin created using the boilerplate, you may skip this section.
 :::
 
 The `package.json` in your plugin should meet the requirements below to appear in the marketplace:
