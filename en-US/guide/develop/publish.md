@@ -8,7 +8,7 @@ These commands are should be run in the [application directory](./config.md#应�
 
 ## Be Prepared
 
-1. See the `package.json` in your workspace directory.It contains all the meta information of your plugin.
+1. See the `package.json` in your workspace directory. It contains all the meta information of your plugin.
 
 ```diff{6}
 root
@@ -16,13 +16,13 @@ root
 │   └── example
 │       ├── src
 │       │   └── index.ts
-│       └── package.json        # here
+│       └── package.json        # 你应该修改这里
 ├── koishi.yml
-└── package.json                # do not here
+└── package.json                # 而不是这里
 ```
 
 ::: tip
-请注意 `package.json` 文件不是唯一的，它在应用目录和每个插件目录都会存在。请确保你修改了正确的文件。
+请注意 `package.json` 文件不是唯一的，它在应用目录和每个插件目录都会存在。please make sure the file you've opened is the one in the corresponding plugin folder.
 :::
 
 打开上述文件，你会看到它大概长这样：
