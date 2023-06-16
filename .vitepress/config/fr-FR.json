@@ -39,7 +39,7 @@
         "text": "Développement",
         "items": [
           {
-            "text": "指南",
+            "text": "Guide",
             "link": "/guide/"
           },
           {
@@ -54,7 +54,7 @@
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "plugin",
+        "text": "Plugins",
         "items": [
           {
             "text": "插件市场",
