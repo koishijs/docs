@@ -35,7 +35,7 @@ There is a `package.json` file in your workspace root and in each plugin folder,
 }
 ```
 
-When publishing your plugin, it must have a `name` and `version`. However, you'll notice that the plugin's name has an additional `koishi-plugin-` prefix compared to what is seen on the plugin market. This is to prevent namespace pollution. The plugin market doesn't available it for ease of installation and configuration for Koishi users.
+When publishing your plugin, it must have a `name` and `version`. 这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
 
 ::: tip
 请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
