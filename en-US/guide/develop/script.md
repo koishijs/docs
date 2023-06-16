@@ -3,7 +3,7 @@
 Koishi 提供了一套命令行工具，用于读取配置文件快速启动应用。
 
 ::: tip
-本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
+These commands are should be run in the [application directory](./config.md#应用目录).
 :::
 
 ## 基本用法
