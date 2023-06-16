@@ -8,7 +8,7 @@ These commands are should be run in the [application directory](./config.md#应�
 
 ## Prerequisite
 
-1. Let’s start with the `package.json` file in your workspace directory.This file is crucial as it has all the meta information for publishing your plugin.
+1. Let's start with the `package.json` file in your workspace directory.This file is crucial as it has all the meta information for publishing your plugin.
 
 ```diff{6}
 root
@@ -16,9 +16,9 @@ root
 │   └── example
 │       ├── src
 │       │   └── index.ts
-│       └── package.json        # 你应该修改这里
+│       └── package.json        # the file we concern about
 ├── koishi.yml
-└── package.json                # 而不是这里
+└── package.json                # not this
 ```
 
 ::: tip
@@ -41,11 +41,11 @@ When publishing your plugin, the property `name` and `version` are required. You
 You need a unique package name and an updated version number. If you use a duplicate name or number, If you use a duplicate name or number, you will get an error message and have to change them.
 :::
 
-## 补充更多信息
+## More information
 
-除了包名和版本号以外，`package.json` 还包括了插件的依赖、描述、贡献者、许可证、关键词等更多信息。你并不需要一上来就把所有信息都填写完整，因为你可以随后再进行修改。但请别忘了，这些内容也是插件的一部分，修改完成后别忘了 [更新版本](#更新插件版本) 并 [再次发布](#发布插件)。
+The `package.json` is more than just name and version of the plugin. It also includes dependencies, description, contributors, license, keywords, and other information. These are part of the plugin too, so whenever you change them, you have to [update the version first](#更新插件版本) and [then publish again](#发布插件).
 
-### 准入条件
+### Requirements
 
 ::: tip
 使用模板项目创建的插件一定是符合要求的，因此你可以跳过这一节。
