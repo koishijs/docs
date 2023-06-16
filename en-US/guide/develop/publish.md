@@ -1,6 +1,6 @@
 # Publishing Plugins
 
-为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
+To make your plugin more to others, you should publish it as a npm.只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
 
 ::: tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
