@@ -154,9 +154,11 @@ yarn pub [...name]
 ```
 :::
 
-- **name:** 要发布的插件列表，缺省时表示全部
+- **name:** 要发布的插件列表，缺省时表示全部，注意此处的 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区名。
 
 这将发布所有版本号发生变动的插件。
+
+如果提示 `No token found and can't prompt for login when running with --non-interactive.`，你需要执行 `npm login` 以登录 NPM 账号。
 
 ## 更新插件版本
 
