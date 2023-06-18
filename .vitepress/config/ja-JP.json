@@ -47,7 +47,7 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "プレイグラウンド：スキーマ",
             "link": "/schema/"
           }
         ],
@@ -57,22 +57,22 @@
         "text": "プラグイン",
         "items": [
           {
-            "text": "插件市场",
+            "text": "マーケットプレイス",
             "link": "/market/"
           },
           {
-            "text": "服务类插件导航",
+            "text": "サービス型プラグイン一覧",
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "公式プラグイン一覧",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "さらに表示",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -604,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
@@ -784,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "公式プラグイン一覧",
               "link": "/plugins/"
             }
           ]
