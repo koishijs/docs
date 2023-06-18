@@ -47,7 +47,7 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
@@ -57,7 +57,7 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "Plugin market",
+            "text": "Marketplace",
             "link": "/market/"
           },
           {
@@ -65,14 +65,14 @@
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "Official Plugins",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "More",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -604,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
@@ -784,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
