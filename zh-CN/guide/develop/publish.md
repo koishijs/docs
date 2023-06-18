@@ -154,11 +154,30 @@ yarn pub [...name]
 ```
 :::
 
-- **name:** 要发布的插件列表，缺省时表示全部，注意此处的 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区名。
+- **name:** 要发布的插件列表，缺省时表示全部 (此处 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区目录名)
 
 这将发布所有版本号发生变动的插件。
 
-如果提示 `No token found and can't prompt for login when running with --non-interactive.`，你需要执行 `npm login` 以登录 NPM 账号。
+如果你配置了国内镜像，你可能会遇到以下的错误提示：
+
+```
+No token found and can't prompt for login when running with --non-interactive.
+```
+
+此时你需要将镜像源重置，并重新登录 npm 账号：
+
+::: tabs code
+```npm
+npm config delete registry
+npm login
+```
+```yarn
+yarn config delete registry
+yarn login
+```
+:::
+
+发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。
 
 ## 更新插件版本
 
