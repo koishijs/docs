@@ -1,6 +1,6 @@
 # Publishing Plugins
 
-Your plugin should be published onto npm before being available to Koishi users. But there are extra requirements for a valid plugin to be listed in the [plugin marketplace](../../market/).
+Your plugin should be published onto npm before being available to Koishi users. But there are extra requirements for a valid plugin to be listed in the [marketplace](../../market/).
 
 ::: tip
 These commands are should be run in the [workspace root](./config.md#应用目录).
