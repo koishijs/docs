@@ -14,8 +14,10 @@ html {
   --k-text-normal: var(--vp-c-text-2);
   --k-text-active: var(--vp-c-brand);
   --k-color-primary: var(--vp-c-brand);
+  --k-color-secondary: var(--vp-c-text-2);
   --k-color-border: var(--vp-c-border);
   --k-color-divider: var(--vp-c-divider);
+  --k-color-active: var(--k-color-primary);
   --k-fill-normal: var(--k-color-primary);
   --color-transition: all 0.3s ease;
 
