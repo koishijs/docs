@@ -9,7 +9,7 @@
       <h1>插件市场</h1>
       <div class="info">
         当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
-        <span class="timestamp">({{ new Date(market.timestamp).toLocaleString() }})</span>
+        <span class="timestamp">({{ new Date(market.time).toLocaleString() }})</span>
       </div>
       <market-search class="k-card" v-model="words"></market-search>
     </template>
