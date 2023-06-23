@@ -27,5 +27,5 @@ export default Schema.object({
 ```
 
 ::: tip
-请不要对其使用 `required()`，这可能会导致行为的异常。
+通常情况下，请不要对其使用 `required()`，这可能会导致行为异常。
 :::
