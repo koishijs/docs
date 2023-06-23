@@ -3,7 +3,7 @@
 Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插件实现。本章节将介绍如何使用模板项目开发和构建自己的 Koishi 插件。
 
 ::: tip
-These commands are should be run in the [application directory](./config.md#应用目录).
+These commands are should be run in the [workspace root](./config.md#应用目录).
 :::
 
 ## 创建新插件
