@@ -37,19 +37,27 @@
       },
       {
         "text": "開発",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
-      },
-      {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
+        "items": [
+          {
+            "text": "指南",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "プレイグラウンド：スキーマ",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
         "text": "プラグイン",
         "items": [
           {
-            "text": "プラグインマーケットプレイス",
+            "text": "マーケットプレイス",
             "link": "/market/"
           },
           {
@@ -64,7 +72,7 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "さらに表示",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -554,6 +562,33 @@
               "link": "/api/utils/misc.md"
             }
           ]
+        }
+      ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "概要",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
         }
       ],
       "/plugins/": [

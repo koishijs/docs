@@ -37,19 +37,27 @@
       },
       {
         "text": "Develop",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
-      },
-      {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
+        "items": [
+          {
+            "text": "Developing Guide",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "Playground: Schema",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
         "text": "Plugins",
         "items": [
           {
-            "text": "Plugin Market",
+            "text": "Marketplace",
             "link": "/market/"
           },
           {
@@ -64,7 +72,7 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "About",
+        "text": "More",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -554,6 +562,33 @@
               "link": "/api/utils/misc.md"
             }
           ]
+        }
+      ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "Overview",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
         }
       ],
       "/plugins/": [

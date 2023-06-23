@@ -25,28 +25,36 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "在 GitHub 编辑此页面",
+      "text": "在 Crowdin 上翻譯此頁面",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-zhtw"
     },
-    "navText": "导航",
+    "navText": "導覽",
     "nav": [
       {
-        "text": "入门",
+        "text": "入門",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "开发",
-        "link": "/guide/",
-        "activeMatch": "/guide/"
+        "text": "開發",
+        "items": [
+          {
+            "text": "指南",
+            "link": "/guide/"
+          },
+          {
+            "text": "API",
+            "link": "/api/"
+          },
+          {
+            "text": "演练场：配置构型",
+            "link": "/schema/"
+          }
+        ],
+        "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "API",
-        "link": "/api/",
-        "activeMatch": "/(api|schema)/"
-      },
-      {
-        "text": "插件",
+        "text": "外掛程式",
         "items": [
           {
             "text": "插件市场",
@@ -554,6 +562,33 @@
               "link": "/api/utils/misc.md"
             }
           ]
+        }
+      ],
+      "/cookbook/": [
+        {
+          "items": [
+            {
+              "text": "总览",
+              "link": "/cookbook/"
+            }
+          ]
+        },
+        {
+          "text": "文章",
+          "items": [
+            {
+              "text": "存储插件数据",
+              "link": "/cookbook/storage.md"
+            },
+            {
+              "text": "绘制图片",
+              "link": "/cookbook/render.md"
+            }
+          ]
+        },
+        {
+          "text": "附录",
+          "items": []
         }
       ],
       "/plugins/": [

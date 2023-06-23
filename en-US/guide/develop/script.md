@@ -1,12 +1,12 @@
 # Bootstrap Script
 
-Koishi 提供了一套命令行工具，用于读取配置文件快速启动应用。
+There is also a set of command line tools that provided by Koishi to boot the application quickly by reading the configuration file.
 
 ::: tip
-本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
+These commands are should be run in the [workspace root](./config.md#应用目录).
 :::
 
-## 基本用法
+## General Usage
 
 我们通常使用 **启动脚本** 来启动 Koishi 应用。打开应用目录下的 `package.json` 文件：
 

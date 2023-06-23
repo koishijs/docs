@@ -398,26 +398,6 @@ export default {
 - [`onebot.getGuildMembers()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道成员列表) 获取频道成员列表
 - [`onebot.sendGuildChannelMsg()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#发送信息到子频道) 发送信息到子频道
 
-### 使用异步调用
-
-OneBot 提出了 **异步调用** 的概念，当 OneBot 服务器受到异步调用请求时，如果调用正确，将直接返回 200。这样做的好处是，如果某些操作有较长的耗时（例如发送含有大量图片的消息或清空数据目录等）或你不关心调用结果，使用异步调用可以有效防止阻塞。下面说明了异步调用和普通调用的关系：
-
-![async-method](/async-method.png)
-
-但是另一方面，你也无法得知异步调用是否成功被执行。与此同时，没有副作用的异步调用也毫无意义（因为这些调用本身就是为了获取某些信息，但是异步调用是无法获取调用结果的）。因此，Koishi 为除此以外的所有异步调用都提供了 API，它们的调用接口与非异步的版本除了在方法后面加了一个 Async 外没有任何区别：
-
-```ts
-// 普通版本
-const messageId = await session.onebot.sendPrivateMsg('123456789', 'Hello world')
-
-// 异步版本，无法获得调用结果
-await session.onebot.sendPrivateMsgAsync('123456789', 'Hello world')
-```
-
-::: tip
-虽然异步调用方法的名字以 Async 结尾，但是其他方法也是异步函数，它们都会返回一个 Promise 对象。取这样的名字只是为了与 OneBot 保持一致。
-:::
-
 ## 常见问题
 
 #### 问题：我不知道应该下载 release 中的哪一个文件。

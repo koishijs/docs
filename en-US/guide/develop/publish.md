@@ -1,14 +1,14 @@
 # Publishing Plugins
 
-为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
+Your plugin should be published onto npm before being available to Koishi users. But there are extra requirements for a valid plugin to be listed in the [marketplace](../../market/).
 
 ::: tip
-本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
+These commands are should be run in the [workspace root](./config.md#应用目录).
 :::
 
-## 准备工作
+## Prerequisite
 
-首先让我们关注工作区目录中的 `package.json` 文件。这个文件非常重要，它包含了要发布插件的一切元信息。
+1. Let's start with the `package.json` file in your workspace directory.This file is crucial as it has all the meta information for publishing your plugin.
 
 ```diff{6}
 root
@@ -16,16 +16,16 @@ root
 │   └── example
 │       ├── src
 │       │   └── index.ts
-│       └── package.json        # 你应该修改这里
+│       └── package.json        # the file we concern about
 ├── koishi.yml
-└── package.json                # 而不是这里
+└── package.json                # not this
 ```
 
 ::: tip
-请注意 `package.json` 文件不是唯一的，它在应用目录和每个插件目录都会存在。请确保你修改了正确的文件。
+There is a `package.json` file in your workspace root and in each plugin folder, please make sure the file opened is the one in the corresponding plugin folder.
 :::
 
-打开上述文件，你会看到它大概长这样：
+2. The following structure is an example of the above file:
 
 ```json title=package.json
 {
@@ -35,36 +35,36 @@ root
 }
 ```
 
-其中最重要的属性有两个：`name` 是要发布的包名，`version` 是包的版本号。这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
+When publishing your plugin, the property `name` and `version` are required. We can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
 
 ::: tip
-请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
+Each package name and updated version number is unique.If you use a duplicate name or number,  will get an error message and have to change them.
 :::
 
-## 补充更多信息
+## More information
 
-除了包名和版本号以外，`package.json` 还包括了插件的依赖、描述、贡献者、许可证、关键词等更多信息。你并不需要一上来就把所有信息都填写完整，因为你可以随后再进行修改。但请别忘了，这些内容也是插件的一部分，修改完成后别忘了 [更新版本](#更新插件版本) 并 [再次发布](#发布插件)。
+The `package.json` is more than just name and version of the plugin. It also includes dependencies, description, contributors, license, keywords, and other information. These are part of the plugin too, so whenever you change them, it is important that you update a version first and then publish again.
 
-### 准入条件
+### Requirements
 
 ::: tip
-使用模板项目创建的插件一定是符合要求的，因此你可以跳过这一节。
+If your plugin created using the boilerplate, you may skip this section.
 :::
 
-要想显示在插件市场中，插件的 `package.json` 需要满足以下基本要求：
+The `package.json` in your plugin should meet the requirements below to appear in the marketplace:
 
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 必须符合以下格式之一：
+- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) should match one of these formats:
   - koishi-plugin-\*
   - @bar/koishi-plugin-\*
-  - @koishijs/plugin-\* (官方插件)
-  - 其中 \* 是由数字、小写字母和连字符组成的字符串
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
-- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
-- 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
-- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
+  - @koishijs/plugin-\* (Official)
+  - \* is a string of digits, lowercase letters and dashes
+- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
+- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) should follow [semver](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
+- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) should include `koishi`
+- Do not set [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) to `true`, otherwise your plugin cannot be published to npm
+- Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) your plugin, unless you have a good reason to do so. For example, if you want to republish the plugin with a different name, you can use it to hide the old plugin on the marketplace.
 
-一个符合上述标准的示例：
+Example:
 
 ```json title=package.json
 {
@@ -84,17 +84,17 @@ root
 {
   "name": "koishi-plugin-example",
   "version": "1.0.0",
-  "contributors": [                         // 贡献者
+  "contributors": [
     "Alice <alice@gmail.com>",
     "Bob <bob@gmail.com>"
   ],
-  "license": "MIT",                         // 许可证
-  "homepage": "https://example.com",        // 主页
-  "repository": {                           // 源码仓库
+  "license": "MIT",
+  "homepage": "https://example.com",
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/alice/koishi-plugin-example.git"
   },
-  "keywords": ["example"],                  // 关键词
+  "keywords": ["example"],
   "peerDependencies": {
     "koishi": "^4.3.2"
   }
@@ -154,9 +154,30 @@ yarn pub [...name]
 ```
 :::
 
-- **name:** 要发布的插件列表，缺省时表示全部
+- **name:** 要发布的插件列表，缺省时表示全部 (此处 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区目录名)
 
 这将发布所有版本号发生变动的插件。
+
+如果你配置了国内镜像，你可能会遇到以下的错误提示：
+
+```
+No token found and can't prompt for login when running with --non-interactive.
+```
+
+此时你需要将镜像源重置，并重新登录 npm 账号：
+
+::: tabs code
+```npm
+npm config delete registry
+npm login
+```
+```yarn
+yarn config delete registry
+yarn login
+```
+:::
+
+发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。
 
 ## 更新插件版本
 

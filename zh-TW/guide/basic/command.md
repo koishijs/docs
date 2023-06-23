@@ -417,3 +417,13 @@ ctx.command('foo.bar')
 ```
 
 是的，除了这里用到了斜杠 `/` 和小数点 `.` 来分别表示层级式和派生式子指令外，其他用法都是完全一致的。
+
+对于已经存在的指令，你也可以使用 `cmd.subcommand()` 方法来注册子指令：
+
+```ts
+// 层级式子指令
+ctx.command('foo').subcommand('bar')
+
+// 派生式子指令
+ctx.command('foo').subcommand('.bar')
+```
