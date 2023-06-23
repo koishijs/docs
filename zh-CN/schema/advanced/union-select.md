@@ -25,3 +25,7 @@ export default Schema.object({
   ]).role('radio'),
 })
 ```
+
+::: tip
+请不要对其使用 `required()`，这可能会导致行为的异常。
+:::
