@@ -160,7 +160,7 @@ yarn pub [...name]
 
 如果你配置了国内镜像，你可能会遇到以下的错误提示：
 
-```
+```text
 No token found and can't prompt for login when running with --non-interactive.
 ```
 

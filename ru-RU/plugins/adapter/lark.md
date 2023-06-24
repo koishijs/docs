@@ -2,7 +2,7 @@
 
 ## 接入方法
 
-1. 在开发者后台 ([飞书](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) 新建**企业自建应用**，点击应用名称进入应用详情页。
+1. 在开发者后台 ([Lark](https://open.larksuite.com/app/) / [飞书](https://open.feishu.cn/app/)) 新建**企业自建应用**，点击应用名称进入应用详情页。
 2. 点击凭证与基础信息，获取 App ID 和 App Secret 值，填写到插件配置对应字段。
 3. 点击事件订阅，获取 Encrypt Key 和 Verification Token 值，填写到插件配置对应字段。
 4. 在事件订阅页面，确保添加了 `接收消息v2.0` (`im.message.receive_v1`) 事件。

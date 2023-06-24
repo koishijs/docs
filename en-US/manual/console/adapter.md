@@ -16,9 +16,17 @@ There are different configuration work that you need to do with different platfo
 
 See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
+## KOOK
+
+1. 前往 [开发者平台](https://developer.kookapp.cn/)，前往「应用」并点击「新建」
+2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
+3. Enter the `token` into the plugin configuration.
+
+See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
+
 ## Lark / Feishu
 
-1. Go to the Developer Console ([Feishu](https://open.feishu.cn/app/), [Lark](https://open.larksuite.com/app/)) and click "Create Custom App", and then click the name of the Custom App that you just created to get into the application management page.
+1. 在开发者后台 ([Lark](https://open.larksuite.com/app/) / [飞书](https://open.feishu.cn/app/)) 点击「新建企业自建应用」，点击应用名称进入应用详情页
 2. Click "Credentials & Basic Info" on the left side, copy the value of App ID and App Secret, then paste them into the plugin configuration items accordingly.
 3. Click "Event Subscription", copy the value of Encrypt Key and Verification Token, then paste them into the plugin configuration items accordingly.
 4. In the event subscription page, enable the `Receive message v2.0` (`im.message.receive_v1`) event.
@@ -28,13 +36,37 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 
 See also: [@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
-## KOOK
+## 邮件
 
-1. 前往 [开发者平台](https://developer.kookapp.cn/)，前往「应用」并点击「新建」
-2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
-3. Enter the `token` into the plugin configuration.
+1. 「username」对应你的邮箱账号，「password」对应你的授权码
+2. 「imap」对应接收邮件服务器，「smtp」对应发送邮件服务器，需要分别填写对应的「host」和「port」
+3. 不同邮箱服务获取授权码的方式也有所不同，可以参考下面的主流邮件服务进行配置
 
-See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
+参考：[@koishijs/plugin-adapter-mail](../../plugins/adapter/mail.md)
+
+### QQ 邮箱
+
+- 接收邮件服务器：`imap.qq.com`，端口号 `993`
+- 发送邮件服务器：`smtp.qq.com`，端口号 `465` 或 `587`
+- 参考：[什么是授权码，它又是如何设置？](https://service.mail.qq.com/detail/0/75)
+
+### 网易 163 邮箱
+
+- 接收邮件服务器：`imap.163.com`，端口号 `993`
+- 发送邮件服务器：`smtp.163.com`，端口号 `465` 或 `994`
+- 参考：[网易邮箱 IMAP 服务](https://mail.163.com/html/110127_imap/index.htm)
+
+### Outlook
+
+- 接收邮件服务器：`outlook.office365.com`，端口号 `993`
+- 发送邮件服务器：`smtp-mail.outlook.com`，端口号 `587`
+- 参考：[Outlook.com 的 POP、IMAP 和 SMTP 设置](https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040)
+
+### Gmail
+
+- 接收邮件服务器：`imap.gmail.com`，端口号 `993`
+- 发送邮件服务器：`smtp.gmail.com`，端口号 `465`
+- 参考：[通过其他电子邮件平台查看 Gmail](https://support.google.com/mail/answer/7126229?hl=zh-Hans#zippy=%2C%E7%AC%AC-%E6%AD%A5%E6%A3%80%E6%9F%A5-imap-%E6%98%AF%E5%90%A6%E5%B7%B2%E5%90%AF%E7%94%A8%2C%E7%AC%AC-%E6%AD%A5%E5%9C%A8%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%AD%E6%9B%B4%E6%94%B9-smtp-%E5%92%8C%E5%85%B6%E4%BB%96%E8%AE%BE%E7%BD%AE)
 
 ## OneBot
 
