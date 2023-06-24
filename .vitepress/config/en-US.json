@@ -39,7 +39,7 @@
         "text": "Develop",
         "items": [
           {
-            "text": "Developing Guide",
+            "text": "Guide",
             "link": "/guide/"
           },
           {
@@ -271,7 +271,7 @@
           ]
         },
         {
-          "text": "Modulization",
+          "text": "Modulation",
           "items": [
             {
               "text": "About Plugin",
