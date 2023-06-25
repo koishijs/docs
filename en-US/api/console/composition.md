@@ -1,24 +1,28 @@
-# 组合式 API
+# Combined API
 
 ::: tip
-本节中所涉及的 API 都在 @koishijs/client 中导出。
+The APIs mentioned in this section are exported in @koishijs/client.
 :::
 
 ## useConfig()
 
-- 返回值: `Ref<any>`
+- Return value: `Ref<any>`
 
-获取用户设置。
+Get user settings.
 
 ## useContext()
 
-- 返回值: [`Context`](./context.md)
+- Return value:
 
-获取当前组件所在的插件上下文。
+Context`</a></li>
+</ul>
 
-## useMenu(id)
+<p spaces-before="0">获取当前组件所在的插件上下文。</p>
 
-- **id:** 菜单标识符
-- 返回值: `(el: HTMLElement, data: any) => void`
+<h2 spaces-before="0">useMenu(id)</h2>
 
-获得一个触发上下文菜单的事件监听器。
+<ul>
+<li><strong x-id="1">id:</strong> 菜单标识符</li>
+<li>返回值: <code>(el: HTMLElement, data: any) => void`</li> </ul> 
+  
+  获得一个触发上下文菜单的事件监听器。
