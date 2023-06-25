@@ -47,7 +47,7 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "演練場：配置構型",
             "link": "/schema/"
           }
         ],
@@ -57,15 +57,15 @@
         "text": "外掛程式",
         "items": [
           {
-            "text": "插件市场",
+            "text": "插件市場",
             "link": "/market/"
           },
           {
-            "text": "服务类插件导航",
+            "text": "服務類插件導航",
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "官方插件一覽",
             "link": "/plugins/"
           }
         ],
@@ -83,7 +83,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "介紹",
               "link": "/manual/introduction.md"
             }
           ]
@@ -92,23 +92,23 @@
           "text": "",
           "items": [
             {
-              "text": "安装",
+              "text": "安裝",
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "為 Windows 安裝",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "為 macOS 安裝",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "為 Linux 安裝",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "為 Android 安裝",
               "link": "/manual/starter/android.md"
             },
             {
@@ -116,24 +116,24 @@
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "創建模板項目",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "作為依賴調用",
               "link": "/manual/starter/direct.md"
             }
           ]
         },
         {
-          "text": "控制台",
+          "text": "控製臺",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "認識控製臺",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "安裝和配置插件",
               "link": "/manual/console/market.md"
             },
             {
@@ -141,7 +141,7 @@
               "link": "/manual/console/sandbox.md"
             },
             {
-              "text": "接入聊天平台",
+              "text": "接入聊天平臺",
               "link": "/manual/console/adapter.md"
             }
           ]
@@ -150,23 +150,23 @@
           "text": "使用",
           "items": [
             {
-              "text": "指令系统",
+              "text": "指令系統",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "跨平臺",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
+              "text": "權限管理",
               "link": "/manual/usage/permission.md"
             },
             {
-              "text": "过滤器",
+              "text": "過濾器",
               "link": "/manual/usage/filter.md"
             },
             {
-              "text": "国际化",
+              "text": "國際化",
               "link": "/manual/usage/i18n.md"
             }
           ]
@@ -175,32 +175,32 @@
           "text": "配方",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "指令進階技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "訪問數據庫",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "維護多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "搜索插件市場",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "公網部署",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "啟動器",
           "items": [
             {
-              "text": "系统要求",
+              "text": "系統要求",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -215,16 +215,16 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "總覽",
               "link": "/guide/"
             }
           ]
         },
         {
-          "text": "开发起步",
+          "text": "開發起步",
           "items": [
             {
-              "text": "环境搭建",
+              "text": "環境搭建",
               "link": "/guide/develop/setup.md"
             },
             {
@@ -232,24 +232,24 @@
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
+              "text": "啟動腳本",
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "工作區開發",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "發布插件",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "交互基礎",
           "items": [
             {
-              "text": "指令开发",
+              "text": "指令開發",
               "link": "/guide/basic/command.md"
             },
             {
@@ -257,7 +257,7 @@
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "中間件",
               "link": "/guide/basic/middleware.md"
             },
             {
@@ -265,20 +265,20 @@
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "進階用法",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "模塊化",
           "items": [
             {
-              "text": "认识插件",
+              "text": "認識插件",
               "link": "/guide/plugin/"
             },
             {
-              "text": "配置构型",
+              "text": "配置構型",
               "link": "/guide/plugin/schema.md"
             },
             {
@@ -390,7 +390,7 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "總覽",
               "link": "/api/"
             },
             {
@@ -504,25 +504,25 @@
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "數據庫操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
-              "text": "数据模型 (Model)",
+              "text": "數據模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "查詢表達式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "查詢表達式 (Query)",
               "link": "/api/database/evaluation.md"
             }
           ]
         },
         {
-          "text": "控制台",
+          "text": "控製臺",
           "items": [
             {
               "text": "服务端 API",
@@ -568,7 +568,7 @@
         {
           "items": [
             {
-              "text": "总览",
+              "text": "總覽",
               "link": "/cookbook/"
             }
           ]
@@ -604,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "官方插件一覽",
               "link": "/plugins/"
             }
           ]
@@ -784,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "官方插件一覽",
               "link": "/plugins/"
             }
           ]
@@ -995,11 +995,11 @@
           "text": "贡献指南",
           "items": [
             {
-              "text": "项目结构",
+              "text": "項目結構",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "文档贡献指南",
+              "text": "文檔貢獻指南",
               "link": "/about/contribute/docs.md"
             }
           ]
