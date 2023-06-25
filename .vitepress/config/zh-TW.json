@@ -736,36 +736,36 @@
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "本地翻譯 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "日誌管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "插件市場 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "沙箱調試 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "運行狀態 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
         },
         {
-          "text": "开发工具",
+          "text": "開發工具",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "模塊熱替換 (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "測試工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -776,11 +776,11 @@
           "text": "插件",
           "items": [
             {
-              "text": "插件市场",
+              "text": "插件市場",
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "服務類插件導航",
               "link": "/market/service.md"
             },
             {
@@ -795,7 +795,7 @@
           "text": "演練場",
           "items": [
             {
-              "text": "配置构型",
+              "text": "配置構型",
               "link": "/schema/index.md"
             }
           ]
@@ -804,36 +804,36 @@
           "text": "核心概念",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "必需與可選",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认值",
+              "text": "默認值",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "標題與描述",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "配置项外观",
+              "text": "配置項外觀",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "隐藏配置项",
+              "text": "隱藏配置項",
               "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "嵌套類型",
               "link": "/schema/meta/nested.md"
             }
           ]
         },
         {
-          "text": "基础类型",
+          "text": "基礎類型",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "數值 (Number)",
               "link": "/schema/basic/number.md"
             },
             {
@@ -841,7 +841,7 @@
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "布爾值 (Boolean)",
               "link": "/schema/basic/boolean.md"
             },
             {
@@ -849,11 +849,11 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "對象 (Object)",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "元組 (Tuple)",
               "link": "/schema/basic/tuple.md"
             },
             {
@@ -861,48 +861,48 @@
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "數組 (Array)",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路径 (Path)",
+              "text": "路徑 (Path)",
               "link": "/schema/basic/path.md"
             }
           ]
         },
         {
-          "text": "高级类型",
+          "text": "高級類型",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect：分組",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union：單選框",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union：聯合類型",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union：配置聯動 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union：配置聯動 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transform：輸入轉換",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed：條件求值",
               "link": "/schema/advanced/computed.md"
             },
             {
-              "text": "Dynamic：动态类型",
+              "text": "Dynamic：動態類型",
               "link": "/schema/advanced/dynamic.md"
             }
           ]
@@ -910,89 +910,89 @@
       ],
       "/about/": [
         {
-          "text": "关于我们",
+          "text": "關於我們",
           "items": [
             {
-              "text": "许可证",
+              "text": "許可證",
               "link": "/about/license.md"
             },
             {
-              "text": "参与讨论",
+              "text": "參與討論",
               "link": "/about/contact.md"
             },
             {
-              "text": "团队介绍",
+              "text": "團隊介紹",
               "link": "/about/team.md"
             },
             {
-              "text": "社区资源",
+              "text": "社區資源",
               "link": "/about/community.md"
             }
           ]
         },
         {
-          "text": "更新与迁移",
+          "text": "更新與遷移",
           "items": [
             {
-              "text": "发展史",
+              "text": "發展史",
               "link": "/about/history.md"
             },
             {
-              "text": "从 v3 迁移",
+              "text": "從 v3 遷移",
               "link": "/about/migration.md"
             },
             {
-              "text": "版本内迁移",
+              "text": "版本內遷移",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "v4.1 版本介绍",
+              "text": "v4.1 版本介紹",
               "link": "/about/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "v4.2 版本介紹",
               "link": "/about/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "v4.3 版本介紹",
               "link": "/about/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "v4.4 版本介紹",
               "link": "/about/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "v4.5 版本介紹",
               "link": "/about/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "v4.6 版本介紹",
               "link": "/about/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "v4.7 版本介紹",
               "link": "/about/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "v4.8 版本介紹",
               "link": "/about/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "v4.9 版本介紹",
               "link": "/about/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介绍",
+              "text": "v4.10 版本介紹",
               "link": "/about/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "v4.11 版本介紹",
               "link": "/about/releases/v4.11.md"
             }
           ]
         },
         {
-          "text": "贡献指南",
+          "text": "貢獻指南",
           "items": [
             {
               "text": "項目結構",
