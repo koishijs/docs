@@ -286,87 +286,87 @@
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "服務與依賴",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "过滤器",
+              "text": "過濾器",
               "link": "/guide/plugin/filter.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "數據庫",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "使用數據庫",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "擴展數據模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
+              "text": "按需加載和自動更新",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "編寫數據庫插件",
               "link": "/guide/database/writing.md"
             }
           ]
         },
         {
-          "text": "跨平台",
+          "text": "跨平臺",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "使用適配器",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "使用機器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
+              "text": "跨平臺賬號綁定",
               "link": "/guide/adapter/binding.md"
             },
             {
-              "text": "编写适配器插件",
+              "text": "編寫適配器插件",
               "link": "/guide/adapter/writing.md"
             }
           ]
         },
         {
-          "text": "控制台",
+          "text": "控製臺",
           "items": [
             {
-              "text": "扩展控制台",
+              "text": "擴展控製臺",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "数据交互",
+              "text": "數據交互",
               "link": "/guide/console/data.md"
             },
             {
-              "text": "客户端开发",
+              "text": "客戶端開發",
               "link": "/guide/console/client.md"
             },
             {
-              "text": "主题开发",
+              "text": "主題開發",
               "link": "/guide/console/theme.md"
             }
           ]
         },
         {
-          "text": "国际化",
+          "text": "國際化",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "多語言支援",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "編寫翻譯文件",
               "link": "/guide/i18n/translation.md"
             },
             {
@@ -376,10 +376,10 @@
           ]
         },
         {
-          "text": "测试工具",
+          "text": "測試工具",
           "items": [
             {
-              "text": "单元测试",
+              "text": "單元測試",
               "link": "/guide/testing/index.md"
             }
           ]
@@ -400,28 +400,28 @@
           ]
         },
         {
-          "text": "演练场",
-          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "text": "演練場",
+          "desc": "我們專門為一些 API 提供了交互式的演練場。",
           "items": [
             {
-              "text": "配置构型",
+              "text": "配置構型",
               "link": "/schema/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "核心模塊",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "適配器 (Adapter)",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "應用 (App)",
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "機器人 (Bot)",
               "link": "/api/core/bot.md"
             },
             {
@@ -437,40 +437,40 @@
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "會話 (Session)",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "内置服务",
+          "text": "內置服務",
           "items": [
             {
-              "text": "机器人 (Bots)",
+              "text": "機器人 (Bots)",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "事件系统 (Events)",
+              "text": "事件系統 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "過濾器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "網絡請求 (HTTP)",
               "link": "/api/service/http.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "國際化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "插件系統 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "網絡服務 (Router)",
               "link": "/api/service/router.md"
             }
           ]
@@ -479,15 +479,15 @@
           "text": "消息元素",
           "items": [
             {
-              "text": "语法规范",
+              "text": "語法規範",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "標準元素",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "內置組件",
               "link": "/api/message/components.md"
             },
             {
@@ -497,10 +497,10 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "數據庫",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "內置數據結構",
               "link": "/api/database/built-in.md"
             },
             {
@@ -525,7 +525,7 @@
           "text": "控製臺",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "服務端 API",
               "link": "/api/console/server.md"
             },
             {
@@ -533,11 +533,11 @@
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "組合式 API",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "内置组件",
+              "text": "內置組件",
               "link": "/api/console/component.md"
             }
           ]
@@ -546,15 +546,15 @@
           "text": "其他功能",
           "items": [
             {
-              "text": "观察者 (Observer)",
+              "text": "觀察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "輸出日誌 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "隨機操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
@@ -577,17 +577,17 @@
           "text": "文章",
           "items": [
             {
-              "text": "存储插件数据",
+              "text": "存儲插件數據",
               "link": "/cookbook/storage.md"
             },
             {
-              "text": "绘制图片",
+              "text": "繪製圖片",
               "link": "/cookbook/render.md"
             }
           ]
         },
         {
-          "text": "附录",
+          "text": "附錄",
           "items": []
         }
       ],
@@ -596,11 +596,11 @@
           "text": "插件",
           "items": [
             {
-              "text": "插件市场",
+              "text": "插件市場",
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "服務類插件導航",
               "link": "/market/service.md"
             },
             {
@@ -610,7 +610,7 @@
           ]
         },
         {
-          "text": "适配器支持",
+          "text": "適配器支持",
           "items": [
             {
               "text": "Discord",
@@ -643,7 +643,7 @@
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "數據庫支持",
           "items": [
             {
               "text": "Memory",
@@ -667,48 +667,48 @@
           "text": "常用功能",
           "items": [
             {
-              "text": "数据管理 (Admin)",
+              "text": "數據管理 (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "账号绑定 (Bind)",
+              "text": "賬號綁定 (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "发送广播 (Broadcast)",
+              "text": "發送廣播 (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "设置昵称 (Callme)",
+              "text": "設置昵稱 (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "发送消息 (Echo)",
+              "text": "發送消息 (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "查看帮助 (Help)",
+              "text": "查看幫助 (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "会话信息 (Inspect)",
+              "text": "會話信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "速率限制 (Rate Limit)",
+              "text": "速率限製 (Rate Limit)",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
         {
-          "text": "控制台功能",
+          "text": "控製臺功能",
           "items": [
             {
-              "text": "数据统计 (Analytics)",
+              "text": "數據統計 (Analytics)",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "用户登录 (Auth)",
+              "text": "用戶登錄 (Auth)",
               "link": "/plugins/console/auth.md"
             },
             {
@@ -720,19 +720,19 @@
               "link": "/plugins/console/config.md"
             },
             {
-              "text": "控制台 (Console)",
+              "text": "控製臺 (Console)",
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
+              "text": "數據庫操作 (Dataview)",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "資源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "插件依賴圖 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
@@ -792,7 +792,7 @@
       ],
       "/schema/": [
         {
-          "text": "演练场",
+          "text": "演練場",
           "items": [
             {
               "text": "配置构型",
