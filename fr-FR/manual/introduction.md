@@ -10,8 +10,8 @@ Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](http
 
 Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟之内搭建自己的聊天机器人。
 
-- 提供在线插件市场，即使没有任何编程基础，也能轻松在控制台中下载安装插件
-- 支持 QQ，Telegram，Discord 等主流聊天平台，支持多账户和跨平台数据互通
+- Marché des plugins. Vous pouvez facilement télécharger les plugins dans la Koishi Console sans avoir des connaissances en langage de programmation.
+- Prise en charge de différentes plateformes. Koishi supporte les plateformes comme QQ, Telegram et Discord. Les données devraient être partagées entre les plateformes ou comptes.
 - 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
 
 ### Écologie riche
