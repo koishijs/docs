@@ -12,7 +12,7 @@ Koishi 提供了高度便利的控制台，让你无需基础让你在几分钟�
 
 - Marché des plugins. Vous pouvez facilement télécharger les plugins dans la Koishi Console sans avoir des connaissances en langage de programmation.
 - Prise en charge de différentes plateformes. Koishi supporte les plateformes comme QQ, Telegram et Discord. Les données devraient être partagées entre les plateformes ou comptes.
-- 随时随地通过控制面板监控运行状态，控制机器人的行为，甚至上号聊天
+- Surveillance en temps réel. Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
 
 ### Écologie riche
 
