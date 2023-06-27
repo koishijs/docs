@@ -4,8 +4,8 @@ sidebar: falsch
 caption: Ich benutze Koishi.
 choices:
   production:
-    text: 用于搭建机器人服务
-    caption: 我的运行环境是……
+    text: Verwendung für den Aufbau von Roboterservices.
+    caption: Ich benutze Koishi auf...
     children:
       - 
         text: Windows
@@ -23,17 +23,17 @@ choices:
         text: Docker
         link: /de-DE/manual/starter/docker.html
   development:
-    text: 用于开发
-    caption: 我希望 Koishi 作为……
+    text: Entwicklung
+    caption: Ich benutze Koishi als...
     children:
       - 
-        text: 一个独立的项目
+        text: Ein eigenständiges Projekt
         link: /de-DE/manual/starter/boilerplate.html
       - 
-        text: 其他项目的依赖
+        text: Abhängigkeiten von anderen Projekten
         link: /de-DE/manual/starter/direct.html
 ---
 
-# 选择安装方式
+# Installation
 
-Koishi 提供了多种安装方式，你可以根据自己的需求选择：
+Koishi bietet verschiedene Installationsmethoden an, Sie können je nach Bedarf eine auswählen:
