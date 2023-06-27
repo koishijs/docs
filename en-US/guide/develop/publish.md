@@ -141,7 +141,7 @@ To make more information available to Koishi users, you could add more comprehen
 - **locales:** 插件支持的语言，应该是一个语言名构成的数组
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
-## Publishing Plugins
+## Publish Your Plugin
 
 编辑完上面的清单文件并 [构建源代码](./workspace.md#构建源代码) 后，你就可以公开发布你的插件了。
 
