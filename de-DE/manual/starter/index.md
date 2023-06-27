@@ -1,7 +1,7 @@
 ---
-layout: starter
-sidebar: false
-caption: 我使用 Koishi……
+layout: Anfänger
+sidebar: falsch
+caption: Ich benutze Koishi.
 choices:
   production:
     text: 用于搭建机器人服务
