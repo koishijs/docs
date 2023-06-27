@@ -76,9 +76,9 @@ Example:
 }
 ```
 
-### 添加相关信息
+### The `package.json` file
 
-除去上面的基本要求外，`package.json` 中还有一些字段能帮助显示插件的相关信息。
+To make more information available to Koishi users, you could add more comprehensive fields in the `package.json` of your plugin.
 
 ```json title=package.json
 {
@@ -107,7 +107,7 @@ Example:
 - **repository:** 插件源码仓库，应该是一个对象，其中 `type` 字段指定仓库类型，`url` 字段指定仓库地址
 - **keywords:** 插件关键词，应该是一个字符串数组，会用于插件市场中的搜索功能
 
-### koishi 字段
+### Koishi fields
 
 除此以外，我们还提供了一个额外的 `koishi` 字段，用于指定与 Koishi 相关的信息。
 
