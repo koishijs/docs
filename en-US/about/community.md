@@ -1,6 +1,6 @@
 # Community Resources
 
-此页面中总结了一些优秀的社区资源可供学习。此页面中总结了一些优秀的社区资源可供学习。如果你也想在此页面中展示你的项目，请在点击页面底部的编辑按钮后创建 Pull Request。
+Some excellent community resources to learn from are summarized on this page. If you also want to feature your project on this page, please click the edit button at the bottom of the page to edit and then create a Pull Request.
 
 ## Documentations
 
