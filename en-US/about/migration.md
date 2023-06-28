@@ -1,6 +1,6 @@
 # Migrate from v3
 
-## 包名变更
+## Package Name Changes
 
 ::: tip 重要
 请开发者直接依赖 koishi 而非 @koishijs/core 进行开发。
