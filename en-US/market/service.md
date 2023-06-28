@@ -4,7 +4,7 @@ This page lists important service plugins in the ecosystem.
 
 Some plugins rely on other plugins to have full functionality. These dependencies are declared as "Services".The most typical service is database, which provides access to databases for many plugins.
 
-由插件提供的服务大致分为两种类型：第一种是抽象服务，它只描述了特定的功能，并可以由多个插件提供；第二种是直接服务，它由某一个插件直接提供对应的功能。绝大多数服务都是直接服务。下面将分别列举提供两类服务的插件。
+Services provided by plugins are roughly divided into two types: the first is abstract services, which only describe specific functions and can be provided by multiple plugins; the second is direct services, whose functions are directly provided by plugins. Most services are direct services. The following is a list of plugins that provide these two types of services.
 
 ## Abstract Services
 
