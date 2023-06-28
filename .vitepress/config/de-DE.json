@@ -28,18 +28,18 @@
       "text": "Übersetzen dieser Seite auf Crowdin",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-de"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
-        "text": "入门",
+        "text": "Einführung",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "开发",
+        "text": "Entwickeln",
         "items": [
           {
-            "text": "指南",
+            "text": "Leitfaden",
             "link": "/guide/"
           },
           {
@@ -47,7 +47,7 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Übungsgelände: Schema",
             "link": "/schema/"
           }
         ],
