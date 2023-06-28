@@ -22,6 +22,20 @@
   --el-fill-color-blank: transparent;
   --el-disabled-bg-color: var(--vp-c-bg-alt);
   --el-fill-color: var(--vp-c-bg-alt);
+  --vp-code-line-highlight-color: #00000036;
+  --vp-code-block-divider-color: var(--shiki-token-comment);
+  --vp-code-copy-code-hover-border-color: #000000;
+  --vp-code-copy-code-hover-bg: var(--vp-c-bg-alt);
+  --vp-code-copy-code-border-color: #83878b;
+  --vp-code-copy-code-bg: var(--vp-code-line-highlight-color);
+}
+
+:root.dark {
+  --vp-code-line-highlight-color: #3030307e;
+  --vp-code-block-divider-color: var(--shiki-token-comment);
+  --vp-code-copy-code-hover-border-color: var(--shiki-token-comment);
+  --vp-code-copy-code-hover-bg: #fcfcfc31;
+  --vp-code-copy-code-border-color: var(--vp-c-divider);
 }
 
 .el-dropdown__popper {
