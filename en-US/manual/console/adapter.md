@@ -26,7 +26,7 @@ See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
 
 ## Lark / Feishu
 
-1. 在开发者后台 ([Lark](https://open.larksuite.com/app/) / [飞书](https://open.feishu.cn/app/)) 点击「新建企业自建应用」，点击应用名称进入应用详情页
+1. Go to Lark Developer ([Lark](https://open.larksuite.com/app/) / [Feishu](https://open.feishu.cn/app/)) and click "Create Custom App", then click the corresponding application name to enter app details page.
 2. Click "Credentials & Basic Info" on the left side, copy the value of App ID and App Secret, then paste them into the plugin configuration items accordingly.
 3. Click "Event Subscription", copy the value of Encrypt Key and Verification Token, then paste them into the plugin configuration items accordingly.
 4. In the event subscription page, enable the `Receive message v2.0` (`im.message.receive_v1`) event.
