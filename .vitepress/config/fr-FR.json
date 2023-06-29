@@ -200,11 +200,11 @@
           "text": "启动器",
           "items": [
             {
-              "text": "系统要求",
+              "text": "Configuration requise",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "L'outil de ligne de commande",
+              "text": "Outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -228,11 +228,11 @@
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
+              "text": "Fichier de configuration",
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
+              "text": "Script démarrage",
               "link": "/guide/develop/script.md"
             },
             {
