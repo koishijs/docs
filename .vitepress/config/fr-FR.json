@@ -129,15 +129,15 @@
           "text": "Console",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "À propos de la console Koishi",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "Installation et configuration des plugins",
               "link": "/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
+              "text": "Chat dans le bac à sable",
               "link": "/manual/console/sandbox.md"
             },
             {
@@ -147,22 +147,22 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Utilisation",
           "items": [
             {
-              "text": "指令系统",
+              "text": "Système commande",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "Multi-plateforme",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
+              "text": "Gestion des permissions",
               "link": "/manual/usage/permission.md"
             },
             {
-              "text": "过滤器",
+              "text": "Filtres",
               "link": "/manual/usage/filter.md"
             },
             {
