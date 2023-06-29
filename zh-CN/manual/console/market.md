@@ -44,7 +44,7 @@ Koishi 不会自动启用刚刚安装的插件，你需要手动配置并启用�
 
 在这个界面中，我们可以看到许多配置项。其中你需要注意：
 
-- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-light)">红色</span> 的提示条，正确填写才能启动插件。
+- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-light)">红色</span> 的提示条，只有正确填写配置才能启动插件。
 - 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-brand)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
 
 ## 管理插件
