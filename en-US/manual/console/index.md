@@ -6,10 +6,10 @@ prev:
 
 # About Koishi Console
 
-One of the key feature in Koishi is Console.Console is a graphical interface which is very friendly for users. And there are majority functions in the console.
+As the key feature, Koishi Console is a user-friendly graphical user interface (GUI) including many features for Koishi.
 
-- Monitor the status and view the statistics
-- Configure plugins
+- Running status monitoring and statistics
+- Plugins configurations
 - Install, uninstall and update plugins
 - Manage commands, database and localization
 - Simulate chat
