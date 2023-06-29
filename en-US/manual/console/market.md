@@ -1,7 +1,7 @@
 # Install and Configure Plugins
 
 ::: tip
-This section will introduce the usage of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
+This section covers the usage of pages such as "Marketplace", "Plugin Configuration" and "Dependency Management".
 :::
 
 When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. The "echo" plugin provides an "echo" command that will take the text that user inputs and then send it back in the same context.
@@ -30,7 +30,7 @@ We can see that the "echo" plugin is not running, and the "details" page on the 
 
 It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the upper right corner, then the plugin will stop running. Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
 
-## Configure plugins
+## Plugins configurations
 
 ::: warning
 In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi have many built-in plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. All built-in plugins are well configured, so you don't need to modify them anymore. Changing the configuration of plugins and removing built-in plugins at will, even if add some plugins wrongly may cause Koishi to crash.
