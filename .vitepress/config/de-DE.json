@@ -36,7 +36,7 @@
         "activeMatch": "/manual/"
       },
       {
-        "text": "Entwickeln",
+        "text": "Entwicklung",
         "items": [
           {
             "text": "Leitfaden",
@@ -54,7 +54,7 @@
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "插件",
+        "text": "Plugins",
         "items": [
           {
             "text": "插件市场",
