@@ -1,5 +1,5 @@
 {
-  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und skalierbar sind",
+  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und erweiterbares sind",
   "head": [
     [
       "link",
@@ -31,7 +31,7 @@
     "navText": "Navigation",
     "nav": [
       {
-        "text": "Einführung",
+        "text": "Anfängerleitfaden",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
