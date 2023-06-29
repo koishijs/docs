@@ -39,7 +39,7 @@
         "text": "Entwicklung",
         "items": [
           {
-            "text": "Leitfaden",
+            "text": "Anleitung",
             "link": "/guide/"
           },
           {
@@ -47,7 +47,7 @@
             "link": "/api/"
           },
           {
-            "text": "Übungsgelände: Schema",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
@@ -57,22 +57,22 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "插件市场",
+            "text": "Marktplatz",
             "link": "/market/"
           },
           {
-            "text": "服务类插件导航",
+            "text": "Service-Plugins",
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Offizielle",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "Mehr",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -83,7 +83,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "Einleitung",
               "link": "/manual/introduction.md"
             }
           ]
@@ -92,11 +92,11 @@
           "text": "",
           "items": [
             {
-              "text": "安装",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installieren für Windows",
               "link": "/manual/starter/windows.md"
             },
             {
@@ -604,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
@@ -784,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
