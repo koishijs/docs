@@ -96,31 +96,31 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installateur pour Windows",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Installation pour macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Installation pour Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Installation pour Android",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "Installation avec image conteneur",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "Création d'un projet modèle",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "Appellation comme une dépendance",
               "link": "/manual/starter/direct.md"
             }
           ]
