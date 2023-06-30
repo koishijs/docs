@@ -398,7 +398,7 @@ export default {
 - [`onebot.getGuildMembers()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道成员列表) 获取频道成员列表
 - [`onebot.sendGuildChannelMsg()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#发送信息到子频道) 发送信息到子频道
 
-## 常见问题
+## Foire aux questions
 
 #### 问题：我不知道应该下载 release 中的哪一个文件。
 
