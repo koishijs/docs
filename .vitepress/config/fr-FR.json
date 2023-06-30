@@ -191,7 +191,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -282,11 +282,11 @@
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "生命周期",
+              "text": "Cycle de vie",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "Service et dépendance",
               "link": "/guide/plugin/service.md"
             },
             {
@@ -317,7 +317,7 @@
           ]
         },
         {
-          "text": "跨平台",
+          "text": "Multi-plateforme",
           "items": [
             {
               "text": "使用适配器",
