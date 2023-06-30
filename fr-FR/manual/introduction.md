@@ -1,6 +1,6 @@
 # Introduction
 
-Koishi est un cadre de développement de chatbots performant, extensible et multiplateforme.
+Koishi est un framework chatbots multiplateforme qui est performant et extensible.
 
 Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](https://fr.touhouwiki.net/wiki/Koishi_Komeiji) de la série de jeux vidéo Touhou Project. Koishi Komeiji manipule l'inconscient, ce qui symbolise le thème d'un chatbot ainsi que l'amour des développeurs de Koishi pour celui-ci.
 
@@ -8,15 +8,15 @@ Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](http
 
 ### Prêt à l’emploi
 
-Koishi 提供了开箱即用的控制台。即便是零基础的用户也能在几分钟之内搭建自己的聊天机器人。
+Koishi offre une console sans configurer. Vous pouvez build vos chatbot dans quelque minutes sans accusé celui-ci.
 
-- Marché des plugins. Vous pouvez facilement télécharger les plugins dans la Koishi Console sans avoir des connaissances en langage de programmation.
-- Prise en charge de différentes plateformes. Koishi supporte les plateformes comme QQ, Telegram et Discord. Les données devraient être partagées entre les plateformes ou comptes.
-- Surveillance en temps réel. Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
+- **Place de marché des plugins.** Vous pouvez facilement télécharger ou ajouter les plugins dans la console Koishi sans avoir des connaissances en langage de programmation.
+- **Prise en charge de différentes plateformes.** Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
+- **Surveillance en temps réel.** Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
 
 ### Écologie riche
 
-经过了长达四年的迭代，Koishi 已经发展出了丰富的插件生态和与之匹配的健壮系统。近 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
+En itérant dans quatre ans, Koishi a une écologie riche qui build via le système robuste. 近 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
 
 ### Conçu pour les développeurs
 
