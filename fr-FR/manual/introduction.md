@@ -8,15 +8,15 @@ Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](http
 
 ### Prêt à l’emploi
 
-Koishi offre une console sans configurer. Vous pouvez build vos chatbot dans quelque minutes sans accusé celui-ci.
+Koishi offre une console sans configurer. Vous pouvez construire vos chatbots dans quelque minutes sans accusé celui-ci.
 
-- **Place de marché des plugins.** Vous pouvez facilement télécharger ou ajouter les plugins dans la console Koishi sans avoir des connaissances en langage de programmation.
-- **Prise en charge de différentes plateformes.** Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
-- **Surveillance en temps réel.** Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
+- **Place de marché des plugins** : Vous pouvez facilement télécharger ou ajouter les plugins dans la console Koishi sans avoir des connaissances en langage de programmation.
+- **Prise en charge de différentes plateformes** : Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
+- **Surveillance en temps réel** : Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
 
 ### Écologie riche
 
-En itérant dans quatre ans, Koishi a une écologie riche qui build via le système robuste. 近 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。无论你的目标是构建大型交互应用还是轻量级的辅助机器人，Koishi 都为你提供了最佳实践。如果担心在复杂的功能中迷失方向，我们也准备了细致的文档来提供帮助。
+En itérant dans quatre ans, Koishi a une écologie riche développant via le système robuste. Près de 1000 plugins officiels et communautaires couvrent tous les aspects du développement de chatbots, allant du support de la plateforme, de la base de données, du stockage des ressources, des extensions de la console, de la gestion des états aux fonctionnalités métier spécifiques. Que ce soit pour construire une application interactive de grande envergure ou un assistant chatbot léger, il vous offre les meilleures pratiques. Nos documents couvrent tous les aspects de l'utilisation et du développement de Koishi. Il est essentiel de les consulter lorsque vous vous sentez perdu.
 
 ### Conçu pour les développeurs
 
