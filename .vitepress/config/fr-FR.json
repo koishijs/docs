@@ -72,7 +72,7 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "Plus",
+        "text": "À propos",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
