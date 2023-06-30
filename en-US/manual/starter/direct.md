@@ -222,4 +222,4 @@ ctx.plugin(ping)
 
 ## What's Next...
 
-Congratulations on mastering the basic of Koishi! 接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+Congratulations on mastering the basic of Koishi! Next, let's go to [developing guide](../../guide/) to learn more about Koishi.

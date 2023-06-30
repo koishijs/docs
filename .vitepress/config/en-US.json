@@ -39,7 +39,7 @@
         "text": "Develop",
         "items": [
           {
-            "text": "Developing Guide",
+            "text": "Guide",
             "link": "/guide/"
           },
           {
@@ -92,7 +92,7 @@
           "text": "",
           "items": [
             {
-              "text": "Install",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
@@ -271,7 +271,7 @@
           ]
         },
         {
-          "text": "Modulization",
+          "text": "Modulation",
           "items": [
             {
               "text": "About Plugin",
@@ -574,20 +574,20 @@
           ]
         },
         {
-          "text": "文章",
+          "text": "Articles",
           "items": [
             {
-              "text": "存储插件数据",
+              "text": "Store Plugin Data",
               "link": "/cookbook/storage.md"
             },
             {
-              "text": "绘制图片",
+              "text": "Draw Images",
               "link": "/cookbook/render.md"
             }
           ]
         },
         {
-          "text": "附录",
+          "text": "Appendix",
           "items": []
         }
       ],

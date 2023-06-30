@@ -6,23 +6,23 @@ prev:
 
 # About Koishi Console
 
-One of the key feature in Koishi is Console.Console is a graphical interface which is very friendly for users. And there are majority functions in the console.
+As the key feature, Koishi Console is a user-friendly graphical user interface (GUI) including many features for Koishi.
 
-- Monitor the status and view the statistics
-- Configure plugins
-- Install, uninstall and update plugins
-- Manage commands, database and localization
-- Simulate chat
-- Display logs
+- Running status monitoring and statistics
+- Plugins configurations
+- Plugin installation, updating and uninstallation
+- Management of commands, database and locale text
+- Chat simulation
+- Log management
 
 ## Console User Interface
 
-The console will be opened automatically after you have successfully installed a template project or the launcher.
+The console will be opened automatically when you have a launcher or a template project installed successfully.
 
-The console UI contains two parts: the left side is a sidebar, which is used to toggle the interfaces on the right side; the right side is a dashboard which is opened by default. There is also a status bar which is used to show the running status of bots at the bottom on a wide screen.
+In the left section of the Console UI, you can see a sidebar that is used to toggle the interfaces on the right section. The dashboard page would be shown by default. There is also a status bar which is used to show the running status of bots at the bottom when you are using a PC or a tablet.
 
 ![home](/manual/console/home.light.webp) {.light-only}
 
 ![home](/manual/console/home.dark.webp) {.dark-only}
 
-We will further introduce the usage of each page in the following sections.
+You can learn more about the features and usage of each interface in the following sections.

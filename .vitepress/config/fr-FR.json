@@ -92,35 +92,35 @@
           "text": "",
           "items": [
             {
-              "text": "安装",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installation pour Windows",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Installation pour macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Installation pour Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Installation pour Android",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "Installation avec image conteneur",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "Création d'un projet modèle",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "Appellation comme une dépendance",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -129,15 +129,15 @@
           "text": "Console",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "À propos de la console Koishi",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "Installation et configuration des plugins",
               "link": "/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
+              "text": "Chat dans le bac à sable",
               "link": "/manual/console/sandbox.md"
             },
             {
@@ -147,22 +147,22 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Utilisation",
           "items": [
             {
-              "text": "指令系统",
+              "text": "Système commande",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "Multi-plateforme",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
+              "text": "Gestion des permissions",
               "link": "/manual/usage/permission.md"
             },
             {
-              "text": "过滤器",
+              "text": "Filtres",
               "link": "/manual/usage/filter.md"
             },
             {
@@ -191,7 +191,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -200,11 +200,11 @@
           "text": "启动器",
           "items": [
             {
-              "text": "系统要求",
+              "text": "Configuration requise",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "L'outil de ligne de commande",
+              "text": "Outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -228,11 +228,11 @@
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
+              "text": "Fichier de configuration",
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "启动脚本",
+              "text": "Script démarrage",
               "link": "/guide/develop/script.md"
             },
             {
@@ -282,11 +282,11 @@
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "生命周期",
+              "text": "Cycle de vie",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "Service et dépendance",
               "link": "/guide/plugin/service.md"
             },
             {
@@ -317,7 +317,7 @@
           ]
         },
         {
-          "text": "跨平台",
+          "text": "Multi-plateforme",
           "items": [
             {
               "text": "使用适配器",
@@ -476,14 +476,14 @@
           ]
         },
         {
-          "text": "消息元素",
+          "text": "Éléments messages",
           "items": [
             {
               "text": "语法规范",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "Éléments Standards",
               "link": "/api/message/elements.md"
             },
             {
@@ -491,7 +491,7 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "API restitution",
               "link": "/api/message/api.md"
             }
           ]
@@ -596,11 +596,11 @@
           "text": "plugin",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Place de Marché",
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "Plugins Services",
               "link": "/market/service.md"
             },
             {
@@ -610,7 +610,7 @@
           ]
         },
         {
-          "text": "适配器支持",
+          "text": "Adaptateurs",
           "items": [
             {
               "text": "Discord",
@@ -643,7 +643,7 @@
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "Base de données",
           "items": [
             {
               "text": "Memory",
@@ -780,7 +780,7 @@
               "link": "/market/"
             },
             {
-              "text": "服务类插件导航",
+              "text": "Plugins Services",
               "link": "/market/service.md"
             },
             {
@@ -795,13 +795,13 @@
           "text": "演练场",
           "items": [
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "核心概念",
+          "text": "Concepts de base",
           "items": [
             {
               "text": "必需与可选",
@@ -830,7 +830,7 @@
           ]
         },
         {
-          "text": "基础类型",
+          "text": "Type de base",
           "items": [
             {
               "text": "数值 (Number)",
@@ -871,7 +871,7 @@
           ]
         },
         {
-          "text": "高级类型",
+          "text": "Type avancé",
           "items": [
             {
               "text": "Intersect：分组",
@@ -910,7 +910,7 @@
       ],
       "/about/": [
         {
-          "text": "关于我们",
+          "text": "À propos de nous",
           "items": [
             {
               "text": "许可证",

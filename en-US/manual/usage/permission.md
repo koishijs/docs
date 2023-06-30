@@ -1,8 +1,8 @@
 # Permission Management
 
-既然已经有了用户系统，下一个自然的需求便是权限管理了。
+Now that a user system is in place, the next natural requirement is permission management.
 
-## 用户权限
+## User Permissions
 
 Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个权限等级，遵循以下的 **核心规则**：
 
@@ -11,11 +11,11 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 在此基础上，我们还扩充出了这样的一套 **设计准则**：
 
-- 0 级：不存在的用户
-- 1 级：所有用户，只能够接触有限的功能
-- 2 级：高级用户，能够接触几乎一切机器人的功能
-- 3 级：管理员，能够直接操作机器人事务
-- 4 级：高级管理员，能够管理其他账号
+- Level 0: non-existing users
+- Level 1: All users, limited access to functionality
+- Level 2: Advanced user with access to almost all functionality
+- Level 3: Admin, able to directly manipulate bot configurations
+- Level 4: Senior admin, able to manage other accounts
 
 你可以基于这套准则对指令进行 [权限管理](./command.md#权限管理)，也可以用于部分 [计算属性](./filter.md#计算属性) 的配置项中。
 
@@ -30,7 +30,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 任何用户只能对权限等级低于自己的用户进行操作，且操作后的权限等级同样必须低于自己。
 
-## 受理人机制
+## Assignment Mechanism
 
 默认情况下，同一个 Koishi 应用接入的多个机器人账号在同一个频道内，只有一个机器人会响应用户的消息。这是为了防止消息重复发送和循环触发等问题。这个负责响应消息的机器人被称为该频道的「受理人」。默认情况下，第一个收到该频道的消息的机器人会自动成为受理人。
 
@@ -42,7 +42,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 某个频道处于无受理人状态与该频道被过滤器排除的区别在于：前者仍然可以被通过 @机器人 的方式触发指令，而后者无论如何都无法触发指令。具体请参考 [触发前缀](./command.md#触发前缀) 章节。
 :::
 
-## 自动注册
+## Auto-assign
 
 默认情况下，对于每一条接收到的消息，机器人都会自动向数据库中注册其用户和频道。新注册的用户将默认获得 1 级权限，而新注册的频道会自动以收到消息的机器人为其受理者。如果你不希望有此行为，可以在全局设置中手动配置 `autoAuthorize` 和 `autoAssign`。
 

@@ -1,10 +1,10 @@
 # Install and Configure Plugins
 
 ::: tip
-This section will introduce the usage of "Marketplace", "Plugin Configuration" and "Dependency Management" pages.
+This section covers the usage of pages such as "Marketplace", "Plugin Configuration" and "Dependency Management".
 :::
 
-When Koishi is booted up successfully, Koishi Console UI would be automatically opened in your browser. Koishi Console agilely provides abilities that you can install / update / uninstall plugins, modify configurations of plugins, and manage bot accounts etc. We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. The "echo" plugin provides an "echo" command that will take the text that user inputs and then send it back in the same context.
+当你成功安装并启动 Koishi 后，控制台界面会自动打开。你可以使用控制台管理你的插件和配置。We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. echo 插件注册了一个名为 `echo` 的指令，调用此指令可以将输入原样输出给用户。
 
 ## Install Plugins
 
@@ -12,7 +12,7 @@ When Koishi is booted up successfully, Koishi Console UI would be automatically 
 We Koishi team doesn't warrant the availability of third party plugins. Plugins from unknown sources may break Koishi to crash, or have very serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
-Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter "echo" in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog. Wait for a moment, and the plugin will be installed successfully.
+Go to the "Marketplace" page, where you will see all downloadable plugins here. 在搜索框中输入 `echo`，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。Wait for a moment, and the plugin will be installed successfully.
 
 ![select-version](/manual/console/select-version.light.webp) {.light-only}
 
@@ -20,20 +20,20 @@ Go to the "Marketplace" page, where you will see all downloadable plugins here. 
 
 ## Enable and Disable Plugins
 
-After the plugin is successfully installed, it will not be enabled immediately, and we need to configure it. Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span> fonts show plugins that are running, while gray fonts show plugins that are not running yet.
+Koishi 不会自动启用刚刚安装的插件，你需要手动配置并启用。Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span> fonts show plugins that are running, while gray fonts show plugins that are not running yet.
 
 ![plugins](/manual/console/plugins.light.webp) {.light-only}
 
 ![plugins](/manual/console/plugins.dark.webp) {.dark-only}
 
-We can see that the "echo" plugin is not running, and the "details" page on the right side is empty. It shows that the "echo" plugin has nothing to configure. We can directly click "Enable Plugin" in the upper right corner, then the "echo" plugin will be already running.
+我们可以看到此时 echo 插件的名字是灰色的，这表明它并未处于运行状态。echo 插件没有可配置的项目，因此右侧的详情页是空白的。我们可以直接点击右上角的「启用插件」按钮，看到「启用成功」的提示信息，这表明 echo 插件就已经处于运行状态了。
 
-It is also easy to disable the "echo" plugin. Click "Disable Plugin" in the upper right corner, then the plugin will stop running. Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
+It is also easy to disable the "echo" plugin. 点击右上角的「停用插件」按钮，插件便会停止运行。Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
 
-## Configure plugins
+## Plugins configurations
 
 ::: warning
-In configuring plugins, please remember this principle: **Don't change any configuration unless necessary**. Koishi have many built-in plugins. Every plugin you see in the "Plugin Configuration" page implements some of Koishi's basic features. The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin preloaded. All built-in plugins are well configured, so you don't need to modify them anymore. Changing the configuration of plugins and removing built-in plugins at will, even if add some plugins wrongly may cause Koishi to crash.
+在配置插件的过程中，请大家记住这个原则：**如无必要，勿动配置**。Koishi 在设计上兼顾了扩展性和实用性，许多基础功能是以预装插件的形式提供的。前面我们已经用到的「插件市场」和「插件配置」页面本身就分别由预装的 market 插件和 config 插件提供。正是因为所有的预装插件均已配置完善，通常情况下你不需要修改预装插件的配置。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行。
 :::
 
 While the "echo" plugin does not require configuration, more complex plugins often provide configurations that allow users to control the behavior of plugins. The picture below shows the configuration page of the "novelai" plugin.
@@ -44,16 +44,20 @@ While the "echo" plugin does not require configuration, more complex plugins oft
 
 In this page, we can see many configurations, where you need to take note of:
 
-- Required but unfilled configurations will display a <span style="font-weight: bold; color: var(--vp-c-red-light)">red</span> tooltip on the left, and they must be filled in correctly to enable the plugin.
-- Modified but unsaved configurations will display a <span style="font-weight: bold; color: var(--vp-c-brand)">purple</span> tooltip on the left, and they will be saved after you click "Enable Plugin" or "Save Configuration" button. If you want to discard these changes, you can call the menu at the small triangle next to the configuration name, select "Undo Changes" to restore the configuration to the status last saved.
+- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-light)">红色</span> 的提示条，只有正确填写配置才能启动插件。
+- 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-brand)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
 
 ## Manage Plugins
 
 ### Manage Groups
 
-Koishi provides a function of plugin groups that allows you to place plugins into different groups for unified management. A newly created Koishi instance has already been pre-configured some groups, and newly installed plugins will be automatically added to the bottom of the plugin list without belonging to any group. You can drag plugins in the left column to change the sequence of plugins or move them into another group.
+Koishi 提供了插件分组的机制，分组内可以添加插件，方便同时管理多个插件。
 
-You can also create new groups. In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner, and you will create a new plugin group. The small triangle in the left column can be used to control the expanding and collapsing of the group. You can also configure [filters](../usage/filter.md) that allow you to control the behavior of a group of plugins simultaneously.
+Koishi 在安装时预先配置了一些分组，而新安装的插件会放置在插件列表的底部，这表明它不属于任何分组。插件和分组都可以通过点选并拖拽的方式改变排列顺序或在分组之间移动。相信你也发现了，分组是可以嵌套的。
+
+创建新的分组同样很简单。点击「全局配置」或任意分组名后，点击右上角的「创建分组」按钮可以在此创建一个新的插件分组。新分组的名字是随机生成的，但你可以点击名字修改成你喜欢的名字。分组可以在左侧栏中点击小三角来控制展开和收起。
+
+此外，[过滤器](../usage/filter.md) 机制也可用于分组，便于控制一系列插件的行为。
 
 ### Add More Plugins
 
@@ -77,7 +81,11 @@ Click Remove Plugin button in the top right corner in the configuration page of 
 
 ## Update and Uninstall Plugins
 
-Go to the "Dependency Management" page. Here you can see a list of dependencies, and you can update them here. When the status shows "Updatable", you can click the "Modify" button on the right, select the version you need in the top left corner of the popup dialog, and click "Update" in the bottom right corner to complete your update.
+前往「依赖管理」页面，你可以在这里看到依赖列表。依赖可能包括 Koishi 本体，各种插件，以及支持插件运行的软件包等。
+
+当依赖的状态显示为「可更新」时，点击其右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」按钮即可完成更新。
+
+你也可以批量更新多个插件，通过依赖名右侧的下拉菜单选择好所需更改的版本，点击右上角的「应用更改」按钮即可。此外，右上角的「全部更新」按钮可以一键更新所有依赖。
 
 ![dependencies](/manual/console/dependencies.light.webp) {.light-only}
 

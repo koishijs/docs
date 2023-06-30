@@ -1,4 +1,4 @@
-# 事件系统 (Events)
+# 事件系統 (Events)
 
 ::: tip
 相关指南：[事件系统](../../guide/basic/events.md)

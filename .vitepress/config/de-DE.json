@@ -1,5 +1,5 @@
 {
-  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und skalierbar sind",
+  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und erweiterbares sind",
   "head": [
     [
       "link",
@@ -28,18 +28,18 @@
       "text": "Übersetzen dieser Seite auf Crowdin",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-de"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
-        "text": "入门",
+        "text": "Anfängerleitfaden",
         "link": "/manual/introduction.md",
         "activeMatch": "/manual/"
       },
       {
-        "text": "开发",
+        "text": "Entwicklung",
         "items": [
           {
-            "text": "指南",
+            "text": "Anleitung",
             "link": "/guide/"
           },
           {
@@ -47,32 +47,32 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "插件",
+        "text": "Plugins",
         "items": [
           {
-            "text": "插件市场",
+            "text": "Marktplatz",
             "link": "/market/"
           },
           {
-            "text": "服务类插件导航",
+            "text": "Service-Plugins",
             "link": "/market/service.md"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Offizielle",
             "link": "/plugins/"
           }
         ],
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "更多",
+        "text": "Mehr",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -83,7 +83,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "Einleitung",
               "link": "/manual/introduction.md"
             }
           ]
@@ -92,11 +92,11 @@
           "text": "",
           "items": [
             {
-              "text": "安装",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installation für Windows",
               "link": "/manual/starter/windows.md"
             },
             {
@@ -604,7 +604,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
@@ -784,7 +784,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
