@@ -26,7 +26,7 @@ Installer Koishi via le programme d'installation est la méthode la recommandée
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-Double-cliquez sur le programme d'installation msi, puis cliquez sur « Suivant » pour terminer l'installation. Vous pouvez maintenant trouver Koishi dans le menu « Démarrer ».
+Double-cliquez sur le programme d'installation msi, puis cliquez sur *Suivant* pour terminer l'installation. Vous pouvez maintenant trouver Koishi dans le menu *Démarrer*.
 
 ::: tip
 Le processus d'installation peut prendre plus de 10 minutes sur certains ordinateurs, veuillez patienter.
