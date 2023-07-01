@@ -1,6 +1,6 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Andere Installationsmethoden
   link: /de-DE/manual/starter/
 next:
   text: Anerkennung der Konsole
@@ -10,7 +10,7 @@ next:
 # Installation für Windows
 
 ::: tip
-Wenn Sie mehr über andere Installationsmethoden erfahren möchten, gehen Sie zu Wählen Sie eine Installationsmethode</a>.
+Wenn Sie mehr über andere Installationsmethoden erfahren möchten, gehen Sie zu Wählen Sie [eine Installationsmethode](./index.md).
 :::
 
 ## Heruntergeladen
