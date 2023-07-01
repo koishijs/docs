@@ -14,9 +14,9 @@ Koishi offre une console sans configurer. Vous pouvez construire vos chatbots da
 - **Prise en charge de différentes plateformes** : Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
 - **Surveillance en temps réel** : Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
 
-### Écologie riche
+### Une communauté grandissante
 
-En itérant dans quatre ans, Koishi a une écologie riche développant via le système robuste. Près de 1000 plugins officiels et communautaires couvrent tous les aspects du développement de chatbots, allant du support des plateformes, de la base de données, du stockage des ressources, des extensions de la console, de la gestion des états aux fonctionnalités métier spécifiques. Que ce soit pour construire une application interactive de grande envergure ou un assistant chatbot léger, il vous offre les meilleures pratiques. Nos documents couvrent tous les aspects de l'utilisation et du développement de Koishi. Il est essentiel de les consulter lorsque vous vous sentez perdu.
+Après plus de 4 ans de développement, Koishi a maintenant une communauté de développement de plugins très active. Près de 1000 plugins officiels et communautaires couvrent tous les aspects du développement de chatbots, allant du support des plateformes, de la base de données, du stockage des ressources, des extensions de la console, de la gestion des états aux fonctionnalités métier spécifiques. Que ce soit pour construire une grande application interactive ou un assistant chatbot léger, il vous offre les meilleures pratiques. Nos documents couvrent tous les aspects de l'utilisation et du développement de Koishi. Il est essentiel de les consulter lorsque vous vous sentez perdu.
 
 ### Conçu pour les développeurs
 
