@@ -4,7 +4,7 @@
 This section covers the usage of pages such as "Marketplace", "Plugin Configuration" and "Dependency Management".
 :::
 
-当你成功安装并启动 Koishi 后，控制台界面会自动打开。你可以使用控制台管理你的插件和配置。We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. echo 插件注册了一个名为 `echo` 的指令，调用此指令可以将输入原样输出给用户。
+The console interface will open automatically when you install and start Koishi.You can use the console to manage your plugins and configurations.We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. echo 插件注册了一个名为 `echo` 的指令，调用此指令可以将输入原样输出给用户。
 
 ## Install Plugins
 
@@ -20,7 +20,7 @@ Go to the "Marketplace" page, where you will see all downloadable plugins here. 
 
 ## Enable and Disable Plugins
 
-Koishi 不会自动启用刚刚安装的插件，你需要手动配置并启用。Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span> fonts show plugins that are running, while gray fonts show plugins that are not running yet.
+Koishi will not enable the plugin you just installed. You need to manually configure and enable it.Go to the "Plugin Configuration" page, where various configured plugins are listed in the left column. Among these, <span class="light-only">black</span><span class="dark-only">white</span> fonts show plugins that are running, while gray fonts show plugins that are not running yet.
 
 ![plugins](/manual/console/plugins.light.webp) {.light-only}
 
@@ -44,8 +44,8 @@ While the "echo" plugin does not require configuration, more complex plugins oft
 
 In this page, we can see many configurations, where you need to take note of:
 
-- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-light)">红色</span> 的提示条，只有正确填写配置才能启动插件。
-- 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-brand)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
+- Required but unfilled configurations will display a <span style="font-weight: bold; color: var(--vp-c-red-light)">red</span> tooltip on the left, and they must be filled in correctly to enable the plugin.
+- Modified but unsaved configurations will display a <span style="font-weight: bold; color: var(--vp-c-brand)">purple</span> tooltip on the left, and they will be saved after you click "Enable Plugin" or "Save Configuration" button. If you want to discard these changes, you can call the menu at the small triangle next to the configuration name, select "Undo Changes" to restore the configuration to the status last saved.
 
 ## Manage Plugins
 
