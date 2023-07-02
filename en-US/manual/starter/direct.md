@@ -181,12 +181,12 @@ ctx.plugin(require('koishi-plugin-forward'))
 除了已经封装好的插件外，我们还可以添加自己的交互逻辑：
 
 ```ts title=index.ts
-// 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
-ctx.on('message', (session) => {
-  if (session.content === '天王盖地虎') {
-    session.send('宝塔镇河妖')
-  }
-})
+// Reply with "world", after receiving "Hello"
+  ctx.on('message', (session) => {
+    if (session.content === 'Hello') {
+      session.send('world')
+    }
+  })
 ```
 
 然后重新运行你的项目：
@@ -204,17 +204,17 @@ import { Context } from 'koishi'
 export const name = 'ping'
 
 export function apply(ctx: Context) {
-  // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
+  // Reply with "world", after receiving "Hello"
   ctx.on('message', (session) => {
-    if (session.content === '天王盖地虎') {
-      session.send('宝塔镇河妖')
+    if (session.content === 'Hello') {
+      session.send('world')
     }
   })
 }
 ```
 
 ```ts title=index.ts
-// 这里的 ./ping 是相对于 index.ts 的路径
+// Here the ./ping is the path to index.ts
 import * as ping from './ping'
 
 ctx.plugin(ping)
