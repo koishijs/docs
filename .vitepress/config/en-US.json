@@ -525,7 +525,7 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "Server API",
+              "text": "Server-side API",
               "link": "/api/console/server.md"
             },
             {
@@ -687,7 +687,7 @@
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "Display Help (Help)",
+              "text": "View Help (Help)",
               "link": "/plugins/common/help.md"
             },
             {
@@ -728,7 +728,7 @@
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "Resource Manager (Explorer)",
+              "text": "File Management (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
@@ -748,7 +748,7 @@
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Development Sandboxing (Sandbox)",
+              "text": "Sandbox Debug (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
