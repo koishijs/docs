@@ -13,8 +13,8 @@ plugin-root
 ```
 
 ```ts index.ts
-ctx.i18n.define('en', require('./locales/en-US'))
-ctx.i18n.define('zh', require('./locales/zh-CN'))
+ctx.i18n.define('en-US', require('./locales/en-US'))
+ctx.i18n.define('zh-CN', require('./locales/zh-CN'))
 ```
 
 ::: tip
