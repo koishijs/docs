@@ -103,7 +103,7 @@ type AuthorInfo = any
 // ---cut---
 export interface MessageInfo {
   messageId: string
-  subtype: 'private' | 'group'
+  isDirect: boolean
   content: string
   timestamp: number
   author: AuthorInfo
