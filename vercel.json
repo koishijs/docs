@@ -12,11 +12,11 @@
   ],
   "redirects": [
     {
-      "source": "/:path((?!zh-CN|en-US|de-DE|fr-FR|ja-JP|ru-RU).*).html",
+      "source": "/:path((?!zh-CN|zh-TW|en-US|de-DE|fr-FR|ja-JP|ru-RU).*).html",
       "destination": "/zh-CN/:path.html"
     },
     {
-      "source": "/:path((?!zh-CN|en-US|de-DE|fr-FR|ja-JP|ru-RU).*)/",
+      "source": "/:path((?!zh-CN|zh-TW|en-US|de-DE|fr-FR|ja-JP|ru-RU).*)/",
       "destination": "/zh-CN/:path/"
     },
     {
