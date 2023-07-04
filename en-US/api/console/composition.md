@@ -12,17 +12,13 @@ Get user settings.
 
 ## useContext()
 
-- Return value:
+- Return value: [`Context`](./context.md)
 
-Context`</a></li>
-</ul>
+获取当前组件所在的插件上下文。
 
-<p spaces-before="0">获取当前组件所在的插件上下文。</p>
+## useMenu(id)
 
-<h2 spaces-before="0">useMenu(id)</h2>
+- **id:** 菜单标识符
+- 返回值: `(el: HTMLElement, data: any) => void`
 
-<ul>
-<li><strong x-id="1">id:</strong> 菜单标识符</li>
-<li>返回值: <code>(el: HTMLElement, data: any) => void`</li> </ul> 
-  
-  获得一个触发上下文菜单的事件监听器。
+获得一个触发上下文菜单的事件监听器。
