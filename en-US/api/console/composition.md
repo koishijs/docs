@@ -18,7 +18,7 @@ Get user settings.
 
 ## useMenu(id)
 
-- **id:** 菜单标识符
+- **id:** `string` 菜单标识符
 - 返回值: `(el: HTMLElement, data: any) => void`
 
 获得一个触发上下文菜单的事件监听器。
