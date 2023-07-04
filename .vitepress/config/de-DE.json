@@ -47,7 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "Playground: Schema",
+            "text": "最佳实践",
+            "link": "/cookbook/"
+          },
+          {
+            "text": "演练场：配置构型",
             "link": "/schema/"
           }
         ],
@@ -100,44 +104,44 @@
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Installation für macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Installation für Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Installation für Android",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "Installation für Container",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "Vorlagenprojekt erstellen",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "Als Abhängigkeit verwenden",
               "link": "/manual/starter/direct.md"
             }
           ]
         },
         {
-          "text": "控制台",
+          "text": "Konsole",
           "items": [
             {
-              "text": "认识控制台",
+              "text": "Über die Konsole",
               "link": "/manual/console/index.md"
             },
             {
-              "text": "安装和配置插件",
+              "text": "Installation und Konfiguration der Plugins",
               "link": "/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
+              "text": "Chatten in der Sandbox",
               "link": "/manual/console/sandbox.md"
             },
             {
@@ -577,18 +581,10 @@
           "text": "文章",
           "items": [
             {
-              "text": "存储插件数据",
-              "link": "/cookbook/storage.md"
-            },
-            {
-              "text": "绘制图片",
-              "link": "/cookbook/render.md"
+              "text": "部署到 k-on!",
+              "link": "/cookbook/online.md"
             }
           ]
-        },
-        {
-          "text": "附录",
-          "items": []
         }
       ],
       "/plugins/": [

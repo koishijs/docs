@@ -8,7 +8,7 @@ The name and icon design are inspired from [Komeiji Koishi](https://en.touhouwik
 
 ### Out-of-the-box Experience
 
-Koishi 提供了开箱即用的控制台。即便是零基础的用户也能在几分钟之内搭建自己的聊天机器人。
+Koishi provides an out-of-the-box console. Even zero-based users can build their own chatbots in a few minutes.
 
 - Plugin Marketplace. You could easily download and install plugins in the console without any programming knowledge
 - Multiple Platform Supports. Koishi supports mainstream chat platforms such as QQ, Telegram, and Discord. Data should be exchangeable between different platforms and accounts.

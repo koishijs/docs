@@ -59,7 +59,7 @@ The `package.json` in your plugin should meet the requirements below to appear i
   - @koishijs/plugin-\* (Official)
   - \* is a string of digits, lowercase letters and dashes
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
-- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) should follow [semver](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
+- The [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) be in the form `x. x. x` and should follow [semantic versioning guidelines](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
 - [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) should include `koishi`
 - Do not set [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) to `true`, otherwise your plugin cannot be published to npm
 - Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) your plugin, unless you have a good reason to do so. For example, if you want to republish the plugin with a different name, you can use it to hide the old plugin on the marketplace.

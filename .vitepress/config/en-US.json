@@ -47,7 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "Playground: Schema",
+            "text": "最佳实践",
+            "link": "/cookbook/"
+          },
+          {
+            "text": "演练场：配置构型",
             "link": "/schema/"
           }
         ],
@@ -525,7 +529,7 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "Server API",
+              "text": "Server-side API",
               "link": "/api/console/server.md"
             },
             {
@@ -577,18 +581,10 @@
           "text": "Articles",
           "items": [
             {
-              "text": "Store Plugin Data",
-              "link": "/cookbook/storage.md"
-            },
-            {
-              "text": "Draw Images",
-              "link": "/cookbook/render.md"
+              "text": "部署到 k-on!",
+              "link": "/cookbook/online.md"
             }
           ]
-        },
-        {
-          "text": "Appendix",
-          "items": []
         }
       ],
       "/plugins/": [
@@ -687,7 +683,7 @@
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "Display Help (Help)",
+              "text": "View Help (Help)",
               "link": "/plugins/common/help.md"
             },
             {
@@ -728,7 +724,7 @@
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "Resource Manager (Explorer)",
+              "text": "File Management (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
@@ -748,7 +744,7 @@
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Development Sandboxing (Sandbox)",
+              "text": "Sandbox Debug (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {

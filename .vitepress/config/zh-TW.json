@@ -47,7 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "演練場：配置構型",
+            "text": "最佳实践",
+            "link": "/cookbook/"
+          },
+          {
+            "text": "演练场：配置构型",
             "link": "/schema/"
           }
         ],
@@ -577,18 +581,10 @@
           "text": "文章",
           "items": [
             {
-              "text": "存儲插件數據",
-              "link": "/cookbook/storage.md"
-            },
-            {
-              "text": "繪製圖片",
-              "link": "/cookbook/render.md"
+              "text": "部署到 k-on!",
+              "link": "/cookbook/online.md"
             }
           ]
-        },
-        {
-          "text": "附錄",
-          "items": []
         }
       ],
       "/plugins/": [

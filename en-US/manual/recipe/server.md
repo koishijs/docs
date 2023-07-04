@@ -65,6 +65,6 @@ server {
 
 完成初步配置以后，有一些额外的社区插件可以帮助你更好地部署 Koishi 控制台。
 
-### 添加备案信息
+### Add filing information
 
-如果你的服务器在国内，你需要在控制台中添加备案信息，才能在公网上顺利访问。此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
+If your server is in the Mainland of China, you need to add the filing information inquiry to your console to be able to access it successfully on the Internet.此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。

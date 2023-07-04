@@ -4,13 +4,13 @@ There are many plugins in the Koishi marketplace. A set of search query syntax w
 
 ## Search Terms
 
-除去含有冒号的特殊语法外，你输入的搜索词会被用于查询：
+In addition to special syntax with colon numbers, the search term you enter will be used for querying：
 
 - Plugin name
 - Plugin description
 - Plugin keywords
 
-## 插件标识
+## Plugin identification
 
 我们提供了四种插件标识，它们本身也是过滤条件。包括：
 
@@ -21,8 +21,8 @@ There are many plugins in the Koishi marketplace. A set of search query syntax w
 
 此外，还有一写不带标识的过滤条件：
 
-- `is:installed`：已安装
-- `updated:>date`：近期更新
+- `is:installed`: installed
+- `updated:>date`: recently updated
 
 上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
 
@@ -52,14 +52,14 @@ We currently offer 14 base categories. They are:
 插件市场中的插件会默认根据其评分进行排序。评分是一个 0~5 之间的数值，并在四舍五入后会显示为星星的个数。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
 
 - 插件是否开源
-- 插件是否被标记为不安全 / 开发中
-- 插件的下载量
-- 插件的安装体积
+- Mark as insecure/preview
+- Downloads of the plugin
+- Size of the plugin
 
 除了按照评分排序，你还可以选择其他的排序方式：
 
-- `sort:download`：按下载量排序
-- `sort:created`：按创建时间排序
-- `sort:updated`：按更新时间排序
+- `sort:download`: sorted by download
+- `sort:created`: sorted by creation time
+- `sort:updated`: sorted by update time
 
 如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。在侧边栏中，你可以点击排序方式进行排序，点击第二次反向排序，点击第三次则会取消排序。

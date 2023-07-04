@@ -47,7 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "Playground : Schéma",
+            "text": "最佳实践",
+            "link": "/cookbook/"
+          },
+          {
+            "text": "演练场：配置构型",
             "link": "/schema/"
           }
         ],
@@ -72,7 +76,7 @@
         "activeMatch": "/(plugins|market)/"
       },
       {
-        "text": "Plus",
+        "text": "À propos",
         "link": "/about/contact.md",
         "activeMatch": "/about/"
       }
@@ -491,7 +495,7 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "API restitution",
+              "text": "API rendant",
               "link": "/api/message/api.md"
             }
           ]
@@ -577,18 +581,10 @@
           "text": "文章",
           "items": [
             {
-              "text": "存储插件数据",
-              "link": "/cookbook/storage.md"
-            },
-            {
-              "text": "绘制图片",
-              "link": "/cookbook/render.md"
+              "text": "部署到 k-on!",
+              "link": "/cookbook/online.md"
             }
           ]
-        },
-        {
-          "text": "附录",
-          "items": []
         }
       ],
       "/plugins/": [
