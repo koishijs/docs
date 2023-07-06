@@ -43,7 +43,7 @@
 k-on! 提供了打包时的环境变量，你可以通过它们来判断当前插件是否在 k-on! 中运行。
 
 - `process.env.KOISHI_ENV`：固定为 `browser`
-- `process.env.KOISHI_BASE`：对应于插件入口文件的所在网络路径
+- `process.env.KOISHI_BASE`：对应于插件入口文件的所在网络路径 (仅限生产环境)
 
 例如，如果插件的某些配置项在 k-on! 中无效，那么你可以配合 `.hidden()` 使用：
 
@@ -79,6 +79,9 @@ export const Config = Schema.object({
 ctx.console.addEntry(process.env.KOISHI_BASE ? [
   process.env.KOISHI_BASE + '/dist/index.js',
   process.env.KOISHI_BASE + '/dist/style.css',
+] : process.env.KOISHI_ENV === 'browser' ? [
+  // @ts-ignore
+  import.meta.url.replace(/\/src\/[^/]+$/, '/client/index.ts'),
 ] : {
   dev: resolve(__dirname, '../client/index.ts'),
   prod: resolve(__dirname, '../dist'),
@@ -110,10 +113,10 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 ::: tabs code
 ```npm
-npm run clone koishijs/koishi
+npm run clone koishijs/webui
 ```
 ```yarn
-yarn clone koishijs/koishi
+yarn clone koishijs/webui
 ```
 :::
 
