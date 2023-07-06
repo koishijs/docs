@@ -2,11 +2,12 @@
 layout: schema
 code: |
   Schema.object({
-  text: Schema.string().description('一段普通的文本。'),
+  text: Schema.string().pattern(/^fff$/i).description('一段普通的文本。'),
   secret: Schema.string().role('secret').default('password').description('请输入密码。'),
   link: Schema.string().role('link').default('https://github.com').description('点击访问链接。'),
   area: Schema.string().role('textarea', { rows: [2, 4] }).description('在下方输入多行文本。'),
   color: Schema.string().role('color').description('选择一个颜色。'),
+  custom: Schema.string().pattern(/^custom$/i).description('这里只能输入 `custom`。'),
   }).description('配置项')
 ---
 
@@ -20,18 +21,15 @@ code: |
   - 可以通过 `rows` 属性来限制文本域的最小和最大行数
 - color：输入框显示为颜色选择器
 
+可以使用 `.pattern()` 限制输入的内容符合某个正则表达式。
+
 ```ts
 export default Schema.object({
   text: Schema.string(),
-  secret: Schema.string()
-    .role('secret')
-    .default('password'),
-  link: Schema.string()
-    .role('link')
-    .default('https://github.com'),
-  area: Schema.string()
-    .role('textarea', { rows: [2, 4] }),
-  color: Schema.string()
-    .role('color'),
+  secret: Schema.string().role('secret').default('password'),
+  link: Schema.string().role('link').default('https://github.com'),
+  area: Schema.string().role('textarea', { rows: [2, 4] }),
+  color: Schema.string().role('color'),
+  custom: Schema.string().pattern(/^custom$/i),
 })
 ```
