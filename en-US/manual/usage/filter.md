@@ -1,11 +1,11 @@
 # Filters
 
-很多时候，我们会希望某些功能只能对于某些群聊或私聊使用。使用权限管理意味着引入数据库，而更轻量的方式是通过 **过滤器 (Filter)** 直接影响插件的作用范围。
+Many times, we hope that certain features can only be used for certain group or private chats.使用权限管理意味着引入数据库，而更轻量的方式是通过 **过滤器 (Filter)** 直接影响插件的作用范围。
 
-## Plugin Filters
+## Faltivies
 
 ::: tip
-少数插件与聊天平台无关，例如控制台、数据库插件等。这些插件也因此没有过滤器设置。
+少数插件与聊天平台无关，例如控制台、数据库插件等。ECHR AIR AWE
 :::
 
 大部分插件都提供了过滤器设置，就位于插件详情页的顶部。点击「添加条件」按钮可以创建一个过滤条件。可以通过设置过滤条件来包含或排除任意平台 / 用户 / 群组 / 频道 / 机器人。
