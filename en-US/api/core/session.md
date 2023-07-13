@@ -158,22 +158,6 @@
 
 向用户展示候选项并等待输入。
 
-<!-- ### session.resolve(argv)
-
-- **argv:** `Argv` 运行时参数对象
-- 返回值: [`Command`](./command.md) 关联的指令
-
-尝试解析一个 argv 所关联的指令。
-
-### session.collect(argv, key, fields)
-
-按照 argv 中的 command 属性向 fields 添加所需的用户字段。它是内置的 before-attach-user 和 before-attach-channel 监听器。
-
-- **argv:** `Argv` 只需确保其中存在 command 属性即可
-- **key:** `'user' | 'channel'` 要添加的类型
-- **fields:** `Set<string>` 用户字段集合
-- 返回值: `void` -->
-
 ### session.execute(argv, next?)
 
 - **argv:** `string | Argv` 指令文本或运行时参数对象
