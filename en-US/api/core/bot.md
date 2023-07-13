@@ -179,7 +179,7 @@ export interface MessageInfo {
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
 - **emoji:** `string` 表态名称
-- 返回值: `Promise<void>`
+- 返回值: `Promise<User[]>`
 
 获取添加特定消息的特定表态的用户列表。
 
@@ -201,7 +201,7 @@ export interface UserInfo {
 
 ### bot.getUser(userId)
 
-- **userId:** `string` 目标用户 ID
+- **userId:** `string` 用户 ID
 - 返回值: `Promise<UserInfo>` 用户信息
 
 获取用户信息。
@@ -214,7 +214,7 @@ export interface UserInfo {
 
 ### bot.getGuild(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<GuildInfo>` 群组信息
 
 获取群组信息。
@@ -234,8 +234,8 @@ export interface GuildInfo {
 
 ### bot.getGuildMember(guildId, userId)
 
-- **guildId:** `string` 目标群 ID
-- **userId:** `string` 目标用户 ID
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
 - 返回值: `Promise<GuildMemberInfo>` 群成员信息
 
 获取群成员信息。
@@ -255,21 +255,21 @@ export interface GuildMemberInfo extends UserInfo {
 
 ### bot.getGuildMemberList(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<GuildMemberInfo[]>` 群成员列表
 
 获取群成员列表。
 
 ### bot.getGuildMemberMap(guildId) <Badge text="内置"/>
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<Record<string, string>>` 群成员昵称的键值对
 
 获取群成员列表，返回一个用户 ID 到昵称的键值对，若无 nickname 则使用 username。
 
 ### bot.getChannel(channelId)
 
-- **channelId:** `string` 目标频道 ID
+- **channelId:** `string` 频道 ID
 - 返回值: `Promise<ChannelInfo>` 频道信息
 
 获取频道信息。
@@ -283,10 +283,81 @@ export interface ChannelInfo {
 
 ### bot.getChannelList(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<ChannelInfo[]>` 频道列表
 
 获取某个群组的频道列表。
+
+## 群管理
+
+### bot.kickGuildMember(guildId, userId, permanent?)
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **permanent:** `boolean` 是否永久踢出 (用户无法再次加入群组)
+- 返回值: `Promise<void>`
+
+将某个用户踢出群组。
+
+### bot.muteGuildMember(guildId, userId, duration?, reason?)
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **duration:** `number` 禁言时长 (毫秒)
+- **reason:** `string` 禁言说明
+- 返回值: `Promise<void>`
+
+将某个用户禁言。如果传入的禁言时长为 `0` 则表示解除禁言。
+
+### bot.setGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+设置群组内用户的角色。
+
+### bot.unsetGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+取消群组内用户的角色。
+
+### bot.getGuildRoles(guildId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- 返回值: `Promise<Role[]>` 角色列表
+
+获取群组角色列表。
+
+### bot.createGuildRole(guildId, data) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **data:** `Partial<Role>` 角色信息
+- 返回值: `Promise<string>` 角色 ID
+
+创建群组角色。
+
+### bot.modifyGuildRole(guildId, roleId, data) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **roleId:** `string` 角色 ID
+- **data:** `Partial<Role>` 角色信息
+- 返回值: `Promise<void>`
+
+修改群组角色。
+
+### bot.deleteGuildRole(guildId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+删除群组角色。
 
 ## 处理请求
 
