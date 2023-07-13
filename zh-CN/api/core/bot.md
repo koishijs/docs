@@ -70,21 +70,29 @@
 
 当前 Bot 的运行状态。
 
-## 处理消息
+## 消息相关
 
 ### bot.sendMessage(channelId, content, guildId?)
 
 - **channelId:** `string` 频道 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定频道发送消息。
 
+::: warning
+只要你能够获取到会话对象，你就不应使用此 API，而应该使用 `session.send()`。一些平台会将主动发送的消息同被动接收后回复的消息区分开来，甚至可能限制主动消息的发送，因此使用 `session.send()` 总是有更好的可靠性。
+:::
+
+::: tip
+`bot.sendMessage()` 既可以发送群聊消息，也可以发送私聊消息。当发送私聊消息时，其与 `bot.sendPrivateMessage()` 的区别在于前者传入的是频道 ID，而后者传入的是用户 ID。
+:::
+
 ### bot.sendPrivateMessage(userId, content)
 
 - **userId:** `string` 对方 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定用户发送私聊消息。
@@ -122,7 +130,7 @@ export interface MessageInfo {
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - 返回值: `Promise<void>`
 
 修改特定消息。
@@ -135,6 +143,45 @@ export interface MessageInfo {
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
 向多个频道广播消息。如有失败不会抛出错误。
+
+## 表态相关
+
+### bot.createReaction(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<void>`
+
+向特定消息添加表态。
+
+### bot.deleteReaction(channelId, messageId, emoji, userId?) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- **userId:** `string` 用户 ID
+- 返回值: `Promise<void>`
+
+从特定消息删除某个用户添加的特定表态。如果没有传入用户 ID 则表示删除自己的表态。
+
+### bot.clearReaction(channelId, messageId, emoji?) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<void>`
+
+从特定消息清除某个特定表态。如果没有传入表态名称则表示清除所有表态。
+
+### bot.getReactions(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<void>`
+
+获取添加特定消息的特定表态的用户列表。
 
 ## 获取数据
 
