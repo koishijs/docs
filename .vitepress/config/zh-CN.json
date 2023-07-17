@@ -360,15 +360,6 @@
               "link": "/guide/i18n/crowdin.md"
             }
           ]
-        },
-        {
-          "text": "测试工具",
-          "items": [
-            {
-              "text": "单元测试",
-              "link": "/guide/testing/index.md"
-            }
-          ]
         }
       ],
       "/api/": [
@@ -565,6 +556,10 @@
             {
               "text": "部署到 k-on!",
               "link": "/cookbook/online.md"
+            },
+            {
+              "text": "编写测试",
+              "link": "/cookbook/testing.md"
             }
           ]
         }

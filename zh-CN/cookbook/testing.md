@@ -1,6 +1,6 @@
-# 单元测试
+# 编写测试
 
-如果你是一位插件开发者，比起让机器人真正运行起来，你或许会更希望使用**单元测试**，因为它具有许多前者所不具有的优点：
+如果你是一位成熟的开发者，你一定知道测试的重要性。比起让机器人真正运行起来交给用户去试错，预先编写好的测试具有许多前者所不具有的优点：
 
 - 可以在无网络的情况下运行
 - 可以模拟出多用户交互等复杂情况
@@ -16,51 +16,48 @@
 
 ## 准备工作
 
-安装所需的测试工具以及 @koishijs/plugin-mock：
+首先在工作区中安装所需的测试工具以及 @koishijs/plugin-mock：
 
 ::: tabs code
 ```npm
-npm i mocha chai @koishijs/plugin-mock -D
+npm i mocha chai @koishijs/plugin-mock @types/mocha @types/chai -DW
 ```
 ```yarn
-yarn add mocha chai @koishijs/plugin-mock -D
+yarn add mocha chai @koishijs/plugin-mock @types/mocha @types/chai -DW
 ```
 :::
 
-接着创建存放测试文件的 `tests` 目录，并在其中新建一个 `index.spec.js` 文件，开始编写你的单元测试：
+::: tip
+这里的 `-W` 表明直接安装到根工作区。你也可以改成只对一个插件添加这些依赖，不过考虑到你可能会在其他插件中也用到它们，安装到根工作区会更加方便。
+:::
 
-```ts title=tests/index.spec.js no-extra-header
+接着创建存放测试文件的 `tests` 目录，并在其中新建一个 `index.spec.ts` 文件：
+
+```diff{6-7}
+root
+├── external
+│   └── example
+│       ├── src
+│       │   └── index.ts
+│       ├── tests
+│       │   └── index.spec.ts
+│       └── package.json
+└── package.json
+```
+
+这个文件将用于编写测试代码：
+
+```ts title=index.spec.ts no-extra-header
 import { Context } from 'koishi'
 import mock from '@koishijs/plugin-mock'
 
 const app = new Context()
-
 app.plugin(mock)
 ```
 
-### 使用 TypeScript
+### 配置测试脚本
 
-如果你使用 TypeScript 进行开发，你可能还需要下面这些依赖 (当然你可能已经安装了它们)：
-
-::: tabs code
-```npm
-npm i typescript esbuild-register @types/node @types/mocha @types/chai -D
-```
-```yarn
-yarn add typescript esbuild-register @types/node @types/mocha @types/chai -D
-```
-:::
-
-接着编辑你的 `.mocharc.js` 文件：
-
-```js title=.mocharc.js
-module.exports = {
-  extension: ['ts'],
-  require: [
-    'esbuild-register',
-  ],
-}
-```
+TODO
 
 ## 模拟会话消息
 
@@ -105,7 +102,7 @@ it('example 1', async () => {
 
 ## 模拟数据库
 
-@koishijs/plugin-database-memory 是 Koishi 的一个基于内存的数据库实现，非常适合用于单元测试。
+@koishijs/plugin-database-memory 是 Koishi 的一个基于内存的数据库实现，非常适合用于编写测试。
 
 ```ts no-extra-header
 import { Context } from 'koishi'
