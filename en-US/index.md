@@ -102,7 +102,7 @@ footer:
         text: Kook
         link: /en-US/plugins/adapter/kook.html
       - 
-        text: OneBot (QQ)
+        text: OneBot
         link: /en-US/plugins/adapter/onebot.html
       - 
         text: QQ Guild
