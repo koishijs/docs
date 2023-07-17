@@ -22,6 +22,7 @@ In addition to special syntax with colon numbers, the search term you enter will
 此外，还有一写不带标识的过滤条件：
 
 - `is:installed`: installed
+- `is:portable`：快速体验
 - `updated:>date`: recently updated
 
 上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
@@ -63,3 +64,11 @@ We currently offer 14 base categories. They are:
 - `sort:updated`: sorted by update time
 
 如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。在侧边栏中，你可以点击排序方式进行排序，点击第二次反向排序，点击第三次则会取消排序。
+
+## 快速体验
+
+::: warning
+快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
+:::
+
+[Koishi Online (k-on!)](https://koishi.online) 是一个在线的 Koishi 运行时。你可以在其中快速体验插件的功能，而无需在本地安装 Koishi。适配了 k-on! 的插件会显示一个闪电按钮，点击即可快速创建一个 k-on! 实例。如果你是插件开发者，可以参考 [这篇文章](../../cookbook/online.md) 来将你的插件部署到 k-on!。
