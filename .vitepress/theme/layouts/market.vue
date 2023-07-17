@@ -13,6 +13,13 @@
       </div>
       <market-search class="k-card" v-model="words"></market-search>
     </template>
+    <template #action="data">
+      <el-tooltip content="快速体验" placement="bottom">
+        <a class="portable-button" :href="createLink(data.shortname)">
+          <icon-portable v-if="data.portable"/>
+        </a>
+      </el-tooltip>
+    </template>
   </market-list>
 
   <div class="market-loading" v-else>
@@ -30,6 +37,7 @@
 import { onMounted, ref } from 'vue'
 import { market, words } from '../utils'
 import { MarketList, MarketSearch } from '@koishijs/market'
+import IconPortable from '../icons/portable.vue'
 
 const error = ref()
 
@@ -40,6 +48,15 @@ onMounted(async () => {
     error.value = err
   }
 })
+
+function createLink(name: string) {
+  return `https://koishi.online/plugins/${name}?share=` + btoa(JSON.stringify({
+    share: { name },
+    plugins: {
+      [`~${name}`]: {},
+    },
+  }))
+}
 
 </script>
 
@@ -115,6 +132,27 @@ $breakpoint: 760px;
 
     .info .timestamp {
       display: none;
+    }
+  }
+
+  .portable-button {
+    height: 3rem;
+    width: 3rem;
+    margin-right: -4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--k-color-warning);
+    transition: 0.3s ease;
+
+    svg {
+      height: 1.5rem;
+      display: inline-block;
+    }
+
+    &:hover {
+      background-color: var(--vp-c-bg);
     }
   }
 }

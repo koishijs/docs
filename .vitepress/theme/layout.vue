@@ -16,12 +16,16 @@
 
 import { Layout } from '@koishijs/vitepress/client'
 import { useData } from 'vitepress'
-import { computed, watch } from 'vue'
+import { computed, provide, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getSorted, MarketFilter } from '@koishijs/market'
+import { getSorted, kConfig, MarketFilter } from '@koishijs/market'
 import VPNavBarTitle from '@theme-default/components/VPNavBarTitle.vue'
 import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
 import { home, market, words } from './utils'
+
+provide(kConfig, {
+  portable: true,
+})
 
 const { frontmatter, localeIndex, theme } = useData()
 const composer = useI18n()
