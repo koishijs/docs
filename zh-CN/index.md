@@ -83,7 +83,7 @@ footer:
         link: /zh-CN/plugins/adapter/lark.html
       - text: Kook (开黑啦)
         link: /zh-CN/plugins/adapter/kook.html
-      - text: OneBot (QQ)
+      - text: OneBot
         link: /zh-CN/plugins/adapter/onebot.html
       - text: QQ 频道
         link: /zh-CN/plugins/adapter/qqguild.html
