@@ -28,11 +28,11 @@
 
 构造 Bot 实例时所使用的配置项。
 
-### bot.app
+### bot.ctx
 
 - 类型: [`Context`](./context.md)
 
-当前 Bot 所在的根 [Context](./context.md) 实例。
+当前 Bot 所在的 [Context](./context.md) 实例。
 
 ### bot.adapter
 
@@ -288,7 +288,7 @@ export interface ChannelInfo {
 
 获取某个群组的频道列表。
 
-## 群管理
+## 群组管理
 
 ### bot.kickGuildMember(guildId, userId, permanent?)
 
