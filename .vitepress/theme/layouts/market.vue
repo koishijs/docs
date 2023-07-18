@@ -15,7 +15,7 @@
     </template>
     <template #action="data">
       <el-tooltip content="快速体验" placement="bottom">
-        <a class="portable-button" :href="createLink(data.shortname)">
+        <a class="portable-button" :href="createLink(data.shortname)" rel="noopener noreferer" target="_blank">
           <icon-portable v-if="data.portable"/>
         </a>
       </el-tooltip>

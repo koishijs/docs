@@ -38,6 +38,12 @@
   --vp-code-copy-code-border-color: var(--vp-c-divider);
 }
 
+.el-button {
+  --el-button-hover-bg-color: var(--k-button-hover-bg);
+  --el-button-hover-border-color: var(--k-color-active);
+  transition: var(--color-transition);
+}
+
 .el-dropdown__popper {
   --el-dropdown-menuItem-hover-fill: var(--c-bg-soft);
   --el-dropdown-menuItem-hover-color: var(--el-color-primary);

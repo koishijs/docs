@@ -92,6 +92,7 @@ const input = computed(() => {
 
   > * {
     flex: 1 0 50%;
+    width: 0;
   }
 
   > .left-container {
