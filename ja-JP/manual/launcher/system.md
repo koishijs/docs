@@ -1,33 +1,33 @@
-# 系统要求
+# システム要件
 
-本节列出了 Koishi 启动器所需要的系统版本及该版本所支持的功能。
+この章では、Koishi ランチャーがサポートするオペレーティングシステムのバージョンと機能を説明します。
 
 ::: tip
-下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
+以下のリストは、Koishi ランチャーにのみ有効であり、Koishi 本体はほとんどの主流環境で実行可能です。
 :::
 
 ::: tip
-即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
+Koishi 公式でサポートしないオペレーティングシステムでも、[フォーラム](https://k.ilharp.cc)でコミュニティが提供する互換性のあるバージョンを選択するか、[テンプレートプロジェクト](../starter/boilerplate.md)を使用することができます。ただし、Koishi 公式はコミュニティのランチャーの可用性とセキュリティには責任を負いません。
 :::
 
 ## Windows
 
-同一产品只列出了其最高版本。未列出的版本一律视为不支持。
+同一产品只列出了其最高版本。リストにないバージョンはすべてサポートされません。
 
 ### Windows 8.1
 
-| 产品                             | 核心                   | 窗口                   | 增强  |
-| ------------------------------ | -------------------- | -------------------- | --- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x: |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x: |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x: |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x: |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x: |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x: |
+| 製品                             | コア                   | ウインドウ                | エンハンス |
+| ------------------------------ | -------------------- | -------------------- | ----- |
+| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:   |
+| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:   |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:   |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:   |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:   |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:   |
 
 ### Windows 10
 
-| 产品                                  | 核心                   | 窗口                   | 增强                   |
+| 製品                                  | コア                   | ウインドウ                | エンハンス                |
 | ----------------------------------- | -------------------- | -------------------- | -------------------- |
 | Version 1507                        | :x:                  | :x:                  | :x:                  |
 | Version 1511                        | :x:                  | :x:                  | :x:                  |
@@ -72,7 +72,7 @@
 
 ### Windows 11
 
-| 产品           | 核心                   | 窗口                   | 增强                   |
+| 製品           | コア                   | ウインドウ                | エンハンス                |
 | ------------ | -------------------- | -------------------- | -------------------- |
 | Version 21H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Version 22H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |

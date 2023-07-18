@@ -102,7 +102,7 @@ footer:
         text: Kook (开黑啦)
         link: /de-DE/plugins/adapter/kook.html
       - 
-        text: OneBot (QQ)
+        text: OneBot
         link: /de-DE/plugins/adapter/onebot.html
       - 
         text: QQ 频道

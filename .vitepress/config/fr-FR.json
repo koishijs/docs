@@ -378,15 +378,6 @@
               "link": "/guide/i18n/crowdin.md"
             }
           ]
-        },
-        {
-          "text": "测试工具",
-          "items": [
-            {
-              "text": "单元测试",
-              "link": "/guide/testing/index.md"
-            }
-          ]
         }
       ],
       "/api/": [
@@ -583,6 +574,10 @@
             {
               "text": "部署到 k-on!",
               "link": "/cookbook/online.md"
+            },
+            {
+              "text": "编写测试",
+              "link": "/cookbook/testing.md"
             }
           ]
         }
@@ -812,12 +807,12 @@
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "配置项外观",
-              "link": "/schema/meta/role.md"
+              "text": "禁用与隐藏",
+              "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "隐藏配置项",
-              "link": "/schema/meta/hidden.md"
+              "text": "配置项外观",
+              "link": "/schema/meta/role.md"
             },
             {
               "text": "嵌套类型",

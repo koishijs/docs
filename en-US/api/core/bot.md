@@ -28,11 +28,11 @@
 
 构造 Bot 实例时所使用的配置项。
 
-### bot.app
+### bot.ctx
 
 - 类型: [`Context`](./context.md)
 
-当前 Bot 所在的根 [Context](./context.md) 实例。
+当前 Bot 所在的 [Context](./context.md) 实例。
 
 ### bot.adapter
 
@@ -70,21 +70,29 @@
 
 当前 Bot 的运行状态。
 
-## 处理消息
+## 消息相关
 
 ### bot.sendMessage(channelId, content, guildId?)
 
 - **channelId:** `string` 频道 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定频道发送消息。
 
+::: warning
+只要你能够获取到会话对象，你就不应使用此 API，而应该使用 `session.send()`。一些平台会将主动发送的消息同被动接收后回复的消息区分开来，甚至可能限制主动消息的发送，因此使用 `session.send()` 总是有更好的可靠性。
+:::
+
+::: tip
+`bot.sendMessage()` 既可以发送群聊消息，也可以发送私聊消息。当发送私聊消息时，其与 `bot.sendPrivateMessage()` 的区别在于前者传入的是频道 ID，而后者传入的是用户 ID。
+:::
+
 ### bot.sendPrivateMessage(userId, content)
 
 - **userId:** `string` 对方 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定用户发送私聊消息。
@@ -122,7 +130,7 @@ export interface MessageInfo {
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
-- **content:** `string` 要发送的内容
+- **content:** `Fragment` 要发送的内容
 - 返回值: `Promise<void>`
 
 修改特定消息。
@@ -135,6 +143,45 @@ export interface MessageInfo {
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
 向多个频道广播消息。如有失败不会抛出错误。
+
+## 表态相关
+
+### bot.createReaction(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<void>`
+
+向特定消息添加表态。
+
+### bot.deleteReaction(channelId, messageId, emoji, userId?) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- **userId:** `string` 用户 ID
+- 返回值: `Promise<void>`
+
+从特定消息删除某个用户添加的特定表态。如果没有传入用户 ID 则表示删除自己的表态。
+
+### bot.clearReaction(channelId, messageId, emoji?) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<void>`
+
+从特定消息清除某个特定表态。如果没有传入表态名称则表示清除所有表态。
+
+### bot.getReactions(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `Promise<User[]>`
+
+获取添加特定消息的特定表态的用户列表。
 
 ## 获取数据
 
@@ -154,7 +201,7 @@ export interface UserInfo {
 
 ### bot.getUser(userId)
 
-- **userId:** `string` 目标用户 ID
+- **userId:** `string` 用户 ID
 - 返回值: `Promise<UserInfo>` 用户信息
 
 获取用户信息。
@@ -167,7 +214,7 @@ export interface UserInfo {
 
 ### bot.getGuild(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<GuildInfo>` 群组信息
 
 获取群组信息。
@@ -187,8 +234,8 @@ export interface GuildInfo {
 
 ### bot.getGuildMember(guildId, userId)
 
-- **guildId:** `string` 目标群 ID
-- **userId:** `string` 目标用户 ID
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
 - 返回值: `Promise<GuildMemberInfo>` 群成员信息
 
 获取群成员信息。
@@ -208,21 +255,21 @@ export interface GuildMemberInfo extends UserInfo {
 
 ### bot.getGuildMemberList(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<GuildMemberInfo[]>` 群成员列表
 
 获取群成员列表。
 
 ### bot.getGuildMemberMap(guildId) <Badge text="内置"/>
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<Record<string, string>>` 群成员昵称的键值对
 
 获取群成员列表，返回一个用户 ID 到昵称的键值对，若无 nickname 则使用 username。
 
 ### bot.getChannel(channelId)
 
-- **channelId:** `string` 目标频道 ID
+- **channelId:** `string` 频道 ID
 - 返回值: `Promise<ChannelInfo>` 频道信息
 
 获取频道信息。
@@ -236,10 +283,81 @@ export interface ChannelInfo {
 
 ### bot.getChannelList(guildId)
 
-- **guildId:** `string` 目标群 ID
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<ChannelInfo[]>` 频道列表
 
 获取某个群组的频道列表。
+
+## 群组管理
+
+### bot.kickGuildMember(guildId, userId, permanent?)
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **permanent:** `boolean` 是否永久踢出 (用户无法再次加入群组)
+- 返回值: `Promise<void>`
+
+将某个用户踢出群组。
+
+### bot.muteGuildMember(guildId, userId, duration?, reason?)
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **duration:** `number` 禁言时长 (毫秒)
+- **reason:** `string` 禁言说明
+- 返回值: `Promise<void>`
+
+将某个用户禁言。如果传入的禁言时长为 `0` 则表示解除禁言。
+
+### bot.setGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+设置群组内用户的角色。
+
+### bot.unsetGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **userId:** `string` 用户 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+取消群组内用户的角色。
+
+### bot.getGuildRoles(guildId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- 返回值: `Promise<Role[]>` 角色列表
+
+获取群组角色列表。
+
+### bot.createGuildRole(guildId, data) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **data:** `Partial<Role>` 角色信息
+- 返回值: `Promise<string>` 角色 ID
+
+创建群组角色。
+
+### bot.modifyGuildRole(guildId, roleId, data) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **roleId:** `string` 角色 ID
+- **data:** `Partial<Role>` 角色信息
+- 返回值: `Promise<void>`
+
+修改群组角色。
+
+### bot.deleteGuildRole(guildId, roleId) <Badge text="实验性" type="warning"/>
+
+- **guildId:** `string` 群组 ID
+- **roleId:** `string` 角色 ID
+- 返回值: `Promise<void>`
+
+删除群组角色。
 
 ## 处理请求
 

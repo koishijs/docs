@@ -75,7 +75,7 @@
 
 ## 群组 (Guild)
 
-群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
+群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 Telegram)：一个群组内有且仅有一个群聊频道。The private chat channel does not belong to any of the guilds
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 
@@ -96,7 +96,7 @@
 
 ## 平台 (Platform)
 
-平台是指聊天平台，比如 QQ、Discord 等。Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
+平台是指聊天平台，比如 QQ、Discord 等。Users on the same platform can message each other, but users on different platforms cannot message each other.对于 Rocket.Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。
 
 - [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 

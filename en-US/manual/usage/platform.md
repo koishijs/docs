@@ -10,7 +10,7 @@ Let's talk about this now.
 
 ## Basic Concepts
 
-**Platform(Platform)** is a chat platform, such as QQ, Discord, etc.Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
+**平台 (Platform)** 是指聊天平台，比如 Discord、Telegram 等。Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
 
 **Bot(Bot)** is a platform user controlled by Koishi.The user here is not necessarily a real user. It can also be a bot user, which is provided by some platforms.By interacting with the robot, other users experience Koishi's functions.
 
