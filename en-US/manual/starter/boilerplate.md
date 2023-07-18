@@ -70,7 +70,7 @@ Open a command line, cd to the directory that you want to create a Koishi templa
 ::: tip
 The working directory path should not be very long, also it is recommended to use a path that contains ASCII characters only without spaces. For example:
 
-- Windows: `C:\dev` or `D:\dev`
+- Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - Other operating systems: `~/dev`
 :::
 
