@@ -807,12 +807,12 @@
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "配置项外观",
-              "link": "/schema/meta/role.md"
+              "text": "禁用与隐藏",
+              "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "隐藏配置项",
-              "link": "/schema/meta/hidden.md"
+              "text": "配置项外观",
+              "link": "/schema/meta/role.md"
             },
             {
               "text": "嵌套类型",
