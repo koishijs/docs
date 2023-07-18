@@ -807,12 +807,12 @@
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "Configuration Appearance",
-              "link": "/schema/meta/role.md"
+              "text": "禁用与隐藏",
+              "link": "/schema/meta/hidden.md"
             },
             {
-              "text": "Hidden Configuration",
-              "link": "/schema/meta/hidden.md"
+              "text": "配置项外观",
+              "link": "/schema/meta/role.md"
             },
             {
               "text": "Nested Type",
