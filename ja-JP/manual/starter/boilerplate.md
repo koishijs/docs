@@ -70,7 +70,7 @@ yarn config set registry https://registry.npmmirror.com
 ::: tip
 このディレクトリは長くない方が良く、パスには日本語やスペースを避けてください。おすすめのディレクトリは以下のとおりです：
 
-- Windows：`C:\dev` または `D:\dev`
+- Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - その他のオペレーティングシステム：`~/dev`
 :::
 
