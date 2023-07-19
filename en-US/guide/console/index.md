@@ -1,11 +1,11 @@
 # Console Extension
 
 ::: tip
-在学习本章之前，建议先阅读 [入门 > 认识控制台](../../manual/console/index.md)。
+本章将介绍如何开发控制台插件。如果你没有扩展控制台的需求，可以直接跳过本章。
 :::
 
 ::: tip
-本节在 [工作区开发](../develop/workspace.md#创建新插件) 所创建插件的基础上修改。
+在学习本章之前，建议先完整阅读 [入门 > 认识控制台](../../manual/console/index.md)。
 :::
 
 ## 创建扩展
