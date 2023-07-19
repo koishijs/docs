@@ -54,6 +54,58 @@ export const Config = Schema.object({
 })
 ```
 
+### 独立入口
+
+你可以选择让插件为普通的 Koishi 实例和 k-on! 实例提供不同的入口文件。首先修改目录结构：
+
+```diff
+root
+└── external
+    └── example
+        ├── src
++       │   ├── node
++       │   │   └── index.ts
++       │   ├── browser
++       │   │   └── index.ts
++       │   ├── shared
++       │   │   └── index.ts
+        │   └── index.ts
+        ├── package.json
+        └── tsconfig.json
+```
+
+这里，`node` 目录存放 Node.js 环境下的入口文件，`browser` 目录存放浏览器环境下的入口文件，`shared` 目录存放一些两者共用的代码。原本的 `index.ts` 可以改成这样：
+
+```ts
+// 你的逻辑应该位于 node 目录中，请不要修改这个文件
+export * from './node'
+
+// 如果插件采用的是默认导出，你可以这么写
+import plugin from './node'
+export * from './node'
+export default plugin
+```
+
+然后，修改你的 `package.json`：
+
+```json title=package.json
+{
+  "main": "lib/node/index.cjs",
+  "typings": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "node": "./lib/node/index.cjs",
+      "browser": "./lib/browser/index.mjs"
+    },
+    "./shared": {
+      "require": "./lib/shared/index.cjs",
+      "import": "./lib/shared/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+}
+```
+
 ### WebAssembly
 
 如果你的 WebAssembly 模块是以 base64 等格式内联在源码中的，那么你不需要做任何处理。
@@ -92,6 +144,15 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 ```json
 {
+  "main": "lib/index.cjs",
+  "typings": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
   "koishi": {
     "browser": true,
     "public": [
