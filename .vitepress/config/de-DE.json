@@ -324,20 +324,20 @@
           "text": "跨平台",
           "items": [
             {
-              "text": "使用适配器",
+              "text": "基础概念",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "使用机器人",
+              "text": "实现机器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "跨平台账号绑定",
-              "link": "/guide/adapter/binding.md"
+              "text": "实现适配器",
+              "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "编写适配器插件",
-              "link": "/guide/adapter/writing.md"
+              "text": "消息编码",
+              "link": "/guide/adapter/encoder.md"
             }
           ]
         },
