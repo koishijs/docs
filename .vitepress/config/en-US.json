@@ -324,7 +324,7 @@
           "text": "Cross Platform",
           "items": [
             {
-              "text": "Basic Concepts",
+              "text": "基本示例",
               "link": "/guide/adapter/index.md"
             },
             {
