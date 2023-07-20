@@ -4,24 +4,6 @@
 
 标有 <Badge text="abstract" vertical="baseline"/> 的方法需要平台自行实现。
 
-## 静态属性和方法
-
-### Adapter.define(platform, bot, adapter)
-### Adapter.define(platform, bot, adapters, redirect?)
-
-- 第一种调用方式：
-  - **platform:** `string` 平台名
-  - **bot:** `Bot.Constructor` Bot 构造函数
-  - **adapter:** `Adapter.Constructor` Adapter 构造函数
-- 第二种调用方式：
-  - **platform:** `string` 平台名
-  - **bot:** `Bot.Constructor` Bot 构造函数
-  - **adapters:** `Dict<Adapter.Constructor>` 协议到 Adapter 构造函数的键值对
-  - **redirect:** `Function` 由 Bot 配置项推断采用的协议的回调函数
-- 返回值: `Plugin`
-
-创建一个适配器插件。参见 [编写适配器插件](../../guide/adapter/writing.md) 一节。
-
 ## 类：Adapter
 
 ### new Adapter(app, config)
