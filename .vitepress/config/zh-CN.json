@@ -306,7 +306,7 @@
           "text": "跨平台",
           "items": [
             {
-              "text": "基础概念",
+              "text": "基本示例",
               "link": "/guide/adapter/index.md"
             },
             {
