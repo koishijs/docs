@@ -57,7 +57,7 @@ interface Entry {
 
 向客户端发送数据。`data` 会被序列化为 JSON 字符串。
 
-## 类：DataService <badge text="抽象"/>
+## 类：DataService <badge>抽象</badge>
 
 `DataService` 类封装了一些与客户端进行 [数据通信](../../guide/console/data.md) 的实用方法。
 
@@ -72,6 +72,6 @@ interface Entry {
 
 向全体客户端重新发布该服务的数据。
 
-### service.get() <badge text="抽象"/>
+### service.get() <badge>抽象</badge>
 
 实现此方法以返回该服务的数据。
