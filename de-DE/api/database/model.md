@@ -48,7 +48,7 @@ export interface Field<T> {
 
 ## 实例方法
 
-### model.extend(name, fields, config?) <Badge type="warning" text="beta"/>
+### model.extend(name, fields, config?)
 
 - **name:** `string` 数据表名
 - **fields:** `Field.Config` 字段信息
