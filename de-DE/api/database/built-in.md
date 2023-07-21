@@ -31,7 +31,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 ## 全局接口
 
-### User.Flag, Channel.Flag <badge text="已废弃" type="danger"/>
+### User.Flag, Channel.Flag <badge type="danger">废弃</badge>
 
 所有用户 / 频道状态标签构成的枚举类型。
 
@@ -87,7 +87,7 @@ session.channel.flag &= ~Channel.Flag.silent
 
 向数据库请求频道数据。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
+### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">废弃</badge>
 
 - **fields:** `ChannelField[]` 请求的字段，默认为全部字段
 - **platform:** `string` 平台名，默认为全平台
