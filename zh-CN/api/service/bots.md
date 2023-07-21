@@ -24,7 +24,7 @@
 
 按平台名称对机器人分类。
 
-### ctx.broadcast(channels?, content, forced?) <badge text="需要数据库"/>
+### ctx.broadcast(channels?, content, forced?) <badge>需要数据库</badge>
 
 - **channels:** `string[]` 频道列表
 - **content:** `string` 要发送的内容

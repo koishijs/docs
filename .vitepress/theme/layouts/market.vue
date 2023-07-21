@@ -14,9 +14,9 @@
       <market-search class="k-card" v-model="words"></market-search>
     </template>
     <template #action="data">
-      <el-tooltip content="快速体验" placement="bottom">
+      <el-tooltip v-if="data.portable" content="快速体验" placement="bottom">
         <a class="portable-button" :href="createLink(data.shortname)" rel="noopener noreferer" target="_blank">
-          <icon-portable v-if="data.portable"/>
+          <icon-portable/>
         </a>
       </el-tooltip>
     </template>
