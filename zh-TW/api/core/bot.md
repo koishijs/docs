@@ -2,7 +2,7 @@
 
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
-标有 <badge text="内置"/> 的 API 已经由 @koishijs/core 提供，适配器可以覆盖对应的方法，但是无需自行实现。
+标有 <badge>内置</badge> 的 API 已经由 @koishijs/core 提供，适配器可以覆盖对应的方法，但是无需自行实现。
 
 ## 构造函数选项
 
@@ -135,7 +135,7 @@ export interface MessageInfo {
 
 修改特定消息。
 
-### bot.broadcast(channels, content, delay?) <Badge text="内置"/>
+### bot.broadcast(channels, content, delay?) <badge>内置</badge>
 
 - **channels:** `string[]` 频道列表
 - **content:** `string` 要发送的内容
@@ -146,7 +146,7 @@ export interface MessageInfo {
 
 ## 表态相关
 
-### bot.createReaction(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+### bot.createReaction(channelId, messageId, emoji) <badge type="warning">实验性</badge>
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
@@ -155,7 +155,7 @@ export interface MessageInfo {
 
 向特定消息添加表态。
 
-### bot.deleteReaction(channelId, messageId, emoji, userId?) <Badge text="实验性" type="warning"/>
+### bot.deleteReaction(channelId, messageId, emoji, userId?) <badge type="warning">实验性</badge>
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
@@ -165,7 +165,7 @@ export interface MessageInfo {
 
 从特定消息删除某个用户添加的特定表态。如果没有传入用户 ID 则表示删除自己的表态。
 
-### bot.clearReaction(channelId, messageId, emoji?) <Badge text="实验性" type="warning"/>
+### bot.clearReaction(channelId, messageId, emoji?) <badge type="warning">实验性</badge>
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
@@ -174,7 +174,7 @@ export interface MessageInfo {
 
 从特定消息清除某个特定表态。如果没有传入表态名称则表示清除所有表态。
 
-### bot.getReactions(channelId, messageId, emoji) <Badge text="实验性" type="warning"/>
+### bot.getReactions(channelId, messageId, emoji) <badge type="warning">实验性</badge>
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
@@ -260,7 +260,7 @@ export interface GuildMemberInfo extends UserInfo {
 
 获取群成员列表。
 
-### bot.getGuildMemberMap(guildId) <Badge text="内置"/>
+### bot.getGuildMemberMap(guildId) <badge>内置</badge>
 
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<Record<string, string>>` 群成员昵称的键值对
@@ -309,7 +309,7 @@ export interface ChannelInfo {
 
 将某个用户禁言。如果传入的禁言时长为 `0` 则表示解除禁言。
 
-### bot.setGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+### bot.setGuildMemberRole(guildId, userId, roleId) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **userId:** `string` 用户 ID
@@ -318,7 +318,7 @@ export interface ChannelInfo {
 
 设置群组内用户的角色。
 
-### bot.unsetGuildMemberRole(guildId, userId, roleId) <Badge text="实验性" type="warning"/>
+### bot.unsetGuildMemberRole(guildId, userId, roleId) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **userId:** `string` 用户 ID
@@ -327,14 +327,14 @@ export interface ChannelInfo {
 
 取消群组内用户的角色。
 
-### bot.getGuildRoles(guildId) <Badge text="实验性" type="warning"/>
+### bot.getGuildRoles(guildId) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<Role[]>` 角色列表
 
 获取群组角色列表。
 
-### bot.createGuildRole(guildId, data) <Badge text="实验性" type="warning"/>
+### bot.createGuildRole(guildId, data) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **data:** `Partial<Role>` 角色信息
@@ -342,7 +342,7 @@ export interface ChannelInfo {
 
 创建群组角色。
 
-### bot.modifyGuildRole(guildId, roleId, data) <Badge text="实验性" type="warning"/>
+### bot.modifyGuildRole(guildId, roleId, data) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **roleId:** `string` 角色 ID
@@ -351,7 +351,7 @@ export interface ChannelInfo {
 
 修改群组角色。
 
-### bot.deleteGuildRole(guildId, roleId) <Badge text="实验性" type="warning"/>
+### bot.deleteGuildRole(guildId, roleId) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **roleId:** `string` 角色 ID
