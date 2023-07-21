@@ -31,7 +31,7 @@ Koishi のデータベース APIは2種類に分けています：
 
 ## グローバルインターフェイス
 
-### User.Flag, Channel.Flag <badge text="已废弃" type="danger"/>
+### User.Flag, Channel.Flag <badge type="danger">非推奨</badge>
 
 すべてのユーザー/チャンネルステータスフラグで構成された列挙型です。
 
@@ -87,7 +87,7 @@ session.channel.flag &= ~Channel.Flag.silent
 
 データベースにチャンネルデータをリクエストします。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <Badge type="danger" text="deprecated"/>
+### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">非推奨</badge>
 
 - **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
 - **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
