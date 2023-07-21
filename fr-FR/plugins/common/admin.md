@@ -47,8 +47,8 @@ assign 指令可用于设置频道的 [受理人](../../manual/usage/permission.
 1. 私聊机器人 B，发送 `assign -c #A`
 2. 在频道 A 中发送 `assign @B`（假设 B 能收到此消息）
 
-## 指令：user.flag <badge text="已废弃" type="danger"/>
-## 指令：channel.flag <badge text="已废弃" type="danger"/>
+## 指令：user.flag <badge type="danger">obsolète</badge>
+## 指令：channel.flag <badge type="danger">obsolète</badge>
 
 - 基本语法：`xxx.flag [...names]`
 - 选项：
