@@ -25,7 +25,7 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 ## 实例方法
 
-### ctx.action(id, options) <badge type="warning" text="实验性" />
+### ctx.action(id, options) <badge type="warning">实验性</badge>
 
 - **id:** `string` 动作标识符
 - **options.disabled:** `(() => boolean)?` 是否隐藏
@@ -33,7 +33,7 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 注册一个动作。
 
-### ctx.menu(id, items) <badge type="warning" text="实验性" />
+### ctx.menu(id, items) <badge type="warning">实验性</badge>
 
 - **id:** `string` 菜单标识符
 - **items:** `MenuItem[]` 菜单项列表
@@ -59,7 +59,7 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 注册一个页面。
 
-### ctx.settings(options) <badge type="warning" text="实验性" />
+### ctx.settings(options) <badge type="warning">实验性</badge>
 
 - **options.type:** `string` 所属类别
 - **options.title:** `string?` 类别名称
