@@ -47,11 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "最佳实践",
+            "text": "Best Practices",
             "link": "/cookbook/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
@@ -324,19 +324,19 @@
           "text": "Cross Platform",
           "items": [
             {
-              "text": "基本示例",
+              "text": "General Examples",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "实现机器人",
+              "text": "Bot Implementation",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "实现适配器",
+              "text": "Adapter Implementation",
               "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "消息编码",
+              "text": "Message Encoding",
               "link": "/guide/adapter/encoder.md"
             }
           ]
@@ -572,11 +572,11 @@
           "text": "Articles",
           "items": [
             {
-              "text": "部署到 k-on!",
+              "text": "K-ON! Deployment",
               "link": "/cookbook/online.md"
             },
             {
-              "text": "编写测试",
+              "text": "Writing Tests",
               "link": "/cookbook/testing.md"
             }
           ]
@@ -807,11 +807,11 @@
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用与隐藏",
+              "text": "Disable and Hide",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Configuration Appearance",
               "link": "/schema/meta/role.md"
             },
             {
