@@ -1,4 +1,4 @@
-# 实现机器人
+# Bot Implementation
 
 ::: danger 注意
 此页文档正在施工，其中的内容可能不是最新。
