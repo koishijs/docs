@@ -4,7 +4,7 @@
 This section covers the usage of pages such as "Marketplace", "Plugin Configuration" and "Dependency Management".
 :::
 
-The console interface will open automatically when you install and start Koishi.You can use the console to manage your plugins and configurations.We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. echo 插件注册了一个名为 `echo` 的指令，调用此指令可以将输入原样输出给用户。
+The console interface will open automatically when you install and start Koishi.You can use the console to manage your plugins and configurations.We will show installing and configuring of plugins with the [echo](../../plugins/common/echo.md) plugin. The echo plugin registered a command named `echo`. Use this command can output the input to the user originally.
 
 ## Install Plugins
 
@@ -12,7 +12,7 @@ The console interface will open automatically when you install and start Koishi.
 We Koishi team doesn't warrant the availability of third party plugins. Plugins from unknown sources may break Koishi to crash, or have very serious consequences. If you have problems after downloading plugins, you can go to the user group or forum to provide feedback. In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
 
-Go to the "Marketplace" page, where you will see all downloadable plugins here. 在搜索框中输入 `echo`，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。Wait for a moment, and the plugin will be installed successfully.
+Go to the "Marketplace" page, where you will see all downloadable plugins here. Enter `echo` in the search box to find the plugin we want, click the "Add" button, and then click "Installation" in the popup dialog.Wait for a moment, and the plugin will be installed successfully.
 
 ![select-version](/manual/console/select-version.light.webp) {.light-only}
 
@@ -26,14 +26,14 @@ Koishi will not enable the plugin you just installed. You need to manually confi
 
 ![plugins](/manual/console/plugins.dark.webp) {.dark-only}
 
-我们可以看到此时 echo 插件的名字是灰色的，这表明它并未处于运行状态。echo 插件没有可配置的项目，因此右侧的详情页是空白的。我们可以直接点击右上角的「启用插件」按钮，看到「启用成功」的提示信息，这表明 echo 插件就已经处于运行状态了。
+We can see that the name of the echo plugin is grey, indicating that it is not running.The echo plugin does not have any configurable items, so the details page on the right side is empty.We can directly click on the "Enable Plugin" button in the upper right corner and see the "Enable success" reminder that the echo plugin is already running.
 
-It is also easy to disable the "echo" plugin. 点击右上角的「停用插件」按钮，插件便会停止运行。Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
+It is also easy to disable the "echo" plugin. Click the "Disable Plugin" button in the upper right corner, then the plugin will stop running.Disabling a plugin will neither delete the plugin code nor delete the plugin configuration, so you can re-enable it at any time.
 
 ## Plugins configurations
 
 ::: warning
-在配置插件的过程中，请大家记住这个原则：**如无必要，勿动配置**。Koishi 在设计上兼顾了扩展性和实用性，许多基础功能是以预装插件的形式提供的。前面我们已经用到的「插件市场」和「插件配置」页面本身就分别由预装的 market 插件和 config 插件提供。正是因为所有的预装插件均已配置完善，通常情况下你不需要修改预装插件的配置。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行。
+When configuring plugins, please remember this principle: **Don't change any configuration unless necessary**.Koishi 在设计上兼顾了扩展性和实用性，许多基础功能是以预装插件的形式提供的。前面我们已经用到的「插件市场」和「插件配置」页面本身就分别由预装的 market 插件和 config 插件提供。正是因为所有的预装插件均已配置完善，通常情况下你不需要修改预装插件的配置。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行。
 :::
 
 While the "echo" plugin does not require configuration, more complex plugins often provide configurations that allow users to control the behavior of plugins. The picture below shows the configuration page of the "novelai" plugin.
