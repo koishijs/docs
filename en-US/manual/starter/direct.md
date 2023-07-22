@@ -162,9 +162,9 @@ ctx.plugin(puppeteer)   // browser-related service
 ctx.plugin(forward)     // message forwarding
 ```
 
-请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
+Please note the delicate differences in the import methods of the two plugins above.puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
 
-同理，对于 commonjs 的使用者，如果要使用 `require` 来获取插件对象，也应注意到这种区别：
+Similarly, for the users of CommonJS, if you want to use `require` to get plugin objects, you should also note this difference:
 
 ```ts title=index.ts
 // 这里的 .default 是不可省略的
@@ -174,7 +174,7 @@ ctx.plugin(require('koishi-plugin-puppeteer').default)
 ctx.plugin(require('koishi-plugin-forward'))
 ```
 
-使用其他安装方式的用户不需要关心这些细节，因为模板项目已经帮你处理好了。
+Users using other installation methods do not need to be interested in these details because the template project has already helped you to process them.
 
 ## Apply Interaction
 
@@ -192,11 +192,11 @@ ctx.plugin(require('koishi-plugin-forward'))
 然后重新运行你的项目：
 
 <chat-panel>
-<chat-message nickname="Alice">天王盖地虎</chat-message>
-<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
+<chat-message nickname="Alice">Hello</chat-message>
+<chat-message nickname="Koishi">world</chat-message>
 </chat-panel>
 
-不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：
+不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。You can write the above logic in a separate file `ping.ts` and load it as a plugin:
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
