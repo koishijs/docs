@@ -153,14 +153,16 @@ yarn clone koishijs/koishi-plugin-forward
 
 ### 开发 Koishi
 
-工作区不仅可以用于插件的二次开发，还可以用于开发 Koishi 本身。只需使用下面的命令将 Koishi 仓库克隆到本地：
+工作区不仅可以用于插件的二次开发，还可以用于开发 Koishi 本身。只需使用下面的命令将 Koishi 仓库克隆到本地，并完成构建：
 
 ::: tabs code
 ```npm
 npm run clone koishijs/koishi
+npm run build -w @root/koishi
 ```
 ```yarn
 yarn clone koishijs/koishi
+yarn workspace @root/koishi build
 ```
 :::
 
