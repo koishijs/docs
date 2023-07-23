@@ -1,9 +1,5 @@
 # 实现机器人
 
-::: danger 注意
-此页文档正在施工，其中的内容可能不是最新。
-:::
-
 `Bot` 对应着由 Koishi 操纵的聊天平台机器人账号。其上封装了一系列方法，用于发送消息、获取频道信息等操作。要实现一个聊天平台的 `Bot` 类，只需要实现这些方法即可。
 
 ## 通用接口
@@ -87,8 +83,6 @@ const decodeGuild = (data: Discord.Guild): Universal.Guild => ({
 })
 
 class DiscordBot extends Bot {
-  internal: Internal
-
   constructor(ctx: Context, config: Config) {
     super(ctx, config)
     this.internal = new Internal()
@@ -110,4 +104,95 @@ class DiscordBot extends Bot {
 
 在上面这段代码中，Discord 平台与 Koishi 都定义了一个 `Guild` 接口。前者包含了更多信息，但由于它们的关键字段不完全相同，因此并不能直接把请求的结果作为通用方法的返回值。
 
-为此，我们实现了一个 `decodeGuild` 函数，将 Discord 的数据结构转换为 Koishi 的通用数据结构。与此同时，我们把网络请求的部分放在 `internal` 中实现，并在 `Bot` 类中直接调用内部方法。可以看到，这样编写出来的代码结构相比直接把请求放在 `Bot` 类中要清晰得多。
+为此，我们实现了一个 `decodeGuild` 函数，将 Discord 的数据结构转换为 Koishi 的通用数据结构。与此同时，我们把网络请求的部分放在 `Internal` 类中实现，并在 `Bot` 类中直接调用内部方法。可以看到，这样编写出来的代码结构相比直接把请求放在 `Bot` 类中要清晰得多。
+
+## 实现内部接口
+
+不同平台由于 API 的差异性，`Internal` 类的实现方式也会有所不同。对于简单的平台，你完全可以手动实现每一个内部接口；但如果平台本身就有上百个 API，手写每一个内部接口显然既费时又啰嗦。因此，Koishi 提供了一些技巧以简化你的适配工作。我们这里仍然以 Discord 为例。
+
+### 使用 HTTP 服务
+
+让我们进一步完成上面的代码。Discord 的 API 是 Restful 的，并且需要 `Authorization` 请求头。我们通过在 `Internal` 类中传入一个 `http` 对象简化网络请求的写法：
+
+```ts{5,9,17-20}
+class Internal {
+  constructor(private http: Quester) {}
+
+  getGuild(guildId: string) {
+    return this.http.get(`/guilds/${guildId}`)
+  }
+
+  getCurrentUserGuilds() {
+    return this.http.get('/users/@me/guilds')
+  }
+}
+
+class DiscordBot extends Bot {
+  constructor(ctx: Context, config: Config) {
+    super(ctx, config)
+    const http = ctx.http.extend({
+      endpoint: 'https://discord.com/api/v10',
+      headers: {
+        Authorization: `Bot ${config.token}`,
+      },
+    })
+    this.internal = new Internal(http)
+  }
+}
+```
+
+[`ctx.http`](../../api/service/http.md) 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `Quester` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
+
+### 反射网络请求
+
+在 `Quester` 的帮助下，我们甚至可以直接对网络请求进行反射，从而自动生成内部接口。
+
+```ts
+class Internal {
+  constructor(private http: Quester) {}
+
+  static createMethod(path: string, method: Quester.Method) {
+    return async function (this: Internal, ...args: any[]) {
+      // 将参数填入路径中
+      const url = path.replace(/\{([^}]+)\}/g, () => {
+        if (!args.length) throw new TypeError('missing arguments')
+        return args.shift()
+      })
+      return this.http(method, url)
+    }
+  }
+
+  static define(path: string, methods: Partial<Record<Quester.Method, string | string[]>>) {
+    for (const key in methods) {
+      const method = key as Quester.Method
+      for (const name of makeArray(methods[method])) {
+        this.prototype[name] = this.createMethod(path, method)
+      }
+    }
+  }
+}
+```
+
+有了这个 `Internal.define()` 方法，我们就可以批量定义内部接口了：
+
+```ts
+Internal.define('/guilds/{guild.id}', {
+  GET: 'getGuild',
+  PATCH: 'modifyGuild',
+  DELETE: 'deleteGuild',
+})
+
+Internal.define('/users/@me/guilds', {
+  GET: 'getCurrentUserGuilds',
+})
+
+// 通过类型合并的方式，将这些方法添加到 Internal 类型上
+interface Internal {
+  getGuild(guildId: string): Promise<Discord.Guild>
+  modifyGuild(guildId: string, data: Discord.PartialGuild): Promise<Discord.Guild>
+  deleteGuild(guildId: string): Promise<void>
+  getCurrentUserGuilds(): Promise<Discord.Guild[]>
+}
+```
+
+上面的代码还没有考虑请求体和异常处理等问题，如果想要深入了解，可以阅读 Discord 适配器的 [源码](https://github.com/satorijs/satori/blob/master/adapters/discord/src/types/internal.ts)。事实上，Discord 的接口在平台中也算是比较复杂的。有了这些技巧的加持，相信其他平台的适配器你一定也能手到擒来。
