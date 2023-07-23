@@ -44,7 +44,7 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 - `category:ai`：人工智能
 - `category:meme`：趣味交互
 - `category:game`：娱乐玩法
-- `category:gametool`：游戏工具
+- `category:gametool`：游戏辅助
 
 插件的分类由 Koishi 团队成员负责维护，通常在插件发布后的一周内完成。极少数插件不会属于任何类别。如果你认为你的插件没有被正确分类，可以提交议题进行反馈。
 

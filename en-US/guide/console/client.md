@@ -79,7 +79,7 @@ ctx.slot({
 
 `order` 更高的插槽会被优先显示；`disabled` 函数返回 `true` 时，插槽不会被显示。因此在上面的例子中，`Bar` 组件总是显示在 `Foo` 组件的前面，但只有当 `store.bar` 存在时才会显示。
 
-## 用户设置 <badge type="warning" text="实验性" />
+## 用户设置 <badge type="warning">实验性</badge>
 
 到此为止，我们所了解的插件配置都是 [直接在插件中声明](../plugin/schema.md)、[存储于配置文件中](../develop/config.md) 的。这在绝大多数情况下都是合理的——机器人管理员决定了插件的具体行为，而这些行为也不应该由用户决定。但实际上还有另一种情况：插件的某些行为可以由用户自由决定。例如机器人所使用的语言、控制台的主题等等。我们将这些配置统称为「用户设置」。
 
@@ -104,7 +104,7 @@ const config = useConfig()
 config.value.wallpaper.image
 ```
 
-## 动作与菜单 <badge type="warning" text="实验性" />
+## 动作与菜单 <badge type="warning">实验性</badge>
 
 控制台的许多地方都会用到菜单，其中大家最熟悉的便是每个页面标题栏右侧的菜单按钮。除此以外，部分页面还提供了上下文菜单。想要定义菜单，我们首先需要了解 **动作 (Action)** 这一概念。
 

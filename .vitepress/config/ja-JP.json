@@ -324,20 +324,20 @@
           "text": "クロスプラットフォーム",
           "items": [
             {
-              "text": "アダプターを使用する",
+              "text": "基本示例",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "ボットを使用する",
+              "text": "实现机器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "クロスプラットフォームのアカウント連携",
-              "link": "/guide/adapter/binding.md"
+              "text": "实现适配器",
+              "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "アダプタープラグインの作成",
-              "link": "/guide/adapter/writing.md"
+              "text": "消息编码",
+              "link": "/guide/adapter/encoder.md"
             }
           ]
         },

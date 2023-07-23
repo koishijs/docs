@@ -2,25 +2,7 @@
 
 本章将介绍与适配器相关的内容，这是一个相当底层的概念，因此如果你并不打算编写一个平台实现，你完全可以跳过本章节。
 
-标有 <Badge text="abstract" vertical="baseline"/> 的方法需要平台自行实现。
-
-## 静态属性和方法
-
-### Adapter.define(platform, bot, adapter)
-### Adapter.define(platform, bot, adapters, redirect?)
-
-- 第一种调用方式：
-  - **platform:** `string` 平台名
-  - **bot:** `Bot.Constructor` Bot 构造函数
-  - **adapter:** `Adapter.Constructor` Adapter 构造函数
-- 第二种调用方式：
-  - **platform:** `string` 平台名
-  - **bot:** `Bot.Constructor` Bot 构造函数
-  - **adapters:** `Dict<Adapter.Constructor>` 协议到 Adapter 构造函数的键值对
-  - **redirect:** `Function` 由 Bot 配置项推断采用的协议的回调函数
-- 返回值: `Plugin`
-
-创建一个适配器插件。参见 [编写适配器插件](../../guide/adapter/writing.md) 一节。
+标有 <badge>抽象</badge> 的方法需要平台自行实现。
 
 ## 类：Adapter
 
@@ -50,19 +32,19 @@
 
 根据会话内容，在相应的上下文触发一个上报事件。
 
-### adapter.start() <Badge text="abstract"/>
+### adapter.start() <badge>抽象</badge>
 
 - 返回值: `void | Promise<void>`
 
 启动适配器所需的操作，将作为 ready 事件的回调函数。
 
-### adapter.stop() <Badge text="abstract"/>
+### adapter.stop() <badge>抽象</badge>
 
 - 返回值: `void | Promise<void>`
 
 停止适配器所需的操作，将作为 dispose 事件的回调函数。
 
-### adapter.connect(bot) <Badge text="abstract"/>
+### adapter.connect(bot) <badge>抽象</badge>
 
 - **bot:** `Bot` 机器人实例
 - 返回值: `void | Promise<void>`
@@ -86,14 +68,14 @@ export interface WebSocketClientOptions {
 }
 ```
 
-### adapter.prepare(bot) <Badge text="abstract"/>
+### adapter.prepare(bot) <badge>抽象</badge>
 
 - **bot:** `Bot` 机器人实例
 - 返回值: `WebSocket | Promise<WebSocket>`
 
 根据机器人实例生成一个 WebSocket 对象。
 
-### adapter.accept(bot) <Badge text="abstract"/>
+### adapter.accept(bot) <badge>抽象</badge>
 
 - **bot:** `Bot` 机器人实例
 - 返回值: `void`

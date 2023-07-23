@@ -1,4 +1,4 @@
-# 主题开发 <badge type="warning" text="实验性" />
+# Theme Extension <badge type="warning">实验性</badge>
 
 Koishi 也允许插件定义控制台主题。让我们先从简单的色彩主题开始。
 

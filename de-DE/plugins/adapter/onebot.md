@@ -389,7 +389,7 @@ export default {
 3. 这个方法名与 go-cqhttp 一致，并不是拼写错误
 4. 原文为「单项」，此处保持一致
 
-### QQ 频道 API <Badge type="warning" text="beta"/>
+### QQ 频道 API
 
 - [`onebot.getGuildServiceProfile()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道系统内BOT的资料) 获取频道系统内 BOT 的资料
 - [`onebot.getGuildList()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道列表) 获取频道列表
