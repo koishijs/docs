@@ -7,7 +7,7 @@
 Koishi 应用默认情况下只能在本机访问。而对于某些需求，你可能希望在公网上访问到 Koishi 的控制台或其他网络服务：
 
 - 让更多人访问到你的 Koishi 控制台
-- 使用作为 Webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
+- 使用作为 webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
 
 本节教程将指导你完成 Koishi 应用的公网部署。
 
