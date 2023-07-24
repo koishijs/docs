@@ -282,5 +282,5 @@ hello<message/>world
 |    `nickname`    |        ⭘        |  ~   |        ✓        |    ~    |    ~     |
 |     `avatar`     |        ⭘        |  ~   |        ~        |    ~    |    ~     |
 
-- [1]: 基于 Webhook 功能，目前暂未支持
+- [1]: 基于 webhook 功能，目前暂未支持
 - [2]: 仅限 forward 和 quote 消息
