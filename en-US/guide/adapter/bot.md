@@ -51,10 +51,13 @@ class ReplBot extends Bot {
 (bot as DiscordBot).internal.getGuild(guildId)
 ```
 
-另一种方法是在有 `Session` 对象的环境中，直接通过 `session[platform]` 就可以访问到对应适配器的内部接口。这种方式的好处是无需类型断言：
+另一种方法是在有 `Session` 对象的环境中，直接通过 `session[platform]` 就可以访问到对应适配器的内部接口。这种方式不仅无需类型断言，并且能够直接访问到会话的原始数据：
 
 ```ts
 session.discord.getGuild(guildId)
+
+session.discord.t // 原始事件名称
+session.discord.d // 原始事件数据
 ```
 
 你甚至还可以用这种方式对多种适配器提供定制化的支持：
@@ -108,7 +111,7 @@ class DiscordBot extends Bot {
 
 ## 实现内部接口
 
-不同平台由于 API 的差异性，`Internal` 类的实现方式也会有所不同。对于简单的平台，你完全可以手动实现每一个内部接口；但如果平台本身就有上百个 API，手写每一个内部接口显然既费时又啰嗦。因此，Koishi 提供了一些技巧以简化你的适配工作。我们这里仍然以 Discord 为例。
+不同的平台由于其 API 的差异性，`Internal` 类的实现方式也会有所不同。对于简单的平台，你完全可以手动实现每一个内部接口 (甚至可以不实现 `Internal` 类，就像 REPL 适配器那样)；但如果平台本身就有上百个 API，手写每一个内部接口显然既费时又啰嗦。因此，Koishi 提供了一些技巧以简化你的适配工作。我们这里仍然以 Discord 为例。
 
 ### 使用 HTTP 服务
 
@@ -151,22 +154,18 @@ class DiscordBot extends Bot {
 class Internal {
   constructor(private http: Quester) {}
 
-  static createMethod(path: string, method: Quester.Method) {
-    return async function (this: Internal, ...args: any[]) {
-      // 将参数填入路径中
-      const url = path.replace(/\{([^}]+)\}/g, () => {
-        if (!args.length) throw new TypeError('missing arguments')
-        return args.shift()
-      })
-      return this.http(method, url)
-    }
-  }
-
   static define(path: string, methods: Partial<Record<Quester.Method, string | string[]>>) {
     for (const key in methods) {
       const method = key as Quester.Method
       for (const name of makeArray(methods[method])) {
-        this.prototype[name] = this.createMethod(path, method)
+        this.prototype[name] = async function (this: Internal, ...args: any[]) {
+          // 将参数填入路径中
+          const url = path.replace(/\{([^}]+)\}/g, () => {
+            if (!args.length) throw new TypeError('missing arguments')
+            return args.shift()
+          })
+          return this.http(method, url)
+        }
       }
     }
   }
@@ -185,8 +184,11 @@ Internal.define('/guilds/{guild.id}', {
 Internal.define('/users/@me/guilds', {
   GET: 'getCurrentUserGuilds',
 })
+```
 
-// 通过类型合并的方式，将这些方法添加到 Internal 类型上
+最后别忘了通过类型合并的方式，将这些方法添加到 `Internal` 类型上：
+
+```ts
 interface Internal {
   getGuild(guildId: string): Promise<Discord.Guild>
   modifyGuild(guildId: string, data: Discord.PartialGuild): Promise<Discord.Guild>
@@ -195,4 +197,27 @@ interface Internal {
 }
 ```
 
-上面的代码还没有考虑请求体和异常处理等问题，如果想要深入了解，可以阅读 Discord 适配器的 [源码](https://github.com/satorijs/satori/blob/master/adapters/discord/src/types/internal.ts)。事实上，Discord 的接口在平台中也算是比较复杂的。有了这些技巧的加持，相信其他平台的适配器你一定也能手到擒来。
+上面的代码还没有考虑请求体和异常处理等问题，如果想要深入了解，可以阅读 Discord 适配器的 [源码](https://github.com/satorijs/satori/blob/master/adapters/discord/src/types/internal.ts)。事实上，Discord 的接口已经是比较复杂的了。相信有了这些技巧的加持，其他平台的适配器你一定也能手到擒来。
+
+### 注入会话属性
+
+在本节的最后，我们还有一点伏笔没有回收。我们还需要在 `Session` 对象中注入 `discord` 属性，以便插件能够访问到内部接口：
+
+```ts
+declare module 'koishi' {
+  interface Session {
+    discord?: Internal & Payload
+  }
+}
+```
+
+这里的 `Internal` 对应着内部接口，而 `Payload` 则对应着原始事件数据。当构造会话对象时 (将在下一节具体介绍)，我们需要将这些数据注入到 `Session` 对象中：
+
+```ts
+// 平台注入的属性不建议设置为 enumerable
+Object.defineProperty(session, 'discord', {
+  // 将 Internal 作为原型，将 Payload 作为实例属性
+  value: Object.assign(Object.create(internal), payload),
+  writable: true,
+})
+```
