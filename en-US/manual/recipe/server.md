@@ -7,7 +7,7 @@ It is vulnerable when you expose your Koishi on the Internet. You might need to 
 Koishi apps can only be accessed from localhost by default. You might need to access the Koishi Console or services provided by other plugins on the Internet.
 
 - Allow more people to access your Koishi console
-- Use plugins as servers for webhooks (for example [github](https://github.koishi.chat))
+- 使用作为 webhook 服务端的插件 (例如 [github](https://github.koishi.chat))
 
 This section would guide you in completing the deployment for a Koishi application.
 
