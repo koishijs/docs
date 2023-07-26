@@ -179,19 +179,19 @@
           "text": "Recettes",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "Solutions perfectionnées des commandes",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "Utilisation de la base des données",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "Maintenance des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "Rechercher sur la place de marché",
               "link": "/manual/recipe/search.md"
             },
             {
@@ -201,7 +201,7 @@
           ]
         },
         {
-          "text": "启动器",
+          "text": "Lanceur",
           "items": [
             {
               "text": "Configuration requise",
