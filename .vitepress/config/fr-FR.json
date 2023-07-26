@@ -47,11 +47,11 @@
             "link": "/api/"
           },
           {
-            "text": "最佳实践",
+            "text": "Meilleures pratiques",
             "link": "/cookbook/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground : Schéma",
             "link": "/schema/"
           }
         ],
@@ -145,7 +145,7 @@
               "link": "/manual/console/sandbox.md"
             },
             {
-              "text": "接入聊天平台",
+              "text": "Connexion avec les plateformes conversationnelles",
               "link": "/manual/console/adapter.md"
             }
           ]
@@ -176,7 +176,7 @@
           ]
         },
         {
-          "text": "配方",
+          "text": "Recettes",
           "items": [
             {
               "text": "指令进阶技巧",
