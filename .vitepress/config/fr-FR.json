@@ -219,7 +219,7 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "Vue d'ensemble",
               "link": "/guide/"
             }
           ]
@@ -228,7 +228,7 @@
           "text": "开发起步",
           "items": [
             {
-              "text": "环境搭建",
+              "text": "Configuration de l'environnement",
               "link": "/guide/develop/setup.md"
             },
             {
@@ -385,7 +385,7 @@
           "text": "",
           "items": [
             {
-              "text": "总览",
+              "text": "Vue d'ensemble",
               "link": "/api/"
             },
             {
@@ -563,7 +563,7 @@
         {
           "items": [
             {
-              "text": "总览",
+              "text": "Vue d'ensemble",
               "link": "/cookbook/"
             }
           ]
