@@ -225,7 +225,7 @@
           ]
         },
         {
-          "text": "开发起步",
+          "text": "Développement",
           "items": [
             {
               "text": "Configuration de l'environnement",
@@ -240,42 +240,42 @@
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "Espace de travail",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "Publication du plugin",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "Interactions de base",
           "items": [
             {
-              "text": "指令开发",
+              "text": "Commande",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "Système événement",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中间件",
+              "text": "Intergiciel",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "消息元素",
+              "text": "Élément message",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "Utilisation avancée",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "Modulation",
           "items": [
             {
               "text": "认识插件",
