@@ -482,7 +482,7 @@
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/message/components.md"
             },
             {
@@ -492,18 +492,18 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "Base de données",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Données de bases",
               "link": "/api/database/database.md"
             },
             {
-              "text": "数据模型 (Model)",
+              "text": "Modèles de données",
               "link": "/api/database/model.md"
             },
             {
