@@ -278,11 +278,11 @@
           "text": "Modulation",
           "items": [
             {
-              "text": "认识插件",
+              "text": "À propos du plugin",
               "link": "/guide/plugin/"
             },
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/guide/plugin/schema.md"
             },
             {
@@ -294,28 +294,28 @@
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "过滤器",
+              "text": "Filtres",
               "link": "/guide/plugin/filter.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "Base de données",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "Utilisation",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "Données d'expansion",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
+              "text": "Initialisation tardive et mise à jour automatiquement",
               "link": "/guide/database/observer.md"
             },
             {
-              "text": "编写数据库插件",
+              "text": "Écrit du plugin de base des données",
               "link": "/guide/database/writing.md"
             }
           ]
@@ -324,7 +324,7 @@
           "text": "Multi-plateforme",
           "items": [
             {
-              "text": "基本示例",
+              "text": "Exemples généraux",
               "link": "/guide/adapter/index.md"
             },
             {
