@@ -507,11 +507,11 @@
               "link": "/api/database/model.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Expression de la requête",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Expression de la calculée",
               "link": "/api/database/evaluation.md"
             }
           ]
@@ -520,40 +520,40 @@
           "text": "Console",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "API serveur",
               "link": "/api/console/server.md"
             },
             {
-              "text": "上下文 API",
+              "text": "API contexte",
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "API composable",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/console/component.md"
             }
           ]
         },
         {
-          "text": "其他功能",
+          "text": "Autres fonctionnalités",
           "items": [
             {
-              "text": "观察者 (Observer)",
+              "text": "Observateur",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "Journal",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "Aléa",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "其他工具 (Misc)",
+              "text": "Miscellanées",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -569,14 +569,14 @@
           ]
         },
         {
-          "text": "文章",
+          "text": "Articles",
           "items": [
             {
-              "text": "部署到 k-on!",
+              "text": "Déployer sur k-on !",
               "link": "/cookbook/online.md"
             },
             {
-              "text": "编写测试",
+              "text": "Écrit des tests",
               "link": "/cookbook/testing.md"
             }
           ]
@@ -616,7 +616,7 @@
               "link": "/plugins/adapter/lark.md"
             },
             {
-              "text": "Mail",
+              "text": "E-mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -624,7 +624,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "Guilde QQ",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
@@ -637,7 +637,7 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "Memory",
+              "text": "Mémoire",
               "link": "/plugins/database/memory.md"
             },
             {
@@ -655,51 +655,51 @@
           ]
         },
         {
-          "text": "常用功能",
+          "text": "Fonctionnalités communes",
           "items": [
             {
-              "text": "数据管理 (Admin)",
+              "text": "Administration des données",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "账号绑定 (Bind)",
+              "text": "Connexion des comptes",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "发送广播 (Broadcast)",
+              "text": "Envoi de diffusion",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "设置昵称 (Callme)",
+              "text": "Paramètre de pseudonyme",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "发送消息 (Echo)",
+              "text": "Envoi de message",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "查看帮助 (Help)",
+              "text": "Vue d'aide",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "会话信息 (Inspect)",
+              "text": "Inspecteur session",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "速率限制 (Rate Limit)",
+              "text": "Limite de taux",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
         {
-          "text": "控制台功能",
+          "text": "Fonctionnalités consoles",
           "items": [
             {
-              "text": "数据统计 (Analytics)",
+              "text": "Analyse des données",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "用户登录 (Auth)",
+              "text": "Autorisation de comptes",
               "link": "/plugins/console/auth.md"
             },
             {
