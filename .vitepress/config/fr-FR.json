@@ -328,15 +328,15 @@
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "实现机器人",
+              "text": "Implémentation du bot",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "实现适配器",
+              "text": "Implémentation de l'adaptateur",
               "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "消息编码",
+              "text": "Encodé d'éléments",
               "link": "/guide/adapter/encoder.md"
             }
           ]
@@ -345,19 +345,19 @@
           "text": "Console",
           "items": [
             {
-              "text": "扩展控制台",
+              "text": "Extension de la console",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "数据交互",
+              "text": "Échange avec données",
               "link": "/guide/console/data.md"
             },
             {
-              "text": "客户端开发",
+              "text": "Développement du client",
               "link": "/guide/console/client.md"
             },
             {
-              "text": "主题开发",
+              "text": "Développement du thème",
               "link": "/guide/console/theme.md"
             }
           ]
@@ -366,15 +366,15 @@
           "text": "Internationalisation",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "Support multi-langues",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "Écrit du fichier de localisation",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Collaboration avec Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -389,83 +389,83 @@
               "link": "/api/"
             },
             {
-              "text": "术语表",
+              "text": "Glossaire",
               "link": "/api/glossary.md"
             }
           ]
         },
         {
-          "text": "演练场",
-          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "text": "Playground",
+          "desc": "Nous avons spécialement conçu une aire du playground interactive pour certains API.",
           "items": [
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/schema/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "Module de base",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "Adaptateur",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "Application",
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "Bot",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "Commande",
               "link": "/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "Contexte",
               "link": "/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "Événement",
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "Session",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "内置服务",
+          "text": "Service interne",
           "items": [
             {
-              "text": "机器人 (Bots)",
+              "text": "Bots",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "事件系统 (Events)",
+              "text": "Événements",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "Filtres",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "Requête d'HTTP",
               "link": "/api/service/http.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "Internationalisation",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "Registre",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "Service Network",
               "link": "/api/service/router.md"
             }
           ]
@@ -474,7 +474,7 @@
           "text": "Éléments messages",
           "items": [
             {
-              "text": "语法规范",
+              "text": "Spécification Syntaxe",
               "link": "/api/message/syntax.md"
             },
             {
@@ -783,7 +783,7 @@
       ],
       "/schema/": [
         {
-          "text": "演练场",
+          "text": "Playground",
           "items": [
             {
               "text": "Schéma de configuration",
