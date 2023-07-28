@@ -658,35 +658,35 @@
           "text": "Fonctionnalités communes",
           "items": [
             {
-              "text": "Administration des données",
+              "text": "Admin : Administration des données",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "Connexion des comptes",
+              "text": "Bind : Connexion des comptes",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "Envoi de diffusion",
+              "text": "Broadcast : Envoi de diffusion",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "Paramètre de pseudonyme",
+              "text": "Callme : Paramètre de pseudonyme",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "Envoi de message",
+              "text": "Echo : Envoi de message",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "Vue d'aide",
+              "text": "Help : Vue d'aide",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "Inspecteur session",
+              "text": "Inspect : Inspecteur session",
               "link": "/plugins/common/inspect.md"
             },
             {
-              "text": "Limite de taux",
+              "text": "Rate Limit : Limite de taux",
               "link": "/plugins/common/rate-limit.md"
             }
           ]
@@ -695,31 +695,31 @@
           "text": "Fonctionnalités consoles",
           "items": [
             {
-              "text": "Analyse des données",
+              "text": "Analytics : Analyse des données",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "Autorisation de comptes",
+              "text": "Auth : Autorisation de comptes",
               "link": "/plugins/console/auth.md"
             },
             {
-              "text": "指令管理 (Commands)",
+              "text": "Commands : Gestion des commandes",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "插件配置 (Config)",
+              "text": "Config : Configuration des plugins",
               "link": "/plugins/console/config.md"
             },
             {
-              "text": "控制台 (Console)",
+              "text": "Console : Fonctionnalités de console",
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
+              "text": "Dataview : Gestion des bases des données",
               "link": "/plugins/console/dataview.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "Explorer : Gestion des fichiers",
               "link": "/plugins/console/explorer.md"
             },
             {
