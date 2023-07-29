@@ -7,7 +7,7 @@ code: |
   }).description('配置项')
 ---
 
-# 路径 (Path)
+# Path : Chemin
 
 ::: tip
 此类型基于 @koishijs/plugin-explorer，仅在加载该插件时可用。未加载该插件时，类型只会表现为普通的字符串 (比如现在就是这样)。
