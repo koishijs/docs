@@ -836,7 +836,7 @@
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "位集 (Bitset)",
+              "text": "Bitset : Stockage binaire",
               "link": "/schema/basic/bitset.md"
             },
             {
@@ -844,19 +844,19 @@
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple : Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dict : Dictionnaire",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array : Tableau",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路径 (Path)",
+              "text": "Path : Chemin",
               "link": "/schema/basic/path.md"
             }
           ]
