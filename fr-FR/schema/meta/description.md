@@ -7,7 +7,7 @@ code: |
   }).description('配置项')
 ---
 
-# 标题与描述
+# Titre et description
 
 `.description()` 用于设置某个配置项的描述文本。当添加在属性上时会显示在名称下方，当添加在对象上时则会表现为小标题。我们还支持了基本的行内 Markdown 语法。
 
