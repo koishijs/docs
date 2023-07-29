@@ -752,11 +752,11 @@
           "text": "Outils de développement",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "HMR : Replacement de module d'exécution",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Mock : Outils des tests",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -767,7 +767,7 @@
           "text": "plugin",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Place de Marché",
               "link": "/market/"
             },
             {
@@ -795,27 +795,27 @@
           "text": "Concepts de base",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "Exigence et optant",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认值",
+              "text": "Valeur par défaut",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "Titre et description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用与隐藏",
+              "text": "Désactiver et masquer",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Apparence des configurations",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "Type imbriqué",
               "link": "/schema/meta/nested.md"
             }
           ]
@@ -824,15 +824,15 @@
           "text": "Type de base",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "Number : Nombre",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字符串 (String)",
+              "text": "String : Chaîne de caractères",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "Boolean : Valeur booléenne",
               "link": "/schema/basic/boolean.md"
             },
             {
@@ -840,7 +840,7 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object : Objet",
               "link": "/schema/basic/object.md"
             },
             {
