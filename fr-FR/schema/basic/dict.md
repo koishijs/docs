@@ -7,7 +7,7 @@ code: |
   }).description('配置项')
 ---
 
-# 字典 (Dict)
+# Dict : Dictionnaire
 
 `Schema.dict()` 类型描述了一个字典，其中的键是任意字符串，而值是给定的类型。
 
