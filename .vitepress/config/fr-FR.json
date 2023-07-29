@@ -723,33 +723,33 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "Insight : Dépendant des plugins",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "Locales : Traduction locale",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "Logger : Gestion de journal",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Market : Place de marché",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Sandbox : Débogage sur bac à sable",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "Status : État de fonctionnement",
               "link": "/plugins/console/status.md"
             }
           ]
         },
         {
-          "text": "开发工具",
+          "text": "Outils de développement",
           "items": [
             {
               "text": "模块热替换 (HMR)",
