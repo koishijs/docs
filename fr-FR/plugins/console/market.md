@@ -1,4 +1,4 @@
-# 插件市场 (Market)
+# Market : Place de marché
 
 ## 配置项
 
