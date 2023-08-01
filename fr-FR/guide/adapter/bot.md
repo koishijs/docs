@@ -89,6 +89,7 @@ class DiscordBot extends Bot {
   constructor(ctx: Context, config: Config) {
     super(ctx, config)
     this.internal = new Internal()
+    ctx.plugin(DiscordAdapter, this)
   }
 
   // 获取群组数据
