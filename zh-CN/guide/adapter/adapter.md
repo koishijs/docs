@@ -25,3 +25,80 @@ class ReplBot extends Bot {
 
 简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对多的就使用 `Adapter.Server` 基类，否则使用 `Adapter.Client`。
 
+## 典型实现
+
+下面让我们看几种典型的适配器实现。
+
+### WebSocket
+
+一种常见的通信方式是 WebSocket，许多平台 (Discord、KOOK、钉钉等) 都会使用这项技术。它的工作原理是，机器人首先向聊天平台的 WebSocket 网关发起连接请求，随后平台会将事件推送到机器人的 WebSocket 连接上。这里我们还是以 Discord 为例：
+
+```ts
+export class DiscordAdapter extends Adapter.WsClient<DiscordBot> {
+  async prepare() {
+    const { url } = await this.bot.internal.getGatewayBot()
+    return this.bot.http.ws(url + '/?v=10&encoding=json')
+  }
+
+  accept() {
+    this.bot.socket.addEventListener('message', async ({ data }) => {
+      const parsed = JSON.parse(data.toString())
+      if (parsed.t === 'READY') {
+        const user = decodeUser(parsed.d.user)
+        Object.assign(this.bot, user)
+        return this.bot.online()
+      } else {
+        const session = createSession(this.bot, parsed)
+        if (session) this.dispatch(session)
+      }
+    })
+  }
+}
+```
+
+一个 `WsClient` 类需要实现 `prepare()` 和 `accept()` 两个方法。`prepare()` 方法应当返回一个 `WebSocket` 对象，用于与聊天平台建立连接。在上面的例子中，我们首先通过内部 API 获取了 WebSocket 网关地址，然后使用 `bot.http.ws()` 方法创建了一个 `WebSocket` 对象：
+
+```ts
+const { url } = await this.bot.internal.getGatewayBot()
+return this.bot.http.ws(url + '/?v=10&encoding=json')
+```
+
+`accept()` 方法用于处理已经成功连接的 `WebSocket` 对象。具体而言应当包含三件事：
+
+1. 在初始化机器人各项属性后，调用 `bot.online()` 方法，将机器人标记为在线状态
+2. 接收来自聊天平台的事件，构造 `Session` 对象并初始化各项属性，随后调用 `dispatch()` 方法将其触发为会话事件
+3. 根据聊天平台的协议要求，处理心跳、重连、错误等情况 (如果平台没有专门设置与重连相关的信令，可以不用实现，`WsClient` 基类已经内置了简单的重连逻辑)
+
+在上面的例子中，`READY` 事件表示机器人已经成功连接，此时我们对机器人进行初始化：
+
+```ts
+const user = decodeUser(parsed.d.user)
+Object.assign(this.bot, user)
+return this.bot.online()
+```
+
+在我们调用 `bot.online()` 之前，应当尽量保证 `Bot` 实例有 `selfId`, `username` 和 `avatar` 属性。前者本身就是必须属性，而后两个属性则会显示在控制台的机器人状态栏中。
+
+对于其他事件，我们都尝试创建一个 `Session` 对象：
+
+```ts
+const session = createSession(this.bot, parsed)
+if (session) this.dispatch(session)
+```
+
+`createSession()` 会根据事件的类型，创建不同的 `Session` 实例。如果无法对应到标准的会话事件，那么 `createSession()` 方法会返回空值，表示我们不需要调用 `dispatch()` 方法。
+
+### Webhook
+
+
+TODO
+
+### 其他通信方式
+
+除了 WebSocket 和 Webhook 以外，还有一些其他可能出现的通信方式：
+
+- WS 服务器：机器人建立 WebSocket 服务器，持续接收来自聊天平台的事件
+- HTTP 轮询：机器人定时向聊天平台发起 HTTP 请求，获取新增的事件列表
+
+当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接选择继承 `Adapter.Server` 或 `Adapter.Client` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
+
