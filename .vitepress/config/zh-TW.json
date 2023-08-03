@@ -25,7 +25,7 @@
   ],
   "themeConfig": {
     "editLink": {
-      "text": "在 Crowdin 上翻譯此頁面",
+      "text": "在 GitHub 編輯此頁面",
       "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-zhtw"
     },
     "navText": "導覽",
@@ -43,15 +43,15 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
+            "text": "應用程式接口",
             "link": "/api/"
           },
           {
-            "text": "最佳实践",
+            "text": "最佳實踐",
             "link": "/cookbook/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "做個小練習：配置構型",
             "link": "/schema/"
           }
         ],
@@ -324,19 +324,19 @@
           "text": "跨平臺",
           "items": [
             {
-              "text": "基本示例",
+              "text": "基礎實例",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "实现机器人",
+              "text": "做個機器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "实现适配器",
+              "text": "做個適配器",
               "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "消息编码",
+              "text": "訊息編碼",
               "link": "/guide/adapter/encoder.md"
             }
           ]
@@ -576,7 +576,7 @@
               "link": "/cookbook/online.md"
             },
             {
-              "text": "编写测试",
+              "text": "測試您的插件! 寫個測試",
               "link": "/cookbook/testing.md"
             }
           ]
@@ -699,7 +699,7 @@
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "用戶登錄 (Auth)",
+              "text": "使用者登錄 (Auth)",
               "link": "/plugins/console/auth.md"
             },
             {
@@ -807,11 +807,11 @@
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用与隐藏",
+              "text": "禁用和隱藏",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置项外观",
+              "text": "你就是畫家：配置項的外觀",
               "link": "/schema/meta/role.md"
             },
             {
