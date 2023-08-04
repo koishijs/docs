@@ -19,7 +19,7 @@ See also: [@koishijs/plugin-adapter-discord](../../plugins/adapter/discord.md)
 ## KOOK
 
 1. Go to the [Kook Developer Platform](https://developer.kookapp.cn/)to "应用"(App) and click "新建"(New)
-2. 输入应用名称后，点击「机器人」，保存这个页面中的 `token` (请注意不要泄露)
+2. After entering the app's name, click "机器人"(Bot). Then save the `token` in the page (DO NOT share it to anyone).
 3. Enter the `token` into the plugin configuration.
 
 See also: [@koishijs/plugin-adapter-kook](../../plugins/adapter/kook.md)
@@ -80,19 +80,19 @@ See also: [@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
 ## QQ Guild
 
-1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
-2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
-3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据
-4. 将上面的基本数据填入插件配置即可使用
+1. Sign up at the [QQ Channel Management Backend](https://bot.q.qq.com/open/#/type?appType=2)
+2. Sign in the [Management Backend](https://bot.q.qq.com/open/#/botlogin) and create an official bot
+3. After finished creating, get the bot basic information on the [Channel Bot Development Settings](https://bot.q.qq.com/#/developer/developer-setting)
+4. Enter these basic information above into the plugin configuration to complete
 
 See also: [@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
 ## Telegram
 
-1. 搜索 **@botfather** (有个官方认证的符号) 并进入聊天界面
-2. 输入 `/start` 后，会出现一个使用菜单，你可以使用这里指令对你的机器人进行配置
-3. 要创建一个机器人，请点击 `/newbot`，并根据系统提示完成创建流程
-4. 使用 `/setprivacy` 开启 Privacy Mode (不然机器人只能收到特定消息)
-5. 创建完毕后，你会获得一个 `token` (请注意不要泄露)，将其填入插件配置即可使用
+1. Search **@botfather** (with an official sign) and enter the chat
+2. After entering `start`, a menu will appear. You can use commands to configure your bot here.
+3. To create a bot, click `/newbot` and follow the instructions to finish the process of creation.
+4. Use `/setprivacy` to enable Privacy Mode (otherwise the bot will only receive specific messages)
+5. Once created, you will get a `token` (DO NOT share it to anyone). Enter them into the plugin configuration to use.
 
 See also: [@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
