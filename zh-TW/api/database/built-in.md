@@ -1,9 +1,9 @@
-# 内置數據結構
+# 内置資料結構
 
-Koishi 的數據庫 API 實際上分為兩部分：
+Koishi 的資料庫 API 實際上分為兩部分：
 
-- @koishijs/core 中定義的内置數據結構
-- minato 中提供的 ORM 接口
+- @koishijs/core 中定義的内置資料結構
+- minato 中提供的 ORM 介面
 
 這一頁中將僅展示第一部分的内容。
 
@@ -12,14 +12,14 @@ Koishi 的數據庫 API 實際上分為兩部分：
 ### User
 
 - **id:** `id` 用戶 ID
-- **name:** `string` 用戶昵稱
+- **name:** `string` 使用者昵稱
 - **flag:** `number` 狀態標簽
-- **authority:** `number` 用戶權限
+- **authority:** `number` 使用者權限
 
 ### Binding
 
-- **aid:** `id` 用戶 ID
-- **platform:** `string` 平台名
+- **aid:** `id` 使用者 ID
+- **platform:** `string` 平臺名
 - **pid:** `string` 頻道賬號
 
 ### Channel
@@ -35,7 +35,7 @@ Koishi 的數據庫 API 實際上分為兩部分：
 
 ### database.getUser(platform, id, modifier?)
 
-- **platform:** `string` 平台名
+- **platform:** `string` 平臺名
 - **id:** `string` 用户标识符
 - **modifier:** `QueryModifier<User.Field>` 请求修饰符
 - 返回值: `Promise<User>` 用户数据
@@ -44,7 +44,7 @@ Koishi 的數據庫 API 實際上分為兩部分：
 
 ### database.setUser(platform, id, data)
 
-- **platform:** `string` 平台名
+- **platform:** `string` 平臺名
 - **id:** `string` 用户标识符
 - **data:** `User` 要修改 / 添加的数据
 - 返回值: `Promise<void>`
@@ -53,7 +53,7 @@ Koishi 的數據庫 API 實際上分為兩部分：
 
 ### database.getChannel(platform, id, fields?)
 
-- **platform:** `string` 平台名
+- **platform:** `string` 平臺名
 - **id:** `string` 频道标识符
 - **fields:** `QueryModifier<User.Field>` 请求修饰符
 - 返回值: `Promise<Channel>` 频道数据
@@ -71,7 +71,7 @@ Koishi 的數據庫 API 實際上分為兩部分：
 
 ### database.setChannel(platform, id, data)
 
-- **platform:** `string` 平台名
+- **platform:** `string` 平臺名
 - **id:** `number` 频道标识符
 - **data:** `Channel` 要修改 / 添加的数据
 - 返回值: `Promise<void>`
