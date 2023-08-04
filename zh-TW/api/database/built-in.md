@@ -1,32 +1,32 @@
-# 內置數據結構
+# 内置數據結構
 
-Koishi 的数据库 API 实际上分为两部分：
+Koishi 的數據庫 API 實際上分為兩部分：
 
-- @koishijs/core 中定义的内置数据结构
+- @koishijs/core 中定義的内置數據結構
 - minato 中提供的 ORM 接口
 
-这一页中将仅展示第一部分的内容。
+這一頁中將僅展示第一部分的内容。
 
 ## 内置表
 
 ### User
 
-- **id:** `id` 用户 ID
-- **name:** `string` 用户昵称
-- **flag:** `number` 状态标签
-- **authority:** `number` 用户权限
+- **id:** `id` 用戶 ID
+- **name:** `string` 用戶昵稱
+- **flag:** `number` 狀態標簽
+- **authority:** `number` 用戶權限
 
 ### Binding
 
-- **aid:** `id` 用户 ID
+- **aid:** `id` 用戶 ID
 - **platform:** `string` 平台名
-- **pid:** `string` 频道账号
+- **pid:** `string` 頻道賬號
 
 ### Channel
 
 - **platform:** `string` 平台名
-- **id:** `string` 频道账号
-- **flag:** `number` 状态标签
+- **id:** `string` 頻道賬號
+- **flag:** `number` 狀態標簽
 - **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
 
 ## 内置实例方法
