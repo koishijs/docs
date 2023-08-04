@@ -1,6 +1,6 @@
 # Discussion
 
-如果你在 Koishi 使用中遇到了问题，或者有新奇的点子想与其他人讨论，欢迎参与我们的社区：
+If you have problems when using Koishi, or have new ideas to share to other users, welcome to join our community:
 
 ## QQ Groups
 
