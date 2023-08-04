@@ -1,4 +1,4 @@
-# 内置資料結構
+# 内建資料結構
 
 Koishi 的資料庫 API 實際上分為兩部分：
 
@@ -7,13 +7,13 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 這一頁中將僅展示第一部分的内容。
 
-## 内置表
+## 内建表
 
 ### User
 
-- **id:** `id` 用戶 ID
+- **id:** `id` 使用者 ID
 - **name:** `string` 使用者昵稱
-- **flag:** `number` 狀態標簽
+- **flag:** `number` 旗標
 - **authority:** `number` 使用者權限
 
 ### Binding
@@ -24,14 +24,14 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 ### Channel
 
-- **platform:** `string` 平台名
+- **platform:** `string` 平臺名
 - **id:** `string` 頻道賬號
-- **flag:** `number` 狀態標簽
-- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
+- **flag:** `number` 旗標
+- **assignee:** `string` [指派人](../../manual/usage/permission.md#受理人机制)
 
-## 内置实例方法
+## 内建實體方法
 
-下列实例方法直接由 @koishijs/core 提供实现。
+下列實體方法直接由 @koishijs/core 提供實作。
 
 ### database.getUser(platform, id, modifier?)
 
