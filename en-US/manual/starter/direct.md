@@ -162,15 +162,15 @@ ctx.plugin(puppeteer)   // browser-related service
 ctx.plugin(forward)     // message forwarding
 ```
 
-Please note the delicate differences in the import methods of the two plugins above.puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
+Please note the delicate differences in the import methods of the two plugins above.puppeteer plugin uses default export, but forward plugin uses export namespace.These two methods are fundamentally different and cannot be intermingled, so you will need to decide for yourself which situation is for each plugin.While this may cause some trouble, if you are a TypeScript user, it is easy to judge with the help of typographical tips.
 
 Similarly, for the users of CommonJS, if you want to use `require` to get plugin objects, you should also note this difference:
 
 ```ts title=index.ts
-// 这里的 .default 是不可省略的
+// Here's .default is untraceable
 ctx.plugin(require('koishi-plugin-puppeteer').default)
 
-// 这里则不能写上 .default
+// This cannot be written .default
 ctx.plugin(require('koishi-plugin-forward'))
 ```
 
@@ -178,7 +178,7 @@ Users using other installation methods do not need to be interested in these det
 
 ## Apply Interaction
 
-除了已经封装好的插件外，我们还可以添加自己的交互逻辑：
+In addition to plugins already packaged, we can add our own interactive logic:
 
 ```ts title=index.ts
 // Reply with "world", after receiving "Hello"
@@ -189,14 +189,14 @@ Users using other installation methods do not need to be interested in these det
   })
 ```
 
-然后重新运行你的项目：
+Then restart your project:
 
 <chat-panel>
 <chat-message nickname="Alice">Hello</chat-message>
 <chat-message nickname="Koishi">world</chat-message>
 </chat-panel>
 
-不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。You can write the above logic in a separate file `ping.ts` and load it as a plugin:
+But this is not recommended because your `index.ts` becomes too large once more features.You can write the above logic in a separate file `ping.ts` and load it as a plugin:
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
