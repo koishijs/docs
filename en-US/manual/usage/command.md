@@ -135,7 +135,7 @@ However, it is very vulnerable to make a mistake if trigger the command just by 
 <p>User Management</p>
 <p>Available subcommands:</p>
 <p class="indent-1">authorize Permission Management</p>
-<p class="indent-1">user.locale  语言偏好</p>
+<p class="indent-1">user.locale  Language Preference</p>
 </chat-message>
 </chat-panel>
 
