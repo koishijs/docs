@@ -126,15 +126,15 @@ However, it is very vulnerable to make a mistake if trigger the command just by 
 
 ## Subcommands
 
-[admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
+[admin](../../plugins/common/admin.md) plugin provides a command named user. Let's have a try:
 
 <chat-panel>
 <chat-message nickname="Alice">user</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：user</p>
+<p>Command: user</p>
 <p>User Management</p>
-<p>可用的子指令有：</p>
-<p class="indent-1">authorize  权限管理</p>
+<p>Available subcommands:</p>
+<p class="indent-1">authorize Permission Management</p>
 <p class="indent-1">user.locale  语言偏好</p>
 </chat-message>
 </chat-panel>
