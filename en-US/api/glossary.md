@@ -7,8 +7,7 @@
 适配器是指实现了平台协议，能够让机器人接入平台的插件。In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
 
 - [入门 > 接入聊天平台](../manual/console/adapter.md)
-- [入门 > 跨平台](../manual/usage/platform.html#基础概念)
-- [开发 > 跨平台 > 使用适配器](../guide/adapter/index.md)
+- [开发 > 跨平台 > 实现适配器](../guide/adapter/adapter.md)
 - [API > 核心模块 > 适配器](./core/adapter.md)
 
 ## App
@@ -20,8 +19,8 @@
 
 机器人是指由 Koishi 操控的平台用户。The user here is not necessarily a real user. It can also be a bot user, which is provided by some platforms.By interacting with the robot, other users experience Koishi's functions.
 
-- [入门 > 跨平台](../manual/usage/platform.html#基础概念)
 - [开发 > 交互基础 > 进阶用法](../guide/basic/advanced.html#机器人对象)
+- [开发 > 跨平台 > 实现机器人](../guide/adapter/bot.md)
 - [API > 核心模块 > 机器人](./core/bot.md)
 - [API > 内置服务 > 机器人](./service/bots.md)
 
@@ -59,6 +58,7 @@
 消息元素类似于 HTML 元素，它是组成消息的基本单位。一个元素可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。Koishi 会将这些元素转换为平台所支持的格式，以便在不同平台之间发送和接收消息。
 
 - [开发 > 交互基础 > 消息元素](../guide/basic/element.md)
+- [开发 > 跨平台 > 消息编码](../guide/adapter/encoder.md)
 - [API > 消息元素](./message/syntax.md)
 
 ## Events
