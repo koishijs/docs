@@ -16,12 +16,10 @@ Koishi 通过适配器插件来实现对不同聊天平台的支持。
 
 > REPL 的意思是 Read-Eval-Print-Loop (读取-求值-输出-循环)，是一种交互式环境。
 
-REPL 适配器有三个文件。首先来看入口文件 `index.ts`，它的结构非常简单：
+REPL 适配器有三个文件。首先来看入口文件 `index.ts`，它什么事都没做：
 
 ```ts title=index.ts
 import ReplBot from './bot'
-import ReplAdapter from './adapter'
-
 export default ReplBot
 ```
 
