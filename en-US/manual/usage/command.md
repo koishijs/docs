@@ -100,28 +100,28 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 
 ## Command Prefix
 
-However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
+However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.In Global Settings, we have provided configuration items called `prefix` and `nickname`.If `prefix` is set to `/`, `nickname` is set to `Shiki-chan`, only the following information can trigger：
 
 ```sh
-四季酱, echo hello
-@四季酱 echo hello
+Shiki-chan, echo hello
+@Shiki-chan echo hello
 /echo hello
 ```
 
-换句话说，一个指令能够被触发的实际条件为：
+In other words, the actual condition in which a command can be triggered is:
 
-- 消息以 `prefix` 开头，后面紧跟着指令调用
-- 消息以 `nickname` 开头，后面可以有逗号或空白字符，再后面是指令调用
-- 消息以 @机器人 开头 (可以有多个 `@`，但至少一个是机器人账号)，后面是指令调用
+- Message starts with `prefix` and follows the command
+- Message starts with `nickname` after which you can have commas or blank characters and then the command
+- The message starts with @Bot (multiple `@`but at least one bot account), followed by a command
 
-对于人数较多或是含有不止一个机器人的群聊，我们强烈建议每一个机器人都配置不同的触发前缀。而在私聊环境下，由于不用担心误触，因此并没有上面的限制。没有触发前缀的指令调用也能被正常执行。
+For groups with lots of people or more than one bot, we strongly recommend that each bot configure a different command prefix.In the context of private chat, there are no restrictions as there is no fear of mistakes.Command calls without a prefix can also be performed properly.
 
 ::: tip
-**关于 `prefix` 的几点提示：**
+**Tips for  `prefix` **
 
-1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
-2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./filter.md) 一节
+1. `prefix` is a list with default value `['']` for triggering a prefix without prefix; empty the list will not trigger all instructions via `prefix` (but can still be triggered by private chat or `nickname` or @Bot)
+2. If you set multiple values in `prefix` such as `['.', '/', '']`, then `.`, `/` or no prefix can all trigger the command; but empty string `'` must be written in the last one because Koishi matches each prefix in order
+3. You can set different `prefix`for different sessions, refer to [filter](./filter.md) section
 :::
 
 ## Subcommands
@@ -139,9 +139,9 @@ However, it is very vulnerable to make a mistake if trigger the command just by 
 </chat-message>
 </chat-panel>
 
-这里出现了一个新的概念：子指令。子指令在调用上与普通的指令并没有区别，但它们将不会显示在 `help` 返回的全局指令列表中，而只会显示在父指令 `user` 的帮助信息中。这样设计的目的是为了避免指令列表过于冗长，同时也将指令以一种更清晰的方式进行了组织。
+Here is a new concept: subcommands.Subcommands are not different from normal commands on calls, but they will not appear in the list of global commands returned by `help` but only in the help message of the parent command `user`.The purpose of this design is to avoid too large a list of instructions and to organize them in a clearer way.
 
-在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `authorize`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。在调用时，我们也需要加上这个小数点：
+In the example above, we can also find Koishi has two different types of subcommands: one is **hierarchy** such as `authorize`and another is **derivative**, eg: `user.locale`.The latter differs from the predecessor in that its name contains the name of the parent command and a decimal point `.`.We also need to add this decimal point when calling:
 
 <chat-panel>
 <chat-message nickname="Alice">user.locale en</chat-message>
