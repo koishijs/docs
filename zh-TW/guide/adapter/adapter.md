@@ -158,3 +158,85 @@ for (const event of parsed.events) {
 
 当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接选择继承 `Adapter.Server` 或 `Adapter.Client` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
 
+## 进阶技巧
+
+接下来我们将介绍一些复杂适配器的实现技巧。
+
+### 多协议支持
+
+部分平台同时支持了多种通信方式，例如 Telegram 就同时支持了 Webhook 和 HTTP 轮询。对于此类平台，我们可以提供一个配置项，让用户根据需要自行选择通信方式。
+
+首先调整目录结构，在 `server.ts` 和 `polling.ts` 中分别完成两种通信方式的适配器开发：
+
+```text{5-6}
+adapter-telegram
+├── src
+│   ├── bot.ts
+│   ├── index.ts
+│   ├── polling.ts
+│   └── server.ts
+└── package.json
+```
+
+每一种适配器可能都有自己的配置项，我们按照类插件的开发方式分别进行声明：
+
+```ts title=server.ts
+class ServerAdapter extends Adapter.Server<TelegramBot> {}
+
+namespace ServerAdapter {
+  export interface Config {
+    protocol: 'server'
+    path?: string
+  }
+
+  export const Config: Schema<Config> = Schema.object({
+    protocol: Schema.const('server').required(),
+    path: Schema.string().default('/telegram'),
+  })
+}
+```
+
+```ts title=polling.ts
+class PollingAdapter extends Adapter.Client<TelegramBot> {}
+
+namespace PollingAdapter {
+  export interface Config {
+    protocol: 'polling'
+    timeout?: string
+  }
+
+  export const Config: Schema<Config> = Schema.object({
+    protocol: Schema.const('server').required(),
+    timeout: Schema.number().default(Time.second * 25),
+  })
+}
+```
+
+最后编写作为入口的 `TelegramBot` 类，它将根据配置项的 `protocol` 属性，自动选择相关联的适配器 (最后配置项的定义使用了 [配置联动](../../schema/advanced/union-tagged-2.md) 技巧)：
+
+```ts
+class TelegramBot extends Bot<TelegramBot.Config> {
+  constructor(ctx: Context, config: TelegramBot.Config) {
+    super(ctx, config)
+    if (config.protocol === 'server') {
+      ctx.plugin(HttpServer, this)
+    } else if (config.protocol === 'polling') {
+      ctx.plugin(HttpPolling, this)
+    }
+  }
+}
+
+namespace TelegramBot {
+  export type Config = ServerAdapter.Config | PollingAdapter.Config
+
+  export const Config: Schema<Config> = Schema.intersect([
+    Schema.object({
+      protocol: Schema.union(['server', 'polling']).required(),
+    }),
+    Schema.union([
+      HttpServer.Config,
+      HttpPolling.Config,
+    ]),
+  ])
+}
+```
