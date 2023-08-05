@@ -13,8 +13,9 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 - **id:** `id` 使用者 ID
 - **name:** `string` 使用者昵稱
-- **flag:** `number` 旗標
-- **authority:** `number` 使用者權限
+- **authority:** `number` 权限等级
+- **permissions:** `string[]` 权限列表
+- **locales:** `string[]` 语言列表
 
 ### Binding
 
@@ -26,8 +27,9 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 - **platform:** `string` 平臺名
 - **id:** `string` 頻道賬號
-- **flag:** `number` 旗標
-- **assignee:** `string` [指派人](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
+- **permissions:** `string[]` 权限列表
+- **locales:** `string[]` 语言列表
 
 ## 内建實體方法
 
