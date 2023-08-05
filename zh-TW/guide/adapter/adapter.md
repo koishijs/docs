@@ -1,9 +1,5 @@
 # 实现适配器
 
-::: danger 注意
-此页文档正在施工，其中的内容可能不是最新。
-:::
-
 我们已经知道，单独一个 `Bot` 类已经构成一个合法的插件了。不过，这样的插件只具备调用平台 API 的能力，还无法接收消息。这个时候就需要 `Adapter` 类出场了。
 
 ## 适配器的类型
@@ -23,7 +19,7 @@ class ReplBot extends Bot {
 
 相比之下，Discord 平台使用 WebSocket 向机器人推送事件。每一个机器人都需要维护一个独立的 WebSocket 连接，因此需要多个 `Adapter` 实例。在这种情况下，我们无需改动上面机器人的代码，只需要将 `DiscordAdapter` 继承的基类变为 `Adapter.Client`。这个基类声明了可重用性，它将实现一个一对一的适配器逻辑。
 
-简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对多的就使用 `Adapter.Server` 基类，否则使用 `Adapter.Client`。
+简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对多的就使用 `Adapter.Server` 基类，否则使用 `Adapter.Client` 基类。当然，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
 
 ## 典型实现
 
@@ -31,7 +27,7 @@ class ReplBot extends Bot {
 
 ### WebSocket
 
-一种常见的通信方式是 WebSocket，许多平台 (Discord、KOOK、钉钉等) 都会使用这项技术。它的工作原理是，机器人首先向聊天平台的 WebSocket 网关发起连接请求，随后平台会将事件推送到机器人的 WebSocket 连接上。这里我们还是以 Discord 为例：
+一种常见的通信方式是 WebSocket，许多平台 (Discord、KOOK、钉钉等) 都会使用这项技术。它的工作原理是，机器人首先向聊天平台的 WebSocket 网关发起连接请求，随后平台会将事件推送到机器人的 WebSocket 连接上。这里我们还是以 Discord 平台为例：
 
 ```ts
 export class DiscordAdapter extends Adapter.WsClient<DiscordBot> {
@@ -90,7 +86,7 @@ if (session) this.dispatch(session)
 
 ### Webhook
 
-另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 为例：
+另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 平台为例：
 
 ```ts
 export class HttpServer extends Adapter.Server<LineBot> {
@@ -238,5 +234,57 @@ namespace TelegramBot {
       HttpPolling.Config,
     ]),
   ])
+}
+```
+
+### 动态创建机器人
+
+到此为止，我们的适配器开发中都存在一个隐含限制：用户的一次插件加载只能对应于一个 `Bot` 实例。如果用户需要创建多个机器人，那么就需要多次加载插件。这是因为在绝大多数适配器的使用场景下，用户都能很明确地知道自己需要创建多少个机器人。然而总有一些例外情况：
+
+- WhatsApp 平台的一个应用可以填入多个手机号，也就对应了多个 `Bot` 实例。
+- OneBot 平台中，你可以不预先创建机器人实例，只建立一个 WebSocket 服务器，同时允许多个连接，只要对应的 `Bot` 实例不存在就立即创建。
+
+::: warning
+无限制的 `Bot` 连接可能会导致你的 Koishi 被恶意调用。因此，如果将适配器作为可任意连接的服务端，请确保在可信任的网络环境下运行，或者引入其他验证机制。
+:::
+
+在上述的情况下，我们需要对插件的写法做一些调整。`Bot` 类不再能作为插件的入口了，但我们可以直接使用 `Adapter` 类作为入口。这里以 WhatsApp 平台为例：
+
+```ts title=index.ts
+import WhatsAppAdapter from './adapter'
+export default WhatsAppAdapter
+```
+
+同时，适配器也直接继承 `Adapter` 基类 (而不是 `Adapter.Server` 或 `Adapter.Client`)：
+
+```ts title=adapter.ts
+class WhatsAppAdapter extends Adapter<WhatsAppBot> {
+  // 这个适配器仍然是可重用的
+  static reusable = true
+  // 用于存放关联的机器人实例
+  public bots: WhatsAppBot[] = []
+
+  constructor(ctx: Context, config: WhatsAppAdapter.Config) {
+    super()
+
+    // 初始化内部接口
+    const http = ctx.http.extend({
+      headers: { Authorization: `Bearer ${config.token}` },
+    })
+    const internal = new Internal(http)
+
+    // 启动时创建机器人
+    ctx.on('ready', async () => {
+      const data = await internal.getPhoneNumbers()
+      for (const item of data) {
+        const bot = new WhatsAppBot(ctx, {
+          phoneNumber: item.id,
+        })
+        bot.adapter = this
+        bot.internal = internal
+        this.bots.push(bot)
+      }
+    })
+  }
 }
 ```
