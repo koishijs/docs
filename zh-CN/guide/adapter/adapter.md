@@ -79,7 +79,7 @@ return this.bot.online()
 
 在我们调用 `bot.online()` 之前，应当尽量保证 `Bot` 实例有 `selfId`, `username` 和 `avatar` 属性。前者本身就是必须属性，而后两个属性则会显示在控制台的机器人状态栏中。
 
-对于其他事件，我们都尝试创建一个 `Session` 对象：
+对于其他事件，我们都尝试创建一个 `Session` 对象，并将它触发为会话事件：
 
 ```ts
 const session = createSession(this.bot, parsed)
@@ -90,8 +90,64 @@ if (session) this.dispatch(session)
 
 ### Webhook
 
+另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 为例：
 
-TODO
+```ts
+export class HttpServer extends Adapter.Server<LineBot> {
+  constructor(ctx: Context) {
+    super()
+
+    ctx.router.post('/line', async (ctx) => {
+      const { destination, events } = ctx.request.body
+      const bot = this.bots.find(bot => bot.selfId === destination)
+      if (!bot) return ctx.status = 403
+
+      for (const event of events) {
+        const session = createSession(bot, event)
+        if (session) bot.dispatch(session)
+      }
+      ctx.status = 200
+      ctx.body = 'ok'
+    })
+  }
+
+  async start(bot: LineBot) {
+    const user = await this.getSelf()
+    Object.assign(this, user)
+    await bot.internal.setWebhookEndpoint({
+      endpoint: bot.ctx.root.config.selfUrl + '/line',
+    })
+  }
+}
+```
+
+任何一个适配器都需要通过 `start()` 和 `stop()` 方法来控制机器人的启动和停止 (你在前一个例子中没有看到这两个方法，只是因为 `WsClient` 已经内置了实现)。在这个例子中，我们通过内部接口对机器人数据做了初始化，并设置了 Webhook 回调地址：
+
+```ts
+const user = await this.getSelf()
+Object.assign(this, user)
+await bot.internal.setWebhookEndpoint({
+  endpoint: bot.ctx.root.config.selfUrl + '/line',
+})
+```
+
+对于 HTTP 服务器来说，我们不仅需要维护机器人的状态，还需要创建一个 HTTP 服务器，用于接收来自聊天平台的事件。因此，我们在构造函数中使用 `ctx.router` 监听了 Webhook 回调地址。对于每一个接收到的请求，我们首先验证其是否对应于已经配置的机器人：
+
+```ts
+const sign = ctx.headers['x-line-signature']?.toString()
+const parsed = ctx.request.body as WebhookRequestBody
+const bot = this.bots.find(bot => bot.selfId === parsed.destination)
+if (!bot) return ctx.status = 403
+```
+
+验证完成后，对于请求中的每一个事件，我们创建 `Session` 对象，并将它触发为会话事件：
+
+```ts
+for (const event of parsed.events) {
+  const session = createSession(bot, event)
+  if (session) bot.dispatch(session)
+}
+```
 
 ### 其他通信方式
 
