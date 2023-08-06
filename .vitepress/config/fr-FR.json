@@ -616,7 +616,11 @@
               "link": "/plugins/adapter/lark.md"
             },
             {
-              "text": "E-mail",
+              "text": "LINE",
+              "link": "/plugins/adapter/line.md"
+            },
+            {
+              "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -624,7 +628,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "Guilde QQ",
+              "text": "QQGuild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
