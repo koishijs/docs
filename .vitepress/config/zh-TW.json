@@ -616,6 +616,10 @@
               "link": "/plugins/adapter/lark.md"
             },
             {
+              "text": "LINE",
+              "link": "/plugins/adapter/line.md"
+            },
+            {
               "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
