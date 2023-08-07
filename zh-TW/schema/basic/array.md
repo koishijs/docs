@@ -7,7 +7,7 @@ code: |
   }).description('配置项')
 ---
 
-# 數組 (Array)
+# 陣列 (Array)
 
 `Schema.array()` 描述了一个数组，其中的元素满足给定的类型。
 
