@@ -133,7 +133,7 @@ ctx.plugin(discord, {
 })
 ```
 
-## 添加更多插件
+## 新增更多外掛
 
 Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
 
