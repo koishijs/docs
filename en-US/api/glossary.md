@@ -28,7 +28,7 @@
 
 频道是消息的集合。A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
 
-- [入门 > 跨平台](../manual/usage/platform.html#基础概念)
+- [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
 
 ## Command
 
@@ -77,7 +77,7 @@
 
 群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 Telegram)：一个群组内有且仅有一个群聊频道。The private chat channel does not belong to any of the guilds
 
-- [入门 > 跨平台](../manual/usage/platform.html#基础概念)
+- [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
 
 ## 生命周期 (Lifecycle)
 
@@ -98,7 +98,7 @@
 
 平台是指聊天平台，比如 QQ、Discord 等。Users on the same platform can message each other, but users on different platforms cannot message each other.对于 Rocket.Chat 这一类可自建的聊天平台而言，每个独立的自建服务器都视为不同的平台。
 
-- [入门 > 跨平台](../manual/usage/platform.html#基础概念)
+- [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
 
 ## 插件 (Plugin)
 
