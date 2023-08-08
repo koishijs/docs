@@ -39,32 +39,32 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 - **platform:** `string` 平臺名
 - **id:** `string` 使用者識別符號
-- **modifier:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<User>` 用户数据
+- **modifier:** `QueryModifier<User.Field>` 請求飾詞
+- 傳回值: `Promise<User>` 使用者資料
 
-向数据库请求用户数据。
+向資料庫請求使用者資料。
 
 ### database.setUser(platform, id, data)
 
 - **platform:** `string` 平臺名
 - **id:** `string` 使用者識別符號
-- **data:** `User` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **data:** `User` 要修改 / 新增的資料
+- 傳回值: `Promise<void>`
 
-向数据库修改或添加用户数据。
+向資料庫修改或新增使用者資料。
 
 ### database.getChannel(platform, id, fields?)
 
 - **platform:** `string` 平臺名
-- **id:** `string` 频道标识符
-- **fields:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值: `Promise<Channel>` 频道数据
+- **id:** `string` 頻道識別符號
+- **fields:** `QueryModifier<User.Field>` 請求飾詞
+- 傳回值: `Promise<Channel>` 頻道資料
 
-向数据库请求频道数据。
+向資料庫請求頻道資料。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">废弃</badge>
+### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">廢棄</badge>
 
-- **fields:** `ChannelField[]` 请求的字段，默认为全部字段
+- **fields:** `ChannelField[]` 請求的欄位，預設為全部欄位
 - **platform:** `string` 平台名，默认为全平台
 - **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
 - 返回值: `Promise<Channel[]>` 频道数据列表
