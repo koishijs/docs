@@ -38,11 +38,11 @@ Koishi 使用適配器插件來支持各種聊天平臺。其中，常用的適�
 
 ## LINE
 
-1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息。
-2. 在 Basic settings 页面找到 Channel secret，填入插件的 secret 字段。
-3. 在 Messaging API 页面底部 Channel access token 处点击 Issue 创建 token，填入插件的 token 字段。
-4. 根据使用需求可在上方的 Allow bot to join group chats (允许机器人加入群组) 处点击 Edit，在新页面中找到 Toggle features 一栏，第一对单选框选择 Allow。
-5. 在 Messaging API 页面底部，根据使用需求点击 Auto-reply messages 或者 Greeting messages 的修改按钮，在新页面中可设置是否启用平台自带的自动回复或问候消息。
+1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息
+2. 在 Basic settings 页面找到 Channel secret，填入插件的 secret 字段
+3. 在 Messaging API 页面底部 Channel access token 处点击 Issue 创建 token，填入插件的 token 字段
+4. 根据使用需求可在上方的 Allow bot to join group chats (允许机器人加入群组) 处点击 Edit，在新页面中找到 Toggle features 一栏，第一对单选框选择 Allow
+5. 在 Messaging API 页面底部，根据使用需求点击 Auto-reply messages 或者 Greeting messages 的修改按钮，在新页面中可设置是否启用平台自带的自动回复或问候消息
 6. 在 Security 页面推荐配置白名单 IP
 7. 启动插件，打开 Messaging API 页面，勾选 Use webhook
 
@@ -50,8 +50,8 @@ Koishi 使用適配器插件來支持各種聊天平臺。其中，常用的適�
 
 ## 郵件
 
-1. 「username」對應你的郵箱賬號，「password」對應你的授權碼
-2. 「imap」對應接收郵件服務器，「smtp」對應發送郵件服務器，需要分別填寫對應的「host」和「port」
+1. `username` 对应你的邮箱账号，`password` 对应你的授权码
+2. `imap` 对应接收邮件服务器，`smtp` 对应发送邮件服务器，需要分别填写对应的 `host` 和 `port`
 3. 不同郵箱服務獲取授權碼的方式也有所不同，可以參考下面的主流郵件服務進行配置
 
 參考：[@koishijs/plugin-adapter-mail](../../plugins/adapter/mail.md)
