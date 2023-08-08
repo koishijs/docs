@@ -1,21 +1,21 @@
-# 内建資料結構
+# 內建資料結構
 
 Koishi 的資料庫 API 實際上分為兩部分：
 
-- @koishijs/core 中定義的内置資料結構
+- @koishijs/core 中定義的內建資料結構
 - minato 中提供的 ORM 介面
 
-這一頁中將僅展示第一部分的内容。
+這一頁中將僅展示第一部分的內容。
 
 ## 内建表
 
 ### User
 
 - **id:** `id` 使用者 ID
-- **name:** `string` 使用者昵稱
-- **authority:** `number` 权限等级
-- **permissions:** `string[]` 权限列表
-- **locales:** `string[]` 语言列表
+- **name:** `string` 使用者暱稱
+- **authority:** `number` 許可權等級
+- **permissions:** `string[]` 許可權列表
+- **locales:** `string[]` 語言列表
 
 ### Binding
 
@@ -28,17 +28,17 @@ Koishi 的資料庫 API 實際上分為兩部分：
 - **platform:** `string` 平臺名
 - **id:** `string` 頻道賬號
 - **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
-- **permissions:** `string[]` 权限列表
-- **locales:** `string[]` 语言列表
+- **permissions:** `string[]` 許可權列表
+- **locales:** `string[]` 語言列表
 
-## 内建實體方法
+## 內建實體方法
 
 下列實體方法直接由 @koishijs/core 提供實作。
 
 ### database.getUser(platform, id, modifier?)
 
 - **platform:** `string` 平臺名
-- **id:** `string` 用户标识符
+- **id:** `string` 使用者識別符號
 - **modifier:** `QueryModifier<User.Field>` 请求修饰符
 - 返回值: `Promise<User>` 用户数据
 
@@ -47,7 +47,7 @@ Koishi 的資料庫 API 實際上分為兩部分：
 ### database.setUser(platform, id, data)
 
 - **platform:** `string` 平臺名
-- **id:** `string` 用户标识符
+- **id:** `string` 使用者識別符號
 - **data:** `User` 要修改 / 添加的数据
 - 返回值: `Promise<void>`
 
