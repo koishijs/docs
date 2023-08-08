@@ -56,22 +56,20 @@ export const Config = Schema.object({
 
 ### 独立入口
 
-你可以选择让插件为普通的 Koishi 实例和 k-on! 实例提供不同的入口文件。首先修改目录结构：
+你可以选择让插件为普通的 Koishi 实例和 k-on! 实例提供不同的入口文件。首先修改插件的目录结构：
 
-```diff
-root
-└── external
-    └── example
-        ├── src
-+       │   ├── node
-+       │   │   └── index.ts
-+       │   ├── browser
-+       │   │   └── index.ts
-+       │   ├── shared
-+       │   │   └── index.ts
-        │   └── index.ts
-        ├── package.json
-        └── tsconfig.json
+```diff{3-8}
+└── example
+    ├── src
++   │   ├── node
++   │   │   └── index.ts
++   │   ├── browser
++   │   │   └── index.ts
++   │   ├── shared
++   │   │   └── index.ts
+    │   └── index.ts
+    ├── package.json
+    └── tsconfig.json
 ```
 
 这里，`node` 目录存放 Node.js 环境下的入口文件，`browser` 目录存放浏览器环境下的入口文件，`shared` 目录存放一些两者共用的代码。原本的 `index.ts` 可以改成这样：
@@ -170,14 +168,16 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 如果你想在本地测试插件是否能在 k-on! 中运行，可以参考以下流程：
 
-1. 克隆 koishijs/webui 仓库。
+1. 克隆 koishijs/webui 和 koishijs/ponyfills 仓库。
 
 ::: tabs code
 ```npm
 npm run clone koishijs/webui
+npm run clone koishijs/ponyfills
 ```
 ```yarn
 yarn clone koishijs/webui
+yarn clone koishijs/ponyfills
 ```
 :::
 
