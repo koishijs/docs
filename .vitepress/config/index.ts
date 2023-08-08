@@ -27,6 +27,10 @@ export default async () => defineConfig({
     },
   },
 
+  sitemap: {
+    hostname: 'https://koishi.chat',
+  },
+
   vite: {
     optimizeDeps: {
       include: ['xss'],
