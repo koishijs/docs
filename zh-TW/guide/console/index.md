@@ -9,17 +9,15 @@
 在插件目录中新建这几个文件：
 
 ```diff
-root
-└── external
-    └── example
-+       ├── client
-+       │   ├── index.ts
-+       │   ├── page.vue
-+       │   └── tsconfig.json
-        ├── src
-        │   └── index.ts
-        ├── package.json
-        └── tsconfig.json
+└── example
++   ├── client
++   │   ├── index.ts
++   │   ├── page.vue
++   │   └── tsconfig.json
+    ├── src
+    │   └── index.ts
+    ├── package.json
+    └── tsconfig.json
 ```
 
 ```ts title=client/index.ts no-extra-header
