@@ -3,7 +3,7 @@
 This section lists the required system version of the Koishi launchers and the features that it supports on that version.
 
 ::: tip
-The table below only valid for Koishi launchers, the Koishi itself could run on almost any environment.
+The table below is only valid for Koishi launchers, the Koishi itself could run on almost any environment.
 :::
 
 ::: tip
