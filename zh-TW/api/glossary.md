@@ -89,7 +89,7 @@
 
 - [开发 > 交互基础 > 中间件](../guide/basic/middleware.md)
 
-## 数据模型 (Model)
+## 資料模型 (Model)
 
 - [开发 > 数据库 > 扩展数据模型](../guide/database/model.md#扩展数据模型)
 - [API > 数据库 > 数据模型](./database/model.md)
