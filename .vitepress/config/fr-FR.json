@@ -324,7 +324,7 @@
           "text": "Multi-plateforme",
           "items": [
             {
-              "text": "Exemples généraux",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -688,10 +688,6 @@
             {
               "text": "Inspect : Inspecteur session",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "Rate Limit : Limite de taux",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
