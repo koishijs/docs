@@ -158,7 +158,7 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "Système des comptes",
               "link": "/manual/usage/platform.md"
             },
             {
@@ -324,7 +324,7 @@
           "text": "Multi-plateforme",
           "items": [
             {
-              "text": "基础知识",
+              "text": "Principes de bases",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -620,7 +620,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "Mail",
+              "text": "E-mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -628,7 +628,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "Guilde QQ",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
