@@ -1,6 +1,6 @@
 # 資料庫操作 (Database)
 
-一個 Database 物件代理了 Koishi 上下文繫結的應用實體有關的所有資料庫訪問。同時它具有注入特性，任何外掛都可以自己定義資料庫上的方法。本章主要介紹資料庫的官方介面。注意：**它們並不由 Koishi 自身實現，而是由每個資料庫分別實現的**。Koishi 只是提供了一套標準。
+一個 Database 物件代理了 Koishi 上下文繫結的應用實體有關的所有資料庫訪問。同時它具有注入特性，任何外掛程式都可以自己定義資料庫上的方法。本章主要介紹資料庫的官方介面。注意：**它們並不由 Koishi 自身實現，而是由每個資料庫分別實現的**。Koishi 只是提供了一套標準。
 
 ## database.drop()
 
@@ -54,7 +54,7 @@ type QueryModifier<T extends string> = T[] | QueryOptions<T>
 ```ts
 // @errors: 2451
 
-// 獲取名為 schedule 的表中 id 為 1 或者 2 的資料行
+// 獲取名為 schedule 的表中 id 為 1 或者 2 的資料列
 // Koishi ORM 自動解析你的 primary key
 const rows = await ctx.database.get('schedule', [1, 2])
 const rows = await ctx.database.get('schedule', { id: [1, 2] })
@@ -62,11 +62,11 @@ const rows = await ctx.database.get('schedule', { id: [1, 2] })
 // 當然 Koishi ORM 也支援了 mongo 的正則寫法
 const rows = await ctx.database.get('schedule', { command: /echo.*/ })
 
-// 獲取名為 schedule 的表中 id 大於 2 但是小於等於 5 的資料行
+// 獲取名為 schedule 的表中 id 大於 2 但是小於等於 5 的資料列
 const rows = await ctx.database.get('schedule', { id: { $gt: 2, $lte: 5 } })
 
 // 獲取名為 schedule 的表中
-// id 大於 2 但是小於等於 5 或者 id 大於 100 的資料行
+// id 大於 2 但是小於等於 5 或者 id 大於 100 的資料列
 const rows = await ctx.database.get('schedule', {
   id: { $gt: 2, $lte: 5 },
   $or: [{ id: { $gt: 100 } }],
