@@ -324,7 +324,7 @@
           "text": "跨平臺",
           "items": [
             {
-              "text": "基礎實例",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -688,10 +688,6 @@
             {
               "text": "會話資訊 (Inspect)",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "速率限製 (Rate Limit)",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
