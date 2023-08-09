@@ -27,7 +27,7 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 - **platform:** `string` 平臺名
 - **id:** `string` 頻道賬號
-- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [指派人](../../manual/usage/permission.md#受理人机制)
 - **permissions:** `string[]` 許可權列表
 - **locales:** `string[]` 語言列表
 
@@ -65,17 +65,17 @@ Koishi 的資料庫 API 實際上分為兩部分：
 ### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">廢棄</badge>
 
 - **fields:** `ChannelField[]` 請求的欄位，預設為全部欄位
-- **platform:** `string` 平台名，默认为全平台
-- **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
-- 返回值: `Promise<Channel[]>` 频道数据列表
+- **platform:** `string` 平臺名，預設為全平臺
+- **assignees:** `string[]` 指派者列表，預設為當前執行的全部機器人
+- 傳回值: `Promise<Channel[]>` 頻道資料
 
-向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
+向資料庫請求被特定機器人管理的所有頻道資料。這裡的兩個引數可以寫任意一個，都可以識別。
 
 ### database.setChannel(platform, id, data)
 
 - **platform:** `string` 平臺名
-- **id:** `number` 频道标识符
-- **data:** `Channel` 要修改 / 添加的数据
-- 返回值: `Promise<void>`
+- **id:** `number` 頻道識別符號
+- **data:** `Channel` 要修改 / 新增的資料
+- 傳回值: `Promise<void>`
 
 向数据库修改或添加频道数据。
