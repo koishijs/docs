@@ -7,6 +7,8 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-discord](./adapter/discord.md)
 - [@koishijs/plugin-adapter-kook](./adapter/kook.md)
 - [@koishijs/plugin-adapter-lark](./adapter/lark.md)
+- [@koishijs/plugin-adapter-line](./adapter/line.md)
+- [@koishijs/plugin-adapter-mail](./adapter/mail.md)
 - [@koishijs/plugin-adapter-onebot](./adapter/onebot.md)
 - [@koishijs/plugin-adapter-qqguild](./adapter/qqguild.md)
 - [@koishijs/plugin-adapter-telegram](./adapter/telegram.md)
@@ -27,7 +29,6 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-echo](./common/echo.md)：发送消息
 - [@koishijs/plugin-help](./common/help.md)：查看帮助
 - [@koishijs/plugin-inspect](./common/inspect.md)：会话信息
-- [@koishijs/plugin-rate-limit](./common/rate-limit.md)：速率控制
 
 ## Console
 
