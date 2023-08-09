@@ -8,8 +8,8 @@ QQ 频道官方 SDK 适配器，基于 [@qq-guild-sdk/core](https://www.npmjs.co
 
 ## 接入方法
 
-1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
-2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
+1. 前往 [QQ 頻道管理後臺](https://bot.q.qq.com/open/#/type?appType=2) 註冊
+2. 登陸進入 [機器人管理後臺](https://bot.q.qq.com/open/#/botlogin) 並建立官方機器人
 3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据 [id, token, key(secret)]
 4. 将上面的基本数据作为机器人配置项即可使用
 
