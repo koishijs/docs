@@ -324,7 +324,7 @@
           "text": "Cross Platform",
           "items": [
             {
-              "text": "General Examples",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -688,10 +688,6 @@
             {
               "text": "Session Inspector (Inspect)",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "Rate Limiting (Rate Limit)",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
