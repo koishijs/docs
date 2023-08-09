@@ -324,7 +324,7 @@
           "text": "クロスプラットフォーム",
           "items": [
             {
-              "text": "基本示例",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -688,10 +688,6 @@
             {
               "text": "セッション情報 (Inspect)",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "レート制限 (Rate Limit)",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
