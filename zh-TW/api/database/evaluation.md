@@ -1,6 +1,6 @@
-# 求值表达式 (Evaluation)
+# 求值運算式 (Evaluation)
 
-## 数值运算
+## 數值運算
 
 ### $add
 
