@@ -306,7 +306,7 @@
           "text": "跨平台",
           "items": [
             {
-              "text": "基本示例",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -670,10 +670,6 @@
             {
               "text": "会话信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "速率限制 (Rate Limit)",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
