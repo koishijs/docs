@@ -26,4 +26,4 @@ Our Discord server has channels with different features such as Version Releases
 
 <https://forum.koishi.xyz>
 
-Forum is a special way of discussing. Your issues, ideas, feedback will save forever. And you can have different discussions at the same time. Your questions are more likely to be answered in the forum and can be saved for the benefit of others.
+Forum is a special way of discussing. Your issues, ideas, feedback will save forever. And you can have different discussions at the same time.Your questions are more likely to be answered in the forum and can be saved for the benefit of others.
