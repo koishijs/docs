@@ -80,6 +80,31 @@ See also: [@koishijs/plugin-adapter-mail](../../plugins/adapter/mail.md)
 - Sending mail server: `smtp.gmail.com`, port `465`
 - Reference: [Check Gmail through other email platforms](https://support.google.com/mail/answer/7126229?hl=zh-Hans#zippy=%2C%E7%AC%AC-%E6%AD%A5%E6%A3%80%E6%9F%A5-imap-%E6%98%AF%E5%90%A6%E5%B7%B2%E5%90%AF%E7%94%A8%2C%E7%AC%AC-%E6%AD%A5%E5%9C%A8%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%AD%E6%9B%B4%E6%94%B9-smtp-%E5%92%8C%E5%85%B6%E4%BB%96%E8%AE%BE%E7%BD%AE)
 
+## Matrix
+
+1. 参考 [此链接](https://spec.matrix.org/unstable/application-service-api/#registration) 编写 `registry.yaml` 文件：
+
+```yaml
+id: koishi                    # Application Service 的 ID
+hs_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+as_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+url:                          # 你的机器人地址，通常是 {selfUrl}/matrix
+sender_localpart: koishi      # 不能与机器人的 ID 相同
+namespaces:
+  users:
+  - exclusive: true
+    # 这里填入你的机器人的 userId
+    # 如果需要同时接入多个 matrix 机器人，请使用正则表达式
+    regex: '@koishi:matrix.example.com'
+```
+
+2. 将 `registry.yaml` 添加进你的服务器 (如 synapse 则使用 `app_service_config_files` 配置项来指向 `registry.yaml` 并重启服务器)
+3. 在控制台中配置本插件，`host` 填入你的 homeserver 域名，`hs_token`, `as_token` 上述文件中的对应值，`id` 填入任意值 (需要与 `sender_localpart` 不同)
+4. 安装 [koishi-plugin-verifier](https://common.koishi.chat/plugins/verifier.html) (或其他自助通过群组邀请的插件)
+5. 在房间中邀请机器人 (机器人的 ID 为 `@${id}:${host}`)
+
+参考：[@koishijs/plugin-adapter-matrix](../../plugins/adapter/matrix.md)
+
 ## OneBot
 
 We will only talk about the most widely-used approach to configure [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
