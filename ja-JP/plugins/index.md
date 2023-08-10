@@ -9,6 +9,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-lark](./adapter/lark.md)
 - [@koishijs/plugin-adapter-line](./adapter/line.md)
 - [@koishijs/plugin-adapter-mail](./adapter/mail.md)
+- [@koishijs/plugin-adapter-matrix](./adapter/matrix.md)
 - [@koishijs/plugin-adapter-onebot](./adapter/onebot.md)
 - [@koishijs/plugin-adapter-qqguild](./adapter/qqguild.md)
 - [@koishijs/plugin-adapter-telegram](./adapter/telegram.md)
