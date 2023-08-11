@@ -19,7 +19,7 @@ namespaces:
 ```
 
 2. 将 `registry.yaml` 添加进你的服务器 (如 synapse 则使用 `app_service_config_files` 配置项来指向 `registry.yaml` 并重启服务器)
-3. 在控制台中配置本插件，`host` 填入你的 homeserver 域名，`hs_token`, `as_token` 上述文件中的对应值，`id` 填入任意值 (需要与 `sender_localpart` 不同)
+3. 在控制台中配置本插件，`host` 填入你的 Homeserver 域名，`hs_token`, `as_token` 上述文件中的对应值，`id` 填入任意值 (需要与 `sender_localpart` 不同)
 4. 安装 [koishi-plugin-verifier](https://common.koishi.chat/plugins/verifier.html) (或其他自助通过群组邀请的插件)
 5. 在房间中邀请机器人 (机器人的 ID 为 `@${id}:${host}`)
 
@@ -37,7 +37,7 @@ namespaces:
 - 类型: `string`
 - 必需参数
 
-你的 matrix homeserver 域名。
+Matrix Homeserver 域名。
 
 ### options.hsToken
 
@@ -57,7 +57,7 @@ namespaces:
 
 - 类型: `string`
 
-你的 matrix homeserver 地址。默认为 `https://{host}`。
+Matrix Homeserver 地址。默认为 `https://{host}`。
 
 ### options.name
 
