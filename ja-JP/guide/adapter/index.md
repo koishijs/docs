@@ -48,6 +48,8 @@ export const Config: Schema<Config> = Schema.object({})
 export default class ReplBot extends Bot {
   constructor(ctx: Context, config: Config) {
     super(ctx, config)
+    this.platform = 'repl'
+    this.selfId = 'koishi'
     ctx.plugin(ReplAdapter, this)
   }
 
@@ -72,12 +74,11 @@ export default class ReplAdapter extends Adapter.Server<ReplBot> {
   })
 
   async start(bot: ReplBot) {
+    bot.online()
     this.rl.on('line', (line) => {
       const session = bot.session({
         type: 'message',
         isDirect: true,
-        platform: 'repl',
-        userId: 'repl',
         channelId: 'repl',
         content: line,
       })
