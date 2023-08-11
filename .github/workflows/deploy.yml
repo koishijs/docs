@@ -41,3 +41,13 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.WORKFLOW_TOKEN }}
+          publish_branch: dist
+          publish_dir: .vitepress/dist
+          force_orphan: true
+          enable_jekyll: true
+          commit_message: '[skip ci] deploy'
