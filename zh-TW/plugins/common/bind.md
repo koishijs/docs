@@ -5,7 +5,7 @@
 :::
 
 ::: tip
-建议配合阅读 [入门 > 跨平台 > 账号绑定](../../manual/usage/platform.md#通过指令绑定) 章节。
+建议配合阅读 [入门 > 账号系统 > 账号绑定](../../manual/usage/platform.md#通过指令绑定) 章节。
 :::
 
 @koishijs/plugin-bind 提供了一个指令，允许用户进行账号绑定。

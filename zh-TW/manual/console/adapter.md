@@ -36,10 +36,22 @@ Koishi 使用適配器插件來支持各種聊天平臺。其中，常用的適�
 
 參考：[@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
+## LINE
+
+1. 在 [LINE 開發者控制檯](https://developers.line.biz/console/) 註冊賬號，建立一個新的 Provider，在 Provider 中建立一個 Channel，型別選擇 Messaging API，輸入相關資訊
+2. 在 Basic settings 頁面找到 Channel secret，填入外掛的 secret 欄位
+3. 在 Messaging API 頁面底部 Channel access token 處點選 Issue 建立 token，填入外掛的 token 欄位
+4. 根據使用需求可在上方的 Allow bot to join group chats (允許機器人加入群組) 處點選 Edit，在新頁面中找到 Toggle features 一欄，第一對單選框選擇 Allow
+5. 在 Messaging API 頁面底部，根據使用需求點選 Auto-reply messages 或者 Greeting messages 的修改按鈕，在新頁面中可設定是否啟用平臺自帶的自動回覆或問候訊息
+6. 在 Security 頁面推薦配置白名單 IP
+7. 啟動外掛，開啟 Messaging API 頁面，勾選 Use webhook
+
+參考：[@koishijs/plugin-adapter-line](../../plugins/adapter/line.md)
+
 ## 郵件
 
-1. 「username」對應你的郵箱賬號，「password」對應你的授權碼
-2. 「imap」對應接收郵件服務器，「smtp」對應發送郵件服務器，需要分別填寫對應的「host」和「port」
+1. `username` 對應你的郵箱賬號，`password` 對應你的授權碼
+2. `imap` 對應接收郵件伺服器，`smtp` 對應傳送郵件伺服器，需要分別填寫對應的 `host` 和 `port`
 3. 不同郵箱服務獲取授權碼的方式也有所不同，可以參考下面的主流郵件服務進行配置
 
 參考：[@koishijs/plugin-adapter-mail](../../plugins/adapter/mail.md)
@@ -68,31 +80,56 @@ Koishi 使用適配器插件來支持各種聊天平臺。其中，常用的適�
 - 發送郵件服務器：`smtp.gmail.com`，端口號 `465`
 - 參考：[通過其他電子郵件平臺查看 Gmail](https://support.google.com/mail/answer/7126229?hl=zh-Hans#zippy=%2C%E7%AC%AC-%E6%AD%A5%E6%A3%80%E6%9F%A5-imap-%E6%98%AF%E5%90%A6%E5%B7%B2%E5%90%AF%E7%94%A8%2C%E7%AC%AC-%E6%AD%A5%E5%9C%A8%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%AD%E6%9B%B4%E6%94%B9-smtp-%E5%92%8C%E5%85%B6%E4%BB%96%E8%AE%BE%E7%BD%AE)
 
+## Matrix
+
+1. 参考 [此链接](https://spec.matrix.org/unstable/application-service-api/#registration) 编写 `registry.yaml` 文件：
+
+```yaml
+id: koishi                    # Application Service 的 ID
+hs_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+as_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+url:                          # 你的机器人地址，通常是 {selfUrl}/matrix
+sender_localpart: koishi      # 不能与机器人的 ID 相同
+namespaces:
+  users:
+  - exclusive: true
+    # 这里填入你的机器人的 userId
+    # 如果需要同时接入多个 matrix 机器人，请使用正则表达式
+    regex: '@koishi:matrix.example.com'
+```
+
+2. 将 `registry.yaml` 添加进你的服务器 (如 synapse 则使用 `app_service_config_files` 配置项来指向 `registry.yaml` 并重启服务器)
+3. 在控制台中配置本插件，`host` 填入你的 Homeserver 域名，`hs_token`, `as_token` 上述文件中的对应值，`id` 填入任意值 (需要与 `sender_localpart` 不同)
+4. 安装 [koishi-plugin-verifier](https://common.koishi.chat/plugins/verifier.html) (或其他自助通过群组邀请的插件)
+5. 在房间中邀请机器人 (机器人的 ID 为 `@${id}:${host}`)
+
+参考：[@koishijs/plugin-adapter-matrix](../../plugins/adapter/matrix.md)
+
 ## OneBot
 
 這裏只介紹最常見的 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 配置方法。
 
 1. 在 `selfId` 填寫機器人賬號
-2. 开启 `gocqhttp.enable` 选项
-3. 点击「启用」，并跟随提示完成后续配置
+2. 開啟 `gocqhttp.enable` 選項
+3. 點選「啟用」，並跟隨提示完成後續配置
 
-参考：[@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
+參考：[@koishijs/plugin-adapter-onebot](../../plugins/adapter/onebot.md)
 
-## QQ 频道
+## QQ 頻道
 
-1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
-2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
-3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据
-4. 将上面的基本数据填入插件配置即可使用
+1. 前往 [QQ 頻道管理後臺](https://bot.q.qq.com/open/#/type?appType=2) 註冊
+2. 登陸進入 [機器人管理後臺](https://bot.q.qq.com/open/#/botlogin) 並建立官方機器人
+3. 建立完成後，在 [頻道機器人開發設定](https://bot.q.qq.com/#/developer/developer-setting) 獲取機器人基本資料
+4. 將上面的基本資料填入外掛配置即可使用
 
-参考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
+參考：[@koishijs/plugin-adapter-qqguild](../../plugins/adapter/qqguild.md)
 
 ## Telegram
 
-1. 搜索 **@botfather** (有个官方认证的符号) 并进入聊天界面
-2. 输入 `/start` 后，会出现一个使用菜单，你可以使用这里指令对你的机器人进行配置
-3. 要创建一个机器人，请点击 `/newbot`，并根据系统提示完成创建流程
-4. 使用 `/setprivacy` 开启 Privacy Mode (不然机器人只能收到特定消息)
-5. 创建完毕后，你会获得一个 `token` (请注意不要泄露)，将其填入插件配置即可使用
+1. 搜尋 **@botfather** (有個官方認證的符號) 並進入聊天介面
+2. 輸入 `/start` 後，會出現一個使用選單，你可以使用這裡指令對你的機器人進行配置
+3. 要建立一個機器人，請點選 `/newbot`，並根據系統提示完成建立流程
+4. 使用 `/setprivacy` 開啟 Privacy Mode (不然機器人只能收到特定訊息)
+5. 建立完畢後，你會獲得一個 `token` (請注意不要洩露)，將其填入外掛配置即可使用
 
-参考：[@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)
+參考：[@koishijs/plugin-adapter-telegram](../../plugins/adapter/telegram.md)

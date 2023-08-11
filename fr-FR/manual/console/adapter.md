@@ -36,10 +36,22 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 
 参考：[@koishijs/plugin-adapter-lark](../../plugins/adapter/lark.md)
 
+## LINE
+
+1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息
+2. 在 Basic settings 页面找到 Channel secret，填入插件的 secret 字段
+3. 在 Messaging API 页面底部 Channel access token 处点击 Issue 创建 token，填入插件的 token 字段
+4. 根据使用需求可在上方的 Allow bot to join group chats (允许机器人加入群组) 处点击 Edit，在新页面中找到 Toggle features 一栏，第一对单选框选择 Allow
+5. 在 Messaging API 页面底部，根据使用需求点击 Auto-reply messages 或者 Greeting messages 的修改按钮，在新页面中可设置是否启用平台自带的自动回复或问候消息
+6. 在 Security 页面推荐配置白名单 IP
+7. 启动插件，打开 Messaging API 页面，勾选 Use webhook
+
+参考：[@koishijs/plugin-adapter-line](../../plugins/adapter/line.md)
+
 ## 邮件
 
-1. 「username」对应你的邮箱账号，「password」对应你的授权码
-2. 「imap」对应接收邮件服务器，「smtp」对应发送邮件服务器，需要分别填写对应的「host」和「port」
+1. `username` 对应你的邮箱账号，`password` 对应你的授权码
+2. `imap` 对应接收邮件服务器，`smtp` 对应发送邮件服务器，需要分别填写对应的 `host` 和 `port`
 3. 不同邮箱服务获取授权码的方式也有所不同，可以参考下面的主流邮件服务进行配置
 
 参考：[@koishijs/plugin-adapter-mail](../../plugins/adapter/mail.md)
@@ -67,6 +79,31 @@ Koishi 使用适配器插件来支持各种聊天平台。其中，常用的适�
 - 接收邮件服务器：`imap.gmail.com`，端口号 `993`
 - 发送邮件服务器：`smtp.gmail.com`，端口号 `465`
 - 参考：[通过其他电子邮件平台查看 Gmail](https://support.google.com/mail/answer/7126229?hl=zh-Hans#zippy=%2C%E7%AC%AC-%E6%AD%A5%E6%A3%80%E6%9F%A5-imap-%E6%98%AF%E5%90%A6%E5%B7%B2%E5%90%AF%E7%94%A8%2C%E7%AC%AC-%E6%AD%A5%E5%9C%A8%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%AD%E6%9B%B4%E6%94%B9-smtp-%E5%92%8C%E5%85%B6%E4%BB%96%E8%AE%BE%E7%BD%AE)
+
+## Matrix
+
+1. 参考 [此链接](https://spec.matrix.org/unstable/application-service-api/#registration) 编写 `registry.yaml` 文件：
+
+```yaml
+id: koishi                    # Application Service 的 ID
+hs_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+as_token:                     # 填入任意内容，与配置文件相对应，请确保不会泄漏
+url:                          # 你的机器人地址，通常是 {selfUrl}/matrix
+sender_localpart: koishi      # 不能与机器人的 ID 相同
+namespaces:
+  users:
+  - exclusive: true
+    # 这里填入你的机器人的 userId
+    # 如果需要同时接入多个 matrix 机器人，请使用正则表达式
+    regex: '@koishi:matrix.example.com'
+```
+
+2. 将 `registry.yaml` 添加进你的服务器 (如 synapse 则使用 `app_service_config_files` 配置项来指向 `registry.yaml` 并重启服务器)
+3. 在控制台中配置本插件，`host` 填入你的 Homeserver 域名，`hs_token`, `as_token` 上述文件中的对应值，`id` 填入任意值 (需要与 `sender_localpart` 不同)
+4. 安装 [koishi-plugin-verifier](https://common.koishi.chat/plugins/verifier.html) (或其他自助通过群组邀请的插件)
+5. 在房间中邀请机器人 (机器人的 ID 为 `@${id}:${host}`)
+
+参考：[@koishijs/plugin-adapter-matrix](../../plugins/adapter/matrix.md)
 
 ## OneBot
 

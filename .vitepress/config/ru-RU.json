@@ -158,7 +158,7 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "跨平台",
+              "text": "账号系统",
               "link": "/manual/usage/platform.md"
             },
             {
@@ -324,7 +324,7 @@
           "text": "跨平台",
           "items": [
             {
-              "text": "基本示例",
+              "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -616,6 +616,10 @@
               "link": "/plugins/adapter/lark.md"
             },
             {
+              "text": "LINE",
+              "link": "/plugins/adapter/line.md"
+            },
+            {
               "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
@@ -684,10 +688,6 @@
             {
               "text": "会话信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "速率限制 (Rate Limit)",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },

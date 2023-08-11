@@ -1,9 +1,9 @@
 ---
 prev:
-  text: 选择安装方式
+  text: 選擇安裝方式
   link: /zh-TW/manual/starter/
 next:
-  text: 认识控制台
+  text: 認識控制檯
   link: /zh-TW/manual/console/
 ---
 

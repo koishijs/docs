@@ -25,7 +25,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 <chat-panel>
 <chat-message nickname="Alice">authorize -u @Bob 2</chat-message>
-<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+<chat-message nickname="Koishi">使用者資料已修改。</chat-message>
 </chat-panel>
 
 任何用户只能对权限等级低于自己的用户进行操作，且操作后的权限等级同样必须低于自己。

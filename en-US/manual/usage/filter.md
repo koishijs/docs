@@ -10,7 +10,8 @@ A few plugins are unrelated to chat platforms, such as console and database plug
 
 Most of the plugins provide filter settings at the top of the plugin details page.Click the 'Add Condition' button to create a filter condition.Can include or exclude any platform/user/group/channel/robot by setting filters.
 
-If you don't know what these IDs are, you can use the[inspect](../../plugins/common/inspect.md)plugin introduced in[Get Session Information](./platform.md#获取会话信息).
+::: tip
+如果不知道这些 ID 是什么，可以使用 [获取账号信息](./platform.md#获取账号信息) 中介绍的 [inspect](../../plugins/common/inspect.md) 插件。
 :::
 
 After adding a condition, you will find that the button below has changed to two options: "Add AND Condition" and "Add OR Condition".Koishi's filter supports a Protein secondary structure. A series of conditions in the inner layer form a condition group with a logical relationship of "and", and a series of bars in the outer layer form the final filter condition with a recursive relationship of "or".

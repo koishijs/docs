@@ -158,7 +158,7 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "Multi-plateforme",
+              "text": "Système des comptes",
               "link": "/manual/usage/platform.md"
             },
             {
@@ -324,7 +324,7 @@
           "text": "Multi-plateforme",
           "items": [
             {
-              "text": "Exemples généraux",
+              "text": "Principes de bases",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -616,6 +616,10 @@
               "link": "/plugins/adapter/lark.md"
             },
             {
+              "text": "LINE",
+              "link": "/plugins/adapter/line.md"
+            },
+            {
               "text": "E-mail",
               "link": "/plugins/adapter/mail.md"
             },
@@ -684,10 +688,6 @@
             {
               "text": "Inspect : Inspecteur session",
               "link": "/plugins/common/inspect.md"
-            },
-            {
-              "text": "Rate Limit : Limite de taux",
-              "link": "/plugins/common/rate-limit.md"
             }
           ]
         },
@@ -723,40 +723,40 @@
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "Insight : Dépendant des plugins",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "Locales : Traduction locale",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "Logger : Gestion de journal",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Market : Place de marché",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Sandbox : Débogage sur bac à sable",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "Status : État de fonctionnement",
               "link": "/plugins/console/status.md"
             }
           ]
         },
         {
-          "text": "开发工具",
+          "text": "Outils de développement",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "HMR : Replacement de module d'exécution",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Mock : Outils des tests",
               "link": "/plugins/develop/mock.md"
             }
           ]
@@ -767,7 +767,7 @@
           "text": "plugin",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Place de Marché",
               "link": "/market/"
             },
             {
@@ -795,27 +795,27 @@
           "text": "Concepts de base",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "Exigence et optant",
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "默认值",
+              "text": "Valeur par défaut",
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "Titre et description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用与隐藏",
+              "text": "Désactiver et masquer",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Apparence des configurations",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "Type imbriqué",
               "link": "/schema/meta/nested.md"
             }
           ]
@@ -824,39 +824,39 @@
           "text": "Type de base",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "Number : Nombre",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字符串 (String)",
+              "text": "String : Chaîne de caractères",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "Boolean : Valeur booléenne",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "位集 (Bitset)",
+              "text": "Bitset : Stockage binaire",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object : Objet",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple : Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dict : Dictionnaire",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array : Tableau",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路径 (Path)",
+              "text": "Path : Chemin",
               "link": "/schema/basic/path.md"
             }
           ]

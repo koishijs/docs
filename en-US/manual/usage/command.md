@@ -100,48 +100,48 @@ Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the tar
 
 ## Command Prefix
 
-However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
+However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.In Global Settings, we have provided configuration items called `prefix` and `nickname`.If `prefix` is set to `/`, `nickname` is set to `Shiki-chan`, only the following information can trigger：
 
 ```sh
-四季酱, echo hello
-@四季酱 echo hello
+Shiki-chan, echo hello
+@Shiki-chan echo hello
 /echo hello
 ```
 
-换句话说，一个指令能够被触发的实际条件为：
+In other words, the actual condition in which a command can be triggered is:
 
-- 消息以 `prefix` 开头，后面紧跟着指令调用
-- 消息以 `nickname` 开头，后面可以有逗号或空白字符，再后面是指令调用
-- 消息以 @机器人 开头 (可以有多个 `@`，但至少一个是机器人账号)，后面是指令调用
+- Message starts with `prefix` and follows the command
+- Message starts with `nickname` after which you can have commas or blank characters and then the command
+- The message starts with @Bot (multiple `@`but at least one bot account), followed by a command
 
-对于人数较多或是含有不止一个机器人的群聊，我们强烈建议每一个机器人都配置不同的触发前缀。而在私聊环境下，由于不用担心误触，因此并没有上面的限制。没有触发前缀的指令调用也能被正常执行。
+For groups with lots of people or more than one bot, we strongly recommend that each bot configure a different command prefix.In the context of private chat, there are no restrictions as there is no fear of mistakes.Command calls without a prefix can also be performed properly.
 
 ::: tip
-**关于 `prefix` 的几点提示：**
+**Tips for  `prefix` **
 
-1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
-2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./filter.md) 一节
+1. `prefix` is a list with default value `['']` for triggering a prefix without prefix; empty the list will not trigger all instructions via `prefix` (but can still be triggered by private chat or `nickname` or @Bot)
+2. If you set multiple values in `prefix` such as `['.', '/', '']`, then `.`, `/` or no prefix can all trigger the command; but empty string `'` must be written in the last one because Koishi matches each prefix in order
+3. You can set different `prefix`for different sessions, refer to [filter](./filter.md) section
 :::
 
 ## Subcommands
 
-[admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
+[admin](../../plugins/common/admin.md) plugin provides a command named user. Let's have a try:
 
 <chat-panel>
 <chat-message nickname="Alice">user</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：user</p>
+<p>Command: user</p>
 <p>User Management</p>
-<p>可用的子指令有：</p>
-<p class="indent-1">authorize  权限管理</p>
-<p class="indent-1">user.locale  语言偏好</p>
+<p>Available subcommands:</p>
+<p class="indent-1">authorize Permission Management</p>
+<p class="indent-1">user.locale  Language Preference</p>
 </chat-message>
 </chat-panel>
 
-这里出现了一个新的概念：子指令。子指令在调用上与普通的指令并没有区别，但它们将不会显示在 `help` 返回的全局指令列表中，而只会显示在父指令 `user` 的帮助信息中。这样设计的目的是为了避免指令列表过于冗长，同时也将指令以一种更清晰的方式进行了组织。
+Here is a new concept: subcommands.Subcommands are not different from normal commands on calls, but they will not appear in the list of global commands returned by `help` but only in the help message of the parent command `user`.The purpose of this design is to avoid too large a list of instructions and to organize them in a clearer way.
 
-在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `authorize`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。在调用时，我们也需要加上这个小数点：
+In the example above, we can also find Koishi has two different types of subcommands: one is **hierarchy** such as `authorize`and another is **derivative**, eg: `user.locale`.The latter differs from the predecessor in that its name contains the name of the parent command and a decimal point `.`.We also need to add this decimal point when calling:
 
 <chat-panel>
 <chat-message nickname="Alice">user.locale en</chat-message>
@@ -174,7 +174,7 @@ However, it is very vulnerable to make a mistake if trigger the command just by 
 
 ### Add Subcommands
 
-在左侧栏中，你可以将任何指令 (派生式指令除外) 拖至其他指令的下方，这将使得前者成为后者的子指令。例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令或是 [`usage`](../../plugins/common/rate-limit.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
+在左侧栏中，你可以将任何指令 (派生式指令除外) 拖至其他指令的下方，这将使得前者成为后者的子指令。例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
 
 点击右上角的加号按钮，我们可以创建一个新指令。这个新指令自然是没有行为的，它的主要目的是作为其他指令的父指令，已获得更好的展示效果。对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
 
@@ -185,17 +185,3 @@ However, it is very vulnerable to make a mistake if trigger the command just by 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
 For user permissions, refer to [permissions management](./permission.md) section.
-
-### Rate Limits
-
-:::tip
-This feature is provided by [rate-limit](../../plugins/common/rate-limit.md) plugin.
-:::
-
-有些指令 (例如签到抽卡，限制次数的 API 调用等) 我们并不希望被无限调用，这时我们可以通过 `maxUsage` 设置每天访问额度的上限。当超出总次数后，机器人将回复「调用次数已达上限」。
-
-另一些指令 (例如高强度刷屏，需要等待一定时间才有结果的功能) 我们并不希望被短时间内重复调用，这时我们可以通过 `minInterval` 设置最短触发间隔。如果一个处于冷却中的指令再次被调用，机器人将会提示「调用过于频繁，请稍后再试」。
-
-如果你希望某些选项不计入总次数，可以使用选项配置中的 `notUsage`。启用此项后，当指令调用含有对应的选项时，将不会收到 `maxUsage` 和 `minInterval` 的限制。
-
-最后，如果我们希望让多个指令共同同一套速率限制，可以通过 `usageName` 来进行管理。只需将这些指令的 `usageName` 设置为相同的值即可。

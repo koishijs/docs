@@ -22,7 +22,7 @@
 
 - 从核心拆分出下列插件：
   - [@koishijs/plugin-help](../plugins/common/help.md)
-  - [@koishijs/plugin-rate-limit](../plugins/common/rate-limit.md)
+  - [koishi-plugin-rate-limit](https://common.koishi.chat/plugins/rate-limit.html)
 - koishi-plugin-assets 被拆分为多个插件：
   - [koishi-plugin-assets-local](https://assets.koishi.chat/plugins/local.html)
   - [koishi-plugin-assets-remote](https://assets.koishi.chat/plugins/remote.html)
@@ -34,13 +34,13 @@
   - [@koishijs/plugin-broadcast](../plugins/common/broadcast.md)
   - [@koishijs/plugin-callme](../plugins/common/callme.md)
   - [@koishijs/plugin-echo](../plugins/common/echo.md)
-  - [koishi-plugin-feedback](https://feedback.koishi.chat)
-  - [koishi-plugin-forward](https://forward.koishi.chat)
-  - [koishi-plugin-recall](https://recall.koishi.chat)
-  - [koishi-plugin-repeater](https://repeater.koishi.chat)
-  - [koishi-plugin-respondent](https://respondent.koishi.chat)
-  - [koishi-plugin-sudo](https://sudo.koishi.chat)
-  - [koishi-plugin-verifier](https://verifier.koishi.chat)
+  - [koishi-plugin-feedback](https://common.koishi.chat/plugins/feedback.html)
+  - [koishi-plugin-forward](https://common.koishi.chat/plugins/forward.html)
+  - [koishi-plugin-recall](https://common.koishi.chat/plugins/recall.html)
+  - [koishi-plugin-repeater](https://common.koishi.chat/plugins/repeater.html)
+  - [koishi-plugin-respondent](https://common.koishi.chat/plugins/respondent.html)
+  - [koishi-plugin-sudo](https://common.koishi.chat/plugins/sudo.html)
+  - [koishi-plugin-verifier](https://common.koishi.chat/plugins/verifier.html)
 - koishi-plugin-webui 被拆分为多个插件：
   - @koishijs/client (构建工具)
   - [@koishijs/plugin-console](../plugins/console/index.md)

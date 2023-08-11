@@ -1,6 +1,6 @@
-# 数据库操作 (Database)
+# 資料庫操作 (Database)
 
-一个 Database 对象代理了 Koishi 上下文绑定的应用实例有关的所有数据库访问。同时它具有注入特性，任何插件都可以自己定义数据库上的方法。本章主要介绍数据库的官方接口。注意：**它们并不由 Koishi 自身实现，而是由每个数据库分别实现的**。Koishi 只是提供了一套标准。
+一個 Database 物件代理了 Koishi 上下文繫結的應用實體有關的所有資料庫訪問。同時它具有注入特性，任何外掛程式都可以自己定義資料庫上的方法。本章主要介紹資料庫的官方介面。注意：**它們並不由 Koishi 自身實現，而是由每個資料庫分別實現的**。Koishi 只是提供了一套標準。
 
 ## database.drop()
 
@@ -8,12 +8,12 @@
 
 ## database.get(table, query, modifier?)
 
-- **table:** `keyof Tables` 注册在 ORM 中的表名
-- **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜索表达式
-- **modifier:** `QueryModifier<keyof Tables[T]>` 请求修饰符
-- 返回值: `Promise<Tables[T][]>` 用户数据
+- **table:** `keyof Tables` 註冊在 ORM 中的表名
+- **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜尋運算式
+- **modifier:** `QueryModifier<keyof Tables[T]>` 請求飾詞
+- 回返值: `Promise<Tables[T][]>` 使用者資料
 
-参数 query 支持正则以及表达式，你可以使用复杂的嵌套更细致化的去完成你对数据库的查找服务。实现上与 mongo 近似，如果你有使用过 mongodb 经验，那么使用 Koishi ORM 对你来说便不是一件难事。
+引數 query 支援正則以及運算式，你可以使用複雜的巢狀更細緻化的去完成你對資料庫的查詢服務。實現上與 mongo 近似，如果你有使用過 mongodb 經驗，那麼使用 Koishi ORM 對你來說便不是一件難事。
 
 ```ts
 interface FieldQueryExpr<T> {
@@ -49,30 +49,30 @@ interface QueryOptions<T extends string> {
 type QueryModifier<T extends string> = T[] | QueryOptions<T>
 ```
 
-下面是一些简单的示例：
+下面是一些簡單的示例：
 
 ```ts
 // @errors: 2451
 
-// 获取名为 schedule 的表中 id 为 1 或者 2 的数据行
-// Koishi ORM 自动解析你的 primary key
+// 獲取名為 schedule 的表中 id 為 1 或者 2 的資料列
+// Koishi ORM 自動解析你的 primary key
 const rows = await ctx.database.get('schedule', [1, 2])
 const rows = await ctx.database.get('schedule', { id: [1, 2] })
 
-// 当然 Koishi ORM 也支持了 mongo 的正则写法
+// 當然 Koishi ORM 也支援了 mongo 的正則寫法
 const rows = await ctx.database.get('schedule', { command: /echo.*/ })
 
-// 获取名为 schedule 的表中 id 大于 2 但是小于等于 5 的数据行
+// 獲取名為 schedule 的表中 id 大於 2 但是小於等於 5 的資料列
 const rows = await ctx.database.get('schedule', { id: { $gt: 2, $lte: 5 } })
 
-// 获取名为 schedule 的表中
-// id 大于 2 但是小于等于 5 或者 id 大于 100 的数据行
+// 獲取名為 schedule 的表中
+// id 大於 2 但是小於等於 5 或者 id 大於 100 的資料列
 const rows = await ctx.database.get('schedule', {
   id: { $gt: 2, $lte: 5 },
   $or: [{ id: { $gt: 100 } }],
 })
 
-// 只获取 id 和 command 字段（默认情况下将获取全部字段）
+// 只獲取 id 和 command 欄位（預設情況下將獲取全部欄位）
 const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 ```
 

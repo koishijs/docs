@@ -1,4 +1,4 @@
-# 编写测试
+# 編寫測試
 
 如果你是一位成熟的开发者，你一定知道测试的重要性。比起让机器人真正运行起来交给用户去试错，预先编写好的测试具有许多前者所不具有的优点：
 
@@ -31,18 +31,15 @@ yarn add mocha chai @koishijs/plugin-mock @types/mocha @types/chai -DW
 这里的 `-W` 表明直接安装到根工作区。你也可以改成只对一个插件添加这些依赖，不过考虑到你可能会在其他插件中也用到它们，安装到根工作区会更加方便。
 :::
 
-接着创建存放测试文件的 `tests` 目录，并在其中新建一个 `index.spec.ts` 文件：
+接着在插件目录中创建存放测试文件的 `tests` 目录，并在其中新建 `index.spec.ts` 文件：
 
-```diff{6-7}
-root
-├── external
-│   └── example
-│       ├── src
-│       │   └── index.ts
-│       ├── tests
-│       │   └── index.spec.ts
-│       └── package.json
-└── package.json
+```diff
+└── example
+    ├── src
+    │   └── index.ts
++   ├── tests
++   │   └── index.spec.ts
+    └── package.json
 ```
 
 这个文件将用于编写测试代码：

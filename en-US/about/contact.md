@@ -1,6 +1,6 @@
 # Discussion
 
-如果你在 Koishi 使用中遇到了问题，或者有新奇的点子想与其他人讨论，欢迎参与我们的社区：
+If you have problems when using Koishi, or have new ideas to share to other users, welcome to join our community:
 
 ## QQ Groups
 
@@ -8,22 +8,22 @@
 
 [391463133](https://jq.qq.com/?_wv=1027&k=z2kKtk3N)
 
-本群适用于刚刚入门 Koishi，或者在 Koishi 的使用过程中遇到了问题，希望得到解答的用户——这里有热情的群友随时解答你的问题！
+This group is for the users who newly used Koishi, or have problems when using Koishi and hope to receive an answer. There are many friendly members in the group and ready to answer your questions every time!
 
 ### For developers
 
 [426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
 
-本群适用于已经有一定 Node.js / TypeScript 基础，并对 Koishi 开发感兴趣的用户——你可以在这里参与 Koishi 以及其他相关话题的深度讨论。
+This group is for the users who had learned Node.js / TypeScript and interested in Koishi Development. You can discuss anything deeply about Koishi in this group.
 
 ## Discord
 
 [Join Channel](https://discord.com/invite/xfxYwmd284)
 
-我们的 Discord 服务器内设有版本发布、开发交流和问题反馈等不同功能的频道，你也可以在这里参与讨论。
+Our Discord server has channels with different features such as Version Releases, Development Discuss and Question Feedback. You can also participate in discussions here.
 
 ## Forum
 
 <https://forum.koishi.xyz>
 
-论坛是一种特别的讨论方式，它允许你的问题、想法、反馈被永久的保存下来，并且可以同时进行不同的讨论。 你的问题在论坛有更大的可能性获得解答，并且能够保存下来让他人也受益。
+Forum is a special way of discussing. Your issues, ideas, feedback will save forever. And you can have different discussions at the same time.Your questions are more likely to be answered in the forum and can be saved for the benefit of others.

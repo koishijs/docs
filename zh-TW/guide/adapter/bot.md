@@ -1,4 +1,4 @@
-# 实现机器人
+# 實作機器人
 
 `Bot` 对应着由 Koishi 操纵的聊天平台机器人账号。其上封装了一系列方法，用于发送消息、获取频道信息等操作。要实现一个聊天平台的 `Bot` 类，只需要实现这些方法即可。
 
@@ -10,6 +10,8 @@
 class ReplBot extends Bot {
   constructor(ctx: Context, config: Config) {
     super(ctx, config)
+    this.platform = 'repl'
+    this.selfId = 'koishi'
     ctx.plugin(ReplAdapter, this)
   }
 
@@ -89,6 +91,7 @@ class DiscordBot extends Bot {
   constructor(ctx: Context, config: Config) {
     super(ctx, config)
     this.internal = new Internal()
+    ctx.plugin(DiscordAdapter, this)
   }
 
   // 获取群组数据

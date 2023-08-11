@@ -13,8 +13,9 @@ Koishi 的数据库 API 实际上分为两部分：
 
 - **id:** `id` 用户 ID
 - **name:** `string` 用户昵称
-- **flag:** `number` 状态标签
-- **authority:** `number` 用户权限
+- **authority:** `number` 权限等级
+- **permissions:** `string[]` 权限列表
+- **locales:** `string[]` 语言列表
 
 ### Binding
 
@@ -26,35 +27,9 @@ Koishi 的数据库 API 实际上分为两部分：
 
 - **platform:** `string` 平台名
 - **id:** `string` 频道账号
-- **flag:** `number` 状态标签
 - **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
-
-## 全局接口
-
-### User.Flag, Channel.Flag <badge type="danger">deprecated</badge>
-
-所有用户 / 频道状态标签构成的枚举类型。
-
-Koishi 使用**状态标签**来管理用户和群的可能状态。状态标签是一个正整数，它的每一个二进制位表示一种可能状态的开启或关闭。在 Koishi 中，这些状态通过一个枚举类型来进行辨别和修改。以下是内置的状态标签列表：
-
-- **User.Flag.ignore:** 不响应用户的任何消息
-- **Channel.Flag.ignore:** 不响应频道内的任何消息
-- **Channel.Flag.silent:** 不主动向频道发送任何消息
-
-利用位运算操作符，你可以用下面的方法辨别和修改状态信息：
-
-```ts
-import { Channel } from 'koishi'
-
-// 判断会话用户是否被设置了 ignore 状态
-if (session.channel.flag & Channel.Flag.ignore) {}
-
-// 为频道设置一个 ignore 状态
-session.channel.flag |= Channel.Flag.ignore
-
-// 为频道取消一个 silent 状态
-session.channel.flag &= ~Channel.Flag.silent
-```
+- **permissions:** `string[]` 权限列表
+- **locales:** `string[]` 语言列表
 
 ## 内置实例方法
 

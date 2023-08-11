@@ -142,7 +142,7 @@ h.image(buffer, 'image/png')
 <image url={'data:image/png;base64,' + buffer.toString('base64')}/>
 ```
 
-## 消息组件
+## 訊息元件
 
 除了标准元素外，Koishi 还提供了一系列名为 **消息组件 (Component)** 的高级元素。例如：
 

@@ -33,7 +33,7 @@ It is also easy to disable the "echo" plugin. Click the "Disable Plugin" button 
 ## Plugins configurations
 
 ::: warning
-When configuring plugins, please remember this principle: **Don't change any configuration unless necessary**.Koishi 在设计上兼顾了扩展性和实用性，许多基础功能是以预装插件的形式提供的。前面我们已经用到的「插件市场」和「插件配置」页面本身就分别由预装的 market 插件和 config 插件提供。正是因为所有的预装插件均已配置完善，通常情况下你不需要修改预装插件的配置。随意改动插件配置、删除预装插件都可能导致 Koishi 无法正常运行。
+When configuring plugins, please remember this principle: **Don't change any configuration unless necessary**.Koishi 在设计上兼顾了扩展性和实用性，许多基础功能是以预装插件的形式提供的。The "Marketplace" and "Plugin Configuration" pages that we are already using are also provided by the "market" plugin and the "config" plugin preloaded.It is because all preloaded plugins are well configured, so you do not usually need to modify the preloaded plugins' configuration.Changing the preloaded plugins' configuration or delete the preloaded plugins may cause Koishi to run improperly.
 :::
 
 While the "echo" plugin does not require configuration, more complex plugins often provide configurations that allow users to control the behavior of plugins. The picture below shows the configuration page of the "novelai" plugin.
@@ -51,13 +51,13 @@ In this page, we can see many configurations, where you need to take note of:
 
 ### Manage Groups
 
-Koishi 提供了插件分组的机制，分组内可以添加插件，方便同时管理多个插件。
+Koishi provides a mechanism to group the plugins. You can add plugins into the groups to manage them at a time.
 
-Koishi 在安装时预先配置了一些分组，而新安装的插件会放置在插件列表的底部，这表明它不属于任何分组。插件和分组都可以通过点选并拖拽的方式改变排列顺序或在分组之间移动。相信你也发现了，分组是可以嵌套的。
+Koishi pre-configured some groups during the installation, while newly installed plugins will be placed at the bottom of the plugin list, indicating that it does not belong to any group.Both plugins and groups can change the order or move between groups by clicking and dragging.Believe you also find that the groups can be nested.
 
-创建新的分组同样很简单。点击「全局配置」或任意分组名后，点击右上角的「创建分组」按钮可以在此创建一个新的插件分组。新分组的名字是随机生成的，但你可以点击名字修改成你喜欢的名字。分组可以在左侧栏中点击小三角来控制展开和收起。
+Creating a new group is also simple.In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner to create a new group.The name of the new group is randomly generated, but you can change it by clicking on the name to the name you like.The groups can unfold and fold by clicking on the small triangle in the left bar.
 
-此外，[过滤器](../usage/filter.md) 机制也可用于分组，便于控制一系列插件的行为。
+In addition, the[filter](../usage/filter.md) mechanism can also be used on groups to control the behavior of a series of plugins.
 
 ### Add More Plugins
 
@@ -81,11 +81,11 @@ Click Remove Plugin button in the top right corner in the configuration page of 
 
 ## Update and Uninstall Plugins
 
-前往「依赖管理」页面，你可以在这里看到依赖列表。依赖可能包括 Koishi 本体，各种插件，以及支持插件运行的软件包等。
+Go to the "Dependency Management" page. You can see the dependency list here.Dependencies may include Koishi properties, various plugins, and packages that support plugins to run, etc.
 
 当依赖的状态显示为「可更新」时，点击其右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」按钮即可完成更新。
 
-你也可以批量更新多个插件，通过依赖名右侧的下拉菜单选择好所需更改的版本，点击右上角的「应用更改」按钮即可。此外，右上角的「全部更新」按钮可以一键更新所有依赖。
+You can also update multiple plugins. Select the version you need by relying on the dropdown menu on the right side of the dependency name. Then press the "Apply changes" button in the upper right corner.In addition, the "Update All" button in the top right corner can update all dependencies at a time.
 
 ![dependencies](/manual/console/dependencies.light.webp) {.light-only}
 

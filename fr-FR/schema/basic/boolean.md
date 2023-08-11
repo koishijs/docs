@@ -6,7 +6,7 @@ code: |
   }).description('配置项')
 ---
 
-# 布尔值 (Boolean)
+# Boolean : Valeur booléenne
 
 `Schema.boolean()` 以开关的形式描述了一个布尔值。
 

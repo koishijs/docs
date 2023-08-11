@@ -8,7 +8,7 @@ code: |
   }).description('配置项')
 ---
 
-# 默认值
+# Valeur par défaut
 
 ::: warning
 请注意：`.required()` 与 `.default()` 不能同时使用。

@@ -34,6 +34,6 @@ choices:
         link: /zh-TW/manual/starter/direct.html
 ---
 
-# 选择安装方式
+# 選擇安裝方式
 
 Koishi 提供了多种安装方式，你可以根据自己的需求选择：
