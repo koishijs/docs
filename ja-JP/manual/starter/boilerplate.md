@@ -24,7 +24,7 @@ next:
 
 ## Node.js のインストール
 
-Koishi は [Node.js](https://nodejs.org/) (最低v14、LTS推奨)ランタイム環境が必要のため、インストールする必要があります。
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### インストーラーのダウンロード
 
