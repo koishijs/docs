@@ -1,4 +1,5 @@
 dist/
+external/
 .data
 .temp
 .vitepress/cache

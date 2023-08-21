@@ -89,11 +89,12 @@ export default plugin
 ```json title=package.json
 {
   "main": "lib/node/index.cjs",
-  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "exports": {
     ".": {
       "node": "./lib/node/index.cjs",
-      "browser": "./lib/browser/index.mjs"
+      "browser": "./lib/browser/index.mjs",
+      "types": "./lib/index.d.ts"
     },
     "./shared": {
       "require": "./lib/shared/index.cjs",
