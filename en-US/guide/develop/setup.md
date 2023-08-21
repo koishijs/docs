@@ -4,7 +4,7 @@
 
 ## Install Node.js
 
-Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended) as the runtime environment. You should install it manually.
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### Download Installer
 
