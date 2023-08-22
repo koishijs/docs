@@ -301,3 +301,21 @@ class Console extends Service {
 }
 ```
 :::
+
+## 在清单文件中声明
+
+如果你打算将插件发布到 npm 上，我们建议在插件的 [`package.json`](../develop/publish.md#koishi-字段) 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
+
+```json title=package.json
+{
+  "koishi": {
+    "service": {
+      "required": ["database"],
+      "optional": ["assets", "console"],
+      "implements": ["dialogue"]
+    }
+  }
+}
+```
+
+在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
