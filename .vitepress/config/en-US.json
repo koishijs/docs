@@ -303,20 +303,24 @@
           "text": "Database",
           "items": [
             {
-              "text": "Work with Databases",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "Extend Data Model",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "Lazy Initialization & Auto-update",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "Database Plugin",
-              "link": "/guide/database/writing.md"
+              "text": "Built-in Data Structure",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "Permission Management",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
