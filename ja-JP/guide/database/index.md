@@ -1,52 +1,12 @@
 # 使用数据库
 
 ::: tip
-本章所介绍的内容需要你安装一个数据库支持。如果你暂时不打算使用数据库，那么可以略过。
+`ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#using-属性)。
 :::
 
-对于几乎所有大型机器人项目，数据库的使用都是不可或缺的。但如果每个插件都使用了自己的数据库，这将导致插件之间的兼容性非常差——用户要么选择同时安装多个数据库，要么只能放弃一些功能或者重复造轮子。为此，Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中。同时，我们也提供了一些常用数据库的官方插件，足以应对绝大部分使用场景。
+对于几乎所有大型机器人项目，数据库的使用都是不可或缺的。但如果每个插件都独立处理与数据库的交互，这将导致插件之间的兼容性非常差——用户要么选择同时安装多个数据库，要么只能放弃一些功能。为此，Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中。同时，我们也提供了一些常用数据库的官方插件，足以应对绝大部分使用场景。
 
-## 安装数据库
-
-如果你是插件开发者，你并不需要关心具体的数据库实现。但是如果你是 Koishi 的使用者，只有当安装了数据库你才能正常使用所有的特性。首先你需要安装数据库依赖：
-
-::: tabs code
-```npm
-# 我们以 mysql 数据库为例
-npm i @koishijs/plugin-database-mysql -D
-```
-```yarn
-# 我们以 mysql 数据库为例
-yarn add @koishijs/plugin-database-mysql -D
-```
-:::
-
-然后与你添加插件同样的方法配置你的数据库：
-
-```yaml title=koishi.yml
-plugins:
-  database-mysql:
-    host: host
-    port: 3306
-    user: root
-    password: password
-    database: database
-```
-
-运行程序后，你就可以通过访问 `ctx.database` 来调用数据库接口了：
-
-```ts
-// @errors: 2304
-// 获取用户数据
-const user = await ctx.database.getUser(platform, id)
-
-// 修改频道数据
-await ctx.database.setChannel(platform, id, { assignee: '123456789' })
-```
-
-你可以在后面的 API 文档中看到全部内置的 [数据库方法](../../api/database/database.md)。
-
-## 获取数据
+## `get`：查询数据
 
 使用 `database.get()` 方法以获取特定表中的数据。下面是一个最基本的形式：
 
@@ -97,31 +57,19 @@ await ctx.database.get('schedule', {
 
 你可以在 [这里](../../api/database/query.md) 看到完整的查询表达式 API。
 
-## 添加和删除数据
+## `create`：插入数据
 
-添加和删除数据的语法也非常简单：
+使用 `database.create()` 方法以插入数据。
 
 ```ts
-// @errors: 2304
-// 从 schedule 表中删除特定 id 的数据行
-// 第二个参数也可以使用上面介绍的查询表达式
-await ctx.database.remove('schedule', [id])
-
 // 向 schedule 表中添加一行数据，data 是要添加的数据行
-// 返回值是添加的行的完整数据（包括自动生成的 id 和默认属性等）
+// 返回值是添加的行的完整数据 (包括自动填充的 id 和默认属性等)
 await ctx.database.create('schedule', row)
 ```
 
-## 修改数据
+如果你想要批量插入数据，可以使用下面介绍的 `database.upsert()` 方法。
 
-Koishi 提供了两种修改数据的方法。我们将逐一介绍。
-
-|      | set            | upsert      |
-| ---- | -------------- | ----------- |
-| 作用范围 | 支持复杂的查询表达式     | 只能限定特定字段的值  |
-| 插入行为 | 如果不存在则不会进行任何操作 | 如果不存在则会插入新行 |
-
-### 使用 set 修改数据
+## `set`：修改数据
 
 `database.set()` 方法需要传入三个参数：表名、查询条件和要修改的数据。
 
@@ -146,7 +94,7 @@ await ctx.database.set('foo', { date: new Date() }, {
 
 你可以在 [这里](../../api/database/evaluation.md) 看到完整的求值表达式 API。
 
-### 使用 upsert 修改数据
+## `upsert`：修改或插入数据
 
 `database.upsert()` 的逻辑稍微有些不同，需要你传入一个数组：
 
@@ -186,3 +134,32 @@ await ctx.database.upsert('user', rows, 'onebot')
 // 以复合键为基准对数据表进行更新，你需要确保每一个元素都拥有 platform 和 id 属性
 await ctx.database.upsert('channel', rows, ['platform', 'id'])
 ```
+
+## `remove`：删除数据
+
+使用 `database.remove()` 方法以删除特定表中的数据。
+
+```ts
+// 从 schedule 表中删除特定 id 的数据行
+// 第二个参数也可以使用上面介绍的查询表达式
+await ctx.database.remove('schedule', [id])
+```
+
+## 对比 set 和 upsert
+
+`set` 与 `upsert` 方法都可以用于修改已经存在的数据，它们的区别如下表所示：
+
+|      | set              | upsert        |
+| ---- | ---------------- | ------------- |
+| 作用范围 | 支持复杂的查询表达式       | 只能限定特定字段的值    |
+| 插入行为 | 如果数据不存在则不会进行任何操作 | 如果数据不存在则会插入新行 |
+
+## 对比 create 和 upsert
+
+`create` 与 `upsert` 方法都可以用于插入新的数据，它们的区别如下表所示：
+
+|      | create      | upsert        |
+| ---- | ----------- | ------------- |
+| 插入数量 | 只能插入一条数据    | 可以批量插入多条数据    |
+| 戻り値  | 返回经过填充后的数据  | 没有返回值         |
+| 冲突行为 | 如果数据已存在则会报错 | 如果数据已存在则会执行修改 |
