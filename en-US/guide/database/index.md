@@ -1,4 +1,4 @@
-# Work with Databases
+# 基本用法
 
 ::: tip
 `ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#using-属性)。
@@ -21,8 +21,8 @@ await ctx.database.get('schedule', [1234, 5678])
 对于复杂的数据表，如果你只需要获取少数字段，你可以通过第三个参数手动指定要获取的字段：
 
 ```ts
-// 返回的数组中每个元素只会包含 command, lastCall 属性
-await ctx.database.get('schedule', [1234], ['command', 'lastCall'])
+// 返回的数组中每个元素只会包含 command, time 属性
+await ctx.database.get('schedule', [1234], ['command', 'time'])
 ```
 
 你还可以向第二个参数传入一个对象，用来查询非主键上的数据或者同时指定多列的值：
@@ -77,7 +77,7 @@ await ctx.database.create('schedule', row)
 // 第二个参数也可以使用上面介绍的查询表达式
 await ctx.database.set('schedule', 1234, {
   assignee: 'onebot:123456',
-  lastCall: new Date(),
+  time: new Date(),
 })
 ```
 
