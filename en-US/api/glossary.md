@@ -91,7 +91,7 @@
 
 ## Data Model
 
-- [开发 > 数据库 > 扩展数据模型](../guide/database/model.md#扩展数据模型)
+- [开发 > 数据库 > 数据模型](../guide/database/model.md)
 - [API > 数据库 > 数据模型](./database/model.md)
 
 ## 平台 (Platform)
