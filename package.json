@@ -10,8 +10,8 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
-    "@koishijs/components": "^1.3.3",
-    "@koishijs/core": "^4.14.1",
+    "@koishijs/components": "^1.3.4",
+    "@koishijs/core": "^4.14.2",
     "@koishijs/market": "^4.1.3",
     "@koishijs/registry": "^6.0.3",
     "@koishijs/vitepress": "^2.3.0",
@@ -19,7 +19,7 @@
     "@types/spark-md5": "^3.0.2",
     "cross-env": "^7.0.3",
     "element-plus": "2.3.8",
-    "koishi": "^4.14.1",
+    "koishi": "^4.14.2",
     "marked-vue": "^1.2.3",
     "typescript": "^5.1.6",
     "vitepress": "1.0.0-beta.7",

@@ -1,7 +1,7 @@
 # 数据模型 (Model)
 
 ::: tip
-参见：[开发 > 数据库 > 扩展数据模型](../../guide/database/model.md)
+参见：[开发 > 数据库 > 数据模型](../../guide/database/model.md)
 :::
 
 ## 数据类型
