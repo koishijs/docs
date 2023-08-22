@@ -1,8 +1,12 @@
 # Data Model
 
+::: tip
+参见：[开发 > 数据库 > 数据模型](../../guide/database/model.md)
+:::
+
 ## 数据类型
 
-数据类型会被用于 [`model.extend()`](#model-extend-name-fields-config) 方法中，其定义如下：
+数据类型会被用于 [`model.extend()`](#model-extend) 方法中，其定义如下：
 
 ```ts
 export interface Field<T> {
@@ -11,6 +15,7 @@ export interface Field<T> {
   nullable?: boolean
   initial?: T
   comment?: string
+  legacy?: string[]
 }
 ```
 
@@ -28,7 +33,7 @@ export interface Field<T> {
 |   名称   |  TS 类型   | 默认长度  | 默认初始值 |   说明   |
 |:------:|:--------:|:-----:|:-----:|:------:|
 |  char  | `string` |  64   | `''`  | 定长的字符串 |
-| string | `string` |  256  | `''`  | 变长的字符串 |
+| string | `string` |  255  | `''`  | 变长的字符串 |
 |  text  | `string` | 65535 | `''`  | 变长的字符串 |
 
 ### 时间类型
@@ -60,8 +65,17 @@ export interface Field<T> {
 
 扩展一个新的数据表。
 
-### model.create(name)
+### model.create(name, data)
 
-### model.resolveQuery(query)
+- **name:** `string` 数据表名
+- **data:** `any` 数据
 
-### model.resolveModifier(modifier)
+创建一条新的数据，折叠嵌套属性，并填充必要的默认值。
+
+### model.migrate(name, fields, callback)
+
+- **name:** `string` 数据表名
+- **fields:** `Field.Config` 要迁移的字段信息
+- **callback:** `(db: Database) => Promise<void>` 迁移的回调函数
+
+设置 [整表迁移](../../guide/database/model.md#整表迁移) 的操作。
