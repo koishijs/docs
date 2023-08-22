@@ -303,20 +303,24 @@
           "text": "数据库",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "编写数据库插件",
-              "link": "/guide/database/writing.md"
+              "text": "内置数据结构",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "权限管理",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
