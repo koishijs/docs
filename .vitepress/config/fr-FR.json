@@ -303,20 +303,24 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "Utilisation",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "Données d'expansion",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "Initialisation tardive et mise à jour automatiquement",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "Écrit du plugin de base des données",
-              "link": "/guide/database/writing.md"
+              "text": "内置数据结构",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "权限管理",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
