@@ -303,20 +303,24 @@
           "text": "データベース",
           "items": [
             {
-              "text": "データベースを使用する",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "データモデルを拡張する",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "遅延初期化と自動更新",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "データベースプラグインの作成",
-              "link": "/guide/database/writing.md"
+              "text": "組み込みデータ構造",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "权限管理",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
