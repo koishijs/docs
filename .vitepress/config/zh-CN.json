@@ -285,7 +285,7 @@
           "text": "数据库",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
