@@ -341,7 +341,11 @@
             },
             {
               "text": "Encodé d'éléments",
-              "link": "/guide/adapter/encoder.md"
+              "link": "/guide/adapter/message.md"
+            },
+            {
+              "text": "平台集成",
+              "link": "/guide/adapter/integration.md"
             }
           ]
         },
