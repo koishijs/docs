@@ -58,7 +58,7 @@
 消息元素类似于 HTML 元素，它是组成消息的基本单位。一个元素可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。Koishi 会将这些元素转换为平台所支持的格式，以便在不同平台之间发送和接收消息。
 
 - [开发 > 交互基础 > 消息元素](../guide/basic/element.md)
-- [开发 > 跨平台 > 消息编码](../guide/adapter/encoder.md)
+- [开发 > 跨平台 > 消息编码](../guide/adapter/message.md)
 - [API > 消息元素](./message/syntax.md)
 
 ## 事件 (Events)
