@@ -166,11 +166,12 @@ for (const event of parsed.events) {
 
 首先调整目录结构，在 `server.ts` 和 `polling.ts` 中分别完成两种通信方式的适配器开发：
 
-```text{5-6}
+```text{5D,6-7A}
 adapter-telegram
 ├── src
 │   ├── bot.ts
 │   ├── index.ts
+│   ├── adapter.ts
 │   ├── polling.ts
 │   └── server.ts
 └── package.json
