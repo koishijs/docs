@@ -87,7 +87,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
 <p>指令：translate &lt;text...></p>
-<p>文本翻译</p>
+<p>Перевод текстов</p>
 <p>可用的选项有：</p>
 <p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
 <p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
