@@ -1,7 +1,12 @@
 # 事件系统 (Events)
 
 ::: tip
-相关指南：[事件系统](../../guide/basic/events.md)
+参见：[开发 > 交互基础 > 事件系统](../../guide/basic/events.md)
+<br>参见：[开发 > 模块化 > 生命周期](../../guide/plugin/lifecycle.md)
+:::
+
+::: tip
+本节介绍事件 API。如果想了解 Koishi 的内置事件，请前往 [API > 核心模块 > 事件](../core/events.md)。
 :::
 
 ## 实例方法

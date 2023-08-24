@@ -1,9 +1,13 @@
 # 事件 (Events)
 
-Koishi 封装了一套事件系统。其基本用法与 Node.js 自带的 [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter) 类似，但支持更多的功能，比如多达 6 种的触发形式以及会话事件等。在了解下面的内容之前，建议你先阅读下面的章节：
+::: tip
+参见：[开发 > 交互基础 > 事件系统](../../guide/basic/events.md)
+<br>参见：[开发 > 模块化 > 生命周期](../../guide/plugin/lifecycle.md)
+:::
 
-- [事件系统](../../guide/basic/events.md)
-- [生命周期](../../guide/plugin/lifecycle.md)
+::: tip
+本节介绍 Koishi 的内置事件。如果想了解事件 API，请前往 [API > 内置服务 > 事件](../service/events.md)。
+:::
 
 ## 通用会话事件
 
