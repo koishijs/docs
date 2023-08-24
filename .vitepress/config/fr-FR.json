@@ -469,11 +469,15 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "Registre",
+              "text": "权限管理 (Permissions)",
+              "link": "/api/service/permissions.md"
+            },
+            {
+              "text": "插件系统 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "Service Network",
+              "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
             }
           ]
