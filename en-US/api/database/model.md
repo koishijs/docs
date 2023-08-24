@@ -60,7 +60,7 @@ export interface Field<T> {
 - **config:** `Table.Meta` 表的基本配置
   - **config.primary:** `string | string[]` 主键名，默认为 `'id'`
   - **config.unique:** `(string | string[])[]` 值唯一的键名列表
-  - **config.foreign:** `Dict<[string, string]>` 外键列表
+  - **config.foreign:** `Dict<[string, string]>` 外键列表 <badge type="warning">实验性</badge>
   - **config.autoInc:** `boolean` 是否使用自增主键
 
 扩展一个新的数据表。
@@ -72,7 +72,7 @@ export interface Field<T> {
 
 创建一条新的数据，折叠嵌套属性，并填充必要的默认值。
 
-### model.migrate(name, fields, callback)
+### model.migrate(name, fields, callback) <badge type="warning">实验性</badge>
 
 - **name:** `string` 数据表名
 - **fields:** `Field.Config` 要迁移的字段信息
