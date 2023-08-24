@@ -24,6 +24,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.on](../service/events.md#ctx-on)
 - [ctx.once](../service/events.md#ctx-once)
 - [ctx.parallel](../service/events.md#ctx-parallel)
+- [ctx.permissions](../service/permissions.md)
 - [ctx.plugin](../service/registry.md#ctx-plugin)
 - [ctx.router](../service/router.md)
 - [ctx.scope](../service/registry.md#ctx-scope)
