@@ -1,29 +1,29 @@
 import { defineConfig } from '@koishijs/vitepress'
 import { resolve } from 'path'
-import { mkdir, rm, symlink } from 'fs/promises'
+import { cp, mkdir, rm } from 'fs/promises'
+import { external } from './mixin'
+import mixins from './output'
 
 const isDev = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview'
 
-const external = [] // ['assets', 'cache']
 const locales = ['en-US', 'zh-CN', 'zh-TW', 'de-DE', 'fr-FR', 'ja-JP', 'ru-RU']
 
 export default async () => {
   for (const locale of locales) {
     await rm(resolve(__dirname, '../..', locale, 'external'), { recursive: true, force: true })
-    await mkdir(resolve(__dirname, '../..', locale, 'external'), { recursive: true })
+    await mkdir(resolve(__dirname, '../..', locale, 'ecosystem'), { recursive: true })
   }
 
   for (const name of external) {
-    try {
-      const root = require.resolve(`@root/${name}/package.json`)
-      for (const locale of locales) {
-        await symlink(
+    const root = require.resolve(`@root/${name}/package.json`)
+    for (const locale of locales) {
+      try {
+        await cp(
           resolve(root, '../docs', locale),
-          resolve(resolve(__dirname, '../..', locale, 'external'), name),
+          resolve(resolve(__dirname, '../..', locale, 'ecosystem'), name),
+          { recursive: true, }
         )
-      }
-    } catch (error) {
-      console.log(error)
+      } catch {}
     }
   }
 
@@ -42,6 +42,8 @@ export default async () => {
         'ru-RU': require('./ru-RU'),
       } : {}),
     },
+
+    mixins: await mixins(),
 
     themeConfig: {
       indexName: 'docs',

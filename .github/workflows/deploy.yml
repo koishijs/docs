@@ -46,7 +46,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.WORKFLOW_TOKEN }}
-          external_repository: koishijs/docs-deploy
           publish_branch: dist
           publish_dir: .vitepress/dist
           force_orphan: true
