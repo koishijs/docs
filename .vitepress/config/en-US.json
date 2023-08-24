@@ -469,6 +469,10 @@
               "link": "/api/service/i18n.md"
             },
             {
+              "text": "权限管理 (Permissions)",
+              "link": "/api/service/permissions.md"
+            },
+            {
               "text": "Registry",
               "link": "/api/service/registry.md"
             },
