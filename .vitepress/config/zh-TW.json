@@ -636,16 +636,28 @@
               "link": "/plugins/adapter/mail.md"
             },
             {
+              "text": "Matrix",
+              "link": "/plugins/adapter/matrix.md"
+            },
+            {
               "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ 頻道",
+              "text": "QQGuild",
               "link": "/plugins/adapter/qqguild.md"
+            },
+            {
+              "text": "Slack",
+              "link": "/plugins/adapter/slack.md"
             },
             {
               "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
+            },
+            {
+              "text": "WhatsApp",
+              "link": "/plugins/adapter/whatsapp.md"
             }
           ]
         },
