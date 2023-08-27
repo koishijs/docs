@@ -12,7 +12,9 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-matrix](./adapter/matrix.md)
 - [@koishijs/plugin-adapter-onebot](./adapter/onebot.md)
 - [@koishijs/plugin-adapter-qqguild](./adapter/qqguild.md)
+- [@koishijs/plugin-adapter-slack](./adapter/slack.md)
 - [@koishijs/plugin-adapter-telegram](./adapter/telegram.md)
+- [@koishijs/plugin-adapter-whatsapp](./adapter/whatsapp.md)
 
 ## 数据库支持
 
