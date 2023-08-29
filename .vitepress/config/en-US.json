@@ -130,53 +130,32 @@
           ]
         },
         {
-          "text": "Koishi Console",
+          "text": "使用",
           "items": [
-            {
-              "text": "About Koishi Console",
-              "link": "/manual/console/index.md"
-            },
             {
               "text": "Install and Configure Plugins",
-              "link": "/manual/console/market.md"
+              "link": "/manual/usage/market.md"
             },
             {
-              "text": "Chat in Sandbox",
-              "link": "/manual/console/sandbox.md"
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
             },
-            {
-              "text": "Collaborate with Chat Platforms",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "Usage",
-          "items": [
             {
               "text": "Command System",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "Permission Management",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "Filters",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "Internationalization",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "Recipe",
+          "text": "配方",
           "items": [
             {
               "text": "Advanced Command Tricks",
@@ -201,7 +180,7 @@
           ]
         },
         {
-          "text": "Launcher",
+          "text": "启动器",
           "items": [
             {
               "text": "System Requirements",
@@ -615,6 +594,10 @@
         {
           "text": "Adapter",
           "items": [
+            {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
             {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
