@@ -130,85 +130,64 @@
           ]
         },
         {
-          "text": "Console",
+          "text": "使用",
           "items": [
             {
-              "text": "À propos de la console Koishi",
-              "link": "/manual/console/index.md"
+              "text": "安装和配置插件",
+              "link": "/manual/usage/market.md"
             },
             {
-              "text": "Installation et configuration des plugins",
-              "link": "/manual/console/market.md"
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
             },
             {
-              "text": "Chat dans le bac à sable",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "Connexion avec les plateformes conversationnelles",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "Utilisation",
-          "items": [
-            {
-              "text": "Système commande",
+              "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "Système des comptes",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "Gestion des permissions",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "Filtres",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "Internationalisation",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "Recettes",
+          "text": "配方",
           "items": [
             {
-              "text": "Solutions perfectionnées des commandes",
+              "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Utilisation de la base des données",
+              "text": "访问数据库",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "Maintenance des multiples configurations",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "Rechercher sur la place de marché",
+              "text": "搜索插件市场",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "Déploiement",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "Lanceur",
+          "text": "启动器",
           "items": [
             {
-              "text": "Configuration requise",
+              "text": "系统要求",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "Outil de ligne de commande",
+              "text": "L'outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -616,6 +595,10 @@
           "text": "Adaptateurs",
           "items": [
             {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
@@ -632,7 +615,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "E-mail",
+              "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
