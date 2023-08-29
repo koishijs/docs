@@ -130,48 +130,27 @@
           ]
         },
         {
-          "text": "Консоль",
-          "items": [
-            {
-              "text": "认识控制台",
-              "link": "/manual/console/index.md"
-            },
-            {
-              "text": "安装和配置插件",
-              "link": "/manual/console/market.md"
-            },
-            {
-              "text": "在沙盒中聊天",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "接入聊天平台",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
           "text": "使用",
           "items": [
+            {
+              "text": "安装和配置插件",
+              "link": "/manual/usage/market.md"
+            },
+            {
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
+            },
             {
               "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "过滤器",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "国际化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
@@ -615,6 +594,10 @@
         {
           "text": "适配器支持",
           "items": [
+            {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
             {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
