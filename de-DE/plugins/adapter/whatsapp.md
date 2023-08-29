@@ -15,27 +15,27 @@
 ### config.id
 
 - 类型：`string`
-- 必选项
+- 必需选项
 
 商户 ID。
 
 ### config.secret
 
 - 类型：`string`
-- 必选项
+- 必需选项
 
 应用密钥。
 
 ### config.systemToken
 
 - 类型：`string`
-- 必选项
+- 必需选项
 
 系统用户访问令牌。
 
 ### config.verifyToken
 
 - 类型：`string`
-- 必选项
+- 必需选项
 
 Webhook 验证令牌。
