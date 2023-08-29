@@ -105,5 +105,5 @@ yarn start
 
 恭喜你已经掌握了 Koishi 的基本用法！接下来：
 
-- 如果你希望学习使用 Koishi 控制台，请前往 [认识控制台](../console/index.md)
+- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md) (推荐)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
