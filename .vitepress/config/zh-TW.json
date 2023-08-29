@@ -130,48 +130,27 @@
           ]
         },
         {
-          "text": "控制檯",
-          "items": [
-            {
-              "text": "認識控制檯",
-              "link": "/manual/console/index.md"
-            },
-            {
-              "text": "安裝和配置外掛",
-              "link": "/manual/console/market.md"
-            },
-            {
-              "text": "在沙盒中聊天",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "接入聊天平臺",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
           "text": "使用",
           "items": [
+            {
+              "text": "安裝和配置外掛",
+              "link": "/manual/usage/market.md"
+            },
+            {
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
+            },
             {
               "text": "指令系統",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "權限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "過濾器",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "國際化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
@@ -179,36 +158,36 @@
           "text": "配方",
           "items": [
             {
-              "text": "指令進階技巧",
+              "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "訪問資料庫",
+              "text": "访问数据库",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "維護多份配置",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜尋外掛市場",
+              "text": "搜索插件市场",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公網部署",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "啟動器",
+          "text": "启动器",
           "items": [
             {
-              "text": "系統要求",
+              "text": "系统要求",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "命令列工具",
+              "text": "命令行工具",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -616,6 +595,10 @@
           "text": "配接器支援",
           "items": [
             {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
@@ -632,7 +615,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "電子郵件",
+              "text": "Mail",
               "link": "/plugins/adapter/mail.md"
             },
             {
