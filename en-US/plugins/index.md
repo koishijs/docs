@@ -4,6 +4,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 
 ## Adapter
 
+- [@koishijs/plugin-adapter-dingtalk](./adapter/dingtalk.md)
 - [@koishijs/plugin-adapter-discord](./adapter/discord.md)
 - [@koishijs/plugin-adapter-kook](./adapter/kook.md)
 - [@koishijs/plugin-adapter-lark](./adapter/lark.md)
