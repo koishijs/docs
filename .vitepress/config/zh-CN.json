@@ -577,6 +577,10 @@
           "text": "适配器支持",
           "items": [
             {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },

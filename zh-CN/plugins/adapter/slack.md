@@ -59,12 +59,14 @@
 ### config.token
 
 - 类型: `string`
+- 必需选项
 
 应用令牌。
 
 ### config.botToken
 
 - 类型: `string`
+- 必需选项
 
 机器人令牌。
 
@@ -73,6 +75,7 @@
 ### config.signing
 
 - 类型: `string`
+- 必需选项
 
 用于验证请求来源的签名密钥。
 
