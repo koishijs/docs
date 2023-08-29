@@ -595,7 +595,7 @@
           "text": "Adapter",
           "items": [
             {
-              "text": "Dingtalk",
+              "text": "钉钉",
               "link": "/plugins/adapter/dingtalk.md"
             },
             {
@@ -627,7 +627,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "QQ Guild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
@@ -637,6 +637,14 @@
             {
               "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/plugins/adapter/wechat-official.md"
+            },
+            {
+              "text": "企业微信",
+              "link": "/plugins/adapter/wecom.md"
             },
             {
               "text": "WhatsApp",
