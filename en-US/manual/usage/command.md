@@ -121,7 +121,7 @@ For groups with lots of people or more than one bot, we strongly recommend that 
 
 1. `prefix` is a list with default value `['']` for triggering a prefix without prefix; empty the list will not trigger all instructions via `prefix` (but can still be triggered by private chat or `nickname` or @Bot)
 2. If you set multiple values in `prefix` such as `['.', '/', '']`, then `.`, `/` or no prefix can all trigger the command; but empty string `'` must be written in the last one because Koishi matches each prefix in order
-3. You can set different `prefix`for different sessions, refer to [filter](./filter.md) section
+3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
 :::
 
 ## Subcommands
@@ -159,7 +159,7 @@ In the example above, we can also find Koishi has two different types of subcomm
 熟悉 Git 的用户可能会发现，这种设计正是借鉴了 Git 的二级指令：当一个指令的功能过于复杂时，我们可以将其拆分为多个子指令，从而使得指令的功能更加清晰。
 
 ::: tip
-至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./i18n.md) 一节再详细介绍。
+至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./customize.md#国际化) 一节再详细介绍。
 :::
 
 ## Command Management
@@ -184,4 +184,4 @@ In the example above, we can also find Koishi has two different types of subcomm
 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
-For user permissions, refer to [permissions management](./permission.md) section.
+关于用户权限，请参考 [权限管理](./customize.md#权限管理) 一节。
