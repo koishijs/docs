@@ -105,5 +105,5 @@ yarn start
 
 Congratulations on mastering the basic of Koishi! Moving forward:
 
-- If you're interested in learning how to use the Koishi Console, please proceed to [About Koishi Console](../console/index.md).
+- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md) (推荐)
 - If you're interested in developing your own plugin immediately, please proceed to the [Developing Guide](../../guide/index.md).
