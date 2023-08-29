@@ -22,10 +22,10 @@
 
 仅仅是在沙盒中对话是远远不够的。我们需要将机器人接入到真实的聊天平台中，才能让它真正地为我们服务。Koishi 使用适配器插件来支持各种聊天平台。下面是官方维护的适配器列表：
 
-- [Dingtalk (钉钉)](../../plugins/adapter/dingtalk.md)
+- [钉钉](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
 - [KOOK](../../plugins/adapter/kook.md)
-- [Lark (飞书)](../../plugins/adapter/lark.md)
+- [Lark](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
 - [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
@@ -33,6 +33,8 @@
 - [QQ 频道](../../plugins/adapter/qqguild.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
+- [微信公众号](../../plugins/adapter/wechat-official.md)
+- [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
 其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
