@@ -130,64 +130,43 @@
           ]
         },
         {
-          "text": "コンソール",
+          "text": "使用",
           "items": [
             {
-              "text": "コンソールについて",
-              "link": "/manual/console/index.md"
+              "text": "安装和配置插件",
+              "link": "/manual/usage/market.md"
             },
             {
-              "text": "プラグインのインストールと設定",
-              "link": "/manual/console/market.md"
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
             },
             {
-              "text": "サンドボックスでのチャット",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "チャットアプリに接続",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "使い方",
-          "items": [
-            {
-              "text": "コマンドシステム",
+              "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "権限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "フィルター",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "国際化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "レシピ",
+          "text": "配方",
           "items": [
             {
-              "text": "コマンド (アドバンスト)",
+              "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "データベースにアクセス",
+              "text": "访问数据库",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "マルチ設定",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -195,13 +174,13 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "デプロイメント",
+              "text": "ウェブ上で公開する",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "ランチャー",
+          "text": "启动器",
           "items": [
             {
               "text": "システム要件",
@@ -615,6 +594,10 @@
         {
           "text": "アダプター",
           "items": [
+            {
+              "text": "Dingtalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
             {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
