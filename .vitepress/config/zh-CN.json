@@ -119,7 +119,7 @@
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次聊天",
+              "text": "第一次对话",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -127,20 +127,12 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "过滤器",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "国际化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },

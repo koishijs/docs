@@ -38,7 +38,7 @@
 
 ## 控制台 (Console)
 
-- [入门 > 认识控制台](../manual/usage/index.md)
+- [入门 > 认识控制台](../manual/usage/market.md#认识控制台)
 - [开发 > 控制台](../guide/console/index.md)
 - [API > 控制台](./console/server.md)
 
@@ -69,7 +69,7 @@
 
 ## 过滤器 (Filter)
 
-- [入门 > 过滤器](../manual/usage/filter.md)
+- [入门 > 过滤器](../manual/usage/customize.md#过滤器)
 - [开发 > 模块化 > 过滤器](../guide/plugin/filter.md)
 - [API > 内置服务 > 过滤器](./service/filter.md)
 
