@@ -6,7 +6,7 @@
 
 适配器是指实现了平台协议，能够让机器人接入平台的插件。通常来说一个适配器实例对应了一个机器人用户，同时启用多个适配器就实现了多个机器人的同时接入。
 
-- [入门 > 接入聊天平台](../manual/console/adapter.md)
+- [入门 > 接入聊天平台](../manual/usage/adapter.md)
 - [开发 > 跨平台 > 实现适配器](../guide/adapter/adapter.md)
 - [API > 核心模块 > 适配器](./core/adapter.md)
 
@@ -38,7 +38,7 @@
 
 ## 控制台 (Console)
 
-- [入门 > 认识控制台](../manual/console/index.md)
+- [入门 > 认识控制台](../manual/usage/index.md)
 - [开发 > 控制台](../guide/console/index.md)
 - [API > 控制台](./console/server.md)
 

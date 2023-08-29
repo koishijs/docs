@@ -115,16 +115,12 @@
           "text": "使用",
           "items": [
             {
-              "text": "认识控制台",
-              "link": "/manual/console/index.md"
-            },
-            {
               "text": "安装和配置插件",
-              "link": "/manual/console/market.md"
+              "link": "/manual/usage/market.md"
             },
             {
               "text": "第一次聊天",
-              "link": "/manual/console/adapter.md"
+              "link": "/manual/usage/adapter.md"
             },
             {
               "text": "指令系统",
