@@ -112,7 +112,7 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "使用",
           "items": [
             {
               "text": "认识控制台",
@@ -123,18 +123,9 @@
               "link": "/manual/console/market.md"
             },
             {
-              "text": "在沙盒中聊天",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "接入聊天平台",
+              "text": "第一次聊天",
               "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "使用",
-          "items": [
+            },
             {
               "text": "指令系统",
               "link": "/manual/usage/command.md"
