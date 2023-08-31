@@ -2,46 +2,7 @@
 
 本节将介绍推荐的开发环境搭建流程。如果某些软件已经安装完成，可以跳过对应的步骤。
 
-## Install Node.js
-
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
-
-### Download Installer
-
-Firstly, we should go to the official website of [Node.js](https://nodejs.org/):
-
-![home](/manual/nodejs/home-dark.webp) {.dark-only}
-
-![home](/manual/nodejs/home-light.webp) {.light-only}
-
-So we see here are two green buttons, which are **LTS (Long-term Support version)** and **Current (the Latest version)**. The stable LTS version is recommended. Click the button to download the installer.
-
-Then, launch the installer you just downloaded, complete the installation process.
-
-### NPM
-
-[NPM](https://www.npmjs.com/) is the built-in package manager of Node.js, you could use it directly. We also recommend the powerful [Yarn](https://classic.yarnpkg.com/) as the package manager. It is very simple to install Yarn, just enter the following command into command line.
-
-```sh
-# install yarn
-npm i -g yarn
-
-# check yarn version
-yarn -v
-```
-
-### Configure Registry Mirror
-
-If you live in Chinese mainland, it might be very slow when you download dependencies from npm or yarn. Therefore, it is recommended to configure a registry mirror to speed up the installation process.
-
-::: tabs code
-```npm
-npm config set registry https://registry.npmmirror.com
-```
-```yarn
-yarn config set registry https://registry.npmmirror.com
-```
-:::
+<!--@include: ../../manual/starter/boilerplate.md{25,80}-->
 
 ### 注册 npm
 
@@ -63,7 +24,7 @@ Git 是最普遍使用的版本控制工具。前往 [官网](https://git-scm.co
 
 ![downloads](/manual/git/downloads.webp)
 
-国内的 Windows 用户也可以选择从 [镜像](https://registry.npmmirror.com/binary.html?path=git-for-windows/) 下载。如果不知道下载哪个版本，可以在上面的官网中看到 (比如现在是 2.39.1)。
+国内的 Windows 用户也可以选择从 [镜像](https://registry.npmmirror.com/binary.html?path=git-for-windows/) 下载。如果不知道下载哪个版本，可以在上面的官网中看到 (比如图中就是 2.39.1)。
 
 获取到安装包后，双击运行。安装过程无需手动配置，一直点击下一步即可完成安装。
 
@@ -110,7 +71,6 @@ yarn create koishi
 Follow the prompts and finalize the initialization process.
 
 If you have successfully finalized the operations above, your application should be already launched, the Koishi Console Web UI should be also opened. 接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
-
 
 <!-- ## 安装 VSCode (可选)
 
