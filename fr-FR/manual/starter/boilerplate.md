@@ -51,7 +51,7 @@ yarn -v
 ```
 
 ::: tip
-部分 Windows 用户可能会发现以下错误：
+部分 Windows 用户可能会发现以下错误 ([参考链接](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
 
 ```text
 yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
@@ -121,5 +121,5 @@ yarn start
 
 恭喜你已经掌握了 Koishi 的基本用法！接下来：
 
-- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md) (推荐)
+- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
