@@ -172,9 +172,9 @@ if (type === 'text') {
 
 由于不同平台对于媒体资源的支持类型、发送方式、渲染形式有所不同，因此资源元素的情况会更加复杂。可以大致将各种平台规定的发送方式分为以下几类：
 
-1. 通过不同的 API 发送不同类型的资源 (如 Telegram)
-2. 使用统一的 API，但通过不同的字段区分资源类型 (如 Discord)
-3. 先上传资源获得链接或资源 ID，再调用发送 API (如 Lark)
+1. 通过不同的 API 发送不同类型的资源 (例如 Telegram)
+2. 使用统一的 API，但通过不同的字段区分资源类型 (例如 Discord)
+3. 先上传资源获得链接或资源 ID，再调用发送 API (例如 Lark)
 
 这里我们还是以 Telegram 平台为例。首先照例修改 `visit` 方法。由于 Telegram 仅支持资源 + 文本的组合 (文本显示在资源下方)，因此我们需要进行消息分片：
 
@@ -251,3 +251,52 @@ class QQGuildMessageEncoder {
 ```
 
 在这一段代码中使用了 `this.options`，它存储了一些额外的发送选项。其中 `session` 正好对应着接收到消息的会话对象。当我们调用 `session.send()` 时，Koishi 会把当前的会话对象传递给 `MessageEncoder`。这样一来，我们就可以在发送消息时带上回复目标了。
+
+### 资源反向代理
+
+一些平台会使用 ID 标识资源文件 (例如 Lark)。当你接收到来自平台的消息时，拿到的是资源 ID 而非资源链接。此时你需要将资源 ID 转换为资源链接，才能构造合法的资源元素。
+
+::: tip
+Telegram 是另一种特殊情况。尽管其提供的资源链接是可用的，但这个链接中会明文包含机器人令牌，并非可以公开使用的链接。因此 Telegram 和其他类似平台也适用于这一节的内容。
+:::
+
+对于这种情况，一种**不推荐**的做法是直接下载资源，并转存为 `data:` 链接放入消息中。之所以不推荐，是因为这种做法有两大致命缺点：
+
+1. 这些图片本来可以按需加载，但现在却被强制下载到本地，造成额外的带宽消耗。
+2. 编码为 `data:` 会导致消息体积大幅增加，极大影响消息处理的性能。
+
+那么，有没有更好的解决方案呢？答案便是资源反向代理。我们要做的，是在本地提供一个路由，将资源 ID 映射到资源链接。这样一来，上面提到的两个问题也就都解决了。
+
+下面是 Lark 适配器的一部分代码，用于实现资源反向代理 (位于 `adapter.ts`)：
+
+```ts
+class LarkAdapter {
+  constructor(ctx: Context) {
+    ctx.router.get('/lark/assets/:message_id/:key', async (ctx) => {
+      const key = ctx.params.key
+      const messageId = ctx.params.message_id
+      const selfId = ctx.request.query.self_id
+      const bot = this.bots.find((bot) => bot.selfId === selfId)
+      if (!bot) return ctx.status = 404
+      const response = await bot.http(`/im/v1/messages/${messageId}/resources/${key}`, {
+        method: 'GET',
+        params: { type: 'image' },
+        responseType: 'stream',
+      })
+      ctx.status = 200
+      ctx.response.headers['content-type'] = response.headers['content-type']
+      ctx.response.body = response.data
+    })
+  }
+}
+```
+
+然后在接收消息的逻辑中，我们只需要将资源 ID 转换为资源链接即可：
+
+```ts
+h.image(`http://${host}/image/${message_id}/${image_key}?self_id=${selfId}`)
+```
+
+::: tip
+反向代理同时也带来了一个新的问题，那就是当这个链接被原样发送时，外网可能无法访问到这个链接。但无需担心，上面提到的 `http.file()` 方法恰好可以解决这个问题。因此，即使经过了反向代理，Koishi 也可以确保消息的跨平台转发插件能够正常工作。
+:::
