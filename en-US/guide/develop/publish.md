@@ -119,16 +119,16 @@ We can also use the `koishi` field to specify Koishi related information
     "koishi": "^4.3.2"
   },
   "koishi": {
-    "description": {                        // 不同语言的插件描述
+    "description": {                        // descriptions in different languages
       "en": "English Description",
       "zh": "中文描述"
     },
     "service": {
-      "required": ["database"],             // 必需的服务
-      "optional": ["assets"],               // 可选的服务
-      "implements": ["dialogue"],           // 实现的服务
+      "required": ["database"],             // dependent services of required
+      "optional": ["assets"],               // dependent services of optional
+      "implements": ["dialogue"],           // services provided by the itself
     },
-    "locales": ["en", "zh"],                // 支持的语言
+    "locales": ["en", "zh"],                // supported languages
   }
 }
 ```
@@ -141,9 +141,9 @@ We can also use the `koishi` field to specify Koishi related information
 - **locales:** 插件支持的语言，应该是一个语言名构成的数组
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
-## Publish Your Plugin
+## Publish your plugin
 
-编辑完上面的清单文件并 [构建源代码](./workspace.md#构建源代码) 后，你就可以公开发布你的插件了。
+Congratulations! It's time to publish your plugin, after editing the file above and [build source](./workspace.md#构建源代码).
 
 ::: tabs code
 ```npm
@@ -154,10 +154,15 @@ yarn pub [...name]
 ```
 :::
 
-- **name:** 要发布的插件列表，缺省时表示全部 (此处 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区目录名)
+- **name:** list of plugins to be published, all by default ( `name` is your plugin directory name)
 
-这将发布所有版本号发生变动的插件。
+This will be released of all plugins that have changed version numbers.
 
+::: tip
+从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
+:::
+
+:::: tip
 如果你配置了国内镜像，你可能会遇到以下的错误提示：
 
 ```text
@@ -177,11 +182,12 @@ yarn login
 ```
 :::
 
-发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。
+发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。 :
+:::
 
-## 更新插件版本
+## Updating version
 
-初始创建的插件版本号为 `1.0.0`。当你修改过插件后，你需要更新版本号才能重新发布。在应用目录运行下面的命令以更新版本号：
+Version default starts from `1.0.0`. Its number needs to be updated before releasing changes. Run the command in the workspace root to update that:
 
 ::: tabs code
 ```npm
@@ -192,16 +198,16 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 :::
 
-- **name:** 要更新的插件列表，不能为空
-- **-1, --major:** 跳到下一个大版本，例如 `3.1.4` -> `4.0.0`
-- **-2, --minor:** 跳到下一个中版本，例如 `3.1.4` -> `3.2.0`
-- **-3, --patch:** 跳到下一个小版本，例如 `3.1.4` -> `3.1.5`
-- **-p, --prerelease:** 跳到下一个预览版本，具体行为如下
-  - 如果当前版本是 `alpha.x`，则跳到 `beta.0`
-  - 如果当前版本是 `beta.x`，则跳到 `rc.0`
-  - 如果当前版本是 `rc.x`，则移除 prerelease 部分
-  - 其他情况下，跳到下一个大版本的 `alpha.0`
-- **-v, --version:** 设置具体的版本号
+- **name: ** Mandatory field. List of plugins.
+- **-1, --major:** To the next major version, e.g. `3.1.4` -> `4.0.0`.
+- **-2, --minor:** To the next minor version, e.g. `3.1.4` -> `3.2.0`.
+- **-3, --patch:** To the next patch version, e.g. `3.1.4` -> `3.1.5` .
+- **-p, --prereelease:** to next preview version:
+  - To `beta.0` if the release is `alpha.x`
+  - To `rc.0` if the release is `beta.x`
+  - Remove the prerelease section if the release is `rc.x`
+  - Otherwise, to the next major version of `alpha.0`
+- **-v, --version:** set specific version
 - 缺省情况：按照当前版本的最后一位递增
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
