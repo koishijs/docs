@@ -50,6 +50,22 @@ npm i -g yarn
 yarn -v
 ```
 
+::: tip
+部分 Windows 用户可能会发现以下错误：
+
+```text
+yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+```
+
+此时请以管理员身份重新运行终端，并输入下面的命令：
+
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
+之后就可以正常使用 yarn 了。
+:::
+
 ### Configure Registry Mirror
 
 If you live in Chinese mainland, it might be very slow when you download dependencies from npm or yarn. Therefore, it is recommended to configure a registry mirror to speed up the installation process.
