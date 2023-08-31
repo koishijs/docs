@@ -48,7 +48,7 @@ The `package.json` is more than just name and version of the plugin. It also inc
 ### Requirements
 
 ::: tip
-If your plugin created using the boilerplate, you may skip this section.
+You may skip this section, if your plugin created using the boilerplate.
 :::
 
 The `package.json` in your plugin should meet the requirements below to appear in the marketplace:
@@ -60,7 +60,7 @@ The `package.json` in your plugin should meet the requirements below to appear i
   - \* is a string of digits, lowercase letters and dashes
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
 - The [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) be in the form `x. x. x` and should follow [semantic versioning guidelines](https://semver.org/lang/zh-CN/) (usually from `1.0.0`)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) should include `koishi`
+- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) must include `koishi`
 - Do not set [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) to `true`, otherwise your plugin cannot be published to npm
 - Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) your plugin, unless you have a good reason to do so. For example, if you want to republish the plugin with a different name, you can use it to hide the old plugin on the marketplace.
 
@@ -109,7 +109,7 @@ To make more information available to Koishi users, you could add more comprehen
 
 ### Koishi fields
 
-除此以外，我们还提供了一个额外的 `koishi` 字段，用于指定与 Koishi 相关的信息。
+We can also use the `koishi` field to specify Koishi related information
 
 ```json title=package.json
 {
