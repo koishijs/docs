@@ -50,6 +50,22 @@ npm i -g yarn
 yarn -v
 ```
 
+::: tip
+部分 Windows 用户可能会发现以下错误：
+
+```text
+yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+```
+
+此时请以管理员身份重新运行终端，并输入下面的命令：
+
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
+之后就可以正常使用 yarn 了。
+:::
+
 ### 配置镜像源
 
 如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
