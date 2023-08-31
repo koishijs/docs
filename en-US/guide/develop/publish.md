@@ -208,6 +208,6 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
   - Remove the prerelease section if the release is `rc.x`
   - Otherwise, to the next major version of `alpha.0`
 - **-v, --version:** set specific version
-- 缺省情况：按照当前版本的最后一位递增
+- Default: incremented by the last of the release version number
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
