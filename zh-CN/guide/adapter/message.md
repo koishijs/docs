@@ -1,9 +1,5 @@
 # 消息编码
 
-::: danger 注意
-此页文档正在施工，其中的内容可能不是最新。
-:::
-
 在 [实现机器人](./bot.md#在适配器中访问) 一节中，我们其实已经涉及了格式转换的概念：
 
 ```ts
@@ -102,12 +98,12 @@ class TelegramMessageEncoder extends MessageEncoder {
 
   // 发送缓冲区内的消息
   async flush() {
+    let message: Telegram.Message
     if (this.payload.text) {
-      const message = await this.bot.internal.sendMessage(this.payload)
-      await this.addResult(message)
-      delete this.payload.reply_to_message_id
-      this.payload.text = ''
+      message = await this.bot.internal.sendMessage(this.payload)
     }
+    await this.addResult(message)
+    this.payload.text = ''
   }
 
   // 遍历消息元素
@@ -160,13 +156,10 @@ if (type === 'text') {
 - 部分平台不支持某些消息元素的组合 (例如图文混合发送)，此时必须对消息进行拆分
 - 待发送的消息长度超出平台限制，此时必须对消息进行拆分
 
-在需要对消息进行分片的场合，我们可以手动调用 `flush()` 方法。例如下面的代码展示了如何实现 `<message>` 和 `<quote>` 元素：
+在需要对消息进行分片的场合，我们可以手动调用 `flush()` 方法。下面的代码展示了如何实现 `<message>` 元素：
 
 ```ts
 // 忽略前面的部分
-} else if (type === 'quote') {
-  // 将引用消息的 ID 添加到缓冲区
-  this.payload.reply_to_message_id = attrs.id
 } else if (type === 'message') {
   // 在解析内部元素之前先清空缓冲区
   await this.flush()
@@ -175,3 +168,86 @@ if (type === 'text') {
 } else ...
 ```
 
+### 资源元素
+
+由于不同平台对于媒体资源的支持类型、发送方式、渲染形式有所不同，因此资源元素的情况会更加复杂。可以大致将各种平台规定的发送方式分为以下几类：
+
+1. 通过不同的 API 发送不同类型的资源 (如 Telegram)
+2. 使用统一的 API，但通过不同的字段区分资源类型 (如 Discord)
+3. 先上传资源获得链接或资源 ID，再调用发送 API (如 Lark)
+
+这里我们还是以 Telegram 平台为例。首先照例修改 `visit` 方法。由于 Telegram 仅支持资源 + 文本的组合 (文本显示在资源下方)，因此我们需要进行消息分片：
+
+```ts
+// 忽略前面的部分
+} else if (['image', 'audio', 'video', 'file'].includes(type)) {
+  await this.flush()
+  this.asset = element
+} else ...
+```
+
+接着，我们需要在 `flush` 方法中处理资源元素。Telegram 的资源上传接口是 `sendPhoto`、`sendAudio` 等，与文本所用的 `sendMessage` 不同，因此我们需要根据资源类型进行判断：
+
+```ts
+class TelegramMessageEncoder {
+  async flush() {
+    let message: Telegram.Message
+    if (this.asset) {
+      const form = new FormData()
+      for (const key in this.payload) {
+        form.append(key, this.payload[key].toString())
+      }
+      const { type, attrs } = this.asset
+      const { filename, data } = await this.bot.ctx.http.file(attrs.url, attrs)
+      if (type === 'image') {
+        form.append('photo', data, filename)
+        message = await this.bot.internal.sendPhoto(form)
+      } else if (type === 'audio') {
+        form.append('audio', data, filename)
+        message = await this.bot.internal.sendAudio(form)
+      } else if (type === 'video') {
+        form.append('video', data, filename)
+        message = await this.bot.internal.sendVideo(form)
+      } else if (type === 'file') {
+        form.append('document', data, filename)
+        message = await this.bot.internal.sendDocument(form)
+      }
+      this.asset = null
+    } else if (this.payload.text) {
+      message = await this.bot.internal.sendMessage(this.payload)
+    }
+    await this.addResult(message)
+    this.payload.text = ''
+  }
+}
+```
+
+差不多这样就实现了资源元素的发送。值得一提的是，这里的代码使用了 `http.file()` 方法。它可以自动为我们处理 `http:`、`file:`、`data:` 等各种协议的资源链接，并将它们统一转换为 `ArrayBuffer`。这可以省去适配器解析资源链接的步骤，对于适配器开发是非常方便的。
+
+## 进阶知识
+
+下面的知识并非适用于所有适配器。但对于一些特殊的平台，你可能会用到这些知识。
+
+### 被动型平台
+
+我们通常将机器人做出的交互行为分为两种：主动交互和被动交互。
+
+- 主动交互是指机器人主动进行某些操作，例如定时任务、通知推送。
+- 被动交互是指机器人接收到特定事件后做出的响应，例如消息回复、入群欢迎。
+
+遗憾的是，部分平台会限制机器人的主动交互能力。例如，在 QQ 频道中，机器人每天只能发送极少量的主动消息；而对于被动消息，则必须在用户发送消息后的短时间内回复。这种平台被称为**被动型平台**。
+
+被动型平台要求适配器在发送消息时尽可能带有回复目标。当然 Koishi 也提供了解决方案：
+
+```ts{5}
+class QQGuildMessageEncoder {
+  async flush() {
+    await this.bot.internal.sendMessages(this.channelId, {
+      content: this.content,
+      msgId: this.options?.session?.messageId,
+    })
+  }
+}
+```
+
+在这一段代码中使用了 `this.options`，它存储了一些额外的发送选项。其中 `session` 正好对应着接收到消息的会话对象。当我们调用 `session.send()` 时，Koishi 会把当前的会话对象传递给 `MessageEncoder`。这样一来，我们就可以在发送消息时带上回复目标了。
