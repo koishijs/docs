@@ -111,6 +111,24 @@ yarn build [...name]
 - 后端代码将输出到 `external/example/lib` 目录
 - 前端代码将输出到 `external/example/dist` 目录 (如果存在)
 
+## 添加依赖
+
+插件创建时，`package.json` 中已经包含了一些必要的依赖。如果你需要添加其他依赖，可以使用下面的命令：
+
+::: tabs code
+```npm
+npm install [...deps] -w koishi-plugin-[name]
+```
+```yarn
+yarn workspace koishi-plugin-[name] add [...deps]
+```
+:::
+
+- **name:** 你的插件名称
+- **deps:** 要添加的依赖列表
+
+如果要添加的是 `devDependencies` 或者 `peerDependencies`，你也需要在命令后面加上 `-D` 或 `-P` 参数。关于服务类插件的依赖声明，请参考 [后续章节](../plugin/service.md#关于-peerdependencies)。
+
 ## 更新依赖版本
 
 尽管 npm 和 yarn 等包管理器都提供了依赖更新功能，但它们对工作区开发的支持都不是很好。因此，我们也提供了一个简单的命令用于批量更新依赖版本。
