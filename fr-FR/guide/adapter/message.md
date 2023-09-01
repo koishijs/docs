@@ -185,7 +185,7 @@ if (type === 'text') {
 接着，我们需要在 `flush` 方法中处理资源元素。Telegram 的资源上传接口是 `sendPhoto`、`sendAudio` 等，与文本所用的 `sendMessage` 不同，因此我们需要根据资源类型进行判断：
 
 ```ts
-class TelegramMessageEncoder {
+class TelegramMessageEncoder extends MessageEncoder {
   async flush() {
     let message: Telegram.Message
     if (this.asset) {
@@ -222,7 +222,7 @@ class TelegramMessageEncoder {
 
 ## 进阶知识
 
-下面的知识并非适用于所有适配器。但对于一些特殊的平台，你可能会用到这些知识。
+下面的知识并非适用于所有适配器。但对于一些特殊的平台，你可能会用到它们。
 
 ### 被动型平台
 
