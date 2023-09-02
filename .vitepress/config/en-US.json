@@ -595,7 +595,7 @@
           "text": "Adapter",
           "items": [
             {
-              "text": "钉钉",
+              "text": "DingTalk",
               "link": "/plugins/adapter/dingtalk.md"
             },
             {
