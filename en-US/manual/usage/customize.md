@@ -27,7 +27,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 <chat-panel>
 <chat-message nickname="Alice">authorize -u @Bob 2</chat-message>
-<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+<chat-message nickname="Koishi">User data updated.</chat-message>
 </chat-panel>
 
 任何用户只能对权限等级低于自己的用户进行操作，且操作后的权限等级同样必须低于自己。
@@ -52,7 +52,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 ## Filters
 
-Many times, we hope that certain features can only be used for certain group or private chats.Using permission management means introducing a database, and a lighter approach is to directly affect the plugin's functional diagram through**filters**.
+Many times, we hope that certain features can only be used for certain group or private chats.Using permission management means introducing a database, and a lighter approach is to directly affect the plugin's functional diagram through **filters**.
 
 ### Plugin Filters
 
@@ -92,19 +92,19 @@ Koishi supports internationalization natively, which means that a Koishi bot cou
 
 In Koishi, each user and channel managed by the application itself can independently set language preferences.其中，应用级别的默认语言通过全局配置项 `locale` 来设置，而用户、频道的语言偏好则通过 [admin](../../plugins/common/admin.md) 插件提供的 `user.locale` 和 `channel.locale` 指令来管理 (还记得指令系统中的 [这个例子](./command.md#子指令) 吧)。
 
-默认情况下，语言偏好的优先级是 频道 > 用户 > 全局。A group may have a large number of users who use different native languages participating in discussions, and different language channels are usually set up to facilitate communication.而对于此类情况，频道优先策略就可以让机器人在这些频道内始终使用预设好的语言来回答，而对于未设置语言偏好的频道，机器人仍然会遵循用户的偏好设置。Of course, you can also change this behavior through the global configuration item`i18n. output`.
+By default, the priority of preferred language is Channel > User > GlobalA group may have a large number of users who use different native languages participating in discussions, and different language channels are usually set up to facilitate communication.而对于此类情况，频道优先策略就可以让机器人在这些频道内始终使用预设好的语言来回答，而对于未设置语言偏好的频道，机器人仍然会遵循用户的偏好设置。Of course, you can also change this behavior through the global configuration item`i18n. output`.
 
 ### Localize Text
 
-当然，绝大部分插件都仅仅支持了中文。如果你希望你的机器人支持其他语言，除了向这些插件的作者提交 Pull Request 外，还可以本地修改插件的文本。
+Of course, most plugins only support Chinese.If you want to make your Koishi bot support other languages, you can modify texts of plugins locally, instead of sending Pull Requests to their authors.
 
-在活动栏中点击「本地化」，你将看到如下的界面：
+Click 'Localization' on the activity bar, you will see page like below:
 
 ![locales](/manual/console/locales.dark.webp) {.dark-only}
 
 ![locales](/manual/console/locales.light.webp) {.light-only}
 
-左侧可以选择类别，右上角可以选择要显示的语言，而中间则是编辑文本的区域。其中，文本框里的占位符对应于插件本身提供的文本，可以在翻译到其他语言时用做参考。
+Select categories on the left, and select the language to display in the top right corner, and the zone to edit texts is in the middle.其中，文本框里的占位符对应于插件本身提供的文本，可以在翻译到其他语言时用做参考。
 
 然而，这个页面还有另一个用法，就是修改已有的文本！例如在上面的截图中，`low-authority` 原本对应到的文本是 `权限不足`，我们可以将它修改为 `哼，不给用`。现在让我们找个带权限等级的指令试试看有什么效果：
 
@@ -113,4 +113,4 @@ In Koishi, each user and channel managed by the application itself can independe
 <chat-message nickname="Koishi">哼，不给用！</chat-message>
 </chat-panel>
 
-只要你如法炮制，就可以配置出一套完全属于你的机器人文案，让你的机器人与众不同。
+If you do things like above, you can get fully customized texts of your bot, and make your bot very different.
