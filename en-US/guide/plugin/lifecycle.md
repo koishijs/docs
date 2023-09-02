@@ -4,16 +4,16 @@
 
 要了解 Koishi 所提供的全部事件，可以参考 [事件列表](../../api/core/events.md)。
 
-## 异步加载与 `ready` 事件
+## Asynchronous loading and `ready` event
 
 `ready` 事件在应用启动时触发。如果一个插件在加载时，应用已经处于启动状态，则会立即触发。在下面的场景建议将逻辑放入 `ready` 事件：
 
 - 含有异步操作 (比如文件操作，网络请求等)
 - 希望等待其他插件加载完成后才执行的操作
 
-## 副作用与 `dispose` 事件
+## Side effects and `dispose` event
 
-### 停用插件
+### Unload Plugins
 
 之前我们已经了解了插件的启用，而 Koishi 同样支持在运行时停用一个插件。`ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
 
@@ -42,7 +42,7 @@ fork.dispose()
 ctx.registry.delete(plugin)
 ```
 
-### 清除副作用
+### Clear side effects
 
 Koishi 的插件系统支持热重载，即任何一个插件可能在运行时被多次加载和卸载。要实现这一点，我们就必须在插件被卸载时清除它的所有副作用。
 
@@ -68,9 +68,9 @@ export function apply(ctx: Context, config) {
 }
 ```
 
-## 可重用性与 `fork` 事件
+## Reusability and `fork` Event
 
-### 可重用插件
+### Reusable Plugins
 
 到此为止，我们所介绍的插件开发都限定在插件只能同时启用一份的情况。如果你想要在同一个应用中同时启用多份插件，会发生什么呢？
 
@@ -127,7 +127,7 @@ export default class Bar {
 }
 ```
 
-### 维护共享状态
+### Maintain Shared States
 
 一种更复杂的情况是，我们既需要插件可重用，又需要维护一些共享状态。例如，我们能否编写一个指令，使得它总是返回插件被调用的次数呢？这时候 `fork` 事件就派上用场了：
 
@@ -156,7 +156,7 @@ export function apply(ctx: Context) {
 
 最后，`fork` 事件的回调函数与插件本身类似，也接受 `ctx` 和 `config` 两个参数，分别对应于该次调用时传入插件的参数。外侧和内侧的 `ctx` 含义不同，请格外注意。
 
-### 嵌套插件的可重用性
+### Nested Plugin Reusability
 
 让我们重新梳理一下可重用插件的概念：
 
@@ -165,7 +165,7 @@ export function apply(ctx: Context) {
 
 当我们嵌套使用可重用插件和不可重用插件时，又会发生什么呢？让我们来看一些例子吧。
 
-#### 情况一：不可重用插件嵌套可重用插件
+#### Condition I: reusable plugin in non-reusable plugins
 
 实际上我们会发现，`reusable` 属性只是 `fork` 事件的语法糖。下面两种写法是等价的：
 
@@ -188,7 +188,7 @@ ctx.plugin((ctx) => {
 
 然而，如果你直接将可重用插件嵌套在不可重用插件中，由于外层的插件只会执行一次，所以内层的插件也并不会被重复执行。这显然不是我们想要的结果。这就是为什么我们需要 `fork` 事件。当你需要在不可重用的插件中重用某段代码，你就应该使用 `fork` 事件，就像上面的例子一样。
 
-#### 情况二：可重用插件嵌套不可重用插件
+#### Condition II: non-reusable plugin in reusable plugins
 
 反过来的情况则更加自然：如果你在可重用插件内调用了一个不可重用的插件，那么可重用插件将被多次执行，而不可重用则会确保只被执行一次。这种写法常常用于注册指令或其他服务：
 
@@ -216,7 +216,7 @@ export function apply(ctx: Context, config: Config) {
 }
 ```
 
-## 重新认识上下文
+## Rethinking Contexts
 
 从学习 Koishi 开发的一开始，我们就已经接触到了 **上下文 (Context)** 这个概念。我们所熟悉的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.command()` 等等 API 都是上下文类所提供的方法。而在本节中，我们进一步看到，上下文在插件开发中扮演着非常重要的角色。
 
