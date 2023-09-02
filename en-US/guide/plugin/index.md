@@ -10,11 +10,11 @@ Modular is a fundamental feature in Koishi.With the plugin system, Koishi was ab
 
 A plugin needs to be one of three basic forms:
 
-1. 一个接受两个参数的函数，第一个参数是所在的上下文，第二个参数是传入的配置项
-2. 一个接受两个参数的类，第一个参数是所在的上下文，第二个参数是传入的配置项
+1. A function that accepts two parameters, which are the context and the configuration
+2. A class that accepts two constructor parameters, which are the context and the configuration
 3. An object which has a `apply` method of the object and the method is the function in the first form
 
-而一个插件在被加载时，则相当于进行了上述函数的调用。Therefore, the four formulations below are basic equivalent:
+The loading of this plugin is equivalent to the invocation the above function. Therefore, the four formulations below are basic equivalent:
 
 ```ts
 declare const callback: Middleware
@@ -64,7 +64,7 @@ namespace Bar {
 export default Bar
 ```
 
-## 嵌套的插件
+## Nested Plugins
 
 Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子模块，再将调用这些子模块的一个新插件作为入口模块，就像这样：
 
