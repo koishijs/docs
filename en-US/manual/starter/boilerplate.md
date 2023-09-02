@@ -24,7 +24,7 @@ Of course, you could also use the template project in production. While it might
 
 ## Install Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi requires [Node.js](https://nodejs.org/) (at least v16, suggested to use LTS versions) Runtime, you need to install it.
 
 ### Download Installer
 
@@ -51,19 +51,19 @@ yarn -v
 ```
 
 ::: tip
-部分 Windows 用户可能会发现以下错误 ([参考链接](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
+Some Windows users may get errors like below ([Reference Link](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
 
 ```text
-yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+yarn: File yarn.ps1 cannot be loaded because running scripts is disabled on this system.
 ```
 
-此时请以管理员身份重新运行终端，并输入下面的命令：
+Now start a (PowerShell) terminal with elevated permission (as Administrator), run the command below:
 
 ```sh
 Set-ExecutionPolicy RemoteSigned
 ```
 
-之后就可以正常使用 yarn 了。
+Then you can use Yarn normally.
 :::
 
 ### Configure Registry Mirror
@@ -121,5 +121,5 @@ yarn start
 
 Congratulations on mastering the basic of Koishi! Moving forward:
 
-- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
+- If you want to know more features about Koishi, please refer to [Install and Configure Plugins](../usage/market.md)
 - If you're interested in developing your own plugin immediately, please proceed to the [Developing Guide](../../guide/index.md).
