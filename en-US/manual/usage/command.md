@@ -121,7 +121,7 @@ For groups with lots of people or more than one bot, we strongly recommend that 
 
 1. `prefix` is a list with default value `['']` for triggering a prefix without prefix; empty the list will not trigger all instructions via `prefix` (but can still be triggered by private chat or `nickname` or @Bot)
 2. If you set multiple values in `prefix` such as `['.', '/', '']`, then `.`, `/` or no prefix can all trigger the command; but empty string `'` must be written in the last one because Koishi matches each prefix in order
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
+3. You can set different `prefix` for different sessions, learn more in [Filters](./customize.md#过滤器) section
 :::
 
 ## Subcommands
@@ -148,7 +148,7 @@ In the example above, we can also find Koishi has two different types of subcomm
 <chat-message nickname="Koishi">User data updated.</chat-message>
 </chat-panel>
 
-如果父指令本身没有功能，那么 `user` 和 `user -h` 的效果是一样的。此时，我们也可以使用空格代替小数点进行派生式子指令的调用：
+If the parent command didn't have a feature itself, then the effect of `user` and `user -h` are the same.In that situation, we can use spaces instead of dots to call derivative subcommands:
 
 <chat-panel>
 <chat-message nickname="Alice">user locale zh
@@ -156,15 +156,15 @@ In the example above, we can also find Koishi has two different types of subcomm
 <chat-message nickname="Koishi">用户数据已修改。</chat-message>
 </chat-panel>
 
-熟悉 Git 的用户可能会发现，这种设计正是借鉴了 Git 的二级指令：当一个指令的功能过于复杂时，我们可以将其拆分为多个子指令，从而使得指令的功能更加清晰。
+Users who are familiar with Git may find out, this design draws on the 2-level command of Git: When features of a command are too complex, we can split them into several subcommands, to make the feature of command clear.
 
 ::: tip
-至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./customize.md#国际化) 一节再详细介绍。
+You may already guess out what does user.locale do.We will talk more about it in [Internationalization](./customize.md#国际化) section.
 :::
 
 ## Command Management
 
-打开控制台，我们会在活动栏中找到名为「指令管理」的页面。你可以在这里查看当前所有指令的列表，并对指令的行为进行设置。
+Open the Console, we can find the page named 'Command Management' on the activity bar.You can view a list of all current commands here, and set behaviors of these commands.
 
 ### Set Aliases
 
@@ -184,4 +184,4 @@ In the example above, we can also find Koishi has two different types of subcomm
 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
-关于用户权限，请参考 [权限管理](./customize.md#权限管理) 一节。
+For user permissions, please refer to [Permission Management](./customize.md#权限管理) section.
