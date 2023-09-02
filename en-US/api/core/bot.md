@@ -8,27 +8,27 @@
 
 标有 <badge>内置</badge> 的 API 已经由 Koishi 提供，适配器可以覆盖对应的方法，但是无需自行实现。
 
-## 实例属性
+## Instance Properties
 
-### bot.config <badge>内置</badge>
+### bot.config <badge>built-in</badge>
 
-- 类型: `object`
+- Type: `object`
 
 构造 `Bot` 实例时所使用的配置项。
 
-### bot.ctx <badge>内置</badge>
+### bot.ctx <badge>built-in</badge>
 
-- 类型: [`Context`](./context.md)
+- Type: [`Context`](./context.md)
 
 当前 `Bot` 所在的 [Context](./context.md) 实例。
 
-### bot.adapter <badge>内置</badge>
+### bot.adapter <badge>built-in</badge>
 
-- 类型: [`Adapter`](./adapter.md)
+- Type: [`Adchapter`](./adapter.md)
 
 当前 `Bot` 所在的 [Adapter](./adapter.md) 实例。
 
-### bot.status <badge>内置</badge>
+### bot.status <badge>built-in</badge>
 
 - 可选值: online, offline, connect, disconnect, reconnect
 
@@ -36,42 +36,42 @@
 
 ### bot.platform
 
-- 类型: `string`
+- Type: `string`
 
 当前 `Bot` 的 [平台名称](../glossary.md#平台-platform)。
 
 ### bot.avatar
 
-- 类型: `string`
+- Type: `string`
 
 当前 `Bot` 的头像。
 
 ### bot.username
 
-- 类型: `string`
+- Type: `string`
 
 当前 `Bot` 的用户名。
 
 ### bot.userId
 
-- 类型: `string`
+- Type: `string`
 
 当前 `Bot` 的平台账号。
 
-## 适配器相关
+## Adapter Related
 
-### bot.dispatch(session) <badge>内置</badge>
+### bot.dispatch(session) <badge>built-in</badge>
 
-- **session:** [`Session`](./session.md) 会话实例
+- **session:** [`Session`](./session.md) Session instance
 
-触发一个会话事件。
+Dispatch a session event.
 
-### bot.session(data) <badge>内置</badge>
+### bot.session(data) <badge>built-in</badge>
 
-- **data:** [`Partial<Session>`](./session.md) 会话数据
-- 返回值: [`Session`](./session.md) 会话实例
+- **data:** [`Partial<Session>`](./session.md) Session data
+- Return value: [`Session`](./session.md) Session instance
 
-创建一个新的会话实例。
+Create a new session instance.
 
 ### bot.online() <badge>内置</badge>
 
