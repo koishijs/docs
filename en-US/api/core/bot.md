@@ -219,7 +219,7 @@ export interface UserInfo {
 
 获取用户信息。
 
-### bot.getFriendList()
+### bot.getFriendList() <badge>实验性</badge>
 
 - 返回值: `Promise<UserInfo[]>` 好友列表
 
@@ -239,7 +239,7 @@ export interface GuildInfo {
 }
 ```
 
-### bot.getGuildList()
+### bot.getGuildList() <badge>实验性</badge>
 
 - 返回值: `Promise<GuildInfo[]>` 群组列表
 
@@ -266,10 +266,10 @@ export interface GuildMemberInfo extends UserInfo {
 }
 ```
 
-### bot.getGuildMemberList(guildId)
+### bot.getGuildMemberList(guildId) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `Promise<GuildMemberInfo[]>` 群成员列表
+- 返回值: `Promise<List<GuildMemberInfo>>` 群成员列表
 
 获取群成员列表。
 
@@ -294,7 +294,7 @@ export interface ChannelInfo {
 }
 ```
 
-### bot.getChannelList(guildId)
+### bot.getChannelList(guildId) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<ChannelInfo[]>` 频道列表
