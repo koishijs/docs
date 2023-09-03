@@ -1,12 +1,12 @@
 # Bots
 
 ::: warning
-本节中介绍的 API 均为实验性功能，可能在后续版本中发生变化。
+本节中介绍的 API 目前属于实验性功能，可能在后续版本中发生变化。
 :::
 
 `ctx.bots` 保存了当前全部 [Bot](../core/bot.md) 实例。它继承了 Array 类，因此你可以使用诸如 `ctx.bots.forEach()` 的写法。除此以外，我们还提供了一些与机器人相关的实用方法。
 
-## 实例属性
+## Instance Properties
 
 ### ctx.bots\[sid]
 

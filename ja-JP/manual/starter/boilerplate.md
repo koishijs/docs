@@ -24,7 +24,7 @@ next:
 
 ## Node.js のインストール
 
-Koishi は [Node.js](https://nodejs.org/) (最低v14、LTS推奨)ランタイム環境が必要のため、インストールする必要があります。
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### インストーラーのダウンロード
 
@@ -49,6 +49,22 @@ npm i -g yarn
 # バージョンの確認
 yarn -v
 ```
+
+::: tip
+部分 Windows 用户可能会发现以下错误 ([参考链接](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
+
+```text
+yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+```
+
+此时请以管理员身份重新运行终端，并输入下面的命令：
+
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
+之后就可以正常使用 yarn 了。
+:::
 
 ### ミラーサイトの設定
 
@@ -105,5 +121,5 @@ yarn start
 
 おめでとうございます！Koishi の基本的な使い方をマスターしましたね。次のステップ：
 
-- Koishi コンソールの使い方を学びたい場合は、[コンソールについて](../console/index.md) に進んでください
+- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - プラグイン開発をすぐに始めたい場合は、[開発ガイド](../../guide/index.md) に進んでください

@@ -1,5 +1,9 @@
 # 指令 (Command)
 
+::: tip
+参见：[开发 > 交互基础 > 指令开发](../../guide/basic/command.md)
+:::
+
 指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例，它含有下面的方法：
 
 ## Argv 对象
@@ -79,7 +83,7 @@ type CommandAction = (argv: Argv, ...args: any[]) => Awaitable<string | void>
 - **fields:** `FieldCollector<UserField>` 要请求的用户字段
 - 返回值: `this`
 
-如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/observer.md#声明所需字段)章节。
+如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
 ```ts
 type FieldCollector<K extends string> =
@@ -92,7 +96,7 @@ type FieldCollector<K extends string> =
 - **fields:** `FieldCollector<ChannelField>` 要请求的频道字段
 - 返回值: `this`
 
-如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/observer.md#声明所需字段)章节。
+如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
 ### cmd.alias(...names)
 

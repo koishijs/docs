@@ -1,5 +1,9 @@
 # 机器人 (Bot)
 
+::: tip
+参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
+:::
+
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
 标有 <badge>内置</badge> 的 API 已经由 Koishi 提供，适配器可以覆盖对应的方法，但是无需自行实现。
@@ -215,7 +219,7 @@ export interface UserInfo {
 
 获取用户信息。
 
-### bot.getFriendList()
+### bot.getFriendList() <badge>实验性</badge>
 
 - 返回值: `Promise<UserInfo[]>` 好友列表
 
@@ -235,7 +239,7 @@ export interface GuildInfo {
 }
 ```
 
-### bot.getGuildList()
+### bot.getGuildList() <badge>实验性</badge>
 
 - 返回值: `Promise<GuildInfo[]>` 群组列表
 
@@ -262,10 +266,10 @@ export interface GuildMemberInfo extends UserInfo {
 }
 ```
 
-### bot.getGuildMemberList(guildId)
+### bot.getGuildMemberList(guildId) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `Promise<GuildMemberInfo[]>` 群成员列表
+- 返回值: `Promise<List<GuildMemberInfo>>` 群成员列表
 
 获取群成员列表。
 
@@ -290,7 +294,7 @@ export interface ChannelInfo {
 }
 ```
 
-### bot.getChannelList(guildId)
+### bot.getChannelList(guildId) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - 返回值: `Promise<ChannelInfo[]>` 频道列表

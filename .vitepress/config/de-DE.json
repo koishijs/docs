@@ -130,48 +130,27 @@
           ]
         },
         {
-          "text": "Konsole",
-          "items": [
-            {
-              "text": "Über die Konsole",
-              "link": "/manual/console/index.md"
-            },
-            {
-              "text": "Installation und Konfiguration der Plugins",
-              "link": "/manual/console/market.md"
-            },
-            {
-              "text": "Chatten in der Sandbox",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "接入聊天平台",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
           "text": "使用",
           "items": [
+            {
+              "text": "安装和配置插件",
+              "link": "/manual/usage/market.md"
+            },
+            {
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
+            },
             {
               "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "权限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "过滤器",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "国际化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
@@ -303,20 +282,24 @@
           "text": "数据库",
           "items": [
             {
-              "text": "使用数据库",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "扩展数据模型",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "按需加载和自动更新",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "编写数据库插件",
-              "link": "/guide/database/writing.md"
+              "text": "内置数据结构",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "权限管理",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
@@ -337,7 +320,11 @@
             },
             {
               "text": "消息编码",
-              "link": "/guide/adapter/encoder.md"
+              "link": "/guide/adapter/message.md"
+            },
+            {
+              "text": "平台集成",
+              "link": "/guide/adapter/integration.md"
             }
           ]
         },
@@ -459,6 +446,10 @@
             {
               "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
+            },
+            {
+              "text": "权限管理 (Permissions)",
+              "link": "/api/service/permissions.md"
             },
             {
               "text": "插件系统 (Registry)",
@@ -604,6 +595,10 @@
           "text": "适配器支持",
           "items": [
             {
+              "text": "钉钉",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
@@ -612,7 +607,7 @@
               "link": "/plugins/adapter/kook.md"
             },
             {
-              "text": "Lark",
+              "text": "飞书",
               "link": "/plugins/adapter/lark.md"
             },
             {
@@ -620,20 +615,40 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "Mail",
+              "text": "邮件",
               "link": "/plugins/adapter/mail.md"
+            },
+            {
+              "text": "Matrix",
+              "link": "/plugins/adapter/matrix.md"
             },
             {
               "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "QQ 频道",
               "link": "/plugins/adapter/qqguild.md"
+            },
+            {
+              "text": "Slack",
+              "link": "/plugins/adapter/slack.md"
             },
             {
               "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/plugins/adapter/wechat-official.md"
+            },
+            {
+              "text": "企业微信",
+              "link": "/plugins/adapter/wecom.md"
+            },
+            {
+              "text": "WhatsApp",
+              "link": "/plugins/adapter/whatsapp.md"
             }
           ]
         },
@@ -979,6 +994,14 @@
             {
               "text": "v4.11 版本介绍",
               "link": "/about/releases/v4.11.md"
+            },
+            {
+              "text": "v4.12 版本介绍",
+              "link": "/about/releases/v4.12.md"
+            },
+            {
+              "text": "v4.13 版本介绍",
+              "link": "/about/releases/v4.13.md"
             }
           ]
         },

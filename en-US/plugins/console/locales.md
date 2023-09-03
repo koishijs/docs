@@ -1,7 +1,7 @@
 # Localization Management (Locales)
 
 ::: tip
-使用方法请参见 [入门 > 国际化 > 本地化文本](../../manual/usage/i18n.md#本地化文本) 一节。
+使用方法请参见 [入门 > 国际化](../../manual/usage/customize.md#本地化文本) 一节。
 :::
 
 @koishijs/plugin-locales 允许你在本地覆盖和扩展 Koishi 本体和其他插件的翻译文本。

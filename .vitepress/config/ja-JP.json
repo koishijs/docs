@@ -130,64 +130,43 @@
           ]
         },
         {
-          "text": "コンソール",
+          "text": "使用",
           "items": [
             {
-              "text": "コンソールについて",
-              "link": "/manual/console/index.md"
+              "text": "安装和配置插件",
+              "link": "/manual/usage/market.md"
             },
             {
-              "text": "プラグインのインストールと設定",
-              "link": "/manual/console/market.md"
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
             },
             {
-              "text": "サンドボックスでのチャット",
-              "link": "/manual/console/sandbox.md"
-            },
-            {
-              "text": "チャットアプリに接続",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "使い方",
-          "items": [
-            {
-              "text": "コマンドシステム",
+              "text": "指令系统",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "権限管理",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "フィルター",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "国際化",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "レシピ",
+          "text": "配方",
           "items": [
             {
-              "text": "コマンド (アドバンスト)",
+              "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "データベースにアクセス",
+              "text": "访问数据库",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "マルチ設定",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -195,13 +174,13 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "デプロイメント",
+              "text": "ウェブ上で公開する",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "ランチャー",
+          "text": "启动器",
           "items": [
             {
               "text": "システム要件",
@@ -303,20 +282,24 @@
           "text": "データベース",
           "items": [
             {
-              "text": "データベースを使用する",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "データモデルを拡張する",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "遅延初期化と自動更新",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "データベースプラグインの作成",
-              "link": "/guide/database/writing.md"
+              "text": "組み込みデータ構造",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "权限管理",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
@@ -337,7 +320,11 @@
             },
             {
               "text": "消息编码",
-              "link": "/guide/adapter/encoder.md"
+              "link": "/guide/adapter/message.md"
+            },
+            {
+              "text": "平台集成",
+              "link": "/guide/adapter/integration.md"
             }
           ]
         },
@@ -459,6 +446,10 @@
             {
               "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
+            },
+            {
+              "text": "权限管理 (Permissions)",
+              "link": "/api/service/permissions.md"
             },
             {
               "text": "插件系统 (Registry)",
@@ -604,6 +595,10 @@
           "text": "アダプター",
           "items": [
             {
+              "text": "钉钉",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
@@ -620,20 +615,40 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "Mail",
+              "text": "邮件",
               "link": "/plugins/adapter/mail.md"
+            },
+            {
+              "text": "Matrix",
+              "link": "/plugins/adapter/matrix.md"
             },
             {
               "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "QQ 频道",
               "link": "/plugins/adapter/qqguild.md"
+            },
+            {
+              "text": "Slack",
+              "link": "/plugins/adapter/slack.md"
             },
             {
               "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/plugins/adapter/wechat-official.md"
+            },
+            {
+              "text": "企业微信",
+              "link": "/plugins/adapter/wecom.md"
+            },
+            {
+              "text": "WhatsApp",
+              "link": "/plugins/adapter/whatsapp.md"
             }
           ]
         },
@@ -979,6 +994,14 @@
             {
               "text": "v4.11 のバージョン情報",
               "link": "/about/releases/v4.11.md"
+            },
+            {
+              "text": "v4.12 版本介绍",
+              "link": "/about/releases/v4.12.md"
+            },
+            {
+              "text": "v4.13 版本介绍",
+              "link": "/about/releases/v4.13.md"
             }
           ]
         },

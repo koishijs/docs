@@ -24,7 +24,7 @@ Of course, you could also use the template project in production. While it might
 
 ## Install Node.js
 
-Koishi requires [Node.js](https://nodejs.org/) (minimum v14, LTS is recommended) as the runtime environment. You should install it manually.
+Koishi requires [Node.js](https://nodejs.org/) (at least v16, suggested to use LTS versions) Runtime, you need to install it.
 
 ### Download Installer
 
@@ -49,6 +49,22 @@ npm i -g yarn
 # check yarn version
 yarn -v
 ```
+
+::: tip
+Some Windows users may get errors like below ([Reference Link](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
+
+```text
+yarn: File yarn.ps1 cannot be loaded because running scripts is disabled on this system.
+```
+
+Now start a (PowerShell) terminal with elevated permission (as Administrator), run the command below:
+
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
+Then you can use Yarn normally.
+:::
 
 ### Configure Registry Mirror
 
@@ -105,5 +121,5 @@ yarn start
 
 Congratulations on mastering the basic of Koishi! Moving forward:
 
-- If you're interested in learning how to use the Koishi Console, please proceed to [About Koishi Console](../console/index.md).
+- If you want to know more features about Koishi, please refer to [Install and Configure Plugins](../usage/market.md)
 - If you're interested in developing your own plugin immediately, please proceed to the [Developing Guide](../../guide/index.md).

@@ -6,7 +6,7 @@
 
 适配器是指实现了平台协议，能够让机器人接入平台的插件。In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
 
-- [入门 > 接入聊天平台](../manual/console/adapter.md)
+- [入门 > 接入聊天平台](../manual/usage/adapter.md)
 - [开发 > 跨平台 > 实现适配器](../guide/adapter/adapter.md)
 - [API > 核心模块 > 适配器](./core/adapter.md)
 
@@ -38,7 +38,7 @@
 
 ## Console (Console)
 
-- [入门 > 认识控制台](../manual/console/index.md)
+- [入门 > 认识控制台](../manual/usage/market.md#认识控制台)
 - [开发 > 控制台](../guide/console/index.md)
 - [API > 控制台](./console/server.md)
 
@@ -58,7 +58,7 @@
 消息元素类似于 HTML 元素，它是组成消息的基本单位。一个元素可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。Koishi 会将这些元素转换为平台所支持的格式，以便在不同平台之间发送和接收消息。
 
 - [开发 > 交互基础 > 消息元素](../guide/basic/element.md)
-- [开发 > 跨平台 > 消息编码](../guide/adapter/encoder.md)
+- [开发 > 跨平台 > 消息编码](../guide/adapter/message.md)
 - [API > 消息元素](./message/syntax.md)
 
 ## Events
@@ -69,7 +69,7 @@
 
 ## 过滤器 (Filter)
 
-- [入门 > 过滤器](../manual/usage/filter.md)
+- [入门 > 过滤器](../manual/usage/customize.md#过滤器)
 - [开发 > 模块化 > 过滤器](../guide/plugin/filter.md)
 - [API > 内置服务 > 过滤器](./service/filter.md)
 
@@ -91,7 +91,7 @@
 
 ## Data Model
 
-- [开发 > 数据库 > 扩展数据模型](../guide/database/model.md#扩展数据模型)
+- [开发 > 数据库 > 数据模型](../guide/database/model.md)
 - [API > 数据库 > 数据模型](./database/model.md)
 
 ## 平台 (Platform)

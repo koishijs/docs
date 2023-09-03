@@ -1,6 +1,6 @@
 # Registry
 
-## 实例属性
+## Instance Properties
 
 以下实例属性都是只读的。
 

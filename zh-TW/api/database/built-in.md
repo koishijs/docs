@@ -27,7 +27,7 @@ Koishi 的資料庫 API 實際上分為兩部分：
 
 - **platform:** `string` 平臺名
 - **id:** `string` 頻道賬號
-- **assignee:** `string` [指派人](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [受理人](../../manual/usage/customize.md#受理人机制)
 - **permissions:** `string[]` 許可權列表
 - **locales:** `string[]` 語言列表
 

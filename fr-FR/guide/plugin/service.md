@@ -301,3 +301,88 @@ class Console extends Service {
 }
 ```
 :::
+
+## 在 `package.json` 中声明依赖
+
+如果你打算将插件发布到插件市场，我们建议在插件的 [`package.json`](../develop/publish.md#koishi-字段) 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
+
+```json title=package.json
+{
+  "koishi": {
+    "service": {
+      "required": ["database"],
+      "optional": ["assets", "console"],
+      "implements": ["dialogue"]
+    }
+  }
+}
+```
+
+在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
+
+### 关于 `peerDependencies`
+
+一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
+
+1. `peerDependencies` 描述的是 npm 包的运行时行为。如果对应的依赖不存在，那么程序预期无法正常运行 (除非在 `peerDependenciesMeta` 中指明可选性)。而对于 Koishi 插件来说，由于有了 `using` 机制，即使依赖的服务不存在，程序也不会崩溃。
+
+2. `peerDependencies` 是一对一的关系，即依赖的只能是另一个确定的包。而 Koishi 中的服务则是一对多的关系，即依赖的服务可以被多个插件所提供。
+
+基于以上两点，关于是否要在插件的 `package.json` 中为服务声明 `peerDependencies`，我们可以根据插件从依赖中导入的内容来判断：
+
+#### 情况一：插件仅导入了类型声明
+
+这是绝大部分的情况。在这种情况下，我们无需声明 `peerDependencies`，但建议把依赖加入 `devDependencies` 中。下面将以 puppeteer 插件提供的服务为例介绍：
+
+```ts
+// import {} 的意思是，我们只需要类型声明，而不需要导入任何内容
+// 在编译后，这个语句会被移除，不会引入任何副作用
+import {} from '@koishijs/plugin-puppeteer'
+
+// 通过 using 属性声明依赖，并通过 ctx 来访问服务
+export const using = ['puppeteer']
+export function apply(ctx: Context) {
+  ctx.puppeteer.render()
+}
+```
+
+此时插件的 `package.json` 可以这样写：
+
+```json title=package.json
+{
+  "service": {
+    "required": ["puppeteer"]
+  },
+  "devDependencies": {
+    "@koishijs/plugin-puppeteer": "^2.0.0"
+  }
+}
+```
+
+#### 情况二：插件导入了类型声明以外的内容
+
+一个典型的例子是 console 服务。一些控制台扩展需要从 `@koishijs/plugin-console` 中导入 `DataService` 基类。此时你的代码应该是这样的：
+
+```ts
+import { DataService } from '@koishijs/plugin-console'
+
+export class ExamplePlugin extends DataService {
+  // ...
+}
+```
+
+此时你需要同时声明 `peerDependencies` 和 `devDependencies`：
+
+```json
+{
+  "service": {
+    "required": ["console"]
+  },
+  "peerDependencies": {
+    "@koishijs/plugin-console": "^5.13.0"
+  },
+  "devDependencies": {
+    "@koishijs/plugin-console": "^5.13.0"
+  }
+}
+```

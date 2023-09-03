@@ -2,46 +2,7 @@
 
 本节将介绍推荐的开发环境搭建流程。如果某些软件已经安装完成，可以跳过对应的步骤。
 
-## 安装 Node.js
-
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v14，推荐使用 LTS) 运行环境，你需要自己安装它。
-
-### 下载安装包
-
-首先我们前往 [Node.js](https://nodejs.org/) 的官方网站：
-
-![home](/manual/nodejs/home-dark.webp) {.dark-only}
-
-![home](/manual/nodejs/home-light.webp) {.light-only}
-
-在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。我们建议你选择更加稳定的 LTS 版本，点击按钮即可下载安装包。
-
-随后，运行下载好的安装包，根据提示完成整个安装流程即可。
-
-### 安装包管理器
-
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
-
-```sh
-# 安装 yarn
-npm i -g yarn
-
-# 查看版本
-yarn -v
-```
-
-### 配置镜像源
-
-如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
-
-::: tabs code
-```npm
-npm config set registry https://registry.npmmirror.com
-```
-```yarn
-yarn config set registry https://registry.npmmirror.com
-```
-:::
+<!--@include: ../../manual/starter/boilerplate.md{25,80}-->
 
 ### 注册 npm
 
@@ -63,7 +24,7 @@ Git 是最普遍使用的版本控制工具。前往 [官网](https://git-scm.co
 
 ![downloads](/manual/git/downloads.webp)
 
-国内的 Windows 用户也可以选择从 [镜像](https://registry.npmmirror.com/binary.html?path=git-for-windows/) 下载。如果不知道下载哪个版本，可以在上面的官网中看到 (比如现在是 2.39.1)。
+国内的 Windows 用户也可以选择从 [镜像](https://registry.npmmirror.com/binary.html?path=git-for-windows/) 下载。如果不知道下载哪个版本，可以在上面的官网中看到 (比如图中就是 2.39.1)。
 
 获取到安装包后，双击运行。安装过程无需手动配置，一直点击下一步即可完成安装。
 
@@ -110,7 +71,6 @@ yarn create koishi
 跟随提示即可完成全套初始化流程。
 
 如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
-
 
 <!-- ## 安装 VSCode (可选)
 

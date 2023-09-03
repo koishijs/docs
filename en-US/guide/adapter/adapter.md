@@ -1,8 +1,8 @@
-# 实现适配器
+# Implement Adapters
 
-我们已经知道，单独一个 `Bot` 类已经构成一个合法的插件了。不过，这样的插件只具备调用平台 API 的能力，还无法接收消息。这个时候就需要 `Adapter` 类出场了。
+We know that a single `Bot` class is already a valid plugin. However, such plugin has only the ability to call the platform API and cannot receive messages. 这个时候就需要 `Adapter` 类出场了。
 
-## 适配器的类型
+## Types of Adapters
 
 适配器需要建立并维护机器人与聊天平台之间的连接。通常来说，根据协议的不同，适配器与机器人可能是一对一的，也可能是一对多的。让我们再看一眼之前介绍过的 `ReplBot` 实例：
 
@@ -23,9 +23,9 @@ class ReplBot extends Bot {
 
 简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对多的就使用 `Adapter.Server` 基类，否则使用 `Adapter.Client` 基类。当然，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
 
-## 典型实现
+## Typical Implementations
 
-下面让我们看几种典型的适配器实现。
+Let's see a few typical adapters.
 
 ### WebSocket
 
@@ -138,7 +138,7 @@ const bot = this.bots.find(bot => bot.selfId === parsed.destination)
 if (!bot) return ctx.status = 403
 ```
 
-验证完成后，对于请求中的每一个事件，我们创建 `Session` 对象，并将它触发为会话事件：
+After validation, for each event in the request, we create an `Session` instance and dispatch it as a session event:
 
 ```ts
 for (const event of parsed.events) {
@@ -156,21 +156,22 @@ for (const event of parsed.events) {
 
 当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接选择继承 `Adapter.Server` 或 `Adapter.Client` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
 
-## 进阶技巧
+## Advanced Techniques
 
 接下来我们将介绍一些复杂适配器的实现技巧。
 
-### 多协议支持
+### Multi-Protocol Support
 
 部分平台同时支持了多种通信方式，例如 Telegram 就同时支持了 Webhook 和 HTTP 轮询。对于此类平台，我们可以提供一个配置项，让用户根据需要自行选择通信方式。
 
 首先调整目录结构，在 `server.ts` 和 `polling.ts` 中分别完成两种通信方式的适配器开发：
 
-```text{5-6}
+```text{5D,6-7A}
 adapter-telegram
 ├── src
 │   ├── bot.ts
 │   ├── index.ts
+│   ├── adapter.ts
 │   ├── polling.ts
 │   └── server.ts
 └── package.json
@@ -239,7 +240,7 @@ namespace TelegramBot {
 }
 ```
 
-### 动态创建机器人
+### Dynamically Create Bots
 
 到此为止，我们的适配器开发中都存在一个隐含限制：用户的一次插件加载只能对应于一个 `Bot` 实例。如果用户需要创建多个机器人，那么就需要多次加载插件。这是因为在绝大多数适配器的使用场景下，用户都能很明确地知道自己需要创建多少个机器人。然而总有一些例外情况：
 
@@ -261,21 +262,21 @@ export default WhatsAppAdapter
 
 ```ts title=adapter.ts
 class WhatsAppAdapter extends Adapter<WhatsAppBot> {
-  // 这个适配器仍然是可重用的
+  // This adapter is still reusable.
   static reusable = true
-  // 用于存放关联的机器人实例
+  // Used for storing bot instances.
   public bots: WhatsAppBot[] = []
 
   constructor(ctx: Context, config: WhatsAppAdapter.Config) {
     super()
 
-    // 初始化内部接口
+    // Initialize internal APIs.
     const http = ctx.http.extend({
       headers: { Authorization: `Bearer ${config.token}` },
     })
     const internal = new Internal(http)
 
-    // 启动时创建机器人
+    // Create bots on ready.
     ctx.on('ready', async () => {
       const data = await internal.getPhoneNumbers()
       for (const item of data) {

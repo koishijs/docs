@@ -130,53 +130,32 @@
           ]
         },
         {
-          "text": "Koishi Console",
+          "text": "使用",
           "items": [
-            {
-              "text": "About Koishi Console",
-              "link": "/manual/console/index.md"
-            },
             {
               "text": "Install and Configure Plugins",
-              "link": "/manual/console/market.md"
+              "link": "/manual/usage/market.md"
             },
             {
-              "text": "Chat in Sandbox",
-              "link": "/manual/console/sandbox.md"
+              "text": "第一次对话",
+              "link": "/manual/usage/adapter.md"
             },
-            {
-              "text": "Collaborate with Chat Platforms",
-              "link": "/manual/console/adapter.md"
-            }
-          ]
-        },
-        {
-          "text": "Usage",
-          "items": [
             {
               "text": "Command System",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号系统",
+              "text": "账号登录与绑定",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "Permission Management",
-              "link": "/manual/usage/permission.md"
-            },
-            {
-              "text": "Filters",
-              "link": "/manual/usage/filter.md"
-            },
-            {
-              "text": "Internationalization",
-              "link": "/manual/usage/i18n.md"
+              "text": "深入定制机器人",
+              "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "Recipe",
+          "text": "配方",
           "items": [
             {
               "text": "Advanced Command Tricks",
@@ -201,7 +180,7 @@
           ]
         },
         {
-          "text": "Launcher",
+          "text": "启动器",
           "items": [
             {
               "text": "System Requirements",
@@ -303,20 +282,24 @@
           "text": "Database",
           "items": [
             {
-              "text": "Work with Databases",
+              "text": "基本用法",
               "link": "/guide/database/"
             },
             {
-              "text": "Extend Data Model",
+              "text": "数据模型",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "Lazy Initialization & Auto-update",
-              "link": "/guide/database/observer.md"
+              "text": "进阶查询技巧",
+              "link": "/guide/database/select.md"
             },
             {
-              "text": "Database Plugin",
-              "link": "/guide/database/writing.md"
+              "text": "Built-in Data Structure",
+              "link": "/guide/database/builtin.md"
+            },
+            {
+              "text": "Permission Management",
+              "link": "/guide/database/permission.md"
             }
           ]
         },
@@ -337,7 +320,11 @@
             },
             {
               "text": "Message Encoding",
-              "link": "/guide/adapter/encoder.md"
+              "link": "/guide/adapter/message.md"
+            },
+            {
+              "text": "平台集成",
+              "link": "/guide/adapter/integration.md"
             }
           ]
         },
@@ -459,6 +446,10 @@
             {
               "text": "I18n",
               "link": "/api/service/i18n.md"
+            },
+            {
+              "text": "权限管理 (Permissions)",
+              "link": "/api/service/permissions.md"
             },
             {
               "text": "Registry",
@@ -604,6 +595,10 @@
           "text": "Adapter",
           "items": [
             {
+              "text": "DingTalk",
+              "link": "/plugins/adapter/dingtalk.md"
+            },
+            {
               "text": "Discord",
               "link": "/plugins/adapter/discord.md"
             },
@@ -624,16 +619,36 @@
               "link": "/plugins/adapter/mail.md"
             },
             {
+              "text": "Matrix",
+              "link": "/plugins/adapter/matrix.md"
+            },
+            {
               "text": "OneBot",
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQGuild",
+              "text": "QQ Guild",
               "link": "/plugins/adapter/qqguild.md"
+            },
+            {
+              "text": "Slack",
+              "link": "/plugins/adapter/slack.md"
             },
             {
               "text": "Telegram",
               "link": "/plugins/adapter/telegram.md"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/plugins/adapter/wechat-official.md"
+            },
+            {
+              "text": "企业微信",
+              "link": "/plugins/adapter/wecom.md"
+            },
+            {
+              "text": "WhatsApp",
+              "link": "/plugins/adapter/whatsapp.md"
             }
           ]
         },
@@ -979,6 +994,14 @@
             {
               "text": "Release Notes: v4.11",
               "link": "/about/releases/v4.11.md"
+            },
+            {
+              "text": "Release Notes: v4.12",
+              "link": "/about/releases/v4.12.md"
+            },
+            {
+              "text": "v4.13 版本介绍",
+              "link": "/about/releases/v4.13.md"
             }
           ]
         },

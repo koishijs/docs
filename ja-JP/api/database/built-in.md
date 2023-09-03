@@ -27,7 +27,7 @@ Koishi のデータベース APIは2種類に分けています：
 
 - **platform:** `string` プラットフォーム名
 - **id:** `string` チャンネルアカウント
-- **assignee:** `string` [受理人](../../manual/usage/permission.md#受理人机制)
+- **assignee:** `string` [受理人](../../manual/usage/customize.md#受理人机制)
 - **permissions:** `string[]` 权限列表
 - **locales:** `string[]` 语言列表
 

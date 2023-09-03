@@ -1,8 +1,12 @@
 # 資料模型 (Model)
 
+::: tip
+参见：[开发 > 数据库 > 数据模型](../../guide/database/model.md)
+:::
+
 ## 資料型別
 
-資料型別會被用於 [`model.extend()`](#model-extend-name-fields-config) 方法中，其定義如下：
+数据类型会被用于 [`model.extend()`](#model-extend) 方法中，其定义如下：
 
 ```ts
 export interface Field<T> {
@@ -11,6 +15,7 @@ export interface Field<T> {
   nullable?: boolean
   initial?: T
   comment?: string
+  legacy?: string[]
 }
 ```
 
@@ -28,7 +33,7 @@ export interface Field<T> {
 |   名稱   |  TS 型別   | 預設長度  | 預設初始值 |  說明   |
 |:------:|:--------:|:-----:|:-----:|:-----:|
 |  char  | `string` |  64   | `''`  | 定長的字串 |
-| string | `string` |  256  | `''`  | 變長的字串 |
+| string | `string` |  255  | `''`  | 變長的字串 |
 |  text  | `string` | 65535 | `''`  | 變長的字串 |
 
 ### 時間型別
@@ -55,13 +60,22 @@ export interface Field<T> {
 - **config:** `Table.Meta` 表的基本配置
   - **config.primary:** `string | string[]` 主鍵名，預設為 `'id'`
   - **config.unique:** `(string | string[])[]` 值唯一的鍵名串列
-  - **config.foreign:** `Dict<[string, string]>` 外來鍵串列
+  - **config.foreign:** `Dict<[string, string]>` 外键列表 <badge type="warning">实验性</badge>
   - **config.autoInc:** `boolean` 是否使用自增主鍵
 
 擴展一個新的資料表。
 
-### model.create(name)
+### model.create(name, data)
 
-### model.resolveQuery(query)
+- **name:** `string` 資料表名
+- **data:** `any` 数据
 
-### model.resolveModifier(modifier)
+创建一条新的数据，折叠嵌套属性，并填充必要的默认值。
+
+### model.migrate(name, fields, callback) <badge type="warning">实验性</badge>
+
+- **name:** `string` 資料表名
+- **fields:** `Field.Config` 要迁移的字段信息
+- **callback:** `(db: Database) => Promise<void>` 迁移的回调函数
+
+设置 [整表迁移](../../guide/database/model.md#整表迁移) 的操作。

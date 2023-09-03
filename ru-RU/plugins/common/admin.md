@@ -5,7 +5,7 @@
 :::
 
 ::: tip
-建议配合阅读 [入门 > 权限管理](../../manual/usage/permission.md) 章节。
+建议配合阅读 [入门 > 权限管理](../../manual/usage/customize.md#权限管理) 章节。
 :::
 
 ## 指令：authorize
@@ -40,7 +40,7 @@ authorize 3 -u @onebot:123456789    # 指定具体的平台和用户名
   - `-c, --channel` 指定目标频道（不在群组内使用时必须指定）
   - `-r, --remove` 重置设置
 
-assign 指令可用于设置频道的 [受理人](../../manual/usage/permission.md#受理人机制)。该指令 4 级权限才能调用。
+assign 指令可用于设置频道的 [受理人](../../manual/usage/customize.md#受理人机制)。该指令 4 级权限才能调用。
 
 如果 `-c [channel]` 缺省，则表示目标频道为当前频道（因此私聊状态下不能缺省）；如果 `bot` 缺省，则表示当前接收消息的机器人账号。举个例子，如果要设定一个频道 A 的代理者为 B，下面的两种做法是等价的：
 

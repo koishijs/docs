@@ -12,7 +12,7 @@
   - `-o, --only` 仅向当前账号负责的群进行广播
   - `-f, --forced` 无视 silent 标签进行广播
 
-broadcast 指令用于按照 [受理人](../../manual/usage/permission.md#受理人机制) 向所有机器人所负责的频道发送一段文本（默认情况下有 silent 标签的群不发送）。你可以这样调用它：
+broadcast 指令用于按照 [受理人](../../manual/usage/customize.md#受理人机制) 向所有机器人所负责的频道发送一段文本（默认情况下有 silent 标签的群不发送）。你可以这样调用它：
 
 ```sh
 broadcast foo bar baz     # 向所有频道发送 foo bar baz
