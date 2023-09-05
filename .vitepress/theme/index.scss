@@ -7,9 +7,11 @@
 
 html {
   --c-border: transparent;
+  --k-hover-bg: var(--vp-c-bg-alt);
   --k-color-success: #67c23a;
   --k-color-danger: #f56c6c;
   --k-color-warning: #e49400;
+  --k-color-disabled: #909399;
   --k-text-dark: var(--vp-c-text-1);
   --k-text-normal: var(--vp-c-text-2);
   --k-text-active: var(--vp-c-brand);
@@ -19,7 +21,7 @@ html {
   --k-color-divider: var(--vp-c-divider);
   --k-color-active: var(--k-color-primary);
   --k-fill-normal: var(--k-color-primary);
-  --color-transition: all 0.3s ease;
+  --color-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 
   // @include apply-color(primary, #409eff);
   // @include apply-color(secondary, #909399);

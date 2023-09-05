@@ -7,6 +7,9 @@ code: |
     baz: Schema.object({
       qux: Schema.boolean().description('这是一个嵌套属性。'),
     }),
+    collapse: Schema.object({
+      inner: Schema.string().description('现在你看到我了！'),
+    }).description('点击右侧按钮查看嵌套属性。').collapse(),
   }).description('配置项')
 ---
 
@@ -16,6 +19,8 @@ code: |
 
 默认情况下所有属性都是可选的，可以通过 `.required()` 来声明一个必需属性。
 
+使用 `.collapse()` 可以将对象默认折叠为一个单独的配置项。
+
 ```ts
 export default Schema.object({
   foo: Schema.string().required(),
@@ -23,5 +28,8 @@ export default Schema.object({
   baz: Schema.object({
     qux: Schema.boolean(),
   }),
+  nested: Schema.object({
+    inner: Schema.string(),
+  }).collapse(),
 })
 ```
