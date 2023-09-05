@@ -10,7 +10,7 @@
 
 ## 实例方法
 
-有关这里的 API，请参见 [使用上下文](../../guide/plugin/selector.md#会话过滤器)。
+有关这里的 API，请参见 [使用上下文](../../guide/plugin/filter.md#会话过滤器)。
 
 ### ctx.any()
 
