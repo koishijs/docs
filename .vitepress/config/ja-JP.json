@@ -906,10 +906,6 @@
             {
               "text": "Computed：条件求值",
               "link": "/schema/advanced/computed.md"
-            },
-            {
-              "text": "Dynamic：动态类型",
-              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }
