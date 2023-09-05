@@ -4,7 +4,7 @@ code: |
   Schema.object({
   foo: Schema.boolean().description('*斜体*的属性描述。'),
   bar: Schema.string().description('**粗体**的属性描述。'),
-  }).description('配置项')
+  }).description('配置标题')
 ---
 
 # 標題與描述
@@ -15,5 +15,5 @@ code: |
 export default Schema.object({
   foo: Schema.boolean().description('*斜体*的属性描述。'),
   bar: Schema.string().description('**粗体**的属性描述。'),
-}).description('配置项')
+}).description('配置标题')
 ```
