@@ -148,6 +148,14 @@ export interface MessageInfo {
 
 修改特定消息。
 
+### bot.getMessageList(channelId, before?) <badge>实验性</badge>
+
+- **channelId:** `string` 频道 ID
+- **before:** `string` 消息 ID
+- 返回值: `Promise<List<Message>>` 消息列表
+
+获取机器人的好友列表。
+
 ### bot.broadcast(channels, content, delay?) <badge>内置</badge>
 
 - **channels:** `string[]` 频道列表
@@ -272,13 +280,6 @@ export interface GuildMemberInfo extends UserInfo {
 - 返回值: `Promise<List<GuildMemberInfo>>` 群成员列表
 
 获取群成员列表。
-
-### bot.getGuildMemberMap(guildId) <badge>内置</badge>
-
-- **guildId:** `string` 群组 ID
-- 返回值: `Promise<Record<string, string>>` 群成员昵称的键值对
-
-获取群成员列表，返回一个用户 ID 到昵称的键值对，若无 nickname 则使用 username。
 
 ### bot.getChannel(channelId)
 
