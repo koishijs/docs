@@ -906,10 +906,6 @@
             {
               "text": "Computed",
               "link": "/schema/advanced/computed.md"
-            },
-            {
-              "text": "Dynamic",
-              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }
