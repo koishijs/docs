@@ -13,7 +13,7 @@ QQ 频道官方 SDK 适配器，基于 [@qq-guild-sdk/core](https://www.npmjs.co
 3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据 [id, token, key(secret)]
 4. 将上面的基本数据作为机器人配置项即可使用
 
-参考文档：<https://nwylzw.github.io/qq-guild-sdk/api/core/Bot.html#bot>
+参考文档：<https://satori.js.org/qq-guild-sdk/api/core/Bot.html#bot>
 
 ## 机器人选项
 
