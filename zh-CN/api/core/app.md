@@ -4,12 +4,12 @@
 
 ## 构造函数选项
 
-通过 `new App(options)` 创建一个 App 实例。
+通过 `new App(options)` 创建一个 App 实例。下面的配置项也可以在配置文件中使用。
 
 ### options.host
 
 - 类型：`string`
-- 默认值：`'localhost'`
+- 默认值：`'127.0.0.1'`
 
 服务器监听的 IP 地址。如果将此设置为 `0.0.0.0` 将监听所有地址，包括局域网和公网地址。
 
@@ -78,12 +78,6 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 当获取不到频道数据时，是否将接收到消息的机器人设置为该频道的受理人。
 
-### options.prettyErrors
-
-- 类型：`boolean`
-
-启用报错优化模式。在此模式下 Koishi 会对程序抛出的异常进行整理，过滤掉框架内部的调用记录，输出更易读的提示信息。默认值为 `true`。
-
 ### options.minSimilarity
 
 - 类型：`number`
@@ -99,7 +93,9 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 ## 配置文件选项
 
-下面的配置项来自 Koishi 的命令行工具，仅可用于配置文件。
+::: warning
+下面的配置项来自 Koishi 的命令行工具，仅可在配置文件中编辑，不支持在控制台中修改。
+:::
 
 ### options.plugins
 
@@ -112,42 +108,13 @@ Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram]
 
 ### options.logger
 
-#### options.logger.levels
+- 类型：`Logger.Config`
 
-- 类型：`number | object`
-- 默认值：`{}`
-
-默认的输出等级。参见 [设置输出等级](../utils/logger.md#logger-level) 一节。
-
-#### options.logger.showTime
-
-- 类型：`string | boolean`
-- 默认值：`false`
-
-输出日志所使用的时间格式。参见 [输出时间](../utils/logger.md#not-exist) 一节。
-
-#### options.logger.showDiff
-
-- 类型：`boolean`
-- 默认值：初始未设置，在 ready 事件触发后修改为 `!options.logTime`
-
-是否标注相邻两次输出的时间差。参见 [输出时间](../utils/logger.md#not-exist) 一节。
-
-### options.watch
-
-- 类型：[`WatchOptions`](https://github.com/paulmillr/chokidar#api) 外加下面的属性：
-  - **watch.root:** `string` 要监听的根目录，相对于工作路径
-  - **watch.debounce:** `number` 延迟触发更新的等待时间，默认为 `100`
-
-监听文件变化的选项。参见 [模块热替换](../../guide/develop/script.md#模块热替换) 一节。
-
-### options.timezoneOffset
-
-### options.stackTraceLimit
+参见 [输出日志](../utils/logger.md) 一节。
 
 ## 实例属性和方法
 
-### app.config
+### app.options
 
 - 类型: `AppOptions`
 
