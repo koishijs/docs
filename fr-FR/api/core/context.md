@@ -71,9 +71,9 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 ### ctx.logger(scope?)
 
 - **scope:** `string` 要指定的类型，默认为 `''`
-- 返回值: [`Logger`](../service/logger.md)
+- 返回值: [`Logger`](../utils/logger.md)
 
-根据 namespace 生成一个 [Logger 对象](../service/logger.md)。
+根据命名空间生成一个 [Logger](../utils/logger.md) 对象。
 
 ## 静态属性和方法
 
