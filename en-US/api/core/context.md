@@ -29,10 +29,18 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.router](../service/router.md)
 - [ctx.scope](../service/registry.md#ctx-scope)
 - [ctx.serial](../service/events.md#ctx-serial)
+- [ctx.start](../service/registry.md#ctx-start)
+- [ctx.stop](../service/registry.md#ctx-stop)
 - [ctx.union](../service/filter.md#ctx-union)
 - [ctx.using](../service/registry.md#ctx-using)
 
 ## 实例属性和方法
+
+### ctx.root.config
+
+- 类型: [`Context.Config`](./app.md)
+
+当前的 Koishi 全局配置，相当于配置文件中的配置经过默认值处理后的结果。
 
 ### ctx.baseDir
 
