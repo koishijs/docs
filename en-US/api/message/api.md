@@ -16,12 +16,12 @@ interface Element {
 
 ### h(type, attrs?, ...children?)
 
-- **type:** `string` 消息元素类型
+- **type:** `string | Function` 消息元素类型
 - **attrs:** `object` 消息元素属性
 - **children:** `Element[]` 子消息元素
 - 返回值: `Element` 生成的消息元素
 
-构造一个消息元素对象。
+构造一个消息元素对象。如果 `type` 是一个函数，则会视为一个自定义消息组件。
 
 ### h.escape(source, inline?)
 
