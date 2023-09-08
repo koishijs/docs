@@ -144,23 +144,66 @@ h.image(buffer, 'image/png')
 
 ## 消息组件
 
-除了标准元素外，Koishi 还提供了一系列名为 **消息组件 (Component)** 的高级元素。例如：
+**消息组件 (Component)** 是一种对消息元素的扩展和封装。它允许你创建可重用的定制元素，并在渲染时引入自定义逻辑。例如，`<execute>` 组件会将其中的内容作为指令执行，并将执行结果替换该元素：
 
-- `execute`：执行指令
-- `prompt`：等待输入
-- `i18n`：国际化
-- `random`：随机选择
+```html
+这是执行结果：<execute>echo hello</execute>
+```
 
-这些元素的用法与标准元素类似，但它们不在适配器中实现，而由 Koishi 直接处理。与之相对的，部分消息组件只有在会话环境下才能使用 (例如在 `ctx.broadcast()` 中传入 `<execute>` 是无意义的，也会抛出错误)。
+<chat-panel>
+<chat-message nickname="Koishi">这是执行结果：hello</chat-message>
+</chat-panel>
 
-消息组件也是可以由插件扩展的：
+如你所见，你可以像使用普通的消息元素一样使用消息组件。唯一的区别是消息组件不由适配器实现，而是由 Koishi 直接处理。与之相对的，某些消息组件只有在特定的会话环境下才能使用 (例如在 `ctx.broadcast()` 中传入 `<execute>` 是无意义的，也会抛出错误)。
+
+Koishi 已经内置了一系列消息组件，包括：
+
+- `<execute>`：执行指令
+- `<prompt>`：等待输入
+- `<i18n>`：国际化
+- `<random>`：随机选择
+
+你可以在 [这个页面](../../api/message/components.md) 了解每个组件的详细用法和适用范围。
+
+### 声明消息组件
+
+一个消息组件本质上是一个函数，它接受三个参数：
+
+- **attrs:** 元素的属性
+- **children:** 子元素列表
+- **session:** 当前会话
+
+例如，下面的代码就定义了一个简单的消息组件：
+
+```ts
+// 请注意函数名必须以大写字母开头
+function Custom(attrs, children, session) {
+  return '自定义内容'
+}
+```
+
+你可以直接在渲染时使用这个组件：
+
+::: tabs code
+```tsx title=JSX
+// 请注意这里的大写字母
+session.send(<Custom/>)
+```
+```ts title=API
+// 请注意这里的大写字母
+session.send(h(Custom))
+```
+:::
+
+### 注册全局组件
+
+上面的写法只能在当前文件中使用，并且必须以大写字母开头。如果想要更自然的写法，并将组件提供给其他插件使用，只需使用 `ctx.component()` 将它注册为一个全局组件：
 
 ```ts
 ctx.component('custom', (attrs, children, session) => {
   return '自定义内容'
 })
 
-session.send(<custom/>)         // -> 自定义内容
+// 现在你可以在任何地方使用小写的 <custom/> 了
+session.send(<custom/>)
 ```
-
-我们在 [这个页面](../../api/message/components.md) 中列出了所有的内置组件，你可以稍后在这里查看每个组件的详细用法和适用范围。
