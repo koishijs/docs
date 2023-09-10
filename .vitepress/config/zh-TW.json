@@ -483,7 +483,40 @@
           ]
         },
         {
-          "text": "資料庫",
+          "text": "跨平臺",
+          "items": [
+            {
+              "text": "频道 (Channel)",
+              "link": "/api/platform/channel.md"
+            },
+            {
+              "text": "群组 (Guild)",
+              "link": "/api/platform/guild.md"
+            },
+            {
+              "text": "群组成员 (GuildMember)",
+              "link": "/api/platform/member.md"
+            },
+            {
+              "text": "群组角色 (GuildRole)",
+              "link": "/api/platform/role.md"
+            },
+            {
+              "text": "消息 (Message)",
+              "link": "/api/platform/message.md"
+            },
+            {
+              "text": "表态 (Reaction)",
+              "link": "/api/platform/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/platform/user.md"
+            }
+          ]
+        },
+        {
+          "text": "数据库",
           "items": [
             {
               "text": "內建資料結構",
@@ -498,20 +531,20 @@
               "link": "/api/database/model.md"
             },
             {
-              "text": "查詢表示式 (Query)",
+              "text": "查詢運算式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表示式 (Eval)",
+              "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
             }
           ]
         },
         {
-          "text": "控制檯",
+          "text": "控制台",
           "items": [
             {
-              "text": "服務端 API",
+              "text": "服务端 API",
               "link": "/api/console/server.md"
             },
             {
@@ -519,11 +552,11 @@
               "link": "/api/console/context.md"
             },
             {
-              "text": "組合式 API",
+              "text": "组合式 API",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "內建元件",
+              "text": "内置组件",
               "link": "/api/console/component.md"
             }
           ]
@@ -532,15 +565,15 @@
           "text": "其他功能",
           "items": [
             {
-              "text": "觀察者 (Observer)",
+              "text": "观察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "輸出日誌 (Logger)",
+              "text": "输出日志 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "隨機操作 (Random)",
+              "text": "随机操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
