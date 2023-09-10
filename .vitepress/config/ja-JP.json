@@ -483,6 +483,39 @@
           ]
         },
         {
+          "text": "クロスプラットフォーム",
+          "items": [
+            {
+              "text": "频道 (Channel)",
+              "link": "/api/platform/channel.md"
+            },
+            {
+              "text": "群组 (Guild)",
+              "link": "/api/platform/guild.md"
+            },
+            {
+              "text": "群组成员 (GuildMember)",
+              "link": "/api/platform/member.md"
+            },
+            {
+              "text": "群组角色 (GuildRole)",
+              "link": "/api/platform/role.md"
+            },
+            {
+              "text": "消息 (Message)",
+              "link": "/api/platform/message.md"
+            },
+            {
+              "text": "表态 (Reaction)",
+              "link": "/api/platform/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/platform/user.md"
+            }
+          ]
+        },
+        {
           "text": "数据库",
           "items": [
             {
