@@ -537,6 +537,10 @@
             {
               "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
+            },
+            {
+              "text": "查询构造器 (Selection)",
+              "link": "/api/database/selection.md"
             }
           ]
         },
