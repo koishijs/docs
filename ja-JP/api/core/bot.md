@@ -148,13 +148,20 @@ export interface MessageInfo {
 
 修改特定消息。
 
-### bot.getMessageList(channelId, before?) <badge>实验性</badge>
+### bot.getMessageList(channelId, next?) <badge>实验性</badge>
 
 - **channelId:** `string` 频道 ID
-- **before:** `string` 消息 ID
+- **next:** `string` 分页令牌
 - 返回值: `Promise<List<Message>>` 消息列表
 
-获取机器人的好友列表。
+获取频道消息列表。
+
+### bot.getMessageIter(channelId) <badge>内置</badge> <badge>实验性</badge>
+
+- **channelId:** `string` 频道 ID
+- 返回值: `AsyncIterable<Message>` 迭代器
+
+获取频道消息的异步迭代器。
 
 ### bot.broadcast(channels, content, delay?) <badge>内置</badge>
 
@@ -195,14 +202,24 @@ export interface MessageInfo {
 
 从特定消息清除某个特定表态。如果没有传入表态名称则表示清除所有表态。
 
-### bot.getReactions(channelId, messageId, emoji) <badge type="warning">实验性</badge>
+### bot.getReactionList(channelId, messageId, emoji, next?) <badge type="warning">实验性</badge>
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
 - **emoji:** `string` 表态名称
-- 返回值: `Promise<User[]>`
+- **next:** `string` 分页令牌
+- 返回值: `Promise<List<User>>`
 
 获取添加特定消息的特定表态的用户列表。
+
+### bot.getReactionIter(channelId, messageId, emoji) <badge>内置</badge> <badge type="warning">实验性</badge>
+
+- **channelId:** `string` 频道 ID
+- **messageId:** `string` 消息 ID
+- **emoji:** `string` 表态名称
+- 返回值: `AsyncIterable<User>` 迭代器
+
+获取添加特定消息的特定表态的用户的异步迭代器。
 
 ## 获取数据
 
@@ -227,11 +244,18 @@ export interface UserInfo {
 
 获取用户信息。
 
-### bot.getFriendList() <badge>实验性</badge>
+### bot.getFriendList(next?) <badge>实验性</badge>
 
-- 返回值: `Promise<UserInfo[]>` 好友列表
+- **next:** `string` 分页令牌
+- 返回值: `Promise<List<UserInfo>>` 好友列表
 
 获取机器人的好友列表。
+
+### bot.getFriendIter() <badge>内置</badge> <badge>实验性</badge>
+
+- 返回值: `AsyncIterable<UserInfo>` 迭代器
+
+获取机器人的好友列表的异步迭代器。
 
 ### bot.getGuild(guildId)
 
@@ -247,11 +271,18 @@ export interface GuildInfo {
 }
 ```
 
-### bot.getGuildList() <badge>实验性</badge>
+### bot.getGuildList(next?) <badge>实验性</badge>
 
-- 返回值: `Promise<GuildInfo[]>` 群组列表
+- **next:** `string` 分页令牌
+- 返回值: `Promise<List<GuildInfo>>` 群组列表
 
 获取机器人加入的群组列表。
+
+### bot.getGuildIter() <badge>内置</badge> <badge>实验性</badge>
+
+- 返回值: `AsyncIterable<GuildInfo>` 迭代器
+
+获取机器人加入的群组列表的异步迭代器。
 
 ### bot.getGuildMember(guildId, userId)
 
@@ -274,12 +305,20 @@ export interface GuildMemberInfo extends UserInfo {
 }
 ```
 
-### bot.getGuildMemberList(guildId) <badge>实验性</badge>
+### bot.getGuildMemberList(guildId, next?) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
+- **next:** `string` 分页令牌
 - 返回值: `Promise<List<GuildMemberInfo>>` 群成员列表
 
 获取群成员列表。
+
+### bot.getGuildMemberIter(guildId) <badge>内置</badge> <badge>实验性</badge>
+
+- **guildId:** `string` 群组 ID
+- 返回值: `AsyncIterable<GuildMemberInfo>` 迭代器
+
+获取群成员列表的异步迭代器。
 
 ### bot.getChannel(channelId)
 
@@ -295,12 +334,20 @@ export interface ChannelInfo {
 }
 ```
 
-### bot.getChannelList(guildId) <badge>实验性</badge>
+### bot.getChannelList(guildId, next?) <badge>实验性</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `Promise<ChannelInfo[]>` 频道列表
+- **next:** `string` 分页令牌
+- 返回值: `Promise<List<ChannelInfo>>` 频道列表
 
 获取某个群组的频道列表。
+
+### bot.getChannelIter(guildId) <badge>内置</badge> <badge>实验性</badge>
+
+- **guildId:** `string` 群组 ID
+- 返回值: `AsyncIterable<ChannelInfo>` 迭代器
+
+获取某个群组的频道列表的异步迭代器。
 
 ## 群组管理
 
@@ -341,12 +388,20 @@ export interface ChannelInfo {
 
 取消群组内用户的角色。
 
-### bot.getGuildRoles(guildId) <badge type="warning">实验性</badge>
+### bot.getGuildRoleList(guildId, next?) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `Promise<Role[]>` 角色列表
+- **next:** `string` 分页令牌
+- 返回值: `Promise<List<Role>>` 角色列表
 
 获取群组角色列表。
+
+### bot.getGuildRoleIter(guildId) <badge>内置</badge> <badge type="warning">实验性</badge>
+
+- **guildId:** `string` 群组 ID
+- 返回值: `AsyncIterable<Role>` 迭代器
+
+获取群组角色列表的异步迭代器。
 
 ### bot.createGuildRole(guildId, data) <badge type="warning">实验性</badge>
 
