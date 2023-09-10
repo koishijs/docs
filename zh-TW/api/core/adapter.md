@@ -55,17 +55,17 @@
 
 连接 Bot 所需的操作，将在 `bot.connect()` 中被调用。
 
-## 类：Adapter.WebSocketClient
+## 类：Adapter.WsClient
 
-### new Adapter.WebSocketClient(app, options?)
+### new Adapter.WsClient(ctx, bot)
 
-- **app:** `App` 应用实例
-- **options:** `WebSocketClientOptions` 连接配置
+- **ctx:** `Context` 上下文
+- **bot:** `Bot` 机器人实例
 
-创建一个 WebSocketClient 适配器实例。
+创建一个 WsClient 适配器实例。
 
 ```ts
-export interface WebSocketClientOptions {
+export interface Config {
   retryLazy?: number
   retryTimes?: number
   retryInterval?: number
