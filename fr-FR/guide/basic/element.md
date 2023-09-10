@@ -142,7 +142,7 @@ h.image(buffer, 'image/png')
 <image url={'data:image/png;base64,' + buffer.toString('base64')}/>
 ```
 
-## 消息组件
+## 消息组件 <badge type="warning">实验性</badge>
 
 **消息组件 (Component)** 是一种对消息元素的扩展和封装。它允许你创建可重用的定制元素，并在渲染时引入自定义逻辑。例如，`<execute>` 组件会将其中的内容作为指令执行，并将执行结果替换该元素：
 
