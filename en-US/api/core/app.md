@@ -135,8 +135,8 @@ interface DelayOptions {
 
 要安装的插件列表。以传入的对象的键为插件名，值为插件的选项进行安装。参见：
 
-- [Configuration File](../../guide/develop/config.md)
-- [About Plugin](../../guide/plugin/index.md)
+- [开发 > 开发起步 > 配置文件](../../guide/develop/config.md)
+- [开发 > 模块化 > 认识插件](../../guide/plugin/index.md)
 
 ### options.logger
 
