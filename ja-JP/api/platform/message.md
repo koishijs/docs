@@ -96,7 +96,7 @@ export interface MessageInfo {
 
 - **channels:** `string[]` 频道列表
 - **content:** `string` 要发送的内容
-- **delay:** `number` 发送消息间的延迟，默认值为 [`app.config.delay.broadcast`](./app.md#options-delay)
+- **delay:** `number` 发送消息间的延迟，默认值为 [`config.delay.broadcast`](../core/app.md#options-delay)
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
 向多个频道广播消息。如有失败不会抛出错误。
