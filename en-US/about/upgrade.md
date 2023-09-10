@@ -78,3 +78,22 @@ plugins:
 - 会话对象的属性 `locale` → `locales`
 
 用户无需留意这些改动，但开发者如果使用了上述 API 则需要进行迁移。
+
+## 协议更新 <badge>v4.14.5</badge>
+
+在 4.14.5 版本中，我们将协议库 satori 升级到了新的大版本。新版本引入了与分页 API 相关的不兼容更新。具体受影响的 API 如下：
+
+- `bot.getChannelList()`
+- `bot.getFriendList()`
+- `bot.getGuildList()`
+- `bot.getGuildMemberList()`
+- `bot.getGuildRoleList()`
+- `bot.getMessageList()`
+- `bot.getReactionList()`
+
+上述 API 将不再返回 `Promise<T[]>` 而是返回一个 `Promise<List<T>>`，包含 `data` 属性和可选的 `next` 属性。`data` 包含了当前页的数据，`next` 则表示下一页的分页令牌。此外，对于上述每一个 API，我们还额外提供了返回异步迭代器的版本：
+
+```ts
+for (const item of await bot.getChannelList())  // old
+for await (const item of bot.getChannelIter())  // new
+```
