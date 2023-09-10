@@ -39,7 +39,7 @@ ctx.database.select('foo')
   .execute()
 ```
 
-这里的 `$.gt()` 是一个求值表达式。你可以在 [这里](../../api/database/eval.md) 看到完整的求值表达式 API。
+这里的 `$.gt()` 是一个求值表达式。你可以在 [这里](../../api/database/evaluation.md) 看到完整的求值表达式 API。
 
 ## 字段映射
 
