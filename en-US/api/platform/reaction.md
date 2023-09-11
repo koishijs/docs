@@ -45,6 +45,6 @@
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
 - **emoji:** `string` 表态名称
-- 返回值: `AsyncIterable<User>` 迭代器
+- 返回值: `AsyncIterable<User>` 异步迭代器
 
 获取添加特定消息的特定表态的用户的异步迭代器。
