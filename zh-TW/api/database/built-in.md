@@ -1,5 +1,9 @@
 # 內建資料結構
 
+::: tip
+参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
+:::
+
 Koishi 的資料庫 API 實際上分為兩部分：
 
 - @koishijs/core 中定義的內建資料結構
