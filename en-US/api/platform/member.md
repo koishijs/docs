@@ -2,41 +2,36 @@
 
 ## 类型定义
 
+```ts
+interface GuildMember {
+  user: User
+  nick?: string
+  avatar?: string
+}
+```
+
 ## API
 
 ### bot.getGuildMember(guildId, userId)
 
 - **guildId:** `string` 群组 ID
 - **userId:** `string` 用户 ID
-- 返回值: `Promise<GuildMemberInfo>` 群成员信息
+- 返回值: `Promise<GuildMember>` 群成员信息
 
 获取群成员信息。
-
-```ts no-extra-header
-export interface UserInfo {
-  userId: string
-  username: string
-  avatar?: string
-}
-
-// ---cut---
-export interface GuildMemberInfo extends UserInfo {
-  nickname: string
-}
-```
 
 ### bot.getGuildMemberList(guildId, next?)
 
 - **guildId:** `string` 群组 ID
 - **next:** `string` 分页令牌
-- 返回值: `Promise<List<GuildMemberInfo>>` 群成员列表
+- 返回值: `Promise<List<GuildMember>>` 群成员列表
 
 获取群成员列表。
 
 ### bot.getGuildMemberIter(guildId) <badge>内置</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `AsyncIterable<GuildMemberInfo>` 迭代器
+- 返回值: `AsyncIterable<GuildMember>` 异步迭代器
 
 获取群成员列表的异步迭代器。
 
