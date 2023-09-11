@@ -1,5 +1,9 @@
 # Built-in Data Structure
 
+::: tip
+参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
+:::
+
 Koishi 的数据库 API 实际上分为两部分：
 
 - @koishijs/core 中定义的内置数据结构
