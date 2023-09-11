@@ -2,6 +2,15 @@
 
 ## 类型定义
 
+```ts
+export interface GuildRole {
+  id: string
+  name: string
+  color: number
+  position: number
+}
+```
+
 ## API
 
 ### bot.setGuildMemberRole(guildId, userId, roleId)
@@ -26,21 +35,21 @@
 
 - **guildId:** `string` 群组 ID
 - **next:** `string` 分页令牌
-- 返回值: `Promise<List<Role>>` 角色列表
+- 返回值: `Promise<List<GuildRole>>` 角色列表
 
 获取群组角色列表。
 
 ### bot.getGuildRoleIter(guildId) <badge>内置</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `AsyncIterable<Role>` 迭代器
+- 返回值: `AsyncIterable<GuildRole>` 异步迭代器
 
 获取群组角色列表的异步迭代器。
 
 ### bot.createGuildRole(guildId, data)
 
 - **guildId:** `string` 群组 ID
-- **data:** `Partial<Role>` 角色信息
+- **data:** `Partial<GuildRole>` 角色信息
 - 返回值: `Promise<string>` 角色 ID
 
 创建群组角色。
@@ -49,7 +58,7 @@
 
 - **guildId:** `string` 群组 ID
 - **roleId:** `string` 角色 ID
-- **data:** `Partial<Role>` 角色信息
+- **data:** `Partial<GuildRole>` 角色信息
 - 返回值: `Promise<void>`
 
 修改群组角色。
