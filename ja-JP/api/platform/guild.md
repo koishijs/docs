@@ -27,7 +27,7 @@ export interface Guild {
 
 ### bot.getGuildIter() <badge>内置</badge>
 
-- 返回值: `AsyncIterable<Guild>` 迭代器
+- 返回值: `AsyncIterable<Guild>` 异步迭代器
 
 获取机器人加入的群组列表的异步迭代器。
 
