@@ -9,7 +9,8 @@
 ```ts
 ctx.database.get('foo', { id: { $gt: 5 } })
 // 等价于
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .where({ id: { $gt: 5 } })
   .execute()
 ```
@@ -20,7 +21,8 @@ ctx.database.select('foo')
 
 ```ts
 // 按 id 降序排列，从第 100 条开始取 10 条数据
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .orderBy('id', 'desc')
   .limit(10)
   .offset(100)
@@ -33,7 +35,8 @@ ctx.database.select('foo')
 
 ```ts
 // 返回 id 大于 5 的数据行，并按 id 升序排列
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .where(row => $.gt(row.id, 5))
   .orderBy(row => row.id)
   .execute()
@@ -47,7 +50,8 @@ ctx.database.select('foo')
 
 ```ts
 // 返回的数组元素将只含有 a, b 属性
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .project({
     a: row => $.add(row.id, 1),         // a = id + 1
     b: row => $.multiply(row.id, 2),    // b = id * 2
@@ -61,7 +65,8 @@ ctx.database.select('foo')
 
 ```ts
 // 返回 id 大于 5 的数据行的数量
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .where(row => $.gt(row.id, 5))
   .execute(row => $.count(row.id))
 ```
@@ -76,7 +81,8 @@ ctx.database.select('foo')
 
 ```ts
 // 按照 value 字段分组，返回结果数大于 5 的分组
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .groupBy('value')
   .having(row => $.gt($.count(row.id), 5))
   .execute()
@@ -86,7 +92,8 @@ ctx.database.select('foo')
 
 ```ts
 // 返回的数据将按照 id - value 的值分组
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .groupBy({
     key: row => $.subtract(row.id, row.value),
   })
@@ -101,7 +108,8 @@ ctx.database.select('foo')
 
 ```ts
 // 返回的数据包含 value, sum, count 三个属性
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .groupBy('value', {
     sum: row => $.sum(row.id),
     count: row => $.count(row.id),
@@ -114,7 +122,8 @@ ctx.database.select('foo')
 可以通过链式调用 `.groupBy()` 方法来实现多级分组。下面是一个例子：
 
 ```ts
-ctx.database.select('foo')
+ctx.database
+  .select('foo')
   .groupBy(['uid', 'pid'], {
     submit: row => $.sum(1),
     accept: row => $.sum(row.value),
@@ -124,5 +133,16 @@ ctx.database.select('foo')
     accept: row => $.sum($.if($.gt(row.accept, 0), 1, 0)),
   })
   .orderBy('uid')
+  .execute()
+```
+
+## 连接查询 <badge type="warning">实验性</badge>
+
+最后介绍一下连接查询的用法。使用 `.join()` 可以将多个表连接起来，返回一个新的 `Selection`，其属性分别对应多个表的名称。下面是一个例子：
+
+```ts
+// 返回的数据包含 foo, bar 两个属性
+ctx.database
+  .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
   .execute()
 ```
