@@ -4,6 +4,7 @@
 
 ```ts
 interface Message {
+  isDirect: boolean
   channelId: string
   messageId: string
   userId: string
@@ -43,22 +44,9 @@ interface Message {
 
 - **channelId:** `string` 频道 ID
 - **messageId:** `string` 消息 ID
-- 返回值: `Promise<MessageInfo>`
+- 返回值: `Promise<Message>`
 
 获取特定消息。
-
-```ts
-type AuthorInfo = any
-
-// ---cut---
-export interface MessageInfo {
-  messageId: string
-  isDirect: boolean
-  content: string
-  timestamp: number
-  author: AuthorInfo
-}
-```
 
 ### bot.deleteMessage(channelId, messageId)
 
@@ -77,7 +65,7 @@ export interface MessageInfo {
 
 修改特定消息。
 
-### bot.getMessageList(channelId, next?) <badge>实验性</badge>
+### bot.getMessageList(channelId, next?)
 
 - **channelId:** `string` 频道 ID
 - **next:** `string` 分页令牌
@@ -85,7 +73,7 @@ export interface MessageInfo {
 
 获取频道消息列表。
 
-### bot.getMessageIter(channelId) <badge>内置</badge> <badge>实验性</badge>
+### bot.getMessageIter(channelId) <badge>内置</badge>
 
 - **channelId:** `string` 频道 ID
 - 返回值: `AsyncIterable<Message>` 迭代器
