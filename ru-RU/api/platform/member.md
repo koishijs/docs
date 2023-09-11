@@ -25,7 +25,7 @@ export interface GuildMemberInfo extends UserInfo {
 }
 ```
 
-### bot.getGuildMemberList(guildId, next?) <badge>实验性</badge>
+### bot.getGuildMemberList(guildId, next?)
 
 - **guildId:** `string` 群组 ID
 - **next:** `string` 分页令牌
@@ -33,7 +33,7 @@ export interface GuildMemberInfo extends UserInfo {
 
 获取群成员列表。
 
-### bot.getGuildMemberIter(guildId) <badge>内置</badge> <badge>实验性</badge>
+### bot.getGuildMemberIter(guildId) <badge>内置</badge>
 
 - **guildId:** `string` 群组 ID
 - 返回值: `AsyncIterable<GuildMemberInfo>` 迭代器
