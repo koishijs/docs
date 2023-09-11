@@ -2,32 +2,32 @@
 
 ## 类型定义
 
+```ts
+export interface Guild {
+  id: string
+  name: string
+}
+```
+
 ## API
 
 ### bot.getGuild(guildId)
 
 - **guildId:** `string` 群组 ID
-- 返回值: `Promise<GuildInfo>` 群组信息
+- 返回值: `Promise<Guild>` 群组信息
 
 获取群组信息。
 
-```ts
-export interface GuildInfo {
-  guildId: string
-  guildName: string
-}
-```
-
-### bot.getGuildList(next?) <badge>实验性</badge>
+### bot.getGuildList(next?)
 
 - **next:** `string` 分页令牌
-- 返回值: `Promise<List<GuildInfo>>` 群组列表
+- 返回值: `Promise<List<Guild>>` 群组列表
 
 获取机器人加入的群组列表。
 
-### bot.getGuildIter() <badge>内置</badge> <badge>实验性</badge>
+### bot.getGuildIter() <badge>内置</badge>
 
-- 返回值: `AsyncIterable<GuildInfo>` 迭代器
+- 返回值: `AsyncIterable<Guild>` 迭代器
 
 获取机器人加入的群组列表的异步迭代器。
 
