@@ -1,5 +1,9 @@
 # 查询表达式 (Query)
 
+::: tip
+参见：[开发 > 数据库 > 基本用法](../../guide/database/index.md)
+:::
+
 ## 逻辑运算
 
 ### $or
