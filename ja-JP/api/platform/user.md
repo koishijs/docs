@@ -9,39 +9,39 @@
 
 ## 类型定义
 
-## API
-
-### bot.getSelf()
-
-- 返回值: `Promise<UserInfo>` 用户信息
-
-获取机器人自己的信息。
-
 ```ts
-export interface UserInfo {
-  userId: string
-  username: string
+export interface User {
+  id: string
+  name: string
   avatar?: string
 }
 ```
 
+## API
+
+### bot.getSelf()
+
+- 返回值: `Promise<User>` 用户信息
+
+获取机器人自己的信息。
+
 ### bot.getUser(userId)
 
 - **userId:** `string` 用户 ID
-- 返回值: `Promise<UserInfo>` 用户信息
+- 返回值: `Promise<User>` 用户信息
 
 获取用户信息。
 
-### bot.getFriendList(next?) <badge>实验性</badge>
+### bot.getFriendList(next?)
 
 - **next:** `string` 分页令牌
-- 返回值: `Promise<List<UserInfo>>` 好友列表
+- 返回值: `Promise<List<User>>` 好友列表
 
 获取机器人的好友列表。
 
-### bot.getFriendIter() <badge>内置</badge> <badge>实验性</badge>
+### bot.getFriendIter() <badge>内置</badge>
 
-- 返回值: `AsyncIterable<UserInfo>` 迭代器
+- 返回值: `AsyncIterable<User>` 异步迭代器
 
 获取机器人的好友列表的异步迭代器。
 
