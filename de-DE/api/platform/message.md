@@ -76,7 +76,7 @@ interface Message {
 ### bot.getMessageIter(channelId) <badge>内置</badge>
 
 - **channelId:** `string` 频道 ID
-- 返回值: `AsyncIterable<Message>` 迭代器
+- 返回值: `AsyncIterable<Message>` 异步迭代器
 
 获取频道消息的异步迭代器。
 
