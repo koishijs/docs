@@ -101,10 +101,10 @@ interface DelayOptions {
 
 - 类型：`string`
 
-输出语言偏好设置。可选的值包括：
+输出语言偏好设置。可选值包括：
 
 - `prefer-user`: 优先使用用户语言
-- `prefer-user`: 优先使用频道语言
+- `prefer-channel`: 优先使用频道语言
 
 ## 高級設定
 
