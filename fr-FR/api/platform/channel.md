@@ -36,6 +36,6 @@ export interface Channel {
 ### bot.getChannelIter(guildId) <badge>内置</badge>
 
 - **guildId:** `string` 群组 ID
-- 返回值: `AsyncIterable<Channel>` 迭代器
+- 返回值: `AsyncIterable<Channel>` 异步迭代器
 
 获取某个群组的频道列表的异步迭代器。
