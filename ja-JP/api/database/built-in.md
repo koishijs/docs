@@ -1,5 +1,9 @@
 # 組み込みデータ構造
 
+::: tip
+参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
+:::
+
 Koishi のデータベース APIは2種類に分けています：
 
 - @koishijs/coreで定義される組み込みデータ構造
