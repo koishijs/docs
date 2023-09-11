@@ -6,11 +6,13 @@
 
 一个 Database 对象代理了 Koishi 上下文绑定的应用实例有关的所有数据库访问。同时它具有注入特性，任何插件都可以自己定义数据库上的方法。本章主要介绍数据库的官方接口。注意：**它们并不由 Koishi 自身实现，而是由每个数据库分别实现的**。Koishi 只是提供了一套标准。
 
-## database.drop()
+## 实例方法
 
-## database.stats()
+### database.drop()
 
-## database.get(table, query, modifier?)
+### database.stats()
+
+### database.get(table, query, modifier?)
 
 - **table:** `keyof Tables` 注册在 ORM 中的表名
 - **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜索表达式
@@ -80,12 +82,16 @@ const rows = await ctx.database.get('schedule', {
 const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 ```
 
-## database.set(table, query, updater)
+### database.set(table, query, updater)
 
-## database.remove(table, query)
+### database.remove(table, query)
 
-## database.create(table, data)
+### database.create(table, data)
 
-## database.upsert(table, data, keys?)
+### database.upsert(table, data, keys?)
 
-## database.eval(table, expr, query?)
+### database.eval(table, expr, query?) <badge type="danger">已废弃</badge>
+
+### database.select(table, query?)
+
+### database.join(tables, query?) <badge type="warning">实验性</badge>
