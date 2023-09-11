@@ -6,11 +6,13 @@
 
 一個 Database 物件代理了 Koishi 上下文繫結的應用實體有關的所有資料庫訪問。同時它具有注入特性，任何外掛程式都可以自己定義資料庫上的方法。本章主要介紹資料庫的官方介面。注意：**它們並不由 Koishi 自身實現，而是由每個資料庫分別實現的**。Koishi 只是提供了一套標準。
 
-## database.drop()
+## 实例方法
 
-## database.stats()
+### database.drop()
 
-## database.get(table, query, modifier?)
+### database.stats()
+
+### database.get(table, query, modifier?)
 
 - **table:** `keyof Tables` 註冊在 ORM 中的表名
 - **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜尋運算式
@@ -80,12 +82,16 @@ const rows = await ctx.database.get('schedule', {
 const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 ```
 
-## database.set(table, query, updater)
+### database.set(table, query, updater)
 
-## database.remove(table, query)
+### database.remove(table, query)
 
-## database.create(table, data)
+### database.create(table, data)
 
-## database.upsert(table, data, keys?)
+### database.upsert(table, data, keys?)
 
-## database.eval(table, expr, query?)
+### database.eval(table, expr, query?) <badge type="danger">已废弃</badge>
+
+### database.select(table, query?)
+
+### database.join(tables, query?) <badge type="warning">实验性</badge>
