@@ -3,8 +3,8 @@ prev:
   text: 选择安装方式
   link: /ru-RU/manual/starter/
 next:
-  text: 认识控制台
-  link: /ru-RU/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 为 Windows 安装
