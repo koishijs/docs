@@ -3,8 +3,8 @@ prev:
   text: Installation
   link: /en-US/manual/starter/
 next:
-  text: About Koishi Console
-  link: /en-US/manual/console/
+  text: Install and Configure Plugins
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # Install for macOS
