@@ -3,8 +3,8 @@ prev:
   text: 选择安装方式
   link: /de-DE/manual/starter/
 next:
-  text: 认识控制台
-  link: /de-DE/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 在容器中使用
