@@ -3,8 +3,8 @@ prev:
   text: 選擇安裝方式
   link: /zh-TW/manual/starter/
 next:
-  text: 認識控制檯
-  link: /zh-TW/manual/console/
+  text: 安裝和配置外掛
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 在容器中使用
