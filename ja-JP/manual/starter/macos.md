@@ -3,8 +3,8 @@ prev:
   text: インストール方法
   link: /ja-JP/manual/starter/
 next:
-  text: コンソールについて
-  link: /ja-JP/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 为 macOS 安装
