@@ -3,8 +3,8 @@ prev:
   text: 选择安装方式
   link: /zh-CN/manual/starter/
 next:
-  text: 认识控制台
-  link: /zh-CN/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 为 Linux 安装
