@@ -3,8 +3,8 @@ prev:
   text: Andere Installationsmethoden
   link: /de-DE/manual/starter/
 next:
-  text: Anerkennung der Konsole
-  link: /de-DE/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # Installation für Windows
