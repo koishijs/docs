@@ -3,8 +3,8 @@ prev:
   text: Autre méthode d'installation
   link: /fr-FR/manual/starter/
 next:
-  text: Découvrir la console
-  link: /fr-FR/manual/console/
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # Installation pour Windows
