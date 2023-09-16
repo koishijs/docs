@@ -153,7 +153,7 @@ If the parent command didn't have a feature itself, then the effect of `user` an
 <chat-panel>
 <chat-message nickname="Alice">user locale zh
 </chat-message>
-<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+<chat-message nickname="Koishi">User data has been changed.</chat-message>
 </chat-panel>
 
 Users who are familiar with Git may find out, this design draws on the 2-level command of Git: When features of a command are too complex, we can split them into several subcommands, to make the feature of command clear.
@@ -168,9 +168,9 @@ Open the Console, we can find the page named 'Command Management' on the activit
 
 ### Set Aliases
 
-点进任意指令的详情页，首先就能看到「名称设置」，这里展示了指令的全部别名。每个别名都能被用来触发指令，而第一个别名则会作为默认名称显示在帮助中。
+Open the detail page of any commands, we can find "Name Setting" with all aliases on it.Each alias can be used to trigger the command, the first alias will be shown as the default name in the help.
 
-你可以在这里添加或删除别名，也可以将任意别名设置为默认的显示名称。例如，在 `echo` 指令中点击「添加别名」，输入 `复读`，然后点击「设为默认」，这样一来，用户在帮助中看到的就是 `复读` 而不是 `echo` 了。
+We can add or delete aliases here, or set any alias to the default display name.例如，在 `echo` 指令中点击「添加别名」，输入 `复读`，然后点击「设为默认」，这样一来，用户在帮助中看到的就是 `复读` 而不是 `echo` 了。
 
 ### Add Subcommands
 
