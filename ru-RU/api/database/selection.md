@@ -4,6 +4,8 @@
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
 :::
 
+`Selection` 可以由 [`database.select()`](./database.md#database-select) 或 [`database.join()`](./database.md#database-join) 方法创建，也可以被其他 `Selection` 的实例方法返回。它提供了一组链式调用的 API，用于构造查询语句。
+
 ## 类型定义
 
 ### Callback
@@ -16,18 +18,18 @@ type Callback<S> = (row: Row<S>) => Eval.Expr
 
 ### FieldLike
 
-一个的可用字段。该类型可以是表中现有的字段名或者一个回调函数。
+一个可用字段。该类型可以是表中现有的字段名或者一个由回调函数表示的虚拟字段。
 
 ```ts
 type FieldLike<S> = keyof S | Callback<S>
 ```
 
-### ProjectFields
+### Project
 
-使用多个字段构造新的表。该类型可以是字段名、字段名数组或者一个由回调函数构成的字典。如果是字段名或者字段名数组，则新的表将会沿用它们的名称；否则将会使用字典的键作为字段名。
+使用多个字段构造新的虚拟表。该类型可以是字段名数组或者一个由 `FieldLike` 构成的字典。如果是字段名数组，则新的表将会沿用这些字段的名称；否则将会使用字典的键作为字段名。
 
 ```ts
-type ProjectFields<S> = keyof S | (keyof S)[] | Dict<FieldLike<S>>
+type Project<S> = (keyof S)[] | Dict<FieldLike<S>>
 ```
 
 ## 实例方法
@@ -63,14 +65,14 @@ type ProjectFields<S> = keyof S | (keyof S)[] | Dict<FieldLike<S>>
 
 ### selection.project(fields)
 
-- **fields:** [`ProjectFields`](#projectfields) 用于投影的字段
+- **fields:** [`Project`](#project) 用于投影的字段
 - 返回值: `Selection`
 
 对结果进行投影。
 
 ### selection.groupBy(fields, extra?)
 
-- **fields:** [`ProjectFields`](#projectfields) 用于分组的字段
+- **fields:** [`Project`](#project) 用于分组的字段
 - **extra:** [`Dict<FieldLike<S>>`](#fieldlike) 向分组内添加额外的字段
 - 返回值: `Selection`
 
