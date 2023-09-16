@@ -1,7 +1,7 @@
 # Logger
 
 ::: tip
-本节中的源码位于 [reggol](https://github.com/shigma/reggol)。
+本节中的 API 来自 [reggol](https://github.com/shigma/reggol)，并由 Koishi 重新导出。
 :::
 
 ## 输出等级
