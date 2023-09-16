@@ -1,5 +1,5 @@
 - - -
-prev: text: 选择安装方式 link: /zh-CN/manual/starter/
+prev: text: 选择安装方式 link: /en-US/manual/starter/
 - - -
 
 # Install and Configure Plugins
@@ -110,7 +110,7 @@ Go to the "Dependency Management" page. You can see the dependency list here.Dep
 
 当依赖的状态显示为「可更新」时，点击其右侧的「修改」按钮，在弹出的窗口左上角选择你需要的版本，点击右下角的「更新」按钮即可完成更新。
 
-You can also update multiple plugins. Select the version you need by relying on the dropdown menu on the right side of the dependency name. Then press the "Apply changes" button in the upper right corner.In addition, the "Update All" button in the top right corner can update all dependencies at a time.
+You can also update multiple plugins. Select the version you need by relying on the dropdown menu on the right side of the dependency name. Then press the "Apply changes" button in the upper right corner.In addition, the "Update All" button in the top right corner can update all dependencies versions once(you still need to click "Apply" button).
 
 ![dependencies](/manual/console/dependencies.light.webp) {.light-only}
 
