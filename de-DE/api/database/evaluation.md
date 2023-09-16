@@ -1,18 +1,28 @@
-# 求值表达式 (Evaluation)
+# 求值表达式 (Eval)
 
 ::: tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
 :::
+
+求值表达式是一组静态 API，主要在 [`Selection`](./selection.md) 中使用。你可以从 Koishi 中直接导入：
+
+```ts
+import { Eval } from 'koishi'
+// 或者使用更短的别名
+import { $ } from 'koishi'
+```
 
 ## 类型定义
 
 本节中使用的 `Number`, `String`, `Boolean`, `Any` 并非 JavaScript 中的内置函数，而是对应于 `number`, `string`, `boolean`, `any` 类型的求值表达式。例如，当一个表的 `foo` 字段有数值类型时，求值表达式 `$.gt(row.x, 1)` 是合法的，并且返回值的类型是 `Boolean`。
 
 ```ts
-type Number = number | Eval.Expr<number>
-type String = string | Eval.Expr<string>
-type Boolean = boolean | Eval.Expr<boolean>
-type Any = string | number | boolean | Date | Eval.Expr<any>
+namespace Eval {
+  type Number = number | Expr<number>
+  type String = string | Expr<string>
+  type Boolean = boolean | Expr<boolean>
+  type Any = string | number | boolean | Date | Expr<any>
+}
 ```
 
 ## 数值运算
