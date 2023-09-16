@@ -1,7 +1,7 @@
 # 随机数操作
 
 ::: tip
-本节中的源码位于 [inaba](https://github.com/shigma/inaba)。
+本节中的 API 来自 [inaba](https://github.com/shigma/inaba)，并由 Koishi 重新导出。
 :::
 
 ## 基本用法
