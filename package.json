@@ -13,7 +13,7 @@
   "devDependencies": {
     "@koishijs/components": "^1.4.3",
     "@koishijs/core": "^4.14.5",
-    "@koishijs/market": "^4.1.4",
+    "@koishijs/market": "^4.1.5",
     "@koishijs/registry": "^6.0.4",
     "@koishijs/vitepress": "^3.0.0",
     "@types/node": "^20.4.2",
