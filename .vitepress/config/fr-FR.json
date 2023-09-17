@@ -921,27 +921,27 @@
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union : boutons radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union : type conjoint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union : type somme 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union : type somme 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transform : recomposition",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed : évaluation conditionnelle",
               "link": "/schema/advanced/computed.md"
             }
           ]
