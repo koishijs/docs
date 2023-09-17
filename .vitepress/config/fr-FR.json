@@ -145,45 +145,45 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号登录与绑定",
+              "text": "Génération des comptes",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "深入定制机器人",
+              "text": "Personnalisations du bot",
               "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "配方",
+          "text": "Recettes",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "Solutions perfectionnées des commandes",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "Utilisation de la base des données",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "Maintenance des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "Recherche sur la place de marché",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "Lanceur",
           "items": [
             {
-              "text": "系统要求",
+              "text": "Configuration requise",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -282,23 +282,23 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/database/"
             },
             {
-              "text": "数据模型",
+              "text": "Modèle de données",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "进阶查询技巧",
+              "text": "Interrogations avancées",
               "link": "/guide/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "Gestion des permissions",
               "link": "/guide/database/permission.md"
             }
           ]
@@ -323,7 +323,7 @@
               "link": "/guide/adapter/message.md"
             },
             {
-              "text": "平台集成",
+              "text": "Intégration sur la plateforme conversationnelle",
               "link": "/guide/adapter/integration.md"
             }
           ]
@@ -448,15 +448,15 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions : génération des permissions",
               "link": "/api/service/permissions.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "Registry : système des plugins",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "Router : service network",
               "link": "/api/service/router.md"
             }
           ]
@@ -486,19 +486,19 @@
           "text": "Multi-plateforme",
           "items": [
             {
-              "text": "频道 (Channel)",
+              "text": "Channel : canaux",
               "link": "/api/platform/channel.md"
             },
             {
-              "text": "群组 (Guild)",
+              "text": "Guild : guildes",
               "link": "/api/platform/guild.md"
             },
             {
-              "text": "群组成员 (GuildMember)",
+              "text": "GuildMember : membres de la guilde",
               "link": "/api/platform/member.md"
             },
             {
-              "text": "群组角色 (GuildRole)",
+              "text": "GuildRole : rôles de la guilde",
               "link": "/api/platform/role.md"
             },
             {
@@ -664,7 +664,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ 频道",
+              "text": "QQ Guild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
@@ -676,11 +676,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official Account",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "企业微信",
+              "text": "WeCom (WeChat Work)",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -917,7 +917,7 @@
           "text": "Type avancé",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect : groupement",
               "link": "/schema/advanced/intersect.md"
             },
             {
@@ -1029,11 +1029,11 @@
               "link": "/about/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "Notes de version : v4.12",
               "link": "/about/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Notes de version : v4.13",
               "link": "/about/releases/v4.13.md"
             }
           ]
