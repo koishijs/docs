@@ -4,12 +4,14 @@
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
+::: tip
 Koishi 的数据库 API 实际上分为两部分：
 
-- @koishijs/core 中定义的内置数据结构
-- minato 中提供的 ORM 接口
+- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
+- Minato 定义的通用数据库接口，由数据库插件实现
 
-这一页中将仅展示第一部分的内容。
+这一页中将仅展示第一部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
+:::
 
 ## 内置表
 
