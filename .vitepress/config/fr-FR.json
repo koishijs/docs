@@ -502,40 +502,40 @@
               "link": "/api/platform/role.md"
             },
             {
-              "text": "消息 (Message)",
+              "text": "Message : message",
               "link": "/api/platform/message.md"
             },
             {
-              "text": "表态 (Reaction)",
+              "text": "Reaction : réaction",
               "link": "/api/platform/reaction.md"
             },
             {
-              "text": "用户 (User)",
+              "text": "User : compte",
               "link": "/api/platform/user.md"
             }
           ]
         },
         {
-          "text": "数据库",
+          "text": "Base de données",
           "items": [
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/api/database/built-in.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Opérations avec données de bases",
               "link": "/api/database/database.md"
             },
             {
-              "text": "数据模型 (Model)",
+              "text": "Modèles de données",
               "link": "/api/database/model.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Expression de la requête",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Expression de la calculée",
               "link": "/api/database/evaluation.md"
             },
             {
