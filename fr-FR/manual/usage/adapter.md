@@ -1,4 +1,4 @@
-# 第一次对话
+# La première conversation
 
 安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
 
