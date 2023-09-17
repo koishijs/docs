@@ -130,18 +130,18 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Utilisation",
           "items": [
             {
-              "text": "安装和配置插件",
+              "text": "Installation et configuration des plugins",
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次对话",
+              "text": "La première conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
-              "text": "指令系统",
+              "text": "Système commande",
               "link": "/manual/usage/command.md"
             },
             {
