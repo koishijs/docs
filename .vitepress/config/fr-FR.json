@@ -539,7 +539,7 @@
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "查询构造器 (Selection)",
+              "text": "Constructeur de l'expression de la requête",
               "link": "/api/database/selection.md"
             }
           ]
@@ -548,40 +548,40 @@
           "text": "Console",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "API serveur",
               "link": "/api/console/server.md"
             },
             {
-              "text": "上下文 API",
+              "text": "API contexte",
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "API composable",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/console/component.md"
             }
           ]
         },
         {
-          "text": "其他功能",
+          "text": "Autres fonctionnalités",
           "items": [
             {
-              "text": "观察者 (Observer)",
+              "text": "Observer : observateur",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "Logger : journal",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "Random : aléa",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "其他工具 (Misc)",
+              "text": "Misc : miscellanées",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -632,7 +632,7 @@
           "text": "Adaptateurs",
           "items": [
             {
-              "text": "钉钉",
+              "text": "DingTalk",
               "link": "/plugins/adapter/dingtalk.md"
             },
             {
@@ -652,7 +652,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "邮件",
+              "text": "E-mails",
               "link": "/plugins/adapter/mail.md"
             },
             {
