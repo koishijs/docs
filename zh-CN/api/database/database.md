@@ -31,6 +31,39 @@ type TableLike<S> = keyof S | Selection
 type TableJoin<S> = (keyof S)[] | Dict<TableLike<S>>
 ```
 
+### Modifier
+
+对查询的结果进行修饰，包括限制数量、选取字段和排序。
+
+```ts
+type Modifier<K extends string> = K[] | ModifierOptions<K>
+
+interface ModifierOptions<K> {
+  limit?: number
+  offset?: number
+  fields?: K[]
+  sort?: Dict<'asc' | 'desc'>
+}
+```
+
+### Update
+
+要更新的数据。包含任意多个字段，每个字段的值可以是一个固定值或者求值表达式。
+
+```ts
+type Uneval<T> =
+  | T extends number ? Eval.Number
+  : T extends string ? Eval.String
+  : T extends boolean ? Eval.Boolean
+  : T extends Date ? Eval.Date
+  : T extends RegExp ? Eval.RegExp
+  : T
+
+type Update<S> = {
+  [K in keyof S]?: Uneval<S[K]>
+}
+```
+
 ### Stats
 
 数据库统计信息。
@@ -60,7 +93,7 @@ interface TableStats {
 ### database.join(tables, query?) <badge type="warning">实验性</badge>
 
 - **tables:** [`TableJoin`](#tablejoin) 用于连接的表
-- **query:** [`Query`](./query.md) 约束条件
+- **query:** [`Callback`](./selection.md#callback) 约束条件
 - 返回值: [`Selection`](./selection.md)
 
 将多个表连接成新的虚拟表。
@@ -69,16 +102,16 @@ interface TableStats {
 
 - **table:** `string` 表名
 - **query:** [`Query`](./query.md) 约束条件
-- **modifier:** `QueryModifier<keyof Tables[T]>` 请求修饰符
-- 返回值: `Promise<Tables[T][]>`
+- **modifier:** [`Modifier`](#modifier) 请求修饰符
+- 返回值: `Promise<any[]>`
 
 查询数据。
 
-### database.set(table, query, updater)
+### database.set(table, query, update)
 
 - **table:** `string` 表名
 - **query:** [`Query`](./query.md) 约束条件
-- **updater:** `QueryUpdater<keyof Tables[T]>` 更新器
+- **update:** [`Update`](#update) 数据
 - 返回值: `Promise<void>`
 
 更新数据。
@@ -102,7 +135,7 @@ interface TableStats {
 ### database.upsert(table, data, keys?)
 
 - **table:** `string` 表名
-- **data:** `any[]` 数据
+- **data:** [`Update[]`](#update) 数据
 - **keys:** `string | string[]` 用于索引的字段
 - 返回值: `Promise<void>`
 

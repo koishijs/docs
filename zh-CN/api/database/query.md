@@ -68,7 +68,7 @@ interface LogicalExpr<T> {
 
 - 一个 [`QueryExpr`](#queryexpr)，用于约束表中的字段
 - 一个 [`Shorthand`](#shorthand)，用于约束表中的主键 (如果主键唯一)
-- 一个接受行数据 `Row<T>` 并返回 `EvalExpr<boolean>` 的回调函数
+- 一个 [`Callback`](./selection.md#callback)，可以在其中使用求值表达式
 
 ```ts
 type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
@@ -113,7 +113,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 判断字段的值是否不在给定的数组中。
 
-## 代数运算
+## 比较运算
 
 ### $eq
 
@@ -155,7 +155,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 ### $el
 
-- 类型: `FieldExpr<U>` (`T extends U[]`)
+- 类型: [`FieldExpr<U>`](#fieldexpr) (`T extends U[]`)
 
 判断列表中是否存在满足给定约束条件的元素。
 
