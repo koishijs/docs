@@ -40,7 +40,7 @@ namespace Eval {
 
 ### $.add(...values)
 
-- **values:** `Number[]` 要相加的值
+- **values:** `Number[]` 待相加的值
 - 返回值: `EvalExpr<number>`
 
 将一组值相加。
@@ -55,7 +55,7 @@ namespace Eval {
 
 ### $.multiply(...values)
 
-- **values:** `Number[]` 要相乘的值
+- **values:** `Number[]` 待相乘的值
 - 返回值: `EvalExpr<number>`
 
 将一组值相乘。
@@ -72,47 +72,47 @@ namespace Eval {
 
 ### $.eq(...values)
 
-- **values:** `Any[]` 要比较的值
+- **values:** `Any[]` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断一组值是否相等。
 
 ### $.ne(x, y)
 
-- **x:** `Any` 任意值
-- **y:** `Any` 任意值
+- **x:** `Any` 待比较的值
+- **y:** `Any` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断 `x != y`。
 
 ### $.gt(x, y)
 
-- **x:** `Number` 任意值
-- **y:** `Number` 任意值
+- **x:** `Number` 待比较的值
+- **y:** `Number` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断 `x > y`。
 
 ### $.gte(x, y)
 
-- **x:** `Number` 任意值
-- **y:** `Number` 任意值
+- **x:** `Number` 待比较的值
+- **y:** `Number` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断 `x >= y`。
 
 ### $.lt(x, y)
 
-- **x:** `Number` 任意值
-- **y:** `Number` 任意值
+- **x:** `Number` 待比较的值
+- **y:** `Number` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断 `x < y`。
 
 ### $.lte(x, y)
 
-- **x:** `Number` 任意值
-- **y:** `Number` 任意值
+- **x:** `Number` 待比较的值
+- **y:** `Number` 待比较的值
 - 返回值: `EvalExpr<boolean>`
 
 判断 `x <= y`。
@@ -121,7 +121,7 @@ namespace Eval {
 
 ### $.concat(...values)
 
-- **values:** `String[]` 要连接的值
+- **values:** `String[]` 待连接的值
 - 返回值: `EvalExpr<string>`
 
 连接一组字符串。
@@ -130,21 +130,21 @@ namespace Eval {
 
 ### $.and(...values)
 
-- **values:** `Boolean[]` 布尔值
+- **values:** `Boolean[]` 待计算的值
 - 返回值: `EvalExpr<boolean>`
 
 将一组布尔值做与运算。
 
 ### $.or(...values)
 
-- **values:** `Boolean[]` 布尔值
+- **values:** `Boolean[]` 待计算的值
 - 返回值: `EvalExpr<boolean>`
 
 将一组布尔值做或运算。
 
 ### $.not(values)
 
-- **values:** `Boolean` 布尔值
+- **values:** `Boolean` 待计算的值
 - 返回值: `EvalExpr<boolean>`
 
 将一个布尔值取反。
@@ -160,28 +160,28 @@ namespace Eval {
 
 ### $.avg(x)
 
-- **x:** `Number` 表达式
+- **x:** `Number` 数值表达式
 - 返回值: `EvalExpr<number>`
 
 计算一组值的平均值。
 
 ### $.min(x)
 
-- **x:** `Number` 表达式
+- **x:** `Number` 数值表达式
 - 返回值: `EvalExpr<number>`
 
 计算一组值的最小值。
 
 ### $.max(x)
 
-- **x:** `Number` 表达式
+- **x:** `Number` 数值表达式
 - 返回值: `EvalExpr<number>`
 
 计算一组值的最大值。
 
 ### $.count(x)
 
-- **x:** `Any` 表达式
+- **x:** `Any` 任意表达式
 - 返回值: `EvalExpr<number>`
 
 统计不同元素的数量。
