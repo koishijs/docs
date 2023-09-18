@@ -519,28 +519,28 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "Structure des données internes",
-              "link": "/api/database/built-in.md"
-            },
-            {
-              "text": "Opérations avec données de bases",
-              "link": "/api/database/database.md"
-            },
-            {
-              "text": "Modèles de données",
+              "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "Expression de la requête",
+              "text": "数据库操作 (Database)",
+              "link": "/api/database/database.md"
+            },
+            {
+              "text": "查询表达式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "Expression de la calculée",
+              "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "Constructeur de l'expression de la requête",
+              "text": "查询构造器 (Selection)",
               "link": "/api/database/selection.md"
+            },
+            {
+              "text": "内置数据结构",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
