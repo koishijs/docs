@@ -519,16 +519,12 @@
           "text": "Database",
           "items": [
             {
-              "text": "Built-in Data Structure",
-              "link": "/api/database/built-in.md"
+              "text": "Data Model",
+              "link": "/api/database/model.md"
             },
             {
               "text": "Database",
               "link": "/api/database/database.md"
-            },
-            {
-              "text": "Data Model",
-              "link": "/api/database/model.md"
             },
             {
               "text": "Query Expression",
@@ -541,6 +537,10 @@
             {
               "text": "查询构造器 (Selection)",
               "link": "/api/database/selection.md"
+            },
+            {
+              "text": "Built-in Data Structure",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
