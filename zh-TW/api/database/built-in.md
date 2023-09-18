@@ -4,14 +4,12 @@
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
-::: tip
 Koishi 的数据库 API 实际上分为两部分：
 
-- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 - Minato 定义的通用数据库接口，由数据库插件实现
+- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 
-这一页中将仅展示第一部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
-:::
+这一页中将仅展示第二部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
 
 ## 内建表
 
@@ -41,7 +39,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 下列實體方法直接由 @koishijs/core 提供實現。
 
-### database.getUser(platform, id, modifier?)
+### ctx.database.getUser(platform, id, modifier?)
 
 - **platform:** `string` 平臺名
 - **id:** `string` 使用者識別符號
@@ -50,7 +48,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向資料庫請求使用者資料。
 
-### database.setUser(platform, id, data)
+### ctx.database.setUser(platform, id, data)
 
 - **platform:** `string` 平臺名
 - **id:** `string` 使用者識別符號
@@ -59,7 +57,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向資料庫修改或新增使用者資料。
 
-### database.getChannel(platform, id, fields?)
+### ctx.database.getChannel(platform, id, fields?)
 
 - **platform:** `string` 平臺名
 - **id:** `string` 頻道識別符號
@@ -68,7 +66,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向資料庫請求頻道資料。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">廢棄</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">廢棄</badge>
 
 - **fields:** `ChannelField[]` 請求的欄位，預設為全部欄位
 - **platform:** `string` 平臺名，預設為全平臺
@@ -77,7 +75,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向資料庫請求被特定機器人管理的所有頻道資料。這裡的兩個引數可以寫任意一個，都可以識別。
 
-### database.setChannel(platform, id, data)
+### ctx.database.setChannel(platform, id, data)
 
 - **platform:** `string` 平臺名
 - **id:** `number` 頻道識別符號
