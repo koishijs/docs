@@ -4,14 +4,12 @@
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
-::: tip
 Koishi 的数据库 API 实际上分为两部分：
 
-- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 - Minato 定义的通用数据库接口，由数据库插件实现
+- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 
-这一页中将仅展示第一部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
-:::
+这一页中将仅展示第二部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
 
 ## 組み込みテーブル
 
@@ -41,7 +39,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 以下のインスタンスメソッドは @koishijs/core で実装されます。
 
-### database.getUser(platform, id, modifier?)
+### ctx.database.getUser(platform, id, modifier?)
 
 - **platform:** `string` プラットフォーム名
 - **id:** `string` ユーザー識別子
@@ -50,7 +48,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 データベースにユーザーデータをリクエストします。
 
-### database.setUser(platform, id, data)
+### ctx.database.setUser(platform, id, data)
 
 - **platform:** `string` プラットフォーム名
 - **id:** `string` ユーザー識別子
@@ -59,7 +57,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 データベースにユーザーデータを修正・追加します。
 
-### database.getChannel(platform, id, fields?)
+### ctx.database.getChannel(platform, id, fields?)
 
 - **platform:** `string` プラットフォーム名
 - **id:** `string` チャンネル識別子
@@ -68,7 +66,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 データベースにチャンネルデータをリクエストします。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">非推奨</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">非推奨</badge>
 
 - **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
 - **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
@@ -77,7 +75,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 データベースに特定のボットが管理するすべでのチャンネルデータをリクエストします。ここにある二つの引数のどちらを選んでも、正しく認識されます。
 
-### database.setChannel(platform, id, data)
+### ctx.database.setChannel(platform, id, data)
 
 - **platform:** `string` プラットフォーム名
 - **id:** `number` チャンネル識別子
