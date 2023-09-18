@@ -7,28 +7,28 @@
 ::: tip
 Koishi 的数据库 API 实际上分为两部分：
 
-- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 - Minato 定义的通用数据库接口，由数据库插件实现
+- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 
-这一页中将仅展示第二部分的内容。另一部分的内容请参见 [内置数据结构](./built-in.md)。
+这一页中将仅展示第一部分的内容。另一部分的内容请参见 [内置数据结构](./built-in.md)。
 :::
 
 ## 类型定义
 
 ### TableLike
 
-一个可用表。该类型可以是数据库中现有的表名或者一个 `Selection` 对象。
+一个可用表。该类型可以是数据库中现有的表名或者一个 [`Selection`](./selection.md) 对象。
 
 ```ts
 type TableLike<S> = keyof S | Selection
 ```
 
-### Join
+### TableJoin
 
 将多个表连接成新的虚拟表。该类型可以是表名数组或者一个由 `TableLike` 构成的字典。如果是表名数组，则新的表将会使用这些表名作为字段名；否则将会使用字典的键作为字段名。
 
 ```ts
-type Join<S> = (keyof S)[] | Dict<TableLike<S>>
+type TableJoin<S> = (keyof S)[] | Dict<TableLike<S>>
 ```
 
 ### Stats
@@ -59,7 +59,7 @@ interface TableStats {
 
 ### database.join(tables, query?) <badge type="warning">实验性</badge>
 
-- **tables:** [`Join`](#join) 用于连接的表
+- **tables:** [`TableJoin`](#tablejoin) 用于连接的表
 - **query:** [`Query`](./query.md) 约束条件
 - 返回值: [`Selection`](./selection.md)
 

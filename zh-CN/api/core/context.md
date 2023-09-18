@@ -12,6 +12,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.before](../service/events.md#ctx-before)
 - [ctx.bots](../service/bots.md)
 - [ctx.broadcast](../service/bots.md#ctx-broadcast)
+- [ctx.database](../database/database.md)
 - [ctx.emit](../service/events.md#ctx-emit)
 - [ctx.exclude](../service/filter.md#ctx-exclude)
 - [ctx.filter](../service/filter.md#ctx-filter)
