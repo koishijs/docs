@@ -519,16 +519,12 @@
           "text": "数据库",
           "items": [
             {
-              "text": "内置数据结构",
-              "link": "/api/database/built-in.md"
+              "text": "数据模型 (Model)",
+              "link": "/api/database/model.md"
             },
             {
               "text": "数据库操作 (Database)",
               "link": "/api/database/database.md"
-            },
-            {
-              "text": "数据模型 (Model)",
-              "link": "/api/database/model.md"
             },
             {
               "text": "查询表达式 (Query)",
@@ -541,6 +537,10 @@
             {
               "text": "查询构造器 (Selection)",
               "link": "/api/database/selection.md"
+            },
+            {
+              "text": "内置数据结构",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
