@@ -519,16 +519,12 @@
           "text": "数据库",
           "items": [
             {
-              "text": "內建資料結構",
-              "link": "/api/database/built-in.md"
+              "text": "資料模型 (Model)",
+              "link": "/api/database/model.md"
             },
             {
               "text": "資料庫操作 (Database)",
               "link": "/api/database/database.md"
-            },
-            {
-              "text": "資料模型 (Model)",
-              "link": "/api/database/model.md"
             },
             {
               "text": "查詢運算式 (Query)",
@@ -541,6 +537,10 @@
             {
               "text": "查询构造器 (Selection)",
               "link": "/api/database/selection.md"
+            },
+            {
+              "text": "內建資料結構",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
