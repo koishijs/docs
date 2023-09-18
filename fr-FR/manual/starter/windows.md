@@ -3,7 +3,7 @@ prev:
   text: Autre méthode d'installation
   link: /fr-FR/manual/starter/
 next:
-  text: 安装和配置插件
+  text: Installation et configuration de plugins
   link: /zh-CN/manual/usage/market.html
 ---
 
