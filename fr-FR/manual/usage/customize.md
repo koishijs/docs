@@ -1,38 +1,38 @@
 # Personnalisations du bot
 
-## 权限管理
+## Gestion des autorisations
 
-既然已经有了用户系统，下一个自然的需求便是权限管理了。
+Maintenant que nous avons un système d'utilisateurs en place, la prochaine étape naturelle est la gestion des autorisations.
 
-### 用户权限
+### Autorisations d'utilisateur
 
-Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个权限等级，遵循以下的 **核心规则**：
+Koishi dispose d'un système d'autorisations par défaut, qui attribue un niveau d'autorisation à chaque utilisateur, suivant ces **règles fondamentales** :
 
-- 数据库中没有的用户默认拥有 0 级权限
-- 高权限者能够执行一切低权限者的操作
+- Les utilisateurs absents de la base de données ont par défaut un niveau d'autorisation de 0.
+- Les utilisateurs de niveau d'autorisation élevé peuvent effectuer toutes les opérations des utilisateurs de niveau d'autorisation inférieur.
 
-在此基础上，我们还扩充出了这样的一套 **设计准则**：
+En plus de cela, nous avons établi des **directives de conception** :
 
-- 0 级：不存在的用户
-- 1 级：所有用户，只能够接触有限的功能
-- 2 级：高级用户，能够接触几乎一切机器人的功能
-- 3 级：管理员，能够直接操作机器人事务
-- 4 级：高级管理员，能够管理其他账号
+- Niveau 0 : Utilisateur inexistant
+- Niveau 1 : Tous les utilisateurs, avec un accès limité aux fonctionnalités
+- Niveau 2 : Utilisateurs avancés, avec accès à presque toutes les fonctionnalités du robot
+- Niveau 3 : Administrateurs, avec la capacité de gérer directement les transactions du robot
+- Niveau 4 : Administrateurs avancés, capables de gérer d'autres comptes
 
-你可以基于这套准则对指令进行 [权限管理](./command.md#权限管理)，也可以用于部分 [计算属性](#计算属性) 的配置项中。
+Vous pouvez utiliser ces directives pour la [gestion des autorisations](./command.md#权限管理) des commandes ou dans certaines options de configuration des [propriétés calculées](#计算属性).
 
-通过 [配置登录插件](./platform.md#配置登录插件) 的方式，你可以快速拥有一个 5 级权限的管理员账号。接下来，要做的就是为其他用户赋予权限了。
+En [configurant un plugin d'administration via la configuration de la connexion](./platform.md#配置登录插件), vous pouvez rapidement obtenir un compte administrateur de niveau 5. Ensuite, vous pouvez attribuer des autorisations à d'autres utilisateurs.
 
-安装 [admin](../../plugins/common/admin.md) 插件。该插件提供了名为 `authorize` 的指令，可以设置其他用户的权限等级：
+Installez le [plugin admin](../../plugins/common/admin.md). Ce plugin propose une commande appelée `authorize`, qui permet de définir le niveau d'autorisation d'autres utilisateurs :
 
 <chat-panel>
 <chat-message nickname="Alice">authorize -u @Bob 2</chat-message>
-<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+<chat-message nickname="Koishi">Les données de l'utilisateur ont été modifiées.</chat-message>
 </chat-panel>
 
-任何用户只能对权限等级低于自己的用户进行操作，且操作后的权限等级同样必须低于自己。
+Chaque utilisateur ne peut interagir qu'avec des utilisateurs de niveau d'autorisation inférieur au sien, et le niveau d'autorisation après l'opération doit également être inférieur.
 
-### 受理人机制
+### Mécanisme de réception
 
 默认情况下，同一个 Koishi 应用接入的多个机器人账号在同一个频道内，只有一个机器人会响应用户的消息。这是为了防止消息重复发送和循环触发等问题。这个负责响应消息的机器人被称为该频道的「受理人」。默认情况下，第一个收到该频道的消息的机器人会自动成为受理人。
 
