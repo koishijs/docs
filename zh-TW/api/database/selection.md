@@ -8,12 +8,24 @@
 
 ## 类型定义
 
-### Callback
+### Row
 
-可以视为字段的回调函数。接受当前行作为参数，返回一个 [`Eval.Expr`](./evaluation.md)。
+象征一行数据的代理对象。其上的属性对应取值的 [`EvalExpr`](./evaluation.md)。
 
 ```ts
-type Callback<S> = (row: Row<S>) => Eval.Expr
+type Cell<T> = EvalExpr<T> & (T extends Comparable ? {} : Row<T>)
+
+type Row<S> = {
+  [K in keyof S]-?: Cell<NonNullable<S[K]>>
+}
+```
+
+### Callback
+
+可以视为字段的回调函数。接受当前行作为参数，返回一个 [`EvalExpr`](./evaluation.md)。
+
+```ts
+type Callback<S, T> = (row: Row<S>) => EvalExpr<T>
 ```
 
 ### FieldLike
@@ -73,14 +85,14 @@ type Project<S> = (keyof S)[] | Dict<FieldLike<S>>
 ### selection.groupBy(fields, extra?)
 
 - **fields:** [`Project`](#project) 用于分组的字段
-- **extra:** [`Dict<FieldLike<S>>`](#fieldlike) 向分组内添加额外的字段
+- **extra:** [`Dict<FieldLike>`](#fieldlike) 向分组内添加额外的字段
 - 返回值: `Selection`
 
 对结果进行分组。
 
 ### selection.execute(expr?)
 
-- **expr:** [`Eval.Expr`](./evaluation.md) 用于计算的表达式
+- **expr:** [`EvalExpr`](./evaluation.md) 用于计算的表达式
 - 返回值: `Promise<any>`
 
 执行查询并返回结果。如果没有传入 `expr`，返回的是一个包含所有结果的数组；否则返回的是由 `expr` 聚合计算出的结果。
