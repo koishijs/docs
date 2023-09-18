@@ -3,7 +3,7 @@ prev:
   text: 选择安装方式
   link: /fr-FR/manual/starter/
 next:
-  text: 安装和配置插件
+  text: Installation et configuration de plugins
   link: /zh-CN/manual/usage/market.html
 ---
 
@@ -49,6 +49,6 @@ docker run -p 5140:5140 koishijs/koishi:latest-lite
 Koishi 本体及其插件都可以控制台完成更新。在持久化文件过后更新容器仅会更新 Chromium 和 Node.js 等的版本。
 :::
 
-## 安装插件
+## Installation de plugins
 
 在容器正常运行时，可以通过在浏览器中访问 `http://宿主机地址:5140` 在控制台中安装和启用插件。若无法访问请检查你的防火墙配置是否正确。
