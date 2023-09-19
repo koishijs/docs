@@ -85,8 +85,7 @@
 ::: tip
 通常情况下，Session 对象只有在中间件内才有此属性。因此如果想使用此接口请考虑下列方式：
 
-- 使用中间件
-- 使用指令 (指令的执行处于中间件内部)
+- 使用中间件或指令 (指令的执行处于中间件内部)
 - 手动调用 [`session.observeUser()`](#session-observeuser)
 - 手动调用 [`database.getUser()`](../database/built-in.md#database-getuser)
 

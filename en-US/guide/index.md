@@ -16,7 +16,10 @@ Koishi 是一个强大的机器人框架，因此有大量的内容可供学习�
 
 ## 预备知识
 
-Koishi 是一个 Node.js 框架，因此我们假定你已经拥有了一定的 JavaScript 和 Node.js 开发基础。如果你对自己的基础不自信，这里有一篇 [JavaScript 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Language_Overview)。这可能会花费你 30 分钟到 1 个小时的时间，但这样做的好处是你不会觉得同时在学习 Koishi 和 JavaScript。
+Koishi 是一个 Node.js 框架，因此我们假定你已经拥有了一定的 JavaScript 和 Node.js 开发基础。如果你对自己的基础不自信，可以参考下面的两篇教程：
+
+- [JavaScript 语言概览](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Language_Overview)
+- [现代 JavaScript 教程](https://zh.javascript.info/)
 
 ### 关于 TypeScript
 

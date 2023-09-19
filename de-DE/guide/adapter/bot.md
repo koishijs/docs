@@ -103,7 +103,7 @@ class DiscordBot extends Bot {
   // 获取群组列表
   async getGuildList() {
     const data = await this.internal.getCurrentUserGuilds()
-    return data.map(decodeGuild)
+    return { data: data.map(decodeGuild) }
   }
 }
 ```

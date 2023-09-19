@@ -1,5 +1,9 @@
 # 其他工具 (Misc)
 
+::: tip
+本节中的 API 来自 [cosmokit](https://github.com/shigma/cosmokit)，并由 Koishi 重新导出。
+:::
+
 这一节介绍了其他未被归类的内置工具函数。
 
 ## 字符串操作

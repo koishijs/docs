@@ -12,6 +12,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.before](../service/events.md#ctx-before)
 - [ctx.bots](../service/bots.md)
 - [ctx.broadcast](../service/bots.md#ctx-broadcast)
+- [ctx.database](../database/database.md)
 - [ctx.emit](../service/events.md#ctx-emit)
 - [ctx.exclude](../service/filter.md#ctx-exclude)
 - [ctx.filter](../service/filter.md#ctx-filter)
@@ -19,6 +20,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.i18n](../service/i18n.md)
 - [ctx.intersect](../service/filter.md#ctx-intersect)
 - [ctx.middleware](../service/events.md#ctx-middleware)
+- [ctx.model](../database/model.md)
 - [ctx.never](../service/filter.md#ctx-never)
 - [ctx.off](../service/events.md#ctx-off)
 - [ctx.on](../service/events.md#ctx-on)
@@ -29,10 +31,18 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.router](../service/router.md)
 - [ctx.scope](../service/registry.md#ctx-scope)
 - [ctx.serial](../service/events.md#ctx-serial)
+- [ctx.start](../service/registry.md#ctx-start)
+- [ctx.stop](../service/registry.md#ctx-stop)
 - [ctx.union](../service/filter.md#ctx-union)
 - [ctx.using](../service/registry.md#ctx-using)
 
 ## 实例属性和方法
+
+### ctx.root.config
+
+- 类型: [`Context.Config`](./app.md)
+
+当前的 Koishi 全局配置，相当于配置文件中的配置经过默认值处理后的结果。
 
 ### ctx.baseDir
 
@@ -71,9 +81,9 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 ### ctx.logger(scope?)
 
 - **scope:** `string` 要指定的类型，默认为 `''`
-- 返回值: [`Logger`](../service/logger.md)
+- 返回值: [`Logger`](../utils/logger.md)
 
-根据 namespace 生成一个 [Logger 对象](../service/logger.md)。
+根据命名空间生成一个 [Logger](../utils/logger.md) 对象。
 
 ## 静态属性和方法
 

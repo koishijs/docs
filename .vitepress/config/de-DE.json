@@ -291,7 +291,7 @@
             },
             {
               "text": "进阶查询技巧",
-              "link": "/guide/database/select.md"
+              "link": "/guide/database/selection.md"
             },
             {
               "text": "内置数据结构",
@@ -483,19 +483,48 @@
           ]
         },
         {
+          "text": "跨平台",
+          "items": [
+            {
+              "text": "频道 (Channel)",
+              "link": "/api/platform/channel.md"
+            },
+            {
+              "text": "群组 (Guild)",
+              "link": "/api/platform/guild.md"
+            },
+            {
+              "text": "群组成员 (GuildMember)",
+              "link": "/api/platform/member.md"
+            },
+            {
+              "text": "群组角色 (GuildRole)",
+              "link": "/api/platform/role.md"
+            },
+            {
+              "text": "消息 (Message)",
+              "link": "/api/platform/message.md"
+            },
+            {
+              "text": "表态 (Reaction)",
+              "link": "/api/platform/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/platform/user.md"
+            }
+          ]
+        },
+        {
           "text": "数据库",
           "items": [
             {
-              "text": "内置数据结构",
-              "link": "/api/database/built-in.md"
+              "text": "数据模型 (Model)",
+              "link": "/api/database/model.md"
             },
             {
               "text": "数据库操作 (Database)",
               "link": "/api/database/database.md"
-            },
-            {
-              "text": "数据模型 (Model)",
-              "link": "/api/database/model.md"
             },
             {
               "text": "查询表达式 (Query)",
@@ -504,6 +533,14 @@
             {
               "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
+            },
+            {
+              "text": "查询构造器 (Selection)",
+              "link": "/api/database/selection.md"
+            },
+            {
+              "text": "内置数据结构",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
@@ -906,10 +943,6 @@
             {
               "text": "Computed：条件求值",
               "link": "/schema/advanced/computed.md"
-            },
-            {
-              "text": "Dynamic：动态类型",
-              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }

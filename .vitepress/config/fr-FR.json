@@ -130,60 +130,60 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Utilisation",
           "items": [
             {
-              "text": "安装和配置插件",
+              "text": "Installation et configuration des plugins",
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次对话",
+              "text": "La première conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
-              "text": "指令系统",
+              "text": "Système commande",
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号登录与绑定",
+              "text": "Génération des comptes",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "深入定制机器人",
+              "text": "Personnalisations du bot",
               "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "配方",
+          "text": "Recettes",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "Solutions perfectionnées des commandes",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
+              "text": "Utilisation de la base des données",
               "link": "/manual/recipe/dataview.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "Maintenance des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "Recherche sur la place de marché",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "Lanceur",
           "items": [
             {
-              "text": "系统要求",
+              "text": "Configuration requise",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -282,23 +282,23 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/database/"
             },
             {
-              "text": "数据模型",
+              "text": "Modèle de données",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "进阶查询技巧",
-              "link": "/guide/database/select.md"
+              "text": "Interrogations avancées",
+              "link": "/guide/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "Gestion des permissions",
               "link": "/guide/database/permission.md"
             }
           ]
@@ -323,7 +323,7 @@
               "link": "/guide/adapter/message.md"
             },
             {
-              "text": "平台集成",
+              "text": "Intégration sur la plateforme conversationnelle",
               "link": "/guide/adapter/integration.md"
             }
           ]
@@ -448,15 +448,15 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions : génération des permissions",
               "link": "/api/service/permissions.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "Registry : système des plugins",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "Router : service network",
               "link": "/api/service/router.md"
             }
           ]
@@ -483,27 +483,64 @@
           ]
         },
         {
+          "text": "Multi-plateforme",
+          "items": [
+            {
+              "text": "Channel : canaux",
+              "link": "/api/platform/channel.md"
+            },
+            {
+              "text": "Guild : guildes",
+              "link": "/api/platform/guild.md"
+            },
+            {
+              "text": "GuildMember : membres de la guilde",
+              "link": "/api/platform/member.md"
+            },
+            {
+              "text": "GuildRole : rôles de la guilde",
+              "link": "/api/platform/role.md"
+            },
+            {
+              "text": "Message : message",
+              "link": "/api/platform/message.md"
+            },
+            {
+              "text": "Reaction : réaction",
+              "link": "/api/platform/reaction.md"
+            },
+            {
+              "text": "User : compte",
+              "link": "/api/platform/user.md"
+            }
+          ]
+        },
+        {
           "text": "Base de données",
           "items": [
             {
-              "text": "Structure des données internes",
-              "link": "/api/database/built-in.md"
-            },
-            {
-              "text": "Données de bases",
-              "link": "/api/database/database.md"
-            },
-            {
-              "text": "Modèles de données",
+              "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "Expression de la requête",
+              "text": "数据库操作 (Database)",
+              "link": "/api/database/database.md"
+            },
+            {
+              "text": "查询表达式 (Query)",
               "link": "/api/database/query.md"
             },
             {
-              "text": "Expression de la calculée",
+              "text": "求值表达式 (Eval)",
               "link": "/api/database/evaluation.md"
+            },
+            {
+              "text": "查询构造器 (Selection)",
+              "link": "/api/database/selection.md"
+            },
+            {
+              "text": "内置数据结构",
+              "link": "/api/database/built-in.md"
             }
           ]
         },
@@ -532,19 +569,19 @@
           "text": "Autres fonctionnalités",
           "items": [
             {
-              "text": "Observateur",
+              "text": "Observer : observateur",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "Journal",
+              "text": "Logger : journal",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "Aléa",
+              "text": "Random : aléa",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "Miscellanées",
+              "text": "Misc : miscellanées",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -595,7 +632,7 @@
           "text": "Adaptateurs",
           "items": [
             {
-              "text": "钉钉",
+              "text": "DingTalk",
               "link": "/plugins/adapter/dingtalk.md"
             },
             {
@@ -615,7 +652,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "邮件",
+              "text": "E-mails",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -627,7 +664,7 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ 频道",
+              "text": "QQ Guild",
               "link": "/plugins/adapter/qqguild.md"
             },
             {
@@ -639,11 +676,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official Account",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "企业微信",
+              "text": "WeCom (WeChat Work)",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -880,36 +917,32 @@
           "text": "Type avancé",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect : groupement",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union : boutons radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union : type conjoint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union : type somme 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union : type somme 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transform : recomposition",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed : évaluation conditionnelle",
               "link": "/schema/advanced/computed.md"
-            },
-            {
-              "text": "Dynamic：动态类型",
-              "link": "/schema/advanced/dynamic.md"
             }
           ]
         }
@@ -996,11 +1029,11 @@
               "link": "/about/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "Notes de version : v4.12",
               "link": "/about/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Notes de version : v4.13",
               "link": "/about/releases/v4.13.md"
             }
           ]

@@ -1,67 +1,78 @@
 # 内置数据结构
 
-::: danger 注意
-此页文档正在施工，其中的内容可能不是最新。
-:::
+<!-- 到目前为止，Koishi 对消息的处理逻辑仍然与数据库服务是分离的。如果仅仅是为了引入统一的数据库 API，并不值得我们把 `ctx.database` 内置为 Koishi 的一部分。我们随后会发现，Koishi 还为中间件和指令开发提供了便捷的数据流管理机制，这才是其内置数据库服务的主要原因。 -->
 
-上面介绍了一些 Koishi 内置的权限管理行为，而接下来将介绍的是开发者如何读取和更新数据。通常来说，中间件、插件的设计可以让机器人的开发变得更加模块化，但是这也带来了数据流向的问题。如果每个中间件分别从数据库中读取和更新自己所需的字段，那会造成大量重复的请求，导致严重的资源浪费；将所有可能请求的数据都在中间件的一开始就请求完成，并不会解决问题，因为一条信息的解读可能只需要少数几个字段，而大部分都是不需要的；更严重的是，后一种做法将导致资源单次请求，多次更新，从而产生种种数据安全性问题。那么针对这些问题，Koishi 又是如何解决的呢？
+通常来说，中间件、插件的设计可以让机器人的开发变得更加模块化，但是缺乏统一的数据流管理也带来了额外的问题。如果每个中间件分别从数据库中读取和更新自己所需的字段，那会造成大量重复的请求，导致严重的资源浪费；将所有可能请求的数据都在中间件的一开始就请求完成，也并不会解决问题，因为一条信息的解读可能只需要少数几个字段，而大部分都是不需要的；更严重的是，后一种做法将导致资源单次请求，多次更新，从而产生种种数据安全性问题。
+
+针对这些问题，Koishi 提供了一套完善的数据流管理机制，它能够在保证数据安全的同时，最大化地减少数据库访问次数。在这一节中，我们将会介绍这套机制的使用方法。
 
 ## 观察者对象
 
-之前我们已经提到过，你可以在 `session.user` 上获得本次事件相关的用户数据，但实际上 `session.user` 能做的远远不止这些。它的本质其实是一个**观察者**对象。假如我们有下面的代码：
+假设我们正在开发一个抽奖插件，每调用一次 lottery 指令，用户会获得一件物品，并存入用户表的 `inventory` 属性中。下面是这个插件的实现：
 
-```ts
-declare function getLotteryItem(): string
+```ts{13-14,18-19}
+declare function getLottery(): string
 
 // ---cut---
-// 定义一个 items 字段，用于存放物品列表
+// 定义一个 inventory 字段，用于存放物品列表
 declare module 'koishi' {
   interface User {
-    items: string[]
+    inventory: string[]
   }
 }
 
 ctx.model.extend('user', {
-  items: 'list',
+  inventory: 'list',
 })
 
 ctx.command('lottery')
-  .userFields(['items'])
+  // 声明所需字段
+  .userFields(['inventory'])
   .action(({ session }) => {
-    // 这里假设 item 是一个字符串，表示抽到的物品
-    const item = getLotteryItem()
+    // 这里假设 inventory 是一个字符串，表示抽到的物品
+    const item = getLottery()
     // 将抽到的物品存放到 user.items 中
-    session.user.items.push(item)
+    session.user.inventory.push(item)
     return `恭喜您获得了 ${item}！`
   })
 ```
 
-上面的代码看起来完全无法工作，因为我们都知道将数据写入数据库是一个异步的操作，但是在上面的中间件中我们没有调用任何异步操作。然而如果你运行这段代码，你会发现用户数据被成功地更新了。这就归功于观察者机制。`session.user` 的本质是一个 **观察者对象**，它检测在其上面做的一切更改并缓存下来。当任务进行完毕后，Koishi 又会自动将变化的部分进行更新，同时将缓冲区清空。
+我们都知道，写入数据库是一个异步的操作，而上面的代码看起来完全没有异步操作。然而如果你运行这段代码，你会发现用户数据被成功地更新了。这就归功于观察者机制。
 
-这套机制不仅可以将多次更新合并成一次以提高程序性能，更能解决数据竞争的问题。如果两条信息先后被接收到，如果单纯地使用 getUser / setUser 进行处理，可能会发生后一次 getUser 在前一次 setUser 之前完成，导致本应获得 2 件物品，但实际只获得了 1 件的问题。而观察者会随时同步同源数据，数据安全得以保证。
+`session.user` 是一个 **观察者 (Observer)** 对象，它会检测在其上面做的一切更改并缓存下来。当中间件执行完毕后，Koishi 又会自动将变化的部分进行更新，同时将缓冲区清空。我们因此得以直接在 `session.user` 上进行赋值，而不必手动调用 `ctx.database` 上的方法。
+
+### 声明所需字段
+
+`cmd.userFields()` 方法用于声明所需的用户字段。未声明的字段将不会被加载，也无法直接被修改。这样做的好处是，无论用户表有多少字段，我们都可以只加载所需的字段，从而提高性能。同理我们也有 `cmd.channelFields()` 方法，功能类似。
+
+这两个方法不仅可以接受一个可迭代对象，还可以接受一个回调函数。第一个参数是当前的 `Argv` 对象，第二个参数是 `Set<keyof User>`，可以通过 add / delete 方法来添加或删除字段。因此上面的代码等价于：
+
+```ts
+cmd.userFields((argv, fields) => {
+  fields.add('inventory')
+})
+```
+
+### 阻塞式更新
+
+观察者机制不仅可以将多次更新合并成一次以提高程序性能，更能解决数据竞争的问题。如果两条消息在临近的时间点被接收到，如果单纯地使用 get / set 进行处理，可能会发生后一次 get 在前一次 set 之前完成，导致本应获得 2 件物品，但实际只获得了 1 件的问题。而观察者会随时同步同源数据，数据安全得以保证。
 
 当然，如果你确实需要阻塞式地等待数据写入，我们也提供了 `user.$update()` 方法。顺便一提，一旦成功执行了观察者的 `$update()` 方法，之前的缓冲区将会被清空，因此之后不会重复更新数据；对于缓冲区为空的观察者，`$update()` 方法也会直接返回，不会产生任何的数据库访问。这些都是我们优化的几个细节。
 
 你可以在 [这里](../../api/utils/observer.md) 看到完整的观察者 API。
 
-## 声明所需字段
+## 进阶用法
 
-如果说观察者机制帮我们解决了多次更新和数据安全的问题的话，那么这一节要介绍的就是如何控制要加载的内容。在上面的例子中我们看到了 `cmd.userFields()` 函数，它通过一个 [可迭代对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) 或者回调函数来添加所需的用户字段。同理我们也有 `cmd.channelFields()` 方法，功能类似。
+### attach 事件
 
-如果你需要对全体指令添加所需的用户字段，可以使用 `command/before-attach-user` 事件。下面是一个例子：
+Koishi 内置了四个与观察者相关的事件，分别是：
 
-```ts
-// 注意这不是实例方法，而是类上的静态方法
-ctx.before('command/attach-user', (argv, fields) => {
-  fields.add('name')
-})
+- `before-attach-channel`：在频道观察者被绑定到会话上之前触发
+- `attach-channel`：在频道观察者被绑定到会话上之后触发
+- `before-attach-user`：在用户观察者被绑定到会话上之前触发
+- `attach-user`：在用户观察者被绑定到会话上之后触发
 
-ctx.before('command/execute', ({ session, command }) => {
-  console.log('%s calls command %s', session.user.name, command.name)
-})
-```
-
-如果要控制中间件能取得的用户数据，可以监听 before-user 和 before-channel 事件，通过修改传入的 `fields` 参数来添加特定的字段。下面是一个例子：
+下面是一个例子，我们在用户对象上实现了一个 `msgCount` 字段，用于存放收到的信息数量：
 
 ```ts
 // 定义一个 msgCount 字段，用于存放收到的信息数量
@@ -75,7 +86,6 @@ ctx.model.extend('user', {
   msgCount: 'integer',
 })
 
-// 手动添加要获取的字段，下面会介绍
 ctx.before('attach-user', (session, fields) => {
   fields.add('msgCount')
 })
@@ -87,28 +97,17 @@ ctx.middleware((session: Session<'msgCount'>, next) => {
 })
 ```
 
-## 使用会话 API
+### 手动绑定
 
-对于 Koishi 内部的两个抽象表 User 和 Channel，我们在 [会话对象](../../api/core/session.md) 中封装了几个高级方法：
+如果要绑定的字段无法提前判断，我们也提供了动态补充观察者字段的方法：
 
 ```ts
-declare const id: string
 declare const fields: any[]
 
 // ---cut---
-// 中间增加了一个第二参数，表示默认情况下的权限等级
-// 如果找到该用户，则返回该用户本身
-session.getUser(id, fields)
-
-// 在当前会话上绑定一个可观测用户实例
-// 也就是所谓的 session.user
+// 绑定一个用户观察者，确保 fields 中的字段都被加载
 session.observeUser(fields)
 
-// 中间增加了一个第二参数，表示默认情况下的 assignee
-// 如果找到该频道，则不修改任何数据，返回该频道本身
-session.getChannel(id, fields)
-
-// 在当前会话上绑定一个可观测频道实例
-// 也就是所谓的 session.channel
+// 绑定一个频道观察者，确保 fields 中的字段都被加载
 session.observeChannel(fields)
 ```

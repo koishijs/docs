@@ -41,4 +41,4 @@
 
 ## WebSocket 配置项
 
-包括全部的 [`WsClient`](../../api/core/adapter.md#类：adapter-websocketclient) 选项。
+包括全部的 [`WsClient`](../../api/core/adapter.md#类：adapter-wsclient) 选项。

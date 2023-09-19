@@ -1,4 +1,4 @@
-# 搜索插件市场
+# Recherche sur la place de marché
 
 Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 

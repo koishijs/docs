@@ -1,11 +1,15 @@
 # Built-in Data Structure
 
+::: tip
+参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
+:::
+
 Koishi 的数据库 API 实际上分为两部分：
 
-- @koishijs/core 中定义的内置数据结构
-- minato 中提供的 ORM 接口
+- Minato 定义的通用数据库接口，由数据库插件实现
+- Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 
-这一页中将仅展示第一部分的内容。
+这一页中将仅展示第二部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
 
 ## 内置表
 
@@ -35,7 +39,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 下列实例方法直接由 @koishijs/core 提供实现。
 
-### database.getUser(platform, id, modifier?)
+### ctx.database.getUser(platform, id, modifier?)
 
 - **platform:** `string` 平台名
 - **id:** `string` 用户标识符
@@ -44,7 +48,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向数据库请求用户数据。
 
-### database.setUser(platform, id, data)
+### ctx.database.setUser(platform, id, data)
 
 - **platform:** `string` 平台名
 - **id:** `string` 用户标识符
@@ -53,7 +57,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向数据库修改或添加用户数据。
 
-### database.getChannel(platform, id, fields?)
+### ctx.database.getChannel(platform, id, fields?)
 
 - **platform:** `string` 平台名
 - **id:** `string` 频道标识符
@@ -62,7 +66,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向数据库请求频道数据。
 
-### database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">deprecated</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">deprecated</badge>
 
 - **fields:** `ChannelField[]` 请求的字段，默认为全部字段
 - **platform:** `string` 平台名，默认为全平台
@@ -71,7 +75,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
 
-### database.setChannel(platform, id, data)
+### ctx.database.setChannel(platform, id, data)
 
 - **platform:** `string` 平台名
 - **id:** `number` 频道标识符

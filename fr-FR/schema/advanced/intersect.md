@@ -13,9 +13,11 @@ code: |
   ])
 ---
 
-# Intersect：分组
+# Intersect : groupement
 
 Intersect 类型可用于合并多个类型。一种最常见的用法是将配置项分为多组显示。
+
+使用 `.collapse()` 可以将分组默认折叠为一个单独的配置项。
 
 ```ts
 export default Schema.intersect([

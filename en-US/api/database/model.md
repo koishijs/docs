@@ -4,6 +4,8 @@
 参见：[开发 > 数据库 > 数据模型](../../guide/database/model.md)
 :::
 
+`ctx.model` 是 Koishi 的内置服务。其上的方法可以用于定义或扩展数据表及其字段。
+
 ## 数据类型
 
 数据类型会被用于 [`model.extend()`](#model-extend) 方法中，其定义如下：
@@ -53,7 +55,7 @@ export interface Field<T> {
 
 ## 实例方法
 
-### model.extend(name, fields, config?)
+### ctx.model.extend(name, fields, config?)
 
 - **name:** `string` 数据表名
 - **fields:** `Field.Config` 字段信息
@@ -65,14 +67,14 @@ export interface Field<T> {
 
 扩展一个新的数据表。
 
-### model.create(name, data)
+### ctx.model.create(name, data)
 
 - **name:** `string` 数据表名
 - **data:** `any` 数据
 
 创建一条新的数据，折叠嵌套属性，并填充必要的默认值。
 
-### model.migrate(name, fields, callback) <badge type="warning">实验性</badge>
+### ctx.model.migrate(name, fields, callback) <badge type="warning">实验性</badge>
 
 - **name:** `string` 数据表名
 - **fields:** `Field.Config` 要迁移的字段信息
