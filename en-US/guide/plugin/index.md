@@ -1,7 +1,7 @@
 # About Plugin
 
 ::: tip
-在学习本章之前，建议先完整阅读 [入门 > 安装和配置插件](../../manual/usage/market.md)。
+Before learning this chapter, it is recommended to read [Manual > Install and Configure Plugins](../../manual/usage/market.md).
 :::
 
 Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
@@ -38,21 +38,21 @@ ctx.plugin(class {
 
 ## Modular Plugins
 
-插件化最大的好处就是可以把不同的功能写在不同的模块中。此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容)。
+The greatest advantage of pluginization is the ability to write different functionalities in separate modules. At this point, the plugin will serve as a module export, and it can either be a [default export](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) or a [namespace export](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容).
 
-对于对象形式的插件，你还可以额外提供一个 `name` 属性作为插件的名称。对于函数和类形式的插件来说，插件名称便是函数名或类名。具名插件有助于更好地描述插件的功能，并被用于插件关系可视化中，实际上不会影响任何运行时的行为。
+For plugins in the object form, you can additionally provide a `name` property as the plugin's name. For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
 
 ```ts title=foo.ts
-// 整体导出对象形式的插件
-export interface Config {}
+// Namespace export of an object-form plugin
+export interface configuration {}
 
 export const name = 'Foo'
 
-export function apply(ctx: Context, config: Config) {}
+export function application (ctx: Context, config: Config) {}
 ```
 
 ```ts title=bar.ts
-// 默认导出类形式的插件
+// Default export of a class-form plugin
 class Bar {
   constructor(ctx: Context, config: Bar.Config) {}
 }
@@ -66,10 +66,10 @@ export default Bar
 
 ## Nested Plugins
 
-Koishi 的插件也是可以嵌套的。你可以将你编写的插件解耦成多个独立的子模块，再将调用这些子模块的一个新插件作为入口模块，就像这样：
+Koishi plugins can also be nested. You can decouple the plugin you wrote into multiple independent files and then create a new entry file that loads these plugins, like this:
 
 ```ts title=index.ts
-// 入口文件，从上述模块分别加载插件
+// Entry file, loading plugins from the aforementioned modules
 import Foo from './foo'
 import * as Bar from './bar'
 
@@ -79,24 +79,23 @@ export function apply(ctx: Context) {
 }
 ```
 
-这样当你加载上述模块时，就相当于同时加载了 foo 和 bar 两个模块。这样的做法不仅能够减轻心智负担，解耦出的模块还享受独立的热重载，你可以在不影响一个模块运行的情况下修改另一个的代码！
+When you load the entry file, you are essentially loading both the foo and bar modules simultaneously. This approach not only reduces mental overhead, but the decoupled modules also benefit from independent hot-reloading. You can modify one module's code without affecting another module's running!
 
-当你在开发较为复杂的功能时，可以将插件分解成多个独立的子插件，并在入口文件中依次加载这些子插件。许多大型插件都采用了这种写法。
+When developing more complex features, you can break down the plugin into multiple independent sub-plugins and load these sub-plugins sequentially in the entry file. Many large plugins adopt this structure.
 
 ## Load plugins in the config file
 
-一个模块可以作为插件被 Koishi 的配置文件加载，其需要满足以下两条中的一条：
+A module can be loaded as a plugin via Koishi's configuration file, and it needs to satisfy one of the following two conditions:
 
-- 此模块的**默认导出**是一个插件
-- 此模块的**导出整体**是一个插件
+- The **default export** of the module is a plugin.
+- The **namespace export** of the module is a plugin.
 
-这两种写法并无优劣之分，你完全可以按照自己的需求调整导出的形式。按照惯例，如果你的插件是一个函数，我们通常直接导出 apply 方法，并将导出整体作为一个插件；如果你的插件是一个类，那么我们通常使用默认导出的形式。
+There is no advantage or disadvantage between these two methods; you can adjust the export form according to your own needs. Conventionally, if your plugin is a function, we usually directly export the apply method and treat the namespace export as a plugin; if your plugin is a class, we usually use the default export form.
 
-::: tip
-这里默认导出的优先级更高。因此，只要模块提供了默认导出，Koishi 就会尝试加载这个默认导出，而不是导出整体。在开发中请务必注意这一点。
+The priority of the default export is higher here. Therefore, as long as the module provides a default export, Koishi will try to load this default export instead of the namespace export. Be sure to pay attention to this during development.
 :::
 
-配置文件中的 `plugins` 字段记录了插件的信息：
+The `plugins` field in the configuration file records the plugin configurations:
 
 ```yaml title=koishi.yml
 plugins:
@@ -105,12 +104,12 @@ plugins:
     prefix: '#'
 ```
 
-这里的键对应插件的路径，值则为插件的配置。这个路径的解析逻辑如下：
+Here, the key corresponds to the plugin's path, and the value is the plugin's configuration. The logic for resolving this path is as follows:
 
-- 对于 foo，我们将尝试读取 @koishijs/plugin-foo 和 koishi-plugin-foo
-- 对于 @foo/bar，我们将尝试读取 @foo/koishi-plugin-bar
+- For foo, we will try to read both @koishijs/plugin-foo and koishi-plugin-foo.
+- For @foo/bar, we will try to read @foo/koishi-plugin-bar.
 
-换言之，上述配置文件相当于下面的代码：
+In other words, the above configuration file is equivalent to the following code:
 
 ```ts
 app.plugin(require('@koishijs/plugin-console').default)
