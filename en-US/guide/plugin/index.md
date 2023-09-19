@@ -116,4 +116,4 @@ app.plugin(require('@koishijs/plugin-console').default)
 app.plugin(require('koishi-plugin-dialogue'), { prefix: '#' })
 ```
 
-在这个例子中，console 是官方插件，并且使用了默认导出；dialogue 是社区插件，并且使用了导出整体。配置文件使你得以无视这些区别，每个插件的加载方式都会由 CLI 自动检测。
+In this example, console is an official plugin that uses the default export, while dialogue is a community plugin that uses namespace export. The configuration file allows you to ignore these differences, as each plugin's loading method will be automatically detected by the CLI.
