@@ -519,11 +519,11 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "数据模型 (Model)",
+              "text": "Model : modèles de données",
               "link": "/api/database/model.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Database : opérations avec données de bases",
               "link": "/api/database/database.md"
             },
             {
