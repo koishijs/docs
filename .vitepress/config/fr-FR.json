@@ -428,23 +428,23 @@
           "text": "Service interne",
           "items": [
             {
-              "text": "Bots",
+              "text": "Bots : robots",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "Événements",
+              "text": "Events : événements",
               "link": "/api/service/events.md"
             },
             {
-              "text": "Filtres",
+              "text": "Filter : filtres",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "Requête d'HTTP",
+              "text": "HTTP : requête d'HTTP",
               "link": "/api/service/http.md"
             },
             {
-              "text": "Internationalisation",
+              "text": "I18n : Internationalisation",
               "link": "/api/service/i18n.md"
             },
             {
@@ -502,15 +502,15 @@
               "link": "/api/platform/role.md"
             },
             {
-              "text": "Message : message",
+              "text": "Message : messages",
               "link": "/api/platform/message.md"
             },
             {
-              "text": "Reaction : réaction",
+              "text": "Reaction : réactions",
               "link": "/api/platform/reaction.md"
             },
             {
-              "text": "User : compte",
+              "text": "User : comptes",
               "link": "/api/platform/user.md"
             }
           ]
@@ -527,19 +527,19 @@
               "link": "/api/database/database.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Query : expression de la requête",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Eval : expression de la calculée",
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "查询构造器 (Selection)",
+              "text": "Selectron : constructeur de l'expression de la requête",
               "link": "/api/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/api/database/built-in.md"
             }
           ]
@@ -612,7 +612,7 @@
       ],
       "/plugins/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Place de Marché",
@@ -652,7 +652,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "E-mails",
+              "text": "Courriers électroniques",
               "link": "/plugins/adapter/mail.md"
             },
             {
