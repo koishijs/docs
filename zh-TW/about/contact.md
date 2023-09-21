@@ -14,11 +14,11 @@
 
 [426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
 
-本群适用于已经有一定 Node.js / TypeScript 基础，并对 Koishi 开发感兴趣的用户——你可以在这里参与 Koishi 以及其他相关话题的深度讨论。
+本群適用於已經有一定 Node,js / TypeScript 基礎，并對 Koishi 開發感興趣的用戶——你可以在這裏參與 Koishi 以及其他相關話題的深度討論。
 
 ## Discord
 
-[加入频道](https://discord.com/invite/xfxYwmd284)
+[加入頻道](https://discord.com/invite/xfxYwmd284)
 
 我們的 Discord 服務器內設有版本發布、開發交流和問題反饋等不同功能的頻道，你也可以在這裏參與討論。
 
