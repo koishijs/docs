@@ -4,8 +4,8 @@ links:
   starter: /zh-TW/manual/starter/
 home:
   desc: 創建跨平臺、可擴展、高性能的機器人
-  primary: Get Started
-  secondary: Learn More
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: 实时监控
