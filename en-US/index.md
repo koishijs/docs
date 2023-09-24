@@ -4,8 +4,8 @@ links:
   starter: /en-US/manual/starter/
 home:
   desc: Cross-platform Chatbot Framework Made With Love
-  primary: Get Started
-  secondary: Learn More
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: Real-time Monitoring
