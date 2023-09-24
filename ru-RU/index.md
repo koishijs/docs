@@ -4,8 +4,8 @@ links:
   starter: /ru-RU/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
-  primary: Начать
-  secondary: Подробнее
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: Мониторинг в режиме реального времени
