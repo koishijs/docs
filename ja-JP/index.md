@@ -4,8 +4,8 @@ links:
   starter: /ja-JP/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
-  primary: Get Started
-  secondary: Learn More
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: 实时监控
