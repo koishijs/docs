@@ -30,7 +30,7 @@ If you want to simulate a group chat, then we could click "Add User" again to cr
 - [Mail](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [OneBot](../../plugins/adapter/onebot.md)
-- [QQ Guild](../../plugins/adapter/qqguild.md)
+- [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
 - [微信公众号](../../plugins/adapter/wechat-official.md)
