@@ -1,7 +1,6 @@
 dist/
 ecosystem/
-.data
-.temp
+temp/
 .vitepress/cache
 
 node_modules/
