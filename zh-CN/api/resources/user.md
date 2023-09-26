@@ -19,12 +19,6 @@ export interface User {
 
 ## API
 
-### bot.getSelf()
-
-- 返回值: `Promise<User>` 用户信息
-
-获取机器人自己的信息。
-
 ### bot.getUser(userId)
 
 - **userId:** `string` 用户 ID

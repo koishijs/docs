@@ -4,12 +4,14 @@
 
 ```ts
 interface Message {
-  isDirect: boolean
-  channelId: string
-  messageId: string
-  userId: string
+  id: string
+  channel?: Channel
+  user?: User
+  member?: Member
+  quote?: Message
   content: string
-  timestamp?: number
+  createdAt?: number
+  updatedAt?: number
 }
 ```
 
