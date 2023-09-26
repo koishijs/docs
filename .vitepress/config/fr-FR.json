@@ -664,8 +664,8 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ Guild",
-              "link": "/plugins/adapter/qqguild.md"
+              "text": "QQ",
+              "link": "/plugins/adapter/qq.md"
             },
             {
               "text": "Slack",
