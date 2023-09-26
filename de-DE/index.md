@@ -93,14 +93,26 @@ footer:
     text: 平台
     items:
       - 
+        text: 钉钉
+        link: /zh-CN/plugins/adapter/dingtalk.html
+      - 
         text: Discord
         link: /de-DE/plugins/adapter/discord.html
       - 
-        text: Lark (飞书)
+        text: Kook
+        link: /de-DE/plugins/adapter/kook.html
+      - 
+        text: 飞书
         link: /de-DE/plugins/adapter/lark.html
       - 
-        text: Kook (开黑啦)
-        link: /de-DE/plugins/adapter/kook.html
+        text: LINE
+        link: /zh-CN/plugins/adapter/line.html
+      - 
+        text: 邮件
+        link: /zh-CN/plugins/adapter/mail.html
+      - 
+        text: Matrix
+        link: /zh-CN/plugins/adapter/matrix.html
       - 
         text: OneBot
         link: /de-DE/plugins/adapter/onebot.html
@@ -108,7 +120,19 @@ footer:
         text: QQ
         link: /zh-CN/plugins/adapter/qq.html
       - 
+        text: Slack
+        link: /zh-CN/plugins/adapter/Slack.html
+      - 
         text: Telegram
         link: /de-DE/plugins/adapter/telegram.html
+      - 
+        text: 微信公众号
+        link: /zh-CN/plugins/adapter/wechat-official.html
+      - 
+        text: 企业微信
+        link: /zh-CN/plugins/adapter/wecom.html
+      - 
+        text: WhatsApp
+        link: /zh-CN/plugins/adapter/whatsapp.html
 ---
 
