@@ -30,7 +30,7 @@
 - [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [OneBot](../../plugins/adapter/onebot.md)
-- [QQ 频道](../../plugins/adapter/qqguild.md)
+- [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
 - [微信公众号](../../plugins/adapter/wechat-official.md)
