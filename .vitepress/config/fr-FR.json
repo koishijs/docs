@@ -487,31 +487,35 @@
           "items": [
             {
               "text": "Channel : canaux",
-              "link": "/api/platform/channel.md"
+              "link": "/api/resources/channel.md"
             },
             {
               "text": "Guild : guildes",
-              "link": "/api/platform/guild.md"
+              "link": "/api/resources/guild.md"
             },
             {
               "text": "GuildMember : membres de la guilde",
-              "link": "/api/platform/member.md"
+              "link": "/api/resources/member.md"
             },
             {
               "text": "GuildRole : rôles de la guilde",
-              "link": "/api/platform/role.md"
+              "link": "/api/resources/role.md"
             },
             {
-              "text": "Message : messages",
-              "link": "/api/platform/message.md"
+              "text": "登录状态 (Login)",
+              "link": "/api/resources/login.md"
             },
             {
-              "text": "Reaction : réactions",
-              "link": "/api/platform/reaction.md"
+              "text": "消息 (Message)",
+              "link": "/api/resources/message.md"
             },
             {
-              "text": "User : comptes",
-              "link": "/api/platform/user.md"
+              "text": "表态 (Reaction)",
+              "link": "/api/resources/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/resources/user.md"
             }
           ]
         },
