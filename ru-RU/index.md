@@ -105,8 +105,8 @@ footer:
         text: OneBot
         link: /ru-RU/plugins/adapter/onebot.html
       - 
-        text: QQ 频道
-        link: /ru-RU/plugins/adapter/qqguild.html
+        text: QQ
+        link: /zh-CN/plugins/adapter/qq.html
       - 
         text: Telegram
         link: /ru-RU/plugins/adapter/telegram.html
