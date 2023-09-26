@@ -646,8 +646,8 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ 频道",
-              "link": "/plugins/adapter/qqguild.md"
+              "text": "QQ",
+              "link": "/plugins/adapter/qq.md"
             },
             {
               "text": "Slack",

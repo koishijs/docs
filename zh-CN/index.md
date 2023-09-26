@@ -85,8 +85,8 @@ footer:
         link: /zh-CN/plugins/adapter/kook.html
       - text: OneBot
         link: /zh-CN/plugins/adapter/onebot.html
-      - text: QQ 频道
-        link: /zh-CN/plugins/adapter/qqguild.html
+      - text: QQ
+        link: /zh-CN/plugins/adapter/qq.html
       - text: Telegram
         link: /zh-CN/plugins/adapter/telegram.html
 ---

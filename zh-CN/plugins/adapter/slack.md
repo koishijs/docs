@@ -2,6 +2,8 @@
 
 ## 接入方式
 
+Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中，`http` 连接方式需要一个公网可访问的地址。在接入之前，请根据使用需求填写插件的 [`protocol`](#config-protocol) 字段。
+
 1. 准备一个 [Slack](https://slack.com/signin) 账号和工作区。
 
 2. 前往 [应用后台](https://api.slack.com/apps)，点击「Create New App」>「From Scratch」，填入应用名称和所添加的工作区 (目前适配器只支持一个应用处理一个工作区的事件)，点击「Create App」。
@@ -10,7 +12,7 @@
 
 <!-- ![app-2](/adapter/slack/app-2.webp) -->
 
-1. 在跳转至的应用信息页面，在底部复制 `Signing Secret`，填入插件的 [`signing`](#config-signing) 字段。
+3. 仅限 `http` 连接方式：在跳转至的应用信息页面，在底部复制 `Signing Secret`，填入插件的 [`signing`](#config-signing) 字段。
 
 ![secret-1](/adapter/slack/secret-1.webp)
 
@@ -18,33 +20,27 @@
 
 ![secret-2](/adapter/slack/secret-2.webp)
 
-5. 按照使用需求，决定连接方式是 `http` 或 `ws` (推荐)，填入插件的 [`protocol`](#config-protocol) 字段，并根据你的选择进行后续操作。
-
-::: tip
-`http` 连接方式需要一个公网可访问的地址。
-:::
-
-6. 如果你选择 `http` 连接方式：在左侧打开「Event Subscriptions」页面，勾选「Enable Events」。将机器人的 `selfUrl` 值后连接 `/slack` (如 `https://example.com/slack`)，填入「Request URL」中。
+5. 仅限 `http` 连接方式：在左侧打开「Event Subscriptions」页面，勾选「Enable Events」。将机器人的 `selfUrl` 值后连接 `/slack` (如 `https://example.com/slack`)，填入「Request URL」中。
 
 ![webhook](/adapter/slack/webhook.webp)
 
-7. 如果你选择 `ws` 连接方式：在左侧打开「Socket Mode」页面，勾选「Enable Socket Mode」；再打开「Event Subscriptions」页面，勾选「Enable Events」。
+6. 仅限 `ws` 连接方式：在左侧打开「Socket Mode」页面，勾选「Enable Socket Mode」；再打开「Event Subscriptions」页面，勾选「Enable Events」。
 
 ![websocket](/adapter/slack/websocket.webp)
 
-8. 前往「Event Subscriptions」页面，在「Subscribe to bot events」下方勾选事件 (参见 [推荐的事件列表](#推荐的事件列表))，填写完整后点击右下角的绿色「Save Changes」按钮保存。
+7. 前往「Event Subscriptions」页面，在「Subscribe to bot events」下方勾选事件 (参见 [推荐的事件列表](#推荐的事件列表))，填写完整后点击右下角的绿色「Save Changes」按钮保存。
 
 ![events](/adapter/slack/events.webp)
 
-9. 前往「OAuth & Permissions」页面，在「Bot Token Scopes」下方添加权限 (参见 [推荐的权限列表](#推荐的权限列表))。
+8. 前往「OAuth & Permissions」页面，在「Bot Token Scopes」下方添加权限 (参见 [推荐的权限列表](#推荐的权限列表))。
 
 ![scopes](/adapter/slack/scopes.webp)
 
-10. 返回页面上方，点击「Install to Workspace」，点击 Allow 授权，复制「Bot User OAuth Token」，填入插件的 [`botToken`](#config-bottoken) 字段。
+9. 返回页面上方，点击「Install to Workspace」，点击 Allow 授权，复制「Bot User OAuth Token」，填入插件的 [`botToken`](#config-bottoken) 字段。
 
 ![workspace](/adapter/slack/workspace.webp)
 
-11. 在相应工作区 @ 机器人名称或右键频道详情，选择 集成-添加应用 添加机器人到频道中。
+10. 在相应工作区 @ 机器人名称或右键频道详情，选择 集成-添加应用 添加机器人到频道中。
 
 ### 推荐的事件列表
 
