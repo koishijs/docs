@@ -29,6 +29,8 @@
 频道是消息的集合。一个频道包含了具备时间、逻辑顺序的一系列消息。频道又分为私聊频道和群聊频道，其中私聊频道有且仅有两人参与，而群聊频道可以有任意多人参与。
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
+- [API > 跨平台 > 频道](./resources/user.md)
+- [API > 数据库 > 内置数据结构](./database/built-in.md#channel)
 
 ## 指令 (Command)
 
@@ -78,6 +80,7 @@
 群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 Telegram)：一个群组内有且仅有一个群聊频道。私聊频道不属于任何群组。
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
+- [API > 跨平台 > 群组](./resources/guild.md)
 
 ## 生命周期 (Lifecycle)
 
@@ -131,3 +134,6 @@
 - [API > 核心模块 > 会话](./core/session.md)
 
 ## 用户 (User)
+
+- [API > 跨平台 > 用户](./resources/user.md)
+- [API > 数据库 > 内置数据结构](./database/built-in.md#user)
