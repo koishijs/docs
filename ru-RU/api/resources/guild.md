@@ -39,3 +39,26 @@ export interface Guild {
 - 返回值: `Promise<void>`
 
 处理来自群组的邀请。
+
+## 事件
+
+### guild-added
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+加入群组时触发。
+
+### guild-updated
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+群组信息更新时触发。
+
+### guild-removed
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+群组成员退出群组时触发。
