@@ -48,3 +48,19 @@
 - 返回值: `AsyncIterable<User>` 异步迭代器
 
 获取添加特定消息的特定表态的用户的异步迭代器。
+
+## 事件
+
+### reaction-added
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+添加表态时触发。
+
+### reaction-removed
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+删除表态时触发。
