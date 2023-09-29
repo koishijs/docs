@@ -90,3 +90,27 @@ interface Message {
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
 向多个频道广播消息。如有失败不会抛出错误。
+
+## 事件
+
+### message-created
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+- 别名: `message`
+
+收到消息时触发。
+
+### message-updated
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+消息被修改时触发。
+
+### message-deleted
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+消息被撤回时触发。
