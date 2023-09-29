@@ -68,3 +68,26 @@ export interface GuildRole {
 - 返回值: `Promise<void>`
 
 删除群组角色。
+
+## 事件
+
+### guild-role-created
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+创建群组角色时触发。
+
+### guild-role-updated
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+群组角色信息更新时触发。
+
+### guild-role-deleted
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+删除群组角色时触发。
