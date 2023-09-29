@@ -61,7 +61,7 @@ ctx.i18n.define('en', { hello: 'Hello, {0}!' })
 
 ctx.middleware((session, next) => {
   if (session.content === 'greeting') {
-    return session.text('hello', [session.author.username])
+    return session.text('hello', [session.author.name])
   } else {
     return next()
   }
@@ -91,8 +91,8 @@ ctx.middleware((session, next) => {
 如果要访问对象深层的内容，只需将多个属性之间用 `.` 连接。利用这种方法，你甚至可以把整个 `session` 传进去：
 
 ```ts
-ctx.i18n.define('zh', { hello: '你好，{author.username}！' })
-ctx.i18n.define('en', { hello: 'Hello, {author.username}!' })
+ctx.i18n.define('zh', { hello: '你好，{author.name}！' })
+ctx.i18n.define('en', { hello: 'Hello, {author.name}!' })
 ```
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。
