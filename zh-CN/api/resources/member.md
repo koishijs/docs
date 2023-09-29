@@ -62,3 +62,26 @@ interface GuildMember {
 - 返回值: `Promise<void>`
 
 处理加群请求。
+
+## 事件
+
+### guild-member-added
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+新成员加入群组时触发。
+
+### guild-member-updated
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+群组成员信息更新时触发。
+
+### guild-member-removed
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+群组成员退出群组时触发。
