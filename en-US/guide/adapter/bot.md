@@ -217,10 +217,11 @@ declare module 'koishi' {
 这里的 `Internal` 对应着内部接口，而 `Payload` 则对应着原始事件数据。当构造会话对象时 (将在下一节具体介绍)，我们需要将这些数据注入到 `Session` 对象中：
 
 ```ts
-// Platform injected properties are not recommended as enumerable
+const internal = Object.create(bot.internal)
+// 平台注入的属性不建议设置为 enumerable
 Object.defineProperty(session, 'discord', {
-  // Use Internal as prototype and Payload as instance property
-  value: Object.assignment (Object.create(internal), payload),
+  // 将 Internal 作为原型，将 Payload 作为实例属性
+  value: Object.assign(internal, payload),
   writable: true,
 })
 ```
