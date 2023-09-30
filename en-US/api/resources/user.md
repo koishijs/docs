@@ -47,3 +47,12 @@ export interface User {
 - 返回值: `Promise<void>`
 
 处理好友请求。
+
+## 事件
+
+### friend-request
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+接收到新的好友申请时触发。
