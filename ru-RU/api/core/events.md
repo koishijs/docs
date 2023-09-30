@@ -10,17 +10,22 @@
 
 ## 通用会话事件
 
-通用会话事件由适配器实现，它们均包含一个 `session` 参数，触发方式均为 `emit`。
+通用会话事件由适配器实现，它们均包含一个 `session` 参数，触发方式均为 `emit`。各事件会在相应的资源页面中介绍。
 
+- [friend-request](../resources/user.md#friend-request)
 - [guild-added](../resources/guild.md#guild-added)
 - [guild-member-added](../resources/member.md#guild-member-added)
-- [guild-member-updated](../resources/member.md#guild-member-updated)
 - [guild-member-removed](../resources/member.md#guild-member-removed)
+- [guild-member-request](../resources/member.md#guild-member-request)
+- [guild-member-updated](../resources/member.md#guild-member-updated)
 - [guild-removed](../resources/guild.md#guild-removed)
+- [guild-request](../resources/guild.md#guild-request)
 - [guild-role-created](../resources/role.md#guild-role-created)
 - [guild-role-deleted](../resources/role.md#guild-role-deleted)
 - [guild-role-updated](../resources/role.md#guild-role-updated)
 - [guild-updated](../resources/guild.md#guild-updated)
+- [login-added](../resources/login.md#login-added)
+- [login-removed](../resources/login.md#login-removed)
 - [login-updated](../resources/login.md#login-updated)
 - [message-created (message)](../resources/message.md#message-created)
 - [message-deleted](../resources/message.md#message-deleted)
@@ -141,23 +146,23 @@
 
 调用 `model.extend()` 时触发。
 
-### 事件：bot-added
+### 事件：login-added
 
 - **bot:** [`Bot`](./bot.md) 机器人实例
 - **触发方式:** emit
 
 添加机器人时触发。
 
-### 事件：bot-removed
+### 事件：login-removed
 
 - **bot:** [`Bot`](./bot.md) 机器人实例
 - **触发方式:** emit
 
 移除机器人时触发。
 
-### 事件：bot-status-updated
+### 事件：login-updated
 
 - **bot:** [`Bot`](./bot.md) 机器人实例
 - **触发方式:** emit
 
-[bot.status](./bot.md#bot-status) 发生改变时触发。
+机器人状态发生改变时触发。
