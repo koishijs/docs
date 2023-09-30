@@ -11,7 +11,7 @@
 
 ## 通用会话事件
 
-通用会话事件由适配器实现，它们均包含一个 `session` 参数，触发方式均为 `emit`。各事件会在相应的资源页面中介绍。
+通用会话事件由适配器实现，它们均包含一个 [`session`](./session.md) 参数，触发方式均为 `emit`。各事件会在相应的资源页面中介绍。
 
 - [friend-request](../resources/user.md#friend-request)
 - [guild-added](../resources/guild.md#guild-added)
