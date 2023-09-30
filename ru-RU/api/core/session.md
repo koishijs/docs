@@ -6,69 +6,11 @@
 
 对于会话事件，我们抽象出了一套通用的属性：
 
-### session.type
+### session.body
 
-- 类型: `string`
+- 类型: `Event`
 
-事件类型。它应当是 [通用会话事件](./events.md#通用会话事件) 中的某一个。
-
-### session.platform
-
-- 类型: `string`
-
-触发事件的机器人所在的平台。
-
-### session.selfId
-
-- 类型: `string`
-
-触发事件的机器人所在平台的编号。
-
-### session.userId
-
-- 类型: `string`
-
-事件相关用户的平台编号 (例如发送好友申请的人，发送消息的人等)。
-
-### session.guildId
-
-- 类型: `string`
-
-事件相关群组的平台编号 (如果不是群组相关事件则没有这一项)。
-
-### session.channelId
-
-- 类型: `string`
-
-事件相关频道的平台编号 (如果不是频道相关事件则没有这一项)。
-
-### session.messageId
-
-- 类型: `string`
-
-事件相关的消息编号 (例如在回复消息时需要用到)。
-
-### session.elements
-
-- 类型: `Element[]`
-
-事件的消息元素内容 (例如消息的文本等)。
-
-### session.content
-
-- 类型: `string`
-
-事件的文本内容 (例如消息的文本等)。
-
-### session.isDirect
-
-- 类型: `boolean`
-
-事件是否在私聊环境中触发。
-
-## 实例属性
-
-你应该已经读过 [事件 (Events)](./events.md) 一章了。由于每个会话都必定表达了一个上报事件，因此上报事件中定义的属性也都可以在 Session 的实例中访问到。此外，也只有来自上报事件的属性才会在序列化中被保留。下面将介绍的实例属性都是无法被序列化的。
+会话事件对象。
 
 ### session.app
 
@@ -99,6 +41,80 @@
 ### session.guild
 
 当前会话绑定的群组数据，是一个可观测 [Channel](../database/built-in.md#channel) 对象。
+
+## 简写形式
+
+对于部分常用的属性，我们提供了简写形式。
+
+### session.author
+
+- 类型: `GuildMember & User`
+- 完整写法: `{ ...session.body.user, ...session.body.member }`
+
+### session.channelId
+
+- 类型: `string`
+- 完整写法: `session.body.channel.id`
+
+### session.channelName
+
+- 类型: `string`
+- 完整写法: `session.body.channel.name`
+
+### session.content
+
+- 类型: `string`
+- 完整写法: `session.body.message.content`
+
+### session.elements
+
+- 类型: `Element[]`
+- 完整写法: `session.body.message.elements`
+
+### session.guildId
+
+- 类型: `string`
+- 完整写法: `session.body.guild.id`
+
+### session.guildName
+
+- 类型: `string`
+- 完整写法: `session.body.guild.name`
+
+### session.isDirect
+
+- 类型: `boolean`
+- 完整写法: `session.body.channel.type === Channel.Type.DIRECT`
+
+### session.messageId
+
+- 类型: `string`
+- 完整写法: `session.body.message.id`
+
+### session.platform
+
+- 类型: `string`
+- 完整写法: `session.body.platform`
+
+### session.quote
+
+- 类型: `Message`
+- 完整写法: `session.body.message.quote`
+
+### session.selfId
+
+- 类型: `string`
+- 完整写法: `session.body.selfId`
+
+### session.type
+
+- 类型: `string`
+- 完整写法: `session.body.type`
+
+### session.userId
+
+- 类型: `string`
+- 完整写法: `session.body.user.id`
 
 ## 实例方法
 
