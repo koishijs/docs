@@ -52,7 +52,7 @@ export interface GuildRole {
 
 创建群组角色。
 
-### bot.modifyGuildRole(guildId, roleId, data)
+### bot.updateGuildRole(guildId, roleId, data)
 
 - **guildId:** `string` 群组 ID
 - **roleId:** `string` 角色 ID
