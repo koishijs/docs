@@ -5,8 +5,9 @@
 ```ts
 interface GuildMember {
   user: User
-  nick?: string
+  name?: string
   avatar?: string
+  joinedAt?: number
 }
 ```
 
@@ -85,3 +86,10 @@ interface GuildMember {
 - 触发方式: emit
 
 群组成员退出群组时触发。
+
+### guild-member-request
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+接收到新的加群请求时触发。
