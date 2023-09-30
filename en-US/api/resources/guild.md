@@ -62,3 +62,10 @@ export interface Guild {
 - 触发方式: emit
 
 群组成员退出群组时触发。
+
+### guild-request
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+接收到新的入群邀请时触发。
