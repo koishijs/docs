@@ -27,8 +27,23 @@ enum Status {
 
 ## 事件
 
+### login-added
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+登录被创建时触发。
+
+### login-removed
+
+- **session:** `Session` 会话对象
+- 触发方式: emit
+
+登录被移除时触发。
+
 ### login-updated
 
 - **session:** `Session` 会话对象
+- 触发方式: emit
 
 登录状态更新时触发。
