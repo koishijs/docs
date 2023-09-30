@@ -72,14 +72,14 @@ export interface Config {
 }
 ```
 
-### adapter.prepare(bot) <badge>抽象</badge>
+### adapter.prepare() <badge>抽象</badge>
 
 - **bot:** `Bot` 机器人实例
 - 返回值: `WebSocket | Promise<WebSocket>`
 
 根据机器人实例生成一个 WebSocket 对象。
 
-### adapter.accept(bot) <badge>抽象</badge>
+### adapter.accept() <badge>抽象</badge>
 
 - **bot:** `Bot` 机器人实例
 - 返回值: `void`
