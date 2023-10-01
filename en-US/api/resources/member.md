@@ -45,7 +45,7 @@ interface GuildMember {
 
 将某个用户踢出群组。
 
-### bot.muteGuildMember(guildId, userId, duration?, reason?)
+### bot.muteGuildMember(guildId, userId, duration?, reason?) <badge type="warning">实验性</badge>
 
 - **guildId:** `string` 群组 ID
 - **userId:** `string` 用户 ID
