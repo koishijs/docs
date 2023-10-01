@@ -48,7 +48,7 @@ export interface GuildRole {
 
 - **guildId:** `string` 群组 ID
 - **data:** `Partial<GuildRole>` 角色信息
-- 返回值: `Promise<string>` 角色 ID
+- 返回值: `Promise<GuildRole>`
 
 创建群组角色。
 
