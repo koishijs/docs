@@ -104,6 +104,6 @@ Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中�
 
 用于验证请求来源的签名密钥。
 
-## WebSocket 配置项
+## WS 配置项
 
-包括全部的 [`WsClient`](../../api/core/adapter.md#类：adapter-wsclient) 选项。
+包括全部的 [`WsClient`](../../api/core/adapter.md#类-adapter-wsclient) 选项。
