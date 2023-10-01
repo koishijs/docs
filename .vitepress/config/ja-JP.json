@@ -462,28 +462,7 @@
           ]
         },
         {
-          "text": "消息元素",
-          "items": [
-            {
-              "text": "语法规范",
-              "link": "/api/message/syntax.md"
-            },
-            {
-              "text": "标准元素",
-              "link": "/api/message/elements.md"
-            },
-            {
-              "text": "内置组件",
-              "link": "/api/message/components.md"
-            },
-            {
-              "text": "渲染 API",
-              "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
-          "text": "クロスプラットフォーム",
+          "text": "平台资源",
           "items": [
             {
               "text": "频道 (Channel)",
@@ -516,6 +495,27 @@
             {
               "text": "用户 (User)",
               "link": "/api/resources/user.md"
+            }
+          ]
+        },
+        {
+          "text": "消息元素",
+          "items": [
+            {
+              "text": "语法规范",
+              "link": "/api/message/syntax.md"
+            },
+            {
+              "text": "标准元素",
+              "link": "/api/message/elements.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/message/components.md"
+            },
+            {
+              "text": "渲染 API",
+              "link": "/api/message/api.md"
             }
           ]
         },
