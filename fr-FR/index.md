@@ -126,10 +126,10 @@ footer:
         text: Telegram
         link: /fr-FR/plugins/adapter/telegram.html
       - 
-        text: WeChat Official Account
+        text: 微信公众号
         link: /zh-CN/plugins/adapter/wechat-official.html
       - 
-        text: WeCom (WeChat Work)
+        text: 企业微信
         link: /zh-CN/plugins/adapter/wecom.html
       - 
         text: WhatsApp
