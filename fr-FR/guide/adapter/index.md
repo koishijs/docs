@@ -68,7 +68,7 @@ import { Adapter, Context } from 'koishi'
 import { createInterface } from 'readline'
 import ReplBot from './bot'
 
-export default class ReplAdapter extends Adapter.Server<ReplBot> {
+export default class ReplAdapter extends Adapter<ReplBot> {
   rl = createInterface({
     input: process.stdin,
   })
