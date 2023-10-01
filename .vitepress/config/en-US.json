@@ -462,28 +462,7 @@
           ]
         },
         {
-          "text": "Message Element",
-          "items": [
-            {
-              "text": "Syntax Specification",
-              "link": "/api/message/syntax.md"
-            },
-            {
-              "text": "Standard Elements",
-              "link": "/api/message/elements.md"
-            },
-            {
-              "text": "Built-in Components",
-              "link": "/api/message/components.md"
-            },
-            {
-              "text": "Render API",
-              "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
-          "text": "Cross Platform",
+          "text": "平台资源",
           "items": [
             {
               "text": "频道 (Channel)",
@@ -516,6 +495,27 @@
             {
               "text": "用户 (User)",
               "link": "/api/resources/user.md"
+            }
+          ]
+        },
+        {
+          "text": "Message Element",
+          "items": [
+            {
+              "text": "Syntax Specification",
+              "link": "/api/message/syntax.md"
+            },
+            {
+              "text": "Standard Elements",
+              "link": "/api/message/elements.md"
+            },
+            {
+              "text": "Built-in Components",
+              "link": "/api/message/components.md"
+            },
+            {
+              "text": "Render API",
+              "link": "/api/message/api.md"
             }
           ]
         },
