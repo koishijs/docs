@@ -55,16 +55,24 @@ const { frontmatter } = useData()
   }
 
   @media (min-width: 768px) {
+    flex-direction: column;
+    justify-content: space-evenly;
     .links {
       margin-left: -2rem;
       padding-left: 2rem;
       border-left: 1px solid var(--vp-c-divider-light);
       justify-content: center;
+      flex-direction: row;
+    }
+
+    .group {
+        border-top: 1px solid var(--vp-c-divider);
+        padding-top: 16px;
     }
 
     .copyright {
-      flex: 1;
-      text-align: right;
+      text-align: center;
+      opacity: 0.6;
     }
   }
 
@@ -108,6 +116,17 @@ const { frontmatter } = useData()
       }
     }
   }
+}
+
+/* Make platform links parallel */
+.links .group:nth-child(3) .group-items {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0 15px;
+}
+
+.links .group:nth-child(3) .group-items * {
+    text-align: center;
 }
 
 </style>
