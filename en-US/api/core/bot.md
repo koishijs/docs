@@ -6,23 +6,21 @@
 
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
-标有 <badge>内置</badge> 的 API 已经由 Koishi 提供，适配器可以覆盖对应的方法，但是无需自行实现。
-
 ## Instance Properties
 
-### bot.adapter <badge>built-in</badge>
+### bot.adapter
 
 - Type: [`Adchapter`](./adapter.md)
 
 当前 `Bot` 所在的 [Adapter](./adapter.md) 实例。
 
-### bot.config <badge>built-in</badge>
+### bot.config
 
 - Type: `object`
 
 构造 `Bot` 实例时所使用的配置项。
 
-### bot.ctx <badge>built-in</badge>
+### bot.ctx
 
 - Type: [`Context`](./context.md)
 
@@ -30,7 +28,7 @@
 
 ### bot.internal
 
-- 类型: `object`
+- Type: `object`
 
 当前机器人的 [内部接口](../../guide/adapter/bot.md#实现内部接口)。
 
@@ -46,7 +44,7 @@
 
 当前 `Bot` 的平台账号。
 
-### bot.status <badge>built-in</badge>
+### bot.status
 
 - 类型: [`Status`](../resources/login.md)
 
@@ -60,24 +58,38 @@
 
 ## Adapter Related
 
-### bot.dispatch(session) <badge>built-in</badge>
+### bot.start()
+
+- 返回值: `Promise<void>`
+
+启动机器人。这个方法会在插件被加载时自动被调用，通常你不需要手动调用它。
+
+### bot.stop()
+
+- 返回值: `Promise<void>`
+
+停止机器人的运行，但不移除该实例。你可以后续通过 `bot.start()` 重新启动机器人。
+
+这个方法会在插件被卸载时自动被调用，通常你不需要手动调用它。
+
+### bot.dispatch(session)
 
 - **session:** [`Session`](./session.md) Session instance
 
 Dispatch a session event.
 
-### bot.session(body?) <badge>built-in</badge>
+### bot.session(body?)
 
 - **body:** [`EventBody`](./session.md#session-body) 会话数据
 - 返回值: [`Session`](./session.md)
 
-Create a new session instance.
+创建一个新的会话实例。
 
-### bot.online() <badge>内置</badge>
+### bot.online()
 
 修改机器人的状态为在线。
 
-### bot.offline(error?) <badge>内置</badge>
+### bot.offline(error?)
 
 - **error:** `Error` 错误信息
 
