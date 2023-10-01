@@ -89,10 +89,11 @@ class TelegramMessageEncoder extends MessageEncoder {
   }
 
   // 将发送好的消息添加到 results 中
-  async addResult(message: Telegram.Message) {
+  async addResult(data: Telegram.Message) {
+    const message = decodeMessage(data)
+    this.results.push(message)
     const session = this.bot.session()
-    await adaptMessage(message, session)
-    this.results.push(session)
+    session.message = message
     session.app.emit(session, 'send', session)
   }
 
