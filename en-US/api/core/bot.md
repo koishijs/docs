@@ -66,10 +66,10 @@
 
 Dispatch a session event.
 
-### bot.session(data) <badge>built-in</badge>
+### bot.session(body?) <badge>built-in</badge>
 
-- **data:** [`Partial<Session>`](./session.md) Session data
-- Return value: [`Session`](./session.md) Session instance
+- **body:** [`EventBody`](./session.md#session-body) 会话数据
+- 返回值: [`Session`](./session.md)
 
 Create a new session instance.
 
