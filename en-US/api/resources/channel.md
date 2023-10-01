@@ -13,6 +13,15 @@
 export interface Channel {
   id: string
   name: string
+  type: ChannelType
+  parent_id?: string
+}
+
+export enum ChannelType {
+  TEXT = 0,
+  DIRECT = 1,
+  VOICE = 2,
+  CATEGORY = 3,
 }
 ```
 
@@ -39,3 +48,33 @@ export interface Channel {
 - 返回值: `AsyncIterable<Channel>` 异步迭代器
 
 获取某个群组的频道列表的异步迭代器。
+
+### bot.createChannel(guildId, data)
+
+- **guildId:** `string` 群组 ID
+- **data:** `Partial<Channel>` 频道信息
+- 返回值: `Promise<Channel>`
+
+创建群组频道。
+
+### bot.updateChannel(channelId, data)
+
+- **channelId:** `string` 频道 ID
+- **data:** `Partial<Channel>` 频道信息
+- 返回值: `Promise<void>`
+
+修改群组频道。
+
+### bot.deleteChannel(channelId)
+
+- **channelId:** `string` 频道 ID
+- 返回值: `Promise<void>`
+
+删除群组频道。
+
+### bot.createDirectChannel(userId)
+
+- **userId:** `string` 用户 ID
+- 返回值: `Promise<Channel>`
+
+创建私聊频道。
