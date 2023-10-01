@@ -101,8 +101,11 @@
 
 - [`bot.broadcast()`](../resources/message.md#bot-broadcast)
 - [`bot.clearReaction()`](../resources/reaction.md#bot-clearreaction)
+- [`bot.createChannel()`](../resources/channel.md#bot-createchannel)
+- [`bot.createDirectChannel()`](../resources/channel.md#bot-createdirectchannel)
 - [`bot.createGuildRole()`](../resources/role.md#bot-createguildrole)
 - [`bot.createReaction()`](../resources/reaction.md#bot-createreaction)
+- [`bot.deleteChannel()`](../resources/role.md#bot-deletechannel)
 - [`bot.deleteGuildRole()`](../resources/role.md#bot-deleteguildrole)
 - [`bot.deleteReaction()`](../resources/reaction.md#bot-deletereaction)
 - [`bot.deleteMessage()`](../resources/message.md#bot-deletemessage)
@@ -136,4 +139,5 @@
 - [`bot.sendPrivateMessage()`](../resources/message.md#bot-sendprivatemessage)
 - [`bot.setGuildMemberRole()`](../resources/role.md#bot-setguildmemberrole)
 - [`bot.unsetGuildMemberRole()`](../resources/role.md#bot-unsetguildmemberrole)
+- [`bot.updateChannel()`](../resources/role.md#bot-updatechannel)
 - [`bot.updateGuildRole()`](../resources/role.md#bot-updateguildrole)
