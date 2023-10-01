@@ -672,6 +672,10 @@
               "link": "/plugins/adapter/qq.md"
             },
             {
+              "text": "Satori",
+              "link": "/plugins/adapter/satori.md"
+            },
+            {
               "text": "Slack",
               "link": "/plugins/adapter/slack.md"
             },
@@ -680,11 +684,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "WeChat Official Account",
+              "text": "微信公众号",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "WeCom (WeChat Work)",
+              "text": "企业微信",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -814,6 +818,10 @@
             {
               "text": "Mock : Outils des tests",
               "link": "/plugins/develop/mock.md"
+            },
+            {
+              "text": "API 服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             }
           ]
         }
