@@ -654,6 +654,10 @@
               "link": "/plugins/adapter/qq.md"
             },
             {
+              "text": "Satori",
+              "link": "/plugins/adapter/satori.md"
+            },
+            {
               "text": "Slack",
               "link": "/plugins/adapter/slack.md"
             },
@@ -796,6 +800,10 @@
             {
               "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
+            },
+            {
+              "text": "API 服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             }
           ]
         }
