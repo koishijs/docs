@@ -115,7 +115,7 @@ class TelegramMessageEncoder extends MessageEncoder {
 }
 ```
 
-一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要构造相应的 `Session`，用于触发 `send` 会话事件并存储于 `results` 数组中。
+一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要触发 `send` 事件并将结果存储于 `results` 数组中。
 
 与此同时，我们还需要修改 `TelegramBot` 类，为其添加静态属性。实现了 `MessageEncoder` 静态属性后，就无需手动实现 `bot.sendMessage()` 和 `bot.sendPrivateMessage()` 方法了：
 
