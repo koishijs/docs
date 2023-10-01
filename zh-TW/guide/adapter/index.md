@@ -78,6 +78,7 @@ export default class ReplAdapter extends Adapter<ReplBot> {
     this.rl.on('line', (line) => {
       const session = bot.session()
       session.type = 'message'
+      session.userId = 'repl'
       session.channelId = 'repl'
       session.isDirect = true
       session.content = line
