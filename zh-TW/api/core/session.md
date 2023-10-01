@@ -6,50 +6,74 @@
 
 对于会话事件，我们抽象出了一套通用的属性：
 
-### session.body
-
-- 类型: `Event`
-
-会话事件对象。
-
 ### session.app
 
-当前会话绑定的 [App](./app.md) 实例。
+- 类型: [`Context`](./context.md)
+
+当前会话的根上下文。
+
+### session.body
+
+会话事件数据。包含了会话中全部可以序列化的资源。含有以下属性：
+
+- **id:** `number` 事件 ID
+- **type:** `string` 事件类型
+- **platform:** `string` 接收者的平台名称
+- **selfId:** `string` 接收者的平台账号
+- **timestamp:** `number` 事件的时间戳
+- **channel:** [`Channel`](../resources/channel.md) 事件所属的频道
+- **guild:** [`Guild`](../resources/guild.md) 事件所属的群组
+- **login:** [`Login`](../resources/login.md) 事件的登录信息
+- **member:** [`GuildMember`](../resources/member.md) 事件的目标成员
+- **message:** [`Message`](../resources/message.md) 事件的消息
+- **operator:** [`User`](../resources/user.md) 事件的操作者
+- **role:** [`GuildRole`](../resources/role.md) 事件的目标角色
+- **user:** [`User`](../resources/user.md) 事件的目标用户
+
+事件中的各属性遵循**资源提升**规则：资源对象的某个字段可以是另一个资源对象，例如消息对象中的 `user` 字段就是一个用户对象。当资源对象出现多级嵌套时，内层的资源将会被统一提升到最外层。例如，当接收到消息事件时，事件体中可以访问到 `message`, `member`, `user`, `channel` 等资源，但 `message` 中就不再存在 `member` 和 `user` 字段了。
+
+要访问事件体内部的属性，可以使用下面介绍的 [简写形式](#简写形式)。
 
 ### session.bot
 
-当前会话绑定的 [Bot](./bot.md) 实例。
+- 类型: [`Bot`](./bot.md)
 
-### session.user
-
-当前会话绑定的用户数据，是一个可观测 [User](../database/built-in.md#user) 对象。
-
-::: tip
-通常情况下，Session 对象只有在中间件内才有此属性。因此如果想使用此接口请考虑下列方式：
-
-- 使用中间件或指令 (指令的执行处于中间件内部)
-- 手动调用 [`session.observeUser()`](#session-observeuser)
-- 手动调用 [`database.getUser()`](../database/built-in.md#database-getuser)
-
-下面的两个属性也同理。
-:::
+当前会话绑定的机器人实例。
 
 ### session.channel
 
-当前会话绑定的频道数据，是一个可观测 [Channel](../database/built-in.md#channel) 对象。
+- 类型: [`Channel`](../database/built-in.md#channel)
+- 只能在中间件或指令内部使用
 
-### session.guild
+当前会话绑定的频道数据，是一个可观测对象。
 
-当前会话绑定的群组数据，是一个可观测 [Channel](../database/built-in.md#channel) 对象。
+::: warning
+这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.body.channel`。
+:::
+
+### session.user
+
+- 类型: [`User`](../database/built-in.md#user)
+- 只能在中间件或指令内部使用
+
+当前会话绑定的用户数据，是一个可观测对象。
+
+::: warning
+这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.body.user`。
+:::
 
 ## 简写形式
 
-对于部分常用的属性，我们提供了简写形式。
+对于部分常用的事件体属性，我们提供了简写形式。
 
 ### session.author
 
-- 类型: `GuildMember & User`
+- 类型: <code>[GuildMember](../resources/member.md) & [User](../resources/user.md)</code>
 - 完整写法: `{ ...session.body.user, ...session.body.member }`
+
+::: tip
+注意到 `GuildMember` 和 `User` 有部分重叠的字段，例如 `name` 和 `avatar`。在这种情况下，`GuildMember` 的字段会覆盖 `User` 的字段。
+:::
 
 ### session.channelId
 
@@ -81,6 +105,11 @@
 - 类型: `string`
 - 完整写法: `session.body.guild.name`
 
+### session.id
+
+- 类型: `string`
+- 完整写法: `session.body.id`
+
 ### session.isDirect
 
 - 类型: `boolean`
@@ -105,6 +134,11 @@
 
 - 类型: `string`
 - 完整写法: `session.body.selfId`
+
+### session.timestamp
+
+- 类型: `string`
+- 完整写法: `session.body.timestamp`
 
 ### session.type
 
