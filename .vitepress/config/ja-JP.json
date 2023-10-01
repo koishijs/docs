@@ -514,8 +514,12 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "渲染函数",
               "link": "/api/message/api.md"
+            },
+            {
+              "text": "消息编码器",
+              "link": "/api/message/encoder.md"
             }
           ]
         },
