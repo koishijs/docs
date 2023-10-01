@@ -24,7 +24,7 @@
 
 ### mock.receive(session)
 
-- **session:** `Partial<Session>` 事件所需的 Session 属性
+- **body:** [`EventBody`](../../api/core/session.md#session-body) 事件体
 - 返回值: `string`
 
 触发会话事件。
