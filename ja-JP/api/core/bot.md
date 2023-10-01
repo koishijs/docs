@@ -66,10 +66,10 @@
 
 触发一个会话事件。
 
-### bot.session(data) <badge>内置</badge>
+### bot.session(body?) <badge>内置</badge>
 
-- **data:** [`Partial<Session>`](./session.md) 会话数据
-- 返回值: [`Session`](./session.md) 会话实例
+- **body:** [`EventBody`](./session.md#session-body) 会话数据
+- 返回值: [`Session`](./session.md)
 
 创建一个新的会话实例。
 
