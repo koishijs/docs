@@ -462,43 +462,22 @@
           ]
         },
         {
-          "text": "Éléments messages",
+          "text": "平台资源",
           "items": [
             {
-              "text": "Spécification Syntaxe",
-              "link": "/api/message/syntax.md"
-            },
-            {
-              "text": "Éléments Standards",
-              "link": "/api/message/elements.md"
-            },
-            {
-              "text": "Composants internes",
-              "link": "/api/message/components.md"
-            },
-            {
-              "text": "API rendant",
-              "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
-          "text": "Multi-plateforme",
-          "items": [
-            {
-              "text": "Channel : canaux",
+              "text": "频道 (Channel)",
               "link": "/api/resources/channel.md"
             },
             {
-              "text": "Guild : guildes",
+              "text": "群组 (Guild)",
               "link": "/api/resources/guild.md"
             },
             {
-              "text": "GuildMember : membres de la guilde",
+              "text": "群组成员 (GuildMember)",
               "link": "/api/resources/member.md"
             },
             {
-              "text": "GuildRole : rôles de la guilde",
+              "text": "群组角色 (GuildRole)",
               "link": "/api/resources/role.md"
             },
             {
@@ -516,6 +495,27 @@
             {
               "text": "用户 (User)",
               "link": "/api/resources/user.md"
+            }
+          ]
+        },
+        {
+          "text": "消息元素",
+          "items": [
+            {
+              "text": "语法规范",
+              "link": "/api/message/syntax.md"
+            },
+            {
+              "text": "标准元素",
+              "link": "/api/message/elements.md"
+            },
+            {
+              "text": "内置组件",
+              "link": "/api/message/components.md"
+            },
+            {
+              "text": "渲染 API",
+              "link": "/api/message/api.md"
             }
           ]
         },
