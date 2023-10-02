@@ -78,9 +78,9 @@
 
 触发一个会话事件。
 
-### bot.session(body?)
+### bot.session(event?)
 
-- **body:** [`EventBody`](./session.md#session-body) 会话数据
+- **event:** [`Event`](./session.md#session-event) 会话数据
 - 返回值: [`Session`](./session.md)
 
 创建一个新的会话实例。
