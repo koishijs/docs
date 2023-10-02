@@ -93,7 +93,7 @@ class TelegramMessageEncoder extends MessageEncoder {
     const message = decodeMessage(data)
     this.results.push(message)
     const session = this.bot.session()
-    session.message = message
+    session.event.message = message
     session.app.emit(session, 'send', session)
   }
 
