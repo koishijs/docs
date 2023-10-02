@@ -22,9 +22,9 @@
 
 创建一个客户端。
 
-### mock.receive(session)
+### mock.receive(event)
 
-- **body:** [`EventBody`](../../api/core/session.md#session-body) 事件体
+- **event:** [`Event`](../../api/core/session.md#session-event) 事件体
 - 返回值: `string`
 
 触发会话事件。
