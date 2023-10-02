@@ -1,4 +1,4 @@
-# 第一次对话
+# First Dialogue
 
 安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
 
@@ -33,8 +33,8 @@ If you want to simulate a group chat, then we could click "Add User" again to cr
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [微信公众号](../../plugins/adapter/wechat-official.md)
-- [企业微信](../../plugins/adapter/wecom.md)
+- [WeChat Official](../../plugins/adapter/wechat-official.md)
+- [WeCom](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
 其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
