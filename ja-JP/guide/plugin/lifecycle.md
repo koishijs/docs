@@ -101,7 +101,7 @@ export interface Config {
 export function apply(ctx: Context, config: Config) {
   ctx.middleware((session, next) => {
     // 当用户发送 input 时，回复 output
-    if (session.message === config.input) {
+    if (session.content === config.input) {
       return config.output
     }
     return next()
