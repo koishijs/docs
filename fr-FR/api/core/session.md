@@ -12,7 +12,24 @@
 
 当前会话的根上下文。
 
-### session.body
+### session.bot
+
+- 类型: [`Bot`](./bot.md)
+
+当前会话绑定的机器人实例。
+
+### session.channel
+
+- 类型: [`Channel`](../database/built-in.md#channel)
+- 只能在中间件或指令内部使用
+
+当前会话绑定的频道数据，是一个可观测对象。
+
+::: warning
+这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.event.channel`。
+:::
+
+### session.event
 
 会话事件数据。包含了会话中全部可以序列化的资源。含有以下属性：
 
@@ -34,23 +51,6 @@
 
 要访问事件体内部的属性，可以使用下面介绍的 [访问器属性](#访问器属性)。
 
-### session.bot
-
-- 类型: [`Bot`](./bot.md)
-
-当前会话绑定的机器人实例。
-
-### session.channel
-
-- 类型: [`Channel`](../database/built-in.md#channel)
-- 只能在中间件或指令内部使用
-
-当前会话绑定的频道数据，是一个可观测对象。
-
-::: warning
-这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.body.channel`。
-:::
-
 ### session.user
 
 - 类型: [`User`](../database/built-in.md#user)
@@ -59,7 +59,7 @@
 当前会话绑定的用户数据，是一个可观测对象。
 
 ::: warning
-这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.body.user`。
+这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.event.user`。
 :::
 
 ## 访问器属性
@@ -69,7 +69,7 @@
 ### session.author
 
 - 类型: <code>[GuildMember](../resources/member.md) & [User](../resources/user.md)</code>
-- 完整写法: `{ ...session.body.user, ...session.body.member }`
+- 完整写法: `{ ...session.event.user, ...session.event.member }`
 
 ::: tip
 注意到 `GuildMember` 和 `User` 有部分重叠的字段，例如 `name` 和 `avatar`。在这种情况下，`GuildMember` 的字段会覆盖 `User` 的字段。
@@ -78,77 +78,77 @@
 ### session.channelId
 
 - 类型: `string`
-- 完整写法: `session.body.channel.id`
+- 完整写法: `session.event.channel.id`
 
 ### session.channelName
 
 - 类型: `string`
-- 完整写法: `session.body.channel.name`
+- 完整写法: `session.event.channel.name`
 
 ### session.content
 
 - 类型: `string`
-- 完整写法: `session.body.message.content`
+- 完整写法: `session.event.message.content`
 
 ### session.elements
 
 - 类型: `Element[]`
-- 完整写法: `session.body.message.elements`
+- 完整写法: `session.event.message.elements`
 
 ### session.guildId
 
 - 类型: `string`
-- 完整写法: `session.body.guild.id`
+- 完整写法: `session.event.guild.id`
 
 ### session.guildName
 
 - 类型: `string`
-- 完整写法: `session.body.guild.name`
+- 完整写法: `session.event.guild.name`
 
 ### session.id
 
 - 类型: `string`
-- 完整写法: `session.body.id`
+- 完整写法: `session.event.id`
 
 ### session.isDirect
 
 - 类型: `boolean`
-- 完整写法: `session.body.channel.type === Channel.Type.DIRECT`
+- 完整写法: `session.event.channel.type === Channel.Type.DIRECT`
 
 ### session.messageId
 
 - 类型: `string`
-- 完整写法: `session.body.message.id`
+- 完整写法: `session.event.message.id`
 
 ### session.platform
 
 - 类型: `string`
-- 完整写法: `session.body.platform`
+- 完整写法: `session.event.platform`
 
 ### session.quote
 
 - 类型: `Message`
-- 完整写法: `session.body.message.quote`
+- 完整写法: `session.event.message.quote`
 
 ### session.selfId
 
 - 类型: `string`
-- 完整写法: `session.body.selfId`
+- 完整写法: `session.event.selfId`
 
 ### session.timestamp
 
 - 类型: `string`
-- 完整写法: `session.body.timestamp`
+- 完整写法: `session.event.timestamp`
 
 ### session.type
 
 - 类型: `string`
-- 完整写法: `session.body.type`
+- 完整写法: `session.event.type`
 
 ### session.userId
 
 - 类型: `string`
-- 完整写法: `session.body.user.id`
+- 完整写法: `session.event.user.id`
 
 ## 实例方法
 
