@@ -11,8 +11,8 @@
     "build": "yarn mixin && cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
-    "@koishijs/components": "^1.4.5",
-    "@koishijs/core": "^4.14.6",
+    "@koishijs/components": "^1.4.6",
+    "@koishijs/core": "^4.15.0",
     "@koishijs/market": "^4.1.6",
     "@koishijs/registry": "^6.0.4",
     "@koishijs/vitepress": "^3.0.0",
@@ -22,7 +22,7 @@
     "cross-env": "^7.0.3",
     "element-plus": "2.3.8",
     "esbuild-register": "^3.4.2",
-    "koishi": "^4.14.6",
+    "koishi": "^4.15.0",
     "marked-vue": "^1.2.3",
     "typescript": "^5.1.6",
     "vitepress": "1.0.0-rc.4",
