@@ -110,3 +110,6 @@ for await (const item of bot.getChannelIter())  // new
 
 [`Bot`](../api/core/bot.md) 将实现 [`Login`](../api/resources/login.md) 资源，因此其上的用户数据将存放在 `bot.user` 中。此外，[`status`](../api/resources/login.md) 属性由字符串变为数值枚举。
 
+[`encoder.results`](../api/message/encoder.md#encoder-results) 的类型由 `string[]` 变为 `Message[]`。
+
+新增用于创建私聊频道的 [`bot.createDirectChannel()`](../api/resources/channel.md)，因此不再需要实现 [`bot.sendPrivateMessage()`](../api/resources/message.md#bot-sendprivatemessage)。
