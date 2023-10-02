@@ -104,7 +104,7 @@ for await (const item of bot.getChannelIter())  // new
 
 [`User`](../api/resources/user.md) 类型的 `userId` 属性改为 `id`，同理对于 [`Channel`](../api/resources/channel.md), [`Guild`](../api/resources/guild.md), [`Message`](../api/resources/message.md) 也是如此。此外，`Author` 被重构为了 `User` 和 `Member` 两个部分。
 
-[`Session`](../api/core/session.md) 引入了 `body` 属性用于存放所有事件相关的资源。尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
+[`Session`](../api/core/session.md) 引入了 `event` 属性用于存放所有事件相关的资源。尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
 
 `Adapter.Server` 和 `Adapter.Client` 两个基类被移除。现在可以直接使用 [`Adapter`](../api/core/adapter.md) 基类，并通过 `reusable` 属性决定其是否可重用。
 
