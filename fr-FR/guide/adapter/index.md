@@ -53,7 +53,7 @@ export default class ReplBot extends Bot {
     ctx.plugin(ReplAdapter, this)
   }
 
-  async sendMessage(channelId: string, content: h.Fragment) {
+  async createMessage(channelId: string, content: h.Fragment) {
     process.stdout.write(h('', content).toString(true))
     process.stdout.write(EOL)
     return []
@@ -68,7 +68,7 @@ import { Adapter, Context } from 'koishi'
 import { createInterface } from 'readline'
 import ReplBot from './bot'
 
-export default class ReplAdapter extends Adapter.Server<ReplBot> {
+export default class ReplAdapter extends Adapter<ReplBot> {
   rl = createInterface({
     input: process.stdin,
   })
@@ -76,12 +76,12 @@ export default class ReplAdapter extends Adapter.Server<ReplBot> {
   async start(bot: ReplBot) {
     bot.online()
     this.rl.on('line', (line) => {
-      const session = bot.session({
-        type: 'message',
-        isDirect: true,
-        channelId: 'repl',
-        content: line,
-      })
+      const session = bot.session()
+      session.type = 'message'
+      session.userId = 'repl'
+      session.channelId = 'repl'
+      session.isDirect = true
+      session.content = line
       bot.dispatch(session)
     })
   }

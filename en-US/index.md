@@ -4,8 +4,8 @@ links:
   starter: /en-US/manual/starter/
 home:
   desc: Cross-platform Chatbot Framework Made With Love
-  primary: Get Started
-  secondary: Learn More
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: Real-time Monitoring
@@ -93,22 +93,46 @@ footer:
     text: Platforms
     items:
       - 
+        text: DingTalk
+        link: /zh-CN/plugins/adapter/dingtalk.html
+      - 
         text: Discord
         link: /en-US/plugins/adapter/discord.html
-      - 
-        text: Lark
-        link: /en-US/plugins/adapter/lark.html
       - 
         text: Kook
         link: /en-US/plugins/adapter/kook.html
       - 
+        text: Lark
+        link: /en-US/plugins/adapter/lark.html
+      - 
+        text: LINE
+        link: /zh-CN/plugins/adapter/line.html
+      - 
+        text: Mail
+        link: /zh-CN/plugins/adapter/mail.html
+      - 
+        text: Matrix
+        link: /zh-CN/plugins/adapter/matrix.html
+      - 
         text: OneBot
         link: /en-US/plugins/adapter/onebot.html
       - 
-        text: QQ Guild
-        link: /en-US/plugins/adapter/qqguild.html
+        text: QQ
+        link: /zh-CN/plugins/adapter/qq.html
+      - 
+        text: Slack
+        link: /zh-CN/plugins/adapter/Slack.html
       - 
         text: Telegram
         link: /en-US/plugins/adapter/telegram.html
+      - 
+        text: WeChat Official
+        link: /zh-CN/plugins/adapter/wechat-official.html
+      - 
+        text: WeCom
+        link: /zh-CN/plugins/adapter/wecom.html
+      - 
+        text: WhatsApp
+        link: /zh-CN/plugins/adapter/whatsapp.html
 ---
 

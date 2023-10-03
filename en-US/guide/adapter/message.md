@@ -85,10 +85,11 @@ class TelegramMessageEncoder extends MessageEncoder {
   }
 
   // 将发送好的消息添加到 results 中
-  async addResult(message: Telegram.Message) {
+  async addResult(data: Telegram.Message) {
+    const message = decodeMessage(data)
+    this.results.push(message)
     const session = this.bot.session()
-    await adaptMessage(message, session)
-    this.results.push(session)
+    session.event.message = message
     session.app.emit(session, 'send', session)
   }
 
@@ -114,7 +115,7 @@ class TelegramMessageEncoder extends MessageEncoder {
 }
 ```
 
-一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要构造相应的 `Session`，用于触发 `send` 会话事件并存储于 `results` 数组中。
+一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要触发 `send` 事件并将结果存储于 `results` 数组中。
 
 与此同时，我们还需要修改 `TelegramBot` 类，为其添加静态属性。实现了 `MessageEncoder` 静态属性后，就无需手动实现 `bot.sendMessage()` 和 `bot.sendPrivateMessage()` 方法了：
 
@@ -231,7 +232,7 @@ class TelegramMessageEncoder extends MessageEncoder {
 - 主动交互是指机器人主动进行某些操作，例如定时任务、通知推送。
 - 被动交互是指机器人接收到特定事件后做出的响应，例如消息回复、入群欢迎。
 
-遗憾的是，部分平台会限制机器人的主动交互能力。例如，在 QQ 频道中，机器人每天只能发送极少量的主动消息；而对于被动消息，则必须在用户发送消息后的短时间内回复。这种平台被称为**被动型平台**。
+遗憾的是，部分平台会限制机器人的主动交互能力。例如，在 QQ (官方机器人) 中，机器人每天只能发送极少量的主动消息；而对于被动消息，则必须在用户发送消息后的短时间内回复。这种平台被称为**被动型平台**。
 
 被动型平台要求适配器在发送消息时尽可能带有回复目标。当然 Koishi 也提供了解决方案：
 

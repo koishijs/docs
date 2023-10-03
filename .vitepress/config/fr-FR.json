@@ -428,23 +428,23 @@
           "text": "Service interne",
           "items": [
             {
-              "text": "Bots",
+              "text": "Bots : robots",
               "link": "/api/service/bots.md"
             },
             {
-              "text": "Événements",
+              "text": "Events : événements",
               "link": "/api/service/events.md"
             },
             {
-              "text": "Filtres",
+              "text": "Filter : filtres",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "Requête d'HTTP",
+              "text": "HTTP : requête d'HTTP",
               "link": "/api/service/http.md"
             },
             {
-              "text": "Internationalisation",
+              "text": "I18n : Internationalisation",
               "link": "/api/service/i18n.md"
             },
             {
@@ -462,56 +462,64 @@
           ]
         },
         {
-          "text": "Éléments messages",
+          "text": "平台资源",
           "items": [
             {
-              "text": "Spécification Syntaxe",
-              "link": "/api/message/syntax.md"
+              "text": "频道 (Channel)",
+              "link": "/api/resources/channel.md"
             },
             {
-              "text": "Éléments Standards",
-              "link": "/api/message/elements.md"
+              "text": "群组 (Guild)",
+              "link": "/api/resources/guild.md"
             },
             {
-              "text": "Composants internes",
-              "link": "/api/message/components.md"
+              "text": "群组成员 (GuildMember)",
+              "link": "/api/resources/member.md"
             },
             {
-              "text": "API rendant",
-              "link": "/api/message/api.md"
+              "text": "群组角色 (GuildRole)",
+              "link": "/api/resources/role.md"
+            },
+            {
+              "text": "登录状态 (Login)",
+              "link": "/api/resources/login.md"
+            },
+            {
+              "text": "消息 (Message)",
+              "link": "/api/resources/message.md"
+            },
+            {
+              "text": "表态 (Reaction)",
+              "link": "/api/resources/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/resources/user.md"
             }
           ]
         },
         {
-          "text": "Multi-plateforme",
+          "text": "消息元素",
           "items": [
             {
-              "text": "Channel : canaux",
-              "link": "/api/platform/channel.md"
+              "text": "语法规范",
+              "link": "/api/message/syntax.md"
             },
             {
-              "text": "Guild : guildes",
-              "link": "/api/platform/guild.md"
+              "text": "标准元素",
+              "link": "/api/message/elements.md"
             },
             {
-              "text": "GuildMember : membres de la guilde",
-              "link": "/api/platform/member.md"
+              "text": "内置组件",
+              "link": "/api/message/components.md"
             },
             {
-              "text": "GuildRole : rôles de la guilde",
-              "link": "/api/platform/role.md"
+              "text": "渲染函数",
+              "link": "/api/message/api.md"
             },
             {
-              "text": "Message : message",
-              "link": "/api/platform/message.md"
-            },
-            {
-              "text": "Reaction : réaction",
-              "link": "/api/platform/reaction.md"
-            },
-            {
-              "text": "User : compte",
-              "link": "/api/platform/user.md"
+              "text": "消息编码器",
+              "link": "/api/message/encoder.md"
             }
           ]
         },
@@ -519,27 +527,27 @@
           "text": "Base de données",
           "items": [
             {
-              "text": "数据模型 (Model)",
+              "text": "Model : modèles de données",
               "link": "/api/database/model.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Database : opérations avec données de bases",
               "link": "/api/database/database.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Query : expression de la requête",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Eval : expression de la calculée",
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "查询构造器 (Selection)",
+              "text": "Selectron : constructeur de l'expression de la requête",
               "link": "/api/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/api/database/built-in.md"
             }
           ]
@@ -612,7 +620,7 @@
       ],
       "/plugins/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Place de Marché",
@@ -652,7 +660,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "E-mails",
+              "text": "Courriers électroniques",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -664,8 +672,12 @@
               "link": "/plugins/adapter/onebot.md"
             },
             {
-              "text": "QQ Guild",
-              "link": "/plugins/adapter/qqguild.md"
+              "text": "QQ",
+              "link": "/plugins/adapter/qq.md"
+            },
+            {
+              "text": "Satori",
+              "link": "/plugins/adapter/satori.md"
             },
             {
               "text": "Slack",
@@ -676,11 +688,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "WeChat Official Account",
+              "text": "微信公众号",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "WeCom (WeChat Work)",
+              "text": "企业微信",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -810,6 +822,10 @@
             {
               "text": "Mock : Outils des tests",
               "link": "/plugins/develop/mock.md"
+            },
+            {
+              "text": "API 服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             }
           ]
         }

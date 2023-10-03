@@ -54,6 +54,6 @@
 
 服务器监听的路径。
 
-## WebSocket 配置项
+## WS 配置项
 
-包括全部的 [`WsClient`](../../api/core/adapter.md#类：adapter-wsclient) 选项。
+包括全部的 [`WsClient`](../../api/core/adapter.md#类-adapter-wsclient) 选项。

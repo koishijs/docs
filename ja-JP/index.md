@@ -4,8 +4,8 @@ links:
   starter: /ja-JP/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
-  primary: Get Started
-  secondary: Learn More
+  primary: 即刻起步
+  secondary: 了解更多
 features:
   - 
     title: 实时监控
@@ -93,22 +93,46 @@ footer:
     text: 平台
     items:
       - 
+        text: 钉钉
+        link: /zh-CN/plugins/adapter/dingtalk.html
+      - 
         text: Discord
         link: /ja-JP/plugins/adapter/discord.html
       - 
-        text: Lark (飞书)
+        text: Kook
+        link: /ja-JP/plugins/adapter/kook.html
+      - 
+        text: Lark
         link: /ja-JP/plugins/adapter/lark.html
       - 
-        text: Kook (开黑啦)
-        link: /ja-JP/plugins/adapter/kook.html
+        text: LINE
+        link: /zh-CN/plugins/adapter/line.html
+      - 
+        text: 邮件
+        link: /zh-CN/plugins/adapter/mail.html
+      - 
+        text: Matrix
+        link: /zh-CN/plugins/adapter/matrix.html
       - 
         text: OneBot
         link: /ja-JP/plugins/adapter/onebot.html
       - 
-        text: QQ 频道
-        link: /ja-JP/plugins/adapter/qqguild.html
+        text: QQ
+        link: /zh-CN/plugins/adapter/qq.html
+      - 
+        text: Slack
+        link: /zh-CN/plugins/adapter/Slack.html
       - 
         text: Telegram
         link: /ja-JP/plugins/adapter/telegram.html
+      - 
+        text: 微信公众号
+        link: /zh-CN/plugins/adapter/wechat-official.html
+      - 
+        text: 企业微信
+        link: /zh-CN/plugins/adapter/wecom.html
+      - 
+        text: WhatsApp
+        link: /zh-CN/plugins/adapter/whatsapp.html
 ---
 

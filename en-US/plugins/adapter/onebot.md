@@ -8,7 +8,7 @@
 
 - [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp)（推荐）
 - [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)
-- [richardchien/coolq-http-api](https://github.com/richardchien/coolq-http-api)（配合 [iTXTech/mirai-native](https://github.com/iTXTech/mirai-native) 使用）
+- [richardchien/coolq-http-api](https://github.com/richardchien/coolq-http-api) (配合 [iTXTech/mirai-native](https://github.com/iTXTech/mirai-native) 使用)
 
 我们推荐使用 go-cqhttp。**在本文的后续部分我们只会介绍 go-cqhttp 的使用方法**。有对其他框架感兴趣的同学也可以自行探索。
 
@@ -389,7 +389,7 @@ export default {
 3. 这个方法名与 go-cqhttp 一致，并不是拼写错误
 4. 原文为「单项」，此处保持一致
 
-### QQ 频道 API
+### 频道 API
 
 - [`onebot.getGuildServiceProfile()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道系统内BOT的资料) 获取频道系统内 BOT 的资料
 - [`onebot.getGuildList()`](https://github.com/Mrs4s/go-cqhttp/blob/master/docs/guild.md#获取频道列表) 获取频道列表
@@ -438,13 +438,3 @@ node -e "console.log(process.arch)"
 - 不要在短时间内进行批量操作
 - 不要在新设备登录不久发长信息 / xml / json 信息，以 100 字内的信息最佳
 - 不要过分使用敏感操作
-
-#### 问题：为什么其他平台的适配器名字都与平台一致，只有 QQ 对应 OneBot？
-
-这是由多方原因共同导致的。
-
-首先，许多平台都公开了自己的机器人接口，只有腾讯官方对机器人采取封杀的态度。因此只有 QQ 的适配器是基于第三方协议实现的，OneBot 正是这个协议的名字。而第三方协议远远不止一个，所以不应该用 QQ 这个笼统的名称。在未来也可能出现其他面向 QQ 的适配器。
-
-反过来，OneBot 作为一个协议，未来也可能支持更多的聊天平台。届时只需有 @koishijs/plugin-adapter-onebot，Koishi 也相当于支持了这些平台。一旦出现了这样的情况，用 QQ 作为适配器名反而显得以偏概全了，这也是不妥当的。
-
-就目前而言，当我们在讨论用 Koishi 实现 QQ 机器人时，都默认指代这个协议。

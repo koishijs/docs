@@ -30,11 +30,11 @@
 - [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [OneBot](../../plugins/adapter/onebot.md)
-- [QQ 频道](../../plugins/adapter/qqguild.md)
+- [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [WeChat Official Account](../../plugins/adapter/wechat-official.md)
-- [WeCom (WeChat Work)](../../plugins/adapter/wecom.md)
+- [微信公众号](../../plugins/adapter/wechat-official.md)
+- [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
 其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
