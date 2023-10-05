@@ -28,6 +28,7 @@ export default async () => {
   }
 
   return defineConfig({
+    base: process.env.DEPLOY_BASE || '/',
     title: 'Koishi',
     description: '创建跨平台、可扩展、高性能的机器人',
 
