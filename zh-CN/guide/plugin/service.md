@@ -336,7 +336,7 @@ class Console extends Service {
 ```ts
 // import {} 的意思是，我们只需要类型声明，而不需要导入任何内容
 // 在编译后，这个语句会被移除，不会引入任何副作用
-import {} from '@koishijs/plugin-puppeteer'
+import {} from 'koishi-plugin-puppeteer'
 
 // 通过 using 属性声明依赖，并通过 ctx 来访问服务
 export const using = ['puppeteer']
@@ -353,7 +353,7 @@ export function apply(ctx: Context) {
     "required": ["puppeteer"]
   },
   "devDependencies": {
-    "@koishijs/plugin-puppeteer": "^2.0.0"
+    "koishi-plugin-puppeteer": "^2.0.0"
   }
 }
 ```

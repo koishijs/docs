@@ -46,7 +46,7 @@ export default async () => {
     mixins: await mixins(),
 
     themeConfig: {
-      indexName: 'docs',
+      indexName: 'koishi-docs',
       logo: '/logo.png',
 
       socialLinks: {
@@ -61,6 +61,11 @@ export default async () => {
     vite: {
       optimizeDeps: {
         include: ['xss'],
+      },
+      resolve: {
+        alias: {
+          dns: '@koishijs/dns',
+        },
       },
     },
   })
