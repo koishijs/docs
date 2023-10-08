@@ -13,6 +13,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-matrix](./adapter/matrix.md)
 - [@koishijs/plugin-adapter-onebot](./adapter/onebot.md)
 - [@koishijs/plugin-adapter-qq](./adapter/qq.md)
+- [@koishijs/plugin-adapter-satori](./adapter/satori.md)
 - [@koishijs/plugin-adapter-slack](./adapter/slack.md)
 - [@koishijs/plugin-adapter-telegram](./adapter/telegram.md)
 - [@koishijs/plugin-adapter-wechat-official](./adapter/wechat-official.md)
@@ -56,3 +57,4 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 
 - [@koishijs/plugin-hmr](./develop/hmr.md)：模块热替换
 - [@koishijs/plugin-mock](./develop/mock.md)：测试工具
+- [@koishijs/plugin-server](./develop/server.md)：API 服务器
