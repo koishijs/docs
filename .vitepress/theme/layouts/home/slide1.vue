@@ -5,7 +5,7 @@
       {{ frontmatter.home.desc }}
     </p>
     <div class="actions">
-      <a class="action-button primary" :href="frontmatter.links.starter">{{ frontmatter.home.primary }}</a>
+      <a class="action-button primary" :href="withBase(frontmatter.links.starter)">{{ frontmatter.home.primary }}</a>
       <a class="action-button secondary" @click="$emit('swipe', 1)">{{ frontmatter.home.secondary }}</a>
     </div>
     <svg aria-hidden="true" focusable="false" role="img" viewBox="0 0 320 512">
@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
 defineEmits(['swipe'])
 

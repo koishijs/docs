@@ -45,23 +45,6 @@ jobs:
           name: lockfile
           path: yarn.lock
 
-      - name: Build
-        run: yarn build
-        env:
-          MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
-          MEILISEARCH_READ_KEY: ${{ secrets.MEILISEARCH_READ_KEY }}
-          MEILISEARCH_WRITE_KEY: ${{ secrets.MEILISEARCH_WRITE_KEY }}
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.WORKFLOW_TOKEN }}
-          publish_branch: dist
-          publish_dir: .vitepress/dist
-          force_orphan: true
-          enable_jekyll: true
-          commit_message: '[skip ci] deploy'
-
       - name: Build (koishi-plugin-docs)
         run: yarn build
         env:
@@ -85,3 +68,20 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.WORKFLOW_TOKEN }}"
           https://api.github.com/repos/koishijs/koishi-plugin-docs/actions/workflows/build.yml/dispatches
           -d '{"ref":"main"}'
+
+      - name: Build
+        run: yarn build
+        env:
+          MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
+          MEILISEARCH_READ_KEY: ${{ secrets.MEILISEARCH_READ_KEY }}
+          MEILISEARCH_WRITE_KEY: ${{ secrets.MEILISEARCH_WRITE_KEY }}
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.WORKFLOW_TOKEN }}
+          publish_branch: dist
+          publish_dir: .vitepress/dist
+          force_orphan: true
+          enable_jekyll: true
+          commit_message: '[skip ci] deploy'
