@@ -162,11 +162,7 @@
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Utilisation de la base des données",
-              "link": "/manual/recipe/dataview.md"
-            },
-            {
-              "text": "Maintenance des multiples configurations",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -174,7 +170,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "Déploiement",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -779,35 +775,31 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "Dataview : Gestion des bases des données",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
-              "text": "Explorer : Gestion des fichiers",
+              "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "Insight : Dépendant des plugins",
+              "text": "插件依赖图 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "Locales : Traduction locale",
+              "text": "本地翻译 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "Logger : Gestion de journal",
+              "text": "日志管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "Market : Place de marché",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Sandbox : Débogage sur bac à sable",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "Status : État de fonctionnement",
+              "text": "运行状态 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
