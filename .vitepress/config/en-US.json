@@ -162,10 +162,6 @@
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Database Access",
-              "link": "/manual/recipe/dataview.md"
-            },
-            {
               "text": "Multiple Configuration Maintenance",
               "link": "/manual/recipe/multiple.md"
             },
@@ -779,11 +775,7 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "Database Management (Dataview)",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
-              "text": "File Management (Explorer)",
+              "text": "Resource Manager (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
@@ -799,11 +791,11 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "Plugin Marketplace (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Sandbox Debug (Sandbox)",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
