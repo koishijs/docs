@@ -162,10 +162,6 @@
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "访问数据库",
-              "link": "/manual/recipe/dataview.md"
-            },
-            {
               "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
@@ -779,35 +775,31 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "資料庫操作 (Dataview)",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
-              "text": "資源管理器 (Explorer)",
+              "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "外掛依賴圖 (Insight)",
+              "text": "插件依赖图 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻譯 (Locales)",
+              "text": "本地翻译 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日誌管理 (Logger)",
+              "text": "日志管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "外掛市場 (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱除錯 (Sandbox)",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "執行狀態 (Status)",
+              "text": "运行状态 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
