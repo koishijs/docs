@@ -422,22 +422,34 @@
           "link": "/cookbook/"
         }]
       }, {
-        "text": "设计",
+        "text": "设计原理",
         "items": [{
           "text": "项目架构",
           "link": "/cookbook/design/structure.md"
         }, {
           "text": "深入工作区",
           "link": "/cookbook/design/workspace.md"
+        }, {
+          "text": "可逆插件加载",
+          "link": "/cookbook/design/reversible.md"
+        }, {
+          "text": "数据存储与零占用",
+          "link": "/cookbook/design/storage.md"
         }]
       }, {
-        "text": "文章",
+        "text": "最佳实践",
         "items": [{
+          "text": "资源转存",
+          "link": "/cookbook/practice/assets.md"
+        }, {
+          "text": "图片渲染",
+          "link": "/cookbook/practice/render.md"
+        }, {
           "text": "部署到 k-on!",
-          "link": "/cookbook/online.md"
+          "link": "/cookbook/practice/online.md"
         }, {
           "text": "编写测试",
-          "link": "/cookbook/testing.md"
+          "link": "/cookbook/practice/testing.md"
         }]
       }],
       "/plugins/": [{
