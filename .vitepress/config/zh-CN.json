@@ -25,12 +25,12 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
-            "link": "/api/"
+            "text": "进阶",
+            "link": "/cookbook/"
           },
           {
-            "text": "最佳实践",
-            "link": "/cookbook/"
+            "text": "API",
+            "link": "/api/"
           },
           {
             "text": "演练场：配置构型",
@@ -45,10 +45,6 @@
           {
             "text": "插件市场",
             "link": "/market/"
-          },
-          {
-            "text": "服务类插件导航",
-            "link": "/market/service.md"
           },
           {
             "text": "官方插件一览",
@@ -583,6 +579,19 @@
           ]
         },
         {
+          "text": "设计",
+          "items": [
+            {
+              "text": "项目架构",
+              "link": "/cookbook/design/structure.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            }
+          ]
+        },
+        {
           "text": "文章",
           "items": [
             {
@@ -811,10 +820,6 @@
             {
               "text": "插件市场",
               "link": "/market/"
-            },
-            {
-              "text": "服务类插件导航",
-              "link": "/market/service.md"
             },
             {
               "text": "官方插件一览",
