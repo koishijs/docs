@@ -114,9 +114,6 @@ footer:
         text: Matrix
         link: /zh-CN/plugins/adapter/matrix.html
       - 
-        text: OneBot
-        link: /de-DE/plugins/adapter/onebot.html
-      - 
         text: QQ
         link: /zh-CN/plugins/adapter/qq.html
       - 
