@@ -433,7 +433,7 @@
           "text": "可逆的 Koishi",
           "link": "/cookbook/design/reversible.md"
         }, {
-          "text": "数据存储与零占用",
+          "text": "零占用的 Koishi",
           "link": "/cookbook/design/storage.md"
         }]
       }, {

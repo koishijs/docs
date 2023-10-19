@@ -13,7 +13,7 @@
 - `authority.3`：权限等级 3 的权限
 - `command.foo`：指令 foo 的权限
 - `command.foo.option.bar`：指令 foo 选项 bar 的权限
-- `telegram.admin`：onebot 平台下群管理员的权限
+- `telegram.admin`：telegram 平台下群管理员的权限
 - `bot.channel.mute`：能够禁言频道的机器人的权限
 - `config.write`：能够写入配置文件的权限
 
