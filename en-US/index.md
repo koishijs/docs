@@ -114,9 +114,6 @@ footer:
         text: Matrix
         link: /zh-CN/plugins/adapter/matrix.html
       - 
-        text: OneBot
-        link: /en-US/plugins/adapter/onebot.html
-      - 
         text: QQ
         link: /zh-CN/plugins/adapter/qq.html
       - 
@@ -126,10 +123,10 @@ footer:
         text: Telegram
         link: /en-US/plugins/adapter/telegram.html
       - 
-        text: WeChat Official
+        text: 微信公众号
         link: /zh-CN/plugins/adapter/wechat-official.html
       - 
-        text: WeCom
+        text: 企业微信
         link: /zh-CN/plugins/adapter/wecom.html
       - 
         text: WhatsApp
