@@ -13,7 +13,7 @@
 - `authority.3`：权限等级 3 的权限
 - `command.foo`：指令 foo 的权限
 - `command.foo.option.bar`：指令 foo 选项 bar 的权限
-- `onebot.admin`：onebot 平台下群管理员的权限
+- `telegram.admin`：onebot 平台下群管理员的权限
 - `bot.channel.mute`：能够禁言频道的机器人的权限
 - `config.write`：能够写入配置文件的权限
 
@@ -62,7 +62,7 @@ user.514 > authority.1
 
 ```text
 authority.2  >
-onebot.admin > command.foo
+telegram.admin > command.foo
 ```
 
 这样一来，一个用户只需满足上述两个条件之一就可以调用此指令了。
@@ -102,12 +102,12 @@ command.foo -> bot.channel.mute
 在上面的介绍中，如果要定义新的权限，就必须手动分配给用户或用户组后才能使用。有没有方法自动为一个会话分配权限呢？这就是权限访问器的功能。
 
 ```ts
-ctx.permissions.provide('onebot.admin', async (name, session) => {
-  return session.onebot?.sender?.role === 'admin'
+ctx.permissions.provide('telegram.admin', async (name, session) => {
+  return session.telegram?.sender?.role === 'admin'
 })
 ```
 
-上面的代码的作用是：当某个会话处于 onebot 平台，并且发送者是群内管理员时，自动附加一个 onebot.admin 权限。利用这种技术，我们就可以为特定平台提供权限能力了。
+上面的代码的作用是：当某个会话处于 telegram 平台，并且发送者是群内管理员时，自动附加一个 telegram.admin 权限。利用这种技术，我们就可以为特定平台提供权限能力了。
 
 每个权限可以定义多个访问器函数。在运行时必须通过每一个访问器函数的检查才能视为拥有权限。
 
