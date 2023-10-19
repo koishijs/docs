@@ -1,7 +1,7 @@
 # @koishijs/plugin-mock
 
 ::: tip
-使用方法请参见 [开发 > 单元测试](../../cookbook/testing.md) 章节。
+使用方法请参见 [开发 > 单元测试](../../cookbook/practice/testing.md) 章节。
 :::
 
 @koishijs/plugin-mock 包含了被 Koishi 使用的测试工具。它提供了一个名为 `mock` 的服务，可用于模拟事件上报、网络请求等等。

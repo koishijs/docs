@@ -43,12 +43,12 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
-            "link": "/api/"
+            "text": "进阶",
+            "link": "/cookbook/"
           },
           {
-            "text": "最佳实践",
-            "link": "/cookbook/"
+            "text": "API",
+            "link": "/api/"
           },
           {
             "text": "演练场：配置构型",
@@ -63,10 +63,6 @@
           {
             "text": "插件市场",
             "link": "/market/"
-          },
-          {
-            "text": "服务类插件导航",
-            "link": "/market/service.md"
           },
           {
             "text": "官方插件一览",
@@ -160,10 +156,6 @@
             {
               "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
-            },
-            {
-              "text": "访问数据库",
-              "link": "/manual/recipe/dataview.md"
             },
             {
               "text": "维护多份配置",
@@ -363,6 +355,14 @@
             {
               "text": "接入 Crowdin",
               "link": "/guide/i18n/crowdin.md"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "text": "→ 进阶开发指南",
+              "link": "/cookbook/"
             }
           ]
         }
@@ -605,15 +605,53 @@
           ]
         },
         {
-          "text": "文章",
+          "text": "设计原理",
           "items": [
             {
+              "text": "项目架构",
+              "link": "/cookbook/design/structure.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "可逆的 Koishi",
+              "link": "/cookbook/design/reversible.md"
+            },
+            {
+              "text": "零占用的 Koishi",
+              "link": "/cookbook/design/storage.md"
+            }
+          ]
+        },
+        {
+          "text": "最佳实践",
+          "items": [
+            {
+              "text": "资源转存",
+              "link": "/cookbook/practice/assets.md"
+            },
+            {
+              "text": "图片渲染",
+              "link": "/cookbook/practice/render.md"
+            },
+            {
               "text": "部署到 k-on!",
-              "link": "/cookbook/online.md"
+              "link": "/cookbook/practice/online.md"
             },
             {
               "text": "编写测试",
-              "link": "/cookbook/testing.md"
+              "link": "/cookbook/practice/testing.md"
+            }
+          ]
+        },
+        {
+          "text": "案例分析",
+          "items": [
+            {
+              "text": "指令管理",
+              "link": "/cookbook/appendix/commands.md"
             }
           ]
         }
@@ -666,10 +704,6 @@
             {
               "text": "Matrix",
               "link": "/plugins/adapter/matrix.md"
-            },
-            {
-              "text": "OneBot",
-              "link": "/plugins/adapter/onebot.md"
             },
             {
               "text": "QQ",
@@ -779,10 +813,6 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
               "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
@@ -837,10 +867,6 @@
             {
               "text": "插件市场",
               "link": "/market/"
-            },
-            {
-              "text": "服务类插件导航",
-              "link": "/market/service.md"
             },
             {
               "text": "官方插件一览",

@@ -94,11 +94,11 @@ plugins:
     # 在控制台中折叠该插件组
     $collapsed: true
     status:
-      # 仅对于 onebot 平台启用该插件
+      # 仅对于 telegram 平台启用该插件
       $filter:
         $eq:
           - $: platform
-          - onebot
+          - telegram
 ```
 
 ## 修改配置文件

@@ -28,9 +28,9 @@ await ctx.database.get('schedule', [1234], ['command', 'time'])
 你還可以向第二個引數傳入一個物件，用來查詢非主鍵上的資料或者同時指定多行的值：
 
 ```ts
-// 获取名为 schedule 的表中 assignee 为 onebot:123456 的数据行
+// 获取名为 schedule 的表中 assignee 为 telegram:123456 的数据行
 await ctx.database.get('schedule', {
-  assignee: ['onebot:123456'],
+  assignee: ['telegram:123456'],
 })
 ```
 
@@ -49,7 +49,7 @@ await ctx.database.get('schedule', {
 // 上述两个搜索条件的或运算
 await ctx.database.get('schedule', {
   $or: [
-    { assignee: ['onebot:123456'] },
+    { assignee: ['telegram:123456'] },
     { id: { $gt: 2, $lte: 5 } },
   ],
 })
@@ -76,7 +76,7 @@ await ctx.database.create('schedule', row)
 ```ts
 // 第二个参数也可以使用上面介绍的查询表达式
 await ctx.database.set('schedule', 1234, {
-  assignee: 'onebot:123456',
+  assignee: 'telegram:123456',
   time: new Date(),
 })
 ```
@@ -128,8 +128,8 @@ await ctx.database.upsert('foo', [
 
 ```ts
 // @errors: 2304
-// 以非主键为基准对数据表进行更新，你需要确保每一个元素都拥有 onebot 属性
-await ctx.database.upsert('user', rows, 'onebot')
+// 以非主键为基准对数据表进行更新，你需要确保每一个元素都拥有 telegram 属性
+await ctx.database.upsert('user', rows, 'telegram')
 
 // 以复合键为基准对数据表进行更新，你需要确保每一个元素都拥有 platform 和 id 属性
 await ctx.database.upsert('channel', rows, ['platform', 'id'])

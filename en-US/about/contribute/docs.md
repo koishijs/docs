@@ -1,6 +1,6 @@
 # Documentation
 
-## 术语表
+## Terms of Glossary
 
 - CJK：Chinese and Japanese Korean text etc.
 - Western：Numbers, Latin Letters, Greek Letters, etc.

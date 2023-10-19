@@ -37,10 +37,11 @@ interface Message {
 大多数情况下应当使用 [`MessageEncoder`](../message/encoder.md) 实现消息发送功能，而不是直接实现此方法。
 :::
 
-### bot.sendPrivateMessage(userId, content) <badge>内置</badge>
+### bot.sendPrivateMessage(userId, content, guildId?) <badge>内置</badge>
 
 - **userId:** `string` 对方 ID
 - **content:** `Fragment` 要发送的内容
+- **guildId:** `string` 群组 ID
 - 返回值: `Promise<string[]>` 发送的消息 ID
 
 向特定用户发送私聊消息。

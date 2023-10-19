@@ -4,9 +4,9 @@ QQ (官方机器人) 适配器。
 
 ## 接入方法
 
-1. 前往 [QQ 频道管理后台](https://bot.q.qq.com/open/#/type?appType=2) 注册
-2. 登陆进入 [机器人管理后台](https://bot.q.qq.com/open/#/botlogin) 并创建官方机器人
-3. 创建完成后，在 [频道机器人开发设置](https://bot.q.qq.com/#/developer/developer-setting) 获取机器人基本数据 [id, token, key]
+1. 前往 [QQ 开放平台](https://q.qq.com) 注册账号
+2. 登陆进入 [机器人管理后台](https://q.qq.com/#/app/bot) 并创建官方机器人
+3. 创建完成后，在「开发设置」界面获取机器人三项基本数据 [id, token, key]
 4. 将上面的基本数据作为机器人配置项即可使用
 
 ## 机器人选项

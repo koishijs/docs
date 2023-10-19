@@ -19,7 +19,7 @@
 ### 内置中间件
 
 1. 从前缀中匹配 at 机器人，nickname 或 prefix
-2. 预处理消息内容，生成 [`session.parsed`](../api/core/session.md#session-parsed)
+2. 预处理消息内容，生成 [`session.stripped`](../api/core/session.md#session-stripped)
 3. 触发 [before-parse](../api/core/events.md#事件：before-parse) 事件，尝试解析消息内容 ([快捷匹配](../guide/basic/command.md#快捷匹配) 的解析也在此处完成)
 4. 如果数据库存在：
     - 触发 [before-attach-channel](../api/core/events.md#事件：before-attach-channel) 事件

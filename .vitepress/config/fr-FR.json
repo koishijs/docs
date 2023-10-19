@@ -43,12 +43,12 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
-            "link": "/api/"
+            "text": "进阶",
+            "link": "/cookbook/"
           },
           {
-            "text": "Meilleures pratiques",
-            "link": "/cookbook/"
+            "text": "API",
+            "link": "/api/"
           },
           {
             "text": "Playground : Schéma",
@@ -65,11 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "Plugins Services",
-            "link": "/market/service.md"
-          },
-          {
-            "text": "Plugins Officielles",
+            "text": "官方插件一览",
             "link": "/plugins/"
           }
         ],
@@ -162,11 +158,7 @@
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Utilisation de la base des données",
-              "link": "/manual/recipe/dataview.md"
-            },
-            {
-              "text": "Maintenance des multiples configurations",
+              "text": "维护多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -174,7 +166,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "Déploiement",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -363,6 +355,14 @@
             {
               "text": "Collaboration avec Crowdin",
               "link": "/guide/i18n/crowdin.md"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "text": "→ 进阶开发指南",
+              "link": "/cookbook/"
             }
           ]
         }
@@ -605,15 +605,53 @@
           ]
         },
         {
-          "text": "Articles",
+          "text": "设计原理",
           "items": [
             {
-              "text": "Déployer sur k-on !",
-              "link": "/cookbook/online.md"
+              "text": "项目架构",
+              "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "Écrit des tests",
-              "link": "/cookbook/testing.md"
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "可逆的 Koishi",
+              "link": "/cookbook/design/reversible.md"
+            },
+            {
+              "text": "零占用的 Koishi",
+              "link": "/cookbook/design/storage.md"
+            }
+          ]
+        },
+        {
+          "text": "最佳实践",
+          "items": [
+            {
+              "text": "资源转存",
+              "link": "/cookbook/practice/assets.md"
+            },
+            {
+              "text": "图片渲染",
+              "link": "/cookbook/practice/render.md"
+            },
+            {
+              "text": "部署到 k-on!",
+              "link": "/cookbook/practice/online.md"
+            },
+            {
+              "text": "编写测试",
+              "link": "/cookbook/practice/testing.md"
+            }
+          ]
+        },
+        {
+          "text": "案例分析",
+          "items": [
+            {
+              "text": "指令管理",
+              "link": "/cookbook/appendix/commands.md"
             }
           ]
         }
@@ -631,7 +669,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "Plugins Officielles",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -666,10 +704,6 @@
             {
               "text": "Matrix",
               "link": "/plugins/adapter/matrix.md"
-            },
-            {
-              "text": "OneBot",
-              "link": "/plugins/adapter/onebot.md"
             },
             {
               "text": "QQ",
@@ -779,35 +813,31 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "Dataview : Gestion des bases des données",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
-              "text": "Explorer : Gestion des fichiers",
+              "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "Insight : Dépendant des plugins",
+              "text": "插件依赖图 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "Locales : Traduction locale",
+              "text": "本地翻译 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "Logger : Gestion de journal",
+              "text": "日志管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "Market : Place de marché",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Sandbox : Débogage sur bac à sable",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "Status : État de fonctionnement",
+              "text": "运行状态 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
@@ -839,11 +869,7 @@
               "link": "/market/"
             },
             {
-              "text": "Plugins Services",
-              "link": "/market/service.md"
-            },
-            {
-              "text": "Plugins Officielles",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]

@@ -16,7 +16,7 @@ Koishi offre une console sans configurer. Vous pouvez construire vos chatbots da
 
 ### Une communauté prospère
 
-Après plus de 4 ans de développement, Koishi maintient une communauté de développement de plugins très active. Près de 1000 plugins officiels et communautaires couvrent tous les aspects du développement de chatbots, allant du support des plateformes, de la base de données, du stockage des ressources, des extensions de la console, de la gestion des états aux fonctionnalités métier spécifiques. Que ce soit pour construire une grande application interactive ou un assistant chatbot léger, il vous offre les meilleures pratiques. Nos documents couvrent tous les aspects de l'utilisation et du développement de Koishi. Il est essentiel de les consulter lorsque vous vous sentez perdu.
+Après plus de 4 ans de développement, Koishi maintient une communauté de développement de plugins très active. 超过 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。Que ce soit pour construire une grande application interactive ou un assistant chatbot léger, il vous offre les meilleures pratiques. Nos documents couvrent tous les aspects de l'utilisation et du développement de Koishi. Il est essentiel de les consulter lorsque vous vous sentez perdu.
 
 ### Conçu pour les développeurs
 

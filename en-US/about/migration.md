@@ -75,7 +75,6 @@
   - [@koishijs/plugin-auth](../plugins/console/auth.md)：用户登录
   - [@koishijs/plugin-commands](../plugins/console/commands.md)：指令管理
   - [@koishijs/plugin-config](../plugins/console/config.md)：插件配置
-  - [@koishijs/plugin-dataview](../plugins/console/dataview.md)：数据库操作
   - [@koishijs/plugin-logger](../plugins/console/logger.md)：日志管理
   - [@koishijs/plugin-market](../plugins/console/market.md)：插件市场
   - [@koishijs/plugin-sandbox](../plugins/console/sandbox.md)：沙盒调试
@@ -143,13 +142,13 @@ export function apply(ctx: Context, config: Config) {
 // before
 export default {
   bots: [ /* 机器人配置项 */ ],
-  onebot: { /* 适配器配置项 */ },
+  discord: { /* 适配器配置项 */ },
 }
 
 // after
 export default {
   plugins: {
-    onebot: {
+    discord: {
       bots: [ /* 机器人配置项 */ ],
       /* 适配器配置项 */
     },
@@ -209,8 +208,3 @@ plugins:
 - 移除了 `Random.uuid()` 方法，新增了 `Random.id()` 方法
 - 移除了 `simplify()` 和 `traditionalize()` 方法，请使用 [simplify-chinese](https://www.npmjs.com/package/simplify-chinese) 这个包
 - Observer API 改动：所有 `_` 前缀替换为 `$` 前缀，例如 `session.user.$update()`
-
-### @koishijs/plugin-adapter-onebot
-
-- `server` 配置项更名为 `endpoint`
-- 由于快速响应已经不属于 OneBot 标准，我们移除了对快速响应的支持
