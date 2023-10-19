@@ -29,7 +29,7 @@ authorize 指令用于设置用户的权限等级。该指令 4 级权限才能�
 ```sh
 authorize 3 -u @Koishi              # 通过 @ 人的方式
 authorize 3 -u @123456789           # 通过指定用户名方式
-authorize 3 -u @onebot:123456789    # 指定具体的平台和用户名
+authorize 3 -u @telegram:123456789    # 指定具体的平台和用户名
 ```
 
 ## 指令：assign
