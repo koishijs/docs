@@ -451,6 +451,12 @@
           "text": "编写测试",
           "link": "/cookbook/practice/testing.md"
         }]
+      }, {
+        "text": "案例分析",
+        "items": [{
+          "text": "指令管理",
+          "link": "/cookbook/appendix/commands.md"
+        }]
       }],
       "/plugins/": [{
         "text": "插件",
