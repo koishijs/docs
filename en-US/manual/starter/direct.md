@@ -97,37 +97,33 @@ If you want to connect the bot to a real chat platform, what you need to do is t
 
 ::: tabs code
 ```npm
-# Install the OneBot and Discord adapter as the example
-npm i @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# Install the OneBot and Discord adapter as the example
-yarn add @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 :::
 
 Then modify the `index.ts` you just created. Every time you activated an adapter plugin instance, a new bot instance would be created:
 
 ```ts title=index.ts
-import onebot from '@koishijs/plugin-adapter-onebot'
+import satori from '@koishijs/plugin-adapter-satori'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// Apply the OneBot adapter to create a bot instance
-ctx.plugin(onebot, {
-  protocol: 'ws',
-  selfId: '123456789',
-  endpoint: 'ws://127.0.0.1:6700',
+// 使用 Satori 适配器的机器人
+ctx.plugin(satori, {
+  endpoint: 'http://127.0.0.1:5500',
 })
 
-// Apply the OneBot adapter to create another bot instance
-ctx.plugin(onebot, {
-  protocol: 'http',
-  selfId: '987654321',
-  endpoint: 'http://127.0.0.1:5700',
+// 使用 Satori 适配器的另一个机器人，可以有不同的通信方式
+ctx.plugin(satori, {
+  endpoint: 'http://127.0.0.1:5501',
 })
 
-// Apply the Discord adapter to create a bot instance
-// You should install the corresponding plugins and complete the preparing process
+// 使用 Discord 适配器的机器人
+// 别忘了在使用之前，先安装相应的插件和完成准备工作
 ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
