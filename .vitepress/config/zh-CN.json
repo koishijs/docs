@@ -430,7 +430,7 @@
           "text": "深入工作区",
           "link": "/cookbook/design/workspace.md"
         }, {
-          "text": "可逆插件加载",
+          "text": "可逆的 Koishi",
           "link": "/cookbook/design/reversible.md"
         }, {
           "text": "数据存储与零占用",
