@@ -78,11 +78,11 @@ adapter-example
 在这个文件中我们定义 `TelegramMessageEncoder`：
 
 ```ts title=message.ts
-class TelegramMessageEncoder extends MessageEncoder {
+class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, TelegramBot<C>> {
   // 使用 payload 存储待发送的消息
   private payload: Dict
 
-  constructor(bot: TelegramBot, channelId: string, guildId?: string, options?: SendOptions) {
+  constructor(bot: TelegramBot<C>, channelId: string, guildId?: string, options?: SendOptions) {
     super(bot, channelId, guildId, options)
     const chat_id = guildId || channelId
     this.payload = { chat_id, parse_mode: 'html', text: '' }
@@ -124,7 +124,7 @@ class TelegramMessageEncoder extends MessageEncoder {
 与此同时，我们还需要修改 `TelegramBot` 类，为其添加静态属性。实现了 `MessageEncoder` 静态属性后，就无需手动实现 `bot.sendMessage()` 和 `bot.sendPrivateMessage()` 方法了：
 
 ```ts title=bot.ts
-export class TelegramBot extends Bot<TelegramBot.Config> {
+export class TelegramBot<C extends Context> extends Bot<C, TelegramBot.Config> {
   static MessageEncoder = TelegramMessageEncoder
 }
 ```
@@ -190,7 +190,7 @@ if (type === 'text') {
 接着，我们需要在 `flush` 方法中处理资源元素。Telegram 的资源上传接口是 `sendPhoto`、`sendAudio` 等，与文本所用的 `sendMessage` 不同，因此我们需要根据资源类型进行判断：
 
 ```ts
-class TelegramMessageEncoder extends MessageEncoder {
+class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, TelegramBot<C>> {
   async flush() {
     let message: Telegram.Message
     if (this.asset) {

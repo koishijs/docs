@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@koishijs/components": "^1.4.8",
-    "@koishijs/core": "^4.15.1",
+    "@koishijs/core": "^4.15.2",
     "@koishijs/dns": "^1.0.1",
     "@koishijs/market": "^4.1.6",
     "@koishijs/registry": "^6.0.4",
@@ -23,7 +23,7 @@
     "cross-env": "^7.0.3",
     "element-plus": "2.4.0",
     "esbuild-register": "^3.4.2",
-    "koishi": "^4.15.1",
+    "koishi": "^4.15.2",
     "marked-vue": "^1.2.3",
     "typescript": "^5.1.6",
     "vitepress": "1.0.0-rc.4",
