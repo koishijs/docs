@@ -143,7 +143,7 @@ We can also use the `koishi` field to specify Koishi related information
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
 ::: tip
-此外，还有一些其他的字段与 [Koishi Online](../../cookbook/practice/online.md) 相关。由于不影响主线开发，你可以稍后再进行了解。
+此外，还有一些字段与 [Koishi Online](../../cookbook/practice/online.md) 的部署流程相关 (如 `browser`, `exports` 等)。由于不影响主线开发，你可以稍后再进行了解。
 :::
 
 ## Publish your plugin
