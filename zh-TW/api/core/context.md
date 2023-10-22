@@ -100,15 +100,3 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - 类型: `symbol`
 
 特殊的键值，可以在通用上下文属性对象的方法上访问。参见 [声明通用上下文属性](../../guide/plugin/service.md#声明通用上下文属性)。
-
-### Context.mixin(name, options)
-
-- **name:** `string` 属性名称
-- **options:** `MixinOptions` 混入选项
-
-### Context.service(name, options?)
-
-- **name:** `string` 属性名称
-- **options:** `MixinOptions` 混入选项
-
-声明一个通用上下文属性。参见 [声明通用上下文属性](../../guide/plugin/service.md#声明通用上下文属性)。
