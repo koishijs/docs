@@ -7,8 +7,8 @@
 让我们先回忆一下上一节介绍的 `ReplBot`：
 
 ```ts
-class ReplBot extends Bot {
-  constructor(ctx: Context, config: Config) {
+class ReplBot<C extends Context> extends Bot<C> {
+  constructor(ctx: C, config: Config) {
     super(ctx, config)
     this.platform = 'repl'
     this.selfId = 'koishi'
@@ -81,8 +81,8 @@ const decodeGuild = (data: Discord.Guild): Universal.Guild => ({
   guildName: data.name,
 })
 
-class DiscordBot extends Bot {
-  constructor(ctx: Context, config: Config) {
+class DiscordBot<C extends Context> extends Bot<C> {
+  constructor(ctx: C, config: Config) {
     super(ctx, config)
     this.internal = new Internal()
     ctx.plugin(DiscordAdapter, this)
@@ -127,8 +127,8 @@ class Internal {
   }
 }
 
-class DiscordBot extends Bot {
-  constructor(ctx: Context, config: Config) {
+class DiscordBot<C extends Context> extends Bot<C> {
+  constructor(ctx: C, config: Config) {
     super(ctx, config)
     const http = ctx.http.extend({
       endpoint: 'https://discord.com/api/v10',
