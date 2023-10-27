@@ -97,11 +97,11 @@ If you want to connect the bot to a real chat platform, what you need to do is t
 
 ::: tabs code
 ```npm
-# 以 Satori 和 Discord 适配器为例
+# Use the adapter of Satori and the adapter of Discord as an example
 npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# 以 Satori 和 Discord 适配器为例
+# Use the adapter of Satori and the adapter of Discord as an example
 yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 :::
@@ -112,18 +112,19 @@ Then modify the `index.ts` you just created. Every time you activated an adapter
 import satori from '@koishijs/plugin-adapter-satori'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// 使用 Satori 适配器的机器人
+// A bot with the adapter of satori
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5500',
 })
 
-// 使用 Satori 适配器的另一个机器人，可以有不同的通信方式
+// Another bot with the adapter of satori
+// You can use different endpoints
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5501',
 })
 
-// 使用 Discord 适配器的机器人
-// 别忘了在使用之前，先安装相应的插件和完成准备工作
+// Another bot with the adapter of discord
+// You should install the adapter and complete the preparing process first
 ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
