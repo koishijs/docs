@@ -174,9 +174,9 @@ We can add or delete aliases here, or set any alias to the default display name.
 
 ### Add Subcommands
 
-In the left sidebar, we can drag any command (except derivative command) below another command, which will make it a subcommand of the another command.例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
+In the left sidebar, we can drag any command (except derivative command) below another command, which will make it a subcommand of the another command.For example, we can set the [`bind`](../../plugins/common/bind.md) command as the subcommand of `user` because it is a part of user management.
 
-Click the plus button in the top right, we can create a new command.This new command naturally lacks inherent actions, its primary purpose is to serve as the parent command for other commands, aiming to enhance the presentation quality.对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
+Click the plus button in the top right, we can create a new command.This new command naturally lacks inherent actions, its primary purpose is to serve as the parent command for other commands, aiming to enhance the presentation quality.For the new command created through this method, we can remove them by clicking on the trash button in the upper right corner.
 
 ### Permission Management
 
