@@ -71,4 +71,4 @@ If you want to sort reversely, add `-asc` backwards. Such as `sort:creed-asc`.In
 Quick experience is still experimental. It is only available in the marketplace in official documents.
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) is an online Koishi runtime.You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
+[Koishi Online (k-on!)](https://koishi.online) is an online Koishi runtime.You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.If you are the plugin developer, you can see [this article](../../cookbook/practice/online.md) to deploy your plugin to k-on!.
