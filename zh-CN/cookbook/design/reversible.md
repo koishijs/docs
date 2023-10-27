@@ -77,6 +77,7 @@ Koishi 的控制台前端由 @koishijs/client 提供，这个包同样依赖了 
   - ctx.plugin()：如果插件是可回收的，那么它就是自回收的
   - ctx.i18n.define()
   - ctx.component()
+  - ctx.setTimeout()
   - ctx.setInterval()
   - ctx.router.get()：通过修改了 Koa Router 的行为实现
 - 有副作用且不自回收：
