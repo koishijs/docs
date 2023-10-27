@@ -4,7 +4,7 @@ prev:
   link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /en-US/manual/usage/market.html
 ---
 
 # Install for Windows
