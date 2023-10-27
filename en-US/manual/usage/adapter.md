@@ -1,10 +1,10 @@
 # First Dialogue
 
-安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
+After installing Koishi and experiencing the marketplace, you may can't wait to try the features of Koishi.Let's start the first conversation with the bots now!
 
-## 在沙盒中模拟对话
+## Simulate a conversation in the sandbox
 
-在控制台中前往「沙盒」页面，在这里我们可以模拟与机器人的对话。
+Go to the "Sandbox" page in the Console, we can simulate a conversation with bots there.
 
 First, click the "Add User" button in the upper left corner to create a virtual user, which is named Alice for example. Then, you would see a blank chat UI on the right side. Click the input box at the bottom of the chat UI, enter "help" (without quotes) and then press Enter key. You will see a reply message from bot immediately. "help" is a built-in command that lists all available commands at the moment. Therefore, we could see "echo" and "help" commands in the response.
 
@@ -16,11 +16,11 @@ The "echo" here is the plugin we have just installed, which displays a line of t
 
 If you want to simulate a group chat, then we could click "Add User" again to create more virtual users. Then, switch to "Group Chat" at the top of the screen. At this moment, you could control multiple virtual users to chat with the bot. This would be useful when you want to test a multiplayer plugin like chess.
 
-除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
+Additionally, you could also set the [Authority Level](../usage/customize.md#权限管理) of a user in the "User Settings" page when any commands require it.
 
-## 接入真实聊天平台
+## Collaborate with real Chat Platforms
 
-仅仅是在沙盒中对话是远远不够的。我们需要将机器人接入到真实的聊天平台中，才能让它真正地为我们服务。Koishi uses adapter plugins to support various chat platforms. 下面是官方维护的适配器列表：
+Simulate the conversation in the sandbox is far from enough.We need to get the robot into a real chat platform to make it truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
 
 - [DingTalk](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
@@ -36,11 +36,11 @@ If you want to simulate a group chat, then we could click "Add User" again to cr
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
-其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
+The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the category "Adapter" in the Plugin Configuration page.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
 
 Koishi is able to maintain multiple bot accounts of different chat platforms in the same process. Each configuration copy of the corresponding adapter plugin maintains the bot account instance, you could add new configurations of adapter plugin according to [Add More Plugins](./market.md#添加更多插件). User data is shared by bots that connected to the same chat platform. So it is available to achieve a load balance by changing the current active bot account between them.
 
-不同平台的接入方式与难度存在较大的差异。There are different configuration work that you need to do with different platforms. 这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
+There are large differences between the different platforms of ways and difficulty.There are different configuration work that you need to do with different platforms. 这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 
 好消息是，Koishi 的大部分功能都不依赖特定的聊天平台。因此在进行准备工作的同时，你完全可以阅读本文档的后续部分，并在沙盒中体验并学习 Koishi 的功能。
 
