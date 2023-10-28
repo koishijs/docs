@@ -39,15 +39,15 @@
         "text": "Develop",
         "items": [
           {
-            "text": "Guide",
+            "text": "Developing Guide",
             "link": "/guide/"
           },
           {
-            "text": "进阶",
+            "text": "进阶开发指南",
             "link": "/cookbook/"
           },
           {
-            "text": "API",
+            "text": "API 参考",
             "link": "/api/"
           },
           {
@@ -663,10 +663,6 @@
             {
               "text": "Plugin market",
               "link": "/market/"
-            },
-            {
-              "text": "Service Plugins",
-              "link": "/market/service.md"
             },
             {
               "text": "官方插件一览",
