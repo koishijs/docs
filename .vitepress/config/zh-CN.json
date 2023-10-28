@@ -18,13 +18,13 @@
     }, {
       "text": "开发",
       "items": [{
-        "text": "指南",
+        "text": "开发指南",
         "link": "/guide/"
       }, {
-        "text": "进阶",
+        "text": "进阶开发指南",
         "link": "/cookbook/"
       }, {
-        "text": "API",
+        "text": "API 参考",
         "link": "/api/"
       }, {
         "text": "演练场：配置构型",
@@ -463,9 +463,6 @@
         "items": [{
           "text": "插件市场",
           "link": "/market/"
-        }, {
-          "text": "服务类插件导航",
-          "link": "/market/service.md"
         }, {
           "text": "官方插件一览",
           "link": "/plugins/"
