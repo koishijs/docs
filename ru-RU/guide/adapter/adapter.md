@@ -92,7 +92,9 @@ if (session) this.dispatch(session)
 
 ```ts
 export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
-  constructor(ctx: C) {
+  static inject = ['router']
+
+  constructor(public ctx: C) {
     super()
 
     ctx.router.post('/line', async (ctx) => {
@@ -110,10 +112,9 @@ export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
   }
 
   async start(bot: LineBot) {
-    const user = await this.getSelf()
-    Object.assign(this, user)
+    await this.getLogin()
     await bot.internal.setWebhookEndpoint({
-      endpoint: bot.ctx.root.config.selfUrl + '/line',
+      endpoint: this.ctx.router.config.selfUrl + '/line',
     })
   }
 }
@@ -122,10 +123,9 @@ export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
 任何一个适配器都需要通过 `start()` 和 `stop()` 方法来控制机器人的启动和停止 (你在前一个例子中没有看到这两个方法，只是因为 `WsClient` 已经内置了实现)。在这个例子中，我们通过内部接口对机器人数据做了初始化，并设置了 Webhook 回调地址：
 
 ```ts
-const user = await this.getSelf()
-Object.assign(this, user)
+await this.getLogin()
 await bot.internal.setWebhookEndpoint({
-  endpoint: bot.ctx.root.config.selfUrl + '/line',
+  endpoint: this.ctx.router.config.selfUrl + '/line',
 })
 ```
 
