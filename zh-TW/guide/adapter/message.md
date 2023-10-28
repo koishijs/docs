@@ -268,6 +268,8 @@ Telegram 是另一种特殊情况。尽管其提供的资源链接是可用的�
 
 ```ts
 class LarkAdapter {
+  static inject = ['router']
+
   constructor(ctx: Context) {
     ctx.router.get('/lark/assets/:message_id/:key', async (ctx) => {
       const key = ctx.params.key
