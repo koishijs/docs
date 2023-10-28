@@ -63,7 +63,7 @@ export function apply(ctx: Context) {
 
 ```ts title=plugin-dialogue.ts
 export const name = 'dialogue'
-export const using = ['database']
+export const inject = ['database']
 
 export function apply(ctx: Context) {
   // 你可以立即访问数据库服务
@@ -106,7 +106,7 @@ ctx.plugin({
 export const name = 'dialogue'
 
 // 对于整体依赖的服务，使用 using 属性声明依赖关系
-export const using = ['database']
+export const inject = ['database']
 
 export function apply(ctx: Context) {
   ctx.command('dialogue').action((_, content) => {
@@ -340,7 +340,7 @@ class Console extends Service {
 import {} from 'koishi-plugin-puppeteer'
 
 // 通过 using 属性声明依赖，并通过 ctx 来访问服务
-export const using = ['puppeteer']
+export const inject = ['puppeteer']
 export function apply(ctx: Context) {
   ctx.puppeteer.render()
 }
