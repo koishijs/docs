@@ -43,11 +43,11 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶开发指南",
+            "text": "Advanced Developing Guide",
             "link": "/cookbook/"
           },
           {
-            "text": "API 参考",
+            "text": "API Reference",
             "link": "/api/"
           },
           {
@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Official Plugins",
             "link": "/plugins/"
           }
         ],
@@ -159,15 +159,15 @@
             },
             {
               "text": "Multiple Configuration Maintenance",
-              "link": "/manual/recipe/multiple.md"
+              "link": "/en-US/manual/recipe/multiple.md"
             },
             {
               "text": "Search Marketplace",
-              "link": "/manual/recipe/search.md"
+              "link": "/en-US/manual/recipe/search.md"
             },
             {
               "text": "Deployment",
-              "link": "/manual/recipe/server.md"
+              "link": "/en-US/manual/recipe/server.md"
             }
           ]
         },
@@ -665,7 +665,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
@@ -865,7 +865,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
