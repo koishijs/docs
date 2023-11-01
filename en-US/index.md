@@ -84,7 +84,7 @@ footer:
         text: Developing Guide
         link: /en-US/guide/
       - 
-        text: API
+        text: API 参考
         link: /en-US/api/
       - 
         text: Official Plugins
@@ -99,7 +99,7 @@ footer:
         text: Discord
         link: /en-US/plugins/adapter/discord.html
       - 
-        text: Kook
+        text: KOOK
         link: /en-US/plugins/adapter/kook.html
       - 
         text: Lark
@@ -116,6 +116,9 @@ footer:
       - 
         text: QQ
         link: /zh-CN/plugins/adapter/qq.html
+      - 
+        text: Satori
+        link: /zh-CN/plugins/adapter/satori.html
       - 
         text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
