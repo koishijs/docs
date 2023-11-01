@@ -17,16 +17,16 @@
     "@koishijs/market": "^4.1.6",
     "@koishijs/registry": "^6.0.4",
     "@koishijs/vitepress": "^3.0.1",
-    "@types/node": "^20.4.2",
-    "@types/spark-md5": "^3.0.2",
-    "@vueuse/core": "^10.2.1",
+    "@types/node": "^20.8.9",
+    "@types/spark-md5": "^3.0.3",
+    "@vueuse/core": "^10.5.0",
     "cross-env": "^7.0.3",
     "element-plus": "2.4.0",
-    "esbuild-register": "^3.4.2",
+    "esbuild-register": "^3.5.0",
     "koishi": "^4.15.3",
     "marked-vue": "^1.2.3",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "vitepress": "1.0.0-rc.4",
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "^9.6.2"
   }
 }

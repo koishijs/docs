@@ -310,6 +310,9 @@
           "text": "国际化 (I18n)",
           "link": "/api/service/i18n.md"
         }, {
+          "text": "加载器 (Loader)",
+          "link": "/api/service/loader.md"
+        }, {
           "text": "权限管理 (Permissions)",
           "link": "/api/service/permissions.md"
         }, {
