@@ -428,23 +428,19 @@
           "text": "內建服務",
           "items": [
             {
-              "text": "機器人 (Bots)",
-              "link": "/api/service/bots.md"
-            },
-            {
-              "text": "事件系統 (Events)",
+              "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "過濾器 (Filter)",
+              "text": "过滤器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "網路請求 (HTTP)",
+              "text": "网络请求 (HTTP)",
               "link": "/api/service/http.md"
             },
             {
-              "text": "國際化 (I18n)",
+              "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
