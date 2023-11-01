@@ -11,6 +11,7 @@
     "build": "yarn mixin && cross-env NODE_OPTIONS=--max-old-space-size=8192 vitepress build ."
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.4.0",
     "@koishijs/components": "^1.4.8",
     "@koishijs/core": "^4.15.3",
     "@koishijs/dns": "^1.0.1",

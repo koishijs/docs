@@ -1,6 +1,7 @@
 import { defineConfig } from '@koishijs/vitepress'
 import { resolve } from 'path'
 import { cp, mkdir, rm } from 'fs/promises'
+import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { external } from './mixin'
 import mixins from './output'
 
@@ -68,6 +69,9 @@ export default async () => {
           dns: '@koishijs/dns',
         },
       },
+      plugins: [
+        vueI18n({ ssr: true }),
+      ],
     },
   })
 }
