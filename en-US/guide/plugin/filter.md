@@ -44,8 +44,8 @@ ctx.self('112233').command('my-command')
 // 当有人申请加群 445566 时触发 listener
 ctx.guild('445566').on('guild-request', listener)
 
-// 安装插件 ./my-plugin，仅限 OneBot 平台使用
-ctx.platform('onebot').plugin(require('./my-plugin'))
+// 安装插件 ./my-plugin，仅限 Telegram 平台使用
+ctx.platform('telegram').plugin(require('./my-plugin'))
 ```
 
 是不是非常方便呢？
@@ -88,11 +88,11 @@ ctx.guild('112233').exclude(ctx.user('445566'))
 plugins:
   repeater:
     $filter:
-      # 仅在 onebot 平台下 2 个特定频道内注册插件
+      # 仅在 telegram 平台下 2 个特定频道内注册插件
       $and:
         - $eq:
             - $: platform
-            - onebot
+            - telegram
         - $in:
             - $: channel
             - - '123456'
@@ -106,7 +106,7 @@ plugins:
 
 ```ts
 ctx
-  .intersect(app.platform('onebot'))
+  .intersect(app.platform('telegram'))
   .intersect(app.channel('123456', '456789'))
   .plugin(require('koishi-plugin-repeater'), {
     onRepeat: {

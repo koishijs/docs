@@ -1,4 +1,4 @@
-# 术语表
+# Terms of Glossary
 
 本页收集了一些 Koishi 设计中的重要概念，按字母表序排列。如果你在阅读文档时对某个概念感到迷惑，可以随时回到这里查看解释。
 
@@ -29,8 +29,12 @@
 频道是消息的集合。A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
+- [API > 平台资源 > 频道](./resources/user.md)
+- [API > 数据库 > 内置数据结构](./database/built-in.md#channel)
 
 ## Command
+
+Koishi 推荐使用指令来处理用户的输入。相比直接使用中间件或事件，指令不仅能够更好地处理用户输入，还有统一的帮助信息、权限管理、速率控制等特性。
 
 - [入门 > 指令系统](../manual/usage/command.md)
 - [开发 > 交互基础 > 指令开发](../guide/basic/command.md)
@@ -38,18 +42,23 @@
 
 ## Console (Console)
 
+控制台是一个用户友好的图形化管理界面，由一系列官方插件提供。你可以在控制台中监控运行状态、管理插件和配置、查看日志、访问数据库、模拟聊天等。
+
 - [入门 > 认识控制台](../manual/usage/market.md#认识控制台)
 - [开发 > 控制台](../guide/console/index.md)
 - [API > 控制台](./console/server.md)
 
 ## Context
 
+上下文是实际业务逻辑的载体。你可以在上下文中访问事件、中间件、指令和更多服务。这些访问所带来的副作用会被上下文自动收集，并在插件被停用时进行回收。
+
 - [开发 > 模块化](../guide/plugin/index.md)
 - [API > 核心模块 > 上下文](./core/context.md)
 
 ## 数据库 (Database)
 
-- [入门 > 访问数据库](../manual/recipe/dataview.md)
+Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中，足以应对绝大部分使用场景。你可以在插件中通过 `ctx.database` 访问数据库服务。
+
 - [开发 > 数据库 > 使用数据库](../guide/database/index.md)
 - [API > 数据库](./database/built-in.md)
 
@@ -78,6 +87,7 @@
 群组是平台用户的集合。一个群组通常会同时包含一组[用户](#用户)和[频道](#频道)，并通过权限机制让其中的部分用户进行管理。在部分平台中，群组和群聊频道的概念恰好是重合的 (例如 Telegram)：一个群组内有且仅有一个群聊频道。The private chat channel does not belong to any of the guilds
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
+- [API > 平台资源 > 群组](./resources/guild.md)
 
 ## 生命周期 (Lifecycle)
 
@@ -131,3 +141,6 @@
 - [API > 核心模块 > 会话](./core/session.md)
 
 ## 用户 (User)
+
+- [API > 平台资源 > 用户](./resources/user.md)
+- [API > 数据库 > 内置数据结构](./database/built-in.md#user)

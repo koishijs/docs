@@ -139,7 +139,12 @@ root
   - **optional:** 可选的服务，应该是一个服务名构成的数组
   - **implements:** 实现的服务，应该是一个服务名构成的数组
 - **locales:** 插件支持的语言，应该是一个语言名构成的数组
+- **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
+
+::: tip
+此外，还有一些字段与 [Koishi Online](../../cookbook/practice/online.md) 的部署流程相关 (如 `browser`, `exports` 等)。由于不影响主线开发，你可以稍后再进行了解。
+:::
 
 ## 发布插件
 

@@ -1,4 +1,4 @@
-# Render API
+# Render Functions
 
 ## Instance Properties
 

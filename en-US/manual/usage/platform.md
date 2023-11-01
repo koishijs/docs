@@ -1,4 +1,4 @@
-# 账号登录与绑定
+# Login and Bind Account
 
 Koishi describes itself as a "cross-platform" framework, but what does this "cross-platform" mean?This doesn't just mean that Koishi supports multiple running platforms, but that Koishi can access multiple chat platforms simultaneously and provide the most native experience possible:
 

@@ -43,12 +43,12 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
-            "link": "/api/"
+            "text": "进阶",
+            "link": "/cookbook/"
           },
           {
-            "text": "最佳实践",
-            "link": "/cookbook/"
+            "text": "API",
+            "link": "/api/"
           },
           {
             "text": "演练场：配置构型",
@@ -63,10 +63,6 @@
           {
             "text": "插件市场",
             "link": "/market/"
-          },
-          {
-            "text": "服务类插件导航",
-            "link": "/market/service.md"
           },
           {
             "text": "官方插件一览",
@@ -160,10 +156,6 @@
             {
               "text": "指令进阶技巧",
               "link": "/manual/recipe/execution.md"
-            },
-            {
-              "text": "访问数据库",
-              "link": "/manual/recipe/dataview.md"
             },
             {
               "text": "维护多份配置",
@@ -365,6 +357,14 @@
               "link": "/guide/i18n/crowdin.md"
             }
           ]
+        },
+        {
+          "items": [
+            {
+              "text": "→ 进阶开发指南",
+              "link": "/cookbook/"
+            }
+          ]
         }
       ],
       "/api/": [
@@ -462,6 +462,43 @@
           ]
         },
         {
+          "text": "平台资源",
+          "items": [
+            {
+              "text": "频道 (Channel)",
+              "link": "/api/resources/channel.md"
+            },
+            {
+              "text": "群组 (Guild)",
+              "link": "/api/resources/guild.md"
+            },
+            {
+              "text": "群组成员 (GuildMember)",
+              "link": "/api/resources/member.md"
+            },
+            {
+              "text": "群组角色 (GuildRole)",
+              "link": "/api/resources/role.md"
+            },
+            {
+              "text": "登录状态 (Login)",
+              "link": "/api/resources/login.md"
+            },
+            {
+              "text": "消息 (Message)",
+              "link": "/api/resources/message.md"
+            },
+            {
+              "text": "表态 (Reaction)",
+              "link": "/api/resources/reaction.md"
+            },
+            {
+              "text": "用户 (User)",
+              "link": "/api/resources/user.md"
+            }
+          ]
+        },
+        {
           "text": "消息元素",
           "items": [
             {
@@ -477,41 +514,12 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染 API",
+              "text": "渲染函数",
               "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
-          "text": "跨平台",
-          "items": [
-            {
-              "text": "频道 (Channel)",
-              "link": "/api/platform/channel.md"
             },
             {
-              "text": "群组 (Guild)",
-              "link": "/api/platform/guild.md"
-            },
-            {
-              "text": "群组成员 (GuildMember)",
-              "link": "/api/platform/member.md"
-            },
-            {
-              "text": "群组角色 (GuildRole)",
-              "link": "/api/platform/role.md"
-            },
-            {
-              "text": "消息 (Message)",
-              "link": "/api/platform/message.md"
-            },
-            {
-              "text": "表态 (Reaction)",
-              "link": "/api/platform/reaction.md"
-            },
-            {
-              "text": "用户 (User)",
-              "link": "/api/platform/user.md"
+              "text": "消息编码器",
+              "link": "/api/message/encoder.md"
             }
           ]
         },
@@ -597,15 +605,53 @@
           ]
         },
         {
-          "text": "文章",
+          "text": "设计原理",
           "items": [
             {
+              "text": "项目架构",
+              "link": "/cookbook/design/structure.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "可逆的 Koishi",
+              "link": "/cookbook/design/reversible.md"
+            },
+            {
+              "text": "零占用的 Koishi",
+              "link": "/cookbook/design/storage.md"
+            }
+          ]
+        },
+        {
+          "text": "最佳实践",
+          "items": [
+            {
+              "text": "资源转存",
+              "link": "/cookbook/practice/assets.md"
+            },
+            {
+              "text": "图片渲染",
+              "link": "/cookbook/practice/render.md"
+            },
+            {
               "text": "部署到 k-on!",
-              "link": "/cookbook/online.md"
+              "link": "/cookbook/practice/online.md"
             },
             {
               "text": "编写测试",
-              "link": "/cookbook/testing.md"
+              "link": "/cookbook/practice/testing.md"
+            }
+          ]
+        },
+        {
+          "text": "案例分析",
+          "items": [
+            {
+              "text": "指令管理",
+              "link": "/cookbook/appendix/commands.md"
             }
           ]
         }
@@ -660,12 +706,12 @@
               "link": "/plugins/adapter/matrix.md"
             },
             {
-              "text": "OneBot",
-              "link": "/plugins/adapter/onebot.md"
+              "text": "QQ",
+              "link": "/plugins/adapter/qq.md"
             },
             {
-              "text": "QQ 频道",
-              "link": "/plugins/adapter/qqguild.md"
+              "text": "Satori",
+              "link": "/plugins/adapter/satori.md"
             },
             {
               "text": "Slack",
@@ -767,10 +813,6 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "数据库操作 (Dataview)",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
               "text": "资源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
@@ -810,6 +852,10 @@
             {
               "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
+            },
+            {
+              "text": "API 服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             }
           ]
         }
@@ -821,10 +867,6 @@
             {
               "text": "插件市场",
               "link": "/market/"
-            },
-            {
-              "text": "服务类插件导航",
-              "link": "/market/service.md"
             },
             {
               "text": "官方插件一览",

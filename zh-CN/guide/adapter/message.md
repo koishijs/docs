@@ -78,21 +78,22 @@ adapter-example
 在这个文件中我们定义 `TelegramMessageEncoder`：
 
 ```ts title=message.ts
-class TelegramMessageEncoder extends MessageEncoder {
+class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, TelegramBot<C>> {
   // 使用 payload 存储待发送的消息
   private payload: Dict
 
-  constructor(bot: TelegramBot, channelId: string, guildId?: string, options?: SendOptions) {
+  constructor(bot: TelegramBot<C>, channelId: string, guildId?: string, options?: SendOptions) {
     super(bot, channelId, guildId, options)
     const chat_id = guildId || channelId
     this.payload = { chat_id, parse_mode: 'html', text: '' }
   }
 
   // 将发送好的消息添加到 results 中
-  async addResult(message: Telegram.Message) {
+  async addResult(data: Telegram.Message) {
+    const message = decodeMessage(data)
+    this.results.push(message)
     const session = this.bot.session()
-    await adaptMessage(message, session)
-    this.results.push(session)
+    session.event.message = message
     session.app.emit(session, 'send', session)
   }
 
@@ -118,12 +119,12 @@ class TelegramMessageEncoder extends MessageEncoder {
 }
 ```
 
-一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要构造相应的 `Session`，用于触发 `send` 会话事件并存储于 `results` 数组中。
+一个 `MessageEncoder` 类需要提供 `flush` 和 `visit` 两个方法。前者用于发送缓冲区内的消息，后者用于遍历消息元素。消息发送完成后，还需要触发 `send` 事件并将结果存储于 `results` 数组中。
 
 与此同时，我们还需要修改 `TelegramBot` 类，为其添加静态属性。实现了 `MessageEncoder` 静态属性后，就无需手动实现 `bot.sendMessage()` 和 `bot.sendPrivateMessage()` 方法了：
 
 ```ts title=bot.ts
-export class TelegramBot extends Bot<TelegramBot.Config> {
+export class TelegramBot<C extends Context> extends Bot<C, TelegramBot.Config> {
   static MessageEncoder = TelegramMessageEncoder
 }
 ```
@@ -189,7 +190,7 @@ if (type === 'text') {
 接着，我们需要在 `flush` 方法中处理资源元素。Telegram 的资源上传接口是 `sendPhoto`、`sendAudio` 等，与文本所用的 `sendMessage` 不同，因此我们需要根据资源类型进行判断：
 
 ```ts
-class TelegramMessageEncoder extends MessageEncoder {
+class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, TelegramBot<C>> {
   async flush() {
     let message: Telegram.Message
     if (this.asset) {
@@ -271,6 +272,8 @@ Telegram 是另一种特殊情况。尽管其提供的资源链接是可用的�
 
 ```ts
 class LarkAdapter {
+  static inject = ['router']
+
   constructor(ctx: Context) {
     ctx.router.get('/lark/assets/:message_id/:key', async (ctx) => {
       const key = ctx.params.key

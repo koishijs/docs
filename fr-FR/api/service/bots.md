@@ -1,4 +1,4 @@
-# Bots
+# Bots : robots
 
 ::: warning
 本节中介绍的 API 目前属于实验性功能，可能在后续版本中发生变化。

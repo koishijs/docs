@@ -57,8 +57,16 @@
   - create-koishi：可结合 npm init 或 yarn create 使用，用于快速搭建项目
   - @koishijs/scripts：用于模板项目的命令行工具
 - 适配器相关：
+  - [@koishijs/plugin-adapter-dingtalk](../plugins/adapter/dingtalk.md)：钉钉适配器
   - [@koishijs/plugin-adapter-lark](../plugins/adapter/lark.md)：飞书适配器
-  - [@koishijs/plugin-adapter-qqguild](../plugins/adapter/qqguild.md)：QQ 频道适配器
+  - [@koishijs/plugin-adapter-line](../plugins/adapter/line.md)：LINE 适配器
+  - [@koishijs/plugin-adapter-mail](../plugins/adapter/mail.md)：邮件适配器
+  - [@koishijs/plugin-adapter-matrix](../plugins/adapter/matrix.md)：Matrix 适配器
+  - [@koishijs/plugin-adapter-qq](../plugins/adapter/qq.md)：QQ 适配器
+  - [@koishijs/plugin-adapter-slack](../plugins/adapter/slack.md)：Slack 适配器
+  - [@koishijs/plugin-adapter-wechat-official](../plugins/adapter/wechat-official.md)：微信公众号适配器
+  - [@koishijs/plugin-adapter-wecom](../plugins/adapter/wecom.md)：企业微信适配器
+  - [@koishijs/plugin-adapter-whatsapp](../plugins/adapter/whatsapp.md)：WhatsApp 微信适配器
 - 数据库相关：
   - [@koishijs/plugin-database-memory](../plugins/database/memory.md)：基于内存的数据库实现
   - [@koishijs/plugin-database-sqlite](../plugins/database/sqlite.md)：SQLite 数据库实现
@@ -66,7 +74,6 @@
   - [@koishijs/plugin-auth](../plugins/console/auth.md)：用户登录
   - [@koishijs/plugin-commands](../plugins/console/commands.md)：指令管理
   - [@koishijs/plugin-config](../plugins/console/config.md)：插件配置
-  - [@koishijs/plugin-dataview](../plugins/console/dataview.md)：数据库操作
   - [@koishijs/plugin-logger](../plugins/console/logger.md)：日志管理
   - [@koishijs/plugin-market](../plugins/console/market.md)：插件市场
   - [@koishijs/plugin-sandbox](../plugins/console/sandbox.md)：沙盒调试
@@ -91,7 +98,7 @@
 
 ```diff
 - session.groupId
-+ session.guildId
++ session.guild.id
 - bot.getGroupMember()
 + bot.getGuildMember()
 - ctx.on('group-request')
@@ -134,13 +141,13 @@ export function apply(ctx: Context, config: Config) {
 // before
 export default {
   bots: [ /* 机器人配置项 */ ],
-  onebot: { /* 适配器配置项 */ },
+  discord: { /* 适配器配置项 */ },
 }
 
 // after
 export default {
   plugins: {
-    onebot: {
+    discord: {
       bots: [ /* 机器人配置项 */ ],
       /* 适配器配置项 */
     },
@@ -200,8 +207,3 @@ plugins:
 - 移除了 `Random.uuid()` 方法，新增了 `Random.id()` 方法
 - 移除了 `simplify()` 和 `traditionalize()` 方法，请使用 [simplify-chinese](https://www.npmjs.com/package/simplify-chinese) 这个包
 - Observer API 改动：所有 `_` 前缀替换为 `$` 前缀，例如 `session.user.$update()`
-
-### @koishijs/plugin-adapter-onebot
-
-- `server` 配置项更名为 `endpoint`
-- 由于快速响应已经不属于 OneBot 标准，我们移除了对快速响应的支持

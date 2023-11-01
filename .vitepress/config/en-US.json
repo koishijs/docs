@@ -43,12 +43,12 @@
             "link": "/guide/"
           },
           {
-            "text": "API",
-            "link": "/api/"
+            "text": "进阶",
+            "link": "/cookbook/"
           },
           {
-            "text": "Best Practices",
-            "link": "/cookbook/"
+            "text": "API",
+            "link": "/api/"
           },
           {
             "text": "Playground: Schema",
@@ -65,11 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "Service Plugins",
-            "link": "/market/service.md"
-          },
-          {
-            "text": "Official Plugins",
+            "text": "官方插件一览",
             "link": "/plugins/"
           }
         ],
@@ -130,14 +126,14 @@
           ]
         },
         {
-          "text": "使用",
+          "text": "Usage",
           "items": [
             {
               "text": "Install and Configure Plugins",
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次对话",
+              "text": "First Dialogue",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -145,25 +141,21 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号登录与绑定",
+              "text": "Login and Bind Account",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "深入定制机器人",
+              "text": "Customize Bot",
               "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "配方",
+          "text": "Advanced",
           "items": [
             {
               "text": "Advanced Command Tricks",
               "link": "/manual/recipe/execution.md"
-            },
-            {
-              "text": "Database Access",
-              "link": "/manual/recipe/dataview.md"
             },
             {
               "text": "Multiple Configuration Maintenance",
@@ -180,7 +172,7 @@
           ]
         },
         {
-          "text": "启动器",
+          "text": "Launcher",
           "items": [
             {
               "text": "System Requirements",
@@ -282,15 +274,15 @@
           "text": "Database",
           "items": [
             {
-              "text": "基本用法",
+              "text": "General Usage",
               "link": "/guide/database/"
             },
             {
-              "text": "数据模型",
+              "text": "Data Model",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "进阶查询技巧",
+              "text": "Advanced Query",
               "link": "/guide/database/selection.md"
             },
             {
@@ -307,7 +299,7 @@
           "text": "Cross Platform",
           "items": [
             {
-              "text": "基础知识",
+              "text": "Basics",
               "link": "/guide/adapter/index.md"
             },
             {
@@ -323,7 +315,7 @@
               "link": "/guide/adapter/message.md"
             },
             {
-              "text": "平台集成",
+              "text": "Platform Integration",
               "link": "/guide/adapter/integration.md"
             }
           ]
@@ -363,6 +355,14 @@
             {
               "text": "Localize with Crowdin",
               "link": "/guide/i18n/crowdin.md"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "text": "→ 进阶开发指南",
+              "link": "/cookbook/"
             }
           ]
         }
@@ -448,7 +448,7 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions",
               "link": "/api/service/permissions.md"
             },
             {
@@ -458,6 +458,43 @@
             {
               "text": "Router",
               "link": "/api/service/router.md"
+            }
+          ]
+        },
+        {
+          "text": "Platform Resources",
+          "items": [
+            {
+              "text": "Channel",
+              "link": "/api/resources/channel.md"
+            },
+            {
+              "text": "Guild",
+              "link": "/api/resources/guild.md"
+            },
+            {
+              "text": "Guild Member",
+              "link": "/api/resources/member.md"
+            },
+            {
+              "text": "Guild Role",
+              "link": "/api/resources/role.md"
+            },
+            {
+              "text": "Login",
+              "link": "/api/resources/login.md"
+            },
+            {
+              "text": "Message",
+              "link": "/api/resources/message.md"
+            },
+            {
+              "text": "Reaction",
+              "link": "/api/resources/reaction.md"
+            },
+            {
+              "text": "User",
+              "link": "/api/resources/user.md"
             }
           ]
         },
@@ -477,41 +514,12 @@
               "link": "/api/message/components.md"
             },
             {
-              "text": "Render API",
+              "text": "Render Functions",
               "link": "/api/message/api.md"
-            }
-          ]
-        },
-        {
-          "text": "Cross Platform",
-          "items": [
-            {
-              "text": "频道 (Channel)",
-              "link": "/api/platform/channel.md"
             },
             {
-              "text": "群组 (Guild)",
-              "link": "/api/platform/guild.md"
-            },
-            {
-              "text": "群组成员 (GuildMember)",
-              "link": "/api/platform/member.md"
-            },
-            {
-              "text": "群组角色 (GuildRole)",
-              "link": "/api/platform/role.md"
-            },
-            {
-              "text": "消息 (Message)",
-              "link": "/api/platform/message.md"
-            },
-            {
-              "text": "表态 (Reaction)",
-              "link": "/api/platform/reaction.md"
-            },
-            {
-              "text": "用户 (User)",
-              "link": "/api/platform/user.md"
+              "text": "Message Encoder",
+              "link": "/api/message/encoder.md"
             }
           ]
         },
@@ -531,11 +539,11 @@
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Eval",
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "查询构造器 (Selection)",
+              "text": "Selection",
               "link": "/api/database/selection.md"
             },
             {
@@ -548,11 +556,11 @@
           "text": "Koishi Console",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "Server-side API",
               "link": "/api/console/server.md"
             },
             {
-              "text": "上下文 API",
+              "text": "Context API",
               "link": "/api/console/context.md"
             },
             {
@@ -566,7 +574,7 @@
           ]
         },
         {
-          "text": "其他功能",
+          "text": "Utilities",
           "items": [
             {
               "text": "Observer",
@@ -577,7 +585,7 @@
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "Random",
               "link": "/api/utils/random.md"
             },
             {
@@ -597,15 +605,53 @@
           ]
         },
         {
-          "text": "Articles",
+          "text": "设计原理",
           "items": [
             {
-              "text": "K-ON! Deployment",
-              "link": "/cookbook/online.md"
+              "text": "项目架构",
+              "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "Writing Tests",
-              "link": "/cookbook/testing.md"
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "可逆的 Koishi",
+              "link": "/cookbook/design/reversible.md"
+            },
+            {
+              "text": "零占用的 Koishi",
+              "link": "/cookbook/design/storage.md"
+            }
+          ]
+        },
+        {
+          "text": "最佳实践",
+          "items": [
+            {
+              "text": "资源转存",
+              "link": "/cookbook/practice/assets.md"
+            },
+            {
+              "text": "图片渲染",
+              "link": "/cookbook/practice/render.md"
+            },
+            {
+              "text": "部署到 k-on!",
+              "link": "/cookbook/practice/online.md"
+            },
+            {
+              "text": "编写测试",
+              "link": "/cookbook/practice/testing.md"
+            }
+          ]
+        },
+        {
+          "text": "案例分析",
+          "items": [
+            {
+              "text": "Command Management",
+              "link": "/cookbook/appendix/commands.md"
             }
           ]
         }
@@ -623,7 +669,7 @@
               "link": "/market/service.md"
             },
             {
-              "text": "Official Plugins",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -660,12 +706,12 @@
               "link": "/plugins/adapter/matrix.md"
             },
             {
-              "text": "OneBot",
-              "link": "/plugins/adapter/onebot.md"
+              "text": "QQ",
+              "link": "/plugins/adapter/qq.md"
             },
             {
-              "text": "QQ Guild",
-              "link": "/plugins/adapter/qqguild.md"
+              "text": "Satori",
+              "link": "/plugins/adapter/satori.md"
             },
             {
               "text": "Slack",
@@ -767,11 +813,7 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "Database Management (Dataview)",
-              "link": "/plugins/console/dataview.md"
-            },
-            {
-              "text": "File Management (Explorer)",
+              "text": "Resource Manager (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
@@ -787,11 +829,11 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "Plugin Marketplace (Market)",
+              "text": "插件市场 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "Sandbox Debug (Sandbox)",
+              "text": "沙箱调试 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
@@ -810,6 +852,10 @@
             {
               "text": "Application Mocking (Mock)",
               "link": "/plugins/develop/mock.md"
+            },
+            {
+              "text": "Server",
+              "link": "/plugins/develop/server.md"
             }
           ]
         }
@@ -823,11 +869,7 @@
               "link": "/market/"
             },
             {
-              "text": "Service Plugins",
-              "link": "/market/service.md"
-            },
-            {
-              "text": "Official Plugins",
+              "text": "官方插件一览",
               "link": "/plugins/"
             }
           ]
@@ -1033,7 +1075,7 @@
               "link": "/about/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Release Notes: v4.13",
               "link": "/about/releases/v4.13.md"
             }
           ]

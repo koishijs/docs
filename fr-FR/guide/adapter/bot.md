@@ -15,7 +15,7 @@ class ReplBot extends Bot {
     ctx.plugin(ReplAdapter, this)
   }
 
-  async sendMessage(channelId: string, content: h.Fragment) {
+  async createMessage(channelId: string, content: h.Fragment) {
     process.stdout.write(h('', content).toString(true))
     process.stdout.write(EOL)
     return []
@@ -23,15 +23,9 @@ class ReplBot extends Bot {
 }
 ```
 
-这里仅仅实现了 `sendMessage` 一个方法，而真正的聊天平台往往具备更多消息能力：
+这里仅仅实现了 `createMessage` 一个方法，而真正的聊天平台往往具备更多通用能力，例如获取群组、频道、用户信息，添加表态，管理群组成员以及处理邀请等等。
 
-- [`bot.sendMessage()`](../../api/core/bot.md#bot-sendmessage)：发送消息
-- [`bot.sendPrivateMessage()`](../../api/core/bot.md#bot-sendprivatemessage)：发送私聊消息
-- [`bot.deleteMessage()`](../../api/core/bot.md#bot-deletemessage)：删除消息
-- [`bot.editMessage()`](../../api/core/bot.md#bot-editmessage)：编辑消息
-- [`bot.getMessage()`](../../api/core/bot.md#bot-getmessage)：获取消息
-
-除了处理消息以外，机器人的通用能力还包括获取群组、频道、用户信息，在消息上添加表态，管理群组成员以及处理邀请等等。Koishi 提供了一套通用的 [机器人接口](../../api/core/bot.md)。适配器应当尽可能地实现这些的标准方法，但这些并不是必需的。对于平台没有提供能力的 API，可以直接略去实现。
+Koishi 提供了一套通用的 [机器人接口](../../api/core/bot.md)。适配器应当尽可能地实现这些标准方法，但这并不是必需的。对于平台没有提供能力的 API，可以直接略去实现。
 
 ## 访问内部接口
 
@@ -217,10 +211,5 @@ declare module 'koishi' {
 这里的 `Internal` 对应着内部接口，而 `Payload` 则对应着原始事件数据。当构造会话对象时 (将在下一节具体介绍)，我们需要将这些数据注入到 `Session` 对象中：
 
 ```ts
-// 平台注入的属性不建议设置为 enumerable
-Object.defineProperty(session, 'discord', {
-  // 将 Internal 作为原型，将 Payload 作为实例属性
-  value: Object.assign(Object.create(internal), payload),
-  writable: true,
-})
+session.setInternal('discord', payload)
 ```

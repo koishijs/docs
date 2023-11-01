@@ -17,22 +17,22 @@ Koishi 的数据库 API 实际上分为两部分：
 
 - **id:** `id` ユーザー ID
 - **name:** `string` ユーザー名
-- **authority:** `number` 权限等级
-- **permissions:** `string[]` 权限列表
+- **authority:** `number` [权限等级](../../guide/database/permission.md)
+- **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
 - **locales:** `string[]` 语言列表
 
 ### Binding
 
 - **aid:** `id` ユーザー ID
 - **platform:** `string` プラットフォーム名
-- **pid:** `string` チャンネルアカウント
+- **pid:** `string` 平台账号
 
 ### Channel
 
 - **platform:** `string` プラットフォーム名
-- **id:** `string` チャンネルアカウント
+- **id:** `string` 平台账号
 - **assignee:** `string` [受理人](../../manual/usage/customize.md#受理人机制)
-- **permissions:** `string[]` 权限列表
+- **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
 - **locales:** `string[]` 语言列表
 
 ## 組み込みインスタンスメソッド

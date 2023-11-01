@@ -13,15 +13,23 @@
     <div class="copyright">
       <div>MIT Licensed</div>
       <div>Copyright © 2019-2023 Shigma</div>
+      <a v-if="beian" target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn/">浙ICP备2021029727号-1</a>
     </div>
   </footer>
 </template>
 
 <script lang="ts" setup>
 
+import { onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 
 const { frontmatter } = useData()
+
+const beian = ref(false)
+onMounted(() => {
+  if (window.location.href.includes('ilharper.com'))
+    beian.value = true
+})
 
 </script>
 

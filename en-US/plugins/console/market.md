@@ -1,4 +1,4 @@
-# Plugin Marketplace (Market)
+# 插件市场 (Market)
 
 ## 配置项
 

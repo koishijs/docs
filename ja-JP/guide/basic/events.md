@@ -35,7 +35,7 @@ ctx.on('friend-request', async (session) => {
 // bot-status-updated 不是会话事件
 // 所以回调函数接受的参数不是 session 而是 bot
 ctx.on('bot-status-updated', (bot) => {
-  if (bot.status === 'online') {
+  if (bot.status === Status.ONLINE) {
     // 这里的 userId 换成你的账号
     bot.sendPrivateMessage(userId, '我上线了~')
   }

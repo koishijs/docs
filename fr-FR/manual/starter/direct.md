@@ -97,33 +97,29 @@ node -r esbuild-register .
 
 ::: tabs code
 ```npm
-# 以 OneBot 和 Discord 适配器为例
-npm i @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# 以 OneBot 和 Discord 适配器为例
-yarn add @koishijs/plugin-adapter-onebot @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 :::
 
 接着修改你刚刚创建的 `index.ts`。每个机器人相当于启用一个插件：
 
 ```ts title=index.ts
-import onebot from '@koishijs/plugin-adapter-onebot'
+import satori from '@koishijs/plugin-adapter-satori'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// 使用 OneBot 适配器的机器人
-ctx.plugin(onebot, {
-  protocol: 'ws',
-  selfId: '123456789',
-  endpoint: 'ws://127.0.0.1:6700',
+// 使用 Satori 适配器的机器人
+ctx.plugin(satori, {
+  endpoint: 'http://127.0.0.1:5500',
 })
 
-// 使用 OneBot 适配器的另一个机器人，可以有不同的通信方式
-ctx.plugin(onebot, {
-  protocol: 'http',
-  selfId: '987654321',
-  endpoint: 'http://127.0.0.1:5700',
+// 使用 Satori 适配器的另一个机器人，可以有不同的通信方式
+ctx.plugin(satori, {
+  endpoint: 'http://127.0.0.1:5501',
 })
 
 // 使用 Discord 适配器的机器人

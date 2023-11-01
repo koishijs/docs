@@ -1,4 +1,4 @@
-# 第一次对话
+# First Dialogue
 
 安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
 
@@ -29,8 +29,7 @@ If you want to simulate a group chat, then we could click "Add User" again to cr
 - [LINE](../../plugins/adapter/line.md)
 - [Mail](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
-- [OneBot](../../plugins/adapter/onebot.md)
-- [QQ Guild](../../plugins/adapter/qqguild.md)
+- [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
 - [微信公众号](../../plugins/adapter/wechat-official.md)

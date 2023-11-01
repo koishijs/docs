@@ -4,7 +4,7 @@
 `ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#using-属性)。
 :::
 
-对于几乎所有大型机器人项目，数据库的使用都是不可或缺的。但如果每个插件都独立处理与数据库的交互，这将导致插件之间的兼容性非常差——用户要么选择同时安装多个数据库，要么只能放弃一些功能。为此，Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中。同时，我们也提供了一些常用数据库的官方插件，足以应对绝大部分使用场景。
+对于几乎所有大型机器人项目，数据库的使用都是不可或缺的。但如果每个插件都独立处理与数据库的交互，这将导致插件之间的兼容性非常差——用户要么选择同时安装多个数据库，要么只能放弃一些功能。为此，Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中，足以应对绝大部分使用场景。
 
 ## `get`：查询数据
 
@@ -28,9 +28,9 @@ await ctx.database.get('schedule', [1234], ['command', 'time'])
 你还可以向第二个参数传入一个对象，用来查询非主键上的数据或者同时指定多列的值：
 
 ```ts
-// 获取名为 schedule 的表中 assignee 为 onebot:123456 的数据行
+// 获取名为 schedule 的表中 assignee 为 telegram:123456 的数据行
 await ctx.database.get('schedule', {
-  assignee: ['onebot:123456'],
+  assignee: ['telegram:123456'],
 })
 ```
 
@@ -49,7 +49,7 @@ await ctx.database.get('schedule', {
 // 上述两个搜索条件的或运算
 await ctx.database.get('schedule', {
   $or: [
-    { assignee: ['onebot:123456'] },
+    { assignee: ['telegram:123456'] },
     { id: { $gt: 2, $lte: 5 } },
   ],
 })
@@ -76,7 +76,7 @@ await ctx.database.create('schedule', row)
 ```ts
 // 第二个参数也可以使用上面介绍的查询表达式
 await ctx.database.set('schedule', 1234, {
-  assignee: 'onebot:123456',
+  assignee: 'telegram:123456',
   time: new Date(),
 })
 ```
@@ -128,8 +128,8 @@ await ctx.database.upsert('foo', [
 
 ```ts
 // @errors: 2304
-// 以非主键为基准对数据表进行更新，你需要确保每一个元素都拥有 onebot 属性
-await ctx.database.upsert('user', rows, 'onebot')
+// 以非主键为基准对数据表进行更新，你需要确保每一个元素都拥有 telegram 属性
+await ctx.database.upsert('user', rows, 'telegram')
 
 // 以复合键为基准对数据表进行更新，你需要确保每一个元素都拥有 platform 和 id 属性
 await ctx.database.upsert('channel', rows, ['platform', 'id'])

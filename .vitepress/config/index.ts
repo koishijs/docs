@@ -28,6 +28,7 @@ export default async () => {
   }
 
   return defineConfig({
+    base: process.env.DEPLOY_BASE || '/',
     title: 'Koishi',
     description: '创建跨平台、可扩展、高性能的机器人',
 
@@ -46,7 +47,7 @@ export default async () => {
     mixins: await mixins(),
 
     themeConfig: {
-      indexName: 'docs',
+      indexName: 'koishi-docs',
       logo: '/logo.png',
 
       socialLinks: {
@@ -61,6 +62,11 @@ export default async () => {
     vite: {
       optimizeDeps: {
         include: ['xss'],
+      },
+      resolve: {
+        alias: {
+          dns: '@koishijs/dns',
+        },
       },
     },
   })

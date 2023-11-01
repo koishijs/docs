@@ -70,6 +70,69 @@
 
 求两个集合的并集。
 
+## 对象操作
+
+### is(type, value)
+
+- **type:** `string` 类型，例如 `Date`
+- **value:** `any` 要判断的值
+- 返回值: `boolean`
+
+判断一个值是否为指定的对象实例。
+
+### clone(source)
+
+- **source:** `T` 要克隆的值
+- 返回值: `T`
+
+深度克隆一个值。
+
+### deepEqual(a, b, strict?)
+
+- **a:** `any` 要比较的值
+- **b:** `any` 要比较的值
+- **strict:** `boolean` 使用严格模式 (默认为 `false`)
+- 返回值: `boolean`
+
+深度比较两个值是否相等。
+
+当 `strict` 设置为 `false` 时，`null` 和 `undefined` 视为相等。
+
+### pick(source, keys, forced?)
+
+- **source:** `O` 源对象
+- **keys:** `Iterable<K>` 要提取的键
+- **forced:** `boolean` 强制提取 (默认为 `false`)
+- 返回值: `Pick<O, K>`
+
+从一个对象中提取指定的键。
+
+当 `forced` 设置为 `false` 时，属性不存在或者为 `undefined` 的情况下不会被提取。
+
+### omit(source, keys)
+
+- **source:** `O` 源对象
+- **keys:** `Iterable<K>` 要排除的键
+- 返回值: `Omit<O, K>`
+
+从一个对象中排除指定的键。
+
+### mapValues(source, callback)
+
+- **source:** `Record<K, V>` 源对象
+- **callback:** `(value: V, key: K) => T` 回调函数
+- 返回值: `Record<K, T>`
+
+将对象的每个值进行映射，返回新的对象。
+
+### filterKeys(source, callback)
+
+- **source:** `Record<K, V>` 源对象
+- **callback:** `(key: K, value: V) => key is T` 回调函数
+- 返回值: `Record<T, V>`
+
+将对象的每个键进行过滤，返回新的对象。
+
 ## 日期操作
 
 ### 静态属性

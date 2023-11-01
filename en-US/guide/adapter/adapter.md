@@ -17,11 +17,11 @@ class ReplBot extends Bot {
 }
 ```
 
-如果我们多次加载上述插件，由于 `Bot` 基类的可重用性，每一次加载都会构造出新的 `ReplBot` 实例。另一方面，`ReplAdapter` 类继承了 `Adapter.Server`，该基类并没有声明 `reusable` 属性，因此不可重用。在多次加载的过程中，多个 `ReplBot` 实例只会对应于同一个 `ReplAdapter` 实例。这便是典型的一对多适配器逻辑。
+如果我们多次加载上述插件，由于 `Bot` 基类的可重用性，每一次加载都会构造出新的 `ReplBot` 实例。另一方面，`ReplAdapter` 类继承了 `Adapter`，并且没有声明 `reusable` 属性，因此是一个不可重用插件。在多次加载的过程中，多个 `ReplBot` 实例会对应于同一个 `ReplAdapter` 实例。这便是典型的一对多适配器逻辑。
 
-相比之下，Discord 平台使用 WebSocket 向机器人推送事件。每一个机器人都需要维护一个独立的 WebSocket 连接，因此需要多个 `Adapter` 实例。在这种情况下，我们无需改动上面机器人的代码，只需要将 `DiscordAdapter` 继承的基类变为 `Adapter.Client`。这个基类声明了可重用性，它将实现一个一对一的适配器逻辑。
+相比之下，Discord 平台使用 WebSocket 向机器人推送事件。每一个机器人都需要维护一个独立的 WebSocket 连接，因此需要多个 `Adapter` 实例。在这种情况下，我们无需改动上面机器人的代码，只需要将 `DiscordAdapter` 继承的基类变为 `Adapter.WsClient`。这个基类声明了可重用性，它将实现一个一对一的适配器逻辑。
 
-简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对多的就使用 `Adapter.Server` 基类，否则使用 `Adapter.Client` 基类。当然，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
+简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对一的，就需要声明 `reusable` 属性，否则不需要声明。此外，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
 
 ## Typical Implementations
 
@@ -39,7 +39,7 @@ export class DiscordAdapter extends Adapter.WsClient<DiscordBot> {
   }
 
   accept() {
-    this.bot.socket.addEventListener('message', async ({ data }) => {
+    this.socket.addEventListener('message', async ({ data }) => {
       const parsed = JSON.parse(data.toString())
       if (parsed.t === 'READY') {
         const user = decodeUser(parsed.d.user)
@@ -91,7 +91,7 @@ if (session) this.dispatch(session)
 另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 平台为例：
 
 ```ts
-export class HttpServer extends Adapter.Server<LineBot> {
+export class HttpServer extends Adapter<LineBot> {
   constructor(ctx: Context) {
     super()
 
@@ -154,7 +154,7 @@ for (const event of parsed.events) {
 - WS 服务器：机器人建立 WebSocket 服务器，持续接收来自聊天平台的事件
 - HTTP 轮询：机器人定时向聊天平台发起 HTTP 请求，获取新增的事件列表
 
-当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接选择继承 `Adapter.Server` 或 `Adapter.Client` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
+当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接继承 `Adapter` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
 
 ## Advanced Techniques
 
@@ -180,7 +180,7 @@ adapter-telegram
 每一种适配器可能都有自己的配置项，我们按照类插件的开发方式分别进行声明：
 
 ```ts title=server.ts
-class ServerAdapter extends Adapter.Server<TelegramBot> {}
+class ServerAdapter extends Adapter<TelegramBot> {}
 
 namespace ServerAdapter {
   export interface Config {
@@ -196,7 +196,10 @@ namespace ServerAdapter {
 ```
 
 ```ts title=polling.ts
-class PollingAdapter extends Adapter.Client<TelegramBot> {}
+class PollingAdapter extends Adapter<TelegramBot> {
+  // polling 适配器是可重用的
+  static reusable = true
+}
 
 namespace PollingAdapter {
   export interface Config {
@@ -245,7 +248,7 @@ namespace TelegramBot {
 到此为止，我们的适配器开发中都存在一个隐含限制：用户的一次插件加载只能对应于一个 `Bot` 实例。如果用户需要创建多个机器人，那么就需要多次加载插件。这是因为在绝大多数适配器的使用场景下，用户都能很明确地知道自己需要创建多少个机器人。然而总有一些例外情况：
 
 - WhatsApp 平台的一个应用可以填入多个手机号，也就对应了多个 `Bot` 实例。
-- OneBot 平台中，你可以不预先创建机器人实例，只建立一个 WebSocket 服务器，同时允许多个连接，只要对应的 `Bot` 实例不存在就立即创建。
+- Satori 协议并不预先知道机器人的数量，而是在连接中根据机器人相关事件动态创建的。
 
 ::: warning
 无限制的 `Bot` 连接可能会导致你的 Koishi 被恶意调用。因此，如果将适配器作为可任意连接的服务端，请确保在可信任的网络环境下运行，或者引入其他验证机制。
@@ -258,25 +261,25 @@ import WhatsAppAdapter from './adapter'
 export default WhatsAppAdapter
 ```
 
-同时，适配器也直接继承 `Adapter` 基类 (而不是 `Adapter.Server` 或 `Adapter.Client`)：
+同时，适配器也直接继承 `Adapter` 基类，并声明 `schema` 和 `reusable`：
 
 ```ts title=adapter.ts
 class WhatsAppAdapter extends Adapter<WhatsAppBot> {
-  // This adapter is still reusable.
+  // 由适配器直接向外暴露配置项
+  static schema = true
+  // 这个适配器仍然是可重用的
   static reusable = true
-  // Used for storing bot instances.
-  public bots: WhatsAppBot[] = []
 
   constructor(ctx: Context, config: WhatsAppAdapter.Config) {
     super()
 
-    // Initialize internal APIs.
+    // 初始化内部接口
     const http = ctx.http.extend({
       headers: { Authorization: `Bearer ${config.token}` },
     })
     const internal = new Internal(http)
 
-    // Create bots on ready.
+    // 启动时创建机器人
     ctx.on('ready', async () => {
       const data = await internal.getPhoneNumbers()
       for (const item of data) {

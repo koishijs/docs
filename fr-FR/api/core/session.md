@@ -6,99 +6,149 @@
 
 对于会话事件，我们抽象出了一套通用的属性：
 
-### session.type
+### session.app
 
-- 类型: `string`
+- 类型: [`Context`](./context.md)
 
-事件类型。它应当是 [通用会话事件](./events.md#通用会话事件) 中的某一个。
+当前会话的根上下文。
 
-### session.platform
+### session.bot
 
-- 类型: `string`
+- 类型: [`Bot`](./bot.md)
 
-触发事件的机器人所在的平台。
+当前会话绑定的机器人实例。
 
-### session.selfId
+### session.channel
 
-- 类型: `string`
+- 类型: [`Channel`](../database/built-in.md#channel)
+- 只能在中间件或指令内部使用
 
-触发事件的机器人所在平台的编号。
+当前会话绑定的频道数据，是一个可观测对象。
 
-### session.userId
+::: warning
+这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.event.channel`。
+:::
 
-- 类型: `string`
+### session.event
 
-事件相关用户的平台编号 (例如发送好友申请的人，发送消息的人等)。
+会话事件数据。包含了会话中全部可以序列化的资源。含有以下属性：
 
-### session.guildId
+- **id:** `number` 事件 ID
+- **type:** `string` 事件类型
+- **platform:** `string` 接收者的平台名称
+- **selfId:** `string` 接收者的平台账号
+- **timestamp:** `number` 事件的时间戳
+- **channel:** [`Channel`](../resources/channel.md) 事件所属的频道
+- **guild:** [`Guild`](../resources/guild.md) 事件所属的群组
+- **login:** [`Login`](../resources/login.md) 事件的登录信息
+- **member:** [`GuildMember`](../resources/member.md) 事件的目标成员
+- **message:** [`Message`](../resources/message.md) 事件的消息
+- **operator:** [`User`](../resources/user.md) 事件的操作者
+- **role:** [`GuildRole`](../resources/role.md) 事件的目标角色
+- **user:** [`User`](../resources/user.md) 事件的目标用户
 
-- 类型: `string`
+事件中的各属性遵循**资源提升**规则：资源对象的某个字段可以是另一个资源对象，例如消息对象中的 `user` 字段就是一个用户对象。当资源对象出现多级嵌套时，内层的资源将会被统一提升到最外层。例如，当接收到消息事件时，事件体中可以访问到 `message`, `member`, `user`, `channel` 等资源，但 `message` 中就不再存在 `member` 和 `user` 字段了。
 
-事件相关群组的平台编号 (如果不是群组相关事件则没有这一项)。
+要访问事件体内部的属性，可以使用下面介绍的 [访问器属性](#访问器属性)。
+
+### session.user
+
+- 类型: [`User`](../database/built-in.md#user)
+- 只能在中间件或指令内部使用
+
+当前会话绑定的用户数据，是一个可观测对象。
+
+::: warning
+这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.event.user`。
+:::
+
+## 访问器属性
+
+对于部分常用的事件体属性，我们提供了访问器属性。
+
+### session.author
+
+- 类型: <code>[GuildMember](../resources/member.md) & [User](../resources/user.md)</code>
+- 完整写法: `{ ...session.event.user, ...session.event.member }`
+
+::: tip
+注意到 `GuildMember` 和 `User` 有部分重叠的字段，例如 `name` 和 `avatar`。在这种情况下，`GuildMember` 的字段会覆盖 `User` 的字段。
+:::
 
 ### session.channelId
 
 - 类型: `string`
+- 完整写法: `session.event.channel.id`
 
-事件相关频道的平台编号 (如果不是频道相关事件则没有这一项)。
-
-### session.messageId
+### session.channelName
 
 - 类型: `string`
-
-事件相关的消息编号 (例如在回复消息时需要用到)。
-
-### session.elements
-
-- 类型: `Element[]`
-
-事件的消息元素内容 (例如消息的文本等)。
+- 完整写法: `session.event.channel.name`
 
 ### session.content
 
 - 类型: `string`
+- 完整写法: `session.event.message.content`
 
-事件的文本内容 (例如消息的文本等)。
+### session.elements
+
+- 类型: `Element[]`
+- 完整写法: `session.event.message.elements`
+
+### session.guildId
+
+- 类型: `string`
+- 完整写法: `session.event.guild.id`
+
+### session.guildName
+
+- 类型: `string`
+- 完整写法: `session.event.guild.name`
+
+### session.id
+
+- 类型: `string`
+- 完整写法: `session.event.id`
 
 ### session.isDirect
 
 - 类型: `boolean`
+- 完整写法: `session.event.channel.type === Channel.Type.DIRECT`
 
-事件是否在私聊环境中触发。
+### session.messageId
 
-## 实例属性
+- 类型: `string`
+- 完整写法: `session.event.message.id`
 
-你应该已经读过 [事件 (Events)](./events.md) 一章了。由于每个会话都必定表达了一个上报事件，因此上报事件中定义的属性也都可以在 Session 的实例中访问到。此外，也只有来自上报事件的属性才会在序列化中被保留。下面将介绍的实例属性都是无法被序列化的。
+### session.platform
 
-### session.app
+- 类型: `string`
+- 完整写法: `session.event.platform`
 
-当前会话绑定的 [App](./app.md) 实例。
+### session.quote
 
-### session.bot
+- 类型: `Message`
+- 完整写法: `session.event.message.quote`
 
-当前会话绑定的 [Bot](./bot.md) 实例。
+### session.selfId
 
-### session.user
+- 类型: `string`
+- 完整写法: `session.event.selfId`
 
-当前会话绑定的用户数据，是一个可观测 [User](../database/built-in.md#user) 对象。
+### session.timestamp
 
-::: tip
-通常情况下，Session 对象只有在中间件内才有此属性。因此如果想使用此接口请考虑下列方式：
+- 类型: `string`
+- 完整写法: `session.event.timestamp`
 
-- 使用中间件或指令 (指令的执行处于中间件内部)
-- 手动调用 [`session.observeUser()`](#session-observeuser)
-- 手动调用 [`database.getUser()`](../database/built-in.md#database-getuser)
+### session.type
 
-下面的两个属性也同理。
-:::
+- 类型: `string`
+- 完整写法: `session.event.type`
 
-### session.channel
+### session.userId
 
-当前会话绑定的频道数据，是一个可观测 [Channel](../database/built-in.md#channel) 对象。
-
-### session.guild
-
-当前会话绑定的群组数据，是一个可观测 [Channel](../database/built-in.md#channel) 对象。
+- 类型: `string`
+- 完整写法: `session.event.user.id`
 
 ## 实例方法
 
