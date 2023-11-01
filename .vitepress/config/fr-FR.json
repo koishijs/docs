@@ -448,15 +448,19 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "Permissions : génération des permissions",
+              "text": "加载器 (Loader)",
+              "link": "/api/service/loader.md"
+            },
+            {
+              "text": "权限管理 (Permissions)",
               "link": "/api/service/permissions.md"
             },
             {
-              "text": "Registry : système des plugins",
+              "text": "插件系统 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "Router : service network",
+              "text": "网络服务 (Router)",
               "link": "/api/service/router.md"
             }
           ]
