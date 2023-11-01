@@ -1,4 +1,4 @@
-# Events
+# 事件系统 (Events)
 
 ::: tip
 参见：[开发 > 交互基础 > 事件系统](../../guide/basic/events.md) <br>参见：[开发 > 模块化 > 生命周期](../../guide/plugin/lifecycle.md)
