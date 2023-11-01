@@ -428,23 +428,19 @@
           "text": "Service interne",
           "items": [
             {
-              "text": "Bots : robots",
-              "link": "/api/service/bots.md"
-            },
-            {
-              "text": "Events : événements",
+              "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "Filter : filtres",
+              "text": "过滤器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "HTTP : requête d'HTTP",
+              "text": "网络请求 (HTTP)",
               "link": "/api/service/http.md"
             },
             {
-              "text": "I18n : Internationalisation",
+              "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
