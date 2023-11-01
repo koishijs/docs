@@ -48,7 +48,7 @@ onMounted(() => {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    padding: var(--vp-nav-height) 0;
 
     .group-title {
       padding: 6px 0;
@@ -65,6 +65,7 @@ onMounted(() => {
   @media (min-width: 768px) {
     flex-direction: column;
     justify-content: space-evenly;
+  
     .links {
       margin-left: -2rem;
       padding-left: 2rem;
@@ -74,8 +75,8 @@ onMounted(() => {
     }
 
     .group {
-        border-top: 1px solid var(--vp-c-divider);
-        padding-top: 16px;
+      border-top: 1px solid var(--vp-c-divider);
+      padding-top: 16px;
     }
 
     .copyright {
@@ -92,8 +93,8 @@ onMounted(() => {
       flex-wrap: nowrap;
       height: 0;
       width: 100%;
-      margin-top: 70px;
-      padding: calc(var(--vp-nav-height-mobile) + 1rem) 2rem 1rem;
+      margin-top: var(--vp-nav-height);
+      padding: 0 2rem 1rem;
       justify-content: flex-start;
 
       .group {
@@ -102,7 +103,7 @@ onMounted(() => {
         justify-content: flex-start;
         width: 100%;
         gap: 0 3rem;
-        padding-left: 25%;
+        padding-left: 15%;
       }
     }
 
@@ -128,13 +129,14 @@ onMounted(() => {
 
 /* Make platform links parallel */
 .links .group:nth-child(3) .group-items {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0 1.5rem;
+  justify-items: start;
 }
 
 .links .group:nth-child(3) .group-items * {
-    text-align: center;
+  text-align: center;
 }
 
 </style>

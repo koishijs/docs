@@ -71,7 +71,7 @@ footer:
     items:
       - text: 开发指南
         link: /zh-CN/guide/
-      - text: API 文档
+      - text: API 参考
         link: /zh-CN/api/
       - text: 官方插件
         link: /zh-CN/plugins/
@@ -81,7 +81,7 @@ footer:
         link: /zh-CN/plugins/adapter/dingtalk.html
       - text: Discord
         link: /zh-CN/plugins/adapter/discord.html
-      - text: Kook
+      - text: KOOK
         link: /zh-CN/plugins/adapter/kook.html
       - text: 飞书
         link: /zh-CN/plugins/adapter/lark.html
@@ -93,6 +93,8 @@ footer:
         link: /zh-CN/plugins/adapter/matrix.html
       - text: QQ
         link: /zh-CN/plugins/adapter/qq.html
+      - text: Satori
+        link: /zh-CN/plugins/adapter/satori.html
       - text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
       - text: Telegram
