@@ -2,16 +2,13 @@
 
 **上下文 (Context)** 是 Koishi 的核心概念。Koishi 的绝大多数功能也直接通过上下文提供，包括插件、中间件、监听器和指令等。
 
-## 混入属性和方法
+## 服务与混入
 
-
-Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文属性和方法都**通过混入的方式搭载在了服务上**。以下的属性和方法是由内置服务混入的，你可以像使用实例属性和方法一样使用它们。这些 API 的具体用法在服务文档中详细介绍，你可以点击对应的链接前往查看。
+Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性和方法都通过混入的方式搭载在了服务上。以下的属性和方法是由内置服务提供的，你可以像使用实例属性和方法一样使用它们。这些 API 的具体用法在服务文档中详细介绍，你可以点击对应的链接前往查看。
 
 - [ctx.any](../service/filter.md#ctx-any)
 - [ctx.bail](../service/events.md#ctx-bail)
 - [ctx.before](../service/events.md#ctx-before)
-- [ctx.bots](../service/bots.md)
-- [ctx.broadcast](../service/bots.md#ctx-broadcast)
 - [ctx.database](../database/database.md)
 - [ctx.emit](../service/events.md#ctx-emit)
 - [ctx.exclude](../service/filter.md#ctx-exclude)
@@ -19,6 +16,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.http](../service/http.md)
 - [ctx.i18n](../service/i18n.md)
 - [ctx.intersect](../service/filter.md#ctx-intersect)
+- [ctx.loader](../service/loader.md)
 - [ctx.middleware](../service/events.md#ctx-middleware)
 - [ctx.model](../database/model.md)
 - [ctx.never](../service/filter.md#ctx-never)
@@ -36,7 +34,7 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - [ctx.union](../service/filter.md#ctx-union)
 - [ctx.using](../service/registry.md#ctx-using)
 
-## 实例属性和方法
+## 实例属性
 
 ### ctx.root.config
 
@@ -49,6 +47,14 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - 类型: `string`
 
 当前的 Koishi 默认路径。如果你使用配置文件，则这个路径是配置文件所在的路径；否则这个路径是当前工作路径。
+
+### ctx.bots
+
+- 类型: `Bot[]`
+
+当前应用的全部机器人实例。
+
+## 实例方法
 
 ### ctx.extend(meta)
 
@@ -77,6 +83,15 @@ Koishi 使用了面向切面编程 (AOP) 的开发方式，绝大部分上下文
 - 返回值：[`Command`](./command.md) 注册或修改的指令
 
 在当前上下文中注册或修改一个指令。
+
+### ctx.broadcast(channels?, content, forced?) <badge>需要数据库</badge>
+
+- **channels:** `string[]` 频道列表
+- **content:** `string` 要发送的内容
+- **forced:** `boolean` 是否无视 silent 标记
+- 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
+
+所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
 
 ### ctx.logger(scope?)
 
