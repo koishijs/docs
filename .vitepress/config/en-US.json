@@ -428,15 +428,11 @@
           "text": "Built-in Services",
           "items": [
             {
-              "text": "Bots",
-              "link": "/api/service/bots.md"
-            },
-            {
-              "text": "Events",
+              "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "Filter",
+              "text": "过滤器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
