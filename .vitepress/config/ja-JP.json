@@ -428,10 +428,6 @@
           "text": "内置服务",
           "items": [
             {
-              "text": "机器人 (Bots)",
-              "link": "/api/service/bots.md"
-            },
-            {
               "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
