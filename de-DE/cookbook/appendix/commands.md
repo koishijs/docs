@@ -1,7 +1,7 @@
 # 案例：指令管理
 
 ::: tip
-主条目：[可逆的 Koishi](../design/reversible.md)
+主条目：[可逆的 Koishi](../design/disposable.md)
 :::
 
 本文将以 [commands](../../plugins/console/commands.md) 插件为例，分析 Koishi 中的可逆插件开发。
