@@ -82,9 +82,10 @@ html.dark {
 }
 
 mjx-container {
-  vertical-align: text-top;
+  font-size: 0.95em;
+  vertical-align: middle;
 
   > svg {
-    margin-top: 2px;
+    margin-top: -4px;
   }
 }

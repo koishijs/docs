@@ -48,76 +48,102 @@ Koishi 的控制台前端由 @koishijs/client 提供，这个包同样依赖了 
 
 ## 实现原理
 
-### 可逆 IO 函数
+### 可逆的副作用
 
-在函数式编程中有着纯函数的概念——给定相同的输入总是给出相同的输出。然而，现实中的程序往往要与各种各样的副作用打交道。对于这种情况，我们可以对函数进行“纯化”——将它的副作用转化为参数和返回值的一部分即可。考虑下面的函数：
-
-$$
-\text{impure}\ f: \text{X}\to\text{Y}
-$$
-
-假设它含有副作用，我们把所有可能的副作用用 IO 来表示，则该函数可以被纯化为：
+函数式编程中有着纯函数的概念——给定相同的输入总是给出相同的输出。然而，现实中的程序往往要与各种各样的副作用打交道。对于这种情况，我们可以对函数进行“纯化”——将它的副作用转化为参数和返回值的一部分即可。考虑下面的函数：
 
 $$
-f: \text{IO}\times\text{X}\to\text{IO}\times\text{Y}
+f_\text{imp}: \text{X}\to\text{Y}
 $$
 
-此时我们得到的就一个纯函数，它接受 IO 和参数，返回修改过的 IO 和返回值。
+假设它含有副作用，我们把所有可能的副作用用类型 $\mathfrak{C}$ 封装起来，则该函数可以被转化为：
 
-如果忽略 $f$ 本身的入参和出参，只考虑副作用，那么 $f$ 就是 IO 到自身的变换。这个变换具有构成幺半群的基本性质：
+$$
+f: \mathfrak{C}\times\text{X}\to\mathfrak{C}\times\text{Y}
+$$
 
-1. 封闭性：$f\circ g$ 也是 IO 到自身的变换。
+此时我们得到的就一个纯函数，它接受 $\mathfrak{C}$ 和参数，返回修改过的 $\mathfrak{C}$ 和返回值。
+
+如果忽略 $f$ 本身的入参和出参，只考虑副作用，那么可以定义函数空间 $\mathfrak{F}=\mathfrak{C}\to\mathfrak{C}$。其中的任何一个函数 $f: \mathfrak{F}$ 都是 $\mathfrak{C}$ 到自身的变换，不难看出它们在函数结合 $\circ$ 下构成幺半群：
+
+1. 封闭性：$f\circ g$ 也是 $\mathfrak{C}$ 到自身的变换。
 2. 结合律：$(f\circ g)\circ h=f\circ (g\circ h)$。
 3. 单位元：存在 $\text{id}$，使得 $f\circ\text{id}=\text{id}\circ f=f$。
 
-进一步，我们还希望 $f$ 的副作用是可以回收的。换言之，$f$ 存在逆元，上述变换构成一个群 $\mathfrak{F}$。但仅仅知道函数可逆并不能帮助我们找到它的逆，我们需要在书写这个函数时一并写出它的回收方法。因此我们让这个函数返回一个新的函数，这个函数可用于回收此次调用的副作用：
+进一步，我们还希望 $f$ 的副作用是可以回收的。换言之，我们额外要求 $f$ 存在逆元 $f^{-1}$，此时 $\mathfrak{F}$ 就构成一个群。但仅仅知道函数可逆并不能帮助我们找到它的逆，我们需要在书写这个函数时一并写出它的回收方法。因此我们引入 $\text{effect}$ 函子，使这个函数返回一个新的函数，这个函数可用于回收此次调用的副作用：
 
 $$
 \begin{array}
-\\\text{effect}\ f&:&\text{IO}  &\to&    \text{IO}\times(\text{IO}\to\text{IO})
-\\\text{effect}\ f&:&\mathcal{C}&\mapsto&\left(f(\mathcal{C}), f^{-1}\right)
+\\\text{effect}&:&\mathfrak{F}&\to&    \mathfrak{C}&\to&    \mathfrak{C}\times\mathfrak{F}
+\\\text{effect}&:&f           &\mapsto&\mathcal{c} &\mapsto&\left(f(\mathcal{c}), f^{-1}\right)
 \end{array}
 $$
 
-下面是一个例子 (忽略 IO 参数以更符合 JavaScript 的书写习惯)：
+下面是一个例子 (暂时忽略 $\mathfrak{C}$ 参数)：
 
 ```ts
-function serverEffect(port: number) {
+// effect(server.listen)
+function serve(port: number) {
   const server = createServer().listen(port)
   return () => server.close()
 }
 ```
 
-上面的 `effect` 函数将会创建一个服务器并且监听 `port` 端口。同时，它也会返回一个新的函数，用于取消该端口的监听：
+上面的 `serve()` 函数将会创建一个服务器并且监听 `port` 端口。同时，调用该函数也会返回一个新的函数，用于取消该端口的监听。
 
-```ts
-const dispose = serverEffect(80)    // 监听端口
-dispose()                           // 取消监听
-```
-
-然而，$\text{effect}\ f$ 不再是 $\mathfrak{F}$ 中的成员了，这并不适合组合多个副作用。为了解决这个问题，我们引入 $\text{collect}$ 和 $\text{restore}$ 两个算子：
+然而，$\text{effect}\ f$ 不再是 $\mathfrak{F}$ 中的成员了，这并不适合组合多个副作用。为了解决这个问题，我们引入 $\text{collect}$ 和 $\text{restore}$ 两个变换：
 
 $$
 \begin{array}
-\\\text{collect}&:&\text{IO}\times(\text{IO}\to\text{IO})&\to&\text{IO}
-\\\text{restore}&:&\text{IO}&\to&\text{IO}
+\\\text{collect}&:&\mathfrak{C}\times\mathfrak{F}&\to&\mathfrak{C}
+\\\text{restore}&:&\mathfrak{C}                  &\to&\mathfrak{C}
 \end{array}
 $$
 
-其中 $\text{collect}$ 用于记录一个副作用，$\text{restore}$ 用于清空所有副作用。相当于上面的代码变成了：
+其中 `collect()` 用于记录一个副作用，`restore()` 用于清空所有副作用。它们大致这样使用：
 
 ```ts
-collect(serverEffect(80))       // 监听端口并记录副作用
-collect(serverEffect(443))      // 监听端口并记录副作用
+collect(serve(80))              // 监听端口 80 并记录副作用
+collect(serve(443))             // 监听端口 443 并记录副作用
 restore()                       // 回收所有副作用
 ```
 
-现在，我们可以定义
+最后，我们可以定义可逆性 (disposable) 函子
 
 $$
-\text{disposable}=\text{collect}\circ\text{effect}
+\begin{array}
+\\\text{disposable}&:&\mathfrak{F}&\to&    \mathfrak{F}
+\\\text{disposable}&:&f           &\mapsto&\text{collect}\circ\left(\text{effect}\ f\right)
+\end{array}
 $$
 
-### 插件实现
+它的作用是将任何可逆函数 $f$ 变换成能够自动记录副作用的版本。
 
-### 服务实现
+### 上下文对象
+
+在上面的示例中，我们并没有显式地写出 $\mathfrak{C}$ 参数和返回值。可以认为 $\mathfrak{C}$ 变换存在于 `collect` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
+
+首先，所有插件都使用相同的全局函数，意味着不同插件的副作用完全无法区分，因此只能重启整个应用而无法细粒度地控制具体的插件；其次，这种设计意味着全局函数并不纯，因此一旦项目中出现了多例的依赖，整套系统的可靠性就会完全失效！
+
+引入显式 $\mathfrak{C}$ 变换会降低应用的可读性，忽略显式 $\mathfrak{C}$ 变换又存在上述缺陷。那么有没有办法在不增加心智负担的同时编写可靠的插件呢？Cordis 通过上下文对象给出了完美的解决方案。
+
+上下文对象是一个插件中唯一的可变部分，它同时担任了 $\mathfrak{C}$ 参数和返回值的角色。在上面的示例中引入上下文对象，就得到了熟悉的 Koishi 插件：
+
+```ts
+function serve(ctx: Context, config: Config) {
+  const server = createServer().listen(config.port)
+  ctx.on('dispose', () => server.close())
+}
+```
+
+相应地，我们使用 `ctx.plugin()` 来加载插件 (相当于将可逆化函子作用于上述函数)：
+
+```ts
+ctx.plugin(serve, { port: 80 })
+```
+
+当一个插件被加载时，将会从当前上下文对象上派生出一个新的上下文实例。子级上下文将管理插件内的全部副作用，而插件整体将作为一个副作用被父级上下文收集。
+
+除了 `ctx.plugin()` 外，上下文对象上还有许多 API，它们几乎都是某个函数的可逆化版本。例如 `ctx.on()` 是添加监听器的可逆化，`ctx.command()` 是注册指令的可逆化。这样一来，开发者只需要调用 `ctx` 上的方法，就可以确保插件的作用是可逆的。
+
+这种设计同时解决了上述两个缺陷，并且完全不会带来额外的心智负担。在大多数的插件场景下，开发者甚至完全不需要手动监听 `dispose` 事件，就能编写出可逆的插件。
