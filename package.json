@@ -25,9 +25,10 @@
     "element-plus": "2.4.0",
     "esbuild-register": "^3.5.0",
     "koishi": "^4.15.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "marked-vue": "^1.2.3",
     "typescript": "^5.2.2",
-    "vitepress": "1.0.0-rc.4",
+    "vitepress": "1.0.0-rc.24",
     "vue-i18n": "^9.6.2"
   }
 }

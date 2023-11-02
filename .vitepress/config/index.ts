@@ -47,6 +47,10 @@ export default async () => {
 
     mixins: await mixins(),
 
+    markdown: {
+      math: true,
+    },
+
     themeConfig: {
       indexName: 'koishi-docs',
       logo: '/logo.png',
@@ -71,7 +75,7 @@ export default async () => {
       },
       plugins: [
         vueI18n({ ssr: true }),
-      ],
+      ] as any,
     },
   })
 }

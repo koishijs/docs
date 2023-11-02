@@ -431,7 +431,7 @@
           "link": "/cookbook/design/workspace.md"
         }, {
           "text": "可逆的 Koishi",
-          "link": "/cookbook/design/reversible.md"
+          "link": "/cookbook/design/disposable.md"
         }, {
           "text": "零占用的 Koishi",
           "link": "/cookbook/design/storage.md"

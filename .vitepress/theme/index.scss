@@ -80,3 +80,11 @@ html.dark {
     }
   }
 }
+
+mjx-container {
+  vertical-align: text-top;
+
+  > svg {
+    margin-top: 2px;
+  }
+}
