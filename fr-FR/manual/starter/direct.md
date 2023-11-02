@@ -1,16 +1,16 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
 next:
-  text: 指南
+  text: Guide
   link: /fr-FR/guide/
 ---
 
-# 作为依赖调用
+# Appellation comme une dépendance
 
 ::: warning
-这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
+Ce guide suppose que vous avez une connaissance intermédiaire de [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) et de [Node.js](https://nodejs.org/). Si vous débutez dans le développement JavaScript ou si vous n'êtes pas intéressé par l'écriture de code métier, veuillez [choisir une autre méthode d'installation](./index.md).
 :::
 
 ::: warning
