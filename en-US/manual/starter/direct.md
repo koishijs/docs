@@ -10,53 +10,53 @@ next:
 # Install as a dependency
 
 ::: warning
-This guide assumes that you know about secondary knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you just started learning JavaScript development recently, or are not interested in coding, please [Choose Other Installation Methods](./index.md).
+This guide assumes that you already have intermediate knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you are just starting to learn JavaScript or not interested in writing business code, please [Choose Other Installation Methods](./index.md).
 :::
 
 ::: warning
-It is strongly recommended to use template project for developing Koishi. If you are not sure what you are doing, it is recommended to read [Template Project](./boilerplate.md) first.
+We strongly recommend using a template project for Koishi development. If you are unsure about what you are doing, it is advisable to read the [Template Project](./boilerplate.md) section thoroughly.
 :::
 
-While it is recommended to use the [boilerplate project](./boilerplate.md) for most users, it would be more flexible when you directly embed Koishi as a dependency for your complicated application.
+While we recommend the use of the [boilerplate](./boilerplate.md) for most users, it would be a more flexible choice if you directly embed Koishi as the dependency for your complex application.
 
-## Initialize Your Project
+## Initializing Your Project
 
 ::: tip
-Koishi is written with TypeScript, so TypeScript would be the first class programming language when you are developing Koishi. In the following section of documents, we will use TypeScript as example language. If you are writing vanilla JavaScript or other JavaScript dialects, you could modify your own code based on the example code.
+The Koishi itself is written in TypeScript, so we recommend using TypeScript for Koishi development. In the following documentation, we will consistently use TypeScript as an example. If you are writing vanilla JavaScript or other JavaScript dialects, you could make modifications for your own code based on the example one.
 :::
 
-Koishi requires [Node.js](https://nodejs.org/) (at least v16, suggested to use LTS versions) Runtime, you need to install it.Here we suppose you have it installed already.
+Koishi requires a [Node.js](https://nodejs.org/) runtime environment (minimum version16, LTS recommended), you need to install it yourself. We assume that you have already installed it.
 
-Initialize a directly as your bot, install Koishi and common plugins, here we would install several official plugins as example: console, sandbox and echo.
+Firstly initialize your bot directory, then install Koishi and the necessary plugins (in this example, we use the official plugins such as console, sandbox, and echo):
 
 ::: tabs code
 ```npm
-# Initialize project
+# Initialize the project
 npm init
 
-# Install Koishi and plugins
+# Install Koishi and related plugins
 npm i koishi @koishijs/plugin-console \
              @koishijs/plugin-sandbox \
              @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this if you don't use TypeScript)
+# Install TypeScript and related packages (skip this step if you using TypeScript)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
 ```yarn
-# Initialize project
+# Initialize the project
 yarn init
 
-# Install Koishi and plugins
+# Install Koishi and related plugins
 yarn add koishi @koishijs/plugin-console \
                 @koishijs/plugin-sandbox \
                 @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this if you don't use TypeScript)
+# Install TypeScript and related packages (skip this step if not using TypeScript)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
 :::
 
-Create an entry file `index.ts` and write down the code below:
+Create a new entry file `index.ts` and write the following code:
 
 ```ts title=index.ts no-extra-header
 import { Context } from 'koishi'
@@ -64,89 +64,88 @@ import console from '@koishijs/plugin-console'
 import * as sandbox from '@koishijs/plugin-sandbox'
 import * as echo from '@koishijs/plugin-echo'
 
-// Create a new Koishi application
+// Create a Koishi instance
 const ctx = new Context({
   port: 5140,
 })
 
-// Install plugins
-ctx.plugin(console)     // Koishi Console
-ctx.plugin(sandbox)     // Sandbox for debugging
-ctx.plugin(echo)        // Echo command
+// Enable the above plugins
+ctx.plugin(console)     // Provides a console
+ctx.plugin(sandbox)     // Provides a debugging sandbox
+ctx.plugin(echo)        // Provides an echo command
 
-// Launch the Koishi application
+// Start the application
 ctx.start()
 ```
 
-Then launch this file:
+Then run this file:
 
 ```sh
 node -r esbuild-register .
 ```
 
-Finally, open your browser and enter `http://localhost:5140`, you will see the Console Web UI. Click the "Sandbox" icon on the left side, then click "Add User" button to create a simulated user. Now you can talk to the bot:
+Finally, open your browser and go to `http://localhost:5140`. You will see the Koishi Console WebUI. Click on the "Sandbox" icon on the left and click "Add User" at the top of the screen to create a virtual user. Now you can interact with the bot:
 
 <chat-panel>
 <chat-message nickname="Alice">echo Bonjour</chat-message>
 <chat-message nickname="Koishi">Bonjour</chat-message>
 </chat-panel>
 
-## Configure the Bot
+## Configuring Your Bot
 
-If you want to connect the bot to a real chat platform, what you need to do is to install an adapter plugin:
+If you want to integrate your bot with an actual chat platform, you just need to install the appropriate adapter plugins:
 
 ::: tabs code
 ```npm
-# Use the adapter of Satori and the adapter of Discord as an example
+# Using Satori and Discord adapters as examples
 npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# Use the adapter of Satori and the adapter of Discord as an example
+# Using Satori and Discord adapters as examples
 yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
 ```
 :::
 
-Then modify the `index.ts` you just created. Every time you activated an adapter plugin instance, a new bot instance would be created:
+Then modify the `index.ts` file you created earlier. Every time you activated an adapter plugin instance, a new bot instance would be created:
 
 ```ts title=index.ts
 import satori from '@koishijs/plugin-adapter-satori'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// A bot with the adapter of satori
+// Using the Satori adapter for one bot
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5500',
 })
 
-// Another bot with the adapter of satori
-// You can use different endpoints
+// Using the Satori adapter for another bot with different communication methods
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5501',
 })
 
-// Another bot with the adapter of discord
-// You should install the adapter and complete the preparing process first
+// Using the Discord adapter for a bot
+// Don't forget to install the appropriate plugins and complete the setup before using it
 ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
 ```
 
-## Add More Plugins
+## Adding More Plugins
 
-Koishi plugins could be installed from [npm](https://www.npmjs.com). Normally the name of Koishi plugins should follow the patterns described below:
+Koishi plugins could be obtained from [npm](https://www.npmjs.com). Typically, plugins follow one of these naming conventions:
 
 - koishi-plugin-foo
 - @koishijs/plugin-foo
 - @bar/koishi-plugin-foo
 
-As for community plugins, you could install and apply in a similar way:
+For community plugins, you can install and load them similarly:
 
 ::: tabs code
 ```npm
-# As the example, install puppeteer and forward plugins
+# Using puppeteer and forward plugins as examples
 npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
 ```yarn
-# As the example, install puppeteer and forward plugins
+# Using puppeteer and forward plugins as examples
 yarn add koishi-plugin-puppeteer koishi-plugin-forward
 ```
 :::
@@ -155,25 +154,25 @@ yarn add koishi-plugin-puppeteer koishi-plugin-forward
 import puppeteer from 'koishi-plugin-puppeteer'
 import * as forward from 'koishi-plugin-forward'
 
-ctx.plugin(puppeteer)   // browser-related service
-ctx.plugin(forward)     // message forwarding
+ctx.plugin(puppeteer)   // Provides browser service
+ctx.plugin(forward)     // Provides message forwarding
 ```
 
-Please note the delicate differences in the import methods of the two plugins above.puppeteer plugin uses default export, but forward plugin uses export namespace.These two methods are fundamentally different and cannot be intermingled, so you will need to decide for yourself which situation is for each plugin.While this may cause some trouble, if you are a TypeScript user, it is easy to judge with the help of typographical tips.
+Please note the subtle difference in importing the two plugins above. The puppeteer plugin uses default export, while the forward plugin uses a named export namespace. These two approaches are fundamentally different and cannot be mixed, so you need to determine which category each plugin falls into. Although this may cause some confusion, if you are a TypeScript user, determining which category a plugin belongs to is easy with the help of type hints.
 
-Similarly, for the users of CommonJS, if you want to use `require` to get plugin objects, you should also note this difference:
+Likewise, for CommonJS users who want to use `require` to get the plugin object, you should also pay attention to this distinction:
 
 ```ts title=index.ts
-// Here's .default is untraceable
+// .default is required here
 ctx.plugin(require('koishi-plugin-puppeteer').default)
 
-// This cannot be written .default
+// .default should not be added here
 ctx.plugin(require('koishi-plugin-forward'))
 ```
 
-Users using other installation methods do not need to be interested in these details because the template project has already helped you to process them.
+Users of other installation methods do not need to worry about this distinction, because the boilerplate handles them for you.
 
-## Apply Interaction
+## Adding Interaction Logic
 
 In addition to plugins already packaged, we can add our own interactive logic:
 
@@ -186,14 +185,14 @@ In addition to plugins already packaged, we can add our own interactive logic:
   })
 ```
 
-Then restart your project:
+Then run your project again:
 
 <chat-panel>
 <chat-message nickname="Alice">Hello</chat-message>
 <chat-message nickname="Koishi">world</chat-message>
 </chat-panel>
 
-But this is not recommended because your `index.ts` becomes too large once more features.You can write the above logic in a separate file `ping.ts` and load it as a plugin:
+However, this may be worse because as your features grow, your `index.ts` file will become cumbersome. You can write the above logic in a separate file such as `ping.ts`, and then load it as a plugin:
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
