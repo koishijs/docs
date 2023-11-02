@@ -180,22 +180,23 @@ Les utilisateurs d'autres méthodes d'installation n'ont pas besoin de se soucie
 En plus d'utiliser des plugins existants depuis npm, vous pouvez également écrire votre propre logique d'interaction :
 
 ```ts title=index.ts
-// 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
+// Si le message reçu est "Sésame, ouvre-toi", répondez "Ali Baba"
 ctx.on('message', (session) => {
-  if (session.content === '天王盖地虎') {
-    session.send('宝塔镇河妖')
+  if (session.content === 'Sésame, ouvre-toi') {
+    session.send('Ali Baba')
   }
 })
+
 ```
 
 Ensuite, redémarrez votre projet :
 
 <chat-panel>
-<chat-message nickname="Alice">天王盖地虎</chat-message>
-<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
+<chat-message nickname="Alice">Sésame, ouvre-toi</chat-message>
+<chat-message nickname="Koishi">Ali Baba</chat-message>
 </chat-panel>
 
-不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：
+Cependant, il n'est peut-être pas idéal, car lorsque votre application devient plus complexe, votre `index.ts` peut devenir volumineux.Vous pouvez écrire la logique ci-dessus dans un fichier distinct, par exemple `ping.ts`, et le charger en tant que plugin :
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
@@ -203,22 +204,22 @@ import { Context } from 'koishi'
 export const name = 'ping'
 
 export function apply(ctx: Context) {
-  // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
+  // Si le message reçu est "Sésame, ouvre-toi", répondez "Ali Baba"
   ctx.on('message', (session) => {
-    if (session.content === '天王盖地虎') {
-      session.send('宝塔镇河妖')
+    if (session.content === 'Sésame, ouvre-toi') {
+      session.send('Ali Baba')
     }
   })
 }
 ```
 
 ```ts title=index.ts
-// 这里的 ./ping 是相对于 index.ts 的路径
+// Ici, ./ping est relatif à index.ts
 import * as ping from './ping'
 
 ctx.plugin(ping)
 ```
 
-## 接下来……
+## À venir
 
-恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
+Félicitations, vous avez maintenant une bonne compréhension de l'utilisation de base de Koishi ! Consultez le [Guide de développement](../../guide/) pour en savoir plus sur Koishi.
