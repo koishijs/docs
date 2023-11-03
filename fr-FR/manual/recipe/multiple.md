@@ -8,9 +8,9 @@
 
 不同的需求往往有不同的解决方案，因此我无法给你统一的答案。但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
 
-## 单实例
+## Instance unique
 
-在同一个 Koishi 应用中，有些插件可以同时启用多份，有些则不能——这并非插件的实现缺陷，而是预期的行为。事实上，插件的作者可以指定具体哪些功能可以被独立地启用。这表现在插件上就是两种不同的类型：那些可以同时启用多份的插件被称为可重用插件，反之则称为不可重用插件。
+Dans une même application Koishi, vous pouvez activer plusieurs instances pour certains plugins, tandis que d'autres ne le peuvent pas - ce n'est pas un défaut de l'implémentation du plugin, mais un comportement attendu. 事实上，插件的作者可以指定具体哪些功能可以被独立地启用。这表现在插件上就是两种不同的类型：那些可以同时启用多份的插件被称为可重用插件，反之则称为不可重用插件。
 
 典型的可重用插件是 [适配器插件](../usage/adapter.md)。每个适配器对应着一个正在运行的机器人，不同平台的机器人由不同的适配器进行配置。因此，如果你想在同一个平台中配置多个机器人，直接按照上一节中的方法添加多个适配器插件即可。
 
