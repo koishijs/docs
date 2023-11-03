@@ -174,7 +174,7 @@ Users of other installation methods do not need to worry about this distinction,
 
 ## Adding Interaction Logic
 
-In addition to plugins already packaged, we can add our own interactive logic:
+除了使用发布在 npm 上的插件，我们还可以添加自己的交互逻辑：
 
 ```ts title=index.ts
 // Reply with "world", after receiving "Hello"
