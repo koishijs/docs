@@ -33,7 +33,7 @@ Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe.
 
 <chat-panel>
 <chat-message nickname="Alice">ecko bonjour</chat-message>
-<chat-message nickname="Koishi">没有此命令。你要找的是不是“echo”？发送空行或句号以调用推测的指令。</chat-message>
+<chat-message nickname="Koishi">您要找的是不是“echo”？Tapez un point pour appliquer la suggestion.</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">bonjour</chat-message>
 </chat-panel>
