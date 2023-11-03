@@ -1,10 +1,10 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
 next:
   text: Installation et configuration de plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /fr-FR/manual/usage/market.html
 ---
 
 # 在容器中使用
