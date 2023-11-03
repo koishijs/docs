@@ -174,20 +174,28 @@ If you are in China and have configured a mirror, you may encounter the followin
 No token found and can't prompt for login when running with --non-interactive.
 ```
 
-Now, you need to reset the mirror source and re-login to your npm account.
+此时你需要在发布时使用官方镜像，具体操作如下：
 
 ::: tabs code
 ```npm
-npm config delete registry
-npm login
+npm run pub --registry https://registry.npmjs.org [...name]
 ```
 ```yarn
-yarn config delete registry
-yarn login
+yarn pub --registry https://registry.yarnpkg.com [...name]
 ```
 :::
 
-After the publishing is finished, you can switch back to your preferred mirror source to maintain optimal download speeds. :
+对于 Yarn v2 及以上版本，你还可以分别针对发布和安装设置不同的镜像：
+
+::: tabs code
+```yarn
+# 安装时使用国内镜像
+yarn config set npmRegistryServer https://registry.npmmirror.com
+# 发布时使用官方镜像
+yarn config set npmPublishRegistry https://registry.yarnpkg.com
+```
+:::  
+:
 :::
 
 ## Updating version
