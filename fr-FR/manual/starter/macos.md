@@ -1,22 +1,22 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
 next:
   text: Installation et configuration de plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /fr-FR/manual/usage/market.html
 ---
 
 # 为 macOS 安装
 
 ::: tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
 :::
 
-## 下载
+## Téléchargement
 
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
-- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+- [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## 其他选择
 
