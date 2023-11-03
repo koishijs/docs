@@ -174,7 +174,7 @@ ctx.plugin(require('koishi-plugin-forward'))
 
 ## 添加交互逻辑
 
-除了已经封装好的插件外，我们还可以添加自己的交互逻辑：
+除了使用发布在 npm 上的插件，我们还可以添加自己的交互逻辑：
 
 ```ts title=index.ts
 // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
