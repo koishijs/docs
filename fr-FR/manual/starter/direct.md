@@ -177,7 +177,7 @@ Les utilisateurs d'autres méthodes d'installation n'ont pas besoin de se soucie
 
 ## Ajout de la logique d'interaction
 
-除了使用发布在 npm 上的插件，我们还可以添加自己的交互逻辑：
+En plus d'utiliser des plugins existants depuis npm, vous pouvez également écrire votre propre logique d'interaction :
 
 ```ts title=index.ts
 // Si le message reçu est "Sésame, ouvre-toi", répondez "Ali Baba"
