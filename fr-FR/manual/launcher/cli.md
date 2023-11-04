@@ -1,4 +1,4 @@
-# Outils en ligne de commande
+# Outils de ligne de commande
 
 Pour les utilisateurs qui préfèrent ne pas utiliser l'interface graphique, le lanceur Koishi propose un outil en ligne de commande nommé `koi`. Il vous permet de créer, gérer et exécuter Koishi.
 
