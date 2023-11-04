@@ -605,18 +605,18 @@
           ]
         },
         {
-          "text": "设计原理",
+          "text": "Principe de conception",
           "items": [
             {
-              "text": "项目架构",
+              "text": "Structure du projet",
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
             },
             {
-              "text": "可逆的 Koishi",
+              "text": "Koishi réversible",
               "link": "/cookbook/design/disposable.md"
             },
             {
@@ -633,7 +633,7 @@
               "link": "/cookbook/practice/assets.md"
             },
             {
-              "text": "图片渲染",
+              "text": "Rendu d'image",
               "link": "/cookbook/practice/render.md"
             },
             {
