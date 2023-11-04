@@ -69,7 +69,7 @@ footer:
         text: 为 Android 安装
         link: /fr-FR/manual/starter/android.html
       - 
-        text: 在容器中使用
+        text: Utilisation dans un conteneur
         link: /fr-FR/manual/starter/docker.html
       - 
         text: 创建模板项目
