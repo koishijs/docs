@@ -18,6 +18,6 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## 其他选择
+## Autres méthodes d'installation
 
-找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+找不到适合你的安装包？Vous pouvez toujours choisir [installer avec image conteneur](./docker.md) ou [créer un projet modèle](./boilerplate.md).
