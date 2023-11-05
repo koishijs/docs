@@ -27,7 +27,7 @@
 - [KOOK](../../plugins/adapter/kook.md)
 - [Lark](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
-- [邮件](../../plugins/adapter/mail.md)
+- [Courriers électroniques](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
