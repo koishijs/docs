@@ -7,13 +7,13 @@ next:
   link: /fr-FR/manual/usage/market.html
 ---
 
-# 创建模板项目
+# Création d'un projet modèle
 
 ::: tip
 Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
 :::
 
-本节将介绍我们最推荐的 Koishi 开发方案——创建模板项目。相比直接从零搭建，模板项目的优势在于：
+En cette section nous vous introduira notre méthode de développement Koishi la plus recommandée - la création d'un projet modèle. Par rapport à la création manuelle à partir de zéro, les avantages d'un projet modèle sont les suivants :
 
 - 创建完成即是拥有带完整控制台体验的项目，一键创建各种模板插件
 - 支持直接加载 TypeScript，你可以尽情享受代码提示和类型检查带来的便利
