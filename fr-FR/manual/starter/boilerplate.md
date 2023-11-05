@@ -84,13 +84,13 @@ yarn config set registry https://registry.npmmirror.com
 Ouvrez une ligne de commande et accédez au répertoire dans lequel vous souhaitez créer le projet modèle de Koishi.
 
 ::: tip
-Ce répertoire ne doit pas être trop long et ne doit pas contenir d'espaces dans le chemin. 我们推荐的目录如下：
+Ce répertoire ne doit pas être trop long et ne doit pas contenir d'espaces dans le chemin. Voici les chemins recommandés :
 
-- Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
-- 其他操作系统：`~/dev`
+- Pour Windows : `C:\dev` ou `D:\dev` (n'installez pas le projet directement à la racine du lecteur, créez plutôt un sous-répertoire)
+- Pour d'autres systèmes d'exploitation : `~/dev`
 :::
 
-输入下面的命令以创建 Koishi 项目：
+Saisissez la commande suivante pour créer le projet modèle de Koishi :
 
 ::: tabs code
 ```npm
@@ -102,11 +102,11 @@ yarn create koishi
 ```
 :::
 
-跟随提示即可完成全套初始化流程。
+Suivez les instructions pour terminer le processus d'initialisation.
 
-## 启动应用
+## Démarre l'application Koishi
 
-如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
+Si vous avez suivi avec succès les étapes ci-dessus, votre application devrait déjà être en cours d'exécution et la console Koishi devrait s'afficher. Si vous souhaitez arrêter l'application, vous pouvez appuyer sur la combinaison de touches `Ctrl+C` dans la ligne de commande. Lorsque l'application est arrêtée, vous pouvez exécuter la commande suivante pour la redémarrer :
 
 ::: tabs code
 ```npm
@@ -117,9 +117,9 @@ yarn start
 ```
 :::
 
-## 接下来……
+## À venir
 
-恭喜你已经掌握了 Koishi 的基本用法！接下来：
+Félicitations, vous avez maintenant une bonne compréhension de l'utilisation de base de Koishi ! Voici ce que vous pouvez faire ensuite :
 
-- 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
-- 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
+- Si vous souhaitez en savoir plus sur les fonctionnalités de Koishi, rendez-vous sur [Installation et configuration de plugins](../usage/market.md).
+- Si vous souhaitez commencer immédiatement à développer vos propres plugins, consultez le [Guide de développement](../../guide/index.md).
