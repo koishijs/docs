@@ -15,7 +15,7 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 
 ## Téléchargement
 
-- [Pragramme d'installation (.msi)](https://k.ilharp.cc/win.msi)
+- [Programme d'installation (.msi)](https://k.ilharp.cc/win.msi)
 - [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Installation
