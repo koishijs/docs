@@ -34,41 +34,41 @@ Tout d'abord, rendez-vous sur le site officiel de [Node.js](https://nodejs.org/)
 
 ![home](/manual/nodejs/home-light.webp) {.light-only}
 
-在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。我们建议你选择更加稳定的 LTS 版本，点击按钮即可下载安装包。
+Vous y verrez deux gros boutons, correspondant respectivement aux versions **LTS** et **Current**. Nous vous recommandons de choisir la version LTS plus stable. Vous pouvez cliquer sur le bouton pour télécharger le package d'installation.
 
-随后，运行下载好的安装包，根据提示完成整个安装流程即可。
+Ensuite, exécutez le package d'installation téléchargé et suivez les instructions pour terminer le processus d'installation.
 
-### 安装包管理器
+### Installer la gestionnaire de paquets
 
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
+Node.js est publié avec un gestionnaire de paquets appelé [npm](https://www.npmjs.com/), que vous pouvez utiliser directement. Cependant, nous vous recommandons également le gestionnaire de paquets plus puissant [yarn](https://classic.yarnpkg.com/). Son installation est très simple, il vous suffit d'ouvrir une ligne de commande et de saisir la commande suivante :
 
 ```sh
-# 安装 yarn
+# Installation de yarn
 npm i -g yarn
 
-# 查看版本
+# Vérification de la version de yarn
 yarn -v
 ```
 
 ::: tip
-部分 Windows 用户可能会发现以下错误 ([参考链接](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
+Certains utilisateurs de Windows peuvent rencontrer l'erreur suivante ([référence](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies)) :
 
 ```text
-yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+yarn : Impossible de charger le fichier yarn.ps1, car l’exécution de scripts est désactivée sur ce système.
 ```
 
-此时请以管理员身份重新运行终端，并输入下面的命令：
+Dans ce cas, vous pouvez exécuter à nouveau le terminal en tant qu'administrateur et saisir la commande suivante :
 
 ```sh
 Set-ExecutionPolicy RemoteSigned
 ```
 
-之后就可以正常使用 yarn 了。
+Après cela, vous pourrez utiliser yarn normalement.
 :::
 
-### 配置镜像源
+### Configure un miroir du référentiel de packages
 
-如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
+Si vous êtes en Chine, le téléchargement des dépendances depuis npm ou yarn peut être très lent. Par conséquent, nous vous recommandons de configurer un miroir du référentiel de packages pour accélérer le processus d'installation.
 
 ::: tabs code
 ```npm
@@ -79,12 +79,12 @@ yarn config set registry https://registry.npmmirror.com
 ```
 :::
 
-## 创建项目
+## Créer un projet
 
-打开命令行，并进入你想要创建 Koishi 项目的目录。
+Ouvrez une ligne de commande et accédez au répertoire dans lequel vous souhaitez créer le projet modèle de Koishi.
 
 ::: tip
-这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
+Ce répertoire ne doit pas être trop long et ne doit pas contenir d'espaces dans le chemin. 我们推荐的目录如下：
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
