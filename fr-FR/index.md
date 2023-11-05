@@ -108,7 +108,7 @@ footer:
         text: LINE
         link: /zh-CN/plugins/adapter/line.html
       - 
-        text: 邮件
+        text: Courriers électroniques
         link: /zh-CN/plugins/adapter/mail.html
       - 
         text: Matrix
