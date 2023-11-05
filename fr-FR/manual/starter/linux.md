@@ -20,4 +20,4 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 
 ## Autres méthodes d'installation
 
-找不到适合你的安装包？Vous pouvez toujours choisir [installer avec image conteneur](./docker.md) ou [créer un projet modèle](./boilerplate.md).
+Vous ne trouvez pas de programme d'installation qui vous convient ? Vous pouvez toujours choisir [installer avec image conteneur](./docker.md) ou [créer un projet modèle](./boilerplate.md).
