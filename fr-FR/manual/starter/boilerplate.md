@@ -15,20 +15,20 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 
 En cette section nous vous introduira notre méthode de développement Koishi la plus recommandée - la création d'un projet modèle. Par rapport à la création manuelle à partir de zéro, les avantages d'un projet modèle sont les suivants :
 
-- 创建完成即是拥有带完整控制台体验的项目，一键创建各种模板插件
-- 支持直接加载 TypeScript，你可以尽情享受代码提示和类型检查带来的便利
-- 支持插件热重载，你可以在不重启应用的情况下修改插件代码，并获得即时的反馈
-- 支持二次开发，你可以将你自己的机器人与其他人的插件进行联合调试
+- Une fois le projet créé, vous pouvez immédiatement profiter de toutes les fonctionnalités de la console et créer des modèles de plugins en un clic.
+- Prise en charge directe de TypeScript, vous pouvez profiter des avantages de l'autocomplétion et de la vérification des types.
+- Prise en charge du rechargement à chaud des plugins, vous pouvez modifier le code des plugins sans redémarrer l'application et obtenir des commentaires instantanés.
+- Possibilité de développement ultérieur, vous pouvez déboguer votre propre robot en collaboration avec les plugins d'autres personnes.
 
-当然，模板项目也可以直接用于生产。虽然在操作上可能不如启动器方便，但它提供了更多的自由度，并能在启动器所覆盖不到的场景下顺利运行。
+Bien sûr, le projet modèle peut également être utilisé en production. Bien qu'il puisse ne pas être aussi pratique à utiliser que le lanceur Koishi, il propose plus de liberté et peut fonctionner parfaitement dans des scénarios non couverts par le lanceur Koishi.
 
-## 安装 Node.js
+## Installer Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi a besoin d'un environnement d'exécution [Node.js](https://nodejs.org/) (version minimale : 16, version LTS recommandée), que vous devez installer vous-même.
 
-### 下载安装包
+### Télécharger le package d'installation
 
-首先我们前往 [Node.js](https://nodejs.org/) 的官方网站：
+Tout d'abord, rendez-vous sur le site officiel de [Node.js](https://nodejs.org/) :
 
 ![home](/manual/nodejs/home-dark.webp) {.dark-only}
 
