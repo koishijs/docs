@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 打开命令行，并进入你想要创建 Koishi 项目的目录。
 
 ::: tip
-这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
+这个路径不宜过长，避免出现中文或者空格。我们推荐的路径如下：
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
