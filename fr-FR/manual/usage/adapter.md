@@ -8,19 +8,19 @@ Rendez-vous dans la page « Bac à sable » dans la console, où vous pouvez sim
 
 Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur gauche de l'écran pour créer un utilisateur virtuel (vous verrez qu'un nouvel utilisateur est nommé Alice). Une interface de chat vide apparaîtra sur le côté droit de l'écran. Cliquez dans la boîte de dialogue en bas de l'écran, saisissez « help » et appuyez sur la touche « Entrée » pour envoyer. Vous verrez immédiatement la réponse du robot dans la fenêtre de chat. « help » est une commande intégrée qui répertorie toutes les commandes actuellement disponibles. Par conséquent, dans la réponse, vous verrez « echo » et « help ».
 
-这里的 echo 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。
+Le plugin « echo » que nous venons d'installer permet de renvoyer le texte saisi par l'utilisateur tel quel. Essayons maintenant : saisissez « echo bonjour » et appuyez sur la touche Entrée. Vous verrez la réponse du robot « bonjour ».
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-如果我们想要模拟群聊，那我们可以再次点击「添加用户」以创建更多的用户。随后，在顶部切换到「群聊模式」。这样，你就可以控制多个虚拟用户与机器人聊天了。如果你要体验的插件是下棋一类的多人交互插件，这会非常有用。
+Si vous souhaitez simuler une conversation en guilde, vous pouvez cliquer à nouveau sur « Ajouter un utilisateur » pour créer plus d'utilisateurs.Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
 
-除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
+En outre, si certaines commandes nécessitent un certain [niveau des autorisations](../usage/customize.md#权限管理), vous pouvez les ajuster dans les « Paramètres de l'utilisateur ».
 
-## 接入真实聊天平台
+## Connexion à une plateforme conversationnelle réelle
 
-仅仅是在沙盒中对话是远远不够的。我们需要将机器人接入到真实的聊天平台中，才能让它真正地为我们服务。Koishi 使用适配器插件来支持各种聊天平台。下面是官方维护的适配器列表：
+Simuler des conversations uniquement dans un bac à sable ne suffit pas. Nous devons connecter le robot à une plateforme conversationnelle réelle pour qu'il puisse réellement nous être utile. Koishi utilise des plugins d'adaptateurs pour prendre en charge diverses plates-formes conversationnelles. Voici une liste des adaptateurs maintenus officiellement :
 
 - [DingTalk](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
@@ -36,9 +36,9 @@ Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur g
 - [WeCom (WeChat Work)](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
-其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
+Parmi eux, les adaptateurs couramment utilisés sont déjà préinstallés dans Koishi, vous pouvez les trouver dans le groupe de configuration des plugins des « adaptateurs ». Si vous ne voyez pas la plateforme que vous souhaitez, vous pouvez également rechercher et installer d'autres plugins d'adaptateurs sur la place de marché.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
+Une application Koishi peut se connecter à plusieurs comptes sur différentes plates-formes conversationnelles. Chaque compte correspond à une configuration de plugin, et vous pouvez ajouter de nouvelles configurations de plugins en suivant les méthodes décrites dans [Ajouter plus de plugins](./market.md#添加更多插件). 由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
 
 不同平台的接入方式与难度存在较大的差异。对于不同的平台，你需要做好相应的准备工作。这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 
