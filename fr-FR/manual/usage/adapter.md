@@ -1,12 +1,12 @@
-# La première conversation
+# Première conversation
 
-安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
+Après avoir installé Koishi et exploré le marché des plugins, êtes-vous impatient de découvrir les fonctionnalités de Koishi ? Commençons tout de suite notre première conversation avec le robot conversationnel !
 
-## 在沙盒中模拟对话
+## Simulation de conversation dans un bac à sable
 
-在控制台中前往「沙盒」页面，在这里我们可以模拟与机器人的对话。
+Rendez-vous dans la page « Bac à sable » dans la console, où vous pouvez simuler une conversation avec le robot conversationnel.
 
-首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (我们可以看到新用户叫 Alice)，此时屏幕右侧会出现空白的聊天界面。点击屏幕下方的对话框，输入「help」，并按回车键发送。你会立即在聊天界面中看到机器人的回复。help 是一个内置指令，它的功能是列出当前所有可用的指令。因此，我们在回复中可以看到 echo 和 help。
+Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur gauche de l'écran pour créer un utilisateur virtuel (vous verrez qu'un nouvel utilisateur est nommé Alice). Une interface de chat vide apparaîtra sur le côté droit de l'écran. Cliquez dans la boîte de dialogue en bas de l'écran, saisissez « help » et appuyez sur la touche « Entrée » pour envoyer. Vous verrez immédiatement la réponse du robot dans la fenêtre de chat. « help » est une commande intégrée qui répertorie toutes les commandes actuellement disponibles. Par conséquent, dans la réponse, vous verrez « echo » et « help ».
 
 这里的 echo 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。
 
