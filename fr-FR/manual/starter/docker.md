@@ -28,7 +28,7 @@ docker run -p 5140:5140 koishijs/koishi
 ```
 :::
 
-De nombreux plugins dépendent de [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) pour le rendu des images. Par conséquent, l'image conteneur par défaut contient Chromium. Si vous estimez que l'image est trop volumineuse et que vous n'avez pas besoin de Chromium préinstallé, nous proposons également une version légère :
+De nombreux plugins dépendent de [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) pour le rendu des images. Par conséquent, l'image Docker par défaut contient Chromium. Si vous estimez que l'image Docker est trop volumineuse et que vous n'avez pas besoin de Chromium préinstallé, nous proposons également une version légère :
 
 ::: tabs code
 ```podman
@@ -39,7 +39,7 @@ docker run -p 5140:5140 koishijs/koishi:latest-lite
 ```
 :::
 
-Une fois démarré, la Console Koishi sera liée au port 5140.
+Une fois démarré, la Console Koishi sera disponible sur le port 5140.
 
 Si vous avez besoin de persistance, utilisez `-v /some/place:/koishi` pour mapper les fichiers de Koishi.
 
