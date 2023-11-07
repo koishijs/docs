@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 Open a command line, cd to the directory that you want to create a Koishi template project.
 
 ::: tip
-The working directory path should not be very long, also it is recommended to use a path that contains ASCII characters only without spaces. For example:
+这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
 
 - Windows：`C:\dev` or `D:\dev` (do not create projects directly at the root of the disk, preferably build a folder)
 - Other operating systems: `~/dev`
