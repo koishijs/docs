@@ -34,35 +34,35 @@ La commande « help » accepte un paramètre optionnel pour afficher des informa
 </chat-message>
 </chat-panel>
 
-那么细心的小伙伴可能会发现，既然 help 本身也是一个指令，那我能不能用来查看 help 自己的帮助信息呢？答案是肯定的：
+Vous avez peut-être remarqué que la commande « help » est elle-même une commande. Vous vous demandez peut-être si vous pouvez utiliser « help » pour afficher des informations d'aide sur la commande « help ». La réponse est oui :
 
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：help [command]</p>
-<p>显示帮助信息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-a, --authority  显示权限设置</p>
-<p class="indent-1">-H, --show-hidden  查看隐藏的选项和指令</p>
+<p>Commande : help [commande]</p>
+<p>Afficher l'aide</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-a, --authority  Afficher les configurations d'autorisés</p>
+<p class="indent-1">-H, --show-hidden  Afficher les options et commandes invisibles</p>
 </chat-message>
 </chat-panel>
 
-## 参数和选项
+## Arguments et options
 
-在上面的用法中，我们接触到了两个新的概念：**参数 (Argument)** 和 **选项 (Option)**。
+Dans les exemples ci-dessus, nous avons mentionné deux nouveaux concepts : les arguments et les options.
 
-参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
+Les arguments peuvent être obligatoires ou facultatifs et sont représentés respectivement par des chevrons `<>` et des crochets `[]`. Une commande peut avoir un nombre quelconque d'arguments, et leur ordre est fixe. Les utilisateurs doivent saisir les arguments dans l'ordre spécifié par la commande. Les arguments obligatoires doivent apparaître avant les arguments facultatifs. Si les utilisateurs ne fournissent pas un nombre suffisant d'arguments obligatoires, le plugin génère généralement un message d'erreur. Les arguments supplémentaires fournis par les utilisateurs sont ignorés.
 
-例如，help 指令共有一个参数，它是可选参数，表示要查看的指令名；echo 指令也有一个参数，它是必选参数，表示要发送的消息。让我们看看如果不填必选参数会怎么样：
+Par exemple, la commande « help » a un argument facultatif qui représente le nom de la commande à consulter. La commande « echo » a un argument obligatoire qui représente le message à envoyer. Voici ce qui se passe si l'utilisateur ne fournit pas l'argument obligatoire :
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>请输入要发送的文本。</p>
+<p>Veuillez entrer le texte à envoyer.</p>
 </chat-message>
 </chat-panel>
 
-选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
+Les options contrôlent également le comportement d'une commande. Elles commencent généralement par un tiret `-` ou deux tirets `--`, suivis d'un nom d'option fixe. Les options n'ont pas d'ordre spécifique, mais il est généralement recommandé de les placer avant les arguments. Par exemple, nous pouvons essayer ceci :
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,7 +73,7 @@ La commande « help » accepte un paramètre optionnel pour afficher des informa
 </chat-message>
 </chat-panel>
 
-在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
+Dans cet exemple, nous avons utilisé l'option `-E` pour modifier le contenu de la sortie. Nous expliquerons plus en détail comment cela fonctionne dans les sections suivantes.
 
 参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
 
