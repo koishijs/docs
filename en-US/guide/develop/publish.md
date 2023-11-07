@@ -178,10 +178,10 @@ No token found and can't prompt for login when running with --non-interactive.
 
 ::: tabs code
 ```npm
-npm run pub --registry https://registry.npmjs.org [...name]
+npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
 ```yarn
-yarn pub --registry https://registry.yarnpkg.com [...name]
+yarn pub [...name] --registry https://registry.yarnpkg.com
 ```
 :::
 
@@ -204,7 +204,7 @@ Version default starts from `1.0.0`. Its number needs to be updated before relea
 
 ::: tabs code
 ```npm
-npm run bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
+npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
@@ -221,6 +221,7 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
   - Remove the prerelease section if the release is `rc.x`
   - Otherwise, to the next major version of `alpha.0`
 - **-v, --version:** set specific version
+- **-r, --recursive:** 递归更新依赖版本
 - Default: incremented by the last of the release version number
 
 When updating the version of a plug-in, the versions of dependencies that rely on this plug-in will also be upgraded to ensure consistency in the workspace.Moreover, if you wish for the versions of plug-ins that depend on this plug-in to be updated in sync, you can append the `-r, --recursive` option.
