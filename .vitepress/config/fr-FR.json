@@ -43,7 +43,7 @@
             "link": "/guide/"
           },
           {
-            "text": "Guide avancée de développement",
+            "text": "进阶指南",
             "link": "/cookbook/"
           },
           {
@@ -361,7 +361,7 @@
         {
           "items": [
             {
-              "text": "→ Guide avancée de développement",
+              "text": "→ 进阶指南",
               "link": "/cookbook/"
             }
           ]
@@ -612,16 +612,16 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "Approfondis sur l'escape de travail",
-              "link": "/cookbook/design/workspace.md"
-            },
-            {
-              "text": "Koishi réversible",
+              "text": "可逆的 Koishi",
               "link": "/cookbook/design/disposable.md"
             },
             {
               "text": "零占用的 Koishi",
               "link": "/cookbook/design/storage.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
             }
           ]
         },
