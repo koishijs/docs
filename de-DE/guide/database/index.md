@@ -85,11 +85,11 @@ await ctx.database.set('schedule', 1234, {
 
 ```ts
 // 让所有日期为今天的数据行的 count 字段在原有基础上增加 1
-await ctx.database.set('foo', { date: new Date() }, {
+await ctx.database.set('foo', { date: new Date() }, (row) => ({
   // { $add: [a, b] } 相当于 a + b
   // { $: field } 相当于对当前行的 field 字段取值
-  count: { $add: [{ $: 'count' }, 1] },
-})
+  count: $.add($.count, 1),
+}))
 ```
 
 你可以在 [这里](../../api/database/evaluation.md) 看到完整的求值表达式 API。
