@@ -178,10 +178,10 @@ No token found and can't prompt for login when running with --non-interactive.
 
 ::: tabs code
 ```npm
-npm run pub --registry https://registry.npmjs.org [...name]
+npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
 ```yarn
-yarn pub --registry https://registry.yarnpkg.com [...name]
+yarn pub [...name] --registry https://registry.yarnpkg.com
 ```
 :::
 
@@ -204,7 +204,7 @@ yarn config set npmPublishRegistry https://registry.yarnpkg.com
 
 ::: tabs code
 ```npm
-npm run bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
+npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
@@ -221,6 +221,7 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
   - 如果当前版本是 `rc.x`，则移除 prerelease 部分
   - 其他情况下，跳到下一个大版本的 `alpha.0`
 - **-v, --version:** 设置具体的版本号
+- **-r, --recursive:** 递归更新依赖版本
 - 缺省情况：按照当前版本的最后一位递增
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
