@@ -12,7 +12,7 @@ Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插�
 
 ::: tabs code
 ```npm
-npm run setup [name] [-c] [-m] [-G]
+npm run setup [name] -- [-c] [-m] [-G]
 ```
 ```yarn
 yarn setup [name] [-c] [-m] [-G]
