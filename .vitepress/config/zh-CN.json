@@ -427,14 +427,14 @@
           "text": "项目架构",
           "link": "/cookbook/design/structure.md"
         }, {
-          "text": "深入工作区",
-          "link": "/cookbook/design/workspace.md"
-        }, {
           "text": "可逆的 Koishi",
           "link": "/cookbook/design/disposable.md"
         }, {
           "text": "零占用的 Koishi",
           "link": "/cookbook/design/storage.md"
+        }, {
+          "text": "深入工作区",
+          "link": "/cookbook/design/workspace.md"
         }]
       }, {
         "text": "最佳实践",
