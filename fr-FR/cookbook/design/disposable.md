@@ -1,4 +1,4 @@
-# Koishi réversible
+# 可逆的 Koishi
 
 可逆化是 Koishi 的核心设计理念。
 
@@ -54,23 +54,23 @@ Koishi 的控制台前端由 @koishijs/client 提供，这个包同样依赖了 
 
 $$ f_\text{imp}: \text{X}\to\text{Y} $$
 
-假设它含有副作用，我们把所有可能的副作用用类型 $\mathfrak{C}$ 封装起来，则该函数可以被转化为：
+假设它含有副作用，我们把所有可能的副作用用类型 $\mathcal{C}$ 封装起来，则该函数可以被转化为：
 
-$$ f: \mathfrak{C}\times\text{X}\to\mathfrak{C}\times\text{Y} $$
+$$ f: \mathcal{C}\times\text{X}\to\mathcal{C}\times\text{Y} $$
 
-此时我们得到的就一个纯函数，它接受 $\mathfrak{C}$ 和参数，返回修改过的 $\mathfrak{C}$ 和返回值。
+此时我们得到的就一个纯函数，它接受 $\mathcal{C}$ 和参数，返回修改过的 $\mathcal{C}$ 和返回值。
 
-如果忽略 $f$ 本身的入参和出参，只考虑副作用，那么可以定义函数空间 $\mathfrak{F}=\mathfrak{C}\to\mathfrak{C}$。其中的任何一个函数 $f: \mathfrak{F}$ 都是 $\mathfrak{C}$ 到自身的变换，不难看出它们在函数结合 $\circ$ 下构成幺半群：
+如果忽略 $f$ 本身的入参和出参，只考虑副作用，那么可以定义函数空间 $\mathfrak{F}=\mathcal{C}\to\mathcal{C}$。其中的任何一个函数 $f: \mathfrak{F}$ 都是 $\mathcal{C}$ 到自身的变换，不难看出它们在函数结合 $\circ$ 下构成幺半群：
 
-1. 封闭性：$f\circ g$ 也是 $\mathfrak{C}$ 到自身的变换。
+1. 封闭性：$f\circ g$ 也是 $\mathcal{C}$ 到自身的变换。
 2. 结合律：$(f\circ g)\circ h=f\circ (g\circ h)$。
 3. 单位元：存在 $\text{id}$，使得 $f\circ\text{id}=\text{id}\circ f=f$。
 
 进一步，我们还希望 $f$ 的副作用是可以回收的。换言之，我们额外要求 $f$ 存在逆元 $f^{-1}$，此时 $\mathfrak{F}$ 就构成一个群。但仅仅知道函数可逆并不能帮助我们找到它的逆，我们需要在书写这个函数时一并写出它的回收方法。因此我们引入 $\text{effect}$ 函子，使这个函数返回一个新的函数，这个函数可用于回收此次调用的副作用：
 
-$$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathfrak{C}&\to&    \mathfrak{C}\times\mathfrak{F} \\\text{effect}&:&f           &\mapsto&\mathcal{c} &\mapsto&\left(f(\mathcal{c}), f^{-1}\right) \end{array} $$
+$$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}&\to&    \mathcal{C}\times\mathfrak{F} \\\text{effect}&:&f           &\mapsto&c          &\mapsto&\left(f(c), f^{-1}\right) \end{array} $$
 
-下面是一个例子 (暂时忽略 $\mathfrak{C}$ 参数)：
+下面是一个例子 (暂时忽略 $\mathcal{C}$ 参数)：
 
 ```ts
 // effect(server.listen)
@@ -84,7 +84,7 @@ function serve(port: number) {
 
 然而，$\text{effect}\ f$ 不再是 $\mathfrak{F}$ 中的成员了，这并不适合组合多个副作用。为了解决这个问题，我们引入 $\text{collect}$ 和 $\text{restore}$ 两个变换：
 
-$$ \begin{array} \\\text{collect}&:&\mathfrak{C}\times\mathfrak{F}&\to&\mathfrak{C} \\\text{restore}&:&\mathfrak{C}                  &\to&\mathfrak{C} \end{array} $$
+$$ \begin{array} \\\text{collect}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C} \\\text{restore}&:&\mathcal{C}                  &\to&\mathcal{C} \end{array} $$
 
 其中 `collect()` 用于记录一个副作用，`restore()` 用于清空所有副作用。它们大致这样使用：
 
@@ -102,13 +102,13 @@ $$ \begin{array} \\\text{disposable}&:&\mathfrak{F}&\to&    \mathfrak{F} \\\text
 
 ### 上下文对象
 
-在上面的示例中，我们并没有显式地写出 $\mathfrak{C}$ 参数和返回值。可以认为 $\mathfrak{C}$ 变换存在于 `collect` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
+在上面的示例中，我们并没有显式地写出 $\mathcal{C}$ 参数和返回值。可以认为 $\mathcal{C}$ 变换存在于 `collect` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
 
 首先，所有插件都使用相同的全局函数，意味着不同插件的副作用完全无法区分，因此只能重启整个应用而无法细粒度地控制具体的插件；其次，这种设计意味着全局函数并不纯，因此一旦项目中出现了多例的依赖，整套系统的可靠性就会完全失效！
 
-引入显式 $\mathfrak{C}$ 变换会降低应用的可读性，忽略显式 $\mathfrak{C}$ 变换又存在上述缺陷。那么有没有办法在不增加心智负担的同时编写可靠的插件呢？Cordis 通过上下文对象给出了完美的解决方案。
+引入显式 $\mathcal{C}$ 变换会降低应用的可读性，忽略显式 $\mathcal{C}$ 变换又存在上述缺陷。那么有没有办法在不增加心智负担的同时编写可靠的插件呢？Cordis 通过上下文对象给出了完美的解决方案。
 
-上下文对象是一个插件中唯一的可变部分，它同时担任了 $\mathfrak{C}$ 参数和返回值的角色。在上面的示例中引入上下文对象，就得到了熟悉的 Koishi 插件：
+上下文对象是一个插件中唯一的可变部分，它同时担任了 $\mathcal{C}$ 参数和返回值的角色。在上面的示例中引入上下文对象，就得到了熟悉的 Koishi 插件：
 
 ```ts
 function serve(ctx: Context, config: Config) {
@@ -123,7 +123,7 @@ function serve(ctx: Context, config: Config) {
 ctx.plugin(serve, { port: 80 })
 ```
 
-当一个插件被加载时，将会从当前上下文对象上派生出一个新的上下文实例。子级上下文将管理插件内的全部副作用，而插件整体将作为一个副作用被父级上下文收集。
+当一个插件被加载时，将会从当前上下文对象上派生出一个新的上下文实例。子级上下文将管理插件内的全部副作用，而插件整体将作为一个副作用被父级上下文收集。可以将上下文比作一个副作用的插座，而副作用就是上面的插头。当上下文被卸载时，它将会将所有的副作用一一回收。而插件就是连接到另一个插座的插头，管理着子级上下文的全部副作用。
 
 除了 `ctx.plugin()` 外，上下文对象上还有许多 API，它们几乎都是某个函数的可逆化版本。例如 `ctx.on()` 是添加监听器的可逆化，`ctx.command()` 是注册指令的可逆化。这样一来，开发者只需要调用 `ctx` 上的方法，就可以确保插件的作用是可逆的。
 
