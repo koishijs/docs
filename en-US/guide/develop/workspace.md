@@ -12,7 +12,7 @@ These commands are should be run in the [workspace root](./config.md#应用目�
 
 ::: tabs code
 ```npm
-npm run setup [name] [-c] [-m] [-G]
+npm run setup [name] -- [-c] [-m] [-G]
 ```
 ```yarn
 yarn setup [name] [-c] [-m] [-G]
