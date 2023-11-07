@@ -50,6 +50,6 @@ En réalité, la plupart des cadres de robots conversationnels ne proposent pas 
 
 Tout d'abord, le bac à sable vous permet de comprendre rapidement l'efficacité des plugins sans avoir besoin de tester en profondeur dans un environnement réel. Imaginez que vous venez d'installer un plugin inconnu, vous ne savez pas comment l'utiliser et quel est son effet. Dans le pire des cas, si certaines fonctionnalités du plugin déclenchent des comportements restrictifs du robot, votre compte réel pourrait être suspendu. Le bac à sable vous permet de découvrir rapidement les fonctionnalités du plugin sans vous soucier de ces problèmes.
 
-其次，如果你是插件的开发者而非使用者，沙盒功能的意义则更大了：得益于 Koishi 的热重载机制，每次修改插件源码后，你只需要按下保存，即可立即在沙盒中体验修改后的效果。这允许你在任何设备上进行快速的迭代开发，而根本不需要准备真实环境的账号。
+Deuxièmement, si vous êtes un développeur de plugins plutôt qu'un utilisateur, la fonctionnalité de bac à sable est encore plus précieuse : grâce à la fonction de rechargement à chaud de Koishi, chaque fois que vous modifiez le code source du plugin, il vous suffit de cliquer sur « Enregistrer » pour essayer immédiatement les effets de la modification dans le bac à sable. Cela vous permet de développer rapidement et itérer sur n'importe quel appareil, sans avoir besoin d'un compte réel.
 
-当然，沙盒并不能代替真实的聊天环境，有些插件的效果可能无法在沙盒中体验。因此，我们推荐你在沙盒中体验插件的基础功能，而在真实环境中进行更加深入的测试。
+Bien sûr, le bac à sable ne peut pas remplacer un environnement de chat réel, car certaines fonctionnalités de plugins ne peuvent pas être essayées dans le bac à sable. Par conséquent, nous vous recommandons d'expérimenter les fonctionnalités de base des plugins dans le bac à sable, puis de les essayer plus en profondeur avec un compte réel.
