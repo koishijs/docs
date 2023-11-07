@@ -41,7 +41,7 @@ session.elements = [
 session.content = input.replace(/@(\d+)/g, '<at id="$1"/>')
 ```
 
-## 发送消息
+## Envoi de message
 
 ### 兼容性原则
 
