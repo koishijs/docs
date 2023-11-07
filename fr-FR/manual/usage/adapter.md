@@ -38,17 +38,17 @@ Simuler des conversations uniquement dans un bac à sable ne suffit pas. Nous de
 
 Parmi eux, les adaptateurs couramment utilisés sont déjà préinstallés dans Koishi, vous pouvez les trouver dans le groupe de configuration des plugins des « adaptateurs ». Si vous ne voyez pas la plateforme que vous souhaitez, vous pouvez également rechercher et installer d'autres plugins d'adaptateurs sur la place de marché.
 
-Une application Koishi peut se connecter à plusieurs comptes sur différentes plates-formes conversationnelles. Chaque compte correspond à une configuration de plugin, et vous pouvez ajouter de nouvelles configurations de plugins en suivant les méthodes décrites dans [Ajouter plus de plugins](./market.md#添加更多插件). 由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
+Une application Koishi peut se connecter à plusieurs comptes sur différentes plates-formes conversationnelles. Chaque compte correspond à une configuration de plugin, et vous pouvez ajouter de nouvelles configurations de plugins en suivant les méthodes décrites dans [Ajouter plus de plugins](./market.md#添加更多插件). Étant donné que plusieurs comptes robots dans la même plateforme partagent les mêmes données d'utilisateurs, il est très facile de passer entre eux pour équilibrer la charge.
 
-不同平台的接入方式与难度存在较大的差异。对于不同的平台，你需要做好相应的准备工作。这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
+Les méthodes et la complexité de la connexion varient considérablement d'une plateforme à l'autre, vous devez donc effectuer des préparatifs spécifiques pour chaque plateforme. Ces préparatifs peuvent inclure l'enregistrement d'un compte de développeur sur la plateforme, la préparation d'un serveur accessible depuis Internet, etc. Vous trouverez des instructions détaillées dans la documentation de chaque plugin d'adaptateur.
 
-好消息是，Koishi 的大部分功能都不依赖特定的聊天平台。因此在进行准备工作的同时，你完全可以阅读本文档的后续部分，并在沙盒中体验并学习 Koishi 的功能。
+Heureusement, la plupart des fonctionnalités de Koishi ne dépendent pas spécifiquement de la plateforme de chat. Par conséquent, pendant que vous effectuez ces préparatifs, vous pouvez lire la suite de ce document et expérimenter les fonctionnalités de Koishi dans le bac à sable.
 
-## 对比沙盒与真实环境
+## Comparaison entre le bac à sable et l'environnement réel
 
-事实上，大多数机器人框架都没有提供沙盒功能，或是倾向于用户在真实环境中进行体验。你可能会有疑惑：为什么 Koishi 要推荐使用沙盒功能呢？因此我们列出了沙盒的几点优势。
+En réalité, la plupart des cadres de robots conversationnels ne proposent pas de fonctionnalité de bac à sable ou encouragent les utilisateurs à expérimenter dans un environnement réel. Vous pourriez vous demander pourquoi Koishi recommande l'utilisation de la fonctionnalité de bac à sable. Nous avons donc répertorié quelques avantages du bac à sable.
 
-首先，沙盒可以让你快速地了解插件的效果，而不需要在真实环境中进行大量的测试。想象一下，你刚刚安装了一个陌生的插件，你并不知道应该如何使用它，也不知道它的效果是什么。最糟糕的情况下，一旦插件的某些功能触发了机器人的敏感行为，你的真实账号还存在被封禁的风险。而沙盒则可以让你在不用担心这些问题的情况下，快速地了解插件的功能。
+Tout d'abord, le bac à sable vous permet de comprendre rapidement l'efficacité des plugins sans avoir besoin de tester en profondeur dans un environnement réel. Imaginez que vous venez d'installer un plugin inconnu, vous ne savez pas comment l'utiliser et quel est son effet. Dans le pire des cas, si certaines fonctionnalités du plugin déclenchent des comportements restrictifs du robot, votre compte réel pourrait être suspendu. Le bac à sable vous permet de découvrir rapidement les fonctionnalités du plugin sans vous soucier de ces problèmes.
 
 其次，如果你是插件的开发者而非使用者，沙盒功能的意义则更大了：得益于 Koishi 的热重载机制，每次修改插件源码后，你只需要按下保存，即可立即在沙盒中体验修改后的效果。这允许你在任何设备上进行快速的迭代开发，而根本不需要准备真实环境的账号。
 
