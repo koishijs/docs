@@ -21,7 +21,7 @@
         "text": "开发指南",
         "link": "/guide/"
       }, {
-        "text": "进阶开发指南",
+        "text": "进阶指南",
         "link": "/cookbook/"
       }, {
         "text": "API 参考",
@@ -248,7 +248,7 @@
         }]
       }, {
         "items": [{
-          "text": "→ 进阶开发指南",
+          "text": "→ 进阶指南",
           "link": "/cookbook/"
         }]
       }],
