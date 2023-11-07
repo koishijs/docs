@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 Ouvrez une ligne de commande et accédez au répertoire dans lequel vous souhaitez créer le projet modèle de Koishi.
 
 ::: tip
-Ce répertoire ne doit pas être trop long et ne doit pas contenir d'espaces dans le chemin. Voici les chemins recommandés :
+这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
 
 - Pour Windows : `C:\dev` ou `D:\dev` (n'installez pas le projet directement à la racine du lecteur, créez plutôt un sous-répertoire)
 - Pour d'autres systèmes d'exploitation : `~/dev`
