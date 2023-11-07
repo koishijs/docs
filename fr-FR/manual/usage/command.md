@@ -1,36 +1,36 @@
-# 指令系统
+# Système de commandes
 
-在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
+Après avoir appris les bases de l'utilisation de la console, nous pouvons enfin commencer à explorer comment dialoguer avec le robot ! Commençons par l'exemple que nous avons vu dans la section précédente :
 
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">echo  发送消息</p>
-<p class="indent-1">help  显示帮助信息</p>
-<p>输入“帮助 指令名”查看特定指令的语法和使用示例。</p>
+<p>Commandes disponibles : </p>
+<p class="indent-1">echo  Envoi de message</p>
+<p class="indent-1">help  Afficher l'aide</p>
+<p>Tapez "help <commande>" pour voir la syntaxe et les exemples pour une commande spécifique.</p>
 </chat-message>
 </chat-panel>
 
-这里的输出与两个插件有关：
+La sortie ci-dessus concerne deux plugins :
 
-- help 指令由 [help](../../plugins/common/help.md) 插件提供，它可以显示指令列表或具体指令的帮助信息
-- echo 指令由 [echo](../../plugins/common/echo.md) 插件提供，它可以将用户的输入原样返回
+- La commande « help » est fournie par le plugin [help](../../plugins/common/help.md) qui peut d'afficher la liste des commandes disponibles ou des informations d'aide pour une commande spécifique.
+- La commande « echo » est fournie par le plugin [echo](../../plugins/common/echo.md) qui peut renvoyer le texte saisi par l'utilisateur.
 
-一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。当你安装了更多的插件后，你也就有了更多的指令可供使用。
+La plupart des fonctionnalités d'un robot Koishi sont proposés via des commandes. Lorsque vous installez davantage de plugins, vous pouvez utiliser à plus de commandes.
 
-## 查看帮助
+## Afficher l'aide
 
-help 指令后还可以添加一个参数，用于查看特定指令的帮助信息：
+La commande « help » accepte un paramètre optionnel pour afficher des informations d'aide pour une commande spécifique :
 
 <chat-panel>
 <chat-message nickname="Alice">help echo</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：echo &lt;message...></p>
-<p>发送消息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-e, --escape  发送转义消息</p>
-<p class="indent-1">-E, --unescape  发送反转义消息</p>
+<p>Commande : echo &lt;message...></p>
+<p>Envoi de message</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-e, --escape  Échapper le message</p>
+<p class="indent-1">-E, --unescape  Décoder le message</p>
 </chat-message>
 </chat-panel>
 
