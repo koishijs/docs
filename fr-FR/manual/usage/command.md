@@ -90,17 +90,17 @@ Les arguments peuvent être également de longueur fixe ou variable. Les argumen
 <p>Traduction</p>
 <p>Options disponibles :</p>
 <p class="indent-1">-s, --source &lt;lang> Langue source (détection automatique par défaut)</p>
-<p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
+<p class="indent-1">-t, --target &lt;lang> Langue cible (chinois par défaut)</p>
 </chat-message>
-<chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
-<chat-message nickname="Koishi">こんにちは世界</chat-message>
+<chat-message nickname="Alice">translate -t fr Hello, World</chat-message>
+<chat-message nickname="Koishi">Bonjour le monde</chat-message>
 </chat-panel>
 
-在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
+Dans l'exemple ci-dessus, les options `-s` et `-t` sont des options avec des arguments. Nous avons utilisé l'option `-t fr` pour spécifier la langue cible comme le français, tandis que la langue source suit toujours le comportement par défaut.
 
-## 触发前缀
+## Préfixe de déclenchement
 
-然而，如果仅仅通过一个词就能触发指令，在群聊环境下非常容易出现误触。为了避免这种情况，Koishi 引入了前缀触发的概念。在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
+Cependant, dans un canal de guilde, déclencher une commande avec un seul mot est très sujet aux erreurs. Pour éviter cette situation, Koishi introduit le concept de préfixe de déclenchement. 在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
 
 ```sh
 四季酱, echo hello
