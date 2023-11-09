@@ -73,9 +73,9 @@ Les options contrôlent également le comportement d'une commande. Elles commenc
 </chat-message>
 </chat-panel>
 
-Dans cet exemple, nous avons utilisé l'option `-E` pour modifier le contenu de la sortie. Nous expliquerons plus en détail comment cela fonctionne dans les sections suivantes.
+Dans l'exemple ci-dessus, nous avons utilisé l'option `-E` pour modifier la sortie de la commande. Nous expliquerons plus en détail comment cela fonctionne dans les sections suivantes.
 
-参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
+Les arguments peuvent être également de longueur fixe ou variable. Les arguments de longueur fixe ne peuvent pas contenir d'espaces, tandis que les arguments de longueur variables le peuvent. Les arguments de longueur fixe sont indiqués par `...` avant et après le nom de l'argument, par exemple, l'argument de la commande `echo` est de longueur variable.Si vous souhaitez saisir du contenu contenant des espaces pour un argument de longueur fixe, vous pouvez utiliser des guillemets pour l'encadrer, par exemple :
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
@@ -86,10 +86,10 @@ Dans cet exemple, nous avons utilisé l'option `-E` pour modifier le contenu de 
 <chat-panel>
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：translate &lt;text...></p>
+<p>Commande : translate &lt;text...></p>
 <p>Traduction</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-s, --source &lt;lang> Langue source (détection automatique par défaut)</p>
 <p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
 </chat-message>
 <chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
