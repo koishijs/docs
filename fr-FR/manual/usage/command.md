@@ -100,7 +100,7 @@ Dans l'exemple ci-dessus, les options `-s` et `-t` sont des options avec des arg
 
 ## Préfixe de déclenchement
 
-Cependant, dans un canal de guilde, déclencher une commande avec un seul mot est très sujet aux erreurs. Pour éviter cette situation, Koishi introduit le concept de préfixe de déclenchement. 在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
+Cependant, dans un canal de guilde, déclencher une commande avec un seul mot est très sujet aux erreurs. Pour éviter cette situation, Koishi introduit le concept de préfixe de déclenchement. Dans les « paramètres globaux », il y a les options de configuration « prefix » et « nickname ». Si vous définissez « prefix » sur « / », et « nickname » sur « Shiki », alors dans un canal de guilde, seuls les messages suivants peuvent déclencher l'exécution de commandes :
 
 ```sh
 四季酱, echo hello
