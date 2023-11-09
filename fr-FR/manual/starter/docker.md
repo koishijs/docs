@@ -51,4 +51,4 @@ Koishi lui-même et ses plugins peuvent être mis à jour via la console. Après
 
 ## Installer les plugins
 
-在容器运行时，可以通过在浏览器中访问 `http://宿主机地址:5140` 在控制台中安装和启用插件。Si vous ne parvenez pas à y accéder, veuillez vérifier la configuration de votre pare-feu.
+Lorsque le conteneur est en cours d'exécution, vous pouvez installer et activer des plugins dans la console à `http://<adresse_hôte>:5140` dans votre navigateur. Si vous ne parvenez pas à y accéder, veuillez vérifier la configuration de votre pare-feu.
