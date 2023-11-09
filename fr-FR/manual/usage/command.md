@@ -103,21 +103,21 @@ Dans l'exemple ci-dessus, les options `-s` et `-t` sont des options avec des arg
 Cependant, dans un canal de guilde, déclencher une commande avec un seul mot est très sujet aux erreurs. Pour éviter cette situation, Koishi introduit le concept de préfixe de déclenchement. Dans les « paramètres globaux », il y a les options de configuration « prefix » et « nickname ». Si vous définissez « prefix » sur « / », et « nickname » sur « Shiki », alors dans un canal de guilde, seuls les messages suivants peuvent déclencher l'exécution de commandes :
 
 ```sh
-四季酱, echo hello
-@四季酱 echo hello
-/echo hello
+Shiki, echo bonjour
+@Shiki, echo bonjour
+/echo bonjour
 ```
 
-换句话说，一个指令能够被触发的实际条件为：
+En d'autres termes, une commande peut être déclenchée si :
 
-- 消息以 `prefix` 开头，后面紧跟着指令调用
-- 消息以 `nickname` 开头，后面可以有逗号或空白字符，再后面是指令调用
-- 消息以 @机器人 开头 (可以有多个 `@`，但至少一个是机器人账号)，后面是指令调用
+- Le message commence par `prefix`, suivi immédiatement de nom de commande.
+- Le message commence par `nickname`, suivi d'une virgule ou de caractères blancs, puis de la commande.
+- Le massage commence par @robot (il peut y avoir plusieurs mentionnées, mais au moins un doit être le compte du robot), suivi de la commande.
 
-对于人数较多或是含有不止一个机器人的群聊，我们强烈建议每一个机器人都配置不同的触发前缀。而在私聊环境下，由于不用担心误触，因此并没有上面的限制。没有触发前缀的指令调用也能被正常执行。
+Pour les guildes contenant un grand nombre de personnes ou plusieurs robots, nous vous recommandons fortement de configurer de préfixes de déclenchement différents pour chaque robot.En revanche, dans les canaux directs, il n'y aura pas de problème des erreurs de commande déclenchée, donc il n'y a les restrictions ci-dessus. Les commandes sans préfixes de déclenchement peuvent également être exécutés normalement.
 
 ::: tip
-**关于 `prefix` 的几点提示：**
+**Quelque conseils concernant `prefix` : **
 
 1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
 2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
