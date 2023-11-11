@@ -81,7 +81,7 @@ Les arguments peuvent être également de longueur fixe ou variable. Les argumen
 <chat-message nickname="Alice">help "foo bar"</chat-message>
 </chat-panel>
 
-此外，部分选项也可以接受参数。例如，当你安装了翻译插件，你将会获得如下的帮助信息：
+En outre, certaines options peuvent également accepter des arguments. Par exemple, si vous avez installé le plugin de traduction, voici ce que vous obtiendrez :
 
 <chat-panel>
 <chat-message nickname="Alice">help translate</chat-message>
@@ -119,12 +119,11 @@ Pour les guildes contenant un grand nombre de personnes ou plusieurs robots, nou
 ::: tip
 **Quelque conseils concernant `prefix` : **
 
-1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
-2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
-:::
+1. `prefix` est une liste des préfixes, le valeur par défaut `['']` signifie qu'aucun préfixe n'est nécessaire pour déclencher une commande. Si vous videz la liste, cela signifie que toutes les commandes ne peuvent pas être déclenchées via `prefix` (mais elles peuvent toujours être déclenchées via des canaux directs ou `nickname` ou @robot).
+2. Si vous configurez plusieurs valeurs pour `prefix`, par exemple `['.', '/', '']`, alors `.`, `/`, ou aucun préfixe peuvent tous déclencher une commande. Cependant, Koishi suit l'ordre dans lequel les préfixes sont configurés, il est donc recommandé de placer la chaîne vide `''` en dernier.
+3. Vous pouvez configurer différents `prefix`-es pour différents types du chat, voir la section [Filtres](./customize.md#过滤器) pour plus de détails.
 
-## 子指令
+## Sous-commandes
 
 [admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
 
