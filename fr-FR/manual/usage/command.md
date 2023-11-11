@@ -122,6 +122,7 @@ Pour les guildes contenant un grand nombre de personnes ou plusieurs robots, nou
 1. `prefix` est une liste des préfixes, le valeur par défaut `['']` signifie qu'aucun préfixe n'est nécessaire pour déclencher une commande. Si vous videz la liste, cela signifie que toutes les commandes ne peuvent pas être déclenchées via `prefix` (mais elles peuvent toujours être déclenchées via des canaux directs ou `nickname` ou @robot).
 2. Si vous configurez plusieurs valeurs pour `prefix`, par exemple `['.', '/', '']`, alors `.`, `/`, ou aucun préfixe peuvent tous déclencher une commande. Cependant, Koishi suit l'ordre dans lequel les préfixes sont configurés, il est donc recommandé de placer la chaîne vide `''` en dernier.
 3. Vous pouvez configurer différents `prefix`-es pour différents types du chat, voir la section [Filtres](./customize.md#过滤器) pour plus de détails.
+:::
 
 ## Sous-commandes
 
