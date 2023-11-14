@@ -850,8 +850,16 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "Server",
-              "link": "/plugins/develop/server.md"
+              "text": "代理服务器 (Server Proxy)",
+              "link": "/plugins/develop/server-proxy.md"
+            },
+            {
+              "text": "API 服务器 (Server Satori)",
+              "link": "/plugins/develop/server-satori.md"
+            },
+            {
+              "text": "临时服务器 (Server Temp)",
+              "link": "/plugins/develop/server-temp.md"
             }
           ]
         }
