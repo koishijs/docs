@@ -30,7 +30,7 @@ class CustomProvider extends DataService<string[]> {
 }
 
 export const name = 'my-plugin'
-export const inject = ['console'] as const
+export const inject = ['console']
 
 export function apply(ctx: Context) {
   ctx.plugin(CustomProvider)
@@ -86,7 +86,7 @@ declare module '@koishijs/plugin-console' {
 }
 
 export const name = 'my-plugin'
-export const inject = ['console'] as const
+export const inject = ['console']
 
 export function apply(ctx: Context) {
   ctx.console.addListener('get-greeting', () => {
