@@ -13,7 +13,7 @@
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^1.4.0",
     "@koishijs/components": "^1.4.11",
-    "@koishijs/core": "^4.15.4",
+    "@koishijs/core": "^4.15.5",
     "@koishijs/dns": "^1.0.1",
     "@koishijs/market": "^4.1.7",
     "@koishijs/registry": "^6.0.4",
@@ -24,7 +24,7 @@
     "cross-env": "^7.0.3",
     "element-plus": "2.4.0",
     "esbuild-register": "^3.5.0",
-    "koishi": "^4.15.4",
+    "koishi": "^4.15.5",
     "markdown-it-mathjax3": "^4.3.2",
     "marked-vue": "^1.2.3",
     "typescript": "^5.2.2",
