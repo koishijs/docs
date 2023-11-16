@@ -481,19 +481,23 @@
               "link": "/api/resources/role.md"
             },
             {
-              "text": "Login",
+              "text": "交互 (Interaction)",
+              "link": "/api/resources/interaction.md"
+            },
+            {
+              "text": "登录状态 (Login)",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "Message",
+              "text": "消息 (Message)",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "Reaction",
+              "text": "表态 (Reaction)",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "User",
+              "text": "用户 (User)",
               "link": "/api/resources/user.md"
             }
           ]
