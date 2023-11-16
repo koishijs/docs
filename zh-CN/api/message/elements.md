@@ -9,13 +9,6 @@
 - HTML 中图像对应 `<img>` 标签，而 Koishi 中则是 `<image>`，并且语法也不相同
 :::
 
-::: tip 关于兼容性表格
-- `✓` 表示平台和适配器都完全支持
-- `~` 表示平台不支持，适配器自动回退
-- `○` 表示平台支持但适配器不支持
-- `?` 表示平台支持情况未知
-:::
-
 ## 基础元素
 
 基础元素是最常见的消息元素，它们能够在大多数平台上正常显示，是组成消息的基本单位。
@@ -46,13 +39,13 @@
 
 `<sharp>` 元素用于提及某个频道。
 
-### 表情 (face)
+<!-- ### 表情 (face)
 
 - **id:** `string` 表情的 ID
 - **name:** `string` 表情的名称
 - **platform:** `string` 表情显示的平台
 
-`<face>` 元素用于显示某个表情。通常来说为了跨平台转发，在 `<face>` 内部还会增加 `<image>` 作为回退。当图片的存在可能导致消息分片时，可以使用 `name` 取代图片的渲染。
+`<face>` 元素用于显示某个表情。通常来说为了跨平台转发，在 `<face>` 内部还会增加 `<image>` 作为回退。当图片的存在可能导致消息分片时，可以使用 `name` 取代图片的渲染。 -->
 
 ### 链接 (a)
 
@@ -171,7 +164,7 @@ hello<message/>world
 
 ```html
 <message>
-  <author user-id="123123123" nickname="Alice" avatar="url"/>
+  <author id="123123123" name="Alice" avatar="url"/>
   hello world
 </message>
 ```
@@ -190,7 +183,7 @@ hello<message/>world
   <message id="987654321"/>
   <!-- 合并转发里也可以嵌套模拟其他用户发送的消息 -->
   <message>
-    <author user-id="123123123" nickname="Alice" avatar="url"/>
+    <author id="123123123" name="Alice" avatar="url"/>
     hello world
   </message>
 </message>
@@ -206,11 +199,37 @@ hello<message/>world
 
 ### 作者 (author)
 
-- **userId:** `string` 用户 ID
-- **nickname:** `string` 昵称
+- **id:** `string` 用户 ID
+- **name:** `string` 昵称
 - **avatar:** `string` 头像 URL
 
 `<author>` 元素用于表示消息的作者。它的子元素会被渲染为作者的名字。
 
-- [1]: 基于 webhook 功能，目前暂未支持
-- [2]: 仅限 forward 和 quote 消息
+## 交互元素
+
+交互元素用于显然消息中的可交互性内容。如果平台不支持此类元素且难以提供回退，可以直接忽略整个元素。实现侧应当根据平台特性，针对性地返回带有交互和不带有交互的消息。
+
+### 按钮 (button) <badge type="warning">实验性</badge>
+
+- **id:** `string` 按钮的 ID
+- **type:** `string` 按钮的类型
+- **href:** `string` 按钮的链接
+- **text:** `string` 待输入文本
+- **theme:** `string` 按钮的风格
+
+`<button>` 元素用于表示一个按钮。它的子元素会被渲染为按钮的文本。
+
+按钮目前支持三种不同的类型：
+
+- 点击 `action` 类型的按钮时会触发一个 `interaction/button` 事件，该事件的 `button` 资源会包含上述 `id`
+- 点击 `link` 类型的按钮时会打开一个链接，该链接的地址为上述 `href`
+- 点击 `input` 类型的按钮时会在用户的输入框中填充上述 `text`
+
+`theme` 仅建议使用下列值：
+
+- primary
+- secondary
+- success
+- warning
+- danger
+- info
