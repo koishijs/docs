@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^1.4.0",
-    "@koishijs/components": "^1.4.11",
+    "@koishijs/components": "^1.4.12",
     "@koishijs/core": "^4.15.5",
     "@koishijs/dns": "^1.0.1",
     "@koishijs/market": "^4.1.7",
