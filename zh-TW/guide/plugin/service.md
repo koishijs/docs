@@ -11,7 +11,7 @@ Koishi 中的服务可以分为大致三种类型。对于每一种我都给出�
 第一种是由 **Koishi 自带的服务**。只要有上下文对象，你就可以随时访问这些服务。
 
 - ctx.model：提供数据模型
-- ctx.router：提供网络服务
+- ctx.i18n：提供国际化能力
 
 第二种是由 **Koishi 所定义但并未实现的服务**。你可以选择适当的插件来实现它们。在你安装相应的插件之前，相关的功能是无法访问的。
 
@@ -35,7 +35,7 @@ Koishi 中的服务可以分为大致三种类型。对于每一种我都给出�
 
 那么你应该怎么写呢？先让我们来看一段标准错误答案：
 
-```ts title=plugin-dialogue.ts
+```ts
 // 标准错误答案！别抄这个！
 export const name = 'dialogue'
 
@@ -57,11 +57,11 @@ export function apply(ctx: Context) {
 
 你很快会发现这样写完全无法运行。首先，数据库服务需要等到应用启动完成后才可以访问，换言之即使安装了数据库插件，你也无法立即判断数据库服务是否存在。此外，一旦上述服务所在插件在运行时被重载，由于上面的代码属于 dialogue 插件，因此 if 中代码的副作用将无法被有效清理；而当相应的服务重新被注册时，这部分的代码也不会被重新运行，从而导致一系列难以检测的问题。
 
-### using 属性
+### inject 属性
 
-为了解决这种问题，Koishi 为插件声明提供了一个独特的 `using` 属性：
+为了解决这种问题，Koishi 为插件声明提供了一个独特的 `inject` 属性：
 
-```ts title=plugin-dialogue.ts
+```ts
 export const name = 'dialogue'
 export const inject = ['database']
 
@@ -71,16 +71,16 @@ export function apply(ctx: Context) {
 }
 ```
 
-`using` 是一个数组，表示此插件依赖的服务列表。如果你声明了某个服务作为你插件的依赖：
+`inject` 可以是一个数组或者对象。这里使用了数组，表示此插件依赖的服务列表。怎么理解这里的依赖关系呢？如果你声明了某个服务作为插件的依赖：
 
 - 直到此服务的值变为 truthy 为止，该插件的函数体不会被加载
 - 一旦此服务的值发生变化，该插件将立即回滚 (并非插件停用)
 - 如果变化后的值依旧为 truthy，该插件会在回滚完成后被重新加载
 
-对于部分功能依赖某个服务的插件，我们也提供了一个语法糖 `ctx.using()`：
+对于部分功能依赖某个服务的插件，有两种方式可以实现。第一种情况下，你可以把这部分功能独立为一个子插件。此时，Koishi 提供了一个语法糖 `ctx.inject()`：
 
 ```ts
-ctx.using(['console'], (ctx) => {
+ctx.inject(['console'], (ctx) => {
   ctx.console.addEntry('/path/to/dialogue/extension')
 })
 
@@ -94,19 +94,37 @@ ctx.plugin({
 ```
 
 ::: tip
-请务必使用回调函数中的 ctx 而不是外层的 ctx，不然在服务被热重载时可能会引发内存泄漏。
+请注意：这里出现了两个 `ctx` 对象，它们属于不同的插件。在子插件的回调函数内，请务必使用作为参数的 `ctx` 而不是外层的 `ctx`，不然在服务被热重载时可能会引发内存泄漏。
 :::
+
+另一种情况是，插件依赖的服务仅仅在运行时判断并使用，并不提供任何副作用。此时可以将 `inject` 声明为一个对象，其含有 `required` 和 `optional` 两个可选的属性，分别表示必需依赖和可选依赖。这样声明的可选依赖同样可以在插件体中直接使用，但插件的生命周期并不会实际依赖该服务。换句话说，插件不会等待该服务加载，也不会因为服务的变化而回滚。
+
+```ts
+export const inject = {
+  optional: ['assets'],
+}
+
+export function apply(ctx: Context) {
+  ctx.command('dialogue').action((_, content) => {
+    // 检查资源存储服务是否存在
+    if (ctx.assets) ctx.assets.transform(content)
+  })
+}
+```
 
 ### 最佳实践
 
-现在让我们回到一开始的问题。对于 dialogue 插件所使用的三个服务 `database`, `assets` 和 `console`，分别应该如何声明呢？下面给出了一个最佳实践，请注意不同服务的处理方式之间的区别：
+在上面的讨论中，我们已经分别介绍了 dialogue 插件所用到的三个服务的声明方式。现在让我们把它们结合起来，看看最佳实践应该是怎样的。请注意不同服务的处理方式之间的区别。
 
-```ts title=plugin-dialogue.ts
+```ts
 // 正确答案！抄这个！
 export const name = 'dialogue'
 
-// 对于整体依赖的服务，使用 using 属性声明依赖关系
-export const inject = ['database']
+// 对于整体依赖的服务，使用 inject 属性声明依赖关系
+export const inject = {
+  required: ['database'],
+  optional: ['assets'],
+}
 
 export function apply(ctx: Context) {
   ctx.command('dialogue').action((_, content) => {
@@ -114,8 +132,8 @@ export function apply(ctx: Context) {
     if (ctx.assets) ctx.assets.transform(content)
   })
 
-  // 对于部分功能依赖的服务，使用 ctx.using() 注册为子插件
-  ctx.using(['console'], (ctx) => {
+  // 对于部分功能依赖的服务，使用 ctx.inject() 注册为子插件
+  ctx.inject(['console'], (ctx) => {
     ctx.console.addEntry('/path/to/dialogue/extension')
   })
 }
@@ -269,38 +287,13 @@ class Console extends Service {
 
     // 注意这个地方，caller 属性会指向访问此方法的上下文
     // 只需要在这个上下文上监听 dispose 事件，就可以顺利处理副作用了
-    this.caller?.on('dispose', () => {
+    this[Context.current]?.on('dispose', () => {
       this.entries.delete(filename)
       this.triggerReload()
     })
   }
 }
 ```
-
-::: tip
-需要注意的是，这里的 `caller` 属性仅仅会在调用时进行赋值，因此如果你在访问 `caller` 前进行了其他操作，那么你获取到的 `caller` 就可能不是一开始访问这个服务的上下文了。请尽量在一开始保存这个上下文的引用，例如你可以使用下面的写法：
-
-```ts
-interface Console {
-  entries: Set<string>
-  triggerReload(): void
-}
-// ---cut---
-class Console extends Service {
-  async addEntry(filename: string) {
-    // 预先保存一下 caller，因为后面有异步操作
-    const caller = this.caller
-    this.entries.add(filename)
-    await this.triggerReload()
-
-    caller.on('dispose', async () => {
-      this.entries.delete(filename)
-      await this.triggerReload()
-    })
-  }
-}
-```
-:::
 
 ## 在 `package.json` 中声明依赖
 
@@ -324,7 +317,7 @@ class Console extends Service {
 
 一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
 
-1. `peerDependencies` 描述的是 npm 包的运行时行为。如果对应的依赖不存在，那么程序预期无法正常运行 (除非在 `peerDependenciesMeta` 中指明可选性)。而对于 Koishi 插件来说，由于有了 `using` 机制，即使依赖的服务不存在，程序也不会崩溃。
+1. `peerDependencies` 描述的是 npm 包的运行时行为。如果对应的依赖不存在，那么程序预期无法正常运行 (除非在 `peerDependenciesMeta` 中指明可选性)。而对于 Koishi 插件来说，由于有了 `inject` 机制，即使依赖的服务不存在，程序也不会崩溃。
 
 2. `peerDependencies` 是一对一的关系，即依赖的只能是另一个确定的包。而 Koishi 中的服务则是一对多的关系，即依赖的服务可以被多个插件所提供。
 
@@ -339,7 +332,7 @@ class Console extends Service {
 // 在编译后，这个语句会被移除，不会引入任何副作用
 import {} from 'koishi-plugin-puppeteer'
 
-// 通过 using 属性声明依赖，并通过 ctx 来访问服务
+// 通过 inject 属性声明依赖，并通过 ctx 来访问服务
 export const inject = ['puppeteer']
 export function apply(ctx: Context) {
   ctx.puppeteer.render()
