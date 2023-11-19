@@ -24,7 +24,7 @@ Of course, you could also use the template project in production. While it might
 
 ## Install Node.js
 
-Koishi requires [Node.js](https://nodejs.org/) (at least v16, suggested to use LTS versions) Runtime, you need to install it.
+Koishi requires [Node.js](https://nodejs.org/) (at least v18, suggested to use LTS versions) Runtime, you need to install it.
 
 ### Download Installer
 
