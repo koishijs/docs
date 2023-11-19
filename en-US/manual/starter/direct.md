@@ -25,7 +25,7 @@ While it is recommended to use the [boilerplate project](./boilerplate.md) for m
 Koishi is written with TypeScript, so TypeScript would be the first class programming language when you are developing Koishi. In the following section of documents, we will use TypeScript as example language. If you are writing vanilla JavaScript or other JavaScript dialects, you could modify your own code based on the example code.
 :::
 
-Koishi requires [Node.js](https://nodejs.org/) (at least v18, suggested to use LTS versions) Runtime, you need to install it.Here we suppose you have it installed already.
+Koishi requires [Node.js](https://nodejs.org/) (at least v16, suggested to use LTS versions) Runtime, you need to install it.Here we suppose you have it installed already.
 
 Initialize a directly as your bot, install Koishi and common plugins, here we would install several official plugins as example: console, sandbox and echo.
 

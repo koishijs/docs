@@ -24,7 +24,7 @@ next:
 
 ## 安装 Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### 下载安装包
 
