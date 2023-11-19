@@ -24,7 +24,7 @@ Bien sûr, le projet modèle peut également être utilisé en production. Bien 
 
 ## Installer Node.js
 
-Koishi a besoin d'un environnement d'exécution [Node.js](https://nodejs.org/) (version minimale : 16, version LTS recommandée), que vous devez installer vous-même.
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### Télécharger le package d'installation
 
