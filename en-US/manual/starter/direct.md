@@ -25,7 +25,7 @@ While we recommend the use of the [boilerplate](./boilerplate.md) for most users
 The Koishi itself is written in TypeScript, so we recommend using TypeScript for Koishi development. In the following documentation, we will consistently use TypeScript as an example. If you are writing vanilla JavaScript or other JavaScript dialects, you could make modifications for your own code based on the example one.
 :::
 
-Koishi requires a [Node.js](https://nodejs.org/) runtime environment (minimum version16, LTS recommended), you need to install it yourself. We assume that you have already installed it.
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。We assume that you have already installed it.
 
 Firstly initialize your bot directory, then install Koishi and the necessary plugins (in this example, we use the official plugins such as console, sandbox, and echo):
 
