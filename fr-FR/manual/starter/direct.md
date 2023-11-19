@@ -25,7 +25,7 @@ Bien que nous recommandions actuellement à la plupart des utilisateurs d'utilis
 Koishi est lui-même écrit en TypeScript, c'est pourquoi nous vous recommandons d'utiliser TypeScript pour développer avec Koishi. Dans la documentation à suivre, nous utiliserons systématiquement TypeScript comme exemple. Si vous préférez écrire en JavaScript pur ou utiliser un autre dialecte, vous pouvez vous baser sur les exemples en TypeScript.
 :::
 
-Koishi nécessite un environnement d'exécution [Node.js](https://nodejs.org/) (version minimale : 16, version LTS recommandée) que vous devez installer vous-même. Nous supposons que vous l'avez déjà installé.
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。Nous supposons que vous l'avez déjà installé.
 
 Commencez par initialiser le répertoire de votre robot conversationnel et installer Koishi ainsi que les plugins nécessaires (nous prendrons l'exemple des plugins officiels : console, sandbox et echo) :
 
