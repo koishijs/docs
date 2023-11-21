@@ -35,11 +35,11 @@ export default async () => {
 
     locales: {
       'en-US': require('./en-US'),
+      'fr-FR': require('./fr-FR'),
       'zh-CN': require('./zh-CN'),
       ...(isDev ? {
         'zh-TW': require('./zh-TW'),
         'de-DE': require('./de-DE'),
-        'fr-FR': require('./fr-FR'),
         'ja-JP': require('./ja-JP'),
         'ru-RU': require('./ru-RU'),
       } : {}),
