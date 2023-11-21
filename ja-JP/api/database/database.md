@@ -78,6 +78,19 @@ interface TableStats {
 }
 ```
 
+### WriteResult
+
+数据库写入操作的结果。
+
+```ts
+export interface WriteResult {
+  // upsert 操作中插入数据的条数
+  inserted?: number
+  // set, upsert, remove 操作中匹配数据的条数
+  matched?: number
+}
+```
+
 ## 实例方法
 
 ### ctx.database.select(table, query?)
@@ -110,7 +123,7 @@ interface TableStats {
 - **table:** `string` 表名
 - **query:** [`Query`](./query.md) 约束条件
 - **update:** [`Update`](#update) 数据
-- 返回值: `Promise<void>`
+- 返回值: [`Promise<WriteResult>`](#writeresult)
 
 更新数据。
 
@@ -118,7 +131,7 @@ interface TableStats {
 
 - **table:** `string` 表名
 - **query:** [`Query`](./query.md) 约束条件
-- 返回值: `Promise<void>`
+- 返回值: [`Promise<WriteResult>`](#writeresult)
 
 删除数据。
 
@@ -135,7 +148,7 @@ interface TableStats {
 - **table:** `string` 表名
 - **data:** [`Update[]`](#update) 数据
 - **keys:** `string | string[]` 用于索引的字段
-- 返回值: `Promise<void>`
+- 返回值: [`Promise<WriteResult>`](#writeresult)
 
 插入或更新数据。
 
