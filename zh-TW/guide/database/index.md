@@ -1,7 +1,7 @@
 # 基本用法
 
 ::: tip
-`ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#using-属性)。
+`ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#inject-属性)。
 :::
 
 對於幾乎所有大型機器人專案，資料庫的使用都是不可或缺的。但如果每个插件都独立处理与数据库的交互，这将导致插件之间的兼容性非常差——用户要么选择同时安装多个数据库，要么只能放弃一些功能。为此，Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广泛地运用于各种插件中，足以应对绝大部分使用场景。
@@ -88,7 +88,7 @@ await ctx.database.set('schedule', 1234, {
 await ctx.database.set('foo', { date: new Date() }, (row) => ({
   // { $add: [a, b] } 相当于 a + b
   // { $: field } 相当于对当前行的 field 字段取值
-  count: $.add($.count, 1),
+  count: $.add(row.count, 1),
 }))
 ```
 
@@ -143,6 +143,23 @@ await ctx.database.upsert('channel', rows, ['platform', 'id'])
 // 从 schedule 表中删除特定 id 的数据行
 // 第二个参数也可以使用上面介绍的查询表达式
 await ctx.database.remove('schedule', [id])
+```
+
+## 获取改动行数
+
+`set`, `upsert` 和 `remove` 操作都会返回一个 `WriteResult` 对象，它包含了这次操作的结果。你可以通过 `matched` 属性来获取匹配的数据行数 (注意不是修改的函数)，通过 `inserted` 属性来获取插入的数据行数 (仅限 `upsert` 操作)。
+
+```ts
+// 对某个用户的余额进行扣除
+const result = await ctx.database.set(
+  'user',
+  { id, money: { $gte: 100 } },
+  (row) => ({ money: $.sub(row.money, 100) }),
+)
+// 如果用户不存在或余额不足，此时 result.matched 为 0
+if (!result.matched) {
+  throw new Error('用户不存在或余额不足！')
+}
 ```
 
 ## 对比 set 和 upsert
