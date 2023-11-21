@@ -31,27 +31,29 @@ Firstly initialize your bot directory, then install Koishi and the necessary plu
 
 ::: tabs code
 ```npm
-# Initialize the project
+# 初始化项目
 npm init
 
-# Install Koishi and related plugins
-npm i koishi @koishijs/plugin-console \
-             @koishijs/plugin-sandbox \
-             @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+npm i koishi \
+      @koishijs/plugin-console \
+      @koishijs/plugin-sandbox \
+      @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this step if you using TypeScript)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
 ```yarn
-# Initialize the project
+# 初始化项目
 yarn init
 
-# Install Koishi and related plugins
-yarn add koishi @koishijs/plugin-console \
-                @koishijs/plugin-sandbox \
-                @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+yarn add koishi
+         @koishijs/plugin-console \
+         @koishijs/plugin-sandbox \
+         @koishijs/plugin-echo
 
-# Install TypeScript and related packages (skip this step if not using TypeScript)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
 :::
@@ -97,12 +99,14 @@ If you want to integrate your bot with an actual chat platform, you just need to
 
 ::: tabs code
 ```npm
-# Using Satori and Discord adapters as examples
-npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+npm i @koishijs/plugin-adapter-satori \
+      @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# Using Satori and Discord adapters as examples
-yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+yarn add @koishijs/plugin-adapter-satori \
+         @koishijs/plugin-adapter-discord
 ```
 :::
 
