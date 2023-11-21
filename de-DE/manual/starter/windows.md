@@ -26,17 +26,19 @@ Die Installation von Koishi über das Installationspaket ist die empfohlene Inst
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-Doppelklicken Sie auf das msi-Installationspaket und klicken Sie auf "Weiter", um die Installation abzuschließen. Sie können nun Koishi im Startmenü finden.
+双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
 ::: tip
 Der Installationsprozess kann auf einigen Computern mehr als 10 Minuten dauern. Bitte haben Sie Geduld.
 :::
 
+## 启动
+
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-Klicken Sie auf das Koishi-Symbol, um es zu starten. Warten Sie einige Sekunden, bis die Koishi-Konsole geöffnet wird. Jetzt können Sie Koishi verwenden.
+安装完成后，点击 Koishi 图标即可启动。Warten Sie einige Sekunden, bis die Koishi-Konsole geöffnet wird. Jetzt können Sie Koishi verwenden.
 
 ## Andere Auswahlmöglichkeiten
 
