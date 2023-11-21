@@ -17,8 +17,16 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 Ce projet est toujours en cours de développement. Certaines fonctionnalités peuvent ne pas être disponibles.
 :::
 
-## Téléchargement
+## 下载
 
 - [Télécharger le package standard (.apk)](https://k.ilharp.cc/android-lite.apk)
 - [Télécharger le package d'extension (.apk)](https://k.ilharp.cc/android-full.apk)
 - [Voir plus de versions](https://github.com/koishijs/koishi-android/releases)
+
+## Installation
+
+Installer Koishi via le programme d'installation est la méthode la recommandée, car elle configure automatiquement tout ce dont vous avez besoin. En général, vous pouvez choisir cette méthode.
+
+## 启动
+
+安装完成后，点击 Koishi 图标即可启动。
