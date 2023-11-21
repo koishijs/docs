@@ -18,6 +18,14 @@ next:
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
+## Installation
+
+Die Installation von Koishi über das Installationspaket ist die empfohlene Installationsmethode, da es alles automatisch für das System konfiguriert. In den meisten Fällen sollten Sie diese Methode wählen.
+
+## 启动
+
+安装完成后，点击 Koishi 图标即可启动。Warten Sie einige Sekunden, bis die Koishi-Konsole geöffnet wird. Jetzt können Sie Koishi verwenden.
+
 ## 其他选择
 
 找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
