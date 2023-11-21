@@ -438,6 +438,9 @@
         }, {
           "text": "深入工作区",
           "link": "/cookbook/design/workspace.md"
+        }, {
+          "text": "整合包开发",
+          "link": "/cookbook/design/bundle.md"
         }]
       }, {
         "text": "最佳实践",
