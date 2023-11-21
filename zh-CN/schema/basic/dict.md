@@ -17,6 +17,8 @@ code: |
 
 使用 `.role('table')` 可以将字典以表格形式显示。
 
+使用 `.collapse()` 可以将配置项设置为默认折叠 (对表格无效)。
+
 例子里的 `Boolean` 是 `Schema.boolean().required()` 的简写。
 
 ```ts
