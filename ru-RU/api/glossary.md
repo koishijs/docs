@@ -22,7 +22,6 @@
 - [开发 > 交互基础 > 进阶用法](../guide/basic/advanced.html#机器人对象)
 - [开发 > 跨平台 > 实现机器人](../guide/adapter/bot.md)
 - [API > 核心模块 > 机器人](./core/bot.md)
-- [API > 内置服务 > 机器人](./service/bots.md)
 
 ## 频道 (Channel)
 

@@ -28,13 +28,6 @@
 
 安装一个存在服务依赖的插件。参见 [服务的依赖关系](../../guide/plugin/service.md#服务的依赖关系)。
 
-### ctx.dispose(plugin?)
-
-- **plugin:** `Plugin` 要移除的插件
-- 返回值: `Runtime`
-
-移除插件中所注册的钩子、中间件、指令和子插件等。`plugin` 是默认为当前上下文所在的插件。如果既没有提供 `plugin`，上下文也不是一个插件上下文的话，会抛出一个错误。参见 [卸载插件](../../guide/plugin/#卸载插件)。
-
 ### ctx.start()
 
 - 返回值: `Promise<void>`

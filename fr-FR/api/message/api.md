@@ -1,4 +1,4 @@
-# 渲染函数
+# Fonctions rendues
 
 ## 实例属性
 

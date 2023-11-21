@@ -24,7 +24,7 @@ next:
 
 ## Node.js のインストール
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
 
 ### インストーラーのダウンロード
 
@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 コマンドラインを開いて Koishi プロジェクトを作成したいディレクトリに移動します。
 
 ::: tip
-このディレクトリは長くない方が良く、パスには日本語やスペースを避けてください。おすすめのディレクトリは以下のとおりです：
+这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - その他のオペレーティングシステム：`~/dev`

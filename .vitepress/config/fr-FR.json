@@ -39,15 +39,15 @@
         "text": "Développement",
         "items": [
           {
-            "text": "Guide",
+            "text": "Guide de développement",
             "link": "/guide/"
           },
           {
-            "text": "进阶",
+            "text": "进阶指南",
             "link": "/cookbook/"
           },
           {
-            "text": "API",
+            "text": "Références de l'API",
             "link": "/api/"
           },
           {
@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Officielles",
             "link": "/plugins/"
           }
         ],
@@ -133,7 +133,7 @@
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "La première conversation",
+              "text": "Première conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -158,7 +158,7 @@
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "Maintenance des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -166,7 +166,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -179,7 +179,7 @@
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "L'outil de ligne de commande",
+              "text": "Outils de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -361,7 +361,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶开发指南",
+              "text": "→ 进阶指南",
               "link": "/cookbook/"
             }
           ]
@@ -428,10 +428,6 @@
           "text": "Service interne",
           "items": [
             {
-              "text": "Bots : robots",
-              "link": "/api/service/bots.md"
-            },
-            {
               "text": "Events : événements",
               "link": "/api/service/events.md"
             },
@@ -444,8 +440,12 @@
               "link": "/api/service/http.md"
             },
             {
-              "text": "I18n : Internationalisation",
+              "text": "I18n : internationalisation",
               "link": "/api/service/i18n.md"
+            },
+            {
+              "text": "Loader : chargeur",
+              "link": "/api/service/loader.md"
             },
             {
               "text": "Permissions : génération des permissions",
@@ -462,23 +462,27 @@
           ]
         },
         {
-          "text": "平台资源",
+          "text": "Ressources",
           "items": [
             {
-              "text": "频道 (Channel)",
+              "text": "Channel : canaux",
               "link": "/api/resources/channel.md"
             },
             {
-              "text": "群组 (Guild)",
+              "text": "Guild : guildes",
               "link": "/api/resources/guild.md"
             },
             {
-              "text": "群组成员 (GuildMember)",
+              "text": "GuildMember : membres de la guilde",
               "link": "/api/resources/member.md"
             },
             {
-              "text": "群组角色 (GuildRole)",
+              "text": "GuildRole : rôles de la guilde",
               "link": "/api/resources/role.md"
+            },
+            {
+              "text": "交互 (Interaction)",
+              "link": "/api/resources/interaction.md"
             },
             {
               "text": "登录状态 (Login)",
@@ -499,26 +503,26 @@
           ]
         },
         {
-          "text": "消息元素",
+          "text": "Élément message",
           "items": [
             {
-              "text": "语法规范",
+              "text": "Spécification syntaxe",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "Éléments standards",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染函数",
+              "text": "Fonctions rendues",
               "link": "/api/message/api.md"
             },
             {
-              "text": "消息编码器",
+              "text": "Encodeur d'éléments",
               "link": "/api/message/encoder.md"
             }
           ]
@@ -605,52 +609,56 @@
           ]
         },
         {
-          "text": "设计原理",
+          "text": "Principe de conception",
           "items": [
             {
-              "text": "项目架构",
+              "text": "Structure du projet",
               "link": "/cookbook/design/structure.md"
+            },
+            {
+              "text": "可逆的 Koishi",
+              "link": "/cookbook/design/disposable.md"
+            },
+            {
+              "text": "零占用的 Koishi",
+              "link": "/cookbook/design/storage.md"
             },
             {
               "text": "深入工作区",
               "link": "/cookbook/design/workspace.md"
             },
             {
-              "text": "可逆的 Koishi",
-              "link": "/cookbook/design/reversible.md"
-            },
-            {
-              "text": "零占用的 Koishi",
-              "link": "/cookbook/design/storage.md"
+              "text": "整合包开发",
+              "link": "/cookbook/design/bundle.md"
             }
           ]
         },
         {
-          "text": "最佳实践",
+          "text": "Meilleures pratiques",
           "items": [
             {
               "text": "资源转存",
               "link": "/cookbook/practice/assets.md"
             },
             {
-              "text": "图片渲染",
+              "text": "Rendu d'image",
               "link": "/cookbook/practice/render.md"
             },
             {
-              "text": "部署到 k-on!",
+              "text": "Déployer sur k-on !",
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "编写测试",
+              "text": "Écrit des tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
         },
         {
-          "text": "案例分析",
+          "text": "Etude de cas",
           "items": [
             {
-              "text": "指令管理",
+              "text": "Gestion des commandes",
               "link": "/cookbook/appendix/commands.md"
             }
           ]
@@ -665,11 +673,7 @@
               "link": "/market/"
             },
             {
-              "text": "Plugins Services",
-              "link": "/market/service.md"
-            },
-            {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
@@ -722,11 +726,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official Account",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "企业微信",
+              "text": "WeCom (WeChat Work)",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -813,31 +817,31 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "Explorer : gestion des fichiers",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "Insight : dépendant des plugins",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "Locales : traduction locale",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "Logger : gestion de journal",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Market : place de marché",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Sandbox : débogage sur bac à sable",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "Status : état de fonctionnement",
               "link": "/plugins/console/status.md"
             }
           ]
@@ -854,8 +858,16 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "API 服务器 (Server)",
-              "link": "/plugins/develop/server.md"
+              "text": "代理服务器 (Server Proxy)",
+              "link": "/plugins/develop/server-proxy.md"
+            },
+            {
+              "text": "API 服务器 (Server Satori)",
+              "link": "/plugins/develop/server-satori.md"
+            },
+            {
+              "text": "临时服务器 (Server Temp)",
+              "link": "/plugins/develop/server-temp.md"
             }
           ]
         }
@@ -869,7 +881,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]

@@ -4,7 +4,7 @@ prev:
   link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /en-US/manual/usage/market.html
 ---
 
 # Install for Windows
@@ -13,7 +13,7 @@ next:
 If you want to learn about other installation method, please visit [Installation](./index.md).
 :::
 
-## Download
+## 下载
 
 - [Installer (.msi)](https://k.ilharp.cc/win.msi)
 - [Other Downloads](https://github.com/koishijs/koishi-desktop/releases)
@@ -26,17 +26,19 @@ It is recommended to install Koishi from the installer, which would deal with mo
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-Double-click on the MSI installer and go through the installation by clicking "Next" buttons. You would find Koishi in the Start Menu after the installation.
+双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
 ::: tip
 The installation might cost more than 10 minutes on some devices, please be patient.
 :::
 
+## 启动
+
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-Click the Koishi icon to launch it. The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
+安装完成后，点击 Koishi 图标即可启动。The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
 ## Other Downloads
 

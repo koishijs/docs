@@ -25,7 +25,7 @@ next:
 Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
 :::
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运行环境，你需要自己安装它。这里我们假定你已经安装完成了。
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。这里我们假定你已经安装完成了。
 
 首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 console, sandbox 和 echo 为例)：
 
@@ -35,9 +35,10 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v16，推荐使用 LTS) 运
 npm init
 
 # 安装 Koishi 和相关插件
-npm i koishi @koishijs/plugin-console \
-             @koishijs/plugin-sandbox \
-             @koishijs/plugin-echo
+npm i koishi \
+      @koishijs/plugin-console \
+      @koishijs/plugin-sandbox \
+      @koishijs/plugin-echo
 
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
@@ -47,9 +48,10 @@ npm i typescript @types/node esbuild esbuild-register -D
 yarn init
 
 # 安装 Koishi 和相关插件
-yarn add koishi @koishijs/plugin-console \
-                @koishijs/plugin-sandbox \
-                @koishijs/plugin-echo
+yarn add koishi
+         @koishijs/plugin-console \
+         @koishijs/plugin-sandbox \
+         @koishijs/plugin-echo
 
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
@@ -98,11 +100,13 @@ node -r esbuild-register .
 ::: tabs code
 ```npm
 # 以 Satori 和 Discord 适配器为例
-npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+npm i @koishijs/plugin-adapter-satori \
+      @koishijs/plugin-adapter-discord
 ```
 ```yarn
 # 以 Satori 和 Discord 适配器为例
-yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+yarn add @koishijs/plugin-adapter-satori \
+         @koishijs/plugin-adapter-discord
 ```
 :::
 
@@ -174,7 +178,7 @@ ctx.plugin(require('koishi-plugin-forward'))
 
 ## 添加交互逻辑
 
-除了已经封装好的插件外，我们还可以添加自己的交互逻辑：
+除了使用发布在 npm 上的插件，我们还可以添加自己的交互逻辑：
 
 ```ts title=index.ts
 // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”

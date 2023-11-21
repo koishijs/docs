@@ -1,6 +1,6 @@
 # Génération des comptes
 
-Koishi se décrit comme un framework multiplateforme, mais que signifie vraiment cette "multiplateforme" ?Cela ne signifie pas seulement que Koishi prend en charge plusieurs plateformes d'exécution, mais aussi que Koishi peut se connecter simultanément à plusieurs plateformes de chat et offrir une expérience la plus native possible :
+Koishi se décrit comme un framework multiplateforme, mais que signifie vraiment cette "multiplateforme" ? Cela ne signifie pas seulement que Koishi prend en charge plusieurs plateformes d'exécution, mais aussi que Koishi peut se connecter simultanément à plusieurs plateformes de chat et offrir une expérience la plus native possible :
 
 - Koishi fournit une interface unifiée vous permettant de profiter de l'écosystème complet de Koishi sur n'importe quelle plateforme conversationalle.
 - Les applications Koishi peuvent se connecter simultanément à plusieurs plateformes de chat, ce qui permet aux utilisateurs d'interagir avec votre robot sur n'importe quelle plateforme.

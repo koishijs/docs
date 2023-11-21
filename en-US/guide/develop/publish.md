@@ -101,11 +101,11 @@ To make more information available to Koishi users, you could add more comprehen
 }
 ```
 
-- **contributors:** 插件维护者，应该是一个数组，其中的元素通常使用 `名字 <邮箱>` 的格式
-- **license:** 插件许可证，你可以在 [这里](https://choosealicense.com/licenses/) 了解各种许可证的详细信息
-- **homepage:** 插件主页，可以是一个网址 (比如你的 GitHub 项目地址)
-- **repository:** 插件源码仓库，应该是一个对象，其中 `type` 字段指定仓库类型，`url` 字段指定仓库地址
-- **keywords:** 插件关键词，应该是一个字符串数组，会用于插件市场中的搜索功能
+- **contributors:** plugin maintainers, should be an array. The elements usually follow the format `Name <Email>`.
+- **license:** license under your plugins You can find detailed information about [various licenses here](https://choosealicense.com/licenses/).
+- **homepage:** homepage for your plugin, which can be a URL (e.g. your GitHub project address).
+- **repository:** source code repository of the plugin, which should be an object. The `type` field specifies the type of repository, and the `url` field specifies the repository address.
+- **keywords:** keywords for the plugin, which should be an array of strings. They are used for the search function in the plug-in market.
 
 ### Koishi fields
 
@@ -133,13 +133,18 @@ We can also use the `koishi` field to specify Koishi related information
 }
 ```
 
-- **description:** 插件描述，应该是一个对象，其中的键代表语言名，值是对应语言下的描述
-- **service:** 插件的服务相关信息，具体包含下列属性：
-  - **required:** 必需的服务，应该是一个服务名构成的数组
-  - **optional:** 可选的服务，应该是一个服务名构成的数组
-  - **implements:** 实现的服务，应该是一个服务名构成的数组
-- **locales:** 插件支持的语言，应该是一个语言名构成的数组
-- **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
+- **description:** This refers to the description of the plugin, which should be an object. The keys represent the language names, and the values are the descriptions in the corresponding languages.
+- **service:** This pertains to the service-related information of the plugin, which includes the following attributes:
+  - **required:** necessary services, represented as an array of service names.
+  - **optional:** optional services, also represented as an array of service names.
+  - **implements:** services that your plugin implements, represented as an array of service names.
+- **locales:** This refers to the languages supported by the plugin, represented as an array of language names.
+- **preview:** If set to `true`, this allows the plugin to be displayed as “under development”.
+- **hidden:** If set to `true`, this prevents the plugin from being displayed in the marketplace (you usually don’t need to do this).
+
+::: tip
+Additionally, there are some fields related to the deployment process of [Koishi Online](../../cookbook/practice/online.md) (such as `browser`, `exports`, etc.). Since they do not affect the mainline development, you can learn about them later.
+:::
 
 ## Publish your plugin
 
@@ -159,30 +164,38 @@ yarn pub [...name]
 This will be released of all plugins that have changed version numbers.
 
 ::: tip
-从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
+It will take some time for the marketplace to include your plugin (usually within 15 minutes), sit back and relax.
 :::
 
-:::: tip
-如果你配置了国内镜像，你可能会遇到以下的错误提示：
+::::tip
+If you are in China and have configured a mirror, you may encounter the following error hint:
 
 ```text
 No token found and can't prompt for login when running with --non-interactive.
 ```
 
-此时你需要将镜像源重置，并重新登录 npm 账号：
+此时你需要在发布时使用官方镜像，具体操作如下：
 
 ::: tabs code
 ```npm
-npm config delete registry
-npm login
+npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
 ```yarn
-yarn config delete registry
-yarn login
+yarn pub [...name] --registry https://registry.yarnpkg.com
 ```
 :::
 
-发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。 :
+对于 Yarn v2 及以上版本，你还可以分别针对发布和安装设置不同的镜像：
+
+::: tabs code
+```yarn
+# 安装时使用国内镜像
+yarn config set npmRegistryServer https://registry.npmmirror.com
+# 发布时使用官方镜像
+yarn config set npmPublishRegistry https://registry.yarnpkg.com
+```
+:::  
+:
 :::
 
 ## Updating version
@@ -191,7 +204,7 @@ Version default starts from `1.0.0`. Its number needs to be updated before relea
 
 ::: tabs code
 ```npm
-npm run bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
+npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
@@ -208,6 +221,7 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
   - Remove the prerelease section if the release is `rc.x`
   - Otherwise, to the next major version of `alpha.0`
 - **-v, --version:** set specific version
+- **-r, --recursive:** 递归更新依赖版本
 - Default: incremented by the last of the release version number
 
-当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
+When updating the version of a plug-in, the versions of dependencies that rely on this plug-in will also be upgraded to ensure consistency in the workspace.Moreover, if you wish for the versions of plug-ins that depend on this plug-in to be updated in sync, you can append the `-r, --recursive` option.

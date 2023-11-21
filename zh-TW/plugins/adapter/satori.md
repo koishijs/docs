@@ -1,7 +1,7 @@
 # @koishijs/plugin-adapter-satori
 
 ::: tip
-另见：[@koishijs/plugin-server](../develop/server.md)。
+另见：[@koishijs/plugin-server-satori](../develop/server-satori.md)。
 :::
 
 ## 接入方式

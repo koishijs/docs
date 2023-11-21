@@ -4,7 +4,7 @@ prev:
   link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /en-US/manual/usage/market.html
 ---
 
 # Install for Container
@@ -51,4 +51,4 @@ You could update all the plugins as well as Koishi itself in Koishi Console. Aft
 
 ## Install Plugins
 
-While the container is running, you could open the Koishi Console with `http://<host-ip>:5140`, then install and enable plugins in it. If you cannot access the Koishi Console, please check the configurations of your firewall.
+在容器运行时，可以通过在浏览器中访问 `http://宿主机地址:5140` 在控制台中安装和启用插件。If you cannot access the Koishi Console, please check the configurations of your firewall.

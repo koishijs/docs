@@ -33,7 +33,7 @@ In the daily use, it is not surprise that you make typos. In this case, Koishi w
 
 <chat-panel>
 <chat-message nickname="Alice">ecko hello</chat-message>
-<chat-message nickname="Koishi">Command not found.Do you mean echo?Send a period to apply the suggestion.</chat-message>
+<chat-message nickname="Koishi">您要找的是不是“echo”？Send a period to apply the suggestion.</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">hello</chat-message>
 </chat-panel>

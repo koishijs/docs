@@ -139,7 +139,12 @@ root
   - **optional:** 可选的服务，应该是一个服务名构成的数组
   - **implements:** 实现的服务，应该是一个服务名构成的数组
 - **locales:** 插件支持的语言，应该是一个语言名构成的数组
+- **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
+
+::: tip
+此外，还有一些字段与 [Koishi Online](../../cookbook/practice/online.md) 的部署流程相关 (如 `browser`, `exports` 等)。由于不影响主线开发，你可以稍后再进行了解。
+:::
 
 ## 发布插件
 
@@ -169,20 +174,28 @@ yarn pub [...name]
 No token found and can't prompt for login when running with --non-interactive.
 ```
 
-此时你需要将镜像源重置，并重新登录 npm 账号：
+此时你需要在发布时使用官方镜像，具体操作如下：
 
 ::: tabs code
 ```npm
-npm config delete registry
-npm login
+npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
 ```yarn
-yarn config delete registry
-yarn login
+yarn pub [...name] --registry https://registry.yarnpkg.com
 ```
 :::
 
-发布成功后，你可以将镜像重新设置为国内镜像，以保证后续的下载速度。 :
+对于 Yarn v2 及以上版本，你还可以分别针对发布和安装设置不同的镜像：
+
+::: tabs code
+```yarn
+# 安装时使用国内镜像
+yarn config set npmRegistryServer https://registry.npmmirror.com
+# 发布时使用官方镜像
+yarn config set npmPublishRegistry https://registry.yarnpkg.com
+```
+:::  
+:
 :::
 
 ## 更新插件版本
@@ -191,7 +204,7 @@ yarn login
 
 ::: tabs code
 ```npm
-npm run bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
+npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
@@ -208,6 +221,7 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
   - 如果当前版本是 `rc.x`，则移除 prerelease 部分
   - 其他情况下，跳到下一个大版本的 `alpha.0`
 - **-v, --version:** 设置具体的版本号
+- **-r, --recursive:** 递归更新依赖版本
 - 缺省情况：按照当前版本的最后一位递增
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。

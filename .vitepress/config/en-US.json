@@ -39,15 +39,15 @@
         "text": "Develop",
         "items": [
           {
-            "text": "Guide",
+            "text": "Developing Guide",
             "link": "/guide/"
           },
           {
-            "text": "进阶",
+            "text": "进阶指南",
             "link": "/cookbook/"
           },
           {
-            "text": "API",
+            "text": "API Reference",
             "link": "/api/"
           },
           {
@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Official Plugins",
             "link": "/plugins/"
           }
         ],
@@ -159,15 +159,15 @@
             },
             {
               "text": "Multiple Configuration Maintenance",
-              "link": "/manual/recipe/multiple.md"
+              "link": "/en-US/manual/recipe/multiple.md"
             },
             {
               "text": "Search Marketplace",
-              "link": "/manual/recipe/search.md"
+              "link": "/en-US/manual/recipe/search.md"
             },
             {
               "text": "Deployment",
-              "link": "/manual/recipe/server.md"
+              "link": "/en-US/manual/recipe/server.md"
             }
           ]
         },
@@ -361,7 +361,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶开发指南",
+              "text": "→ 进阶指南",
               "link": "/cookbook/"
             }
           ]
@@ -428,15 +428,11 @@
           "text": "Built-in Services",
           "items": [
             {
-              "text": "Bots",
-              "link": "/api/service/bots.md"
-            },
-            {
-              "text": "Events",
+              "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "Filter",
+              "text": "过滤器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
@@ -448,7 +444,11 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "Permissions",
+              "text": "加载器 (Loader)",
+              "link": "/api/service/loader.md"
+            },
+            {
+              "text": "权限管理 (Permissions)",
               "link": "/api/service/permissions.md"
             },
             {
@@ -481,19 +481,23 @@
               "link": "/api/resources/role.md"
             },
             {
-              "text": "Login",
+              "text": "交互 (Interaction)",
+              "link": "/api/resources/interaction.md"
+            },
+            {
+              "text": "登录状态 (Login)",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "Message",
+              "text": "消息 (Message)",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "Reaction",
+              "text": "表态 (Reaction)",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "User",
+              "text": "用户 (User)",
               "link": "/api/resources/user.md"
             }
           ]
@@ -612,16 +616,20 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "深入工作区",
-              "link": "/cookbook/design/workspace.md"
-            },
-            {
               "text": "可逆的 Koishi",
-              "link": "/cookbook/design/reversible.md"
+              "link": "/cookbook/design/disposable.md"
             },
             {
               "text": "零占用的 Koishi",
               "link": "/cookbook/design/storage.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "整合包开发",
+              "link": "/cookbook/design/bundle.md"
             }
           ]
         },
@@ -665,11 +673,7 @@
               "link": "/market/"
             },
             {
-              "text": "Service Plugins",
-              "link": "/market/service.md"
-            },
-            {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]
@@ -854,8 +858,16 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "Server",
-              "link": "/plugins/develop/server.md"
+              "text": "代理服务器 (Server Proxy)",
+              "link": "/plugins/develop/server-proxy.md"
+            },
+            {
+              "text": "API 服务器 (Server Satori)",
+              "link": "/plugins/develop/server-satori.md"
+            },
+            {
+              "text": "临时服务器 (Server Temp)",
+              "link": "/plugins/develop/server-temp.md"
             }
           ]
         }
@@ -869,7 +881,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Official Plugins",
               "link": "/plugins/"
             }
           ]

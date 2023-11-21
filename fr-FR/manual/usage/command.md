@@ -1,68 +1,68 @@
-# 指令系统
+# Système de commandes
 
-在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
+Après avoir appris les bases de l'utilisation de la console, nous pouvons enfin commencer à explorer comment dialoguer avec le robot ! Commençons par l'exemple que nous avons vu dans la section précédente :
 
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">echo  发送消息</p>
-<p class="indent-1">help  显示帮助信息</p>
-<p>输入“帮助 指令名”查看特定指令的语法和使用示例。</p>
+<p>Commandes disponibles : </p>
+<p class="indent-1">echo  Envoi de message</p>
+<p class="indent-1">help  Afficher l'aide</p>
+<p>Tapez "help <commande>" pour voir la syntaxe et les exemples pour une commande spécifique.</p>
 </chat-message>
 </chat-panel>
 
-这里的输出与两个插件有关：
+La sortie ci-dessus concerne deux plugins :
 
-- help 指令由 [help](../../plugins/common/help.md) 插件提供，它可以显示指令列表或具体指令的帮助信息
-- echo 指令由 [echo](../../plugins/common/echo.md) 插件提供，它可以将用户的输入原样返回
+- La commande « help » est fournie par le plugin [help](../../plugins/common/help.md) qui peut d'afficher la liste des commandes disponibles ou des informations d'aide pour une commande spécifique.
+- La commande « echo » est fournie par le plugin [echo](../../plugins/common/echo.md) qui peut renvoyer le texte saisi par l'utilisateur.
 
-一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。当你安装了更多的插件后，你也就有了更多的指令可供使用。
+La plupart des fonctionnalités d'un robot Koishi sont proposés via des commandes. Lorsque vous installez davantage de plugins, vous pouvez utiliser à plus de commandes.
 
-## 查看帮助
+## Afficher l'aide
 
-help 指令后还可以添加一个参数，用于查看特定指令的帮助信息：
+La commande « help » accepte un paramètre optionnel pour afficher des informations d'aide pour une commande spécifique :
 
 <chat-panel>
 <chat-message nickname="Alice">help echo</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：echo &lt;message...></p>
-<p>发送消息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-e, --escape  发送转义消息</p>
-<p class="indent-1">-E, --unescape  发送反转义消息</p>
+<p>Commande : echo &lt;message...></p>
+<p>Envoi de message</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-e, --escape  Échapper le message</p>
+<p class="indent-1">-E, --unescape  Décoder le message</p>
 </chat-message>
 </chat-panel>
 
-那么细心的小伙伴可能会发现，既然 help 本身也是一个指令，那我能不能用来查看 help 自己的帮助信息呢？答案是肯定的：
+Vous avez peut-être remarqué que la commande « help » est elle-même une commande. Vous vous demandez peut-être si vous pouvez utiliser « help » pour afficher des informations d'aide sur la commande « help ». La réponse est oui :
 
 <chat-panel>
 <chat-message nickname="Alice">help help</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：help [command]</p>
-<p>显示帮助信息</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-a, --authority  显示权限设置</p>
-<p class="indent-1">-H, --show-hidden  查看隐藏的选项和指令</p>
+<p>Commande : help [commande]</p>
+<p>Afficher l'aide</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-a, --authority  Afficher les configurations d'autorisés</p>
+<p class="indent-1">-H, --show-hidden  Afficher les options et commandes invisibles</p>
 </chat-message>
 </chat-panel>
 
-## 参数和选项
+## Arguments et options
 
-在上面的用法中，我们接触到了两个新的概念：**参数 (Argument)** 和 **选项 (Option)**。
+Dans les exemples ci-dessus, nous avons mentionné deux nouveaux concepts : les arguments et les options.
 
-参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。一个指令可以有任意多个参数，它们的顺序是固定的，用户必须按照指令定义的顺序来输入参数。必选参数一定出现在可选参数之前。如果用户输入的参数数量不足必选参数的个数，那么插件通常会给出错误提示；如果用户输入了额外的参数，那么会被忽略。
+Les arguments peuvent être obligatoires ou facultatifs et sont représentés respectivement par des chevrons `<>` et des crochets `[]`. Une commande peut avoir un nombre quelconque d'arguments, et leur ordre est fixe. Les utilisateurs doivent saisir les arguments dans l'ordre spécifié par la commande. Les arguments obligatoires doivent apparaître avant les arguments facultatifs. Si les utilisateurs ne fournissent pas un nombre suffisant d'arguments obligatoires, le plugin génère généralement un message d'erreur. Les arguments supplémentaires fournis par les utilisateurs sont ignorés.
 
-例如，help 指令共有一个参数，它是可选参数，表示要查看的指令名；echo 指令也有一个参数，它是必选参数，表示要发送的消息。让我们看看如果不填必选参数会怎么样：
+Par exemple, la commande « help » a un argument facultatif qui représente le nom de la commande à consulter. La commande « echo » a un argument obligatoire qui représente le message à envoyer. Voici ce qui se passe si l'utilisateur ne fournit pas l'argument obligatoire :
 
 <chat-panel>
 <chat-message nickname="Alice">echo</chat-message>
 <chat-message nickname="Koishi">
-<p>请输入要发送的文本。</p>
+<p>Veuillez entrer le texte à envoyer.</p>
 </chat-message>
 </chat-panel>
 
-选项同样可以控制指令的行为。它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。选项之间没有顺序要求，但通常建议将选项放在参数之前。让我们试试看：
+Les options contrôlent également le comportement d'une commande. Elles commencent généralement par un tiret `-` ou deux tirets `--`, suivis d'un nom d'option fixe. Les options n'ont pas d'ordre spécifique, mais il est généralement recommandé de les placer avant les arguments. Par exemple, nous pouvons essayer ceci :
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,58 +73,58 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 </chat-message>
 </chat-panel>
 
-在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。关于这具体是怎么做到的，我们会在后续的章节中进行介绍。
+Dans l'exemple ci-dessus, nous avons utilisé l'option `-E` pour modifier la sortie de la commande. Nous expliquerons plus en détail comment cela fonctionne dans les sections suivantes.
 
-参数除了可以分为必选和可选外，还可以分为定长和变长。定长参数的中不能出现空白字符，而变长参数则可以。变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。如果要为定长参数传入带有空白字符的内容，可以使用引号将其包裹起来，例如：
+Les arguments peuvent être également de longueur fixe ou variable. Les arguments de longueur fixe ne peuvent pas contenir d'espaces, tandis que les arguments de longueur variables le peuvent. Les arguments de longueur fixe sont indiqués par `...` avant et après le nom de l'argument, par exemple, l'argument de la commande `echo` est de longueur variable.Si vous souhaitez saisir du contenu contenant des espaces pour un argument de longueur fixe, vous pouvez utiliser des guillemets pour l'encadrer, par exemple :
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
 </chat-panel>
 
-此外，部分选项也可以接受参数。例如，当你安装了翻译插件，你将会获得如下的帮助信息：
+En outre, certaines options peuvent également accepter des arguments. Par exemple, si vous avez installé le plugin de traduction, voici ce que vous obtiendrez :
 
 <chat-panel>
 <chat-message nickname="Alice">help translate</chat-message>
 <chat-message nickname="Koishi">
-<p>指令：translate &lt;text...></p>
+<p>Commande : translate &lt;text...></p>
 <p>Traduction</p>
-<p>可用的选项有：</p>
-<p class="indent-1">-s, --source &lt;lang> 源语言 (默认为自动匹配)</p>
-<p class="indent-1">-t, --target &lt;lang> 目标语言 (默认为中文)</p>
+<p>Options disponibles :</p>
+<p class="indent-1">-s, --source &lt;lang> Langue source (détection automatique par défaut)</p>
+<p class="indent-1">-t, --target &lt;lang> Langue cible (chinois par défaut)</p>
 </chat-message>
-<chat-message nickname="Alice">translate -t ja 你好，世界</chat-message>
-<chat-message nickname="Koishi">こんにちは世界</chat-message>
+<chat-message nickname="Alice">translate -t fr Hello, World</chat-message>
+<chat-message nickname="Koishi">Bonjour le monde</chat-message>
 </chat-panel>
 
-在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
+Dans l'exemple ci-dessus, les options `-s` et `-t` sont des options avec des arguments. Nous avons utilisé l'option `-t fr` pour spécifier la langue cible comme le français, tandis que la langue source suit toujours le comportement par défaut.
 
-## 触发前缀
+## Préfixe de déclenchement
 
-然而，如果仅仅通过一个词就能触发指令，在群聊环境下非常容易出现误触。为了避免这种情况，Koishi 引入了前缀触发的概念。在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
+Cependant, dans un canal de guilde, déclencher une commande avec un seul mot est très sujet aux erreurs. Pour éviter cette situation, Koishi introduit le concept de préfixe de déclenchement. Dans les « paramètres globaux », il y a les options de configuration « prefix » et « nickname ». Si vous définissez « prefix » sur « / », et « nickname » sur « Shiki », alors dans un canal de guilde, seuls les messages suivants peuvent déclencher l'exécution de commandes :
 
 ```sh
-四季酱, echo hello
-@四季酱 echo hello
-/echo hello
+Shiki, echo bonjour
+@Shiki, echo bonjour
+/echo bonjour
 ```
 
-换句话说，一个指令能够被触发的实际条件为：
+En d'autres termes, une commande peut être déclenchée si :
 
-- 消息以 `prefix` 开头，后面紧跟着指令调用
-- 消息以 `nickname` 开头，后面可以有逗号或空白字符，再后面是指令调用
-- 消息以 @机器人 开头 (可以有多个 `@`，但至少一个是机器人账号)，后面是指令调用
+- Le message commence par `prefix`, suivi immédiatement de nom de commande.
+- Le message commence par `nickname`, suivi d'une virgule ou de caractères blancs, puis de la commande.
+- Le massage commence par @robot (il peut y avoir plusieurs mentionnées, mais au moins un doit être le compte du robot), suivi de la commande.
 
-对于人数较多或是含有不止一个机器人的群聊，我们强烈建议每一个机器人都配置不同的触发前缀。而在私聊环境下，由于不用担心误触，因此并没有上面的限制。没有触发前缀的指令调用也能被正常执行。
+Pour les guildes contenant un grand nombre de personnes ou plusieurs robots, nous vous recommandons fortement de configurer de préfixes de déclenchement différents pour chaque robot.En revanche, dans les canaux directs, il n'y aura pas de problème des erreurs de commande déclenchée, donc il n'y a les restrictions ci-dessus. Les commandes sans préfixes de déclenchement peuvent également être exécutés normalement.
 
 ::: tip
-**关于 `prefix` 的几点提示：**
+**Quelque conseils concernant `prefix` : **
 
-1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
-2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
+1. `prefix` est une liste des préfixes, le valeur par défaut `['']` signifie qu'aucun préfixe n'est nécessaire pour déclencher une commande. Si vous videz la liste, cela signifie que toutes les commandes ne peuvent pas être déclenchées via `prefix` (mais elles peuvent toujours être déclenchées via des canaux directs ou `nickname` ou @robot).
+2. Si vous configurez plusieurs valeurs pour `prefix`, par exemple `['.', '/', '']`, alors `.`, `/`, ou aucun préfixe peuvent tous déclencher une commande. Cependant, Koishi suit l'ordre dans lequel les préfixes sont configurés, il est donc recommandé de placer la chaîne vide `''` en dernier.
+3. Vous pouvez configurer différents `prefix`-es pour différents types du chat, voir la section [Filtres](./customize.md#过滤器) pour plus de détails.
 :::
 
-## 子指令
+## Sous-commandes
 
 [admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
 

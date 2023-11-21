@@ -69,7 +69,7 @@ footer:
         text: 为 Android 安装
         link: /fr-FR/manual/starter/android.html
       - 
-        text: 在容器中使用
+        text: Utilisation dans un conteneur
         link: /fr-FR/manual/starter/docker.html
       - 
         text: 创建模板项目
@@ -84,7 +84,7 @@ footer:
         text: 开发指南
         link: /fr-FR/guide/
       - 
-        text: API 文档
+        text: API 参考
         link: /fr-FR/api/
       - 
         text: 官方插件
@@ -99,7 +99,7 @@ footer:
         text: Discord
         link: /fr-FR/plugins/adapter/discord.html
       - 
-        text: Kook
+        text: KOOK
         link: /fr-FR/plugins/adapter/kook.html
       - 
         text: Lark
@@ -108,7 +108,7 @@ footer:
         text: LINE
         link: /zh-CN/plugins/adapter/line.html
       - 
-        text: 邮件
+        text: Courriers électroniques
         link: /zh-CN/plugins/adapter/mail.html
       - 
         text: Matrix
@@ -117,16 +117,19 @@ footer:
         text: QQ
         link: /zh-CN/plugins/adapter/qq.html
       - 
+        text: Satori
+        link: /zh-CN/plugins/adapter/satori.html
+      - 
         text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
       - 
         text: Telegram
         link: /fr-FR/plugins/adapter/telegram.html
       - 
-        text: 微信公众号
+        text: WeChat Official Account
         link: /zh-CN/plugins/adapter/wechat-official.html
       - 
-        text: 企业微信
+        text: WeCom (WeChat Work)
         link: /zh-CN/plugins/adapter/wecom.html
       - 
         text: WhatsApp

@@ -1,5 +1,9 @@
 # Router
 
+::: danger
+`ctx.router` 需要手动声明为 `inject`。在未来的版本，我们将会把此服务移至插件中。
+:::
+
 ::: tip
 Koishi 默认情况下并不会监听任何端口，如要启用网络服务请记得配置 [`options.port`](../core/app.md#options-port)。
 :::

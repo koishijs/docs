@@ -30,16 +30,6 @@
 
 依次触发所有 event 事件的能够匹配 session 对象的回调函数。当返回一个 false, null, undefined 以外的值时将这个值作为结果返回。bail 为同步，serial 为异步。
 
-### ctx.chain(session?, event, ...param) <badge type="warning">实验性</badge>
-### ctx.waterfall(session?, event, ...param) <badge type="warning">实验性</badge>
-
-- **session:** [`Session`](../core/session.md) 会话对象
-- **event:** `string` 事件名称
-- **param:** `any[]` 事件的参数
-- 返回值: `boolean` 匹配结果
-
-依次触发所有 event 事件的能够匹配 session 对象的回调函数。每次用得到的返回值覆盖下一轮调用的第一个参数，并在所有函数执行完后返回最终结果。chain 为同步，waterfall 为异步。
-
 ### ctx.on(event, listener, prepend?)
 
 - **event:** `string` 事件名称

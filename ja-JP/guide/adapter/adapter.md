@@ -7,8 +7,8 @@
 适配器需要建立并维护机器人与聊天平台之间的连接。通常来说，根据协议的不同，适配器与机器人可能是一对一的，也可能是一对多的。让我们再看一眼之前介绍过的 `ReplBot` 实例：
 
 ```ts
-class ReplBot extends Bot {
-  constructor(ctx: Context, config: Config) {
+class ReplBot<C extends Context> extends Bot<C> {
+  constructor(ctx: C, config: Config) {
     super(ctx, config)
     this.platform = 'repl'
     this.selfId = 'koishi'
@@ -32,7 +32,7 @@ class ReplBot extends Bot {
 一种常见的通信方式是 WebSocket，许多平台 (Discord、KOOK、钉钉等) 都会使用这项技术。它的工作原理是，机器人首先向聊天平台的 WebSocket 网关发起连接请求，随后平台会将事件推送到机器人的 WebSocket 连接上。这里我们还是以 Discord 平台为例：
 
 ```ts
-export class DiscordAdapter extends Adapter.WsClient<DiscordBot> {
+export class DiscordAdapter<C extends Context> extends Adapter.WsClient<C, DiscordBot<C>> {
   async prepare() {
     const { url } = await this.bot.internal.getGatewayBot()
     return this.bot.http.ws(url + '/?v=10&encoding=json')
@@ -91,8 +91,10 @@ if (session) this.dispatch(session)
 另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 平台为例：
 
 ```ts
-export class HttpServer extends Adapter<LineBot> {
-  constructor(ctx: Context) {
+export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
+  static inject = ['router']
+
+  constructor(public ctx: C) {
     super()
 
     ctx.router.post('/line', async (ctx) => {
@@ -110,10 +112,9 @@ export class HttpServer extends Adapter<LineBot> {
   }
 
   async start(bot: LineBot) {
-    const user = await this.getSelf()
-    Object.assign(this, user)
+    await this.getLogin()
     await bot.internal.setWebhookEndpoint({
-      endpoint: bot.ctx.root.config.selfUrl + '/line',
+      endpoint: this.ctx.router.config.selfUrl + '/line',
     })
   }
 }
@@ -122,10 +123,9 @@ export class HttpServer extends Adapter<LineBot> {
 任何一个适配器都需要通过 `start()` 和 `stop()` 方法来控制机器人的启动和停止 (你在前一个例子中没有看到这两个方法，只是因为 `WsClient` 已经内置了实现)。在这个例子中，我们通过内部接口对机器人数据做了初始化，并设置了 Webhook 回调地址：
 
 ```ts
-const user = await this.getSelf()
-Object.assign(this, user)
+await this.getLogin()
 await bot.internal.setWebhookEndpoint({
-  endpoint: bot.ctx.root.config.selfUrl + '/line',
+  endpoint: this.ctx.router.config.selfUrl + '/line',
 })
 ```
 
@@ -180,7 +180,7 @@ adapter-telegram
 每一种适配器可能都有自己的配置项，我们按照类插件的开发方式分别进行声明：
 
 ```ts title=server.ts
-class ServerAdapter extends Adapter<TelegramBot> {}
+class ServerAdapter<C extends Context> extends Adapter<C, TelegramBot<C>> {}
 
 namespace ServerAdapter {
   export interface Config {
@@ -196,7 +196,7 @@ namespace ServerAdapter {
 ```
 
 ```ts title=polling.ts
-class PollingAdapter extends Adapter<TelegramBot> {
+class PollingAdapter<C extends Context> extends Adapter<C, TelegramBot<C>> {
   // polling 适配器是可重用的
   static reusable = true
 }
@@ -217,8 +217,8 @@ namespace PollingAdapter {
 最后编写作为入口的 `TelegramBot` 类，它将根据配置项的 `protocol` 属性，自动选择相关联的适配器 (最后配置项的定义使用了 [配置联动](../../schema/advanced/union-tagged-2.md) 技巧)：
 
 ```ts
-class TelegramBot extends Bot<TelegramBot.Config> {
-  constructor(ctx: Context, config: TelegramBot.Config) {
+class TelegramBot<C extends Context> extends Bot<C, TelegramBot.Config> {
+  constructor(ctx: C, config: TelegramBot.Config) {
     super(ctx, config)
     if (config.protocol === 'server') {
       ctx.plugin(HttpServer, this)
@@ -264,13 +264,13 @@ export default WhatsAppAdapter
 同时，适配器也直接继承 `Adapter` 基类，并声明 `schema` 和 `reusable`：
 
 ```ts title=adapter.ts
-class WhatsAppAdapter extends Adapter<WhatsAppBot> {
+class WhatsAppAdapter<C extends Context> extends Adapter<C, WhatsAppBot<C>> {
   // 由适配器直接向外暴露配置项
   static schema = true
   // 这个适配器仍然是可重用的
   static reusable = true
 
-  constructor(ctx: Context, config: WhatsAppAdapter.Config) {
+  constructor(ctx: C, config: WhatsAppAdapter.Config) {
     super()
 
     // 初始化内部接口

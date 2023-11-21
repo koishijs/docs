@@ -1,23 +1,23 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
 next:
   text: Installation et configuration de plugins
-  link: /zh-CN/manual/usage/market.html
+  link: /fr-FR/manual/usage/market.html
 ---
 
-# 在容器中使用
+# Utilisation dans un conteneur
 
 ::: warning
-Docker 等容器化软件是以服务生产环境而开发的应用平台，在使用此类软件部署之时，我们相信你已经掌握了运维一台服务器所必须的知识，同时也理解了容器化的概念与相关软件的基础操作。如若不然，在除路由器或 NAS 等特殊环境外，请 [选择其他安装方式](./index.md)。
+Les logiciels de conteneurisation tels que Docker sont des plates-formes applicatives conçues pour les environnements de production. Lorsque vous utilisez de tels logiciels pour le déploiement, nous supposons que vous avez déjà acquis les connaissances nécessaires à l'administration d'un serveur, et que vous comprenez également les concepts de la conteneurisation et les opérations de base associées aux logiciels connexes. Sinon, à moins que vous ne travailliez dans des environnements spéciaux tels que des routeurs ou des serveurs NAS, veuillez [choisir une autre méthode d'installation](./index.md).
 :::
 
-Koishi 提供了 [Docker](https://hub.docker.com/r/koishijs/koishi) 镜像，方便你在容器中运行 Koishi。你需要首先安装 [Podman](https://podman.io) 或 [Docker](https://www.docker.com) 来运行容器。
+Koishi propose une image Docker, ce qui facilite l'exécution de Koishi dans un conteneur. Vous devrez d'abord installer [Podman](https://podman.io) ou [Docker](https://www.docker.com) pour exécuter des conteneurs.
 
-## 启动容器
+## Démarrer le conteneur
 
-使用以下命令启动容器：
+Utilisez la commande suivante pour démarrer le conteneur :
 
 ::: tabs code
 ```podman
@@ -28,7 +28,7 @@ docker run -p 5140:5140 koishijs/koishi
 ```
 :::
 
-许多插件依赖 [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) 来进行图片渲染，故默认镜像中包含 Chromium。如果你认为镜像过大，不需要预装 Chromium，我们也提供了轻量版本：
+De nombreux plugins dépendent de [koishi-plugin-puppeteer](https://www.npmjs.com/package/koishi-plugin-puppeteer) pour le rendu des images. Par conséquent, l'image Docker par défaut contient Chromium. Si vous estimez que l'image Docker est trop volumineuse et que vous n'avez pas besoin de Chromium préinstallé, nous proposons également une version légère :
 
 ::: tabs code
 ```podman
@@ -39,16 +39,16 @@ docker run -p 5140:5140 koishijs/koishi:latest-lite
 ```
 :::
 
-启动后将会绑定 Koishi 控制台到 5140 端口。
+Une fois démarré, la Console Koishi sera disponible sur le port 5140.
 
-如果你需要持久化，请使用 `-v /some/place:/koishi` 来映射 Koishi 的文件。
+Si vous avez besoin de persistance, utilisez `-v /some/place:/koishi` pour mapper les fichiers de Koishi.
 
-如果需要更正时区，请使用 `-e TZ=Asia/Shanghai` 来设置时区。
+Pour ajuster le fuseau horaire, utilisez `-e TZ=Europe/Paris` pour définir le fuseau horaire.
 
 ::: tip
-Koishi 本体及其插件都可以控制台完成更新。在持久化文件过后更新容器仅会更新 Chromium 和 Node.js 等的版本。
+Koishi lui-même et ses plugins peuvent être mis à jour via la console. Après la persistance des fichiers, la mise à jour du conteneur ne mettra à jour que certaines versions de logiciels tels que Chromium et Node.js, par exemples.
 :::
 
-## Installation de plugins
+## Installer les plugins
 
-在容器正常运行时，可以通过在浏览器中访问 `http://宿主机地址:5140` 在控制台中安装和启用插件。若无法访问请检查你的防火墙配置是否正确。
+Lorsque le conteneur est en cours d'exécution, vous pouvez installer et activer des plugins dans la console à `http://<adresse_hôte>:5140` dans votre navigateur. Si vous ne parvenez pas à y accéder, veuillez vérifier la configuration de votre pare-feu.

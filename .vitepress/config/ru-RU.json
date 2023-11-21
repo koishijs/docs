@@ -39,15 +39,15 @@
         "text": "开发",
         "items": [
           {
-            "text": "指南",
+            "text": "开发指南",
             "link": "/guide/"
           },
           {
-            "text": "进阶",
+            "text": "进阶指南",
             "link": "/cookbook/"
           },
           {
-            "text": "API",
+            "text": "API 参考",
             "link": "/api/"
           },
           {
@@ -361,7 +361,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶开发指南",
+              "text": "→ 进阶指南",
               "link": "/cookbook/"
             }
           ]
@@ -428,10 +428,6 @@
           "text": "内置服务",
           "items": [
             {
-              "text": "机器人 (Bots)",
-              "link": "/api/service/bots.md"
-            },
-            {
               "text": "事件系统 (Events)",
               "link": "/api/service/events.md"
             },
@@ -446,6 +442,10 @@
             {
               "text": "国际化 (I18n)",
               "link": "/api/service/i18n.md"
+            },
+            {
+              "text": "加载器 (Loader)",
+              "link": "/api/service/loader.md"
             },
             {
               "text": "权限管理 (Permissions)",
@@ -479,6 +479,10 @@
             {
               "text": "群组角色 (GuildRole)",
               "link": "/api/resources/role.md"
+            },
+            {
+              "text": "交互 (Interaction)",
+              "link": "/api/resources/interaction.md"
             },
             {
               "text": "登录状态 (Login)",
@@ -612,16 +616,20 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "深入工作区",
-              "link": "/cookbook/design/workspace.md"
-            },
-            {
               "text": "可逆的 Koishi",
-              "link": "/cookbook/design/reversible.md"
+              "link": "/cookbook/design/disposable.md"
             },
             {
               "text": "零占用的 Koishi",
               "link": "/cookbook/design/storage.md"
+            },
+            {
+              "text": "深入工作区",
+              "link": "/cookbook/design/workspace.md"
+            },
+            {
+              "text": "整合包开发",
+              "link": "/cookbook/design/bundle.md"
             }
           ]
         },
@@ -663,10 +671,6 @@
             {
               "text": "插件市场",
               "link": "/market/"
-            },
-            {
-              "text": "服务类插件导航",
-              "link": "/market/service.md"
             },
             {
               "text": "官方插件一览",
@@ -854,8 +858,16 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "API 服务器 (Server)",
-              "link": "/plugins/develop/server.md"
+              "text": "代理服务器 (Server Proxy)",
+              "link": "/plugins/develop/server-proxy.md"
+            },
+            {
+              "text": "API 服务器 (Server Satori)",
+              "link": "/plugins/develop/server-satori.md"
+            },
+            {
+              "text": "临时服务器 (Server Temp)",
+              "link": "/plugins/develop/server-temp.md"
             }
           ]
         }

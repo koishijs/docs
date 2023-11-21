@@ -5,7 +5,7 @@
 1. 搜索 @botfather（有个官方认证的符号）并进入聊天界面
 2. 輸入 `/start` 後，會出現一個使用選單，你可以使用這裡指令對你的機器人進行配置
 3. 要建立一個機器人，請點選 `/newbot`，並根據系統提示完成建立流程
-4. 使用 `/setprivacy` 开启 Privacy Mode（不然机器人只能收到特定消息）
+4. 使用 `/setprivacy` 关闭 Privacy Mode（设置为 DISABLED，不然机器人只能收到特定消息）
 5. 创建完毕后，你会获得一个 token（请注意不要泄露），将其作为机器人配置项即可使用
 
 参考文档：<https://core.telegram.org/bots>

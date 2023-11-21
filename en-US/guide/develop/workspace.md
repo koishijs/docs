@@ -12,15 +12,17 @@ These commands are should be run in the [workspace root](./config.md#应用目�
 
 ::: tabs code
 ```npm
-npm run setup [name] [-c]
+npm run setup [name] -- [-c] [-m] [-G]
 ```
 ```yarn
-yarn setup [name] [-c]
+yarn setup [name] [-c] [-m] [-G]
 ```
 :::
 
 - **name:** 插件的包名，缺省时将进行提问
 - **-c, --console:** 创建一个带控制台扩展的插件
+- **-m, --monorepo:** 创建 monorepo 的插件
+- **-G, --no-git:** 跳过 git 初始化
 
 我们假设你创建了一个叫 `example` 的插件。那么，你将看到下面的目录结构：
 

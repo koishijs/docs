@@ -1,33 +1,33 @@
-# 系统要求
+# Système requise
 
-本节列出了 Koishi 启动器所需要的系统版本及该版本所支持的功能。
+Cette section énumère les versions du système requises pour le lanceur Koishi et les fonctionnalités prises en charge par chaque version.
 
 ::: tip
-下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
+La liste ci-dessous s'applique uniquement au lanceur Koishi. Le noyau Koishi lui-même peut fonctionner dans presque n'importe quel environnement courant.
 :::
 
 ::: tip
-即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
+Même si votre système d'exploitation n'est pas officiellement pris en charge par Koishi, vous pouvez toujours vous rendre sur le [forum](https://k.ilharp.cc) et choisir des versions de compatibilité proposées par la communauté ou [utiliser le projet modèle](../starter/boilerplate.md). Cependant, Koishi officiel n'assume aucune responsabilité en ce qui concerne la disponibilité et la sécurité des lanceurs communautaires.
 :::
 
 ## Windows
 
-同一产品只列出了其最高版本。未列出的版本一律视为不支持。
+Seule la version de Windows la plus récente de chaque produit est répertoriée. Les versions non répertoriées ne sont pas prises en charge.
 
 ### Windows 8.1
 
-| 产品                             | 核心                   | 窗口                   | 增强  |
-| ------------------------------ | -------------------- | -------------------- | --- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x: |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x: |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x: |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x: |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x: |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x: |
+| Produit                        | Noyau                | Fenêtre              | Amélioré |
+| ------------------------------ | -------------------- | -------------------- | -------- |
+| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:      |
+| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:      |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:      |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:      |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:      |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:      |
 
 ### Windows 10
 
-| 产品                                  | 核心                   | 窗口                   | 增强                   |
+| Produit                             | Noyau                | Fenêtre              | Amélioré             |
 | ----------------------------------- | -------------------- | -------------------- | -------------------- |
 | Version 1507                        | :x:                  | :x:                  | :x:                  |
 | Version 1511                        | :x:                  | :x:                  | :x:                  |
@@ -72,7 +72,7 @@
 
 ### Windows 11
 
-| 产品           | 核心                   | 窗口                   | 增强                   |
+| Produit      | Noyau                | Fenêtre              | Amélioré             |
 | ------------ | -------------------- | -------------------- | -------------------- |
 | Version 21H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Version 22H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
