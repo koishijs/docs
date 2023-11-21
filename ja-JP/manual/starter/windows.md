@@ -26,17 +26,19 @@ next:
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-msi インストールパッケージをダブルクリックし、「次へ」をクリックし続け、インストールが完了するのを待ってから、[スタート] メニューで Koishi を見つけることができます。
+双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
 ::: tip
 一部分のコンピューターでは、インストールプロセスに10分以上かかる場合があります。お待ちください
 :::
 
+## 启动
+
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-Koishi をクリックすると起動しますKoishiコンソールが数秒で有効化されます。Koishiの使用を開始することができます。
+安装完成后，点击 Koishi 图标即可启动。Koishiコンソールが数秒で有効化されます。Koishiの使用を開始することができます。
 
 ## その他の選択
 
