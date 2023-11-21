@@ -31,30 +31,30 @@ Commencez par initialiser le répertoire de votre robot conversationnel et insta
 
 ::: tabs code
 ```npm
-# Initialiser le projet
+# 初始化项目
 npm init
 
-# Installer Koishi et les plugins correspondants
-npm i koishi @koishijs/plugin-console \
-             @koishijs/plugin-sandbox \
-             @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+npm i koishi \
+      @koishijs/plugin-console \
+      @koishijs/plugin-sandbox \
+      @koishijs/plugin-echo
 
-# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
-
 ```
 ```yarn
-# Initialiser le projet
+# 初始化项目
 yarn init
 
-# Installer Koishi et les plugins correspondants
-yarn add koishi @koishijs/plugin-console \
-                @koishijs/plugin-sandbox \
-                @koishijs/plugin-echo
+# 安装 Koishi 和相关插件
+yarn add koishi
+         @koishijs/plugin-console \
+         @koishijs/plugin-sandbox \
+         @koishijs/plugin-echo
 
-# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
-
 ```
 :::
 
@@ -100,12 +100,14 @@ Si vous souhaitez vous connecter à une véritable plateforme de chat, il vous s
 
 ::: tabs code
 ```npm
-# Exemple d'installation des adaptateurs Satori et Discord
-npm i @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+npm i @koishijs/plugin-adapter-satori \
+      @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# Exemple d'installation des adaptateurs Satori et Discord
-yarn add @koishijs/plugin-adapter-satori @koishijs/plugin-adapter-discord
+# 以 Satori 和 Discord 适配器为例
+yarn add @koishijs/plugin-adapter-satori \
+         @koishijs/plugin-adapter-discord
 ```
 :::
 
