@@ -10,11 +10,11 @@ Cette section explique comment utiliser les pages "Marketplace des plugins", "Co
 
 L'une des fonctionnalités clés de Koishi est sa puissante console.La console est une interface utilisateur conviviale qui encapsule la plupart des fonctionnalités de Koishi :
 
-- Surveillance de l'état, statistiques des données
-- Configuration des plugins
 - Installation, désinstallation et mise à jour des plugins
+- 启用、停用和配置插件
 - Gestion des commandes, de la base de données, des sorties de texte
-- Simulation de discussions
+- 在模拟和真实环境下聊天
+- Surveillance de l'état, statistiques des données
 - Voir le journal
 
 Dans cette section, nous utiliserons l'exemple du plugin [echo](../../plugins/common/echo.md) pour vous montrer comment installer et configurer des plugins.Le plugin echo enregistre une commande nommée `echo`, qui renvoie le texte d'entrée tel quel à l'utilisateur.
@@ -69,8 +69,8 @@ Bien que le plugin echo n'ait pas besoin de configuration, les plugins plus comp
 
 Sur cette page, vous verrez de nombreuses options de configuration. Notez ce qui suit :
 
-- Les options de configuration obligatoires mais non encore renseignées sont indiquées par une barre d'information <span style="font-weight: bold; color: var(--vp-c-red-light)">rouge</span>. Vous devez remplir correctement ces options pour activer le plugin.
-- Les options de configuration modifiées mais non enregistrées sont indiquées par une barre d'information <span style="font-weight: bold; color: var(--vp-c-brand)">violette</span>. Une fois que vous avez modifié une configuration, cliquez sur le bouton "Activer le plugin" ou "Enregistrer la configuration" pour enregistrer les modifications. Si vous souhaitez annuler les modifications, vous pouvez cliquer sur le menu déroulant à côté du nom de la configuration, puis choisir "Annuler les modifications" pour ramener la configuration à son état précédemment enregistré.
+- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-1)">红色</span> 的提示条，只有正确填写配置才能启动插件。
+- 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-indigo-1)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
 
 ## Gestion des plugins
 
