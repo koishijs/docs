@@ -38,7 +38,7 @@ Le processus d'installation peut prendre plus de 10 minutes sur certains ordinat
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-Cliquez sur l'icône de Koishi pour le démarrer et Koishi pouvez démarrer en quelques secondes.la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
+Cliquez sur l'icône de Koishi pour le démarrer, en quelques secondes, la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
 
 ## Autres méthodes d'installation
 
