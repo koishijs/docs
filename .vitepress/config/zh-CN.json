@@ -527,8 +527,11 @@
           "text": "MongoDB",
           "link": "/plugins/database/mongo.md"
         }, {
-          "text": "MySQL",
+          "text": "MySQL / MariaDB",
           "link": "/plugins/database/mysql.md"
+        }, {
+          "text": "PostgreSQL",
+          "link": "/plugins/database/postgres.md"
         }, {
           "text": "SQLite",
           "link": "/plugins/database/sqlite.md"
