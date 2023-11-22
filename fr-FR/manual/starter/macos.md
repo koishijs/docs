@@ -24,7 +24,7 @@ Installer Koishi via le programme d'installation est la méthode la recommandée
 
 ## Démarrage
 
-Cliquez sur l'icône de Koishi pour le démarrer et Koishi pouvez démarrer en quelques secondes.en quelques secondes, la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
+Cliquez sur l'icône de Koishi pour le démarrer, en quelques secondes, la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
 
 ## Autres méthodes d'installation
 
