@@ -24,7 +24,7 @@ Bien sûr, le projet modèle peut également être utilisé en production. Bien 
 
 ## Installer Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi a besoin d'un environnement d'exécution [Node.js](https://nodejs.org/) (version minimale : 18, version LTS recommandée), que vous devez installer vous-même.
 
 ### Télécharger le package d'installation
 
@@ -54,7 +54,7 @@ yarn -v
 Certains utilisateurs de Windows peuvent rencontrer l'erreur suivante ([référence](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies)) :
 
 ```text
-yarn : Impossible de charger le fichier yarn.ps1, car l’exécution de scripts est désactivée sur ce système.
+yarn : Impossible de charger le fichier yarn.ps1, car l'exécution de scripts est désactivée sur ce système.
 ```
 
 Dans ce cas, vous pouvez exécuter à nouveau le terminal en tant qu'administrateur et saisir la commande suivante :
@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 Ouvrez une ligne de commande et accédez au répertoire dans lequel vous souhaitez créer le projet modèle de Koishi.
 
 ::: tip
-这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
+Ce répertoire ne doit pas être trop long et ne doit pas contenir d'espaces dans le chemin. Voici les chemins recommandés :
 
 - Pour Windows : `C:\dev` ou `D:\dev` (n'installez pas le projet directement à la racine du lecteur, créez plutôt un sous-répertoire)
 - Pour d'autres systèmes d'exploitation : `~/dev`
