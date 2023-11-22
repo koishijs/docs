@@ -43,7 +43,7 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶指南",
+            "text": "Guide avancée de développement",
             "link": "/cookbook/"
           },
           {
@@ -361,7 +361,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶指南",
+              "text": "→ Guide avancée de développement",
               "link": "/cookbook/"
             }
           ]
@@ -481,23 +481,23 @@
               "link": "/api/resources/role.md"
             },
             {
-              "text": "交互 (Interaction)",
+              "text": "Interactions",
               "link": "/api/resources/interaction.md"
             },
             {
-              "text": "登录状态 (Login)",
+              "text": "Login : état de connexion",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "消息 (Message)",
+              "text": "Message : messages",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "表态 (Reaction)",
+              "text": "Reaction : réactions",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "用户 (User)",
+              "text": "User : comptes",
               "link": "/api/resources/user.md"
             }
           ]
@@ -616,7 +616,7 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的 Koishi",
+              "text": "Koishi réversible",
               "link": "/cookbook/design/disposable.md"
             },
             {
@@ -624,7 +624,7 @@
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
             },
             {
@@ -751,8 +751,12 @@
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "MySQL",
+              "text": "MySQL / MariaDB",
               "link": "/plugins/database/mysql.md"
+            },
+            {
+              "text": "PostgreSQL",
+              "link": "/plugins/database/postgres.md"
             },
             {
               "text": "SQLite",
@@ -858,15 +862,15 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
+              "text": "Server Proxy : serveur proxy",
               "link": "/plugins/develop/server-proxy.md"
             },
             {
-              "text": "API 服务器 (Server Satori)",
+              "text": "Server Satori : serveur d'API",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "临时服务器 (Server Temp)",
+              "text": "Server Temp : serveur temporaire",
               "link": "/plugins/develop/server-temp.md"
             }
           ]
@@ -1091,8 +1095,12 @@
               "link": "/about/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Notes de version : v4.14",
               "link": "/about/releases/v4.14.md"
+            },
+            {
+              "text": "v4.15 版本介绍",
+              "link": "/about/releases/v4.15.md"
             }
           ]
         },
