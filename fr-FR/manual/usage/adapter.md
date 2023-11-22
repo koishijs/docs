@@ -14,7 +14,7 @@ Le plugin « echo » que nous venons d'installer permet de renvoyer le texte sai
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-Si vous souhaitez simuler une conversation en guilde, vous pouvez cliquer à nouveau sur « Ajouter un utilisateur » pour créer plus d'utilisateurs.Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
+Si vous souhaitez simuler une conversation en guilde, vous pouvez cliquer à nouveau sur « Ajouter un utilisateur » pour créer plus d'utilisateurs. Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
 
 En outre, si certaines commandes nécessitent un certain [niveau des autorisations](../usage/customize.md#权限管理), vous pouvez les ajuster dans les « Paramètres de l'utilisateur ».
 
