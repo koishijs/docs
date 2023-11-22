@@ -8,7 +8,7 @@ Après avoir appris les bases de l'utilisation de la console, nous pouvons enfin
 <p>Commandes disponibles : </p>
 <p class="indent-1">echo  Envoi de message</p>
 <p class="indent-1">help  Afficher l'aide</p>
-<p>Tapez "help <commande>" pour voir la syntaxe et les exemples pour une commande spécifique.</p>
+<p>Tapez "help &lt;commande&gt;" pour voir la syntaxe et les exemples pour une commande spécifique.</p>
 </chat-message>
 </chat-panel>
 

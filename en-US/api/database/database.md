@@ -84,9 +84,9 @@ interface TableStats {
 
 ```ts
 export interface WriteResult {
-  // upsert 操作中插入数据的条数
+  // upsert 操作中插入数据的行数
   inserted?: number
-  // set, upsert, remove 操作中匹配数据的条数
+  // set, upsert, remove 操作中匹配数据的行数
   matched?: number
 }
 ```
@@ -125,7 +125,7 @@ export interface WriteResult {
 - **update:** [`Update`](#update) 数据
 - 返回值: [`Promise<WriteResult>`](#writeresult)
 
-更新数据。
+更新数据。返回对象包含本次操作的匹配行数。
 
 ### ctx.database.remove(table, query)
 
@@ -133,15 +133,15 @@ export interface WriteResult {
 - **query:** [`Query`](./query.md) 约束条件
 - 返回值: [`Promise<WriteResult>`](#writeresult)
 
-删除数据。
+删除数据。返回对象包含本次操作的匹配行数。
 
 ### ctx.database.create(table, data)
 
 - **table:** `string` 表名
 - **data:** `any` 数据
-- 返回值: `Promise<void>`
+- 返回值: `Promise<any>`
 
-插入数据。
+插入数据。返回值为插入的数据行。
 
 ### ctx.database.upsert(table, data, keys?)
 
@@ -150,7 +150,7 @@ export interface WriteResult {
 - **keys:** `string | string[]` 用于索引的字段
 - 返回值: [`Promise<WriteResult>`](#writeresult)
 
-插入或更新数据。
+插入或更新数据。返回对象包含本次操作的插入行数和匹配行数。
 
 ### ctx.database.eval(table, expr, query?)
 
