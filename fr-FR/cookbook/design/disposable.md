@@ -1,4 +1,4 @@
-# 可逆的 Koishi
+# Koishi réversible
 
 可逆化是 Koishi 的核心设计理念。
 
