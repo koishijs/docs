@@ -29,7 +29,7 @@ Node.js 并不支持直接加载 `.yaml` / `.yml` 后缀的文件，但我们可
 
 在 [编写帮助](../basic/command.md#编写帮助) 一节中，我们已经了解到指令和参数的描述文本都是在指令注册时就定义的。这种做法对单语言开发固然方便，但并不适合多语言开发，因为它将翻译逻辑与代码逻辑耦合了。如果你希望你编写的指令支持多语言，那么需要将翻译文本单独定义：
 
-```yaml
+```yaml title=locales/zh-CN.yml
 commands:
   foo:
     description: 指令描述
@@ -53,7 +53,7 @@ ctx.command('foo').option('bar')
 
 如果我们希望在指令中输出一些国际化内容，为了避免与其他指令定义的内容相冲突，最好的办法是将这些内容与其他指令相关文本定义在一起：
 
-```yaml
+```yaml title=locales/zh-CN.yml
 commands:
   greeting:
     description: 指令描述
@@ -84,4 +84,137 @@ if (new Date().getHours < 12) {
 
 ## 配置本地化 <badge type="warning">实验性</badge>
 
+::: warning
+配置本地化仍然是实验性功能，暂不支持被其他插件扩展。
+:::
+
+插件配置中出现的文本也可以支持多语言。考虑下面的配置项：
+
+```ts
+Schema.object({
+  foo: Schema.string().description('这是一个字符串。'),
+  bar: Schema.number().description('这是一个数值。'),
+})
+```
+
+为了让其支持多语言，我们在翻译文件中增加名为 `_config` 的属性：
+
+```yaml title=locales/zh-CN.yml
+_config:
+  foo: 这是一个字符串。
+  bar: 这是一个数值。
+```
+
+接着使用 `schema.i18n()` 加载翻译文件：
+
+```ts
+Schema.object({
+  foo: Schema.string(),
+  bar: Schema.number(),
+}).i18n({
+  'zh-CN': require('./locales/zh-CN')._config,
+  'en-US': require('./locales/en-US')._config,
+})
+```
+
+### 描述复杂类型
+
+默认情况下，上述 `_config` 对象的键对应配置项的键，值则是对应的翻译文本。这种写法足以覆盖大部分的情况，即便当出现嵌套的对象或引入 `intersect` 类型时也成立：
+
+```ts
+// 一个带有嵌套对象和 intersect 的类型
+Schema.intersect([
+  Schema.object({
+    foo: Schema.object({
+      qux: Schema.boolean(),
+    }),
+  }),
+  Schema.object({
+    bar: Schema.string(),
+    baz: Schema.number(),
+  }),
+])
+```
+
+```yaml
+# 对应的翻译文件
+foo:
+  qux: 这是一个配置项。
+bar: 这是另一个配置项。
+baz: 这是再一个配置项。
+```
+
+然而，当想要描述 `union`, `array`, `dict` 等类型，或是要为一个 `intersect` 中的不同对象设置不同的小标题时，上面的方法就行不通了。此时就需要引入一些高特殊属性：
+
+```ts
+// 一个带有 union, array 和 dict 的复杂类型
+Schema.intersect([
+  Schema.object({
+    shared: Schema.string(),
+    type: Schema.union(['foo', 'bar']).required(),
+  }),
+  Schema.union([
+    Schema.object({
+      type: Schema.const('foo').required(),
+      value: Schema.array(Number),
+    }),
+    Schema.object({
+      type: Schema.const('bar').required(),
+      text: Schema.Dict(string),
+    }),
+  ]),
+])
+```
+
+```yaml
+# 对应的翻译文件
+- shared: 公用的配置项。
+  type:
+    $desc: 选择一个分支。
+    $inner:
+      - 分支 1
+      - 分支 2
+- - $desc: 分支 1
+    $inner: 一个数值。
+    value: 一个数值构成的数组。
+  - $desc: 分支 2
+    $inner: 一个字符串。
+    text: 一个字符串构成的字典。
+```
+
+其中，任何一个节点的 `$desc` 属性表达其自身的文本，`$inner` 属性则用于描述其子节点 (对于 `array` 和 `dict` 是其内部类型，对于 `intersect` 和 `union` 是其内部类型的数组)。而在对象中，我们可以同时使用普通的属性和带有 `$` 前缀的特殊属性。
+
 ## 控制台本地化 <badge type="warning">实验性</badge>
+
+::: warning
+控制台本地化仍然是实验性功能，暂不支持被其他插件扩展。
+:::
+
+如果你在开发支持多语言的控制台扩展，你可以组件中使用 `vue-i18n` 这样的本地化库：
+
+```ts
+import { useI18n } from 'vue-i18n'
+import zhCN from './zh-CN.yml'
+import enUS from './en-US.yml'
+
+const { t, setLocaleMessage } = useI18n({
+  messages: {
+    'zh-CN': zhCN,
+    'en-US': enUS,
+  },
+})
+
+// 支持热重载
+if (import.meta.hot) {
+  import.meta.hot.accept('./zh-CN.yml', (module) => {
+    setLocaleMessage('zh-CN', module.default)
+  })
+  import.meta.hot.accept('./en-US.yml', (module) => {
+    setLocaleMessage('en-US', module.default)
+  })
+}
+```
+
+::: tip
+注意：此时你的翻译文件应当处于 `client` 目录而非 `src/locales` 目录。
+:::
