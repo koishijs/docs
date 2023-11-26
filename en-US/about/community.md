@@ -4,7 +4,6 @@ Some excellent community resources to learn from are summarized on this page. If
 
 ## Documentations
 
-- [User Manual](https://koishi.ilharper.com/) (Il Harper)
 - [Plugin development tutorial](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601) (TimeBather)
 
 ## Videos
