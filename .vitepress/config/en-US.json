@@ -1035,11 +1035,7 @@
               "link": "/about/history.md"
             },
             {
-              "text": "Migrate from v3",
-              "link": "/about/migration.md"
-            },
-            {
-              "text": "Migrate within v4",
+              "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
@@ -1091,7 +1087,7 @@
               "link": "/about/releases/v4.12.md"
             },
             {
-              "text": "Release Notes: v4.13",
+              "text": "v4.13 版本介绍",
               "link": "/about/releases/v4.13.md"
             },
             {
