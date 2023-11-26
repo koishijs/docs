@@ -94,8 +94,7 @@ Enter the following command to create Koishi template project:
 
 ::: tabs code
 ```npm
-npm i -g create-koishi@latest
-npm init koishi
+npm init koishi@latest
 ```
 ```yarn
 yarn create koishi
