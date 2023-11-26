@@ -94,8 +94,7 @@ yarn config set registry https://registry.npmmirror.com
 
 ::: tabs code
 ```npm
-npm i -g create-koishi@latest
-npm init koishi
+npm init koishi@latest
 ```
 ```yarn
 yarn create koishi
