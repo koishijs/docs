@@ -1035,11 +1035,7 @@
               "link": "/about/history.md"
             },
             {
-              "text": "從 v3 遷移",
-              "link": "/about/migration.md"
-            },
-            {
-              "text": "版本內遷移",
+              "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
@@ -1047,35 +1043,35 @@
               "link": "/about/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介紹",
+              "text": "v4.2 版本介绍",
               "link": "/about/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介紹",
+              "text": "v4.3 版本介绍",
               "link": "/about/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介紹",
+              "text": "v4.4 版本介绍",
               "link": "/about/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介紹",
+              "text": "v4.5 版本介绍",
               "link": "/about/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介紹",
+              "text": "v4.6 版本介绍",
               "link": "/about/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介紹",
+              "text": "v4.7 版本介绍",
               "link": "/about/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介紹",
+              "text": "v4.8 版本介绍",
               "link": "/about/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介紹",
+              "text": "v4.9 版本介绍",
               "link": "/about/releases/v4.9.md"
             },
             {
@@ -1083,7 +1079,7 @@
               "link": "/about/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介紹",
+              "text": "v4.11 版本介绍",
               "link": "/about/releases/v4.11.md"
             },
             {
