@@ -1035,11 +1035,7 @@
               "link": "/about/history.md"
             },
             {
-              "text": "从 v3 迁移",
-              "link": "/about/migration.md"
-            },
-            {
-              "text": "版本内迁移",
+              "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
