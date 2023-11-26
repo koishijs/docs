@@ -240,7 +240,7 @@
           "text": "多语言支持",
           "link": "/guide/i18n/index.md"
         }, {
-          "text": "编写翻译文件",
+          "text": "本地化文件",
           "link": "/guide/i18n/translation.md"
         }, {
           "text": "接入 Crowdin",
