@@ -1035,71 +1035,67 @@
               "link": "/about/history.md"
             },
             {
-              "text": "Migration depuis v3",
-              "link": "/about/migration.md"
-            },
-            {
-              "text": "Migration dans la version",
+              "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "Notes de version : v4.1",
+              "text": "v4.1 版本介绍",
               "link": "/about/releases/v4.1.md"
             },
             {
-              "text": "Notes de version : v4.2",
+              "text": "v4.2 版本介绍",
               "link": "/about/releases/v4.2.md"
             },
             {
-              "text": "Notes de version : v4.3",
+              "text": "v4.3 版本介绍",
               "link": "/about/releases/v4.3.md"
             },
             {
-              "text": "Notes de version : v4.4",
+              "text": "v4.4 版本介绍",
               "link": "/about/releases/v4.4.md"
             },
             {
-              "text": "Notes de version : v4.5",
+              "text": "v4.5 版本介绍",
               "link": "/about/releases/v4.5.md"
             },
             {
-              "text": "Notes de version : v4.6",
+              "text": "v4.6 版本介绍",
               "link": "/about/releases/v4.6.md"
             },
             {
-              "text": "Notes de version : v4.7",
+              "text": "v4.7 版本介绍",
               "link": "/about/releases/v4.7.md"
             },
             {
-              "text": "Notes de version : v4.8",
+              "text": "v4.8 版本介绍",
               "link": "/about/releases/v4.8.md"
             },
             {
-              "text": "Notes de version : v4.9",
+              "text": "v4.9 版本介绍",
               "link": "/about/releases/v4.9.md"
             },
             {
-              "text": "Notes de version : v4.10",
+              "text": "v4.10 版本介绍",
               "link": "/about/releases/v4.10.md"
             },
             {
-              "text": "Notes de version : v4.11",
+              "text": "v4.11 版本介绍",
               "link": "/about/releases/v4.11.md"
             },
             {
-              "text": "Notes de version : v4.12",
+              "text": "v4.12 版本介绍",
               "link": "/about/releases/v4.12.md"
             },
             {
-              "text": "Notes de version : v4.13",
+              "text": "v4.13 版本介绍",
               "link": "/about/releases/v4.13.md"
             },
             {
-              "text": "Notes de version : v4.14",
+              "text": "v4.14 版本介绍",
               "link": "/about/releases/v4.14.md"
             },
             {
-              "text": "Notes de version : v4.15",
+              "text": "v4.15 版本介绍",
               "link": "/about/releases/v4.15.md"
             }
           ]
