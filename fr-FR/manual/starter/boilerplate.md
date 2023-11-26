@@ -94,8 +94,7 @@ Saisissez la commande suivante pour créer le projet modèle de Koishi :
 
 ::: tabs code
 ```npm
-npm i -g create-koishi@latest
-npm init koishi
+npm init koishi@latest
 ```
 ```yarn
 yarn create koishi
