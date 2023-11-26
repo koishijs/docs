@@ -6,7 +6,7 @@ If you have problems when using Koishi, or have new ideas to share to other user
 
 ### For users
 
-[391463133](https://jq.qq.com/?_wv=1027&k=z2kKtk3N)
+[948266958](https://qm.qq.com/q/7C9E9rjR0Q)
 
 This group is for the users who newly used Koishi, or have problems when using Koishi and hope to receive an answer. There are many friendly members in the group and ready to answer your questions every time!
 
