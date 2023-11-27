@@ -22,6 +22,14 @@
 
 我们的 Discord 服务器内设有版本发布、开发交流和问题反馈等不同功能的频道，你也可以在这里参与讨论。
 
+## Telegram
+
+[加入群聊](https://t.me/koishichat)
+
+[加入通知群](https://t.me/koishichannel)
+
+欢迎加入我们的 Telegram 群聊，你可以在这里参与讨论，或者在 Telegram 通知群中接收版本更新通知。
+
 ## 论坛
 
 <https://forum.koishi.xyz>
