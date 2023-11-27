@@ -43,7 +43,13 @@
       "activeMatch": "/(plugins|market)/"
     }, {
       "text": "更多",
-      "link": "/about/contact.md",
+      "items": [{
+        "text": "参与讨论",
+        "link": "/about/contact.md"
+      }, {
+        "text": "版本介绍",
+        "link": "/releases/index.md"
+      }],
       "activeMatch": "/about/"
     }],
     "sidebar": {
@@ -735,49 +741,49 @@
           "link": "/about/upgrade.md"
         }, {
           "text": "v4.1 版本介绍",
-          "link": "/about/releases/v4.1.md"
+          "link": "/releases/v4.1.md"
         }, {
           "text": "v4.2 版本介绍",
-          "link": "/about/releases/v4.2.md"
+          "link": "/releases/v4.2.md"
         }, {
           "text": "v4.3 版本介绍",
-          "link": "/about/releases/v4.3.md"
+          "link": "/releases/v4.3.md"
         }, {
           "text": "v4.4 版本介绍",
-          "link": "/about/releases/v4.4.md"
+          "link": "/releases/v4.4.md"
         }, {
           "text": "v4.5 版本介绍",
-          "link": "/about/releases/v4.5.md"
+          "link": "/releases/v4.5.md"
         }, {
           "text": "v4.6 版本介绍",
-          "link": "/about/releases/v4.6.md"
+          "link": "/releases/v4.6.md"
         }, {
           "text": "v4.7 版本介绍",
-          "link": "/about/releases/v4.7.md"
+          "link": "/releases/v4.7.md"
         }, {
           "text": "v4.8 版本介绍",
-          "link": "/about/releases/v4.8.md"
+          "link": "/releases/v4.8.md"
         }, {
           "text": "v4.9 版本介绍",
-          "link": "/about/releases/v4.9.md"
+          "link": "/releases/v4.9.md"
         }, {
           "text": "v4.10 版本介绍",
-          "link": "/about/releases/v4.10.md"
+          "link": "/releases/v4.10.md"
         }, {
           "text": "v4.11 版本介绍",
-          "link": "/about/releases/v4.11.md"
+          "link": "/releases/v4.11.md"
         }, {
           "text": "v4.12 版本介绍",
-          "link": "/about/releases/v4.12.md"
+          "link": "/releases/v4.12.md"
         }, {
           "text": "v4.13 版本介绍",
-          "link": "/about/releases/v4.13.md"
+          "link": "/releases/v4.13.md"
         }, {
           "text": "v4.14 版本介绍",
-          "link": "/about/releases/v4.14.md"
+          "link": "/releases/v4.14.md"
         }, {
           "text": "v4.15 版本介绍",
-          "link": "/about/releases/v4.15.md"
+          "link": "/releases/v4.15.md"
         }]
       }, {
         "text": "贡献指南",
