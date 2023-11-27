@@ -22,6 +22,14 @@ This group is for the users who had learned Node.js / TypeScript and interested 
 
 Our Discord server has channels with different features such as Version Releases, Development Discuss and Question Feedback. You can also participate in discussions here.
 
+## Telegram
+
+[加入群聊](https://t.me/koishichat)
+
+[加入通知群](https://t.me/koishichannel)
+
+欢迎加入我们的 Telegram 群聊，你可以在这里参与讨论，或者在 Telegram 通知群中接收版本更新通知。
+
 ## Forum
 
 <https://forum.koishi.xyz>
