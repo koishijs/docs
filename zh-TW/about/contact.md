@@ -22,6 +22,14 @@
 
 我們的 Discord 服務器內設有版本發布、開發交流和問題反饋等不同功能的頻道，你也可以在這裏參與討論。
 
+## Telegram
+
+[加入群聊](https://t.me/koishichat)
+
+[加入通知群](https://t.me/koishichannel)
+
+欢迎加入我们的 Telegram 群聊，你可以在这里参与讨论，或者在 Telegram 通知群中接收版本更新通知。
+
 ## 論壇
 
 <https://forum.koishi.xyz>
