@@ -725,8 +725,11 @@
           "text": "参与讨论",
           "link": "/about/contact.md"
         }, {
-          "text": "团队介绍",
+          "text": "认识团队",
           "link": "/about/team.md"
+        }, {
+          "text": "常见问题",
+          "link": "/about/faq.md"
         }, {
           "text": "社区资源",
           "link": "/about/community.md"
