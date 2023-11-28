@@ -746,6 +746,28 @@
           "text": "从低版本迁移",
           "link": "/about/upgrade.md"
         }, {
+          "text": "各版本介绍",
+          "link": "/releases/index.md"
+        }, {
+          "text": "更新日志",
+          "link": "https://github.com/koishijs/koishi/releases"
+        }]
+      }, {
+        "text": "贡献",
+        "items": [{
+          "text": "项目结构",
+          "link": "/about/contribute/structure.md"
+        }, {
+          "text": "文档贡献指南",
+          "link": "/about/contribute/docs.md"
+        }]
+      }],
+      "/releases": [{
+        "text": "",
+        "items": [{
+          "text": "各版本介绍",
+          "link": "/releases/index.md"
+        }, {
           "text": "v4.1 版本介绍",
           "link": "/releases/v4.1.md"
         }, {
@@ -792,13 +814,10 @@
           "link": "/releases/v4.15.md"
         }]
       }, {
-        "text": "贡献指南",
+        "text": "",
         "items": [{
-          "text": "项目结构",
-          "link": "/about/contribute/structure.md"
-        }, {
-          "text": "文档贡献指南",
-          "link": "/about/contribute/docs.md"
+          "text": "更新日志",
+          "link": "https://github.com/koishijs/koishi/releases"
         }]
       }]
     }
