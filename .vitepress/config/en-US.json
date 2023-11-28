@@ -73,8 +73,17 @@
       },
       {
         "text": "More",
-        "link": "/about/contact.md",
-        "activeMatch": "/about/"
+        "items": [
+          {
+            "text": "Discussion",
+            "link": "/about/contact.md"
+          },
+          {
+            "text": "各版本介绍",
+            "link": "/releases/index.md"
+          }
+        ],
+        "activeMatch": "/(about|releases)/"
       }
     ],
     "sidebar": {
@@ -1007,7 +1016,7 @@
       ],
       "/about/": [
         {
-          "text": "About",
+          "text": "关于",
           "items": [
             {
               "text": "License",
@@ -1018,90 +1027,50 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "Meet Our Team",
+              "text": "认识团队",
               "link": "/about/team.md"
+            },
+            {
+              "text": "FAQ",
+              "link": "/about/faq.md"
             },
             {
               "text": "Community Resources",
               "link": "/about/community.md"
+            },
+            {
+              "text": "大事件",
+              "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "Updates",
+          "text": "更新",
           "items": [
             {
               "text": "History",
               "link": "/about/history.md"
             },
             {
+              "text": "更新计划",
+              "link": "/about/releases.md"
+            },
+            {
               "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "Release Notes: v4.1",
-              "link": "/about/releases/v4.1.md"
+              "text": "各版本介绍",
+              "link": "/releases/index.md"
             },
             {
-              "text": "Release Notes: v4.2",
-              "link": "/about/releases/v4.2.md"
-            },
-            {
-              "text": "Release Notes: v4.3",
-              "link": "/about/releases/v4.3.md"
-            },
-            {
-              "text": "Release Notes: v4.4",
-              "link": "/about/releases/v4.4.md"
-            },
-            {
-              "text": "Release Notes: v4.5",
-              "link": "/about/releases/v4.5.md"
-            },
-            {
-              "text": "Release Notes: v4.6",
-              "link": "/about/releases/v4.6.md"
-            },
-            {
-              "text": "Release Notes: v4.7",
-              "link": "/about/releases/v4.7.md"
-            },
-            {
-              "text": "Release Notes: v4.8",
-              "link": "/about/releases/v4.8.md"
-            },
-            {
-              "text": "Release Notes: v4.9",
-              "link": "/about/releases/v4.9.md"
-            },
-            {
-              "text": "Release Notes: v4.10",
-              "link": "/about/releases/v4.10.md"
-            },
-            {
-              "text": "Release Notes: v4.11",
-              "link": "/about/releases/v4.11.md"
-            },
-            {
-              "text": "Release Notes: v4.12",
-              "link": "/about/releases/v4.12.md"
-            },
-            {
-              "text": "v4.13 版本介绍",
-              "link": "/about/releases/v4.13.md"
-            },
-            {
-              "text": "v4.14 版本介绍",
-              "link": "/about/releases/v4.14.md"
-            },
-            {
-              "text": "v4.15 版本介绍",
-              "link": "/about/releases/v4.15.md"
+              "text": "更新日志",
+              "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "Contributing",
+          "text": "贡献",
           "items": [
             {
               "text": "Infrastructure",
@@ -1110,6 +1079,86 @@
             {
               "text": "Documentation",
               "link": "/about/contribute/docs.md"
+            }
+          ]
+        }
+      ],
+      "/releases": [
+        {
+          "text": "",
+          "items": [
+            {
+              "text": "各版本介绍",
+              "link": "/releases/index.md"
+            },
+            {
+              "text": "Release Notes: v4.1",
+              "link": "/releases/v4.1.md"
+            },
+            {
+              "text": "Release Notes: v4.2",
+              "link": "/releases/v4.2.md"
+            },
+            {
+              "text": "Release Notes: v4.3",
+              "link": "/releases/v4.3.md"
+            },
+            {
+              "text": "Release Notes: v4.4",
+              "link": "/releases/v4.4.md"
+            },
+            {
+              "text": "Release Notes: v4.5",
+              "link": "/releases/v4.5.md"
+            },
+            {
+              "text": "Release Notes: v4.6",
+              "link": "/releases/v4.6.md"
+            },
+            {
+              "text": "Release Notes: v4.7",
+              "link": "/releases/v4.7.md"
+            },
+            {
+              "text": "Release Notes: v4.8",
+              "link": "/releases/v4.8.md"
+            },
+            {
+              "text": "Release Notes: v4.9",
+              "link": "/releases/v4.9.md"
+            },
+            {
+              "text": "Release Notes: v4.10",
+              "link": "/releases/v4.10.md"
+            },
+            {
+              "text": "Release Notes: v4.11",
+              "link": "/releases/v4.11.md"
+            },
+            {
+              "text": "Release Notes: v4.12",
+              "link": "/releases/v4.12.md"
+            },
+            {
+              "text": "v4.13 版本介绍",
+              "link": "/releases/v4.13.md"
+            },
+            {
+              "text": "v4.14 版本介绍",
+              "link": "/releases/v4.14.md"
+            },
+            {
+              "text": "v4.15 版本介绍",
+              "link": "/releases/v4.15.md"
+            }
+          ]
+        },
+        {
+          "text": "",
+          "items": [
+            {
+              "text": "更新日志",
+              "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         }
