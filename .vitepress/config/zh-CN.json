@@ -743,6 +743,9 @@
           "text": "发展史",
           "link": "/about/history.md"
         }, {
+          "text": "更新计划",
+          "link": "/about/releases.md"
+        }, {
           "text": "从低版本迁移",
           "link": "/about/upgrade.md"
         }, {
