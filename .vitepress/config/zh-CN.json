@@ -47,10 +47,10 @@
         "text": "参与讨论",
         "link": "/about/contact.md"
       }, {
-        "text": "版本介绍",
+        "text": "各版本介绍",
         "link": "/releases/index.md"
       }],
-      "activeMatch": "/about/"
+      "activeMatch": "/(about|releases)/"
     }],
     "sidebar": {
       "/manual/": [{
@@ -717,7 +717,7 @@
         }]
       }],
       "/about/": [{
-        "text": "关于我们",
+        "text": "关于",
         "items": [{
           "text": "许可证",
           "link": "/about/license.md"
@@ -730,9 +730,12 @@
         }, {
           "text": "社区资源",
           "link": "/about/community.md"
+        }, {
+          "text": "大事件",
+          "link": "/about/events.md"
         }]
       }, {
-        "text": "更新与迁移",
+        "text": "更新",
         "items": [{
           "text": "发展史",
           "link": "/about/history.md"
