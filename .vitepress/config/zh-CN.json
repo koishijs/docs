@@ -439,7 +439,7 @@
           "text": "可逆的 Koishi",
           "link": "/cookbook/design/disposable.md"
         }, {
-          "text": "零占用的 Koishi",
+          "text": "插件数据存储",
           "link": "/cookbook/design/storage.md"
         }, {
           "text": "深入工作区",
