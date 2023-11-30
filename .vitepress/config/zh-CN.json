@@ -436,7 +436,7 @@
           "text": "项目架构",
           "link": "/cookbook/design/structure.md"
         }, {
-          "text": "可逆的 Koishi",
+          "text": "可逆的插件系统",
           "link": "/cookbook/design/disposable.md"
         }, {
           "text": "零占用的存储模式",
