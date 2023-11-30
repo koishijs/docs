@@ -629,7 +629,7 @@
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "插件数据存储",
+              "text": "零占用的存储模式",
               "link": "/cookbook/design/storage.md"
             },
             {
