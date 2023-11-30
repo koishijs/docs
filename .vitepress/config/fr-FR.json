@@ -625,7 +625,7 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "Koishi réversible",
+              "text": "可逆的插件系统",
               "link": "/cookbook/design/disposable.md"
             },
             {
