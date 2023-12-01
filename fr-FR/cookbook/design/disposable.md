@@ -53,6 +53,8 @@ Cordis 的名字来源于拉丁语的心。我希望它能成为未来软件 (�
 - **异步加载**：由于插件的加载顺序由依赖关系决定，因此插件的代码可以被异步地加载，而不需要担心加载顺序对可用性的影响。这将显著提高 Koishi 的启动速度。
 - **可追踪**：由 Koishi 插件注册的指令和中间件、监听的事件、提供的本地化、扩展的页面、抛出的错误都可以被明确地追踪来源。这有利于在大型项目中快速定位问题。
 
+如今，Koishi 已经有超过 1000 个插件，其中的依赖错综复杂。而即使是在这个规模下，Koishi 仍然能够妥善处理所有插件的加载、卸载和更新。这一切都得益于 Cordis 的可逆性。
+
 ## 实现原理
 
 说了这么多好处，可逆性真的可以实现吗？答案是肯定的。在这一节中，我们将会从数学的角度来探讨可逆性的实现原理。你会发现，任何语言都可以实现自己的 Cordis。
@@ -61,7 +63,7 @@ Cordis 的名字来源于拉丁语的心。我希望它能成为未来软件 (�
 
 函数式编程中有着纯函数的概念——给定相同的输入总是给出相同的输出。然而，现实中的程序往往要与各种各样的副作用打交道。对于这种情况，我们可以对函数进行“纯化”——将它的副作用转化为参数和返回值的一部分即可。考虑下面的函数：
 
-$$ f_\text{imp}: \text{X}\to\text{Y} $$
+$$ f_\text{impure}: \text{X}\to\text{Y} $$
 
 假设它含有副作用，我们把所有可能的副作用用类型 $\mathcal{C}$ 封装起来，则该函数可以被转化为：
 
@@ -77,7 +79,13 @@ $$ f: \mathcal{C}\times\text{X}\to\mathcal{C}\times\text{Y} $$
 
 进一步，我们还希望 $f$ 的副作用是可以回收的。换言之，我们额外要求 $f$ 存在逆元 $f^{-1}$，此时 $\mathfrak{F}$ 就构成一个群。但仅仅知道函数可逆并不能帮助我们找到它的逆，我们需要在书写这个函数时一并写出它的回收方法。因此我们引入 $\text{effect}$ 函子，使这个函数返回一个新的函数，这个函数可用于回收此次调用的副作用：
 
-$$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}&\to&    \mathcal{C}\times\mathfrak{F} \\\text{effect}&:&f           &\mapsto&c          &\mapsto&\left(f(c), f^{-1}\right) \end{array} $$
+$$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F} \\\text{effect}&=&f           &\mapsto&\left(c, h\right)            &\mapsto&\left(f(c), h\circ f^{-1}\right) \end{array} $$
+
+可以证明 $\text{effect}$ 是一个 $\mathfrak{F}$ 到 $\mathcal{C}\times\mathfrak{F}$ 的同态：
+
+$$ \begin{aligned} \text{effect}\ (f\circ g) \left(c, h\right) &=\left((f\circ g)(c), h\circ (f\circ g)^{-1}\right)\\
+&=\left(f(g(c)), h\circ g^{-1}\circ f^{-1}\right)\\ &=\text{effect}\ f \left(g(c), h\circ g^{-1}\right)\\
+&=\left(\text{effect}\ f\circ\text{effect}\ g\right) \left(c, h\right) \end{aligned} $$
 
 下面是一个例子 (暂时忽略 $\mathcal{C}$ 参数)：
 
@@ -85,33 +93,27 @@ $$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}&\to&    \mat
 // effect(server.listen)
 function serve(port: number) {
   const server = createServer().listen(port)
-  return () => server.close()
+  collectEffect(() => server.close())
 }
 ```
 
-上面的 `serve()` 函数将会创建一个服务器并且监听 `port` 端口。同时，调用该函数也会返回一个新的函数，用于取消该端口的监听。
+上面的 `serve()` 函数将会创建一个服务器并且监听 `port` 端口。同时，调用该函数也会提供一个与自身功能相反的函数，用于取消该端口的监听 (但它并不会立即执行)。
 
-然而，$\text{effect}\ f$ 不再是 $\mathfrak{F}$ 中的成员了，这并不适合组合多个副作用。为了解决这个问题，我们引入 $\text{collect}$ 和 $\text{restore}$ 两个变换：
+为什么需要引入这个 $\text{effect}$ 和 $\mathcal{C}\times\mathfrak{F}$ 呢？它的作用是将副作用从函数的返回值中分离出来，从而实现副作用的回收。只需定义 $\text{dispose}$ 变换：
 
-$$ \begin{array} \\\text{collect}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C} \\\text{restore}&:&\mathcal{C}                  &\to&\mathcal{C} \end{array} $$
+$$ \begin{array} \\\text{dispose}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C} \\\text{dispose}&=&\left(c, h\right)            &\mapsto&h(c) \end{array} $$
 
-其中 `collect()` 用于记录一个副作用，`restore()` 用于清空所有副作用。它们大致这样使用：
+现在你就可以使用 `dispose()` 来回收副作用了：
 
 ```ts
-collect(serve(80))              // 监听端口 80 并记录副作用
-collect(serve(443))             // 监听端口 443 并记录副作用
-restore()                       // 回收所有副作用
+serve(80)               // 监听端口 80 并记录副作用
+serve(443)              // 监听端口 443 并记录副作用
+dispose()               // 回收所有副作用
 ```
-
-最后，我们可以定义可逆性 (disposable) 函子
-
-$$ \begin{array} \\\text{disposable}&:&\mathfrak{F}&\to&    \mathfrak{F} \\\text{disposable}&:&f           &\mapsto&\text{collect}\circ\left(\text{effect}\ f\right) \end{array} $$
-
-它的作用是将任何可逆函数 $f$ 变换成能够自动记录副作用的版本。
 
 ### 上下文对象
 
-在上面的示例中，我们并没有显式地写出 $\mathcal{C}$ 参数和返回值。可以认为 $\mathcal{C}$ 变换存在于 `collect` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
+在上面的示例中，我们并没有显式地写出 $\mathcal{C}$ 参数和返回值。可以认为 $\mathcal{C}$ 变换存在于 `dispose` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
 
 首先，所有插件都使用相同的全局函数，意味着不同插件的副作用完全无法区分，因此只能重启整个应用而无法细粒度地控制具体的插件；其次，这种设计意味着全局函数并不纯，因此一旦项目中出现了多例的依赖，整套系统的可靠性就会完全失效！
 
@@ -126,7 +128,7 @@ function serve(ctx: Context, config: Config) {
 }
 ```
 
-相应地，我们使用 `ctx.plugin()` 来加载插件 (相当于将可逆化函子作用于上述函数)：
+相应地，我们使用 `ctx.plugin()` 来加载插件：
 
 ```ts
 ctx.plugin(serve, { port: 80 })
@@ -136,7 +138,7 @@ ctx.plugin(serve, { port: 80 })
 
 除了 `ctx.plugin()` 外，上下文对象上还有许多 API，它们几乎都是某个函数的可逆化版本。例如 `ctx.on()` 是添加监听器的可逆化，`ctx.command()` 是注册指令的可逆化。这样一来，开发者只需要调用 `ctx` 上的方法，就可以确保插件的作用是可逆的。
 
-这种设计同时解决了上述两个缺陷，并且完全不会带来额外的心智负担。在大多数的插件场景下，开发者甚至完全不需要手动监听 `dispose` 事件，就能编写出可逆的插件。
+这种设计同时解决了上述两个缺陷，并且完全不会带来额外的心智负担。在大多数的插件场景下，开发者甚至完全不需要手动监听 `dispose` 事件，就能编写出可逆的插件。换句话说，只要框架的能力够强，将某一场景的所有 API 都通过可逆的方式提供，插件开发者就可以在完全不理解这套理论的情况下自然地编写出可逆的插件。
 
 ### 副作用即资源
 
