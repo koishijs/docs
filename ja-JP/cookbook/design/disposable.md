@@ -13,7 +13,7 @@ Cordis 的名字来源于拉丁语的心。我希望它能成为未来软件 (�
 
 作为一个元框架，Cordis 并不耦合任何具体的领域或场景。它所提供的能力是大多数框架都不足为奇的——插件系统，但在这个系统背后却是大多数框架都没有达成的目标：可逆性。
 
-## 可逆性
+## 背景介绍
 
 ### 引子：软件文明在退步吗？
 
@@ -87,33 +87,53 @@ $$ \begin{aligned} \text{effect}\ (f\circ g) \left(c, h\right) &=\left((f\circ g
 &=\left(f(g(c)), h\circ g^{-1}\circ f^{-1}\right)\\ &=\text{effect}\ f \left(g(c), h\circ g^{-1}\right)\\
 &=\left(\text{effect}\ f\circ\text{effect}\ g\right) \left(c, h\right) \end{aligned} $$
 
-下面是一个例子 (暂时忽略 $\mathcal{C}$ 参数)：
+下面是一个例子：
 
 ```ts
-// effect(server.listen)
+function serve(port: number) {
+  const server = createServer().listen(port)
+  return () => server.close()
+}
+
+const dispose = serve(80)       // 监听端口 80
+dispose()                       // 回收副作用
+```
+
+在这个例子中，`serve()` 函数将会创建一个服务器并且监听 `port` 端口。同时，调用该函数也会返回一个新的函数，用于取消该端口的监听。
+
+::: tip
+你可能很难将这段 TypeScript 代码与上面的数学定义对应起来，这是因为 TypeScript 并不是一个纯函数式语言。具体而言，这段代码以如下的方式建立对应关系：
+
+- $\mathcal{C}\times\mathfrak{F}$ 对应着全局环境 (我们稍后会提到全局环境的坏处，但不影响这里的理解)
+- `port` 对应于上面的 $\text{X}$，由于我们可以使用柯里化，所以在数学模型中并不需要考虑它
+:::
+
+为什么需要引入这个 $\text{effect}$ 和 $\mathcal{C}\times\mathfrak{F}$ 呢？它的作用是将副作用从函数的返回值中分离出来，从而实现副作用的回收。只需定义 $\text{restore}$ 变换 (不难发现它确实是 $\text{effect}$ 的逆操作)：
+
+$$ \begin{array} \\\text{restore}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C}\times\mathfrak{F} \\\text{restore}&=&\left(c, h\right)            &\mapsto&\left(h(c),\text{id}\right) \end{array} $$
+
+现在你就可以使用 `restore()` 来回收副作用了：
+
+```ts
 function serve(port: number) {
   const server = createServer().listen(port)
   collectEffect(() => server.close())
 }
-```
 
-上面的 `serve()` 函数将会创建一个服务器并且监听 `port` 端口。同时，调用该函数也会提供一个与自身功能相反的函数，用于取消该端口的监听 (但它并不会立即执行)。
-
-为什么需要引入这个 $\text{effect}$ 和 $\mathcal{C}\times\mathfrak{F}$ 呢？它的作用是将副作用从函数的返回值中分离出来，从而实现副作用的回收。只需定义 $\text{dispose}$ 变换：
-
-$$ \begin{array} \\\text{dispose}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C} \\\text{dispose}&=&\left(c, h\right)            &\mapsto&h(c) \end{array} $$
-
-现在你就可以使用 `dispose()` 来回收副作用了：
-
-```ts
 serve(80)               // 监听端口 80 并记录副作用
 serve(443)              // 监听端口 443 并记录副作用
-dispose()               // 回收所有副作用
+restore()               // 回收所有副作用
 ```
 
-### 上下文对象
+当副作用被记录到全局环境时，$\mathcal{C}\times\mathfrak{F}$ 也就变成了一个更大的 $\mathcal{C}$。我们便可以这样定义：
 
-在上面的示例中，我们并没有显式地写出 $\mathcal{C}$ 参数和返回值。可以认为 $\mathcal{C}$ 变换存在于 `dispose` 等全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
+$$ \mathcal{C}_1=\mathcal{C}\times\mathfrak{F}=\mathcal{C}\times\left(\mathcal{C}\to\mathcal{C}\right) $$
+
+下文中我们将直接使用 $\mathcal{C}$ 来表示 $\mathcal{C}_1$。
+
+### 上下文与插件
+
+在上面的示例中，我们并没有显式地写出 $\mathcal{C}$ 参数和返回值。可以认为对 $\mathcal{C}$ 的变换存在于所有全局函数的闭包中。这种设计广泛存在于各种组合式框架 (尤其是像 React 这样的前端框架)，但一些缺陷使其并不适合插件化和规模化的场景。
 
 首先，所有插件都使用相同的全局函数，意味着不同插件的副作用完全无法区分，因此只能重启整个应用而无法细粒度地控制具体的插件；其次，这种设计意味着全局函数并不纯，因此一旦项目中出现了多例的依赖，整套系统的可靠性就会完全失效！
 
@@ -124,7 +144,7 @@ dispose()               // 回收所有副作用
 ```ts
 function serve(ctx: Context, config: Config) {
   const server = createServer().listen(config.port)
-  ctx.on('dispose', () => server.close())
+  ctx.on('restore', () => server.close())
 }
 ```
 
@@ -134,14 +154,25 @@ function serve(ctx: Context, config: Config) {
 ctx.plugin(serve, { port: 80 })
 ```
 
-当一个插件被加载时，将会从当前上下文对象上派生出一个新的上下文实例。子级上下文将管理插件内的全部副作用，而插件整体将作为一个副作用被父级上下文收集。可以将上下文比作一个副作用的插座，而副作用就是上面的插头。当上下文被卸载时，它将会将所有的副作用一一回收。而插件就是连接到另一个插座的插头，管理着子级上下文的全部副作用。
+这看起来只是把函数和参数调换了个位置，但实际上外侧的 `ctx` 跟插件内部拿到的 `ctx` 并不是同一个值。当一个插件被加载时，将会从当前上下文对象上派生出一个新的上下文实例。子级上下文将管理插件内的全部副作用，而插件整体将作为一个副作用被父级上下文收集。可以将上下文比作一个副作用的插座，而副作用就是上面的插头。当上下文被卸载时，它将会将所有的副作用一一回收。而插件就是连接到另一个插座的插头，管理着子级上下文的全部副作用。
 
 除了 `ctx.plugin()` 外，上下文对象上还有许多 API，它们几乎都是某个函数的可逆化版本。例如 `ctx.on()` 是添加监听器的可逆化，`ctx.command()` 是注册指令的可逆化。这样一来，开发者只需要调用 `ctx` 上的方法，就可以确保插件的作用是可逆的。
 
-这种设计同时解决了上述两个缺陷，并且完全不会带来额外的心智负担。在大多数的插件场景下，开发者甚至完全不需要手动监听 `dispose` 事件，就能编写出可逆的插件。换句话说，只要框架的能力够强，将某一场景的所有 API 都通过可逆的方式提供，插件开发者就可以在完全不理解这套理论的情况下自然地编写出可逆的插件。
+这种设计同时解决了上述两个缺陷，并且完全不会带来额外的心智负担。在大多数的插件场景下，开发者甚至完全不需要手动监听 `restore` 事件，就能编写出可逆的插件。换句话说，只要框架的能力够强，将某一场景的所有 API 都通过可逆的方式提供，插件开发者就可以在完全不理解这套理论的情况下自然地编写出可逆的插件。
 
-### 副作用即资源
+### 高阶的资源
 
-::: warning
-未完待续。
-:::
+从上面的视角下，我们或许能对资源有一个更深刻的认识。任何一个函数，它要么是纯函数，要么存在副作用，而这个副作用本身就是函数对外占用的资源。这些资源可以是底层的内存、文件、进程，也可以是上层的各种封装。提供了完整回收副作用的能力，就可以称为是「资源安全」的。
+
+那如果一个插件提供了 API 给别的插件使用，这个插件占用资源了吗？是的。因为要想让别的插件使用，别的插件就必然需要访问你提供的 API (而不是别人提供的)。无论这种访问逻辑是通过什么实现的，提供 API 的插件都需要占用该访问资源。
+
+进一步，如果这个 API 本身还存在副作用，那提供此 API 的插件其实占用的是一种能占用资源的资源，一种高阶资源。就如同高阶函数一样，我们的 $\mathcal{C}$ 也可以是高阶的：
+
+$$ \begin{matrix} \mathcal{C}_1=\mathcal{C}_0\times\left(\mathcal{C}_0\to\mathcal{C}_0\right)\\
+\mathcal{C}_2=\mathcal{C}_1\times\left(\mathcal{C}_1\to\mathcal{C}_1\right)\\ \cdots\\
+\mathcal{C}_{n+1}=\mathcal{C}_n\times\left(\mathcal{C}_n\to\mathcal{C}_n\right)\\
+\end{matrix} $$
+
+在 Cordis 中，插件之间默认情况下不存在先后关系。换句话说，默认任何两个插件的执行顺序都是可以交换的。如果你想要表达插件之间的依赖关系，则需要通过 **服务 (Service)** 来实现。服务用一个字符串表示，可以被插件提供 (provide) 或注入 (inject)。
+
+Cordis 通过其自身的机制确保提供任何一对提供 / 注入同名服务的插件的生命周期都是包含关系。此外，Cordis 还提供了服务隔离的概念，开发者可以为任何一个服务名称创建隔离上下文，使其内部和外部的插件对于该服务名称无法相互感知和访问。
