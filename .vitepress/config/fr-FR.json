@@ -629,16 +629,12 @@
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "零占用的存储模式",
+              "text": "零占用存储模式",
               "link": "/cookbook/design/storage.md"
             },
             {
               "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
-            },
-            {
-              "text": "整合包开发",
-              "link": "/cookbook/design/bundle.md"
             }
           ]
         },
@@ -658,7 +654,11 @@
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "Écrit des tests",
+              "text": "整合包开发",
+              "link": "/cookbook/practice/bundle.md"
+            },
+            {
+              "text": "编写测试",
               "link": "/cookbook/practice/testing.md"
             }
           ]
