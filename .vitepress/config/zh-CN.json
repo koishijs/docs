@@ -439,14 +439,11 @@
           "text": "可逆的插件系统",
           "link": "/cookbook/design/disposable.md"
         }, {
-          "text": "零占用的存储模式",
+          "text": "零占用存储模式",
           "link": "/cookbook/design/storage.md"
         }, {
           "text": "深入工作区",
           "link": "/cookbook/design/workspace.md"
-        }, {
-          "text": "整合包开发",
-          "link": "/cookbook/design/bundle.md"
         }]
       }, {
         "text": "最佳实践",
@@ -459,6 +456,9 @@
         }, {
           "text": "部署到 k-on!",
           "link": "/cookbook/practice/online.md"
+        }, {
+          "text": "整合包开发",
+          "link": "/cookbook/practice/bundle.md"
         }, {
           "text": "编写测试",
           "link": "/cookbook/practice/testing.md"
