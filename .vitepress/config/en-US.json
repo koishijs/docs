@@ -629,7 +629,11 @@
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "零占用存储模式",
+              "text": "从元框架到框架",
+              "link": "/cookbook/design/framework.md"
+            },
+            {
+              "text": "零占用的存储",
               "link": "/cookbook/design/storage.md"
             },
             {
