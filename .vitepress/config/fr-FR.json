@@ -354,7 +354,7 @@
           "text": "Internationalisation",
           "items": [
             {
-              "text": "Support multi-langues",
+              "text": "基本用法",
               "link": "/guide/i18n/index.md"
             },
             {
@@ -362,7 +362,11 @@
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "Collaboration avec Crowdin",
+              "text": "语言包开发",
+              "link": "/guide/i18n/lang-pack.md"
+            },
+            {
+              "text": "接入 Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -749,6 +753,10 @@
             {
               "text": "WhatsApp",
               "link": "/plugins/adapter/whatsapp.md"
+            },
+            {
+              "text": "Zulip",
+              "link": "/plugins/adapter/zulip.md"
             }
           ]
         },
