@@ -440,7 +440,7 @@
           "link": "/cookbook/design/disposable.md"
         }, {
           "text": "从元框架到框架",
-          "link": "/cookbook/design/service.md"
+          "link": "/cookbook/design/framework.md"
         }, {
           "text": "零占用的存储",
           "link": "/cookbook/design/storage.md"
