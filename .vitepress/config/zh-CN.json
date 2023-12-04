@@ -439,7 +439,10 @@
           "text": "可逆的插件系统",
           "link": "/cookbook/design/disposable.md"
         }, {
-          "text": "零占用存储模式",
+          "text": "从元框架到框架",
+          "link": "/cookbook/design/service.md"
+        }, {
+          "text": "零占用的存储",
           "link": "/cookbook/design/storage.md"
         }, {
           "text": "深入工作区",
