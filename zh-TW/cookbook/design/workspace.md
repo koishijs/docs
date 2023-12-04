@@ -4,7 +4,7 @@
 本文将回答以下问题：
 
 - 什么是工作区仓库？相比传统开发模式有什么优势？
-- 如何在本地维护大量来自不同仓库的 Koishi 插件？
+- 如何在本地维护大量来自不同仓库的插件？
 :::
 
 本文要介绍的主题是 Yakumo。Yakumo 是一个由 Koishi 官方团队开发的项目管理工具，它内置于模板项目中，可以在一个本地目录中管理来自多个仓库的工作区。Yakumo 的基本用法已经在 [工作区开发](../../guide/develop/workspace.md) 一节中介绍过了。本文主要介绍其背后的设计思想和高级功能。
@@ -70,7 +70,6 @@ root
 │       ├── src
 │       │   └── index.ts
 │       └── package.json
-├── koishi.yml
 └── package.json
 ```
 
@@ -104,7 +103,6 @@ root
 │       │       │   └── index.ts
 │       │       └── package.json
 │       └── package.json
-├── koishi.yml
 └── package.json
 ```
 
@@ -146,7 +144,6 @@ root
 │       │       │   └── index.ts
 │       │       └── package.json
 │       └── package.json
-├── koishi.yml
 └── package.json
 ```
 
