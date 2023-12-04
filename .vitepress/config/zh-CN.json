@@ -243,11 +243,14 @@
       }, {
         "text": "国际化",
         "items": [{
-          "text": "多语言支持",
+          "text": "基本用法",
           "link": "/guide/i18n/index.md"
         }, {
           "text": "本地化文件",
           "link": "/guide/i18n/translation.md"
+        }, {
+          "text": "语言包开发",
+          "link": "/guide/i18n/lang-pack.md"
         }, {
           "text": "接入 Crowdin",
           "link": "/guide/i18n/crowdin.md"
