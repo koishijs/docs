@@ -10,12 +10,19 @@
 
 ::: warning
 这里应该有一张架构图但是还没有画。
-:::
+:::  
 
-在上图中，我们可以看到 Koishi 的核心架构分为三层：Cordis，Satori 和 Koishi：
+<!-- 在上图中，我们可以看到 Koishi 的核心架构分为三层：Cordis，Satori 和 Koishi：
 
 - Cordis 是一个现代化的组合式框架。其核心理念是可逆化和插件化。
 - Satori 是一个跨平台的聊天协议及其对应的 SDK 实现。
 - Koishi 是一个基于 Cordis 和 Satori 的聊天机器人框架。
 
 除此以外，还有一系列外围的工具包，为 Koishi 提供了各种内置服务和实用功能。
+
+围绕这个架构，我们将会通过几篇文章介绍 Koishi 的设计理念：
+
+- [可逆的插件系统](./disposable.md)：Cordis 的时间可组合性
+- [从元框架到框架](./framework.md)：Cordis 的空间可组合性
+- [零占用的存储](./storage.md)：模板项目的存储结构
+- [深入工作区](./workspace.md)：项目管理工具 Yakumo -->
