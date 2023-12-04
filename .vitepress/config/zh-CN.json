@@ -529,6 +529,9 @@
         }, {
           "text": "WhatsApp",
           "link": "/plugins/adapter/whatsapp.md"
+        }, {
+          "text": "Zulip",
+          "link": "/plugins/adapter/zulip.md"
         }]
       }, {
         "text": "数据库支持",
