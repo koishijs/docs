@@ -51,7 +51,7 @@ channel.locales = ['en-US']
 
 ### 插值语法
 
-向 `session.text()` 中传入第二个参数，就可以在模板中使用单花括号插值。花括号中的内容将对应传入列表的索引。
+向 `session.text()` 中传入第二个参数，就可以在模板中使用单花括号插值。花括号 `{}` 中的内容将对应传入列表的索引。
 
 ```ts
 ctx.i18n.define('zh-CN', { hello: '你好，{0}！' })
@@ -94,6 +94,40 @@ ctx.i18n.define('en-US', { hello: 'Hello, {author.name}!' })
 ```
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。
+
+### 使用消息元素
+
+你也可以在模板中使用 [消息元素](../basic/element.md) 语法。消息元素的属性同样使用 `{}` 进行插值：
+
+```ts
+ctx.i18n.define('zh-CN', { hello: '你好，<at id={userId}/>！' })
+ctx.i18n.define('en-US', { hello: 'Hello, <at id={userId}/>!' })
+```
+
+你也可以使用消息组件，例如使用 `<i18n>` 组件引用其他翻译，或使用 `<i18n:time>` 表示本地化的时间：
+
+```ts
+ctx.i18n.define('zh-CN', { remain: '剩余时间：<i18n:time value={value}/>' })
+ctx.i18n.define('en-US', { remain: 'Time Remain: <i18n:time value={value}/>' })
+```
+
+### 条件和循环 <badge type="warning">实验性</badge>
+
+我们为模板提供了一些基本的控制流语法，它参考了 [Svelte](https://svelte.dev/) 的设计 (但并未完整实现)。你可以在模板中通过 `{#if}` 和 `{#each}` 来实现条件和循环。例如，下面的代码将会渲染一个列表：
+
+```html
+{#if list.length === 0}
+  列表中没有元素。
+{:else}
+  {#each list as item}
+    {item}
+  {/each}
+{/if}
+```
+
+::: tip
+如果要使用这种层面的模板能力，那么你的代码已经不适合使用 `ctx.i18n.define()` 定义了。建议参考 [下一节](./translation.md) 中的做法，将不同语言的模板放入不同的文件中，以方便编辑和管理。
+:::
 
 ## 渲染回退
 
@@ -155,3 +189,9 @@ session.text(['foo', 'bar'])
 ```ts
 session.text(['foo', ''])
 ```
+
+### 用户侧覆写
+
+用户可以通过 [locales](../../plugins/console/locales.md) 插件提供本地翻译，且这些翻译的优先级高于插件自身提供的翻译。可以认为，从用户提供的翻译到插件提供的翻译，也是一种回退关系。
+
+关于用户侧覆写的更多信息，请参见 [入门 > 深入定制机器人](../../manual/usage/customize.md)。
