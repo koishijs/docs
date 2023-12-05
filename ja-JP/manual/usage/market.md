@@ -1,5 +1,4 @@
 ---
-crowdin: I'm frontmatter.
 prev:
   text: インストール方法
   link: /ja-JP/manual/starter/
