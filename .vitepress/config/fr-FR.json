@@ -650,7 +650,7 @@
           "text": "Meilleures pratiques",
           "items": [
             {
-              "text": "资源转存",
+              "text": "Cache des fichiers de ressources",
               "link": "/cookbook/practice/assets.md"
             },
             {
@@ -1072,17 +1072,17 @@
               "link": "/about/upgrade.md"
             },
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献",
+          "text": "Contributions",
           "items": [
             {
               "text": "Structure du projet",
@@ -1100,67 +1100,67 @@
           "text": "",
           "items": [
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "v4.1 版本介绍",
+              "text": "Notes de version : v4.1",
               "link": "/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "Notes de version : v4.2",
               "link": "/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "Notes de version : v4.3",
               "link": "/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "Notes de version : v4.4",
               "link": "/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "Notes de version : v4.5",
               "link": "/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "Notes de version : v4.6",
               "link": "/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "Notes de version : v4.7",
               "link": "/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "Notes de version : v4.8",
               "link": "/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "Notes de version : v4.9",
               "link": "/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介绍",
+              "text": "Notes de version : v4.10",
               "link": "/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "Notes de version : v4.11",
               "link": "/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "Notes de version : v4.12",
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Notes de version : v4.13",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Notes de version : v4.14",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "Notes de version : v4.15",
               "link": "/releases/v4.15.md"
             }
           ]
@@ -1169,7 +1169,7 @@
           "text": "",
           "items": [
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
