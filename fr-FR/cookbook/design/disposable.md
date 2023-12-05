@@ -1,4 +1,4 @@
-# 可逆的插件系统
+# Système réversible de plugin
 
 ::: tip
 本文将回答以下问题：
