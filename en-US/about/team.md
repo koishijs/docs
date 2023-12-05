@@ -1,4 +1,4 @@
-# Meet Our Team
+# 认识团队
 
 ## Core Members
 

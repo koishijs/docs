@@ -1,5 +1,9 @@
 # 表态 (Reaction) <badge type="warning">实验性</badge>
 
+::: warning
+这是一个实验性功能，未来可能发生改动。
+:::
+
 ## API
 
 ### bot.createReaction(channelId, messageId, emoji)

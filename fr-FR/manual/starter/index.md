@@ -4,8 +4,8 @@ sidebar: false
 caption: J'utilise Koishi pour...
 choices:
   production:
-    text: Héberger un service de robot conversationnel
-    caption: J'utilise Koishi sûr...
+    text: Le service de robot conversationnel
+    caption: J'utilise Koishi dans...
     children:
       - 
         text: Windows
@@ -34,6 +34,6 @@ choices:
         link: /fr-FR/manual/starter/direct.html
 ---
 
-# Choisir une méthode d'installation
+# Installation
 
 Koishi proposons plusieurs méthodes d'installation parmi lesquelles vous pouvez choisir en fonction de vos besoins :

@@ -25,36 +25,38 @@ Bien que nous recommandions actuellement à la plupart des utilisateurs d'utilis
 Koishi est lui-même écrit en TypeScript, c'est pourquoi nous vous recommandons d'utiliser TypeScript pour développer avec Koishi. Dans la documentation à suivre, nous utiliserons systématiquement TypeScript comme exemple. Si vous préférez écrire en JavaScript pur ou utiliser un autre dialecte, vous pouvez vous baser sur les exemples en TypeScript.
 :::
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。Nous supposons que vous l'avez déjà installé.
+Koishi a besoin d'un environnement d'exécution [Node.js](https://nodejs.org/) (version minimale : 18, version LTS recommandée), que vous devez installer vous-même.Nous supposons que vous l'avez déjà installé.
 
 Commencez par initialiser le répertoire de votre robot conversationnel et installer Koishi ainsi que les plugins nécessaires (nous prendrons l'exemple des plugins officiels : console, sandbox et echo) :
 
 ::: tabs code
 ```npm
-# 初始化项目
+# Initialiser le projet
 npm init
 
-# 安装 Koishi 和相关插件
+# Installer Koishi et les plugins correspondants
 npm i koishi \
       @koishijs/plugin-console \
       @koishijs/plugin-sandbox \
       @koishijs/plugin-echo
 
-# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
+# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
 npm i typescript @types/node esbuild esbuild-register -D
+
 ```
 ```yarn
-# 初始化项目
+# Initialiser le projet
 yarn init
 
-# 安装 Koishi 和相关插件
+# Installer Koishi et les plugins correspondants
 yarn add koishi
          @koishijs/plugin-console \
          @koishijs/plugin-sandbox \
          @koishijs/plugin-echo
 
-# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
+# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
 yarn add typescript @types/node esbuild esbuild-register -D
+
 ```
 :::
 
@@ -100,12 +102,12 @@ Si vous souhaitez vous connecter à une véritable plateforme de chat, il vous s
 
 ::: tabs code
 ```npm
-# 以 Satori 和 Discord 适配器为例
+# Exemple d'installation des adaptateurs Satori et Discord
 npm i @koishijs/plugin-adapter-satori \
       @koishijs/plugin-adapter-discord
 ```
 ```yarn
-# 以 Satori 和 Discord 适配器为例
+# Exemple d'installation des adaptateurs Satori et Discord
 yarn add @koishijs/plugin-adapter-satori \
          @koishijs/plugin-adapter-discord
 ```
@@ -198,7 +200,7 @@ Ensuite, redémarrez votre projet :
 <chat-message nickname="Koishi">Ali Baba</chat-message>
 </chat-panel>
 
-Cependant, il n'est peut-être pas idéal, car lorsque votre application devient plus complexe, votre `index.ts` peut devenir volumineux.Vous pouvez écrire la logique ci-dessus dans un fichier distinct, par exemple `ping.ts`, et le charger en tant que plugin :
+Cependant, il n'est peut-être pas idéal, car lorsque votre application devient plus complexe, votre `index.ts` peut devenir volumineux. Vous pouvez écrire la logique ci-dessus dans un fichier distinct, par exemple `ping.ts`, et le charger en tant que plugin :
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'

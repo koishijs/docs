@@ -1,4 +1,4 @@
-# Migrate within v4
+# 从低版本迁移
 
 ## JSX Support <badge>v4.10.3</badge>
 

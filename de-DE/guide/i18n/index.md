@@ -1,8 +1,4 @@
-# 多语言支持
-
-::: warning
-多语言支持目前属于实验性功能。
-:::
+# 基本用法
 
 ::: tip
 在学习本章之前，建议先完整阅读 [入门 > 国际化](../../manual/usage/customize.md#国际化)。
@@ -10,18 +6,18 @@
 
 如果你在运营一个大型社区，那么你可能会遇到这种场景：群组内设立了许多不同语言的频道，每个频道分别供不同地区的用户进行交流。在这种情况下，最合适的做法是让你的机器人在不同的频道下使用不同的语言进行回复。本质上，这不会改变机器人的运行逻辑，因此最好的做法是将涉及的每一段文本都抽离出来，通过统一的方式进行管理，并在发送前进行本地化渲染。
 
-## 基本用法
+## 基本示例
 
 让我们先看一个最简单的例子：
 
 ```ts
-ctx.i18n.define('zh', { hello: '你好！' })
-ctx.i18n.define('en', { hello: 'Hello!' })
+ctx.i18n.define('zh-CN', { hello: '你好！' })
+ctx.i18n.define('en-US', { hello: 'Hello!' })
 ```
 
-上面的代码描述了两个语言包，分别包含中文和英文下 `hello` 对应的翻译文本。其中 `zh` 和 `en` 称为语言名，`hello` 称为渲染路径，后面的字符串是对应的翻译文本。
+上面的代码定义了两种语言下 `hello` 对应的翻译文本。其中 `zh-CN` 和 `en-US` 称为语言名，`hello` 称为渲染路径，后面的字符串是对应的翻译文本。
 
-现在我们把它用在指令中：
+现在我们把它用在 `session.text()` 中：
 
 ```ts
 ctx.middleware((session, next) => {
@@ -43,7 +39,7 @@ ctx.middleware((session, next) => {
 现在，如果我们希望它在某个频道使用英文，我们只需设置这个频道的属性：
 
 ```ts
-channel.locales = ['en']
+channel.locales = ['en-US']
 ```
 
 <chat-panel>
@@ -51,13 +47,15 @@ channel.locales = ['en']
 <chat-message nickname="Koishi">Hello!</chat-message>
 </chat-panel>
 
+## 模板能力
+
 ### 插值语法
 
 向 `session.text()` 中传入第二个参数，就可以在模板中使用单花括号插值。花括号中的内容将对应传入列表的索引。
 
 ```ts
-ctx.i18n.define('zh', { hello: '你好，{0}！' })
-ctx.i18n.define('en', { hello: 'Hello, {0}!' })
+ctx.i18n.define('zh-CN', { hello: '你好，{0}！' })
+ctx.i18n.define('en-US', { hello: 'Hello, {0}!' })
 
 ctx.middleware((session, next) => {
   if (session.content === 'greeting') {
@@ -76,8 +74,8 @@ ctx.middleware((session, next) => {
 这里的参数也可以是一个对象，此时花括号中的内容仍然表示对象的索引。
 
 ```ts
-ctx.i18n.define('zh', { hello: '你好，{username}！' })
-ctx.i18n.define('en', { hello: 'Hello, {username}!' })
+ctx.i18n.define('zh-CN', { hello: '你好，{username}！' })
+ctx.i18n.define('en-US', { hello: 'Hello, {username}!' })
 
 ctx.middleware((session, next) => {
   if (session.content === 'greeting') {
@@ -91,8 +89,8 @@ ctx.middleware((session, next) => {
 如果要访问对象深层的内容，只需将多个属性之间用 `.` 连接。利用这种方法，你甚至可以把整个 `session` 传进去：
 
 ```ts
-ctx.i18n.define('zh', { hello: '你好，{author.name}！' })
-ctx.i18n.define('en', { hello: 'Hello, {author.name}!' })
+ctx.i18n.define('zh-CN', { hello: '你好，{author.name}！' })
+ctx.i18n.define('en-US', { hello: 'Hello, {author.name}!' })
 ```
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。

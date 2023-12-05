@@ -6,7 +6,7 @@ Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](http
 
 ## Fonctionnalités
 
-### Prêt à l’emploi
+### Prêt à l'emploi
 
 Koishi offre une console sans configurer. Vous pouvez construire vos chatbots dans quelque minutes sans accusé celui-ci.
 

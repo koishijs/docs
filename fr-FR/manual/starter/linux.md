@@ -13,14 +13,14 @@ next:
 Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
 :::
 
-## 下载
+## Téléchargement
 
 - [AppImage (.AppImage)](https://k.ilharp.cc/linux.AppImage)
 - [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## 启动
+## Démarrage
 
-启动你刚刚下载的程序，你应当可以在 `http://localhost:5140` 访问 Koishi 的网页控制台。
+Démarrez le programme qui vous avez téléchargée, ouvrez un navigateur et rendez-vous sur `http://localhost:5140`. Vous y verrez le Web UI de Console Koishi.
 
 ## Autres méthodes d'installation
 

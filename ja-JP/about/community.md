@@ -4,7 +4,6 @@
 
 ## ドキュメント
 
-- [Koishi 用户手册](https://koishi.ilharper.com/) (Il Harper)
 - [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601) (沐辰-TimeBather)
 
 ## 動画

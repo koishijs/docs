@@ -13,7 +13,7 @@ next:
 Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
 :::
 
-## 下载
+## Téléchargement
 
 - [Programme d'installation (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
@@ -22,9 +22,9 @@ Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuill
 
 Installer Koishi via le programme d'installation est la méthode la recommandée, car elle configure automatiquement tout ce dont vous avez besoin. En général, vous pouvez choisir cette méthode.
 
-## 启动
+## Démarrage
 
-安装完成后，点击 Koishi 图标即可启动。la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
+Cliquez sur l'icône de Koishi pour le démarrer, en quelques secondes, la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
 
 ## Autres méthodes d'installation
 

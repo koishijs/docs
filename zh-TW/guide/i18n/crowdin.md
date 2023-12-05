@@ -6,6 +6,7 @@
 
 ::: tip
 除了 Crowdin，还有很多其他平台也提供类似的功能，有一些甚至是完全免费的，如：
+
 - [Transifex](https://www.transifex.com)
 - [Memsource](https://www.memsource.com/)
 - [Lokalise](https://lokalise.com/)
@@ -112,11 +113,9 @@ Crowdin 会读取 `YAML` 中的键值和注释作为该待翻译字符串的上�
 commands:
   ping:
     description: 回复 ping 信息
-
     options:
       # 这是一段注释
       detail: 显示网络连接情况
-
     messages:
       pong: PONG! # 注释也可以写在后方
 ```

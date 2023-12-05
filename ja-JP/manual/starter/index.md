@@ -27,10 +27,10 @@ choices:
     caption: Koishi を……として使いたいです
     children:
       - 
-        text: 一个独立的项目
+        text: 独自なプロジェクト
         link: /ja-JP/manual/starter/boilerplate.html
       - 
-        text: 其他项目的依赖
+        text: 他のプロジェクトの依存パッケージ
         link: /ja-JP/manual/starter/direct.html
 ---
 

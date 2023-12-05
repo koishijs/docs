@@ -73,8 +73,17 @@
       },
       {
         "text": "更多",
-        "link": "/about/contact.md",
-        "activeMatch": "/about/"
+        "items": [
+          {
+            "text": "参与讨论",
+            "link": "/about/contact.md"
+          },
+          {
+            "text": "各版本介绍",
+            "link": "/releases/index.md"
+          }
+        ],
+        "activeMatch": "/(about|releases)/"
       }
     ],
     "sidebar": {
@@ -345,12 +354,16 @@
           "text": "国际化",
           "items": [
             {
-              "text": "多语言支持",
+              "text": "基本用法",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "编写翻译文件",
+              "text": "本地化文件",
               "link": "/guide/i18n/translation.md"
+            },
+            {
+              "text": "语言包开发",
+              "link": "/guide/i18n/lang-pack.md"
             },
             {
               "text": "接入 Crowdin",
@@ -616,20 +629,20 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的 Koishi",
+              "text": "可逆的插件系统",
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "零占用的 Koishi",
+              "text": "从元框架到框架",
+              "link": "/cookbook/design/framework.md"
+            },
+            {
+              "text": "零占用的存储",
               "link": "/cookbook/design/storage.md"
             },
             {
               "text": "深入工作区",
               "link": "/cookbook/design/workspace.md"
-            },
-            {
-              "text": "整合包开发",
-              "link": "/cookbook/design/bundle.md"
             }
           ]
         },
@@ -647,6 +660,10 @@
             {
               "text": "部署到 k-on!",
               "link": "/cookbook/practice/online.md"
+            },
+            {
+              "text": "整合包开发",
+              "link": "/cookbook/practice/bundle.md"
             },
             {
               "text": "编写测试",
@@ -736,6 +753,10 @@
             {
               "text": "WhatsApp",
               "link": "/plugins/adapter/whatsapp.md"
+            },
+            {
+              "text": "Zulip",
+              "link": "/plugins/adapter/zulip.md"
             }
           ]
         },
@@ -751,8 +772,12 @@
               "link": "/plugins/database/mongo.md"
             },
             {
-              "text": "MySQL",
+              "text": "MySQL / MariaDB",
               "link": "/plugins/database/mysql.md"
+            },
+            {
+              "text": "PostgreSQL",
+              "link": "/plugins/database/postgres.md"
             },
             {
               "text": "SQLite",
@@ -1003,7 +1028,7 @@
       ],
       "/about/": [
         {
-          "text": "关于我们",
+          "text": "关于",
           "items": [
             {
               "text": "许可证",
@@ -1014,86 +1039,50 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "团队介绍",
+              "text": "认识团队",
               "link": "/about/team.md"
+            },
+            {
+              "text": "常见问题",
+              "link": "/about/faq.md"
             },
             {
               "text": "社区资源",
               "link": "/about/community.md"
+            },
+            {
+              "text": "大事件",
+              "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "更新与迁移",
+          "text": "更新",
           "items": [
             {
               "text": "发展史",
               "link": "/about/history.md"
             },
             {
-              "text": "从 v3 迁移",
-              "link": "/about/migration.md"
+              "text": "更新计划",
+              "link": "/about/releases.md"
             },
             {
-              "text": "版本内迁移",
+              "text": "从低版本迁移",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "v4.1 版本介绍",
-              "link": "/about/releases/v4.1.md"
+              "text": "各版本介绍",
+              "link": "/releases/index.md"
             },
             {
-              "text": "v4.2 版本介绍",
-              "link": "/about/releases/v4.2.md"
-            },
-            {
-              "text": "v4.3 版本介绍",
-              "link": "/about/releases/v4.3.md"
-            },
-            {
-              "text": "v4.4 版本介绍",
-              "link": "/about/releases/v4.4.md"
-            },
-            {
-              "text": "v4.5 版本介绍",
-              "link": "/about/releases/v4.5.md"
-            },
-            {
-              "text": "v4.6 版本介绍",
-              "link": "/about/releases/v4.6.md"
-            },
-            {
-              "text": "v4.7 版本介绍",
-              "link": "/about/releases/v4.7.md"
-            },
-            {
-              "text": "v4.8 版本介绍",
-              "link": "/about/releases/v4.8.md"
-            },
-            {
-              "text": "v4.9 版本介绍",
-              "link": "/about/releases/v4.9.md"
-            },
-            {
-              "text": "v4.10 版本介绍",
-              "link": "/about/releases/v4.10.md"
-            },
-            {
-              "text": "v4.11 版本介绍",
-              "link": "/about/releases/v4.11.md"
-            },
-            {
-              "text": "v4.12 版本介绍",
-              "link": "/about/releases/v4.12.md"
-            },
-            {
-              "text": "v4.13 版本介绍",
-              "link": "/about/releases/v4.13.md"
+              "text": "更新日志",
+              "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献指南",
+          "text": "贡献",
           "items": [
             {
               "text": "项目结构",
@@ -1102,6 +1091,86 @@
             {
               "text": "文档贡献指南",
               "link": "/about/contribute/docs.md"
+            }
+          ]
+        }
+      ],
+      "/releases": [
+        {
+          "text": "",
+          "items": [
+            {
+              "text": "各版本介绍",
+              "link": "/releases/index.md"
+            },
+            {
+              "text": "v4.1 版本介绍",
+              "link": "/releases/v4.1.md"
+            },
+            {
+              "text": "v4.2 版本介绍",
+              "link": "/releases/v4.2.md"
+            },
+            {
+              "text": "v4.3 版本介绍",
+              "link": "/releases/v4.3.md"
+            },
+            {
+              "text": "v4.4 版本介绍",
+              "link": "/releases/v4.4.md"
+            },
+            {
+              "text": "v4.5 版本介绍",
+              "link": "/releases/v4.5.md"
+            },
+            {
+              "text": "v4.6 版本介绍",
+              "link": "/releases/v4.6.md"
+            },
+            {
+              "text": "v4.7 版本介绍",
+              "link": "/releases/v4.7.md"
+            },
+            {
+              "text": "v4.8 版本介绍",
+              "link": "/releases/v4.8.md"
+            },
+            {
+              "text": "v4.9 版本介绍",
+              "link": "/releases/v4.9.md"
+            },
+            {
+              "text": "v4.10 版本介绍",
+              "link": "/releases/v4.10.md"
+            },
+            {
+              "text": "v4.11 版本介绍",
+              "link": "/releases/v4.11.md"
+            },
+            {
+              "text": "v4.12 版本介绍",
+              "link": "/releases/v4.12.md"
+            },
+            {
+              "text": "v4.13 版本介绍",
+              "link": "/releases/v4.13.md"
+            },
+            {
+              "text": "v4.14 版本介绍",
+              "link": "/releases/v4.14.md"
+            },
+            {
+              "text": "v4.15 版本介绍",
+              "link": "/releases/v4.15.md"
+            }
+          ]
+        },
+        {
+          "text": "",
+          "items": [
+            {
+              "text": "更新日志",
+              "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         }

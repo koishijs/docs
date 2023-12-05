@@ -10,11 +10,11 @@ This section covers the usage of pages such as "Marketplace", "Plugin Configurat
 
 As the key feature, 控制台是一个对用户友好的图形界面，封装了 Koishi 的绝大多数功能：
 
-- Running status monitoring and statistics
-- Plugins configurations
 - Plugin installation, updating and uninstallation
+- 启用、停用和配置插件
 - Management of commands, database and locale text
-- Chat simulation
+- 在模拟和真实环境下聊天
+- Running status monitoring and statistics
 - Log management
 
 本节中我们将以 [echo](../../plugins/common/echo.md) 插件为例来演示插件的安装与配置。The echo plugin registered a command named `echo`. Use this command can output the input to the user originally.
@@ -69,8 +69,8 @@ While the "echo" plugin does not require configuration, more complex plugins oft
 
 In this page, we can see many configurations, where you need to take note of:
 
-- Required but unfilled configurations will display a <span style="font-weight: bold; color: var(--vp-c-red-light)">red</span> tooltip on the left, and they must be filled in correctly to enable the plugin.
-- Modified but unsaved configurations will display a <span style="font-weight: bold; color: var(--vp-c-brand)">purple</span> tooltip on the left, and they will be saved after you click "Enable Plugin" or "Save Configuration" button. If you want to discard these changes, you can call the menu at the small triangle next to the configuration name, select "Undo Changes" to restore the configuration to the status last saved.
+- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-1)">红色</span> 的提示条，只有正确填写配置才能启动插件。
+- 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-indigo-1)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
 
 ## Manage Plugins
 
