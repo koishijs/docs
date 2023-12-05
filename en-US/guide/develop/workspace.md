@@ -45,10 +45,10 @@ import { Context } from 'koishi'
 export const name = 'example'
 
 export function apply(ctx: Context) {
-  // When receiving "天王盖地虎", respond with "宝塔镇河妖"
+  // When receiving "Hello", respond with "World"
   ctx.on('message', (session) => {
-    if (session.content === '天王盖地虎') {
-      session.send('宝塔镇河妖')
+    if (session.content === 'Hello') {
+      session.send('World')
     }
   })
 }
@@ -57,8 +57,8 @@ export function apply(ctx: Context) {
 Rerun your project in [Development Mode](./script.md#开发模式), click on the 'Add Plugin' button at the top right, select the name of the plugin you just created, and you will immediately see the `example` plugin in the configuration interface of the web console. Just click to enable it, and you can interact with the bot:
 
 <chat-panel>
-<chat-message nickname="Alice">天王盖地虎</chat-message>
-<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
+<chat-message nickname="Alice">Hello</chat-message>
+<chat-message nickname="Koishi">World</chat-message>
 </chat-panel>
 
 ### Create a Scoped Plugin
