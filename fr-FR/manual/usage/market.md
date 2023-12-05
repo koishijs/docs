@@ -1,5 +1,5 @@
 - - -
-prev: text: Choisir une méthode d'installation link: /fr-FR/manual/starter/
+crowdin: I'm frontmatter. prev: text: 选择安装方式 link: /zh-CN/manual/starter/
 - - -
 
 # Installation et configuration de plugins
