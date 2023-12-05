@@ -1,5 +1,4 @@
 ---
-crowdin: I'm frontmatter.
 prev:
   text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
