@@ -1,5 +1,4 @@
 ---
-crowdin: I'm frontmatter.
 prev:
   text: 選擇安裝方式
   link: /zh-TW/manual/starter/
