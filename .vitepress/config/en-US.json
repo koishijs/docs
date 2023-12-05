@@ -43,7 +43,7 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶指南",
+            "text": "Advanced Guide",
             "link": "/cookbook/"
           },
           {
@@ -216,7 +216,7 @@
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "Bootstrap Script",
+              "text": "Launch Script",
               "link": "/guide/develop/script.md"
             },
             {
@@ -354,11 +354,11 @@
           "text": "Internationalization",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Basic Usage",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "本地化文件",
+              "text": "Localization File",
               "link": "/guide/i18n/translation.md"
             },
             {
@@ -622,14 +622,14 @@
           ]
         },
         {
-          "text": "设计原理",
+          "text": "Design",
           "items": [
             {
-              "text": "项目架构",
+              "text": "Infrastructure",
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的插件系统",
+              "text": "Disposable Plugin System",
               "link": "/cookbook/design/disposable.md"
             },
             {
@@ -647,7 +647,7 @@
           ]
         },
         {
-          "text": "最佳实践",
+          "text": "Cookbook",
           "items": [
             {
               "text": "资源转存",
@@ -666,7 +666,7 @@
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "Writing Tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
@@ -743,7 +743,7 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
@@ -858,7 +858,7 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Plugin Manager (Market)",
               "link": "/plugins/console/market.md"
             },
             {
@@ -1152,15 +1152,15 @@
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Release Notes: v4.13",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Release Notes: v4.14",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "Release Notes: v4.15",
               "link": "/releases/v4.15.md"
             }
           ]
@@ -1169,7 +1169,7 @@
           "text": "",
           "items": [
             {
-              "text": "更新日志",
+              "text": "Change Log",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
