@@ -1,5 +1,4 @@
 ---
-crowdin: I'm frontmatter.
 prev:
   text: 选择安装方式
   link: /ru-RU/manual/starter/
