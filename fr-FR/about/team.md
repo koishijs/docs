@@ -1,4 +1,4 @@
-# 认识团队
+# À propos de l'équipe
 
 ## 核心成员
 
