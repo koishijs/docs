@@ -1,4 +1,4 @@
-# Bootstrap Script
+# Launch Script
 
 There is also a set of command line tools that provided by Koishi to boot the application quickly by reading the configuration file.
 
@@ -30,11 +30,11 @@ yarn start
 ```
 :::
 
-In the subsequent parts of this section, we will introduce more parameters of the above bootstrap script. No matter what changes you make, you can use the above command line to start. This is also the significance of the boostrap script.
+In the subsequent parts of this section, we will introduce more options of the above launch script. No matter what changes you make, you can use the above command line to start. This is also the significance of the boostrap script.
 
 ### Command Line Options
 
-The bootstrap script supports Node.js's [command line options](https://nodejs.org/api/cli.html). For example, the `-r` above corresponds to `--require`, which allows you to load files with `.ts` and `.yml` extensions.
+The launch script supports Node.js's [command line options](https://nodejs.org/api/cli.html). For example, the `-r` above corresponds to `--require`, which allows you to load files with `.ts` and `.yml` extensions.
 
 In addition to Node.js's command line options, Koishi also provides some additional options. We will introduce each of them below.
 
@@ -44,7 +44,7 @@ Koishi's command line tool supports auto-restart. When the process running Koish
 
 ## Development Mode
 
-In addition to `start`, the template project also prepares a development mode bootstrap script named `dev`. 在应用目录运行下面的命令行可以以开发模式启动应用：
+In addition to `start`, the template project also prepares a launch script for development mode named `dev`. Running the following command line in the workspace root can start the application in development mode:
 
 ::: tabs code
 ```npm
@@ -55,13 +55,13 @@ yarn dev
 ```
 :::
 
-As you can see, `dev` is equivalent to adding additional options and environment variables on the basis of the `start` command. 这些参数为我们启用了额外的特性，而环境变量则能影响插件的部分行为。
+As you can see, `dev` is equivalent to adding additional options and environment variables on the basis of the `start` command. These options enable us to use additional features, while the environment variables can affect some behaviors of the plugins.
 
 ### TypeScript Support
 
-Koishi 模板项目原生地支持 TypeScript 开发。The `-r esbuild-register` option mentioned above allows us to directly use the TypeScript source code of workspace plugins at runtime.
+The Koishi template project provides built-in support for TypeScript development. The `-r esbuild-register` option mentioned above allows us to directly use the TypeScript source code of workspace plugins at runtime.
 
-You can also add support for more extensions on your own. 例如，如果你更喜欢 CoffeeScript，你可以这样修改你的开发脚本为：
+You can also add support for more extensions on your own. For example, if you prefer CoffeeScript, you can modify your development script like this:
 
 ```json title=package.json
 {
@@ -82,7 +82,7 @@ We do not recommend using advanced languages to write configuration files, as dy
 
 ### Hot Module Replacement
 
-If you are developing a large Koishi project, it might take several seconds just to load all plugins. At times like this, supporting hot module replacement like front-end frameworks becomes a great idea. Fortunately, Koishi also supports this! The built-in plugin @koishijs/plugin-hmr implements plugin-level hot replacement. 每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在命令行中提醒你。
+If you are developing a large Koishi project, it might take several seconds just to load all plugins. At times like this, supporting hot module replacement like front-end frameworks becomes a great idea. Fortunately, Koishi also supports this! The built-in plugin @koishijs/plugin-hmr implements plugin-level hot replacement. Whenever you modify your local files, Koishi will try to reload your plugin and remind you in the terminal.
 
 The behavior here can also be customized in the configuration file:
 
@@ -108,8 +108,8 @@ In this case, you can use the following command to increase the limit of the num
 
 ```sh
 echo fs.inotify.max_user_watches=524288 |
-sudo tee -a /etc/syssctl.conf &&
-sudo syctl -p
+sudo tee -a /etc/sysctl.conf &&
+sudo sysctl -p
 ```
 
 Another solution is to only monitor certain subpaths, such as changing `root` to `external/foo` (where `foo` is the directory of the plugin you are developing, see the next section's workspace guide), which will ignore changes in other directories while still hot reloading your plugin. When you are developing multiple plugins at the same time, you can also change `root` to an array for use.
