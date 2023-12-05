@@ -32,7 +32,7 @@ Simulate the conversation in the sandbox is far from enough.We need to get the r
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [微信公众号](../../plugins/adapter/wechat-official.md)
+- [WeChat Official](../../plugins/adapter/wechat-official.md)
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
