@@ -75,11 +75,11 @@
         "text": "À propos",
         "items": [
           {
-            "text": "参与讨论",
+            "text": "Communauté de Koishi",
             "link": "/about/contact.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "Notes des versions",
             "link": "/releases/index.md"
           }
         ],
@@ -354,19 +354,19 @@
           "text": "Internationalisation",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "本地化文件",
+              "text": "Fichier de localisation",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "语言包开发",
+              "text": "Développement de paquet de langage",
               "link": "/guide/i18n/lang-pack.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Collaboration avec Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -629,19 +629,19 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的插件系统",
+              "text": "Système réversible de plugin",
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "从元框架到框架",
+              "text": "Du méta-framework au framework",
               "link": "/cookbook/design/framework.md"
             },
             {
-              "text": "零占用的存储",
+              "text": "Stockage avec zéro volume",
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
             }
           ]
@@ -662,11 +662,11 @@
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "整合包开发",
+              "text": "Développement de paquet intégré",
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "Écrit des tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
@@ -1028,7 +1028,7 @@
       ],
       "/about/": [
         {
-          "text": "关于",
+          "text": "À propos",
           "items": [
             {
               "text": "Licence ",
@@ -1039,7 +1039,7 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "认识团队",
+              "text": "À propos de l'équipe",
               "link": "/about/team.md"
             },
             {
@@ -1047,28 +1047,28 @@
               "link": "/about/faq.md"
             },
             {
-              "text": "社区资源",
+              "text": "Ressources Communautaires",
               "link": "/about/community.md"
             },
             {
-              "text": "大事件",
+              "text": "Le Grand Événement",
               "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "更新",
+          "text": "Mettre à jour",
           "items": [
             {
               "text": "Histoire",
               "link": "/about/history.md"
             },
             {
-              "text": "更新计划",
+              "text": "Mettre à jour l'horaire",
               "link": "/about/releases.md"
             },
             {
-              "text": "从低版本迁移",
+              "text": "Migration depuis une version ancienne",
               "link": "/about/upgrade.md"
             },
             {
