@@ -1,15 +1,15 @@
-# 更新计划
+# Updates
 
-## 发布周期
+## Release Cycle
 
-Koishi 目前采用 Cordis 架构，绝大多数功能都以插件的形式提供。这些插件的更新会按需进行，且都遵循 [语义化版本](https://semver.org/lang/zh-CN/) 规范：
+Koishi currently adopts the Cordis architecture, with the majority of its functionalities provided in the form of plugins. These plugins are updated as needed and all follow the [Semantic Versioning](https://semver.org/lang/zh-CN/) guidelines:
 
-- 补丁版本 (patch) 只用于修复 bug，不会引入新的功能。
-- 次版本 (minor) 会包含新特性，但不会破坏现有功能。
-- 主版本 (major) 会引入破坏性变更。
+- Patch versions are only used for bug fixes and do not introduce new features.
+- Minor versions may include new features but will not break existing functionalities.
+- Major versions introduce breaking changes.
 
-在语义化版本的界定上，一切对预期行为的定义，以 Koishi 官方文档为准。
+In the context of semantic versioning, all definitions of expected behavior are based on the official Koishi documentation.
 
-Koishi 本体大约每 1-2 周发布一个新版本。这些版本根据 Koishi 自身的依赖确定是补丁版本还是次版本。目前 Koishi 的主版本是 v4，且没有改动主版本的计划。
+Koishi's updates are released approximately every 1-2 weeks. These versions are classified as either patch or minor versions based on Koishi's own dependencies. The current major version of Koishi is v4, and there are no plans to change the major version at this time.
 
-从 v4 的较低版本升级时，可以参考此 [迁移指南](./upgrade.md)。
+For upgrades from lower versions of v4, you can refer to this [Migration Guide](./upgrade.md).
