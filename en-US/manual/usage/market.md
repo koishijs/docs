@@ -1,5 +1,4 @@
 ---
-crowdin: I'm frontmatter.
 prev:
   text: Installation
   link: /en-US/manual/starter/
