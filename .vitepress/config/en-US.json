@@ -125,7 +125,7 @@
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "Create Template Project",
+              "text": "Create from Template",
               "link": "/manual/starter/boilerplate.md"
             },
             {
@@ -374,7 +374,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶指南",
+              "text": "→ Advanced Guide",
               "link": "/cookbook/"
             }
           ]
@@ -441,11 +441,11 @@
           "text": "Built-in Services",
           "items": [
             {
-              "text": "事件系统 (Events)",
+              "text": "Events",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "Filter",
               "link": "/api/service/filter.md"
             },
             {
@@ -457,11 +457,11 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "加载器 (Loader)",
+              "text": "Loader",
               "link": "/api/service/loader.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions",
               "link": "/api/service/permissions.md"
             },
             {
@@ -494,23 +494,23 @@
               "link": "/api/resources/role.md"
             },
             {
-              "text": "交互 (Interaction)",
+              "text": "Interaction",
               "link": "/api/resources/interaction.md"
             },
             {
-              "text": "登录状态 (Login)",
+              "text": "Login",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "消息 (Message)",
+              "text": "Message",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "表态 (Reaction)",
+              "text": "Reaction",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "用户 (User)",
+              "text": "User",
               "link": "/api/resources/user.md"
             }
           ]
@@ -1028,7 +1028,7 @@
       ],
       "/about/": [
         {
-          "text": "关于",
+          "text": "About",
           "items": [
             {
               "text": "License",
@@ -1039,7 +1039,7 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "认识团队",
+              "text": "Meet the Team",
               "link": "/about/team.md"
             },
             {
@@ -1076,13 +1076,13 @@
               "link": "/releases/index.md"
             },
             {
-              "text": "更新日志",
+              "text": "Changelog",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献",
+          "text": "Contribution",
           "items": [
             {
               "text": "Infrastructure",
