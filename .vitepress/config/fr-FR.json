@@ -75,11 +75,11 @@
         "text": "À propos",
         "items": [
           {
-            "text": "参与讨论",
+            "text": "Communauté de Koishi",
             "link": "/about/contact.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "Notes des versions",
             "link": "/releases/index.md"
           }
         ],
@@ -354,19 +354,19 @@
           "text": "Internationalisation",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "本地化文件",
+              "text": "Fichier de localisation",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "语言包开发",
+              "text": "Développement de paquet de langage",
               "link": "/guide/i18n/lang-pack.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Collaboration avec Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -629,19 +629,19 @@
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的插件系统",
+              "text": "Système réversible de plugin",
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "从元框架到框架",
+              "text": "Du méta-framework au framework",
               "link": "/cookbook/design/framework.md"
             },
             {
-              "text": "零占用的存储",
+              "text": "Stockage avec zéro volume",
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
             }
           ]
@@ -650,7 +650,7 @@
           "text": "Meilleures pratiques",
           "items": [
             {
-              "text": "资源转存",
+              "text": "Cache des fichiers de ressources",
               "link": "/cookbook/practice/assets.md"
             },
             {
@@ -662,11 +662,11 @@
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "整合包开发",
+              "text": "Développement de paquet intégré",
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "Écrit des tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
@@ -1028,7 +1028,7 @@
       ],
       "/about/": [
         {
-          "text": "关于",
+          "text": "À propos",
           "items": [
             {
               "text": "Licence ",
@@ -1039,7 +1039,7 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "认识团队",
+              "text": "À propos de l'équipe",
               "link": "/about/team.md"
             },
             {
@@ -1047,42 +1047,42 @@
               "link": "/about/faq.md"
             },
             {
-              "text": "社区资源",
+              "text": "Ressources Communautaires",
               "link": "/about/community.md"
             },
             {
-              "text": "大事件",
+              "text": "Le Grand Événement",
               "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "更新",
+          "text": "Mettre à jour",
           "items": [
             {
               "text": "Histoire",
               "link": "/about/history.md"
             },
             {
-              "text": "更新计划",
+              "text": "Mettre à jour l'horaire",
               "link": "/about/releases.md"
             },
             {
-              "text": "从低版本迁移",
+              "text": "Migration depuis une version ancienne",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献",
+          "text": "Contributions",
           "items": [
             {
               "text": "Structure du projet",
@@ -1100,67 +1100,67 @@
           "text": "",
           "items": [
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "v4.1 版本介绍",
+              "text": "Notes de version : v4.1",
               "link": "/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "Notes de version : v4.2",
               "link": "/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "Notes de version : v4.3",
               "link": "/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "Notes de version : v4.4",
               "link": "/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "Notes de version : v4.5",
               "link": "/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "Notes de version : v4.6",
               "link": "/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "Notes de version : v4.7",
               "link": "/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "Notes de version : v4.8",
               "link": "/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "Notes de version : v4.9",
               "link": "/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介绍",
+              "text": "Notes de version : v4.10",
               "link": "/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "Notes de version : v4.11",
               "link": "/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "Notes de version : v4.12",
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Notes de version : v4.13",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Notes de version : v4.14",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "Notes de version : v4.15",
               "link": "/releases/v4.15.md"
             }
           ]
@@ -1169,7 +1169,7 @@
           "text": "",
           "items": [
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]

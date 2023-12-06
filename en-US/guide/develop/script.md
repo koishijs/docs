@@ -1,4 +1,4 @@
-# Bootstrap Script
+# Launch Script
 
 There is also a set of command line tools that provided by Koishi to boot the application quickly by reading the configuration file.
 
@@ -8,7 +8,7 @@ These commands are should be run in the [workspace root](./config.md#应用目�
 
 ## General Usage
 
-我们通常使用 **启动脚本** 来启动 Koishi 应用。打开应用目录下的 `package.json` 文件：
+We usually use a **bootstrap script** to start a Koishi application. Open the `package.json` file in the workspace root:
 
 ```json title=package.json
 {
@@ -19,7 +19,7 @@ These commands are should be run in the [workspace root](./config.md#应用目�
 }
 ```
 
-在应用目录运行下面的命令行以启动 Koishi 应用：
+Run the following command line in the workspace root to start the Koishi application:
 
 ::: tabs code
 ```npm
@@ -30,21 +30,21 @@ yarn start
 ```
 :::
 
-在本节的后续部分，我们会介绍上述启动脚本的更多参数。无论你做何改动，你都可以使用上面的命令行来快速启动。这也是启动脚本的意义所在。
+In the subsequent parts of this section, we will introduce more options of the above launch script. No matter what changes you make, you can use the above command line to start. This is also the significance of the boostrap script.
 
-### 启动参数
+### Command Line Options
 
-启动脚本支持 Node.js 的 [命令行参数](https://nodejs.org/api/cli.html)。例如，上面的 `-r` 对应于 `--require`，它将允许你加载 `.ts` 和 `.yml` 后缀的文件。
+The launch script supports Node.js's [command line options](https://nodejs.org/api/cli.html). For example, the `-r` above corresponds to `--require`, which allows you to load files with `.ts` and `.yml` extensions.
 
-除了 Node.js 的命令行参数，Koishi 还提供了一些额外的参数。我们将在下面逐一介绍。
+In addition to Node.js's command line options, Koishi also provides some additional options. We will introduce each of them below.
 
-### 自动重启
+### Auto Restart
 
-Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃时，如果 Koishi 已经启动成功，则监视进程将自动重新启动一个新的进程。
+Koishi's command line tool supports auto-restart. When the process running Koishi crashes, if Koishi has already started successfully, the surveillance process will automatically restart a new process.
 
-## 开发模式
+## Development Mode
 
-除了 `start` 以外，模板项目还准备了名为 `dev` 的开发模式启动脚本。在应用目录运行下面的命令行可以启动开发模式：
+In addition to `start`, the template project also prepares a launch script for development mode named `dev`. Running the following command line in the workspace root can start the application in development mode:
 
 ::: tabs code
 ```npm
@@ -55,18 +55,18 @@ yarn dev
 ```
 :::
 
-如你所见，`dev` 相当于在 `start` 指令的基础上添加了额外的参数和环境变量。这些参数为我们启用了额外的特性，而环境变量则能影响插件的部分配置。
+As you can see, `dev` is equivalent to adding additional options and environment variables on the basis of the `start` command. These options enable us to use additional features, while the environment variables can affect some behaviors of the plugins.
 
-### TypeScript 支持
+### TypeScript Support
 
-Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register` 参数允许我们在运行时直接使用工作区插件的 TypeScript 源代码。
+The Koishi template project provides built-in support for TypeScript development. The `-r esbuild-register` option mentioned above allows us to directly use the TypeScript source code of workspace plugins at runtime.
 
-你也可以自行扩展更多的后缀名支持。例如，如果你更喜欢 CoffeeScript，你可以这样修改你的启动脚本为：
+You can also add support for more extensions on your own. For example, if you prefer CoffeeScript, you can modify your development script like this:
 
 ```json title=package.json
 {
   "scripts": {
-    "start": "koishi start -r coffeescript/register"
+    "dev": "koishi start -r coffeescript/register"
   },
   "devDependencies": {
     "coffeescript": "^2.7.0"
@@ -74,17 +74,17 @@ Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register`
 }
 ```
 
-这样你就可以使用 CoffeeScript 编写你的插件源代码 (当然你还得自行处理构建逻辑)，甚至连配置文件都可以使用 `koishi.coffee` 书写了。
+This way, you can use CoffeeScript to write your plugin source code (of course, you still need to handle the build logic yourself), and you can even write the configuration file in `koishi.coffee`.
 
 ::: danger
-我们并不推荐使用高级语言来编写配置文件，因为动态的配置无法支持环境变量、配置热重载和插件市场等特性。大部分情况下我们建议仅将 `-r` 用于开发目的。
+We do not recommend using advanced languages to write configuration files, as dynamic configurations do not support features like environment variables, configuration hot reloading, and plugin marketplace. In most cases, we suggest using `-r` only for development purposes.
 :::
 
-### 模块热替换
+### Hot Module Replacement
 
-如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！内置插件 @koishijs/plugin-hmr 实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
+If you are developing a large Koishi project, it might take several seconds just to load all plugins. At times like this, supporting hot module replacement like front-end frameworks becomes a great idea. Fortunately, Koishi also supports this! The built-in plugin @koishijs/plugin-hmr implements plugin-level hot replacement. Whenever you modify your local files, Koishi will try to reload your plugin and remind you in the terminal.
 
-这里的行为也可以在配置文件中进行定制：
+The behavior here can also be customized in the configuration file:
 
 ```yaml title=koishi.yml
 plugins:
@@ -92,19 +92,19 @@ plugins:
     $if: env.NODE_ENV === 'development'
     hmr:
       root: '.'
-      # 要忽略的文件列表，支持 glob patterns
+      # List of files to ignore, supports glob patterns
       ignore:
         - some-file
 ```
 
 ::: tip
-由于部分 Linux 系统有着 8192 个文件的监听数量限制，你可能会发现运行 `yarn dev` 后出现了如下的报错：
+Due to the file watcher limit of 8192 on some Linux systems, you may encounter the following error after running `yarn dev`:
 
 ```text
 NOSPC: System limit for number of file watchers reached
 ```
 
-此时你可以使用下面的命令来增加监听数量限制：
+In this case, you can use the following command to increase the limit of the number of file watchers:
 
 ```sh
 echo fs.inotify.max_user_watches=524288 |
@@ -112,5 +112,5 @@ sudo tee -a /etc/sysctl.conf &&
 sudo sysctl -p
 ```
 
-另一种方案是只监听部分子路径，例如将 `root` 改为 `external/foo` (其中 `foo` 是你正在开发的插件目录，参见下一节的工作区指南)，这将忽略其他目录下的变化，并依然对你的插件进行热重载。当你同时开发多个插件时，你也可以将 `root` 改成一个数组来使用。
+Another solution is to only monitor certain subpaths, such as changing `root` to `external/foo` (where `foo` is the directory of the plugin you are developing, see the next section's workspace guide), which will ignore changes in other directories while still hot reloading your plugin. When you are developing multiple plugins at the same time, you can also change `root` to an array for use.
 :::

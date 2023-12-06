@@ -1,11 +1,13 @@
-- - -
-prev: text: Choisir une méthode d'installation link: /fr-FR/manual/starter/
-- - -
+---
+prev:
+  text: Choisir une méthode d'installation
+  link: /fr-FR/manual/starter/
+---
 
-# Installation et configuration de plugins
+# Installation et configuration des plugins
 
-::: tip
-Cette section explique comment utiliser les pages "Marketplace des plugins", "Configuration des plugins" et "Gestion des dépendances".
+:::tip
+本节将介绍「插件市场」「插件配置」和「依赖管理」页面的使用方法。
 :::
 
 L'une des fonctionnalités clés de Koishi est sa puissante console.La console est une interface utilisateur conviviale qui encapsule la plupart des fonctionnalités de Koishi :
@@ -17,7 +19,7 @@ L'une des fonctionnalités clés de Koishi est sa puissante console.La console e
 - Surveillance de l'état, statistiques des données
 - Voir le journal
 
-Dans cette section, nous utiliserons l'exemple du plugin [echo](../../plugins/common/echo.md) pour vous montrer comment installer et configurer des plugins.Le plugin echo enregistre une commande nommée `echo`, qui renvoie le texte d'entrée tel quel à l'utilisateur.
+本节中我们将以 [echo](../../plugins/common/echo.md) 插件为例来演示插件的安装与配置。echo 插件注册了一个名为 `echo` 的指令，调用此指令可以将输入原样输出给用户。
 
 ## Découverte de la console
 
@@ -31,13 +33,13 @@ L'interface de la console est principalement divisée en deux parties : à gauch
 
 Au cours des prochaines sections, nous expliquerons en détail les fonctionnalités et l'utilisation de chaque page.
 
-## Installation de plugins
+## Installer les plugins
 
-::: warning
-Koishi ne garantit pas la sécurité des plugins non officiels. N'installez pas de plugins provenant de sources inconnues, car ils peuvent rendre Koishi instable, voire entraîner des conséquences plus graves. Si vous rencontrez des problèmes après avoir installé un plugin, veuillez signaler le problème dans le groupe d'utilisateurs ou le forum. De plus, certains plugins portent l'étiquette "Non sécurisé" et ne bénéficient pas du support de la communauté officielle.
+:::warning
+Koishi 不对非官方插件的安全性做任何保证。N'installez pas de plugins provenant de sources inconnues, car ils peuvent rendre Koishi instable, voire entraîner des conséquences plus graves. Si vous rencontrez des problèmes après avoir installé un plugin, veuillez signaler le problème dans le groupe d'utilisateurs ou le forum. De plus, certains plugins portent l'étiquette "Non sécurisé" et ne bénéficient pas du support de la communauté officielle.
 :::
 
-Accédez à la page "Marketplace des plugins". Vous y trouverez tous les plugins disponibles. Dans la barre de recherche, saisissez `echo`, trouvez le plugin que vous souhaitez, cliquez sur le bouton "Ajouter", puis cliquez sur "Installer" dans la fenêtre contextuelle. Attendez un moment, le plugin est maintenant installé avec succès.
+Accédez à la page "Marketplace des plugins". Vous y trouverez tous les plugins disponibles. 在搜索框中输入 `echo`，找到我们想要的插件，点击「添加」按钮，然后在弹出的对话框中点击「安装」。Attendez un moment, le plugin est maintenant installé avec succès.
 
 ![select-version](/manual/console/select-version.light.webp) {.light-only}
 
@@ -57,8 +59,8 @@ La désactivation d'un plugin est tout aussi simple.La désactivation d'un plugi
 
 ## Configuration des plugins
 
-::: warning
-Lors de la configuration des plugins, gardez à l'esprit ce principe : **ne modifiez pas la configuration à moins que cela ne soit nécessaire**. Koishi a été conçu pour allier extensibilité et praticité, et de nombreuses fonctionnalités de base sont fournies sous la forme de plugins pré-installés. Les pages "Marketplace des plugins" et "Configuration des plugins" sont elles-mêmes fournies par les plugins market et config pré-installés. Étant donné que tous les plugins pré-installés sont préconfigurés, vous n'avez généralement pas besoin de modifier leur configuration. La modification arbitraire de la configuration des plugins ou la suppression de plugins pré-installés peut entraîner des dysfonctionnements de Koishi.
+:::warning
+在配置插件的过程中，请大家记住这个原则：**如无必要，勿动配置**。Koishi a été conçu pour allier extensibilité et praticité, et de nombreuses fonctionnalités de base sont fournies sous la forme de plugins pré-installés. Les pages "Marketplace des plugins" et "Configuration des plugins" sont elles-mêmes fournies par les plugins market et config pré-installés. Étant donné que tous les plugins pré-installés sont préconfigurés, vous n'avez généralement pas besoin de modifier leur configuration. La modification arbitraire de la configuration des plugins ou la suppression de plugins pré-installés peut entraîner des dysfonctionnements de Koishi.
 :::
 
 Bien que le plugin echo n'ait pas besoin de configuration, les plugins plus complexes offrent souvent de nombreuses options de configuration pour permettre aux utilisateurs de contrôler leur comportement. L'image suivante montre la page de configuration du plugin novelai.
@@ -69,8 +71,8 @@ Bien que le plugin echo n'ait pas besoin de configuration, les plugins plus comp
 
 Sur cette page, vous verrez de nombreuses options de configuration. Notez ce qui suit :
 
-- 必选但尚未填入的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-red-1)">红色</span> 的提示条，只有正确填写配置才能启动插件。
-- 已修改但未保存的配置项会在左侧呈现 <span style="font-weight: bold; color: var(--vp-c-indigo-1)">紫色</span> 的提示条，点击「启用插件」或「保存配置」按钮后会保存配置；如果你想撤销这些改动，可以在配置名称旁的小三角处呼出菜单，选择「撤销更改」使该配置恢复到上次保存时的状态。
+- Les options de configuration obligatoires mais non encore renseignées sont indiquées par une barre d'information <span style="font-weight: bold; color: var(--vp-c-red-1)">rouge</span>. Vous devez remplir correctement ces options pour activer le plugin.
+- Les options de configuration modifiées mais non enregistrées sont indiquées par une barre d'information <span style="font-weight: bold; color: var(--vp-c-indigo-1)">violette</span>. Une fois que vous avez modifié une configuration, cliquez sur le bouton "Activer le plugin" ou "Enregistrer la configuration" pour enregistrer les modifications. Si vous souhaitez annuler les modifications, vous pouvez cliquer sur le menu déroulant à côté du nom de la configuration, puis choisir "Annuler les modifications" pour ramener la configuration à son état précédemment enregistré.
 
 ## Gestion des plugins
 
@@ -82,12 +84,12 @@ Lors de l'installation de Koishi, certains groupes sont préconfigurés, et les 
 
 La création d'un nouveau groupe est également simple. Cliquez sur "Configuration globale" ou sur le nom d'un groupe, puis cliquez sur le bouton "Créer un groupe" en haut à droite. Le nom du nouveau groupe est généré de manière aléatoire, mais vous pouvez cliquer sur le nom pour le modifier comme vous le souhaitez. Les groupes peuvent être développés ou réduits en cliquant sur la petite flèche à côté du nom du groupe.
 
-De plus, le mécanisme [de filtre](../usage/customize.md#filtres) peut également être utilisé avec les groupes pour contrôler le comportement de plusieurs plugins à la fois.
+此外，[过滤器](../usage/customize.md#过滤器) 机制也可用于分组，便于控制一系列插件的行为。
 
-### Ajout de plus de plugins
+### Ajout de plugins supplémentaires
 
-::: tip
-En général, un seul plugin peut être exécuté à la fois avec une configuration donnée. Consultez la section [Gérer plusieurs configurations](../recipe/multiple.md) pour plus d'informations.
+:::tip
+通常情况下，一个插件只能同时运行一份配置。请参考 [维护多份配置](../recipe/multiple.md) 章节。
 :::
 
 Si un plugin déjà installé n'apparaît pas dans la liste des plugins, vous pouvez l'ajouter manuellement. Sur la page "Configuration globale" ou de n'importe quel groupe, cliquez sur le bouton "Ajouter un plugin", puis une fenêtre contextuelle apparaîtra. Dans cette fenêtre contextuelle, cliquez sur le plugin que vous souhaitez ajouter pour créer une nouvelle configuration de plugin non activée.
@@ -98,8 +100,8 @@ Si un plugin déjà installé n'apparaît pas dans la liste des plugins, vous po
 
 ### Suppression de plugins ou de groupes
 
-::: warning
-Attention : cette opération ne peut pas être annulée. Si vous souhaitez restaurer la configuration précédente, vous devrez ajouter manuellement les plugins. Faites preuve de prudence.
+:::warning
+注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。Faites preuve de prudence.
 :::
 
 Sur n'importe quelle page de configuration de plugin, cliquez sur le bouton "Supprimer le plugin" en haut à droite pour supprimer la configuration du plugin. De même, dans la page de configuration du groupe, cliquez sur le bouton "Supprimer le groupe" en haut à droite pour supprimer ce groupe. Lorsque vous supprimez un groupe, tous les plugins qui s'y trouvent sont également supprimés.

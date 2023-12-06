@@ -1,6 +1,6 @@
 # First Dialogue
 
-After installing Koishi and experiencing the marketplace, you may can't wait to try the features of Koishi.Let's start the first conversation with the bots now!
+After installing Koishi and experiencing the marketplace, you may can't wait to try the features of Koishi. Let's start the first conversation with the bots now!
 
 ## Simulate a conversation in the sandbox
 
@@ -32,8 +32,8 @@ Simulate the conversation in the sandbox is far from enough.We need to get the r
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [微信公众号](../../plugins/adapter/wechat-official.md)
-- [企业微信](../../plugins/adapter/wecom.md)
+- [WeChat Official](../../plugins/adapter/wechat-official.md)
+- [WeCom](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
 The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the category "Adapter" in the Plugin Configuration page.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.

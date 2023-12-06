@@ -7,7 +7,7 @@ next:
   link: /en-US/manual/usage/market.html
 ---
 
-# Create a boilerplate
+# Create from Template
 
 ::: tip
 If you want to learn about other installation method, please visit [Installation](./index.md).
@@ -24,7 +24,7 @@ Of course, you could also use the template project in production. While it might
 
 ## Install Node.js
 
-Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
+Koishi requires a [Node.js](https://nodejs.org/) runtime environment (at least v18, suggested to use LTS versions), you need to install it yourself.
 
 ### Download Installer
 
@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 Open a command line, cd to the directory that you want to create a Koishi template project.
 
 ::: tip
-这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
+The working directory path should not be absurdly long, also it is recommended to use a path that contains ASCII characters only. For example:
 
 - Windows：`C:\dev` or `D:\dev` (do not create projects directly at the root of the disk, preferably build a folder)
 - Other operating systems: `~/dev`

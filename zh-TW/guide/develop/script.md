@@ -44,7 +44,7 @@ Koishi 的命令行工具支持自动重启。当运行 Koishi 的进程崩溃�
 
 ## 开发模式
 
-除了 `start` 以外，模板项目还准备了名为 `dev` 的开发模式启动脚本。在应用目录运行下面的命令行可以启动开发模式：
+除了 `start` 以外，模板项目还准备了名为 `dev` 的开发模式启动脚本。在应用目录运行下面的命令行可以以开发模式启动应用：
 
 ::: tabs code
 ```npm
@@ -55,18 +55,18 @@ yarn dev
 ```
 :::
 
-如你所见，`dev` 相当于在 `start` 指令的基础上添加了额外的参数和环境变量。这些参数为我们启用了额外的特性，而环境变量则能影响插件的部分配置。
+如你所见，`dev` 相当于在 `start` 指令的基础上添加了额外的参数和环境变量。这些参数为我们启用了额外的特性，而环境变量则能影响插件的部分行为。
 
 ### TypeScript 支持
 
-Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register` 参数允许我们在运行时直接使用工作区插件的 TypeScript 源代码。
+Koishi 模板项目原生地支持 TypeScript 开发。上述 `-r esbuild-register` 参数允许我们在运行时直接使用工作区插件的 TypeScript 源代码。
 
-你也可以自行扩展更多的后缀名支持。例如，如果你更喜欢 CoffeeScript，你可以这样修改你的启动脚本为：
+你也可以自行扩展更多的后缀名支持。例如，如果你更喜欢 CoffeeScript，你可以这样修改你的开发脚本为：
 
 ```json title=package.json
 {
   "scripts": {
-    "start": "koishi start -r coffeescript/register"
+    "dev": "koishi start -r coffeescript/register"
   },
   "devDependencies": {
     "coffeescript": "^2.7.0"
@@ -82,7 +82,7 @@ Koishi 工作区原生地支持 TypeScript 开发。上述 `-r esbuild-register`
 
 ### 模块热替换
 
-如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！内置插件 @koishijs/plugin-hmr 实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在控制台提醒你。
+如果你开发着一个巨大的 Koishi 项目，可能光是加载一遍全部插件就需要好几秒了。在这种时候，像前端框架一样支持模块热替换就成了一个很棒的主意。幸运的是，Koishi 也做到了这一点！内置插件 @koishijs/plugin-hmr 实现了插件级别的热替换。每当你修改你的本地文件时，Koishi 就会尝试重载你的插件，并在命令行中提醒你。
 
 这里的行为也可以在配置文件中进行定制：
 

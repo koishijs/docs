@@ -1,8 +1,8 @@
-# 发布插件
+# プラグインを公開する
 
 为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
 
-::: tip
+:::tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
 :::
 
@@ -21,7 +21,7 @@ root
 └── package.json                # 而不是这里
 ```
 
-::: tip
+:::tip
 请注意 `package.json` 文件不是唯一的，它在应用目录和每个插件目录都会存在。请确保你修改了正确的文件。
 :::
 
@@ -37,7 +37,7 @@ root
 
 其中最重要的属性有两个：`name` 是要发布的包名，`version` 是包的版本号。这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
 
-::: tip
+:::tip
 请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
 :::
 
@@ -47,7 +47,7 @@ root
 
 ### 准入条件
 
-::: tip
+:::tip
 使用模板项目创建的插件一定是符合要求的，因此你可以跳过这一节。
 :::
 
@@ -142,28 +142,31 @@ root
 - **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
-::: tip
+:::tip
 此外，还有一些字段与 [Koishi Online](../../cookbook/practice/online.md) 的部署流程相关 (如 `browser`, `exports` 等)。由于不影响主线开发，你可以稍后再进行了解。
 :::
 
-## 发布插件
+## プラグインを公開する
 
 编辑完上面的清单文件并 [构建源代码](./workspace.md#构建源代码) 后，你就可以公开发布你的插件了。
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run pub [...name]
 ```
+
 ```yarn
 yarn pub [...name]
 ```
+
 :::
 
 - **name:** 要发布的插件列表，缺省时表示全部 (此处 `name` 不包含 `koishi-plugin-` 前缀，而是你的工作区目录名)
 
 这将发布所有版本号发生变动的插件。
 
-::: tip
+:::tip
 从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
 :::
 
@@ -176,39 +179,46 @@ No token found and can't prompt for login when running with --non-interactive.
 
 此时你需要在发布时使用官方镜像，具体操作如下：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
+
 ```yarn
 yarn pub [...name] --registry https://registry.yarnpkg.com
 ```
+
 :::
 
 对于 Yarn v2 及以上版本，你还可以分别针对发布和安装设置不同的镜像：
 
-::: tabs code
+:::tabs code
+
 ```yarn
 # 安装时使用国内镜像
 yarn config set npmRegistryServer https://registry.npmmirror.com
 # 发布时使用官方镜像
 yarn config set npmPublishRegistry https://registry.yarnpkg.com
 ```
-:::  
-:
+
 :::
+::::
 
 ## 更新插件版本
 
 初始创建的插件版本号为 `1.0.0`。当你修改过插件后，你需要更新版本号才能重新发布。在应用目录运行下面的命令以更新版本号：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
+
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 ```
+
 :::
 
 - **name:** 要更新的插件列表，不能为空

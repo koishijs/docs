@@ -8,7 +8,7 @@ Koishi describes itself as a "cross-platform" framework, but what does this "cro
 
 现在就让我们来说说，如何在 Koishi 中使用跨平台的账号系统。
 
-## 获取账号信息
+## Get Account Information
 
 有些平台的账号信息是不可见的，所以我们需要借助一些工具来获取它们。
 
@@ -26,7 +26,7 @@ Koishi describes itself as a "cross-platform" framework, but what does this "cro
 </chat-message>
 </chat-panel>
 
-如果你要进行登录或者绑定，这里的「平台名」和「用户 ID」会很有用。
+If you want to login or bind your account, the platform name and user ID here will be useful.
 
 ## Console Login
 

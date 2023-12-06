@@ -43,7 +43,7 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶指南",
+            "text": "Advanced Guide",
             "link": "/cookbook/"
           },
           {
@@ -125,7 +125,7 @@
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "Create Template Project",
+              "text": "Create from Template",
               "link": "/manual/starter/boilerplate.md"
             },
             {
@@ -216,7 +216,7 @@
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "Bootstrap Script",
+              "text": "Launch Script",
               "link": "/guide/develop/script.md"
             },
             {
@@ -354,11 +354,11 @@
           "text": "Internationalization",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Basic Usage",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "本地化文件",
+              "text": "Localization File",
               "link": "/guide/i18n/translation.md"
             },
             {
@@ -374,7 +374,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶指南",
+              "text": "→ Advanced Guide",
               "link": "/cookbook/"
             }
           ]
@@ -441,11 +441,11 @@
           "text": "Built-in Services",
           "items": [
             {
-              "text": "事件系统 (Events)",
+              "text": "Events",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "Filter",
               "link": "/api/service/filter.md"
             },
             {
@@ -457,11 +457,11 @@
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "加载器 (Loader)",
+              "text": "Loader",
               "link": "/api/service/loader.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions",
               "link": "/api/service/permissions.md"
             },
             {
@@ -494,23 +494,23 @@
               "link": "/api/resources/role.md"
             },
             {
-              "text": "交互 (Interaction)",
+              "text": "Interaction",
               "link": "/api/resources/interaction.md"
             },
             {
-              "text": "登录状态 (Login)",
+              "text": "Login",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "消息 (Message)",
+              "text": "Message",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "表态 (Reaction)",
+              "text": "Reaction",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "用户 (User)",
+              "text": "User",
               "link": "/api/resources/user.md"
             }
           ]
@@ -622,14 +622,14 @@
           ]
         },
         {
-          "text": "设计原理",
+          "text": "Design",
           "items": [
             {
-              "text": "项目架构",
+              "text": "Infrastructure",
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的插件系统",
+              "text": "Disposable Plugin System",
               "link": "/cookbook/design/disposable.md"
             },
             {
@@ -647,7 +647,7 @@
           ]
         },
         {
-          "text": "最佳实践",
+          "text": "Cookbook",
           "items": [
             {
               "text": "资源转存",
@@ -666,7 +666,7 @@
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "Writing Tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
@@ -743,7 +743,7 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
@@ -858,7 +858,7 @@
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Plugin Manager (Market)",
               "link": "/plugins/console/market.md"
             },
             {
@@ -1028,7 +1028,7 @@
       ],
       "/about/": [
         {
-          "text": "关于",
+          "text": "About",
           "items": [
             {
               "text": "License",
@@ -1039,7 +1039,7 @@
               "link": "/about/contact.md"
             },
             {
-              "text": "认识团队",
+              "text": "Meet the Team",
               "link": "/about/team.md"
             },
             {
@@ -1076,13 +1076,13 @@
               "link": "/releases/index.md"
             },
             {
-              "text": "更新日志",
+              "text": "Changelog",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献",
+          "text": "Contribution",
           "items": [
             {
               "text": "Infrastructure",
@@ -1152,15 +1152,15 @@
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Release Notes: v4.13",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Release Notes: v4.14",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "Release Notes: v4.15",
               "link": "/releases/v4.15.md"
             }
           ]
@@ -1169,7 +1169,7 @@
           "text": "",
           "items": [
             {
-              "text": "更新日志",
+              "text": "Change Log",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]

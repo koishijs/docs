@@ -1,4 +1,4 @@
-# 零占用的存储
+# Stockage avec zéro volume
 
 ::: tip
 本文将回答以下问题：

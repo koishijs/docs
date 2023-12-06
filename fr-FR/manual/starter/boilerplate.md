@@ -3,7 +3,7 @@ prev:
   text: Choisir une méthode d'installation
   link: /fr-FR/manual/starter/
 next:
-  text: Installation et configuration de plugins
+  text: Installation et configuration des plugins
   link: /fr-FR/manual/usage/market.html
 ---
 

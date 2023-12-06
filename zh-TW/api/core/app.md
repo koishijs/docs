@@ -91,13 +91,13 @@ interface DelayOptions {
 
 ## 国际化设置
 
-### options.i18n.locales
+### options.i18n.locales {#i18n-locales}
 
 - 类型：`string[]`
 
 可用的语言列表。按照回退顺序排列。
 
-### options.i18n.output
+### options.i18n.output {#i18n-output}
 
 - 类型：`string`
 
@@ -105,15 +105,6 @@ interface DelayOptions {
 
 - `prefer-user`: 优先使用用户语言
 - `prefer-channel`: 优先使用频道语言
-
-## 高級設定
-
-### options.maxListeners
-
-- 类型：`number`
-- 默认值：`64`
-
-每种钩子的最大数量。如果超过这个数量，Koishi 会认定为发生了内存泄漏，将产生一个警告。
 
 ## 请求设置
 
