@@ -7,7 +7,7 @@ next:
   link: /en-US/manual/usage/market.html
 ---
 
-# Create a boilerplate
+# Create from Template
 
 ::: tip
 If you want to learn about other installation method, please visit [Installation](./index.md).
