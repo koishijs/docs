@@ -129,7 +129,7 @@ footer:
         text: WeChat Official
         link: /zh-CN/plugins/adapter/wechat-official.html
       - 
-        text: 企业微信
+        text: WeCom
         link: /zh-CN/plugins/adapter/wecom.html
       - 
         text: WhatsApp
