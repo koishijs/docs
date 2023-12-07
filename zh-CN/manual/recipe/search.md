@@ -14,10 +14,28 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 我们提供了四种插件标识，它们本身也是过滤条件。包括：
 
-- `is:verified`：<k-icon-official /> 官方认证
-- `is:insecure`：<k-icon-insecure /> 不安全
-- `is:preview`：<k-icon-develop /> 开发中
-- `created:>date`：<k-icon-newborn /> 近期新增
+<div class="plugin-flags-list">
+
+- <k-icon-official />`is:verified`：官方认证
+- <k-icon-insecure />`is:insecure`：不安全
+- <k-icon-develop />`is:preview`：开发中
+- <k-icon-newborn />`created:>date`：近期新增
+
+</div>
+
+<style>
+.plugin-flags-list ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+.plugin-flags-list svg {
+  transform: translateX(-0.5rem);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
 
 此外，还有一写不带标识的过滤条件：
 
