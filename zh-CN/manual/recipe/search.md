@@ -16,12 +16,16 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 <div class="plugin-flags-list">
 
-- <k-icon-official />`is:verified`：官方认证
-- <k-icon-insecure />`is:insecure`：不安全
-- <k-icon-develop />`is:preview`：开发中
-- <k-icon-newborn />`created:>date`：近期新增
+- <market-icon name="verified" style="color: var(--k-color-success)" />`is:verified`：官方认证
+- <market-icon name="insecure" style="color: var(--k-color-danger)" />`is:insecure`：不安全
+- <market-icon name="preview" style="color: var(--k-color-warning)" />`is:preview`：开发中
+- <market-icon name="newborn" style="color: var(--k-color-success)" />`created:>date`：近期新增
 
 </div>
+
+<script lang="ts" setup>
+import { MarketIcon } from '@koishijs/market'
+</script>
 
 <style>
 .plugin-flags-list ul {
