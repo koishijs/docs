@@ -27,6 +27,10 @@ import {
 } from 'element-plus'
 import Layout from './layout.vue'
 import Overview from './overview.vue'
+import IconDevelop from './icons/develop.vue'
+import IconInsecure from './icons/insecure.vue'
+import IconNewborn from './icons/newborn.vue'
+import IconOfficial from './icons/official.vue'
 
 import '@koishijs/core'
 import 'element-plus/dist/index.css'
@@ -72,5 +76,9 @@ export default defineTheme({
     app.use(i18n)
     app.component('k-markdown', Markdown)
     app.component('vp-overview', Overview)
+    app.component('k-icon-develop', IconDevelop)
+    app.component('k-icon-insecure', IconInsecure)
+    app.component('k-icon-newborn', IconNewborn)
+    app.component('k-icon-official', IconOfficial)
   },
 })

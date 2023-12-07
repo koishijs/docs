@@ -14,10 +14,10 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 我们提供了四种插件标识，它们本身也是过滤条件。包括：
 
-- `is:verified`：官方认证 (对钩)
-- `is:insecure`：不安全 (叹号)
-- `is:preview`：开发中 (扳手)
-- `created:>date`：近期新增 (树苗)
+- `is:verified`：<k-icon-official /> 官方认证
+- `is:insecure`：<k-icon-insecure /> 不安全
+- `is:preview`：<k-icon-develop /> 开发中
+- `created:>date`：<k-icon-newborn /> 近期新增
 
 此外，还有一写不带标识的过滤条件：
 
