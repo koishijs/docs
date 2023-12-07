@@ -168,15 +168,15 @@
             },
             {
               "text": "Multiple Configuration Maintenance",
-              "link": "/en-US/manual/recipe/multiple.md"
+              "link": "/manual/recipe/multiple.md"
             },
             {
               "text": "Search Marketplace",
-              "link": "/en-US/manual/recipe/search.md"
+              "link": "/manual/recipe/search.md"
             },
             {
               "text": "Deployment",
-              "link": "/en-US/manual/recipe/server.md"
+              "link": "/manual/recipe/server.md"
             }
           ]
         },
