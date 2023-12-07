@@ -1,33 +1,33 @@
 # Recherche sur la place de marché
 
-Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
+Il y a une multitude de plugins valides pour Koishi. Afin de faciliter la recherche des utilisateurs, nous avons mis en place une syntaxe spéciale pour la recherche. Par exemple, vous pouvez saisir `is:preview` dans la barre de recherche pour filtrer rapidement une catégorie spécifique de plugins.
 
-## 搜索词
+## Mots-clés
 
-除去含有冒号的特殊语法外，你输入的搜索词会被用于查询：
+En dehors de la syntaxe spéciale avec des deux-points, les mots-clés que vous saisissez seront utilisés pour la recherche dans :
 
-- 插件名称
-- 插件描述
-- 插件的关键词
+- Le nom du plugin
+- La description du plugin
+- Les mots-clés du plugin
 
-## 插件标识
+## Identifiants des plugins
 
-我们提供了四种插件标识，它们本身也是过滤条件。包括：
+Actuellement, il existe quatre types d'identifiants de plugins, qui peuvent également servir de critères de filtrage :
 
 - `is:verified`：官方认证 (对钩)
 - `is:insecure`：不安全 (叹号)
 - `is:preview`：开发中 (扳手)
 - `created:>date`：近期新增 (树苗)
 
-此外，还有一些不带标识的过滤条件：
+De plus, il existe d'autres critères de filtrage sans identifiant spécifique :
 
-- `is:installed`：已安装
-- `is:portable`：快速体验
-- `updated:>date`：近期更新
+- `is:installed` : Installé
+- `is:portable` : Expérience rapide
+- `updated:>date` : Mise à jour récente
 
-上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
+Les critères de filtrage mentionnés ci-dessus peuvent également être inversés, par exemple `not:insecure` ou `created:<date`. Dans la barre à gauche, vous pouvez cliquer sur le nom de l'identifiant pour le sélectionner, un deuxième clic le sélectionne en mode inverse, et un troisième clic annule la sélection.
 
-## 插件分类
+## Catégories des plugins
 
 我们目前提供了 14 个基础分类。它们分别是：
 
