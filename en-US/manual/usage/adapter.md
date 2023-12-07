@@ -1,12 +1,12 @@
 # First Dialogue
 
-After installing Koishi and experiencing the marketplace, you may can't wait to try the features of Koishi. Let's start the first conversation with the bots now!
+After installing Koishi and exploring the marketplace, you must be eager to experience the functionalities of Koishi. Let's dive into the first conversation with the bots right away!
 
 ## Simulate a conversation in the sandbox
 
-Go to the "Sandbox" page in the Console, we can simulate a conversation with bots there.
+Navigate to the "Sandbox" page in the Console, where we can simulate a conversation with bots.
 
-First, click the "Add User" button in the upper left corner to create a virtual user, which is named Alice for example. Then, you would see a blank chat UI on the right side. Click the input box at the bottom of the chat UI, enter "help" (without quotes) and then press Enter key. You will see a reply message from bot immediately. "help" is a built-in command that lists all available commands at the moment. Therefore, we could see "echo" and "help" commands in the response.
+First, click the "Add User" button in the top left corner to create a virtual user, which is named Alice for example. You will see a blank chat UI on the right side. Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key. You will see the response from bot immediately. "help" is a built-in command that lists all available commands at the moment. Therefore, we could see "echo" and "help" commands in the response.
 
 The "echo" here is the plugin we have just installed, which displays a line of text that the user just entered. Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
 
