@@ -19,7 +19,7 @@ We provide four categories of plugin identifiers, which are also filters.Includi
 - `is:preview`: Developing (wrenk)
 - `created:>date`: Recently created (bud)
 
-In addition, there are some unmarked filters:
+此外，还有一些不带标识的过滤条件：
 
 - `is:installed`: Installed
 - `is:portable`: Portable
