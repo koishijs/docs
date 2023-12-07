@@ -25,9 +25,13 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 此外，还有一写不带标识的过滤条件：
 
-- `is:installed`：已安装
-- `is:portable`：快速体验
-- `updated:>date`：近期更新
+<div class="plugin-flags-list">
+
+- <market-icon name="download" />`is:installed`：已安装
+- <market-icon name="portable" />`is:portable`：快速体验
+- <market-icon name="tag" />`updated:>date`：近期更新
+
+</div>
 
 上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
 
@@ -68,9 +72,13 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 除了按照评分排序，你还可以选择其他的排序方式：
 
-- `sort:download`：按下载量排序
-- `sort:created`：按创建时间排序
-- `sort:updated`：按更新时间排序
+<div class="plugin-flags-list">
+
+- <market-icon name="download" />`sort:download`：按下载量排序
+- <market-icon name="heart-pulse" />`sort:created`：按创建时间排序
+- <market-icon name="tag" />`sort:updated`：按更新时间排序
+
+</div>
 
 如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。在侧边栏中，你可以点击排序方式进行排序，点击第二次反向排序，点击第三次则会取消排序。
 
