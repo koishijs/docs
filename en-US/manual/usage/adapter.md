@@ -18,9 +18,9 @@ If you want to simulate a group chat, then we could click "Add User" again to cr
 
 Additionally, you could also set the [Authority Level](../usage/customize.md#权限管理) of a user in the "User Settings" page when any commands require it.
 
-## Collaborate with real Chat Platforms
+## Integrating with Real Chat Platforms
 
-Simulate the conversation in the sandbox is far from enough.We need to get the robot into a real chat platform to make it truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
+Simulate the conversation in the sandbox is far from enough.We need to integrate the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
 
 - [DingTalk](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
@@ -36,9 +36,9 @@ Simulate the conversation in the sandbox is far from enough.We need to get the r
 - [WeCom](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
-The commonly used adapter plugins have been pre-installed in Koishi, you can find them in the category "Adapter" in the Plugin Configuration page.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
+The commonly used adapter plugins are pre-installed in Koishi. You can find them in the plugin configuration under the "Adapter" section.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
 
-Koishi is able to maintain multiple bot accounts of different chat platforms in the same process. Each configuration copy of the corresponding adapter plugin maintains the bot account instance, you could add new configurations of adapter plugin according to [Add More Plugins](./market.md#添加更多插件). User data is shared by bots that connected to the same chat platform. So it is available to achieve a load balance by changing the current active bot account between them.
+A Koishi application could simultaneously connect to multiple bot accounts on multiple chat platforms. Each configuration copy of the corresponding adapter plugin maintains the bot account instance, you could add new configurations of adapter plugin according to [Add More Plugins](./market.md#添加更多插件). Since multiple bots within the same platform share the same user data, switching between them for load balancing is easy.
 
 There are large differences between the different platforms of ways and difficulty.There are different configuration work that you need to do with different platforms. 这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 
