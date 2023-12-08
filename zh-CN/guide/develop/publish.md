@@ -1,6 +1,6 @@
 # 发布插件
 
-为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人就可以通过控制台来安装它。
+为了让别人更方便地使用你编写的插件，你需要将其作为一个 npm 包进行发布。只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人可以通过控制台来安装它。
 
 ::: tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
@@ -8,7 +8,7 @@
 
 ## 准备工作
 
-首先让我们关注工作区目录中的 `package.json` 文件。这个文件非常重要，它包含了要发布插件的一切元信息。
+首先让我们关注插件文件夹中的 `package.json` 文件。这个文件非常重要，它包含了要发布插件的一切元信息。
 
 ```diff{6}
 root
@@ -35,10 +35,10 @@ root
 }
 ```
 
-其中最重要的属性有两个：`name` 是要发布的包名，`version` 是包的版本号。这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这样既方便了用户安装和配置，又防止了污染命名空间。
+其中最重要的属性有两个：`name` 是要发布的包名，`version` 是当前版本号。可以看到，这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这使得我们很容易区分 Koishi 插件与其他 npm 包，同时也方便了用户安装和配置插件。
 
 ::: tip
-请注意：包名和版本号都具有唯一性。包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更换包名或更新插件版本。
+请注意：包名和版本号都是唯一的：包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。如果出现了包名冲突或版本号冲突，则会在之后的发布流程中出现错误提示。你可以自行根据错误提示更改包名或更新插件版本。
 :::
 
 ## 补充更多信息
@@ -54,14 +54,14 @@ root
 要想显示在插件市场中，插件的 `package.json` 需要满足以下基本要求：
 
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 必须符合以下格式之一：
-  - koishi-plugin-\*
-  - @bar/koishi-plugin-\*
-  - @koishijs/plugin-\* (官方插件)
-  - 其中 \* 是由数字、小写字母和连字符组成的字符串
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
-- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
-- 不能声明 [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
+  - `koishi-plugin-*`
+  - `@bar/koishi-plugin-*`
+  - `@koishijs/plugin-*` (官方插件)
+  - 其中 `*` 是由数字、小写字母和连字符 `-` 组成的字符串
+- [`name`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
+- [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
+- [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
+- 不能声明 [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
 - 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
 
 一个符合上述标准的示例：
@@ -107,7 +107,11 @@ root
 - **repository:** 插件源码仓库，应该是一个对象，其中 `type` 字段指定仓库类型，`url` 字段指定仓库地址
 - **keywords:** 插件关键词，应该是一个字符串数组，会用于插件市场中的搜索功能
 
-### koishi 字段
+::: tip
+`package.json` 中还有一些字段没有在这里提及，如果你对此感兴趣，可以查看 [npmjs.com 的文档](https://docs.npmjs.com/files/package.json/)。
+:::
+
+### `koishi` 字段
 
 除此以外，我们还提供了一个额外的 `koishi` 字段，用于指定与 Koishi 相关的信息。
 
