@@ -108,7 +108,7 @@ root
 - **keywords:** 插件关键词，应该是一个字符串数组，会用于插件市场中的搜索功能
 
 ::: tip
-`package.json` 中还有一些字段没有在这里提及，如果你对此感兴趣，可以查看 [npmjs.com 的文档](https://docs.npmjs.com/files/package.json/)。
+`package.json` 中还有一些字段没有在这里提及，如果你对此感兴趣，可以前往 [npmjs.com](https://docs.npmjs.com/files/package.json/) 查看文档。
 :::
 
 ### `koishi` 字段
