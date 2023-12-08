@@ -6,15 +6,15 @@ After installing Koishi and exploring the marketplace, you must be eager to expe
 
 Navigate to the "Sandbox" page in the Console, where we can simulate a conversation with bots.
 
-First, click the "Add User" button in the top left corner to create a virtual user, which is named Alice for example. You will see a blank chat UI on the right side. Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key. You will see the response from bot immediately. "help" is a built-in command that lists all available commands at the moment. Therefore, we could see "echo" and "help" commands in the response.
+首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key. 你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
 
-The "echo" here is the plugin we have just installed, which displays a line of text that the user just entered. Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
+可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-If you want to simulate a group chat, then we could click "Add User" again to create more virtual users. Then, switch to "Group Chat" at the top of the screen. At this moment, you could control multiple virtual users to chat with the bot. This would be useful when you want to test a multiplayer plugin like chess.
+如果想要模拟群聊，我们可以创建更多的用户，并在聊天界面顶部点击切换到「群聊模式」。这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。如果你要体验的是下棋一类的多人交互插件，这会非常有用。
 
 Additionally, you could also set the [Authority Level](../usage/customize.md#权限管理) of a user in the "User Settings" page when any commands require it.
 
