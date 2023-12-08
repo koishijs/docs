@@ -168,15 +168,15 @@
             },
             {
               "text": "Multiple Configuration Maintenance",
-              "link": "/en-US/manual/recipe/multiple.md"
+              "link": "/manual/recipe/multiple.md"
             },
             {
               "text": "Search Marketplace",
-              "link": "/en-US/manual/recipe/search.md"
+              "link": "/manual/recipe/search.md"
             },
             {
               "text": "Deployment",
-              "link": "/en-US/manual/recipe/server.md"
+              "link": "/manual/recipe/server.md"
             }
           ]
         },
@@ -312,11 +312,11 @@
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "Bot Implementation",
+              "text": "Implement Bots",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "Adapter Implementation",
+              "text": "Implement Adapters",
               "link": "/guide/adapter/adapter.md"
             },
             {
@@ -362,7 +362,7 @@
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "语言包开发",
+              "text": "Language Packs",
               "link": "/guide/i18n/lang-pack.md"
             },
             {
@@ -747,7 +747,7 @@
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "企业微信",
+              "text": "WeCom",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -883,15 +883,15 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
+              "text": "Proxy Server (Server Proxy)",
               "link": "/plugins/develop/server-proxy.md"
             },
             {
-              "text": "API 服务器 (Server Satori)",
+              "text": "API Server (Server Satori)",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "临时服务器 (Server Temp)",
+              "text": "Temporary Server (Server Temp)",
               "link": "/plugins/develop/server-temp.md"
             }
           ]

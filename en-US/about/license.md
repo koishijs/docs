@@ -1,6 +1,6 @@
 # License
 
-The Koishi team is committed to maintaining a good open source ecology.
+The Koishi team is dedicated to maintaining a thriving open-source ecosystem.
 
 ## License used by Koishi
 
