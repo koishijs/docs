@@ -36,7 +36,7 @@ You can learn more about the features and usage of each interface in the followi
 ## Install Plugins
 
 :::warning
-We Koishi team doesn't warrant the availability of third party plugins.Plugins from unknown sources may break Koishi to crash, or have very serious consequences.
+Koishi team doesn't warrant the availability of third-party plugins.Plugins from unknown sources may break Koishi to crash, or have very serious consequences.
 If you have problems after downloading plugins, you can go to the user group or forum to provide feedback.
 In addition, some plugins are marked as "unsafe" and install such plugins will not be supported by the official group.
 :::
