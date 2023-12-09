@@ -1,7 +1,7 @@
 # Publishing Plugins
 
 Your plugin should be published onto npm before being available to Koishi users.
-But there are extra requirements for a valid plugin to be listed in the [marketplace](../../market/).
+只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人可以通过控制台来安装它。
 
 :::tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
@@ -9,7 +9,7 @@ But there are extra requirements for a valid plugin to be listed in the [marketp
 
 ## Prerequisite
 
-Let's start with the `package.json` file in your workspace directory.This file is crucial as it has all the meta information for publishing your plugin.
+首先让我们关注插件目录中的 `package.json` 文件。This file is crucial as it has all the meta information for publishing your plugin.
 
 ```diff{6}
 root
@@ -36,10 +36,10 @@ There is a `package.json` file in your workspace root and in each plugin folder,
 }
 ```
 
-When publishing your plugin, the property `name` and `version` are required.We can see a package name prefix `koishi-plugin-`. The prefix is not only omitted in the marketplace to make it easier for users to search and install the plugin, but also prevents conflicts with other package names on npm.
+其中最重要的属性有两个：`name` 是要发布的包名，`version` 是当前版本号。可以看到，这里的包名相比实际在插件市场中看到的插件名多了一个 `koishi-plugin-` 的前缀，这使得我们很容易区分 Koishi 插件与其他 npm 包，同时也方便了用户安装和配置插件。
 
 :::tip
-Note: package name and version number are unique.If you use a duplicate name or number,  will get an error message and have to change them.
+请注意：包名和版本号都是唯一的：包名不能与其他已经发布的包相同，而同一个包的同一个版本号也只能发布一次。 你可以自行根据错误提示更改包名或更新插件版本。
 :::
 
 ## More information
@@ -55,14 +55,14 @@ You may skip this section, if your plugin created using the boilerplate.
 The `package.json` in your plugin should meet the requirements below to appear in the marketplace:
 
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) should match one of these formats:
-  - koishi-plugin-\*
-  - @bar/koishi-plugin-\*
-  - @koishijs/plugin-\* (Official)
-  - \* is a string of digits, lowercase letters and dashes
-- [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) is unique
-- [`version`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#version) should match [semantic version](https://semver.org/) (usually from `1.0.0`)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies) must contain `koishi`
-- Could not declare [`private`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#private) to `true` (otherwise your plugin cannot be published)
+  - `koishi-plugin-*`
+  - `@bar/koishi-plugin-*`
+  - `@koishijs/plugin-*` (官方插件)
+  - 其中 `*` 是由数字、小写字母和连字符 `-` 组成的字符串
+- [`name`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
+- [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
+- [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
+- 不能声明 [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
 - Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) of the latest version unless there is a valid reason to do so. For example, if you intend to re-release the plugin under a different name, it can be used to hide the old plugin on the marketplace.
 
 Example:
@@ -108,9 +108,13 @@ To make more information available to Koishi users, you could add more comprehen
 - **repository:**  source code repository of the plugin, which should be an object. The `type` field specifies the type of repository, and the `url` field specifies the repository address.
 - **keywords:** keywords for the plugin, which should be an array of strings. They are used for the search function in the plug-in market.
 
-### Koishi fields
+:::tip
+`package.json` 中还有一些字段没有在这里提及，如果你对此感兴趣，可以前往 [npmjs.com](https://docs.npmjs.com/files/package.json/) 查看文档。
+:::
 
-We can also use the `koishi` field to specify Koishi related information
+### `koishi` 字段
+
+除此以外，我们还提供了一个额外的 `koishi` 字段，用于指定与 Koishi 相关的信息。
 
 ```json title=package.json
 {
@@ -120,24 +124,22 @@ We can also use the `koishi` field to specify Koishi related information
     "koishi": "^4.3.2"
   },
   "koishi": {
-    "description": {                        // descriptions in different languages
+    "description": {                        // 不同语言的插件描述
       "en": "English Description",
       "zh": "中文描述"
     },
     "service": {
-      "required": ["database"],             // dependent services of required
-      "optional": ["assets"],               // dependent services of optional
-      "implements": ["dialogue"],           // services provided by the itself
+      "required": ["database"],             // 必需的服务
+      "optional": ["assets"],               // 可选的服务
+      "implements": ["dialogue"],           // 实现的服务
     },
-    "locales": ["en", "zh"],                // supported languages
+    "locales": ["en", "zh"],                // 支持的语言
   }
 }
 ```
 
-- **description:** This refers to the description of the plugin, which should be an object. The keys represent the language names, and the values are the descriptions in the corresponding languages.
-- **service:** This pertains to the service-related information of the plugin, which includes the following attributes:
-  - **required:** necessary services, represented as an array of service names.
-  - **optional:** optional services, also represented as an array of service names.
+- **description:** 插件描述，应该是一个对象，其中的键代表语言名，值是对应语言下的描述
+- **service:** 插件的服务相关信息，具体包含下列属性：
   - **implements:** services that your plugin implements, represented as an array of service names.
 - **locales:** This refers to the languages supported by the plugin, represented as an array of language names.
 - **preview:** Configure `true` to allow plugin to be displayed as "developing" status
