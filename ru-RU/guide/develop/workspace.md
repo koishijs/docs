@@ -2,7 +2,7 @@
 
 Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插件实现。本章节将介绍如何使用模板项目开发和构建自己的 Koishi 插件。
 
-::: tip
+:::tip
 本节中介绍的命令行都需要在 [应用目录](./config.md#应用目录) 下运行。
 :::
 
@@ -10,13 +10,16 @@ Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插�
 
 在应用目录运行下面的命令以创建一个新的插件工作区：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run setup [name] -- [-c] [-m] [-G]
 ```
+
 ```yarn
 yarn setup [name] [-c] [-m] [-G]
 ```
+
 :::
 
 - **name:** 插件的包名，缺省时将进行提问
@@ -67,13 +70,16 @@ export function apply(ctx: Context) {
 
 假设你的 npm 用户名是 `alice`，那么你可以使用下面的命令创建一个私域插件工作区：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run setup @alice/example
 ```
+
 ```yarn
 yarn setup @alice/example
 ```
+
 :::
 
 此外，你还需要额外修改 `tsconfig.json` 文件。打开这个文件，你将看到下面的内容：
@@ -97,13 +103,16 @@ yarn setup @alice/example
 
 上面的插件暂时还只能在开发模式下运行。如果想要在生产模式下使用或发布到插件市场，你需要构建你的源代码。在应用目录运行下面的命令：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run build [...name]
 ```
+
 ```yarn
 yarn build [...name]
 ```
+
 :::
 
 - **name:** 要构建的插件列表，缺省时表示全部插件
@@ -117,13 +126,16 @@ yarn build [...name]
 
 插件创建时，`package.json` 中已经包含了一些必要的依赖。如果你需要添加其他依赖，可以使用下面的命令：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm install [...deps] -w koishi-plugin-[name]
 ```
+
 ```yarn
 yarn workspace koishi-plugin-[name] add [...deps]
 ```
+
 :::
 
 - **name:** 你的插件名称
@@ -135,24 +147,27 @@ yarn workspace koishi-plugin-[name] add [...deps]
 
 尽管 npm 和 yarn 等包管理器都提供了依赖更新功能，但它们对工作区开发的支持都不是很好。因此，我们也提供了一个简单的命令用于批量更新依赖版本。
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run dep
 ```
+
 ```yarn
 yarn dep
 ```
+
 :::
 
 这将按照每个 `package.json` 中声明的依赖版本进行更新。举个例子，如果某个依赖的版本是 `^1.1.4`，而这个依赖之后发布了新版本 `1.2.3` 和 `2.3.3`，那么运行该指令后，依赖的版本将会被更新为 `^1.2.3`。
 
 ## 二次开发
 
-::: tip
+:::tip
 阅读本节前请确保你已经完成 [版本控制](./setup.md#版本控制) 中的全部准备工作。
 :::
 
-::: tip
+:::tip
 如果你想要贡献原始仓库，在开始执行下面的操作之前，请确保你对要开发的仓库有写入权限。如果没有，你应当先创建属于自己的 fork，然后将下面的仓库名称替换为你的 fork 仓库名称。举个例子，假如你的 GitHub 用户名是 `alice`，那么下面你使用的仓库名称应当是 `alice/koishi-plugin-forward` 而不是 `koishijs/koishi-plugin-forward`。
 :::
 
@@ -162,28 +177,34 @@ yarn dep
 
 其他人创建的工作区插件可以直接克隆到你的 `external` 目录下。例如，你可以使用下面的命令将 `koishi-plugin-forward` 插件克隆到本地：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run clone koishijs/koishi-plugin-forward
 ```
+
 ```yarn
 yarn clone koishijs/koishi-plugin-forward
 ```
+
 :::
 
 ### 开发 Koishi
 
 工作区不仅可以用于插件的二次开发，还可以用于开发 Koishi 本身。只需使用下面的命令将 Koishi 仓库克隆到本地，并完成构建：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run clone koishijs/koishi
 npm run build -w @root/koishi
 ```
+
 ```yarn
 yarn clone koishijs/koishi
 yarn workspace @root/koishi build
 ```
+
 :::
 
 通常来说，非插件仓库在克隆下来之后还需经过路径配置才可以正常使用。不过不同担心，模板项目支持已经内置了 Koishi 生态中的几个核心仓库 ([koishi](https://github.com/koishijs/koishi), [satori](https://github.com/satorijs/satori), [minato](https://github.com/shigma/minato)) 的路径配置。
