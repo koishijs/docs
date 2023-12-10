@@ -1,13 +1,13 @@
-# Système requise
+# Configuration requise
 
 Cette section énumère les versions du système requises pour le lanceur Koishi et les fonctionnalités prises en charge par chaque version.
 
-::: tip
-La liste ci-dessous s'applique uniquement au lanceur Koishi. Le noyau Koishi lui-même peut fonctionner dans presque n'importe quel environnement courant.
+:::tip
+下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
 :::
 
-::: tip
-Même si votre système d'exploitation n'est pas officiellement pris en charge par Koishi, vous pouvez toujours vous rendre sur le [forum](https://k.ilharp.cc) et choisir des versions de compatibilité proposées par la communauté ou [utiliser le projet modèle](../starter/boilerplate.md). Cependant, Koishi officiel n'assume aucune responsabilité en ce qui concerne la disponibilité et la sécurité des lanceurs communautaires.
+:::tip
+即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
 :::
 
 ## Windows
@@ -18,8 +18,8 @@ Seule la version de Windows la plus récente de chaque produit est répertoriée
 
 | Produit                        | Noyau                | Fenêtre              | Amélioré |
 | ------------------------------ | -------------------- | -------------------- | -------- |
-| Windows 8.1                    | :white_check_mark: | :white_check_mark: | :x:      |
-| Windows Server 2012 R2         | :white_check_mark: | :white_check_mark: | :x:      |
+| Windows 8.1                    | :white\_check\_mark: | :white\_check\_mark: | :x:      |
+| Windows Server 2012 R2         | :white\_check\_mark: | :white\_check\_mark: | :x:      |
 | Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:      |
 | Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:      |
 | Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:      |
@@ -33,29 +33,29 @@ Seule la version de Windows la plus récente de chaque produit est répertoriée
 | Version 1511                        | :x:                  | :x:                  | :x:                  |
 | Version 1607                        | :x:                  | :x:                  | :x:                  |
 | Version 1703                        | :x:                  | :x:                  | :x:                  |
-| Version 1709                        | :x:                  | :white_check_mark: | :x:                  |
-| Version 1803                        | :x:                  | :white_check_mark: | :x:                  |
-| Version 1809                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 1903                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 1909                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 2004                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 20H2                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 21H1                        | :x:                  | :white_check_mark: | :white_check_mark: |
-| Version 21H2                        | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Version 22H2                        | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Windows 10 2015 LTSB                | :white_check_mark: | :x:                  | :x:                  |
-| Windows 10 2016 LTSB                | :white_check_mark: | :x:                  | :x:                  |
-| Windows 10 Enterprise 2015 LTSC     | :white_check_mark: | :white_check_mark: | :x:                  |
-| Windows 10 Enterprise 2016 LTSC     | :white_check_mark: | :white_check_mark: | :x:                  |
-| Windows 10 Enterprise LTSC 2019     | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Windows 10 Enterprise LTSC 2021     | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Windows 10 Enterprise multi-session | :white_check_mark: | :white_check_mark: | :x:                  |
-| Windows Server 2016                 | :white_check_mark: | :white_check_mark: | :x:                  |
+| Version 1709                        | :x:                  | :white\_check\_mark: | :x:                  |
+| Version 1803                        | :x:                  | :white\_check\_mark: | :x:                  |
+| Version 1809                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 1903                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 1909                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 2004                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 20H2                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 21H1                        | :x:                  | :white\_check\_mark: | :white\_check\_mark: |
+| Version 21H2                        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Version 22H2                        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Windows 10 2015 LTSB                | :white\_check\_mark: | :x:                  | :x:                  |
+| Windows 10 2016 LTSB                | :white\_check\_mark: | :x:                  | :x:                  |
+| Windows 10 Enterprise 2015 LTSC     | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
+| Windows 10 Enterprise 2016 LTSC     | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
+| Windows 10 Enterprise LTSC 2019     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Windows 10 Enterprise LTSC 2021     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Windows 10 Enterprise multi-session | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
+| Windows Server 2016                 | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
 | Hyper-V Server 2016                 | :x:                  | :x:                  | :x:                  |
 | Windows Storage Server 2016         | :x:                  | :x:                  | :x:                  |
-| Windows Server 2019                 | :white_check_mark: | :white_check_mark: | :x:                  |
+| Windows Server 2019                 | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
 | Hyper-V Server 2019                 | :x:                  | :x:                  | :x:                  |
-| Windows Server 2022                 | :white_check_mark: | :white_check_mark: | :x:                  |
+| Windows Server 2022                 | :white\_check\_mark: | :white\_check\_mark: | :x:                  |
 | Windows 10 IoT Core                 | :x:                  | :x:                  | :x:                  |
 | Windows 10 IoT Core Services        | :x:                  | :x:                  | :x:                  |
 | Windows 10 IoT Core LTSC            | :x:                  | :x:                  | :x:                  |
@@ -74,6 +74,6 @@ Seule la version de Windows la plus récente de chaque produit est répertoriée
 
 | Produit      | Noyau                | Fenêtre              | Amélioré             |
 | ------------ | -------------------- | -------------------- | -------------------- |
-| Version 21H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Version 22H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Windows 365  | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Version 21H2 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Version 22H2 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Windows 365  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
