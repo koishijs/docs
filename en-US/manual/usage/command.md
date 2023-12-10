@@ -14,8 +14,8 @@ After learning the basic usage of the Koishi Console, we can now talk about how 
 
 The output relates to two plugins:
 
-- The help command is provided by [help](../../plugins/common/help.md), which could display help information about a list of every command or detail for a specific command.
-- The echo command is provided by [echo](../../plugins/common/echo.md), which could return the input from users.
+- help 指令由 [help](../../plugins/common/help.md) 插件提供，它可以显示指令列表或具体指令的帮助信息
+- echo 指令由 [echo](../../plugins/common/echo.md) 插件提供，它可以将用户的输入原样返回
 
 Most of the features of a Koishi bot are provided to users by commands. More plugins you have installed, there would be more commands available.
 
@@ -49,9 +49,9 @@ You might find that the help itself is a command as well, so is it possible to u
 
 ## Arguments and Options
 
-In the usages above, we have encountered two new concepts：**Argument** and **Option**.
+在上面的用法中，我们接触到了两个新的概念：**参数 (Argument)** 和 **选项 (Option)**。
 
-There are two types of parameters: required parameters, quoted by a pair of chevrons `<>`; and optional parameters, quoted by a pair of brackets `[]`. A command may have arbitrary parameters, their orders are fixed, which means that users should enter the parameters in the order that pre-defined by the command. Required parameters must be precedent before optional parameters. When user enters fewer parameters than the required parameters that the plugin requires, the plugin should often print errors. When user enters extra parameters, they would be ignored generally.
+参数分为必选参数和可选参数，分别用尖括号 `<>` 和方括号 `[]` 表示。A command may have arbitrary parameters, their orders are fixed, which means that users should enter the parameters in the order that pre-defined by the command. Required parameters must be precedent before optional parameters. When user enters fewer parameters than the required parameters that the plugin requires, the plugin should often print errors. When user enters extra parameters, they would be ignored generally.
 
 For example, command `help` has an optional argument which indicates the name of the command to be viewed; command `echo` has a required argument which indicates the message to be sent. Let's see what will happen if the required parameter is missing:
 
@@ -62,7 +62,7 @@ For example, command `help` has an optional argument which indicates the name of
 </chat-message>
 </chat-panel>
 
-The behavior would be affected by the options as well. An option usually starts with `-` or `--`, followed by a fixed word without any spaces, the word is the name of the option. There are no order requirements between options, but generally we should put options before parameters. Let's try out!
+The behavior would be affected by the options as well. 它通常以 `-` 或 `--` 开头，后面不带空格地跟着一个固定的单词，称为选项名称。There are no order requirements between options, but generally we should put options before parameters. Let's try out!
 
 <chat-panel>
 <chat-message nickname="Alice">echo &lt;image url="https://koishi.chat/logo.png"/&gt;</chat-message>
@@ -73,9 +73,9 @@ The behavior would be affected by the options as well. An option usually starts 
 </chat-message>
 </chat-panel>
 
-In the example above, the option `-E` that we used changed the outputs. We will talk about it in detail in the next section.
+在上面的例子中，我们使用了 `-E` 选项，成功改变了输出的内容。We will talk about it in detail in the next section.
 
-In addition to being required and optional, the arguments can be divided into fixed and variable length. A variable-length argument would be fed all characters including whitespace characters, while a fixed-length one stops feeding when it reads whitespace characters. The variable-length argument is defined by `...` follows the parameter name. For example, the argument of `echo` is variable-length. If it is required to pass whitespace characters into a fixed-length argument, you can wrap the whole argument into quotes, just like:
+In addition to being required and optional, the arguments can be divided into fixed and variable length. A variable-length argument would be fed all characters including whitespace characters, while a fixed-length one stops feeding when it reads whitespace characters. 变长参数通过参数名前后的 `...` 来指示，例如 `echo` 指令的参数就是一个变长参数。If it is required to pass whitespace characters into a fixed-length argument, you can wrap the whole argument into quotes, just like:
 
 <chat-panel>
 <chat-message nickname="Alice">help "foo bar"</chat-message>
@@ -96,11 +96,11 @@ Additionally, options might require parameters as well. You should see a help in
 <chat-message nickname="Koishi">こんにちは世界</chat-message>
 </chat-panel>
 
-Both `-s` 和 `-t` are options with arguments. We use `-t ja` to specify the target language as Japanese, while the source language option remains default still.
+在这个例子中，`-s` 和 `-t` 都是带有参数的选项。我们使用 `-t ja` 来指定目标语言为日语，源语言仍然采用了默认行为。
 
 ## Command Prefix
 
-However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.In Global Settings, we have provided configuration items called `prefix` and `nickname`.If `prefix` is set to `/`, `nickname` is set to `Shiki-chan`, only the following information can trigger：
+However, it is very vulnerable to make a mistake if trigger the command just by a single wordIn order to avoid this case, Koishi introduced the concept of prefix trigger.在「全局设置」中，我们提供了名为 `prefix` 和 `nickname` 的配置项。假如将 `prefix` 设置为 `/`，`nickname` 设置为 `四季酱`，则在群聊环境下只有以下信息可以触发指令调用：
 
 ```sh
 Shiki-chan, echo hello
@@ -110,23 +110,23 @@ Shiki-chan, echo hello
 
 In other words, the actual condition in which a command can be triggered is:
 
-- Message starts with `prefix` and follows the command
-- Message starts with `nickname` after which you can have commas or blank characters and then the command
-- The message starts with @Bot (multiple `@`but at least one bot account), followed by a command
+- 消息以 `prefix` 开头，后面紧跟着指令调用
+- 消息以 `nickname` 开头，后面可以有逗号或空白字符，再后面是指令调用
+- 消息以 @机器人 开头 (可以有多个 `@`，但至少一个是机器人账号)，后面是指令调用
 
 For groups with lots of people or more than one bot, we strongly recommend that each bot configure a different command prefix.In the context of private chat, there are no restrictions as there is no fear of mistakes.Command calls without a prefix can also be performed properly.
 
 ::: tip
-**Tips for  `prefix` **
+**关于 `prefix` 的几点提示：**
 
-1. `prefix` is a list with default value `['']` for triggering a prefix without prefix; empty the list will not trigger all instructions via `prefix` (but can still be triggered by private chat or `nickname` or @Bot)
-2. If you set multiple values in `prefix` such as `['.', '/', '']`, then `.`, `/` or no prefix can all trigger the command; but empty string `'` must be written in the last one because Koishi matches each prefix in order
-3. You can set different `prefix` for different sessions, learn more in [Filters](./customize.md#过滤器) section
-:::
+1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
+2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
+3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
+   :::
 
-## Subcommands
+## subcommand
 
-[admin](../../plugins/common/admin.md) plugin provides a command named user. Let's have a try:
+[admin](../../plugins/common/admin.md) 插件提供了名为 user 的指令，现在让我们调用一下：
 
 <chat-panel>
 <chat-message nickname="Alice">user</chat-message>
@@ -139,16 +139,16 @@ For groups with lots of people or more than one bot, we strongly recommend that 
 </chat-message>
 </chat-panel>
 
-Here is a new concept: subcommands.Subcommands are not different from normal commands on calls, but they will not appear in the list of global commands returned by `help` but only in the help message of the parent command `user`.The purpose of this design is to avoid too large a list of instructions and to organize them in a clearer way.
+Here is a new concept: subcommands.子指令在调用上与普通的指令并没有区别，但它们将不会显示在 `help` 返回的全局指令列表中，而只会显示在父指令 `user` 的帮助信息中。The purpose of this design is to avoid too large a list of instructions and to organize them in a clearer way.
 
-In the example above, we can also find Koishi has two different types of subcommands: one is **hierarchy** such as `authorize`and another is **derivative**, eg: `user.locale`.The latter differs from the predecessor in that its name contains the name of the parent command and a decimal point `.`.We also need to add this decimal point when calling:
+在上面的例子中，我们还能发现 Koishi 存在两种不同的子指令：一种是 **层级式**，例如 `authorize`；而另一种则是 **派生式**，例如 `user.locale`。后者跟前者的区别是，它的名称带有父指令的名称，以及一个小数点 `.`。We also need to add this decimal point when calling:
 
 <chat-panel>
 <chat-message nickname="Alice">user.locale en</chat-message>
 <chat-message nickname="Koishi">User data updated.</chat-message>
 </chat-panel>
 
-If the parent command didn't have a feature itself, then the effect of `user` and `user -h` are the same.In that situation, we can use spaces instead of dots to call derivative subcommands:
+如果父指令本身没有功能，那么 `user` 和 `user -h` 的效果是一样的。In that situation, we can use spaces instead of dots to call derivative subcommands:
 
 <chat-panel>
 <chat-message nickname="Alice">user locale zh
@@ -158,8 +158,8 @@ If the parent command didn't have a feature itself, then the effect of `user` an
 
 Users who are familiar with Git may find out, this design draws on the 2-level command of Git: When features of a command are too complex, we can split them into several subcommands, to make the feature of command clear.
 
-::: tip
-You may already guess out what does user.locale do.We will talk more about it in [Internationalization](./customize.md#国际化) section.
+:::tip
+至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./customize.md#国际化) 一节再详细介绍。
 :::
 
 ## Command Management
@@ -170,11 +170,11 @@ Open the Console, we can find the page named 'Command Management' on the activit
 
 Open the detail page of any commands, we can find "Name Setting" with all aliases on it.Each alias can be used to trigger the command, the first alias will be shown as the default name in the help.
 
-We can add or delete aliases here, or set any alias to the default display name.For example, click "Add Alias" in the `echo` command, input `repeat` and click "Set as default", so that the user will see `repeat` instead of `echo` in the help.
+We can add or delete aliases here, or set any alias to the default display name.例如，在 `echo` 指令中点击「添加别名」，输入 `复读`，然后点击「设为默认」，这样一来，用户在帮助中看到的就是 `复读` 而不是 `echo` 了。
 
 ### Add Subcommands
 
-In the left sidebar, we can drag any command (except derivative command) below another command, which will make it a subcommand of the another command.For example, we can set the [`bind`](../../plugins/common/bind.md) command as the subcommand of `user` because it is a part of user management.
+In the left sidebar, we can drag any command (except derivative command) below another command, which will make it a subcommand of the another command.例如，我们可以将 [`bind`](../../plugins/common/bind.md) 指令设置为 `user` 指令的子指令，因为这属于用户管理的一部分。
 
 Click the plus button in the top right, we can create a new command.This new command naturally lacks inherent actions, its primary purpose is to serve as the parent command for other commands, aiming to enhance the presentation quality.For the new command created through this method, we can remove them by clicking on the trash button in the upper right corner.
 
@@ -184,4 +184,4 @@ Click the plus button in the top right, we can create a new command.This new com
 
 我们甚至还可以单独设置每一个指令选项的权限等级。例如，我们可以单独给 `-E, --unescape` 选项设置 `authority` 为 3。这样一来，只有 3 级以上权限的用户才能使用 `echo -E` 的功能。
 
-For user permissions, please refer to [Permission Management](./customize.md#权限管理) section.
+关于用户权限，请参考 [权限管理](./customize.md#权限管理) 一节。
