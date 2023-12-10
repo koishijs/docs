@@ -1,4 +1,4 @@
-# First Dialogue
+# Conversation
 
 After installing Koishi and exploring the marketplace, you must be eager to experience the functionalities of Koishi. Let's dive into the first conversation with the bots right away!
 
