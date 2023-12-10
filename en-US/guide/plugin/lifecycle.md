@@ -91,7 +91,7 @@ However, this doesn't mean that all plugins should not be reused. If you have su
 
 ```ts title=reply.ts
 export const name = 'reply'
-export const reusable = true    // 声明此插件可重用
+export const reusable = true  // Declare this plugin as reusable
 
 export interface Config {
   input: string
@@ -100,7 +100,7 @@ export interface Config {
 
 export function apply(ctx: Context, config: Config) {
   ctx.middleware((session, next) => {
-    // 当用户发送 input 时，回复 output
+    // Reply with output when user sends input
     if (session.content === config.input) {
       return config.output
     }
