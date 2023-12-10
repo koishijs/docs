@@ -20,7 +20,7 @@ Additionally, you could also set the [Authority Level](../usage/customize.md#权
 
 ## Integrating with Real Chat Platforms
 
-Simulate the conversation in the sandbox is far from enough.We need to integrate the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
+Simulate the conversation in the sandbox is far from enough.We need to connect the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
 
 - [DingTalk](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
