@@ -14,7 +14,7 @@ Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur g
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-Si vous souhaitez simuler une conversation en guilde, vous pouvez créer plus d'utilisateurs. Ensuite, changez en mode « Conversation en guilde » en haut. 这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。如果你要体验的是下棋一类的多人交互插件，这会非常有用。
+Si vous souhaitez simuler une conversation en guilde, vous pouvez créer plus d'utilisateurs. Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez changer et contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
 
 En outre, si certaines commandes nécessitent un certain [niveau des autorisations](../usage/customize.md#权限管理), vous pouvez les ajuster dans les « Paramètres de l'utilisateur ».
 
