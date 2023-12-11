@@ -1,4 +1,4 @@
-# 求值表达式 (Eval)
+# 求值表示式 (Eval)
 
 :::tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
@@ -36,7 +36,7 @@ namespace Eval {
 
 本节中任意求值表达式的返回值。
 
-## 数值运算
+## 數值運算
 
 ### $.add(...values)
 
@@ -117,7 +117,7 @@ namespace Eval {
 
 判断 `x <= y`。
 
-## 字符串运算
+## 字串運算
 
 ### $.concat(...values)
 
@@ -126,7 +126,7 @@ namespace Eval {
 
 连接一组字符串。
 
-## 布尔运算
+## 布林運算
 
 ### $.and(...values)
 
@@ -149,7 +149,7 @@ namespace Eval {
 
 将一个布尔值取反。
 
-## 聚合运算
+## 聚合運算
 
 ### $.sum(x)
 
