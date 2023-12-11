@@ -1,11 +1,11 @@
-# Système réversible de plugin
+# 可逆的插件系统
 
 ::: tip
 本文将回答以下问题：
 
 - 为什么我们需要可逆的插件系统？
 - Cordis 是如何实现资源安全的？
-:::
+  :::
 
 Koishi 的一切都从 Cordis 开始。但我想大部分 Koishi 的开发者都不知道 Cordis 是什么。如果让我来定义的话，Cordis 是一个**元框架 (Meta Framework)**，即一个用于构建框架的框架。
 
@@ -37,7 +37,7 @@ Cordis 的名字来源于拉丁语的心。我希望它能成为未来软件 (�
 
 **可访问性 (Availability)**。一个拥有众多功能的软件，如果没有提供可逆的 API，那替换任何一个组件都意味着整个重启。重启期间，那些本可以不受影响的服务也被迫下线。但如果其中的每个组件都是可逆的，我们就可以在保证其他功能持续运行的情况下替换掉任何一个组件，甚至可以滚动更新整个程序自身。实现了可逆性后，软件将显著降低由于故障和更新带来的额外开销。
 
-### Koishi réversible
+### 可逆的 Koishi
 
 相比上面这些可能有些晦涩的概念，以 Koishi 作为更具体的例子或许更有说服力。
 
@@ -63,11 +63,15 @@ Cordis 的名字来源于拉丁语的心。我希望它能成为未来软件 (�
 
 函数式编程中有着纯函数的概念——给定相同的输入总是给出相同的输出。然而，现实中的程序往往要与各种各样的副作用打交道。对于这种情况，我们可以对函数进行“纯化”——将它的副作用转化为参数和返回值的一部分即可。考虑下面的函数：
 
-$$ f_\text{impure}: \text{X}\to\text{Y} $$
+$$
+f_\text{impure}: \text{X}\to\text{Y}
+$$
 
 假设它含有副作用，我们把所有可能的副作用用类型 $\mathcal{C}$ 封装起来，则该函数可以被转化为：
 
-$$ f: \mathcal{C}\times\text{X}\to\mathcal{C}\times\text{Y} $$
+$$
+f: \mathcal{C}\times\text{X}\to\mathcal{C}\times\text{Y}
+$$
 
 此时我们得到的就一个纯函数，它接受 $\mathcal{C}$ 和参数，返回修改过的 $\mathcal{C}$ 和返回值。
 
@@ -79,13 +83,24 @@ $$ f: \mathcal{C}\times\text{X}\to\mathcal{C}\times\text{Y} $$
 
 进一步，我们还希望 $f$ 的副作用是可以回收的。换言之，我们额外要求 $f$ 存在逆元 $f^{-1}$，此时 $\mathfrak{F}$ 就构成一个群。但仅仅知道函数可逆并不能帮助我们找到它的逆，我们需要在书写这个函数时一并写出它的回收方法。因此我们引入 $\text{effect}$ 函子，使这个函数返回一个新的函数，这个函数可用于回收此次调用的副作用：
 
-$$ \begin{array} \\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F} \\\text{effect}&=&f           &\mapsto&\left(c, h\right)            &\mapsto&\left(f(c), h\circ f^{-1}\right) \end{array} $$
+$$
+\begin{array}
+\\\text{effect}&:&\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F}&\to&    \mathcal{C}\times\mathfrak{F}
+\\\text{effect}&=&f           &\mapsto&\left(c, h\right)            &\mapsto&\left(f(c), h\circ f^{-1}\right)
+\end{array}
+$$
 
 可以证明 $\text{effect}$ 是一个 $\mathfrak{F}$ 到 $\mathcal{C}\times\mathfrak{F}$ 的同态：
 
-$$ \begin{aligned} \text{effect}\ (f\circ g) \left(c, h\right) &=\left((f\circ g)(c), h\circ (f\circ g)^{-1}\right)\\
-&=\left(f(g(c)), h\circ g^{-1}\circ f^{-1}\right)\\ &=\text{effect}\ f \left(g(c), h\circ g^{-1}\right)\\
-&=\left(\text{effect}\ f\circ\text{effect}\ g\right) \left(c, h\right) \end{aligned} $$
+$$
+\begin{aligned}
+\text{effect}\ (f\circ g) \left(c, h\right)
+&=\left((f\circ g)(c), h\circ (f\circ g)^{-1}\right)\\
+&=\left(f(g(c)), h\circ g^{-1}\circ f^{-1}\right)\\
+&=\text{effect}\ f \left(g(c), h\circ g^{-1}\right)\\
+&=\left(\text{effect}\ f\circ\text{effect}\ g\right) \left(c, h\right)
+\end{aligned}
+$$
 
 下面是一个例子：
 
@@ -106,11 +121,16 @@ dispose()                       // 回收副作用
 
 - $\mathcal{C}\times\mathfrak{F}$ 对应着全局环境 (我们稍后会提到全局环境的坏处，但不影响这里的理解)
 - `port` 对应于上面的 $\text{X}$，由于我们可以使用柯里化，所以在数学模型中并不需要考虑它
-:::
+  :::
 
 为什么需要引入这个 $\text{effect}$ 和 $\mathcal{C}\times\mathfrak{F}$ 呢？它的作用是将副作用从函数的返回值中分离出来，从而实现副作用的回收。只需定义 $\text{restore}$ 变换 (不难发现它确实是 $\text{effect}$ 的逆操作)：
 
-$$ \begin{array} \\\text{restore}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C}\times\mathfrak{F} \\\text{restore}&=&\left(c, h\right)            &\mapsto&\left(h(c),\text{id}\right) \end{array} $$
+$$
+\begin{array}
+\\\text{restore}&:&\mathcal{C}\times\mathfrak{F}&\to&\mathcal{C}\times\mathfrak{F}
+\\\text{restore}&=&\left(c, h\right)            &\mapsto&\left(h(c),\text{id}\right)
+\end{array}
+$$
 
 现在你就可以使用 `restore()` 来回收副作用了：
 
@@ -127,9 +147,11 @@ restore()               // 回收所有副作用
 
 当副作用被记录到全局环境时，$\mathcal{C}\times\mathfrak{F}$ 也就变成了一个更大的 $\mathcal{C}$。我们便可以这样定义：
 
-$$ \mathcal{C}_1=\mathcal{C}\times\mathfrak{F}=\mathcal{C}\times\left(\mathcal{C}\to\mathcal{C}\right) $$
+$$
+\mathcal{C}_1=\mathcal{C}\times\mathfrak{F}=\mathcal{C}\times\left(\mathcal{C}\to\mathcal{C}\right)
+$$
 
-下文中我们将直接使用 $\mathcal{C}$ 来表示 $\mathcal{C}_1$。
+下文中我们将直接使用 $\mathcal{C}$ 来表示 $\mathcal{C}\_1$。
 
 ### 上下文与插件
 
@@ -168,10 +190,14 @@ ctx.plugin(serve, { port: 80 })
 
 进一步，如果这个 API 本身还存在副作用，那提供此 API 的插件其实占用的是一种能占用资源的资源，一种高阶资源。就如同高阶函数一样，我们的 $\mathcal{C}$ 也可以是高阶的：
 
-$$ \begin{matrix} \mathcal{C}_1=\mathcal{C}_0\times\left(\mathcal{C}_0\to\mathcal{C}_0\right)\\
-\mathcal{C}_2=\mathcal{C}_1\times\left(\mathcal{C}_1\to\mathcal{C}_1\right)\\ \cdots\\
+$$
+\begin{matrix}
+\mathcal{C}_1=\mathcal{C}_0\times\left(\mathcal{C}_0\to\mathcal{C}_0\right)\\
+\mathcal{C}_2=\mathcal{C}_1\times\left(\mathcal{C}_1\to\mathcal{C}_1\right)\\
+\cdots\\
 \mathcal{C}_{n+1}=\mathcal{C}_n\times\left(\mathcal{C}_n\to\mathcal{C}_n\right)\\
-\end{matrix} $$
+\end{matrix}
+$$
 
 在 Cordis 中，插件之间默认情况下不存在先后关系。换句话说，默认任何两个插件的执行顺序都是可以交换的。如果你想要表达插件之间的依赖关系，则需要通过 **服务 (Service)** 来实现。服务用一个字符串表示，可以被插件提供 (provide) 或注入 (inject)。
 
