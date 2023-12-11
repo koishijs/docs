@@ -1,19 +1,19 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: インストーラーを選択
+  link: /ja-JP/manual/starter/
 next:
-  text: 安装和配置插件
-  link: /zh-CN/manual/usage/market.html
+  text: プラグインのインストールと設定
+  link: /ja-JP/manual/usage/market.html
 ---
 
-# 为 Linux 安装
+# Linux にインストール
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-## 下载
+## ダウンロード
 
 - [AppImage (.AppImage)](https://k.ilharp.cc/linux.AppImage)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
@@ -22,6 +22,6 @@ next:
 
 启动你刚刚下载的程序，你应当可以在 `http://localhost:5140` 访问 Koishi 的网页控制台。
 
-## 其他选择
+## その他の選択
 
-找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+適切なインストーラーが見つかりませんか？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
