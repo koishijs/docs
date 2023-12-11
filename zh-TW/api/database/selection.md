@@ -44,7 +44,7 @@ type FieldLike<S> = keyof S | Callback<S>
 type Project<S> = (keyof S)[] | Dict<FieldLike<S>>
 ```
 
-## 实例方法
+## 實體方法
 
 ### selection.where(query)
 
