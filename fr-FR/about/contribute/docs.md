@@ -1,6 +1,6 @@
-# 文档贡献指南
+# Guide de contribution des documentations
 
-## 术语表
+## Glossaire
 
 - CJK：中日韩文字等
 - 西文：数字、拉丁字母、希腊字母等
