@@ -1,6 +1,6 @@
 # 其他工具 (Misc)
 
-::: tip
+:::tip
 本节中的 API 来自 [cosmokit](https://github.com/shigma/cosmokit)，并由 Koishi 重新导出。
 :::
 
@@ -34,7 +34,7 @@
 - **source:** `any` 要转换的内容
 - 返回值: `any` 转换结果
 
-如果输入的是字符串，则将字符串转换成 snake_case；如果是数组或对象，则递归地将对象中的每个（可枚举）的键转换成 snake_case；其他情况不受影响。
+如果输入的是字符串，则将字符串转换成 snake\_case；如果是数组或对象，则递归地将对象中的每个（可枚举）的键转换成 snake\_case；其他情况不受影响。
 
 ## 集合操作
 
