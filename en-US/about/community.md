@@ -1,11 +1,11 @@
-# Community Resources
+# 社区资源
 
-Some excellent community resources to learn from are summarized on this page. If you also want to feature your project on this page, please click the edit button at the bottom of the page to edit and then create a Pull Request.
+此页面中总结了一些优秀的社区资源可供学习。如果你也想在此页面中展示你的项目，请在点击页面底部的编辑按钮后创建 Pull Request。
 
-## Documentations
+## 文档
 
-- [Plugin development tutorial](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601) (TimeBather)
+- [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601) (沐辰-TimeBather)
 
-## Videos
+## 视频
 
-- [Collection] [Koishi Tutorials](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) (Il Harper)
+- \[合集] [Koishi 机器人教程](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) (Il Harper)
