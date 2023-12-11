@@ -2,15 +2,15 @@
 layout: schema
 code: |
   Schema.object({
-  intents: Schema
-  .bitset({ FOO: 1, BAR: 2, QUX: 4 })
-  .default(5)
-  .description('选择要启用的功能。'),
-  array: Schema
-  .array(Schema.union(['FOO', 'BAR', 'QUX']))
-  .default(['FOO', 'QUX'])
-  .role('checkbox')
-  .description('选择要启用的功能。'),
+    intents: Schema
+      .bitset({ FOO: 1, BAR: 2, QUX: 4 })
+      .default(5)
+      .description('选择要启用的功能。'),
+    array: Schema
+      .array(Schema.union(['FOO', 'BAR', 'QUX']))
+      .default(['FOO', 'QUX'])
+      .role('checkbox')
+      .description('选择要启用的功能。'),
   }).description('配置项')
 ---
 
