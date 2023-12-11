@@ -1,18 +1,18 @@
-# Combined API
+# 组合式 API
 
-::: tip
-The APIs mentioned in this section are exported in @koishijs/client.
+:::tip
+本节中所涉及的 API 都在 @koishijs/client 中导出。
 :::
 
 ## useConfig()
 
-- Return value: `Ref<any>`
+- 返回值: `Ref<any>`
 
-Get user settings.
+获取用户设置。
 
 ## useContext()
 
-- Return value: [`Context`](./context.md)
+- 返回值: [`Context`](./context.md)
 
 获取当前组件所在的插件上下文。
 
