@@ -2,12 +2,12 @@
 layout: schema
 code: |
   Schema.object({
-  dict: Schema.dict(Boolean).description('这是一个字典，点击右侧的按钮添加属性。'),
-  table: Schema.dict(String).role('table').description('以表格形式显示的字典。'),
-  table2: Schema.dict(Schema.object({
-  foo: Schema.string(),
-  bar: Schema.number(),
-  })).role('table').description('对象构成的字典。'),
+    dict: Schema.dict(Boolean).description('这是一个字典，点击右侧的按钮添加属性。'),
+    table: Schema.dict(String).role('table').description('以表格形式显示的字典。'),
+    table2: Schema.dict(Schema.object({
+      foo: Schema.string(),
+      bar: Schema.number(),
+    })).role('table').description('对象构成的字典。'),
   }).description('配置项')
 ---
 
