@@ -16,7 +16,7 @@ features:
   - title: Une communauté prospère
     desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
     image: /manual/console/market
-  - title: base de données
+  - title: Base de données
     desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
     image: /manual/console/database
   - title: 即刻预览
