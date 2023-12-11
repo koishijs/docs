@@ -1,4 +1,4 @@
-# 组合式 API
+# Combined API
 
 :::tip
 本节中所涉及的 API 都在 @koishijs/client 中导出。
@@ -8,7 +8,7 @@
 
 - 返回值: `Ref<any>`
 
-获取用户设置。
+Get user settings.
 
 ## useContext()
 
