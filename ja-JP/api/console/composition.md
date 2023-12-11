@@ -1,6 +1,6 @@
 # 组合式 API
 
-::: tip
+:::tip
 本节中所涉及的 API 都在 @koishijs/client 中导出。
 :::
 
