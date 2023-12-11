@@ -1,9 +1,9 @@
-# Documentation
+# 文档贡献指南
 
-## Terms of Glossary
+## 术语表
 
-- CJK：Chinese and Japanese Korean text etc.
-- Western：Numbers, Latin Letters, Greek Letters, etc.
+- CJK：中日韩文字等
+- 西文：数字、拉丁字母、希腊字母等
 - 西文标点：两侧权重相同的半角标点，例如四则运算符，等号等
 - 前置标点：放在其相关文本前的标点，如左括号，左引号等
 - 后置标点：放在其相关文本后的标点，如冒号，句号，右引号等
@@ -21,10 +21,10 @@
 ```
 
 > 123 ABC
-> 
+>
 > ビリビリ
 
-#### Insert a space between CJK and Western
+#### CJK 与西文之间一律插入一个空格
 
 ```diff
 - 在Python中，我们使用`class`关键字来声明类。
@@ -35,7 +35,7 @@
 ```
 
 > 在 Python 中，我们使用 `class` 关键字来声明类。
-> 
+>
 > 他只用了 100 行不到的代码就实现了那个复杂的功能。
 
 #### 数字与英文单位之间加空格，与符号单位之间不加空格
@@ -49,7 +49,7 @@
 ```
 
 > 我有一块 512 GB 的硬盘。
-> 
+>
 > 今天气温 23˚C，有 70% 的可能性下雨。
 
 #### 括号请使用半角书写，并按照下列规则在两侧添加空格
@@ -80,7 +80,7 @@
 ```
 
 > 1 + 2 = 3
-> 
+>
 > Bellman-Ford 算法
 
 #### 除上述以外的标点均使用全角，且两侧均不留空格
@@ -93,7 +93,7 @@
 
 > 他有一台 MacBook Pro。
 
-#### Use correct ellipses and dashes
+#### 使用正确的省略号和破折号
 
 正确的省略号和破折号占两格，每格分别是「…」和「—」。使用了省略号则不宜同时使用「等等」。
 
@@ -111,7 +111,7 @@
 ```
 
 > 编程语言有很多，如 C、C++、Java……
-> 
+>
 > 他刚刚做了一个重要的决定——辞职。
 
 #### 针对首次出现的概念，使用粗体进行强调，同时在两侧添加必要的空格
@@ -144,7 +144,7 @@
 
 > **只要有能够拼接文件的构建系统，就把每个组件单独分成文件。**
 
-## Markdown Style Guide
+## Markdown 风格指南
 
 #### 使用一个、两个和三个 `*` 分别表示斜体、粗体和粗斜体
 
@@ -153,8 +153,8 @@
 + 这是一个*斜体*；这是一个**粗体**；这是一个***粗斜体***。
 ```
 
-## Reference
+## 参考资料
 
-- <https://github.com/vinta/pangu.js>
-- <https://stdrc.cc/style-guides/chinese.html>
-- <https://stdrc.cc/style-guides/markdown.html>
+- https\://github.com/vinta/pangu.js
+- https\://stdrc.cc/style-guides/chinese.html
+- https\://stdrc.cc/style-guides/markdown.html
