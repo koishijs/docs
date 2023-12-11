@@ -1,4 +1,4 @@
-# 可逆的插件系统
+# Disposable Plugin System
 
 ::: tip
 本文将回答以下问题：
@@ -102,7 +102,7 @@ $$
 \end{aligned}
 $$
 
-下面是一个例子：
+Below is an example:
 
 ```ts
 function serve(port: number) {
