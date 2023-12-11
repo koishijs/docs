@@ -1,6 +1,6 @@
-# Déploiement
+# 公网部署
 
-::: warning
+:::warning
 将 Koishi 暴露在公网上可能会导致你的服务器受到攻击。你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
 :::
 
@@ -61,7 +61,7 @@ server {
 }
 ```
 
-## 接下来……
+## Quelle est l'étape suivante ?
 
 完成初步配置以后，有一些额外的社区插件可以帮助你更好地部署 Koishi 控制台。
 
