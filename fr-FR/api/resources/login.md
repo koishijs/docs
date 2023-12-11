@@ -1,4 +1,4 @@
-# 登录状态 (Login)
+# Login : état de connexion
 
 ## 类型定义
 
