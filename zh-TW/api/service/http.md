@@ -1,4 +1,4 @@
-# 网络请求 (HTTP)
+# 網路請求 (HTTP)
 
 :::warning
 未来可能会将本插件重构为基于 [Fetch API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API) 的实现。
@@ -8,7 +8,7 @@
 
 你可能会有这样的疑问：为什么不直接使用 axios，而是使用 `ctx.http`？这是因为许多插件都需要发起网络请求，而诸如代理、超时等配置又通常是插件无关的。因此我们为这些通用需求提供了 [全局的配置项](../../api/core/app.html#options-request-proxyagent)，各个插件则只需要调用 `ctx.http` 即可。
 
-## 实例方法
+## 實體方法
 
 ### ctx.http(method, url, config)
 
