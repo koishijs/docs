@@ -1,9 +1,9 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /fr-FR/manual/starter/
 home:
-  desc: 创建跨平台、可扩展、高性能的机器人
+  desc: Un cadre de développement de chatbots performant, extensible et multiplateforme
   primary: 即刻起步
   secondary: 了解更多
 features:
@@ -13,7 +13,7 @@ features:
   - title: 简单配置
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings
-  - title: 生态丰富
+  - title: Une communauté prospère
     desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
     image: /manual/console/market
   - title: base de données
@@ -23,7 +23,7 @@ features:
     desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
     image: /manual/console/sandbox
 development:
-  title: 专为开发者打造
+  title: Conçu pour les développeurs
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
   - title: 类型支持
@@ -47,41 +47,41 @@ advantages:
 footer:
   - text: 起步
     items:
-      - text: 为 Windows 安装
-        link: /zh-CN/manual/starter/windows.html
-      - text: 为 macOS 安装
-        link: /zh-CN/manual/starter/macos.html
-      - text: 为 Linux 安装
-        link: /zh-CN/manual/starter/linux.html
-      - text: 为 Android 安装
-        link: /zh-CN/manual/starter/android.html
-      - text: 在容器中使用
-        link: /zh-CN/manual/starter/docker.html
-      - text: 创建模板项目
-        link: /zh-CN/manual/starter/boilerplate.html
-      - text: 作为依赖调用
-        link: /zh-CN/manual/starter/direct.html
+      - text: Installation pour Windows
+        link: /fr-FR/manual/starter/windows.html
+      - text: Installation pour macOS
+        link: /fr-FR/manual/starter/macos.html
+      - text: Installation pour Linux
+        link: /fr-FR/manual/starter/linux.html
+      - text: Installation pour Android
+        link: /fr-FR/manual/starter/android.html
+      - text: Utilisation dans un conteneur
+        link: /fr-FR/manual/starter/docker.html
+      - text: Création d'un projet modèle
+        link: /fr-FR/manual/starter/boilerplate.html
+      - text: Appellation comme une dépendance
+        link: /fr-FR/manual/starter/direct.html
   - text: 文档
     items:
       - text: Guide de développement
-        link: /zh-CN/guide/
-      - text: API 参考
-        link: /zh-CN/api/
+        link: /fr-FR/guide/
+      - text: Références de l'API
+        link: /fr-FR/api/
       - text: 官方插件
-        link: /zh-CN/plugins/
+        link: /fr-FR/plugins/
   - text: 平台
     items:
-      - text: 钉钉
+      - text: DingTalk
         link: /zh-CN/plugins/adapter/dingtalk.html
       - text: Discord
-        link: /zh-CN/plugins/adapter/discord.html
+        link: /fr-FR/plugins/adapter/discord.html
       - text: KOOK
-        link: /zh-CN/plugins/adapter/kook.html
+        link: /fr-FR/plugins/adapter/kook.html
       - text: Lark
-        link: /zh-CN/plugins/adapter/lark.html
+        link: /fr-FR/plugins/adapter/lark.html
       - text: LINE
         link: /zh-CN/plugins/adapter/line.html
-      - text: 邮件
+      - text: Courriers électroniques
         link: /zh-CN/plugins/adapter/mail.html
       - text: Matrix
         link: /zh-CN/plugins/adapter/matrix.html
@@ -92,10 +92,10 @@ footer:
       - text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
       - text: Telegram
-        link: /zh-CN/plugins/adapter/telegram.html
-      - text: 微信公众号
+        link: /fr-FR/plugins/adapter/telegram.html
+      - text: WeChat Official Account
         link: /zh-CN/plugins/adapter/wechat-official.html
-      - text: 企业微信
+      - text: WeCom (WeChat Work)
         link: /zh-CN/plugins/adapter/wecom.html
       - text: WhatsApp
         link: /zh-CN/plugins/adapter/whatsapp.html
