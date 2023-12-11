@@ -215,7 +215,7 @@ validate('0')                   // TypeError
 validate(10)                    // 11
 ```
 
-## 实例方法
+## 實體方法
 
 :::tip
 请注意：`default` 和 `required` 是互斥的，你只能同时使用其中一个。
