@@ -1,4 +1,4 @@
-# 频道 (Channel)
+# Channel : canaux
 
 ::: tip
 消歧义：本节介绍跨平台协议中的频道对象。
