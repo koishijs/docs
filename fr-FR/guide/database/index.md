@@ -1,6 +1,6 @@
 # 基本用法
 
-::: tip
+:::tip
 `ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#inject-属性)。
 :::
 
