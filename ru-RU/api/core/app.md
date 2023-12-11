@@ -116,7 +116,7 @@ interface DelayOptions {
 
 ## 配置文件选项
 
-::: warning
+:::warning
 下面的配置项来自 Koishi 的命令行工具，仅可在配置文件中编辑，不支持在控制台中修改。
 :::
 
