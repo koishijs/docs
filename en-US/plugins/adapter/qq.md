@@ -1,6 +1,6 @@
 # @koishijs/plugin-adapter-qq
 
-QQ (官方机器人) 适配器。
+QQ (official robot) adapter.
 
 ## 接入方法
 
