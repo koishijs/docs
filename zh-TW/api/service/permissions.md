@@ -8,7 +8,7 @@
 参见：[开发 > 数据库 > 权限管理](../../guide/database/permission.md)
 :::
 
-## 实例方法
+## 實體方法
 
 ### ctx.permissions.define(name, inherits)
 
