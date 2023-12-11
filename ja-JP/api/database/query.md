@@ -1,4 +1,4 @@
-# 查询表达式 (Query)
+# クエリ式 (Query)
 
 :::tip
 参见：[开发 > 数据库 > 基本用法](../../guide/database/index.md)
