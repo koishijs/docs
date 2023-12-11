@@ -4,7 +4,7 @@
 本节中的 API 来自 [inaba](https://github.com/shigma/inaba)，并由 Koishi 重新导出。
 :::
 
-## 基本用法
+## Basic Usage
 
 ```ts
 import { Random } from 'koishi'
