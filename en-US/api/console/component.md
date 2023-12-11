@@ -1,4 +1,4 @@
-# 内置组件
+# Built-in Components
 
 ## `<k-comment>`
 
