@@ -1,1 +1,1 @@
-# 日志管理 (Logger)
+# Logger : gestion de journal
