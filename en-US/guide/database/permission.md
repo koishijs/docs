@@ -1,6 +1,6 @@
-# Permission Management <badge type="warning">实验性</badge>
+# 权限管理 <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 权限管理目前属于实验性功能，API 可能随时会发生变化。
 :::
 
