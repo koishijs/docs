@@ -1,6 +1,6 @@
 # 配置文件
 
-::: warning
+:::warning
 配置文件的结构未来可能会发生变化，请留意后续更新。
 :::
 
@@ -107,7 +107,7 @@ plugins:
 
 ## 修改配置文件
 
-::: tip
+:::tip
 如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在 [这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html) 中学习 YAML 的语法。
 :::
 
