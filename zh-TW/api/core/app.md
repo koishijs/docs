@@ -1,4 +1,4 @@
-# 应用 (App)
+# 應用 (App)
 
 **应用 (App)** 是程序的入口。可以通过 `new Context()` 构造或通过 `ctx.root` 访问。
 
