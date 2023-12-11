@@ -1,4 +1,4 @@
-# 机器人 (Bot)
+# 機器人 (Bot)
 
 :::tip
 参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
