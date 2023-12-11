@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: 選擇安裝方式
+  link: /zh-TW/manual/starter/
 next:
-  text: 安装和配置插件
+  text: 安裝和配置外掛
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 创建模板项目
+# 建立模板專案
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
