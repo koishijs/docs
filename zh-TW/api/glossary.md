@@ -1,4 +1,4 @@
-# 術語表
+# 术语表
 
 本页收集了一些 Koishi 设计中的重要概念，按字母表序排列。如果你在阅读文档时对某个概念感到迷惑，可以随时回到这里查看解释。
 
@@ -98,7 +98,7 @@ Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广
 
 - [开发 > 交互基础 > 中间件](../guide/basic/middleware.md)
 
-## 資料模型 (Model)
+## 数据模型 (Model)
 
 - [开发 > 数据库 > 数据模型](../guide/database/model.md)
 - [API > 数据库 > 数据模型](./database/model.md)
