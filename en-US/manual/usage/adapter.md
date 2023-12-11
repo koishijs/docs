@@ -1,14 +1,16 @@
-# 第一次对话
+# Conversation
 
-安装完了 Koishi 并体验了插件市场，想必你已经等不及体验 Koishi 的功能了。现在就让我们立即开始与机器人的第一次对话吧！
+After installing Koishi and exploring the marketplace, you must be eager to experience the functionalities of Koishi. Let's dive into the first conversation with the bots right away!
 
-## 在沙盒中模拟对话
+## Simulate a conversation in the sandbox
 
-在控制台中前往「沙盒」页面，在这里我们可以模拟与机器人的对话。
+Navigate to the "Sandbox" page in the Console, where we can simulate a conversation with bots.
 
-首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。点击屏幕下方的对话框，输入「help」，并按回车键发送。你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
+首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key.
+你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
 
-可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。让我们现在尝试一下：输入「echo 你好」，并按回车键发送。你会看到机器人的回复是「你好」。
+可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Let's try with entering "echo Bonjour", then press Enter to commit it.
+You will see the response from bot with "Bonjour".
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
@@ -18,9 +20,10 @@
 
 除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
 
-## 接入真实聊天平台
+## Integrating with Real Chat Platforms
 
-仅仅是在沙盒中对话是远远不够的。我们需要将机器人接入到真实的聊天平台中，才能让它真正地为我们服务。Koishi 使用适配器插件来支持各种聊天平台。下面是官方维护的适配器列表：
+Simulate the conversation in the sandbox is far from enough.We need to connect the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms.
+Below is the list of official adapters:
 
 - [钉钉](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
@@ -36,11 +39,12 @@
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
 
-其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
+The commonly used adapter plugins are pre-installed in Koishi. You can find them in the plugin configuration under the "Adapter" section.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
 
-一个 Koishi 应用可以同时接入多个聊天平台的多个账号。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由于同一平台内接入的多个机器人共享了相同的用户数据。因此，你可以非常方便地在多个机器人之间切换以实现负载均衡。
+A Koishi application could simultaneously connect to multiple bot accounts on multiple chat platforms. 每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。Since multiple bots within the same platform share the same user data,
+switching between them for load balancing is easy.
 
-不同平台的接入方式与难度存在较大的差异。对于不同的平台，你需要做好相应的准备工作。这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
+There are large differences between the different platforms of ways and difficulty.There are different configuration work that you need to do with different platforms. 这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 
 好消息是，Koishi 的大部分功能都不依赖特定的聊天平台。因此在进行准备工作的同时，你完全可以阅读本文档的后续部分，并在沙盒中体验并学习 Koishi 的功能。
 
