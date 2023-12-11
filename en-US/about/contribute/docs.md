@@ -1,9 +1,9 @@
-# 文档贡献指南
+# Documentation
 
-## 术语表
+## Terms of Glossary
 
-- CJK：中日韩文字等
-- 西文：数字、拉丁字母、希腊字母等
+- CJK：Chinese and Japanese Korean text etc.
+- Western：Numbers, Latin Letters, Greek Letters, etc.
 - 西文标点：两侧权重相同的半角标点，例如四则运算符，等号等
 - 前置标点：放在其相关文本前的标点，如左括号，左引号等
 - 后置标点：放在其相关文本后的标点，如冒号，句号，右引号等
@@ -24,7 +24,7 @@
 >
 > ビリビリ
 
-#### CJK 与西文之间一律插入一个空格
+#### Insert a space between CJK and Western
 
 ```diff
 - 在Python中，我们使用`class`关键字来声明类。
@@ -93,7 +93,7 @@
 
 > 他有一台 MacBook Pro。
 
-#### 使用正确的省略号和破折号
+#### Use correct ellipses and dashes
 
 正确的省略号和破折号占两格，每格分别是「…」和「—」。使用了省略号则不宜同时使用「等等」。
 
@@ -144,7 +144,7 @@
 
 > **只要有能够拼接文件的构建系统，就把每个组件单独分成文件。**
 
-## Markdown 风格指南
+## Markdown Style Guide
 
 #### 使用一个、两个和三个 `*` 分别表示斜体、粗体和粗斜体
 
@@ -153,7 +153,7 @@
 + 这是一个*斜体*；这是一个**粗体**；这是一个***粗斜体***。
 ```
 
-## 参考资料
+## Reference
 
 - https\://github.com/vinta/pangu.js
 - https\://stdrc.cc/style-guides/chinese.html
