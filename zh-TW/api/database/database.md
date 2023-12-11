@@ -1,15 +1,15 @@
-# 数据库操作 (Database)
+# 資料庫操作 (Database)
 
 :::tip
 参见：[开发 > 数据库 > 基本用法](../../guide/database/)
 :::
 
-Koishi 的数据库 API 实际上分为两部分：
+Koishi 的資料庫 API 實際上分為兩部分：
 
 - Minato 定义的通用数据库接口，由数据库插件实现
 - Koishi 内置数据结构相关的方法，由 Koishi 提供实现
 
-这一页中将仅展示第一部分的内容。另一部分的内容请参见 [内置数据结构](./built-in.md)。
+這一頁中將僅展示第一部分的內容。另一部分的内容请参见 [内置数据结构](./built-in.md)。
 
 ## 类型定义
 
@@ -91,7 +91,7 @@ export interface WriteResult {
 }
 ```
 
-## 实例方法
+## 實體方法
 
 ### ctx.database.select(table, query?)
 
