@@ -6,7 +6,7 @@ code: |
   }).description('配置项')
 ---
 
-# Computed：条件求值
+# Computed：條件求值
 
 :::tip
 此类型只能在 Koishi 中使用。
