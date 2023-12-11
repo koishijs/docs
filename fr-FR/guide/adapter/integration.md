@@ -4,7 +4,7 @@
 
 ## 斜线指令
 
-::: tip
+:::tip
 相关章节：[指令开发](../basic/command.md)
 :::
 
@@ -26,7 +26,7 @@ class DiscordBot {
 
 ## 用户语言偏好
 
-::: tip
+:::tip
 相关章节：[多语言支持](../i18n/index.md)
 :::
 
