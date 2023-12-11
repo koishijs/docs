@@ -1,8 +1,8 @@
 {
   "name": "Koishi",
   "short_name": "Koishi",
-  "description": "跨平臺、可擴展、高性能的機器人框架",
-  "start_url": "/zh-TW/",
+  "description": "跨平台、可扩展、高性能的机器人框架",
+  "start_url": "/zh-CN/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#5546a3",
