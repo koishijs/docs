@@ -1,4 +1,4 @@
-# 消息 (Message)
+# Message
 
 ## 类型定义
 
