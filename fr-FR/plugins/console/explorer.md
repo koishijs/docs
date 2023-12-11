@@ -1,1 +1,1 @@
-# 资源管理器 (Explorer)
+# Explorer : gestion des fichiers
