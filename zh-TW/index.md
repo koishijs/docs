@@ -1,9 +1,9 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /zh-TW/manual/starter/
 home:
-  desc: 创建跨平台、可扩展、高性能的机器人
+  desc: 建立跨平臺、可擴充套件、高效能的機器人
   primary: 即刻起步
   secondary: 了解更多
 features:
@@ -13,17 +13,17 @@ features:
   - title: 简单配置
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings
-  - title: 生态丰富
+  - title: 生態豐富
     desc: Koishi 拥有庞大的插件生态，无论是日常娱乐还是实用功能，你都能在这里找到。
     image: /manual/console/market
-  - title: 数据库
+  - title: 資料庫
     desc: 多驱动、高性能的数据库使得 Koishi 可以轻松处理百万量级的数据。
     image: /manual/console/database
   - title: 即刻预览
     desc: 安装或配置任何插件后，你可以立即在 Koishi 的沙盒界面中模拟聊天、预览效果。
     image: /manual/console/sandbox
 development:
-  title: 专为开发者打造
+  title: 專為開發者打造
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
   - title: 类型支持
@@ -47,41 +47,41 @@ advantages:
 footer:
   - text: 起步
     items:
-      - text: 为 Windows 安装
-        link: /zh-CN/manual/starter/windows.html
-      - text: 为 macOS 安装
-        link: /zh-CN/manual/starter/macos.html
-      - text: 为 Linux 安装
-        link: /zh-CN/manual/starter/linux.html
-      - text: 为 Android 安装
-        link: /zh-CN/manual/starter/android.html
+      - text: 為 Windows 安裝
+        link: /zh-TW/manual/starter/windows.html
+      - text: 為 macOS 安裝
+        link: /zh-TW/manual/starter/macos.html
+      - text: 為 Linux 安裝
+        link: /zh-TW/manual/starter/linux.html
+      - text: 為 Android 安裝
+        link: /zh-TW/manual/starter/android.html
       - text: 在容器中使用
-        link: /zh-CN/manual/starter/docker.html
-      - text: 创建模板项目
-        link: /zh-CN/manual/starter/boilerplate.html
-      - text: 作为依赖调用
-        link: /zh-CN/manual/starter/direct.html
+        link: /zh-TW/manual/starter/docker.html
+      - text: 建立模板專案
+        link: /zh-TW/manual/starter/boilerplate.html
+      - text: 作為依賴呼叫
+        link: /zh-TW/manual/starter/direct.html
   - text: 文档
     items:
       - text: 开发指南
-        link: /zh-CN/guide/
+        link: /zh-TW/guide/
       - text: API 参考
-        link: /zh-CN/api/
+        link: /zh-TW/api/
       - text: 官方插件
-        link: /zh-CN/plugins/
+        link: /zh-TW/plugins/
   - text: 平台
     items:
       - text: 钉钉
         link: /zh-CN/plugins/adapter/dingtalk.html
       - text: Discord
-        link: /zh-CN/plugins/adapter/discord.html
+        link: /zh-TW/plugins/adapter/discord.html
       - text: KOOK
-        link: /zh-CN/plugins/adapter/kook.html
+        link: /zh-TW/plugins/adapter/kook.html
       - text: 飞书
-        link: /zh-CN/plugins/adapter/lark.html
+        link: /zh-TW/plugins/adapter/lark.html
       - text: LINE
         link: /zh-CN/plugins/adapter/line.html
-      - text: 邮件
+      - text: 郵件
         link: /zh-CN/plugins/adapter/mail.html
       - text: Matrix
         link: /zh-CN/plugins/adapter/matrix.html
@@ -92,7 +92,7 @@ footer:
       - text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
       - text: Telegram
-        link: /zh-CN/plugins/adapter/telegram.html
+        link: /zh-TW/plugins/adapter/telegram.html
       - text: 微信公众号
         link: /zh-CN/plugins/adapter/wechat-official.html
       - text: 企业微信
