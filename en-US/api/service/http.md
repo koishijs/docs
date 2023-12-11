@@ -1,4 +1,4 @@
-# 网络请求 (HTTP)
+# HTTP
 
 :::warning
 未来可能会将本插件重构为基于 [Fetch API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API) 的实现。
