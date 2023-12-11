@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: 選擇安裝方式
+  link: /zh-TW/manual/starter/
 next:
   text: 指南
-  link: /zh-CN/guide/
+  link: /zh-TW/guide/
 ---
 
-# 作为依赖调用
+# 作為依賴呼叫
 
 :::warning
 这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
@@ -139,7 +139,7 @@ ctx.plugin(discord, {
 })
 ```
 
-## 添加更多插件
+## 新增更多外掛
 
 Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
 
