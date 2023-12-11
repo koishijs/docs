@@ -1,41 +1,41 @@
-# Utilisations avancées des commandes
+# 指令进阶技巧
 
-## Les guillemets
+## 使用引号
 
-Koishi interprète automatiquement le contenu entre guillemets comme un paramètre single. Cela s'avère très utile dans de nombreuses situations, voici quelques exemples courants :
+Koishi 会自动将引号 (半角或者全角) 中的内容视为一个整体。这在很多场景中都非常有用，下面举出了一些典型的例子：
 
-- Si vous souhaitez transmettre des paramètres contenant des espaces (le comportement par défaut est de n'interpréter que la partie avant l'espace).
-- Si vous souhaitez transmettre des paramètres commençant par `-` (le comportement par défaut est d'interpréter le prochain élément comme une option).
-- Si vous souhaitez transmettre une chaîne vide en tant que paramètre (le comportement par défaut est d'interpréter comme `true`).
-- Si vous souhaitez transmettre des paramètres constitués uniquement de chiffres (le comportement par défaut est d'interpréter comme des types `number`).
+- 当希望传入带空格的参数时 (默认行为是只解析空格前面的部分)
+- 当希望传入以 `-` 开头的参数时 (默认的行为是解析成下一个选项)
+- 当希望传入一个空字符串时作为参数时 (默认的行为是解析为 `true`)
+- 当希望传入只由数字构成的字符串参数时 (默认行为是解析为 `number` 类型)
 
-## L'Interpolation
+## 指令插值
 
-Si vous souhaitez utiliser le contenu d'une autre commande au sein d'une commande, vous pouvez utiliser `$()` pour l'interpolation de commandes :
+如果你希望在指令中使用其他指令的内容，可以使用 `$()` 进行指令插值：
 
 <chat-panel>
 <chat-message nickname="Alice">echo foo$(echo bar)</chat-message>
 <chat-message nickname="Koishi">foobar</chat-message>
 </chat-panel>
 
-Koishi ne s'échappe pas automatiquement du texte entre guillemets simples. Si vous ne souhaitez pas que certains paramètres soient échappés par la syntaxe d'interpolation, vous pouvez utiliser des guillemets simples :
+Koishi 默认不转义单引号内的文本。如果你不希望某个参数被插值语法所转义，可以使用单引号：
 
 <chat-panel>
 <chat-message nickname="Alice">echo 'foo$(echo bar)'</chat-message>
 <chat-message nickname="Koishi">foo$(echo bar)</chat-message>
 </chat-panel>
 
-Enfin, vous pouvez également en savoir plus sur une autre méthode d'interpolation dans [koishi-plugin-eval](https://eval.koishi.chat).
+最后，你还可以在 [koishi-plugin-eval](https://eval.koishi.chat) 中了解到另一种插值方法。
 
 ## Correspondance floue
 
-Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe. Dans ces cas, Koishi peut automatiquement corriger en suggérant des commandes similaires :
+在日常的使用中，我们也难免会遇到打错的情况，这时 Koishi 还会自动根据相近的指令名进行纠错提醒：
 
 <chat-panel>
-<chat-message nickname="Alice">ecko bonjour</chat-message>
-<chat-message nickname="Koishi">Voulez-vous dire « echo » ? Tapez un point pour appliquer la suggestion.</chat-message>
+<chat-message nickname="Alice">ecko hello</chat-message>
+<chat-message nickname="Koishi">您要找的是不是“echo”？发送句号以使用推测的指令。</chat-message>
 <chat-message nickname="Alice">.</chat-message>
-<chat-message nickname="Koishi">bonjour</chat-message>
+<chat-message nickname="Koishi">hello</chat-message>
 </chat-panel>
 
-Si vous souhaitez ajuster le degré de correspondance floue, vous pouvez modifier la configuration [minSimilarity](../../api/core/app.md#options-minsimilarity). Pratique, n'est-ce pas ?
+如果想调整模糊匹配的程度，你还可以修改配置项 [minSimilarity](../../api/core/app.md#options-minsimilarity)。是不是很方便呢？
