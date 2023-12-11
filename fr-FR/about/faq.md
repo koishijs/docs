@@ -1,4 +1,4 @@
-# 常见问题
+# Foire aux questions
 
 ## 谁在维护 Koishi？
 
