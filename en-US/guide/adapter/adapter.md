@@ -1,8 +1,8 @@
-# Implement Adapters
+# 实现适配器
 
-We know that a single `Bot` class is already a valid plugin. However, such plugin has only the ability to call the platform API and cannot receive messages. 这个时候就需要 `Adapter` 类出场了。
+我们已经知道，单独一个 `Bot` 类已经构成一个合法的插件了。不过，这样的插件只具备调用平台 API 的能力，还无法接收消息。这个时候就需要 `Adapter` 类出场了。
 
-## Types of Adapters
+## 适配器的类型
 
 适配器需要建立并维护机器人与聊天平台之间的连接。通常来说，根据协议的不同，适配器与机器人可能是一对一的，也可能是一对多的。让我们再看一眼之前介绍过的 `ReplBot` 实例：
 
@@ -23,9 +23,9 @@ class ReplBot<C extends Context> extends Bot<C> {
 
 简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对一的，就需要声明 `reusable` 属性，否则不需要声明。此外，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
 
-## Typical Implementations
+## 典型实现
 
-Let's see a few typical adapters.
+下面让我们看几种典型的适配器实现。
 
 ### WebSocket
 
@@ -138,7 +138,7 @@ const bot = this.bots.find(bot => bot.selfId === parsed.destination)
 if (!bot) return ctx.status = 403
 ```
 
-After validation, for each event in the request, we create an `Session` instance and dispatch it as a session event:
+验证完成后，对于请求中的每一个事件，我们创建 `Session` 对象，并将它触发为会话事件：
 
 ```ts
 for (const event of parsed.events) {
@@ -156,11 +156,11 @@ for (const event of parsed.events) {
 
 当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接继承 `Adapter` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
 
-## Advanced Techniques
+## 进阶技巧
 
 接下来我们将介绍一些复杂适配器的实现技巧。
 
-### Multi-Protocol Support
+### 多协议支持
 
 部分平台同时支持了多种通信方式，例如 Telegram 就同时支持了 Webhook 和 HTTP 轮询。对于此类平台，我们可以提供一个配置项，让用户根据需要自行选择通信方式。
 
@@ -243,14 +243,14 @@ namespace TelegramBot {
 }
 ```
 
-### Dynamically Create Bots
+### 动态创建机器人
 
 到此为止，我们的适配器开发中都存在一个隐含限制：用户的一次插件加载只能对应于一个 `Bot` 实例。如果用户需要创建多个机器人，那么就需要多次加载插件。这是因为在绝大多数适配器的使用场景下，用户都能很明确地知道自己需要创建多少个机器人。然而总有一些例外情况：
 
 - WhatsApp 平台的一个应用可以填入多个手机号，也就对应了多个 `Bot` 实例。
 - Satori 协议并不预先知道机器人的数量，而是在连接中根据机器人相关事件动态创建的。
 
-::: warning
+:::warning
 无限制的 `Bot` 连接可能会导致你的 Koishi 被恶意调用。因此，如果将适配器作为可任意连接的服务端，请确保在可信任的网络环境下运行，或者引入其他验证机制。
 :::
 
