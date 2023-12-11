@@ -1,6 +1,6 @@
-# Render Functions
+# 渲染函数
 
-## Instance Properties
+## 实例属性
 
 一个消息元素对象的结构如下：
 
