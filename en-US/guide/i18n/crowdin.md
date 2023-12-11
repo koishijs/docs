@@ -1,4 +1,4 @@
-# Localize with Crowdin
+# 接入 Crowdin
 
 [Crowdin](https://crowdin.com/) 是一个专业的本地化内容管理平台，不少商业项目使用该网站翻译并管理其本地化资源。同时，该网站也为开源项目和教学项目提供了免费或优惠的许可证。当你的项目中需要翻译的字符串较多，或需要支持很多种不同的语言，那么使用专业的管理平台会十分方便。
 
@@ -27,7 +27,7 @@
 
 成功注册并登录 Crowdin 后，你会被自动导向你的[个人页面](https://crowdin.com/profile)。点击右上角的加号，即可创建项目。
 
-::: tip
+:::tip
 若你的项目是开放源代码的，并且活跃了 4 个月及以上，你可以申请 Crowdin 的开源项目许可。当你成功创建项目后，填写[这个表单](https://crowdin.com/page/open-source-project-setup-request)，Crowdin 的客服人员会帮助你。
 :::
 
@@ -37,7 +37,7 @@
 公开项目意味着所有 Crowdin 用户都能搜索到你的项目，也可以看到你的项目的所有内容，也可以向项目贡献翻译。如果你是通过开源项目免费许可的方式创建的项目，则只能创建公开项目。
 :::
 
-### Infrastructure
+### 项目结构
 
 由于 Crowdin 会将待翻译的文件名显示在项目的文件列表中，为了不引起误会，你需要为每个待翻译的文件设置一个易懂的名称。同时，要保证 Crowdin 输出的翻译结果与你的项目结构一致。
 
@@ -93,7 +93,7 @@ Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用�
 
 在运行 Crowdin 的 CLI 工具之前，你需要确保当前项目的根目录下存在名为 `crowdin.yml` 的配置文件，你可以运行 `crowdin init` 创建一个基础配置文件，修改其中的条目以适应你的项目。详细的介绍可以看 [Crowdin 的文档](https://support.crowdin.com/configuration-file/)。
 
-::: tip
+:::tip
 `crowdin.yml` 中的配置项不仅适用于 Crowdin CLI，还可以在上述的代码仓库集成中发挥作用，Crowdin 会自动读取该文件以确定翻译的范围。
 :::
 
