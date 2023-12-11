@@ -4,8 +4,8 @@
 
 ## 文档
 
-- [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601) (沐辰-TimeBather)
+- [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601) (沐辰-TimeBather)
 
 ## 视频
 
-- [合集] [Koishi 机器人教程](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) (Il Harper)
+- \[合集] [Koishi 机器人教程](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) (Il Harper)
