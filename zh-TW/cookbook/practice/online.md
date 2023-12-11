@@ -6,7 +6,7 @@
 
 ## 部署插件
 
-::: tip
+:::tip
 阅读本节前请先阅读 [发布插件](../../guide/develop/publish.md)。
 :::
 
@@ -163,7 +163,7 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 ## 本地测试
 
-::: tip
+:::tip
 阅读本节前请先阅读 [工作区开发](../../guide/develop/workspace.md)。
 :::
 
@@ -171,27 +171,33 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 1. 克隆 koishijs/webui 和 koishijs/ponyfills 仓库。
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm run clone koishijs/webui
 npm run clone koishijs/ponyfills
 ```
+
 ```yarn
 yarn clone koishijs/webui
 yarn clone koishijs/ponyfills
 ```
+
 :::
 
 2. 启动 k-on! 开发脚本。
 
-::: tabs code
+:::tabs code
+
 ```npm
 cd external/webui
 npm run dev
 ```
+
 ```yarn
 yarn workspace @root/webui dev
 ```
+
 :::
 
 3. 在浏览器中打开 `http://localhost:3000` 即可访问 k-on!
