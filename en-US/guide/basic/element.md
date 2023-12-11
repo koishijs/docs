@@ -4,7 +4,7 @@
 
 消息元素类似于 HTML 元素，它是组成消息的基本单位。一个元素可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。Koishi 会将这些元素转换为平台所支持的格式，以便在不同平台之间发送和接收消息。
 
-## 基本用法
+## Basic Usage
 
 一个典型的元素包含名称、属性和内容。在 Koishi 中，我们通常使用 JSX 或 API 的方式创建元素。下面是一些例子：
 
@@ -30,13 +30,13 @@ session.send(h('image', { url: 'https://koishi.chat/logo.png' }))
 
 这两种写法各有优劣，不同人可能会有不同的偏好。但无论哪一种写法都表达了同样的意思。
 
-### 使用 JSX
+### Use JSX
 
 学习 JSX 的写法需要你有一定的 HTML 基础 (如果有 React 基础将更好，尽管这不是必需的)。如果你不熟悉 HTML，可以参考 [这篇文档](https://developer.mozilla.org/zh-CN/docs/Glossary/Element)。
 
 如果你已经学习过 HTML 的相关知识，你唯一额外需要了解的事情就是我们使用单花括号 `{}` 进行插值。你可以在单花括号中使用任何 JavaScript 表达式，它们会在运算完成后成为元素的一部分。此外，我们还为消息元素编写了完整的 [语法规范](../../api/message/syntax.md)，供你参考。
 
-### 使用 API
+### Use API
 
 对于更喜欢原生 JavaScript 的人，我们也提供了 API 的方式来创建元素。Koishi 提供一个 `h` 函数，它有着灵活的使用方式：
 
@@ -70,7 +70,7 @@ h('p', 'hello', h('image', { url }))
 h('message', <image url="https://koishi.chat/logo.png"/>)
 ```
 
-## 标准元素
+## Standard Elements
 
 Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需求。例如：
 
@@ -151,11 +151,11 @@ h.image(buffer, 'image/png')
 **消息组件 (Component)** 是一种对消息元素的扩展和封装。它允许你创建可重用的定制元素，并在渲染时引入自定义逻辑。例如，`<execute>` 组件会将其中的内容作为指令执行，并将执行结果替换该元素：
 
 ```html
-这是执行结果：<execute>echo hello</execute>
+Execution result: <execute>echo hello</execute>
 ```
 
 <chat-panel>
-<chat-message nickname="Koishi">这是执行结果：hello</chat-message>
+<chat-message nickname="Koishi">Execution result: hello</chat-message>
 </chat-panel>
 
 如你所见，你可以像使用普通的消息元素一样使用消息组件。唯一的区别是消息组件不由适配器实现，而是由 Koishi 直接处理。与之相对的，某些消息组件只有在特定的会话环境下才能使用 (例如在 `ctx.broadcast()` 中传入 `<execute>` 是无意义的，也会抛出错误)。
@@ -202,7 +202,7 @@ session.send(h(Custom))
 
 :::
 
-### 注册全局组件
+### Register Global Component
 
 上面的写法只能在当前文件中使用，并且必须以大写字母开头。如果想要更自然的写法，并将组件提供给其他插件使用，只需使用 `ctx.component()` 将它注册为一个全局组件：
 
