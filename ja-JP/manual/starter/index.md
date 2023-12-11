@@ -1,39 +1,32 @@
 ---
 layout: starter
 sidebar: false
-caption: Koishiを使って……
+caption: 我使用 Koishi……
 choices:
   production:
-    text: ボットサービスを構築します
-    caption: 実行環境は……
+    text: 用于搭建机器人服务
+    caption: 我的运行环境是……
     children:
-      - 
-        text: Windows
-        link: /ja-JP/manual/starter/windows.html
-      - 
-        text: macOS
-        link: /ja-JP/manual/starter/macos.html
-      - 
-        text: Linux
-        link: /ja-JP/manual/starter/linux.html
-      - 
-        text: Android
-        link: /ja-JP/manual/starter/android.html
-      - 
-        text: Docker
-        link: /ja-JP/manual/starter/docker.html
+      - text: Windows
+        link: /zh-CN/manual/starter/windows.html
+      - text: macOS
+        link: /zh-CN/manual/starter/macos.html
+      - text: Linux
+        link: /zh-CN/manual/starter/linux.html
+      - text: Android
+        link: /zh-CN/manual/starter/android.html
+      - text: Docker
+        link: /zh-CN/manual/starter/docker.html
   development:
-    text: プログラムを開発します
-    caption: Koishi を……として使いたいです
+    text: 用于开发
+    caption: 我希望 Koishi 作为……
     children:
-      - 
-        text: 独自なプロジェクト
-        link: /ja-JP/manual/starter/boilerplate.html
-      - 
-        text: 他のプロジェクトの依存パッケージ
-        link: /ja-JP/manual/starter/direct.html
+      - text: 一个独立的项目
+        link: /zh-CN/manual/starter/boilerplate.html
+      - text: 其他项目的依赖
+        link: /zh-CN/manual/starter/direct.html
 ---
 
-# インストール方法
+# 选择安装方式
 
-Koishi はいくつかのインストール方法を提供しており、使い用途に応じて選択してください。
+Koishi 提供了多种安装方式，你可以根据自己的需求选择：
