@@ -1,4 +1,4 @@
-# Espace de travail
+# 工作区开发
 
 Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插件实现。本章节将介绍如何使用模板项目开发和构建自己的 Koishi 插件。
 
@@ -60,8 +60,8 @@ export function apply(ctx: Context) {
 以 [开发模式](./script.md#开发模式) 重新运行你的项目，点击右上角的「添加插件」按钮，选择你刚才创建的插件名称，你会立即在网页控制台的配置界面中看到 `example` 插件。只需点击启用，你就可以实现与机器人的对话了：
 
 <chat-panel>
-<chat-message nickname="Alice">Sésame, ouvre-toi</chat-message>
-<chat-message nickname="Koishi">Ali Baba</chat-message>
+<chat-message nickname="Alice">天王盖地虎</chat-message>
+<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
 ### 创建私域插件
