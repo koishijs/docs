@@ -26,7 +26,7 @@
   "themeConfig": {
     "editLink": {
       "text": "Traduire cette page sur Crowdin",
-      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
+      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-fr"
     },
     "navText": "Navigation",
     "nav": [
@@ -61,7 +61,7 @@
         "text": "plugin",
         "items": [
           {
-            "text": "place de marché",
+            "text": "Place de marché",
             "link": "/market/"
           },
           {
@@ -686,7 +686,7 @@
           "text": "plugin",
           "items": [
             {
-              "text": "place de marché",
+              "text": "Place de marché",
               "link": "/market/"
             },
             {
@@ -902,7 +902,7 @@
           "text": "plugin",
           "items": [
             {
-              "text": "place de marché",
+              "text": "Place de marché",
               "link": "/market/"
             },
             {
