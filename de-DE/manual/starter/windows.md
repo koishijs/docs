@@ -1,26 +1,26 @@
 ---
 prev:
-  text: Andere Installationsmethoden
-  link: /de-DE/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
   text: 安装和配置插件
   link: /zh-CN/manual/usage/market.html
 ---
 
-# Installation für Windows
+# 为 Windows 安装
 
-::: tip
-Wenn Sie mehr über andere Installationsmethoden erfahren möchten, gehen Sie zu Wählen Sie [eine Installationsmethode](./index.md).
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-## Heruntergeladen
+## 下载
 
-- [Installationspaket (.msi)](https://k.ilharp.cc/win.msi)
-- [Weitere Versionen anzeigen](https://github.com/koishijs/koishi-desktop/releases)
+- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Installation
 
-Die Installation von Koishi über das Installationspaket ist die empfohlene Installationsmethode, da es alles automatisch für das System konfiguriert. In den meisten Fällen sollten Sie diese Methode wählen.
+通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
@@ -28,8 +28,8 @@ Die Installation von Koishi über das Installationspaket ist die empfohlene Inst
 
 双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
-::: tip
-Der Installationsprozess kann auf einigen Computern mehr als 10 Minuten dauern. Bitte haben Sie Geduld.
+:::tip
+安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
 :::
 
 ## 启动
@@ -38,8 +38,8 @@ Der Installationsprozess kann auf einigen Computern mehr als 10 Minuten dauern. 
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-安装完成后，点击 Koishi 图标即可启动。Warten Sie einige Sekunden, bis die Koishi-Konsole geöffnet wird. Jetzt können Sie Koishi verwenden.
+安装完成后，点击 Koishi 图标即可启动。等待几秒钟，Koishi 控制台将会被打开，现在你可以开始使用 Koishi 了。
 
-## Andere Auswahlmöglichkeiten
+## 其他选择
 
-Sie finden kein geeignetes Installationspaket? Sie können immer noch [in einem Container](./docker.md) oder [ein Vorlagenprojekt erstellen](./boilerplate.md).
+找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
