@@ -1,4 +1,4 @@
-# 观察者 (Observer)
+# オブザーバー
 
 ## observe(target, update?, label?)
 
