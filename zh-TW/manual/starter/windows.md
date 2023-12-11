@@ -1,15 +1,15 @@
 ---
 prev:
-  text: 選擇安裝方式
-  link: /zh-TW/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: 安裝和配置外掛
+  text: 安装和配置插件
   link: /zh-CN/manual/usage/market.html
 ---
 
 # 为 Windows 安装
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
@@ -28,7 +28,7 @@ next:
 
 双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
-::: tip
+:::tip
 安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
 :::
 
