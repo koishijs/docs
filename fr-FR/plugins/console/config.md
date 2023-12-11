@@ -1,1 +1,1 @@
-# 插件配置 (Config)
+# Config : Configuration des plugins
