@@ -1,4 +1,4 @@
-# 更新计划
+# Mettre à jour l'horaire
 
 ## 发布周期
 
