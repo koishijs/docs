@@ -1,4 +1,4 @@
-# 输出日志 (Logger)
+# ログ出力 (Logger)
 
 :::tip
 本节中的 API 来自 [reggol](https://github.com/shigma/reggol)，并由 Koishi 重新导出。
