@@ -1,4 +1,4 @@
-# 机器人 (Bot)
+# Bot
 
 :::tip
 参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
@@ -6,7 +6,7 @@
 
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
-## 实例属性
+## Instance Properties
 
 ### bot.adapter
 
@@ -56,7 +56,7 @@
 
 当前 `Bot` 的用户信息。
 
-## 适配器相关
+## Adapter Related
 
 ### bot.start()
 
@@ -76,14 +76,14 @@
 
 - **session:** [`Session`](./session.md) 会话实例
 
-触发一个会话事件。
+Dispatch a session event.
 
 ### bot.session(event?)
 
 - **event:** [`Event`](./session.md#session-event) 会话数据
 - 返回值: [`Session`](./session.md)
 
-创建一个新的会话实例。
+Create a new session instance.
 
 ### bot.online()
 
