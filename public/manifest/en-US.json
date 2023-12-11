@@ -1,7 +1,7 @@
 {
   "name": "Koishi",
   "short_name": "Koishi",
-  "description": "Cross-platform Chatbot Framework Made With Love",
+  "description": "跨平台、可扩展、高性能的机器人框架",
   "start_url": "/en-US/",
   "display": "standalone",
   "background_color": "#ffffff",
