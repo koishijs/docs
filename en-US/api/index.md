@@ -1,3 +1,3 @@
-# API 参考
+# API Reference
 
 <vp-overview/>
