@@ -2,11 +2,11 @@
 layout: schema
 code: |
   Schema.object({
-  enable: Schema.boolean().description('这是一个开关。'),
+    enable: Schema.boolean().description('这是一个开关。'),
   }).description('配置项')
 ---
 
-# 布林值 (Boolean)
+# 布尔值 (Boolean)
 
 `Schema.boolean()` 以开关的形式描述了一个布尔值。
 
