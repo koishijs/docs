@@ -1,4 +1,4 @@
-# 项目架构
+# Infrastructure
 
 :::danger
 本文档正在编写中，内容可能不完整或者不准确。
