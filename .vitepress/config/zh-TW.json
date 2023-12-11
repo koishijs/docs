@@ -1,5 +1,5 @@
 {
-  "description": "建立跨平臺、可擴充套件、高效能的機器人",
+  "description": "创建跨平台、可扩展、高性能的机器人",
   "head": [
     [
       "link",
@@ -26,9 +26,9 @@
   "themeConfig": {
     "editLink": {
       "text": "在 Crowdin 上翻譯此頁面",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-zhtw"
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "導覽",
+    "navText": "导航",
     "nav": [
       {
         "text": "入門",
@@ -51,17 +51,17 @@
             "link": "/api/"
           },
           {
-            "text": "演練場：配置構型",
+            "text": "演练场：配置构型",
             "link": "/schema/"
           }
         ],
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "外掛",
+        "text": "插件",
         "items": [
           {
-            "text": "外掛市場",
+            "text": "插件市场",
             "link": "/market/"
           },
           {
@@ -75,7 +75,7 @@
         "text": "更多",
         "items": [
           {
-            "text": "參與討論",
+            "text": "参与讨论",
             "link": "/about/contact.md"
           },
           {
@@ -101,23 +101,23 @@
           "text": "",
           "items": [
             {
-              "text": "安裝",
+              "text": "安装",
               "link": "/manual/starter/"
             },
             {
-              "text": "為 Windows 安裝",
+              "text": "为 Windows 安装",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "為 macOS 安裝",
+              "text": "为 macOS 安装",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "為 Linux 安裝",
+              "text": "为 Linux 安装",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "為 Android 安裝",
+              "text": "为 Android 安装",
               "link": "/manual/starter/android.md"
             },
             {
@@ -125,11 +125,11 @@
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "建立模板專案",
+              "text": "创建模板项目",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作為依賴呼叫",
+              "text": "作为依赖调用",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -138,7 +138,7 @@
           "text": "使用",
           "items": [
             {
-              "text": "安裝和配置外掛",
+              "text": "安装和配置插件",
               "link": "/manual/usage/market.md"
             },
             {
@@ -175,7 +175,7 @@
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公網部署",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -205,14 +205,14 @@
           ]
         },
         {
-          "text": "開發起步",
+          "text": "开发起步",
           "items": [
             {
-              "text": "環境搭建",
+              "text": "环境搭建",
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "配置檔案",
+              "text": "配置文件",
               "link": "/guide/develop/config.md"
             },
             {
@@ -220,67 +220,67 @@
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "工作區開發",
+              "text": "工作区开发",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "釋出外掛",
+              "text": "发布插件",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "互動基礎",
+          "text": "交互基础",
           "items": [
             {
-              "text": "指令開發",
+              "text": "指令开发",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系統",
+              "text": "事件系统",
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "中介軟體",
+              "text": "中间件",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "訊息元素",
+              "text": "消息元素",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "進階用法",
+              "text": "进阶用法",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模組化",
+          "text": "模块化",
           "items": [
             {
-              "text": "認識外掛",
+              "text": "认识插件",
               "link": "/guide/plugin/"
             },
             {
-              "text": "配置構型",
+              "text": "配置构型",
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "生命週期",
+              "text": "生命周期",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "服務與依賴",
+              "text": "服务与依赖",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "過濾器",
+              "text": "过滤器",
               "link": "/guide/plugin/filter.md"
             }
           ]
         },
         {
-          "text": "資料庫",
+          "text": "数据库",
           "items": [
             {
               "text": "基本用法",
@@ -295,32 +295,32 @@
               "link": "/guide/database/selection.md"
             },
             {
-              "text": "內建資料結構",
+              "text": "内置数据结构",
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "權限管理",
               "link": "/guide/database/permission.md"
             }
           ]
         },
         {
-          "text": "跨平臺",
+          "text": "跨平台",
           "items": [
             {
               "text": "基础知识",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "實作機器人",
+              "text": "实现机器人",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "實作配接器",
+              "text": "实现适配器",
               "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "訊息編碼",
+              "text": "消息编码",
               "link": "/guide/adapter/message.md"
             },
             {
@@ -330,28 +330,28 @@
           ]
         },
         {
-          "text": "控制檯",
+          "text": "控制台",
           "items": [
             {
-              "text": "擴充套件控制檯",
+              "text": "扩展控制台",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "資料互動",
+              "text": "数据交互",
               "link": "/guide/console/data.md"
             },
             {
-              "text": "客戶端開發",
+              "text": "客户端开发",
               "link": "/guide/console/client.md"
             },
             {
-              "text": "主題開發",
+              "text": "主题开发",
               "link": "/guide/console/theme.md"
             }
           ]
         },
         {
-          "text": "國際化",
+          "text": "国际化",
           "items": [
             {
               "text": "基本用法",
@@ -389,34 +389,34 @@
               "link": "/api/"
             },
             {
-              "text": "術語表",
+              "text": "术语表",
               "link": "/api/glossary.md"
             }
           ]
         },
         {
-          "text": "演練場",
-          "desc": "我們專門為一些 API 提供了互動式的演練場。",
+          "text": "演练场",
+          "desc": "我们专门为一些 API 提供了交互式的演练场。",
           "items": [
             {
-              "text": "配置構型",
+              "text": "配置构型",
               "link": "/schema/"
             }
           ]
         },
         {
-          "text": "核心模組",
+          "text": "核心模块",
           "items": [
             {
-              "text": "配接器 (Adapter)",
+              "text": "适配器 (Adapter)",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "應用 (App)",
+              "text": "应用 (App)",
               "link": "/api/core/app.md"
             },
             {
-              "text": "機器人 (Bot)",
+              "text": "机器人 (Bot)",
               "link": "/api/core/bot.md"
             },
             {
@@ -432,13 +432,13 @@
               "link": "/api/core/events.md"
             },
             {
-              "text": "會話 (Session)",
+              "text": "会话 (Session)",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "內建服務",
+          "text": "内置服务",
           "items": [
             {
               "text": "事件系统 (Events)",
@@ -544,15 +544,15 @@
           "text": "数据库",
           "items": [
             {
-              "text": "資料模型 (Model)",
+              "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "資料庫操作 (Database)",
+              "text": "数据库操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
-              "text": "查詢運算式 (Query)",
+              "text": "查询表达式 (Query)",
               "link": "/api/database/query.md"
             },
             {
@@ -564,7 +564,7 @@
               "link": "/api/database/selection.md"
             },
             {
-              "text": "內建資料結構",
+              "text": "内置数据结构",
               "link": "/api/database/built-in.md"
             }
           ]
@@ -647,7 +647,7 @@
           ]
         },
         {
-          "text": "最佳實作",
+          "text": "最佳实践",
           "items": [
             {
               "text": "资源转存",
@@ -683,10 +683,10 @@
       ],
       "/plugins/": [
         {
-          "text": "外掛",
+          "text": "插件",
           "items": [
             {
-              "text": "外掛市場",
+              "text": "插件市场",
               "link": "/market/"
             },
             {
@@ -696,7 +696,7 @@
           ]
         },
         {
-          "text": "配接器支援",
+          "text": "适配器支持",
           "items": [
             {
               "text": "钉钉",
@@ -719,7 +719,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "郵件",
+              "text": "邮件",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -761,7 +761,7 @@
           ]
         },
         {
-          "text": "資料庫支援",
+          "text": "数据库支持",
           "items": [
             {
               "text": "Memory",
@@ -789,44 +789,44 @@
           "text": "常用功能",
           "items": [
             {
-              "text": "資料管理 (Admin)",
+              "text": "数据管理 (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "賬號繫結 (Bind)",
+              "text": "账号绑定 (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "傳送廣播 (Broadcast)",
+              "text": "发送广播 (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "設定暱稱 (Callme)",
+              "text": "设置昵称 (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "傳送訊息 (Echo)",
+              "text": "发送消息 (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "檢視幫助 (Help)",
+              "text": "查看帮助 (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "會話資訊 (Inspect)",
+              "text": "会话信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
             }
           ]
         },
         {
-          "text": "控制檯功能",
+          "text": "控制台功能",
           "items": [
             {
-              "text": "資料統計 (Analytics)",
+              "text": "数据统计 (Analytics)",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "使用者登入 (Auth)",
+              "text": "用户登录 (Auth)",
               "link": "/plugins/console/auth.md"
             },
             {
@@ -834,11 +834,11 @@
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "外掛配置 (Config)",
+              "text": "插件配置 (Config)",
               "link": "/plugins/console/config.md"
             },
             {
-              "text": "控制檯 (Console)",
+              "text": "控制台 (Console)",
               "link": "/plugins/console/index.md"
             },
             {
@@ -872,14 +872,14 @@
           ]
         },
         {
-          "text": "開發工具",
+          "text": "开发工具",
           "items": [
             {
-              "text": "模組熱替換 (HMR)",
+              "text": "模块热替换 (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "測試工具 (Mock)",
+              "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
@@ -902,7 +902,7 @@
           "text": "插件",
           "items": [
             {
-              "text": "外掛市場",
+              "text": "插件市场",
               "link": "/market/"
             },
             {
@@ -914,10 +914,10 @@
       ],
       "/schema/": [
         {
-          "text": "演練場",
+          "text": "演练场",
           "items": [
             {
-              "text": "配置構型",
+              "text": "配置构型",
               "link": "/schema/index.md"
             }
           ]
@@ -926,7 +926,7 @@
           "text": "核心概念",
           "items": [
             {
-              "text": "必需與可選",
+              "text": "必需与可选",
               "link": "/schema/meta/required.md"
             },
             {
@@ -934,36 +934,36 @@
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "標題與描述",
+              "text": "标题与描述",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用與隱藏",
+              "text": "禁用与隐藏",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置項外觀",
+              "text": "配置项外观",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "巢狀型別",
+              "text": "嵌套类型",
               "link": "/schema/meta/nested.md"
             }
           ]
         },
         {
-          "text": "基礎型別",
+          "text": "基础类型",
           "items": [
             {
-              "text": "數值 (Number)",
+              "text": "数值 (Number)",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字串 (String)",
+              "text": "字符串 (String)",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布林值 (Boolean)",
+              "text": "布尔值 (Boolean)",
               "link": "/schema/basic/boolean.md"
             },
             {
@@ -971,11 +971,11 @@
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "物件 (Object)",
+              "text": "对象 (Object)",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元組 (Tuple)",
+              "text": "元组 (Tuple)",
               "link": "/schema/basic/tuple.md"
             },
             {
@@ -983,44 +983,44 @@
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "陣列 (Array)",
+              "text": "数组 (Array)",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路徑 (Path)",
+              "text": "路径 (Path)",
               "link": "/schema/basic/path.md"
             }
           ]
         },
         {
-          "text": "高階型別",
+          "text": "高级类型",
           "items": [
             {
-              "text": "Intersect：分組",
+              "text": "Intersect：分组",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：單選框",
+              "text": "Union：单选框",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：聯合型別",
+              "text": "Union：联合类型",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置聯動 1",
+              "text": "Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置聯動 2",
+              "text": "Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：輸入轉換",
+              "text": "Transform：输入转换",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：條件求值",
+              "text": "Computed：条件求值",
               "link": "/schema/advanced/computed.md"
             }
           ]
@@ -1031,11 +1031,11 @@
           "text": "关于",
           "items": [
             {
-              "text": "許可證",
+              "text": "许可证",
               "link": "/about/license.md"
             },
             {
-              "text": "參與討論",
+              "text": "参与讨论",
               "link": "/about/contact.md"
             },
             {
@@ -1060,7 +1060,7 @@
           "text": "更新",
           "items": [
             {
-              "text": "發展史",
+              "text": "发展史",
               "link": "/about/history.md"
             },
             {
@@ -1085,11 +1085,11 @@
           "text": "贡献",
           "items": [
             {
-              "text": "專案結構",
+              "text": "项目结构",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "文件貢獻指南",
+              "text": "文档贡献指南",
               "link": "/about/contribute/docs.md"
             }
           ]
@@ -1104,7 +1104,7 @@
               "link": "/releases/index.md"
             },
             {
-              "text": "v4.1 版本介紹",
+              "text": "v4.1 版本介绍",
               "link": "/releases/v4.1.md"
             },
             {
@@ -1140,7 +1140,7 @@
               "link": "/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介紹",
+              "text": "v4.10 版本介绍",
               "link": "/releases/v4.10.md"
             },
             {
