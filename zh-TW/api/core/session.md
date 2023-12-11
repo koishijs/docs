@@ -1,4 +1,4 @@
-# 会话 (Session)
+# 會話 (Session)
 
 会话来源于 Koishi v1 的元信息对象，并在后续的版本中发展成了专门的类并大幅扩展了功能。目前的会话已经参与到了 Koishi 的绝大部分工作。
 
@@ -150,7 +150,7 @@
 - 类型: `string`
 - 完整写法: `session.event.user.id`
 
-## 实例方法
+## 實體方法
 
 ### session.observeUser(fields?)
 
