@@ -1,4 +1,4 @@
-# 数据管理 (Admin)
+# Admin : Administration des données
 
 :::tip
 要使用本插件，你需要安装数据库支持。
