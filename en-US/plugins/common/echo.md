@@ -1,4 +1,4 @@
-# Send Messages (Echo)
+# 发送消息 (Echo)
 
 ## 指令：echo
 
@@ -19,6 +19,6 @@ echo -u @foo foo bar      # 向用户 foo 私聊发送 foo bar
 echo -c #bar foo bar      # 向频道 bar 发送 foo bar
 ```
 
-::: tip 提示
+:::tip 提示
 echo 指令的 message 参数是一个 [变长参数](../../manual/usage/command.md#参数和选项)，因此你应该把所有的选项写到消息前面，否则会被认为是消息的一部分。
 :::
