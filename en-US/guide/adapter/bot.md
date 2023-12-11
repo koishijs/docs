@@ -1,8 +1,8 @@
-# Implement Bots
+# 实现机器人
 
 `Bot` 对应着由 Koishi 操纵的聊天平台机器人账号。其上封装了一系列方法，用于发送消息、获取频道信息等操作。要实现一个聊天平台的 `Bot` 类，只需要实现这些方法即可。
 
-## Universal Interface
+## 通用接口
 
 让我们先回忆一下上一节介绍的 `ReplBot`：
 
@@ -27,7 +27,7 @@ class ReplBot<C extends Context> extends Bot<C> {
 
 Koishi 提供了一套通用的 [机器人接口](../../api/core/bot.md)。适配器应当尽可能地实现这些标准方法，但这并不是必需的。对于平台没有提供能力的 API，可以直接略去实现。
 
-## Access Internal API
+## 访问内部接口
 
 尽管上面的通用接口足以应对大多数插件的需求，但这并不能将平台的能力发挥到极致。为此，Koishi 也允许 `Bot` 提供一套内部接口，用于直接调用平台的原生能力。
 
@@ -37,9 +37,9 @@ Koishi 提供了一套通用的 [机器人接口](../../api/core/bot.md)。适�
 首先，插件并不能确定所拿到的 `Bot` 对象来自哪一个适配器，就算想要用上原生能力也必须强行做类型转换 (你稍后就能看到内部接口是如何解决类型问题的)；其次，原生接口可能与通用接口有相同的名称，随着 Koishi 未来进一步扩展通用接口，会有很大可能性引发接口冲突。
 :::
 
-### Access in Plugins
+### 在插件中访问
 
-There are two ways to access internal API in the plugin. Take Discord as an example.
+在插件中访问内部接口有两种方法。我们以 Discord 平台为例展示。
 
 第一种是直接通过 `bot.internal` 属性访问。这个属性在 `Bot` 基类中的类型是 `any`，因此你可以直接使用其上的方法，也可以通过类型断言来获取更好的类型提示：
 
@@ -52,21 +52,21 @@ There are two ways to access internal API in the plugin. Take Discord as an exam
 ```ts
 session.discord.getGuild(guildId)
 
-session.discord.t // Original event name
-session.discord.d // Original event data
+session.discord.t // 原始事件名称
+session.discord.d // 原始事件数据
 ```
 
-You can even customize support for different adapters in this way:
+你甚至还可以用这种方式对多种适配器提供定制化的支持：
 
 ```ts
 if (session.discord) {
   session.discord.getGuild(guildId)
 } else {
-  // Handle other platforms
+  // 其他平台的处理
 }
 ```
 
-### Access in Adapters
+### 在适配器中访问
 
 内部接口不仅能为插件提供更全面的平台能力，对适配器本身的实现也有很大的帮助。让我们截取 Discord 适配器的一段代码作为示例：
 
@@ -106,7 +106,7 @@ class DiscordBot<C extends Context> extends Bot<C> {
 
 为此，我们实现了一个 `decodeGuild` 函数，将 Discord 的数据结构转换为 Koishi 的通用数据结构。与此同时，我们把网络请求的部分放在 `Internal` 类中实现，并在 `Bot` 类中直接调用内部方法。可以看到，这样编写出来的代码结构相比直接把请求放在 `Bot` 类中要清晰得多。
 
-## Implement Internal API
+## 实现内部接口
 
 不同的平台由于其 API 的差异性，`Internal` 类的实现方式也会有所不同。对于简单的平台，你完全可以手动实现每一个内部接口 (甚至可以不实现 `Internal` 类，就像 REPL 适配器那样)；但如果平台本身就有上百个 API，手写每一个内部接口显然既费时又啰嗦。因此，Koishi 提供了一些技巧以简化你的适配工作。我们这里仍然以 Discord 为例。
 
@@ -143,7 +143,7 @@ class DiscordBot<C extends Context> extends Bot<C> {
 
 [`ctx.http`](../../api/service/http.md) 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `Quester` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
 
-### Reflect Network Requests
+### 反射网络请求
 
 在 `Quester` 的帮助下，我们甚至可以直接对网络请求进行反射，从而自动生成内部接口。
 
@@ -196,7 +196,7 @@ interface Internal {
 
 上面的代码还没有考虑请求体和异常处理等问题，如果想要深入了解，可以阅读 Discord 适配器的 [源码](https://github.com/satorijs/satori/blob/master/adapters/discord/src/types/internal.ts)。事实上，Discord 的接口已经是比较复杂的了。相信有了这些技巧的加持，其他平台的适配器你一定也能手到擒来。
 
-### Inject Session Properties
+### 注入会话属性
 
 在本节的最后，我们还有一点伏笔没有回收。我们还需要在 `Session` 对象中注入 `discord` 属性，以便插件能够访问到内部接口：
 
