@@ -1,4 +1,4 @@
-# 组合式 API
+# API composable
 
 :::tip
 本节中所涉及的 API 都在 @koishijs/client 中导出。
