@@ -1,4 +1,4 @@
-# 控制台 (Console)
+# Console : Fonctionnalités de console
 
 ## 配置项
 
