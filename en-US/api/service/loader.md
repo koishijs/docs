@@ -10,7 +10,7 @@
 
 Loader 服务可用于管理 Koishi 实例加载的插件。通常情况下你不需要手动调用此服务，除非你在开发 [config](../../plugins/console/config.md) 或者 [HMR](../../plugins/develop/hmr.md) 这样的底层插件。
 
-## 实例属性
+## Instance Properties
 
 ### ctx.loader.envData
 
