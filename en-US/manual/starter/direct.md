@@ -1,35 +1,36 @@
 ---
 prev:
-  text: Installation
-  link: /en-US/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
   text: Developing Guide
-  link: /en-US/guide/
+  link: /zh-CN/guide/
 ---
 
-# Install as a dependency
+# 作为依赖调用
 
-::: warning
-This guide assumes that you already have intermediate knowledge of [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) and [Node.js](https://nodejs.org/). If you are just starting to learn JavaScript or not interested in writing business code, please [Choose Other Installation Methods](./index.md).
+:::warning
+这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
 :::
 
-::: warning
-We strongly recommend using a template project for Koishi development. If you are unsure about what you are doing, it is advisable to read the [Template Project](./boilerplate.md) section thoroughly.
+:::warning
+我们强烈建议使用模板项目进行 Koishi 开发。如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。
 :::
 
-While we recommend the use of the [boilerplate](./boilerplate.md) for most users, it would be a more flexible choice if you directly embed Koishi as the dependency for your complex application.
+虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
 
-## Initializing Your Project
+## 初始化项目
 
-::: tip
-The Koishi itself is written in TypeScript, so we recommend using TypeScript for Koishi development. In the following documentation, we will consistently use TypeScript as an example. If you are writing vanilla JavaScript or other JavaScript dialects, you could make modifications for your own code based on the example one.
+:::tip
+Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
 :::
 
-Koishi requires a [Node.js](https://nodejs.org/) runtime environment (at least v18, suggested to use LTS versions), you need to install it yourself.We assume that you have already installed it.
+Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。这里我们假定你已经安装完成了。
 
-Firstly initialize your bot directory, then install Koishi and the necessary plugins (in this example, we use the official plugins such as console, sandbox, and echo):
+首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 console, sandbox 和 echo 为例)：
 
-::: tabs code
+:::tabs code
+
 ```npm
 # 初始化项目
 npm init
@@ -43,6 +44,7 @@ npm i koishi \
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
+
 ```yarn
 # 初始化项目
 yarn init
@@ -56,9 +58,10 @@ yarn add koishi
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
+
 :::
 
-Create a new entry file `index.ts` and write the following code:
+新建入口文件 `index.ts`，并写下这段代码：
 
 ```ts title=index.ts no-extra-header
 import { Context } from 'koishi'
@@ -66,137 +69,143 @@ import console from '@koishijs/plugin-console'
 import * as sandbox from '@koishijs/plugin-sandbox'
 import * as echo from '@koishijs/plugin-echo'
 
-// Create a Koishi instance
+// 创建一个 Koishi 应用
 const ctx = new Context({
   port: 5140,
 })
 
-// Enable the above plugins
-ctx.plugin(console)     // Provides a console
-ctx.plugin(sandbox)     // Provides a debugging sandbox
-ctx.plugin(echo)        // Provides an echo command
+// 启用上述插件
+ctx.plugin(console)     // 提供控制台
+ctx.plugin(sandbox)     // 提供调试沙盒
+ctx.plugin(echo)        // 提供回声指令
 
-// Start the application
+// 启动应用
 ctx.start()
 ```
 
-Then run this file:
+接着运行这个文件：
 
 ```sh
 node -r esbuild-register .
 ```
 
-Finally, open your browser and go to `http://localhost:5140`. You will see the Koishi Console WebUI. Click on the "Sandbox" icon on the left and click "Add User" at the top of the screen to create a virtual user. Now you can interact with the bot:
+最后，打开浏览器并前往 `http://localhost:5140`，你将看到一个控制台界面。在左侧点击进入「沙盒」页面，并点击屏幕上方的「添加用户」来创建一个模拟用户。现在你已经可以与机器人对话了：
 
 <chat-panel>
-<chat-message nickname="Alice">echo Bonjour</chat-message>
-<chat-message nickname="Koishi">Bonjour</chat-message>
+<chat-message nickname="Alice">echo 你好</chat-message>
+<chat-message nickname="Koishi">你好</chat-message>
 </chat-panel>
 
-## Configuring Your Bot
+## 配置机器人
 
-If you want to integrate your bot with an actual chat platform, you just need to install the appropriate adapter plugins:
+如果你想要接入真实聊天平台，那么你只需要安装适配插件即可：
 
-::: tabs code
+:::tabs code
+
 ```npm
 # 以 Satori 和 Discord 适配器为例
 npm i @koishijs/plugin-adapter-satori \
       @koishijs/plugin-adapter-discord
 ```
+
 ```yarn
 # 以 Satori 和 Discord 适配器为例
 yarn add @koishijs/plugin-adapter-satori \
          @koishijs/plugin-adapter-discord
 ```
+
 :::
 
-Then modify the `index.ts` file you created earlier. Every time you activated an adapter plugin instance, a new bot instance would be created:
+接着修改你刚刚创建的 `index.ts`。每个机器人相当于启用一个插件：
 
 ```ts title=index.ts
 import satori from '@koishijs/plugin-adapter-satori'
 import discord from '@koishijs/plugin-adapter-discord'
 
-// Using the Satori adapter for one bot
+// 使用 Satori 适配器的机器人
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5500',
 })
 
-// Using the Satori adapter for another bot with different communication methods
+// 使用 Satori 适配器的另一个机器人，可以有不同的通信方式
 ctx.plugin(satori, {
   endpoint: 'http://127.0.0.1:5501',
 })
 
-// Using the Discord adapter for a bot
-// Don't forget to install the appropriate plugins and complete the setup before using it
+// 使用 Discord 适配器的机器人
+// 别忘了在使用之前，先安装相应的插件和完成准备工作
 ctx.plugin(discord, {
   token: 'QwErTyUiOpAsDfGhJkLzXcVbNm',
 })
 ```
 
-## Adding More Plugins
+## 添加更多插件
 
-Koishi plugins could be obtained from [npm](https://www.npmjs.com). Typically, plugins follow one of these naming conventions:
+Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会遵循下面的名称：
 
 - koishi-plugin-foo
 - @koishijs/plugin-foo
 - @bar/koishi-plugin-foo
 
-For community plugins, you can install and load them similarly:
+对于社区插件，使用类似的方式安装和加载：
 
-::: tabs code
+:::tabs code
+
 ```npm
-# Using puppeteer and forward plugins as examples
+# 以 puppeteer 和 forward 插件为例
 npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
+
 ```yarn
-# Using puppeteer and forward plugins as examples
+# 以 puppeteer 和 forward 插件为例
 yarn add koishi-plugin-puppeteer koishi-plugin-forward
 ```
+
 :::
 
 ```ts title=index.ts
 import puppeteer from 'koishi-plugin-puppeteer'
 import * as forward from 'koishi-plugin-forward'
 
-ctx.plugin(puppeteer)   // Provides browser service
-ctx.plugin(forward)     // Provides message forwarding
+ctx.plugin(puppeteer)   // 浏览器服务
+ctx.plugin(forward)     // 消息转发
 ```
 
-Please note the subtle difference in importing the two plugins above. The puppeteer plugin uses default export, while the forward plugin uses a named export namespace. These two approaches are fundamentally different and cannot be mixed, so you need to determine which category each plugin falls into. Although this may cause some confusion, if you are a TypeScript user, determining which category a plugin belongs to is easy with the help of type hints.
+请注意到上面的两个插件的导入方式的微妙差异。puppeteer 插件使用了默认导出，而 forward 插件使用了导出的命名空间。这两种写法存在本质的区别，不能混用，因此你需要自行判断每个插件属于哪一种情况。虽然这可能产生一些困扰，但如果你是 TypeScript 用户，在类型提示的帮助下，判断一个插件属于哪一种情况是很轻松的。
 
-Likewise, for CommonJS users who want to use `require` to get the plugin object, you should also pay attention to this distinction:
+同理，对于 commonjs 的使用者，如果要使用 `require` 来获取插件对象，也应注意到这种区别：
 
 ```ts title=index.ts
-// .default is required here
+// 这里的 .default 是不可省略的
 ctx.plugin(require('koishi-plugin-puppeteer').default)
 
-// .default should not be added here
+// 这里则不能写上 .default
 ctx.plugin(require('koishi-plugin-forward'))
 ```
 
-Users of other installation methods do not need to worry about this distinction, because the boilerplate handles them for you.
+使用其他安装方式的用户不需要关心这些细节，因为模板项目已经帮你处理好了。
 
-## Adding Interaction Logic
+## 添加交互逻辑
 
 除了使用发布在 npm 上的插件，我们还可以添加自己的交互逻辑：
 
 ```ts title=index.ts
-// Reply with "world", after receiving "Hello"
-  ctx.on('message', (session) => {
-    if (session.content === 'Hello') {
-      session.send('world')
-    }
-  })
+// 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
+ctx.on('message', (session) => {
+  if (session.content === '天王盖地虎') {
+    session.send('宝塔镇河妖')
+  }
+})
 ```
 
-Then run your project again:
+然后重新运行你的项目：
 
 <chat-panel>
-<chat-message nickname="Alice">Hello</chat-message>
-<chat-message nickname="Koishi">world</chat-message>
+<chat-message nickname="Alice">天王盖地虎</chat-message>
+<chat-message nickname="Koishi">宝塔镇河妖</chat-message>
 </chat-panel>
 
-However, this may be worse because as your features grow, your `index.ts` file will become cumbersome. You can write the above logic in a separate file such as `ping.ts`, and then load it as a plugin:
+不过这样写可能并不好，因为一旦功能变多，你的 `index.ts` 就会变得臃肿。可以将上面的逻辑写在一个单独的文件 `ping.ts` 里，并将它作为一个插件来加载：
 
 ```ts title=ping.ts no-extra-header
 import { Context } from 'koishi'
@@ -204,17 +213,17 @@ import { Context } from 'koishi'
 export const name = 'ping'
 
 export function apply(ctx: Context) {
-  // Reply with "world", after receiving "Hello"
+  // 如果收到“天王盖地虎”，就回应“宝塔镇河妖”
   ctx.on('message', (session) => {
-    if (session.content === 'Hello') {
-      session.send('world')
+    if (session.content === '天王盖地虎') {
+      session.send('宝塔镇河妖')
     }
   })
 }
 ```
 
 ```ts title=index.ts
-// Here the ./ping is the path to index.ts
+// 这里的 ./ping 是相对于 index.ts 的路径
 import * as ping from './ping'
 
 ctx.plugin(ping)
@@ -222,4 +231,4 @@ ctx.plugin(ping)
 
 ## What's Next...
 
-Congratulations on mastering the basic of Koishi! Next, let's go to [developing guide](../../guide/) to learn more about Koishi.
+恭喜你已经掌握了 Koishi 的基本用法！接下来让我们前往 [开发指南](../../guide/)，学习更多的 Koishi 知识。
