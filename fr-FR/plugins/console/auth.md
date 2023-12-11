@@ -1,4 +1,4 @@
-# 用户登录 (Auth)
+# Auth : Autorisation de comptes
 
 ## 配置项
 
