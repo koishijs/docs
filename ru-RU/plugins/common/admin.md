@@ -1,10 +1,10 @@
 # 数据管理 (Admin)
 
-::: tip
+:::tip
 要使用本插件，你需要安装数据库支持。
 :::
 
-::: tip
+:::tip
 建议配合阅读 [入门 > 权限管理](../../manual/usage/customize.md#权限管理) 章节。
 :::
 
@@ -48,6 +48,7 @@ assign 指令可用于设置频道的 [受理人](../../manual/usage/customize.m
 2. 在频道 A 中发送 `assign @B`（假设 B 能收到此消息）
 
 ## 指令：user.flag <badge type="danger">废弃</badge>
+
 ## 指令：channel.flag <badge type="danger">废弃</badge>
 
 - 基本语法：`xxx.flag [...names]`
