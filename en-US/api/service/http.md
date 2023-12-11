@@ -1,6 +1,6 @@
-# HTTP
+# 网络请求 (HTTP)
 
-::: warning
+:::warning
 未来可能会将本插件重构为基于 [Fetch API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API) 的实现。
 :::
 
@@ -18,7 +18,9 @@
 - 返回值: `Promise<any>`
 
 ### ctx.http.head(url, config)
+
 ### ctx.http.get(url, config)
+
 ### ctx.http.delete(url, config)
 
 - **url:** `string` 请求地址
@@ -28,7 +30,9 @@
 发送 HEAD / GET / DELETE 请求。
 
 ### ctx.http.post(url, data, config)
+
 ### ctx.http.put(url, data, config)
+
 ### ctx.http.patch(url, data, config)
 
 - **url:** `string` 请求地址
@@ -38,7 +42,7 @@
 
 发送 POST / PUT / PATCH 请求。
 
-### ctx.http\.ws(url)
+### ctx.http.ws(url)
 
 - **url:** `string` 请求地址
 - 返回值: `WebSocket`
