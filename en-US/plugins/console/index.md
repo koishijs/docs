@@ -1,7 +1,6 @@
-# Console (Console)
+# 控制台 (Console)
 
 ## 配置项
-
 
 <!-- ### title
 
