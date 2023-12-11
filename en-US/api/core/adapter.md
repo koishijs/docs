@@ -1,4 +1,4 @@
-# 适配器 (Adapter)
+# Adapter
 
 :::tip
 参见：[开发 > 跨平台 > 实现适配器](../../guide/adapter/adapter.md)
