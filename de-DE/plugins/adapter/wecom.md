@@ -9,7 +9,7 @@
 5. 于页面左上角返回应用页面，在下方开发者接口板块点击「企业可信 IP」的「配置」，设置白名单 IP，确定后稍等几分钟即可使用插件。
 6. 推荐在几分钟后停用并启用一次插件，以便加载出平台信息呈现在控制台内。
 
-参考文档：<https://developer.work.weixin.qq.com/document/path/90487>
+参考文档：https\://developer.work.weixin.qq.com/document/path/90487
 
 ## 配置项
 
