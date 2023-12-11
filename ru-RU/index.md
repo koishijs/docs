@@ -1,16 +1,16 @@
 ---
 layout: home
 links:
-  starter: /zh-CN/manual/starter/
+  starter: /ru-RU/manual/starter/
 home:
   desc: 创建跨平台、可扩展、高性能的机器人
   primary: 即刻起步
   secondary: 了解更多
 features:
-  - title: 实时监控
+  - title: Мониторинг в режиме реального времени
     desc: 借助 Koishi 的仪表盘功能，实时监控机器人的运行状态。
     image: /manual/console/home
-  - title: 简单配置
+  - title: Простая конфигурация
     desc: Koishi 提供了丰富的插件配置和简单易懂的操作模式，使你能够轻松完成机器人的定制化。
     image: /manual/console/settings
   - title: 生态丰富
@@ -26,7 +26,7 @@ development:
   title: 专为开发者打造
   desc: Koishi 更为开发者提供了众多专业功能，使开发者得以在各种复杂需求中构建规模化的解决方案。
 advantages:
-  - title: 类型支持
+  - title: Поддержка TypeScript
     desc: Koishi 完全基于 TypeScript 开发，拥有顶级的类型支持，丰富的代码提示让你在编写代码的时候甚至无需查看文档。
     link: /
     icon:
@@ -45,40 +45,40 @@ advantages:
       viewBox: 0 0 576 512
       path: M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z
 footer:
-  - text: 起步
+  - text: Начинать
     items:
       - text: 为 Windows 安装
-        link: /zh-CN/manual/starter/windows.html
+        link: /ru-RU/manual/starter/windows.html
       - text: 为 macOS 安装
-        link: /zh-CN/manual/starter/macos.html
+        link: /ru-RU/manual/starter/macos.html
       - text: 为 Linux 安装
-        link: /zh-CN/manual/starter/linux.html
+        link: /ru-RU/manual/starter/linux.html
       - text: 为 Android 安装
-        link: /zh-CN/manual/starter/android.html
+        link: /ru-RU/manual/starter/android.html
       - text: 在容器中使用
-        link: /zh-CN/manual/starter/docker.html
+        link: /ru-RU/manual/starter/docker.html
       - text: 创建模板项目
-        link: /zh-CN/manual/starter/boilerplate.html
+        link: /ru-RU/manual/starter/boilerplate.html
       - text: 作为依赖调用
-        link: /zh-CN/manual/starter/direct.html
-  - text: 文档
+        link: /ru-RU/manual/starter/direct.html
+  - text: Документы
     items:
       - text: 开发指南
-        link: /zh-CN/guide/
+        link: /ru-RU/guide/
       - text: API 参考
-        link: /zh-CN/api/
+        link: /ru-RU/api/
       - text: 官方插件
-        link: /zh-CN/plugins/
-  - text: 平台
+        link: /ru-RU/plugins/
+  - text: Платформы
     items:
       - text: 钉钉
         link: /zh-CN/plugins/adapter/dingtalk.html
       - text: Discord
-        link: /zh-CN/plugins/adapter/discord.html
+        link: /ru-RU/plugins/adapter/discord.html
       - text: KOOK
-        link: /zh-CN/plugins/adapter/kook.html
+        link: /ru-RU/plugins/adapter/kook.html
       - text: 飞书
-        link: /zh-CN/plugins/adapter/lark.html
+        link: /ru-RU/plugins/adapter/lark.html
       - text: LINE
         link: /zh-CN/plugins/adapter/line.html
       - text: 邮件
@@ -92,7 +92,7 @@ footer:
       - text: Slack
         link: /zh-CN/plugins/adapter/Slack.html
       - text: Telegram
-        link: /zh-CN/plugins/adapter/telegram.html
+        link: /ru-RU/plugins/adapter/telegram.html
       - text: 微信公众号
         link: /zh-CN/plugins/adapter/wechat-official.html
       - text: 企业微信
