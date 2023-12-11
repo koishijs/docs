@@ -1,4 +1,4 @@
-# 插件系统 (Registry)
+# 外掛系統 (Registry)
 
 ## 实例属性
 
@@ -10,7 +10,7 @@
 
 当前上下文关联的 State 对象。
 
-## 实例方法
+## 實體方法
 
 ### ctx.plugin(plugin, options?)
 
