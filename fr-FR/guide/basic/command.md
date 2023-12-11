@@ -1,4 +1,4 @@
-# 指令开发
+# Commande
 
 :::tip
 在学习本节之前，建议先完整阅读 [入门 > 指令系统](../../manual/usage/command.md)。
@@ -371,8 +371,8 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">help  显示帮助信息</p>
+<p>Commandes disponibles : </p>
+<p class="indent-1">help  Afficher l'aide</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
 <chat-message nickname="Alice">help bar</chat-message>
@@ -389,8 +389,8 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help -H</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
-<p class="indent-1">help  显示帮助信息</p>
+<p>Commandes disponibles : </p>
+<p class="indent-1">help  Afficher l'aide</p>
 <p class="indent-1">bar  一条看不见的指令</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
