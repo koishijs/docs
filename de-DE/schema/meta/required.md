@@ -2,8 +2,8 @@
 layout: schema
 code: |
   Schema.object({
-  foo: Schema.boolean().description('这是一个可选属性。'),
-  bar: Schema.string().required().description('这是一个必需属性。'),
+    foo: Schema.boolean().description('这是一个可选属性。'),
+    bar: Schema.string().required().description('这是一个必需属性。'),
   }).description('配置项')
 ---
 
