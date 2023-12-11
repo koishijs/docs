@@ -1,4 +1,4 @@
-# Du méta-framework au framework
+# 从元框架到框架
 
 :::danger
 本文档尚未完成。
