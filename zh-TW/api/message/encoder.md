@@ -20,7 +20,7 @@ export class MyBot extends Bot {
 }
 ```
 
-## 实例方法
+## 實體方法
 
 ### new MessageEncoder(bot, channelId)
 
