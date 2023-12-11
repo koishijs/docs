@@ -1,4 +1,4 @@
-# 插件系统 (Registry)
+# Registry : système des plugins
 
 ## 实例属性
 
