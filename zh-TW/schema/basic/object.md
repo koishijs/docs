@@ -13,7 +13,7 @@ code: |
   }).description('配置项')
 ---
 
-# 对象 (Object)
+# 物件 (Object)
 
 `Schema.object()` 描述了一个具有给定属性的对象。
 
