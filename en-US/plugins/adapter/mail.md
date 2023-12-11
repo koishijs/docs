@@ -2,17 +2,17 @@
 
 ## 接入方式
 
-1. 「username」对应你的邮箱账号，「password」对应你的授权码
+1. The 'username' corresponds to your email account, 'password' to your authorization code
 2. 「imap」对应接收服务器，「smtp」对应发送服务器，需要分别填写对应的「host」和「port」
-3. 不同邮箱服务获取授权码的方式也有所不同，可以参考下面的主流邮件服务进行配置
+3. Different email services also get authorization code in different ways and can be configured by reference to the mainstream mail service below
 
-### QQ 邮箱
+### QQ Mail
 
 - 接收服务器：`imap.qq.com`，端口号 `993`
 - 发送服务器：`smtp.qq.com`，端口号 `465` 或 `587`
 - 参考：[什么是授权码，它又是如何设置？](https://service.mail.qq.com/detail/0/75)
 
-### 网易 163 邮箱
+### Netease 163
 
 - 接收服务器：`imap.163.com`，端口号 `993`
 - 发送服务器：`smtp.163.com`，端口号 `465` 或 `994`
