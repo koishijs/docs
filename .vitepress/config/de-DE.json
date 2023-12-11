@@ -1,5 +1,5 @@
 {
-  "description": "创建跨平台、可扩展、高性能的机器人",
+  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und erweiterbares sind",
   "head": [
     [
       "link",
@@ -28,7 +28,7 @@
       "text": "Übersetzen dieser Seite auf Crowdin",
       "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
         "text": "Anfängerleitfaden",
@@ -51,21 +51,21 @@
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "插件",
+        "text": "Plugins",
         "items": [
           {
             "text": "Marktplatz",
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Offizielle",
             "link": "/plugins/"
           }
         ],
@@ -92,7 +92,7 @@
           "text": "",
           "items": [
             {
-              "text": "介绍",
+              "text": "Einleitung",
               "link": "/manual/introduction.md"
             }
           ]
@@ -105,31 +105,31 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installation für Windows",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Installation für macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Installation für Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Installation für Android",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "Installation für Container",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "Vorlagenprojekt erstellen",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "Als Abhängigkeit verwenden",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -138,7 +138,7 @@
           "text": "使用",
           "items": [
             {
-              "text": "安装和配置插件",
+              "text": "Installation und Konfiguration der Plugins",
               "link": "/manual/usage/market.md"
             },
             {
@@ -330,7 +330,7 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "Konsole",
           "items": [
             {
               "text": "扩展控制台",
@@ -570,7 +570,7 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "Konsole",
           "items": [
             {
               "text": "服务端 API",
@@ -683,14 +683,14 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
               "text": "Marktplatz",
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
@@ -899,14 +899,14 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
               "text": "Marktplatz",
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
