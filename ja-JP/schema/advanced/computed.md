@@ -2,13 +2,13 @@
 layout: schema
 code: |
   Schema.object({
-  foo: Schema.computed(Number).description('这是一个属性。'),
+    foo: Schema.computed(Number).description('这是一个属性。'),
   }).description('配置项')
 ---
 
 # Computed：条件求值
 
-::: tip
+:::tip
 此类型只能在 Koishi 中使用。
 :::
 
