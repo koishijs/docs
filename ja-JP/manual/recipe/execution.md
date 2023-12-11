@@ -33,7 +33,7 @@ Koishi 默认不转义单引号内的文本。如果你不希望某个参数被�
 
 <chat-panel>
 <chat-message nickname="Alice">ecko hello</chat-message>
-<chat-message nickname="Koishi">您要找的是不是“echo”？句点を送信してコマンドを実行します。</chat-message>
+<chat-message nickname="Koishi">您要找的是不是“echo”？发送句号以使用推测的指令。</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">hello</chat-message>
 </chat-panel>
