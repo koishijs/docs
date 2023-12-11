@@ -1,4 +1,4 @@
-# 上下文 (Context)
+# Context
 
 **上下文 (Context)** 是 Koishi 的核心概念。Koishi 的绝大多数功能也直接通过上下文提供，包括插件、中间件、监听器和指令等。
 
@@ -34,7 +34,7 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.union](../service/filter.md#ctx-union)
 - [ctx.using](../service/registry.md#ctx-using)
 
-## 实例属性
+## Instance Properties
 
 ### ctx.root.config
 
