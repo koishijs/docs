@@ -2,17 +2,17 @@
 layout: schema
 code: |
   Schema.object({
-  value: Schema.union(['foo', 'bar']).description('选择一个值。'),
+    value: Schema.union(['foo', 'bar']).description('选择一个值。'),
   }).description('配置项')
 ---
 
 # Dynamic：动态类型
 
-::: tip
+:::tip
 此类型只能在 Koishi 中使用。
 :::
 
-::: warning
+:::warning
 此特性为实验性功能，未来可能会有改动。
 :::
 
