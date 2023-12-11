@@ -1,11 +1,11 @@
 # 内置组件
 
-- 标有 <badge>セッション</badge> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
+- 标有 <badge>会话</badge> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
 - 标有 <badge>会话+广播</badge> 的组件只能在会话环境或 `ctx.broadcast()` 中使用
 
 ## 核心组件
 
-### 调用指令 (execute) <badge>セッション</badge>
+### 调用指令 (execute) <badge>会话</badge>
 
 按照子元素执行指令，并使用指令的输出替换此元素。
 
@@ -17,7 +17,7 @@ foo<execute>echo 123</execute>bar
 <chat-message nickname="Koishi">foo123bar</chat-message>
 </chat-panel>
 
-### 等待输入 (prompt) <badge>セッション</badge>
+### 等待输入 (prompt) <badge>会话</badge>
 
 输出子元素并等待用户输入，并使用输入内容替换此元素。
 
