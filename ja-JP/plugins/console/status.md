@@ -1,4 +1,4 @@
-# 运行状态 (Status)
+# ステータス表示 (Status)
 
 ## 指令：status
 
