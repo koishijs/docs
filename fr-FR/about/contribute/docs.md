@@ -21,7 +21,7 @@
 ```
 
 > 123 ABC
-> 
+>
 > ビリビリ
 
 #### CJK 与西文之间一律插入一个空格
@@ -35,7 +35,7 @@
 ```
 
 > 在 Python 中，我们使用 `class` 关键字来声明类。
-> 
+>
 > 他只用了 100 行不到的代码就实现了那个复杂的功能。
 
 #### 数字与英文单位之间加空格，与符号单位之间不加空格
@@ -49,7 +49,7 @@
 ```
 
 > 我有一块 512 GB 的硬盘。
-> 
+>
 > 今天气温 23˚C，有 70% 的可能性下雨。
 
 #### 括号请使用半角书写，并按照下列规则在两侧添加空格
@@ -80,7 +80,7 @@
 ```
 
 > 1 + 2 = 3
-> 
+>
 > Bellman-Ford 算法
 
 #### 除上述以外的标点均使用全角，且两侧均不留空格
@@ -111,7 +111,7 @@
 ```
 
 > 编程语言有很多，如 C、C++、Java……
-> 
+>
 > 他刚刚做了一个重要的决定——辞职。
 
 #### 针对首次出现的概念，使用粗体进行强调，同时在两侧添加必要的空格
@@ -155,6 +155,6 @@
 
 ## 参考资料
 
-- <https://github.com/vinta/pangu.js>
-- <https://stdrc.cc/style-guides/chinese.html>
-- <https://stdrc.cc/style-guides/markdown.html>
+- https\://github.com/vinta/pangu.js
+- https\://stdrc.cc/style-guides/chinese.html
+- https\://stdrc.cc/style-guides/markdown.html
