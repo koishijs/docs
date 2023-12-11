@@ -1,10 +1,10 @@
-# 认识团队
+# Meet the Team
 
-## 核心成员
+## Core Members
 
 ### Shigma
 
-- 创始人，koishijs/\*，satorijs/\*
+- Founder, koishijs/\*, satorijs/\*
 - https\://github.com/shigma
 
 ### Il Harper
@@ -25,7 +25,7 @@
 - satorijs/adapter-lark
 - https\://github.com/maikotan
 
-## 团队成员
+## Team Members
 
 ### NWYLZW
 
@@ -35,7 +35,7 @@
 
 ### LittleC
 
-## 社区贡献者
+## Community Contributors
 
 ### i'DLisT
 
