@@ -1,9 +1,9 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: 選擇安裝方式
+  link: /zh-TW/manual/starter/
 next:
-  text: 安装和配置插件
+  text: 安裝和配置外掛
   link: /zh-CN/manual/usage/market.html
 ---
 
