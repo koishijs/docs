@@ -1,10 +1,10 @@
 # Implement Bots
 
-`Bot` corresponds to a bot account managed by Koishi on a certain chat platform. 其上封装了一系列方法，用于发送消息、获取频道信息等操作。要实现一个聊天平台的 `Bot` 类，只需要实现这些方法即可。
+`Bot` 对应着由 Koishi 操纵的聊天平台机器人账号。其上封装了一系列方法，用于发送消息、获取频道信息等操作。要实现一个聊天平台的 `Bot` 类，只需要实现这些方法即可。
 
 ## Universal Interface
 
-Let's recall the previous section of `ReplBot`：
+让我们先回忆一下上一节介绍的 `ReplBot`：
 
 ```ts
 class ReplBot<C extends Context> extends Bot<C> {
@@ -31,8 +31,8 @@ Koishi 提供了一套通用的 [机器人接口](../../api/core/bot.md)。适�
 
 尽管上面的通用接口足以应对大多数插件的需求，但这并不能将平台的能力发挥到极致。为此，Koishi 也允许 `Bot` 提供一套内部接口，用于直接调用平台的原生能力。
 
-::::tip
-**Why not add methods directly to `Bot`?**
+::: tip
+**为什么不能直接在 `Bot` 类上添加方法？**
 
 首先，插件并不能确定所拿到的 `Bot` 对象来自哪一个适配器，就算想要用上原生能力也必须强行做类型转换 (你稍后就能看到内部接口是如何解决类型问题的)；其次，原生接口可能与通用接口有相同的名称，随着 Koishi 未来进一步扩展通用接口，会有很大可能性引发接口冲突。
 :::
@@ -156,7 +156,7 @@ class Internal {
       const method = key as Quester.Method
       for (const name of makeArray(methods[method])) {
         this.prototype[name] = async function (this: Internal, ...args: any[]) {
-          // Interpolate parameters into the path
+          // 将参数填入路径中
           const url = path.replace(/\{([^}]+)\}/g, () => {
             if (!args.length) throw new TypeError('missing arguments')
             return args.shift()

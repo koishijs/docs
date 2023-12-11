@@ -1,4 +1,4 @@
-# 指令系统
+# Befehlssystem
 
 在了解了控制台的基本用法后，我们终于可以开始介绍如何与机器人对话了！让我们从上一节中看到的例子开始：
 
@@ -122,7 +122,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
 2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
 3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
-:::
+   :::
 
 ## 子指令
 
@@ -132,7 +132,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 <chat-message nickname="Alice">user</chat-message>
 <chat-message nickname="Koishi">
 <p>指令：user</p>
-<p>用户管理</p>
+<p>Benutzerverwaltung</p>
 <p>可用的子指令有：</p>
 <p class="indent-1">authorize  权限管理</p>
 <p class="indent-1">user.locale  语言偏好</p>
@@ -153,12 +153,12 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 <chat-panel>
 <chat-message nickname="Alice">user locale zh
 </chat-message>
-<chat-message nickname="Koishi">用户数据已修改。</chat-message>
+<chat-message nickname="Koishi">Die Benutzerdaten wurden geändert.</chat-message>
 </chat-panel>
 
 熟悉 Git 的用户可能会发现，这种设计正是借鉴了 Git 的二级指令：当一个指令的功能过于复杂时，我们可以将其拆分为多个子指令，从而使得指令的功能更加清晰。
 
-::: tip
+:::tip
 至于 user.locale 是干什么的，想必大家也已经猜出来了。我们留到 [国际化](./customize.md#国际化) 一节再详细介绍。
 :::
 
@@ -178,7 +178,7 @@ help 指令后还可以添加一个参数，用于查看特定指令的帮助信
 
 点击右上角的加号按钮，我们可以创建一个新指令。这个新指令自然是没有行为的，它的主要目的是作为其他指令的父指令，已获得更好的展示效果。对于通过此方法创建的新指令，我们可以通过点击右上角的垃圾桶按钮将其移除。
 
-### 权限管理
+### Berechtigungsverwaltung
 
 在「名称设置」下方还有更多的配置项，我们可以在这里进一步配置指令对用户的访问权限。例如，将 echo 指令的 `authority` 设置为 `2`，那么将只有 2 级以上权限的用户才能调用该指令。
 

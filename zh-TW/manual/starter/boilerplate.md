@@ -9,7 +9,7 @@ next:
 
 # 创建模板项目
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
@@ -70,13 +70,16 @@ Set-ExecutionPolicy RemoteSigned
 
 如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm config set registry https://registry.npmmirror.com
 ```
+
 ```yarn
 yarn config set registry https://registry.npmmirror.com
 ```
+
 :::
 
 ## 创建项目
@@ -88,17 +91,20 @@ yarn config set registry https://registry.npmmirror.com
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
-:::
+  :::
 
 输入下面的命令以创建 Koishi 项目：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm init koishi@latest
 ```
+
 ```yarn
 yarn create koishi
 ```
+
 :::
 
 跟随提示即可完成全套初始化流程。
@@ -107,13 +113,16 @@ yarn create koishi
 
 如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm start
 ```
+
 ```yarn
 yarn start
 ```
+
 :::
 
 ## 接下来……

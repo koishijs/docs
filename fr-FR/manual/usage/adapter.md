@@ -1,20 +1,20 @@
-# Première conversation
+# Conversation
 
-Après avoir installé Koishi et exploré le marché des plugins, êtes-vous impatient de découvrir les fonctionnalités de Koishi ? Commençons tout de suite notre première conversation avec le robot conversationnel !
+Après avoir installé Koishi et exploré le marché des plugins, êtes-vous impatient de découvrir les fonctionnalités de Koishi ? Commençons tout de suite notre conversation avec le robot !
 
 ## Simulation de conversation dans un bac à sable
 
-Rendez-vous dans la page « Bac à sable » dans la console, où vous pouvez simuler une conversation avec le robot conversationnel.
+Rendez-vous dans la page « Bac à sable » dans la console, où vous pouvez simuler une conversation avec le robot.
 
-首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。Cliquez dans la boîte de dialogue en bas de l'écran, saisissez « help » et appuyez sur la touche « Entrée » pour envoyer. 你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
+Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur gauche de l'écran pour créer un utilisateur virtuel (habituellement, le nom du premier utilisateur virtuel sera Alice). Une interface de chat vide apparaîtra sur le côté droit de l'écran. Cliquez dans la boîte de dialogue en bas de l'écran, saisissez « help » et appuyez sur la touche « Entrée » pour envoyer. 你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
 
-可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Essayons maintenant : saisissez « echo bonjour » et appuyez sur la touche Entrée. Vous verrez la réponse du robot « bonjour ».
+可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Essayez-vous maintenant : saisissez « echo bonjour » et appuyez sur la touche Entrée. Vous verrez la réponse du robot « bonjour ».
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-如果想要模拟群聊，我们可以创建更多的用户，并在聊天界面顶部点击切换到「群聊模式」。这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。如果你要体验的是下棋一类的多人交互插件，这会非常有用。
+Si vous souhaitez simuler une conversation en guilde, vous pouvez créer plus d'utilisateurs. Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez changer et contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
 
 En outre, si certaines commandes nécessitent un certain [niveau des autorisations](../usage/customize.md#权限管理), vous pouvez les ajuster dans les « Paramètres de l'utilisateur ».
 

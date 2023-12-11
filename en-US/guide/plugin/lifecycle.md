@@ -91,7 +91,7 @@ However, this doesn't mean that all plugins should not be reused. If you have su
 
 ```ts title=reply.ts
 export const name = 'reply'
-export const reusable = true    // 声明此插件可重用
+export const reusable = true  // Declare this plugin as reusable
 
 export interface Config {
   input: string
@@ -100,7 +100,7 @@ export interface Config {
 
 export function apply(ctx: Context, config: Config) {
   ctx.middleware((session, next) => {
-    // 当用户发送 input 时，回复 output
+    // Reply with output when user sends input
     if (session.content === config.input) {
       return config.output
     }
@@ -150,7 +150,7 @@ export function apply(ctx: Context) {
 }
 ```
 
-Here, the plugin listens for the fork event. The `fork` event is a lifecycle event that is triggered each time the plugin is invoked. Thus, we can update the shared state in the `fork` event handler. Every time a new `Fork` object is created, `count` increases by 1; and each time a `Fork` object is disposed, `count` decreases by 1. When the user invokes the command, we simply return the value of `count`.
+Here, the plugin listens for the fork event. `fork` 是一个生命周期事件，当插件每次被调用时都会触发。Thus, we can update the shared state in the `fork` event handler. Every time a new `Fork` object is created, `count` increases by 1; and each time a `Fork` object is disposed, `count` decreases by 1. When the user invokes the command, we simply return the value of `count`.
 
 `fork` 事件实际上将插件分割成了两个不同的作用域。外侧的代码仍然只会被执行一次，对应着不可重用的部分；而内侧的代码则会被执行多次，对应着可重用的部分。在上面的例子中，只需将指令的注册放在外侧作用域中，这样就不用担心重复注册的问题了。
 

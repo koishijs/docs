@@ -1,4 +1,4 @@
-# 认识插件
+# À propos du plugin
 
 ::: tip
 在学习本章之前，建议先完整阅读 [入门 > 安装和配置插件](../../manual/usage/market.md)。
