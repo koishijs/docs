@@ -1,32 +1,32 @@
 ---
 prev:
-  text: Choisir une méthode d'installation
-  link: /fr-FR/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: Installation et configuration des plugins
-  link: /fr-FR/manual/usage/market.html
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
-# Installation pour Android
+# 为 Android 安装
 
-::: tip
-Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
-Ce projet est toujours en cours de développement. Certaines fonctionnalités peuvent ne pas être disponibles.
+:::danger
+此项目仍在早期开发中。部分功能可能不可用。
 :::
 
-## Téléchargement
+## 下载
 
-- [Télécharger le package standard (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [Télécharger le package d'extension (.apk)](https://k.ilharp.cc/android-full.apk)
-- [Voir plus de versions](https://github.com/koishijs/koishi-android/releases)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
+- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
 ## Installation
 
-Installer Koishi via le programme d'installation est la méthode la recommandée, car elle configure automatiquement tout ce dont vous avez besoin. En général, vous pouvez choisir cette méthode.
+通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
-## Démarrage
+## 启动
 
-Cliquez sur l'icône de Koishi pour le démarrer et Koishi pouvez démarrer en quelques secondes.
+安装完成后，点击 Koishi 图标即可启动。
