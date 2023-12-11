@@ -10,7 +10,7 @@
 | `koi daemon start`    | 启动守护                           |
 | `koi daemon stop`     | 停止守护                           |
 | `koi daemon kill`     | 强制结束守护                         |
-| `koi ps`              | 查看运行状态                         |
+| `koi ps`              | 查看運行狀態                         |
 | `koi start default`   | 启动实例 `default`                 |
 | `koi stop default`    | 停止实例 `default`                 |
 | `koi restart default` | 重启实例 `default`                 |
