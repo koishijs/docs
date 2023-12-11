@@ -26,7 +26,7 @@
   "themeConfig": {
     "editLink": {
       "text": "Übersetzen dieser Seite auf Crowdin",
-      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
+      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-de"
     },
     "navText": "Navigation",
     "nav": [
