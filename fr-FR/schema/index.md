@@ -1,3 +1,3 @@
-# 配置构型
+# Schéma de configuration
 
 <vp-overview/>
