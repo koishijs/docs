@@ -1,4 +1,4 @@
-# 查询表达式 (Query)
+# 查詢運算式 (Query)
 
 :::tip
 参见：[开发 > 数据库 > 基本用法](../../guide/database/index.md)
@@ -74,7 +74,7 @@ interface LogicalExpr<T> {
 type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 ```
 
-## 逻辑运算
+## 邏輯運算
 
 逻辑运算可以出现在 `QueryExpr` 或 `FieldExpr` 中。根据出现的场合，它们的类型和含义也会有所不同。
 
@@ -99,7 +99,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 约束条件的否定。
 
-## 元素运算
+## 元素運算
 
 ### $in
 
@@ -151,7 +151,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 判断字段的值是否小于或等于给定的值。
 
-## 列表运算
+## 串列運算
 
 ### $el
 
@@ -169,7 +169,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 判断列表的长度是否等于给定的值。
 
-## 正则表达式
+## 正則運算式
 
 ### $regex
 
@@ -183,7 +183,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 将字段的值作为正则表达式，判断给定的字符串是否匹配。
 
-## 位运算
+## 位元運算
 
 ### $bitsAllSet
 
