@@ -1,6 +1,6 @@
-# 內建資料結構
+# 内置数据结构
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
@@ -11,75 +11,75 @@ Koishi 的数据库 API 实际上分为两部分：
 
 这一页中将仅展示第二部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
 
-## 内建表
+## 内置表
 
 ### User
 
-- **id:** `id` 使用者 ID
-- **name:** `string` 使用者暱稱
+- **id:** `id` 用户 ID
+- **name:** `string` 用户昵称
 - **authority:** `number` [权限等级](../../guide/database/permission.md)
 - **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
-- **locales:** `string[]` 語言列表
+- **locales:** `string[]` 语言列表
 
 ### Binding
 
-- **aid:** `id` 使用者 ID
-- **platform:** `string` 平臺名
+- **aid:** `id` 用户 ID
+- **platform:** `string` 平台名
 - **pid:** `string` 平台账号
 
 ### Channel
 
-- **platform:** `string` 平臺名
+- **platform:** `string` 平台名
 - **id:** `string` 平台账号
 - **assignee:** `string` [受理人](../../manual/usage/customize.md#受理人机制)
 - **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
-- **locales:** `string[]` 語言列表
+- **locales:** `string[]` 语言列表
 
-## 內建實體方法
+## 内置实例方法
 
-下列實體方法直接由 @koishijs/core 提供實現。
+下列实例方法直接由 @koishijs/core 提供实现。
 
 ### ctx.database.getUser(platform, id, modifier?)
 
-- **platform:** `string` 平臺名
-- **id:** `string` 使用者識別符號
-- **modifier:** `QueryModifier<User.Field>` 請求飾詞
-- 回返值: `Promise<User>` 使用者資料
+- **platform:** `string` 平台名
+- **id:** `string` 用户标识符
+- **modifier:** `QueryModifier<User.Field>` 请求修饰符
+- 返回值: `Promise<User>` 用户数据
 
-向資料庫請求使用者資料。
+向数据库请求用户数据。
 
 ### ctx.database.setUser(platform, id, data)
 
-- **platform:** `string` 平臺名
-- **id:** `string` 使用者識別符號
-- **data:** `User` 要修改 / 新增的資料
-- 回返值: `Promise<void>`
+- **platform:** `string` 平台名
+- **id:** `string` 用户标识符
+- **data:** `User` 要修改 / 添加的数据
+- 返回值: `Promise<void>`
 
-向資料庫修改或新增使用者資料。
+向数据库修改或添加用户数据。
 
 ### ctx.database.getChannel(platform, id, fields?)
 
-- **platform:** `string` 平臺名
-- **id:** `string` 頻道識別符號
-- **fields:** `QueryModifier<User.Field>` 請求飾詞
-- 回返值: `Promise<Channel>` 頻道資料
+- **platform:** `string` 平台名
+- **id:** `string` 频道标识符
+- **fields:** `QueryModifier<User.Field>` 请求修饰符
+- 返回值: `Promise<Channel>` 频道数据
 
-向資料庫請求頻道資料。
+向数据库请求频道数据。
 
-### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">廢棄</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">废弃</badge>
 
-- **fields:** `ChannelField[]` 請求的欄位，預設為全部欄位
-- **platform:** `string` 平臺名，預設為全平臺
-- **assignees:** `string[]` 指派者列表，預設為當前執行的全部機器人
-- 回返值: `Promise<Channel[]>` 頻道資料列表
+- **fields:** `ChannelField[]` 请求的字段，默认为全部字段
+- **platform:** `string` 平台名，默认为全平台
+- **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
+- 返回值: `Promise<Channel[]>` 频道数据列表
 
-向資料庫請求被特定機器人管理的所有頻道資料。這裡的兩個引數可以寫任意一個，都可以識別。
+向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
 
 ### ctx.database.setChannel(platform, id, data)
 
-- **platform:** `string` 平臺名
-- **id:** `number` 頻道識別符號
-- **data:** `Channel` 要修改 / 新增的資料
-- 回返值: `Promise<void>`
+- **platform:** `string` 平台名
+- **id:** `number` 频道标识符
+- **data:** `Channel` 要修改 / 添加的数据
+- 返回值: `Promise<void>`
 
-向資料庫修改或新增頻道資料。
+向数据库修改或添加频道数据。
