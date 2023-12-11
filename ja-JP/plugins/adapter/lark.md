@@ -11,7 +11,7 @@
 7. 将第 6 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的**请求地址配置**中，并点击完成。
 8. 若第 7 步的 URL 验证未通过，请检查你所配置的地址是否正确。
 
-参考文档：<https://open.larksuite.com/document/home/develop-a-bot-in-5-minutes/coding>
+参考文档：https\://open.larksuite.com/document/home/develop-a-bot-in-5-minutes/coding
 
 ## 配置项
 
