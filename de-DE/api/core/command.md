@@ -1,6 +1,6 @@
 # 指令 (Command)
 
-::: tip
+:::tip
 参见：[开发 > 交互基础 > 指令开发](../../guide/basic/command.md)
 :::
 
@@ -83,7 +83,8 @@ type CommandAction = (argv: Argv, ...args: any[]) => Awaitable<string | void>
 - **fields:** `FieldCollector<UserField>` 要请求的用户字段
 - 返回值: `this`
 
-如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
+如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。
+参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
 ```ts
 type FieldCollector<K extends string> =
@@ -96,7 +97,8 @@ type FieldCollector<K extends string> =
 - **fields:** `FieldCollector<ChannelField>` 要请求的频道字段
 - 返回值: `this`
 
-如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
+如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。
+参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
 ### cmd.alias(...names)
 
