@@ -1,4 +1,4 @@
-# 网络服务 (Router)
+# 網路服務 (Router)
 
 :::danger
 `ctx.router` 需要手动声明为 `inject`。在未来的版本，我们将会把此服务移至插件中。
@@ -17,7 +17,7 @@ Koishi 默认情况下并不会监听任何端口，如要启用网络服务请�
 2. 未来可能会不基于 Koa Router 重新实现路由系统。
    :::
 
-## 实例方法
+## 實體方法
 
 ### ctx.router\[method]\(path, middleware)
 
