@@ -1,4 +1,4 @@
-# 配置文件
+# Fichier de configuration
 
 :::warning
 配置文件的结构未来可能会发生变化，请留意后续更新。
@@ -65,7 +65,7 @@ plugins:
       enable: true
 ```
 
-### 插件名称
+### Le nom du plugin
 
 插件名称通常对应于插件发布时的包名。例如：
 
