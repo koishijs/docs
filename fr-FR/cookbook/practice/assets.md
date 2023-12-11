@@ -1,4 +1,4 @@
-# 资源转存
+# Cache des fichiers de ressources
 
 ::: tip
 本文将回答以下问题：
