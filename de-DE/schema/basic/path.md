@@ -2,14 +2,14 @@
 layout: schema
 code: |
   Schema.object({
-  path1: Schema.string().description('假装右边是一个文件选择器。'),
-  path2: Schema.string().description('假装右边是一个文件选择器。'),
+    path1: Schema.string().description('假装右边是一个文件选择器。'),
+    path2: Schema.string().description('假装右边是一个文件选择器。'),
   }).description('配置项')
 ---
 
 # 路径 (Path)
 
-::: tip
+:::tip
 此类型基于 @koishijs/plugin-explorer，仅在加载该插件时可用。未加载该插件时，类型只会表现为普通的字符串 (比如现在就是这样)。
 :::
 
