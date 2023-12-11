@@ -1,4 +1,4 @@
-# 部署到 k-on!
+# K-ON! Deployment
 
 [Koishi Online (k-on!)](https://koishi.online/) 是一个在线的 Koishi 运行时，你可以在这里体验 Koishi 的各种功能。
 
