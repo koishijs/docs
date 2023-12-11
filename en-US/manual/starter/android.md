@@ -1,31 +1,31 @@
 ---
 prev:
-  text: Installation
-  link: /en-US/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: Install and Configure Plugins
-  link: /en-US/manual/usage/market.html
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
-# Install for Android
+# 为 Android 安装
 
-::: tip
-If you want to learn about other installation method, please visit [Installation](./index.md).
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
-This project is still working in progress. Some features may not be available.
+:::danger
+此项目仍在早期开发中。部分功能可能不可用。
 :::
 
 ## 下载
 
-- [Download Standard Package (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [Download Extension Package (.apk)](https://k.ilharp.cc/android-full.apk)
-- [Other Downloads](https://github.com/koishijs/koishi-android/releases)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
+- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
 ## Install
 
-It is recommended to install Koishi from the installer, which would deal with most of the problems automatically. You should choose this method in general.
+通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
 ## 启动
 
