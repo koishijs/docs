@@ -1,13 +1,13 @@
 ---
 prev:
-  text: Installation
-  link: /en-US/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: Install and Configure Plugins
-  link: /en-US/manual/usage/market.html
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
-# Create a boilerplate
+# 创建模板项目
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
@@ -84,7 +84,7 @@ yarn config set registry https://registry.npmmirror.com
 
 ## 创建项目
 
-Open a command line, cd to the directory that you want to create a Koishi template project.
+打开命令行，并进入你想要创建 Koishi 项目的目录。
 
 ::: tip
 这个路径不宜过长，且应当避免出现中文或者空格。我们推荐的路径如下：
@@ -93,7 +93,7 @@ Open a command line, cd to the directory that you want to create a Koishi templa
 - 其他操作系统：`~/dev`
   :::
 
-Enter the following command to create Koishi template project:
+输入下面的命令以创建 Koishi 项目：
 
 :::tabs code
 
@@ -107,11 +107,11 @@ yarn create koishi
 
 :::
 
-Follow the prompts and finalize the initialization process.
+跟随提示即可完成全套初始化流程。
 
 ## 启动应用
 
-If you have successfully finalized the operations above, your application should be already launched, the Koishi Console Web UI should be also opened. 如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
+如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
 
 :::tabs code
 
@@ -127,7 +127,7 @@ yarn start
 
 ## What's Next...
 
-Congratulations on mastering the basic of Koishi! 接下来：
+恭喜你已经掌握了 Koishi 的基本用法！接下来：
 
 - 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
