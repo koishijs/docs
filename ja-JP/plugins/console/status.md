@@ -45,6 +45,7 @@ template.set('status', {
   ].join('\n'),
 })
 ```
+
 </div>
 
 ## 配置项
