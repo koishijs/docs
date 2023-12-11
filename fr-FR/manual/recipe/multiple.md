@@ -1,23 +1,23 @@
-# Gestion des multiples configurations
+# 维护多份配置
 
-Il y a de nombreuses situations où vous souhaiterez gérer plusieurs configurations d'un même plugin :
+有很多情况下你会想要维护同一个插件的多份配置：
 
-- Exécutez plusieurs instances du même plugin en même temps.
-- Basculez vers une autre configuration de plugin au moment approprié.
-- Utilisez des configurations de plugin différentes dans des guildes différentes.
+- 你希望同时运行多个插件实例
+- 你希望在合适的时机切换另一份插件配置
+- 你希望在不同的群中使用不同的插件配置
 
-Différents besoins ont généralement différentes solutions, donc nous ne pouvons pas vous donner une réponse uniforme. Heureusement, Koishi prend en charge les trois situations mentionnées ci-dessus, il vous suffit de choisir la solution qui convient le mieux à vos besoins.
+不同的需求往往有不同的解决方案，因此我无法给你统一的答案。但好在对于上面的三种情况 Koishi 都已经提供了支持，你只需要根据自己的需求选择合适的方案即可。
 
-## Instance unique
+## 单实例
 
-Dans une même application Koishi, vous pouvez activer plusieurs instances pour certains plugins, tandis que d'autres ne le peuvent pas - ce n'est pas un défaut de l'implémentation du plugin, mais un comportement attendu. En fait, les auteurs de plugins peuvent spécifier quelles fonctionnalités peuvent être activées indépendamment. Cela se manifeste dans les plugins sous deux types différents : les plugins réutilisables et les plugins non réutilisables.
+在同一个 Koishi 应用中，有些插件可以同时启用多份，有些则不能——这并非插件的实现缺陷，而是预期的行为。事实上，插件的作者可以指定具体哪些功能可以被独立地启用。这表现在插件上就是两种不同的类型：那些可以同时启用多份的插件被称为可重用插件，反之则称为不可重用插件。
 
-Un exemple typique de plugin réutilisable est le plugin des [adaptateurs](../usage/adapter.md). Chaque adaptateur correspond à un robot conversationnel en cours d'exécution. Les différents robots de plateformes différentes sont configurés à l'aide de différents adaptateurs. Par conséquent, si vous souhaitez configurer plusieurs robots sur la même plateforme conversationnelle, il vous suffit d'ajouter plusieurs plugins d'adaptateur en suivant la méthode décrite dans la section précédente.
+典型的可重用插件是 [适配器插件](../usage/adapter.md)。每个适配器对应着一个正在运行的机器人，不同平台的机器人由不同的适配器进行配置。因此，如果你想在同一个平台中配置多个机器人，直接按照上一节中的方法添加多个适配器插件即可。
 
-Cependant, la plupart des plugins ne sont pas réutilisables. Pour ces types de plugins, vous ne pouvez avoir qu'une seule configuration en cours d'exécution à un même plugin. Si vous avez déjà une configuration d'un plugin en cours d'exécution, vous verrez une notification indiquant « Ce plugin est en cours d'exécution et ne peut pas être réutilisé » lorsque vous essayez de l'activer ailleurs. Cependant, vous pouvez toujours préparer plusieurs configurations, puis passer de l'une à l'autre au moment opportun.
+与此同时，绝大多数插件都是不可重用的。对于这类插件，你只能同时拥有一份运行中的配置。如果已经有一份正在运行的配置，那么你会在其他配置处看到一行提示「此插件正在运行且不可重用」。当然，你仍然可以准备多份配置，并在合适的时机将一份配置停用，并启用另一份。
 
-Pour les plugins non réutilisables, si vous souhaitez basculer vers différentes configurations dans des scénarios différents, il a besoin que l'auteur du plugin fournisse des options de configuration avec des [filtres](../usage/customize.md#过滤器). Si la configuration que vous souhaitez modifier ne prend pas en charge les filtres, vous pouvez envisager de proposer des suggestions à l'auteur du plugin, ou d'utiliser l'approche multi-instance décrite ci-dessous.
+对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/customize.md#过滤器) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#多实例) 方案。
 
-## Instance multiple
+## 多实例
 
-Une autre approche consiste à exécuter plusieurs instances de l'application Koishi en même temps. L'avantage de cette approche est que vous pouvez utiliser des configurations de plugins totalement différentes dans des applications différentes, voire activer des combinaisons de plugins totalement différentes. Cependant, en contrepartie, vous devrez gérer plusieurs applications distinctes, chacune nécessitant un port indépendant.
+另一种方案是同时运行多个 Koishi 应用。这样做的好处是，你可以在不同的应用中使用完全不同的插件配置，甚至启用完全不同的插件组合。但与之相对的，你需要额外维护多个应用，而且每个应用都需要一个独立的端口。
