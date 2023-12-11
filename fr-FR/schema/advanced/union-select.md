@@ -11,7 +11,7 @@ code: |
   }).description('配置项')
 ---
 
-# Union：单选框
+# Union : boutons radio
 
 Union 描述了多个子类型的联合。它的最基础形式是从多个固定值中选择一个。这里的每一个字符串是 `Schema.const()` 的简写形式。如果每个可选值有较长的描述文本，你可以进一步将 `role` 设置为 `radio`，这样一来所有的选项将显示在下方而不是右侧。
 
