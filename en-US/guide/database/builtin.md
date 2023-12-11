@@ -1,4 +1,4 @@
-# Built-in Data Structure
+# 内置数据结构
 
 <!-- 到目前为止，Koishi 对消息的处理逻辑仍然与数据库服务是分离的。如果仅仅是为了引入统一的数据库 API，并不值得我们把 `ctx.database` 内置为 Koishi 的一部分。我们随后会发现，Koishi 还为中间件和指令开发提供了便捷的数据流管理机制，这才是其内置数据库服务的主要原因。 -->
 
@@ -61,7 +61,7 @@ cmd.userFields((argv, fields) => {
 
 你可以在 [这里](../../api/utils/observer.md) 看到完整的观察者 API。
 
-## Advanced Usage
+## 进阶用法
 
 ### attach 事件
 
