@@ -2,7 +2,7 @@
 
 Koishi 官方提供了许多插件。为了更好地模块化开发，它们被分散在了多个仓库中。
 
-## 适配器支持
+## Adaptateurs
 
 - [@koishijs/plugin-adapter-dingtalk](./adapter/dingtalk.md)
 - [@koishijs/plugin-adapter-discord](./adapter/discord.md)
@@ -19,14 +19,14 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-wecom](./adapter/wecom.md)
 - [@koishijs/plugin-adapter-whatsapp](./adapter/whatsapp.md)
 
-## 数据库支持
+## Base de données
 
 - [@koishijs/plugin-database-memory](./database/memory.md)
 - [@koishijs/plugin-database-mongo](./database/mongo.md)
 - [@koishijs/plugin-database-mysql](./database/mysql.md)
 - [@koishijs/plugin-database-sqlite](./database/sqlite.md)
 
-## 常用功能
+## Fonctionnalités communes
 
 - [@koishijs/plugin-admin](./common/admin.md)：数据管理
 - [@koishijs/plugin-bind](./common/bind.md)：账号绑定
@@ -36,7 +36,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-help](./common/help.md)：查看帮助
 - [@koishijs/plugin-inspect](./common/inspect.md)：会话信息
 
-## 控制台功能
+## Fonctionnalités consoles
 
 - [@koishijs/plugin-analytics](./console/analytics.md)：数据统计
 - [@koishijs/plugin-auth](./console/auth.md)：用户登录
@@ -51,7 +51,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-sandbox](./console/sandbox.md)：沙盒调试
 - [@koishijs/plugin-status](./console/status.md)：运行状态
 
-## 开发工具
+## Outils de développement
 
 - [@koishijs/plugin-hmr](./develop/hmr.md)：模块热替换
 - [@koishijs/plugin-mock](./develop/mock.md)：测试工具
