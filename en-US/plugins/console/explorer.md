@@ -1,2 +1,1 @@
-# Resource Manager (Explorer)
-
+# 资源管理器 (Explorer)
