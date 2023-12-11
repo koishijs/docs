@@ -25,7 +25,7 @@
 
 当前会话绑定的频道数据，是一个可观测对象。
 
-::: warning
+:::warning
 这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.event.channel`。
 :::
 
@@ -58,7 +58,7 @@
 
 当前会话绑定的用户数据，是一个可观测对象。
 
-::: warning
+:::warning
 这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.event.user`。
 :::
 
@@ -71,7 +71,7 @@
 - 类型: <code>[GuildMember](../resources/member.md) & [User](../resources/user.md)</code>
 - 完整写法: `{ ...session.event.user, ...session.event.member }`
 
-::: tip
+:::tip
 注意到 `GuildMember` 和 `User` 有部分重叠的字段，例如 `name` 和 `avatar`。在这种情况下，`GuildMember` 的字段会覆盖 `User` 的字段。
 :::
 
