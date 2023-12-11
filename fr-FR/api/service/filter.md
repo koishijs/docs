@@ -1,4 +1,4 @@
-# 过滤器 (Filter)
+# Filter : filtres
 
 有关这里的 API，请参见 [开发 > 模块化 > 过滤器](../../guide/plugin/filter.md)。
 
