@@ -1,6 +1,6 @@
-# Built-in Data Structure
+# 内置数据结构
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
@@ -66,7 +66,7 @@ Koishi 的数据库 API 实际上分为两部分：
 
 向数据库请求频道数据。
 
-### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">deprecated</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">废弃</badge>
 
 - **fields:** `ChannelField[]` 请求的字段，默认为全部字段
 - **platform:** `string` 平台名，默认为全平台
