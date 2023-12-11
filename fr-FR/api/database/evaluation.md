@@ -1,6 +1,6 @@
-# Eval : expression de la calculée
+# 求值表达式 (Eval)
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
 :::
 
@@ -14,7 +14,7 @@ import { $ } from 'koishi'
 
 ## 类型定义
 
-### \{Type\}
+### {Type}
 
 本节中使用的 `Number`, `String`, `Boolean`, `Any` 并非 JavaScript 中的内置函数，而是对应于 `number`, `string`, `boolean`, `any` 类型的求值表达式。例如，当一个表的 `foo` 字段有数值类型时，求值表达式 `$.gt(row.x, 1)` 是合法的，并且返回值的类型是 `Boolean`。
 
