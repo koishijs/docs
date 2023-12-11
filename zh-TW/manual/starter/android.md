@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: 選擇安裝方式
+  link: /zh-TW/manual/starter/
 next:
-  text: 安装和配置插件
+  text: 安裝和配置外掛
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 为 Android 安装
+# 為 Android 安裝
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
@@ -23,7 +23,7 @@ next:
 - [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
 - [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
-## 安装
+## 安裝
 
 通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
