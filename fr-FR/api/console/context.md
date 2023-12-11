@@ -1,4 +1,4 @@
-# 上下文 API
+# API contexte
 
 :::warning
 请注意：本文档介绍的是控制台客户端的 `Context`，而非 Koishi 本身的 `Context`。要查看后者的 API 文档请 [前往这里](../core/context.md)。
