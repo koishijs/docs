@@ -1,4 +1,4 @@
-# 从低版本迁移
+# Migration depuis une version ancienne
 
 ## JSX 支持 <badge>v4.10.3</badge>
 
