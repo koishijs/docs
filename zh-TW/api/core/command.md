@@ -15,7 +15,7 @@ Argv 对象会作为 `cmd.action()`, `cmd.userFields()` 等方法的回调函数
 - **next:** `Next` 中间件的 next 回调函数
 - **session:** [`Session`](./session.md) 所在的会话对象
 
-## 实例方法
+## 實體方法
 
 ### cmd.option(name, desc?, config?)
 
