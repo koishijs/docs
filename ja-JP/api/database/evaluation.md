@@ -1,4 +1,4 @@
-# 求值表达式 (Eval)
+# 評価式 (Eval)
 
 :::tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
