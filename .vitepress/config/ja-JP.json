@@ -1,5 +1,5 @@
 {
-  "description": "クロスプラットフォーム、拡張可能な高性能チャットボットフレームワーク",
+  "description": "创建跨平台、可扩展、高性能的机器人",
   "head": [
     [
       "link",
@@ -26,9 +26,9 @@
   "themeConfig": {
     "editLink": {
       "text": "Crowdin でこのページを翻訳する",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ja"
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "ナビゲーション",
+    "navText": "导航",
     "nav": [
       {
         "text": "はじめに",
@@ -39,7 +39,7 @@
         "text": "開発",
         "items": [
           {
-            "text": "开发指南",
+            "text": "開発ガイド",
             "link": "/guide/"
           },
           {
@@ -61,7 +61,7 @@
         "text": "プラグイン",
         "items": [
           {
-            "text": "マーケットプレイス",
+            "text": "マーケット",
             "link": "/market/"
           },
           {
@@ -92,7 +92,7 @@
           "text": "",
           "items": [
             {
-              "text": "紹介",
+              "text": "介绍",
               "link": "/manual/introduction.md"
             }
           ]
@@ -105,31 +105,31 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "Windows にインストール",
+              "text": "为 Windows 安装",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "macOS にインストール",
+              "text": "为 macOS 安装",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "Linux にインストール",
+              "text": "为 Linux 安装",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "Android にインストール",
+              "text": "为 Android 安装",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "コンテナーで実行",
+              "text": "在容器中使用",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "テンプレートプロジェクトの作成",
+              "text": "创建模板项目",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "パッケージとして使う",
+              "text": "作为依赖调用",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -171,11 +171,11 @@
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "プラグインマーケットでの検索",
+              "text": "搜索插件市场",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "ウェブ上で公開する",
+              "text": "公网部署",
               "link": "/manual/recipe/server.md"
             }
           ]
@@ -184,7 +184,7 @@
           "text": "启动器",
           "items": [
             {
-              "text": "システム要件",
+              "text": "系统要求",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -205,14 +205,14 @@
           ]
         },
         {
-          "text": "開発入門",
+          "text": "开发起步",
           "items": [
             {
-              "text": "環境構築",
+              "text": "环境搭建",
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "設定ファイル",
+              "text": "配置文件",
               "link": "/guide/develop/config.md"
             },
             {
@@ -220,24 +220,24 @@
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "ワークスペースでの開発",
+              "text": "工作区开发",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "プラグインを公開する",
+              "text": "发布插件",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "インタラクションの基礎",
+          "text": "交互基础",
           "items": [
             {
-              "text": "コマンドの開発",
+              "text": "指令开发",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "イベントシステム",
+              "text": "事件系统",
               "link": "/guide/basic/events.md"
             },
             {
@@ -245,20 +245,20 @@
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "メッセージ要素",
+              "text": "消息元素",
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "アドバンスト",
+              "text": "进阶用法",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "モジュール化",
+          "text": "模块化",
           "items": [
             {
-              "text": "プラグインを理解する",
+              "text": "认识插件",
               "link": "/guide/plugin/"
             },
             {
@@ -266,11 +266,11 @@
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "ライフサイクル",
+              "text": "生命周期",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "サービスと依存性",
+              "text": "服务与依赖",
               "link": "/guide/plugin/service.md"
             },
             {
@@ -295,7 +295,7 @@
               "link": "/guide/database/selection.md"
             },
             {
-              "text": "組み込みデータ構造",
+              "text": "内置数据结构",
               "link": "/guide/database/builtin.md"
             },
             {
@@ -305,7 +305,7 @@
           ]
         },
         {
-          "text": "クロスプラットフォーム",
+          "text": "跨平台",
           "items": [
             {
               "text": "基础知识",
@@ -351,7 +351,7 @@
           ]
         },
         {
-          "text": "国際化",
+          "text": "国际化",
           "items": [
             {
               "text": "基本用法",
@@ -389,7 +389,7 @@
               "link": "/api/"
             },
             {
-              "text": "用語集",
+              "text": "术语表",
               "link": "/api/glossary.md"
             }
           ]
@@ -541,14 +541,14 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "データベース",
           "items": [
             {
               "text": "数据模型 (Model)",
               "link": "/api/database/model.md"
             },
             {
-              "text": "データベース操作 (Database)",
+              "text": "数据库操作 (Database)",
               "link": "/api/database/database.md"
             },
             {
@@ -564,7 +564,7 @@
               "link": "/api/database/selection.md"
             },
             {
-              "text": "組み込みデータ構造",
+              "text": "内置数据结构",
               "link": "/api/database/built-in.md"
             }
           ]
@@ -686,7 +686,7 @@
           "text": "プラグイン",
           "items": [
             {
-              "text": "プラグインマーケットプレイス",
+              "text": "マーケット",
               "link": "/market/"
             },
             {
@@ -696,7 +696,7 @@
           ]
         },
         {
-          "text": "アダプター",
+          "text": "适配器支持",
           "items": [
             {
               "text": "钉钉",
@@ -761,7 +761,7 @@
           ]
         },
         {
-          "text": "データベース対応",
+          "text": "数据库支持",
           "items": [
             {
               "text": "メモリ",
@@ -786,40 +786,40 @@
           ]
         },
         {
-          "text": "一般機能",
+          "text": "常用功能",
           "items": [
             {
-              "text": "データ管理 (Admin)",
+              "text": "数据管理 (Admin)",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "アカウント連携 (Bind)",
+              "text": "账号绑定 (Bind)",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "ブロードキャスト (Broadcast)",
+              "text": "发送广播 (Broadcast)",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "ニックネーム設定 (Callme)",
+              "text": "设置昵称 (Callme)",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "メッセージ送信 (Echo)",
+              "text": "发送消息 (Echo)",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "ヘルプ表示 (Help)",
+              "text": "查看帮助 (Help)",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "セッション情報 (Inspect)",
+              "text": "会话信息 (Inspect)",
               "link": "/plugins/common/inspect.md"
             }
           ]
         },
         {
-          "text": "コンソール関連",
+          "text": "控制台功能",
           "items": [
             {
               "text": "数据统计 (Analytics)",
@@ -830,7 +830,7 @@
               "link": "/plugins/console/auth.md"
             },
             {
-              "text": "コマンド管理 (Commands)",
+              "text": "指令管理 (Commands)",
               "link": "/plugins/console/commands.md"
             },
             {
@@ -872,14 +872,14 @@
           ]
         },
         {
-          "text": "開発者ツール",
+          "text": "开发工具",
           "items": [
             {
-              "text": "モジュールホット置換 (HMR)",
+              "text": "模块热替换 (HMR)",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "テスト機能 (Mock)",
+              "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
@@ -902,7 +902,7 @@
           "text": "プラグイン",
           "items": [
             {
-              "text": "プラグインマーケットプレイス",
+              "text": "マーケット",
               "link": "/market/"
             },
             {
@@ -1031,11 +1031,11 @@
           "text": "关于",
           "items": [
             {
-              "text": "ライセンス",
+              "text": "许可证",
               "link": "/about/license.md"
             },
             {
-              "text": "ディスカッションに参加",
+              "text": "参与讨论",
               "link": "/about/contact.md"
             },
             {
@@ -1047,7 +1047,7 @@
               "link": "/about/faq.md"
             },
             {
-              "text": "コミュニティリソース",
+              "text": "社区资源",
               "link": "/about/community.md"
             },
             {
@@ -1060,7 +1060,7 @@
           "text": "更新",
           "items": [
             {
-              "text": "歴史",
+              "text": "发展史",
               "link": "/about/history.md"
             },
             {
@@ -1085,11 +1085,11 @@
           "text": "贡献",
           "items": [
             {
-              "text": "プロジェクトの構成",
+              "text": "项目结构",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "ドキュメント コントリビューション ガイドライン",
+              "text": "文档贡献指南",
               "link": "/about/contribute/docs.md"
             }
           ]
