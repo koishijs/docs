@@ -1,4 +1,4 @@
-# 数据模型 (Model)
+# Model : modèles de données
 
 :::tip
 参见：[开发 > 数据库 > 数据模型](../../guide/database/model.md)
