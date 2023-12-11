@@ -2,15 +2,15 @@
 layout: schema
 code: |
   Schema.object({
-  foo: Schema.string().description('默认值为 `lol` 的属性。').default('lol'),
-  bar: Schema.number().description('默认值为 `2333` 的属性。').default(2333),
-  baz: Schema.boolean().description('默认值为 `true` 的属性。').default(true),
+    foo: Schema.string().description('默认值为 `lol` 的属性。').default('lol'),
+    bar: Schema.number().description('默认值为 `2333` 的属性。').default(2333),
+    baz: Schema.boolean().description('默认值为 `true` 的属性。').default(true),
   }).description('配置项')
 ---
 
 # Valeur par défaut
 
-::: warning
+:::warning
 请注意：`.required()` 与 `.default()` 不能同时使用。
 :::
 
