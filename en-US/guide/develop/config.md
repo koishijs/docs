@@ -1,4 +1,4 @@
-# 配置文件
+# Configuration File
 
 :::warning
 配置文件的结构未来可能会发生变化，请留意后续更新。
@@ -65,9 +65,9 @@ plugins:
       enable: true
 ```
 
-### 插件名称
+### Plugin name
 
-插件名称通常对应于插件发布时的包名。例如：
+插件名称通常对应于插件发布时的包名。例如：例如：
 
 - `market` 对应于官方插件 `@koishijs/plugin-market`
 - `dialogue` 对应于社区插件 `koishi-plugin-dialogue`
@@ -88,7 +88,7 @@ plugins:
       market:
 ```
 
-### 元信息
+### Meta Information
 
 一些以 `$` 开头的属性会记录插件和插件组的元信息。例如：
 
