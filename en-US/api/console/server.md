@@ -1,4 +1,4 @@
-# 服务端 API
+# Server-side API
 
 :::tip
 本节中所涉及的 API 都在 @koishijs/plugin-console 中导出。
