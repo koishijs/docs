@@ -1,16 +1,17 @@
 # 事件系统 (Events)
 
-::: tip
+:::tip
 参见：[开发 > 交互基础 > 事件系统](../../guide/basic/events.md) <br>参见：[开发 > 模块化 > 生命周期](../../guide/plugin/lifecycle.md)
 :::
 
-::: tip
+:::tip
 本节介绍事件 API。如果想了解 Koishi 的内置事件，请前往 [API > 核心模块 > 事件](../core/events.md)。
 :::
 
 ## 实例方法
 
 ### ctx.emit(session?, event, ...param)
+
 ### ctx.parallel(session?, event, ...param)
 
 - **session:** [`Session`](../core/session.md) 会话对象
@@ -21,6 +22,7 @@
 同时触发所有 event 事件的能够匹配 session 对象的回调函数。emit 为同步，parallel 为异步。
 
 ### ctx.bail(session?, event, ...param)
+
 ### ctx.serial(session?, event, ...param)
 
 - **session:** [`Session`](../core/session.md) 会话对象
