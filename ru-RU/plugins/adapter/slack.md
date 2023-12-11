@@ -8,7 +8,11 @@ Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中�
 
 2. 前往 [应用后台](https://api.slack.com/apps)，点击「Create New App」>「From Scratch」，填入应用名称和所添加的工作区 (目前适配器只支持一个应用处理一个工作区的事件)，点击「Create App」。
 
-![app-1](/adapter/slack/app-1.webp)<!-- !\[app-2\](/adapter/slack/app-2.webp) -->3. 仅限 `http` 连接方式：在跳转至的应用信息页面，在底部复制 `Signing Secret`，填入插件的 [`signing`](#config-signing) 字段。
+![app-1](/adapter/slack/app-1.webp)
+
+<!-- ![app-2](/adapter/slack/app-2.webp) -->
+
+3. 仅限 `http` 连接方式：在跳转至的应用信息页面，在底部复制 `Signing Secret`，填入插件的 [`signing`](#config-signing) 字段。
 
 ![secret-1](/adapter/slack/secret-1.webp)
 
@@ -40,19 +44,19 @@ Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中�
 
 ### 推荐的事件列表
 
-- channel_archive
-- channel_created
-- channel_deleted
-- channel_left
-- channel_rename
-- member_joined_channel
-- member_left_channel
+- channel\_archive
+- channel\_created
+- channel\_deleted
+- channel\_left
+- channel\_rename
+- member\_joined\_channel
+- member\_left\_channel
 - message.channels
 - message.groups
 - message.im
-- reaction_added
-- reaction_removed
-- team_join
+- reaction\_added
+- reaction\_removed
+- team\_join
 
 ### 推荐的权限列表
 
