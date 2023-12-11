@@ -1,4 +1,4 @@
-# 其他工具 (Misc)
+# 雑用ツール (Misc)
 
 :::tip
 本节中的 API 来自 [cosmokit](https://github.com/shigma/cosmokit)，并由 Koishi 重新导出。
