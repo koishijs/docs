@@ -1,4 +1,4 @@
-# Guide avancée de développement
+# 进阶指南
 
 欢迎来到 Koishi 开发文档的进阶篇！在 [开发指南](../guide/index.md) 中，我们已经系统地介绍了 Koishi 的基本用法。而进阶指南则会以专题的形式，深入探讨 Koishi 的设计原理和最佳实践。
 
