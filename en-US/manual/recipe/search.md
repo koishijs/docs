@@ -1,18 +1,20 @@
-# 搜索插件市场
+# Search Marketplace
 
-Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
+There are many plugins in the Koishi marketplace.
+A set of search query syntax was provided in order to make the searching experience smooth and convinient.
+你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
-## 搜索词
+## Search Terms
 
-除去含有冒号的特殊语法外，你输入的搜索词会被用于查询：
+In addition to special syntax with colon numbers, the search term you enter will be used for querying：
 
-- 插件名称
-- 插件描述
-- 插件的关键词
+- Plugin name
+- Plugin description
+- Plugin keywords
 
-## 插件标识
+## Plugin identification
 
-我们提供了四种插件标识，它们本身也是过滤条件。包括：
+We provide four categories of plugin identifiers, which are also filters.Including:
 
 <div class="plugin-flags-list">
 
@@ -33,11 +35,11 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 </div>
 
-上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
+上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
 
-## 插件分类
+## Plugin Categories
 
-我们目前提供了 14 个基础分类。它们分别是：
+We currently offer 14 base categories. They are:
 
 <div class="plugin-flags-list">
 
@@ -58,18 +60,18 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 </div>
 
-插件的分类由 Koishi 团队成员负责维护，通常在插件发布后的一周内完成。极少数插件不会属于任何类别。如果你认为你的插件没有被正确分类，可以提交议题进行反馈。
+The categories of plugins are maintained by members of the Koishi team, usually within one week after the plugin is published.Very few plugins do not belong to any category.If you think your plugin is not sorted correctly, you can submit an issue for feedback.
 
-## 插件排序
+## Sort Plugins
 
-插件市场中的插件会默认根据其评分进行排序。评分是一个 0\~5 之间的数值，并在四舍五入后会显示为星星的个数。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
+Plugins in the marketplace will be sorted by default according to their ratings.Rating is a value between 0 and 5 and will show as stars after rounded.Rating is weighted by multiple indicators, with some common indicators listed below:
 
-- 插件是否开源
-- 插件是否被标记为不安全 / 开发中
-- 插件的下载量
-- 插件的安装体积
+- Open-sourced
+- Mark as insecure/preview
+- Downloads of the plugin
+- Size of the plugin
 
-除了按照评分排序，你还可以选择其他的排序方式：
+Beside to sort by rating, you can also choose another sorting method:
 
 <div class="plugin-flags-list">
 
@@ -79,7 +81,7 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 </div>
 
-如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。在侧边栏中，你可以点击排序方式进行排序，点击第二次反向排序，点击第三次则会取消排序。
+如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。In the sidebar, you can click on the "Sort Type" to sort, click twice to reverse the sequencing, click three times to cancel the sequencing.
 
 ## Instant Preview
 
@@ -87,7 +89,7 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) 是一个在线的 Koishi 运行时。你可以在其中快速体验插件的功能，而无需在本地安装 Koishi。适配了 k-on! 的插件会显示一个闪电按钮，点击即可快速创建一个 k-on! 实例。如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
+[Koishi Online (k-on!)](https://koishi.online) 是一个在线的 Koishi 运行时。You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
 
 <script lang="ts" setup>
 import { MarketIcon } from '@koishijs/market'
