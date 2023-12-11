@@ -23,7 +23,7 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 - [ctx.serial](../service/events.md#ctx-serial)
 - [ctx.using](../service/registry.md#ctx-using)
 
-## 实例方法
+## 實體方法
 
 ### ctx.action(id, options) <badge type="warning">实验性</badge>
 
