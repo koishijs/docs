@@ -1,6 +1,6 @@
-# Logger
+# 输出日志 (Logger)
 
-::: tip
+:::tip
 本节中的 API 来自 [reggol](https://github.com/shigma/reggol)，并由 Koishi 重新导出。
 :::
 
@@ -82,6 +82,6 @@ logger:
 
 以不同的输出等级输出日志。参数的使用方法与 [`console.log`](https://developer.mozilla.org/zh-CN/docs/Web/API/Console/log) 相同。
 
-::: tip
+:::tip
 运行时产生的错误 (如请求失败，数据库访问失败等) 都属于 warning，只有在创建阶段和连接阶段抛出的错误才会通过 error 输出 (参见 [生命周期](../../guide/plugin/lifecycle.md))。
 :::
