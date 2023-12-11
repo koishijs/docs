@@ -1,4 +1,4 @@
-# Running Status (Status)
+# 运行状态 (Status)
 
 ## 指令：status
 
@@ -45,6 +45,7 @@ template.set('status', {
   ].join('\n'),
 })
 ```
+
 </div>
 
 ## 配置项
