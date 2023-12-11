@@ -1,4 +1,4 @@
-# 设置昵称 (Callme)
+# Callme : Paramètre de pseudonyme
 
 :::tip
 要使用本插件，你需要安装数据库支持。
