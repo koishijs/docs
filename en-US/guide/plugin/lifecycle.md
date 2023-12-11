@@ -1,52 +1,52 @@
-# 生命周期
+# Lifecycle
 
-在 [事件系统](../basic/events.md) 中，我们已经了解了由聊天平台推送的会话事件。除此以外，Koishi 也提供了一些生命周期事件。这些事件会在某些 Koishi 的运行阶段被触发，你可以通过监听它们来实现各种各样的功能。本节主要介绍与插件开发相关的一些核心事件。
+在 [事件系统](../basic/events.md) 中，我们已经了解了由聊天平台推送的会话事件。In addition to these, Koishi also provides various lifecycle events. These events are triggered at specific phases during Koishi's lifetime, and you can implement various functionalities by listening to them. This section mainly introduces some core events relevant to plugin development.
 
 要了解 Koishi 所提供的全部事件，可以参考 [事件列表](../../api/core/events.md)。
 
 ## 异步加载与 `ready` 事件
 
-`ready` 事件在应用启动时触发。如果一个插件在加载时，应用已经处于启动状态，则会立即触发。在下面的场景建议将逻辑放入 `ready` 事件：
+`ready` 事件在应用启动时触发。If a plugin is loaded while the application is already in a started state, the ready event will be triggered immediately. 在下面的场景建议将逻辑放入 `ready` 事件：
 
-- 含有异步操作 (比如文件操作，网络请求等)
-- 希望等待其他插件加载完成后才执行的操作
+- Contains asynchronous operations (e.g., file operations, network requests, etc.)
+- Actions to be performed only after all other plugins have been loaded
 
 ## 副作用与 `dispose` 事件
 
-### 停用插件
+### Unload Plugins
 
-之前我们已经了解了插件的启用，而 Koishi 同样支持在运行时停用一个插件。`ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
+We have previously understood how to enable plugins; Koishi also supports disabling a plugin at runtime. `ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
 
 ```ts
 import { Context } from 'koishi'
 
 function callback(ctx: Context) {
-  // 编写你的插件逻辑
+  // Write your plugin logic here
   ctx.on('message', callback1)
   ctx.command('foo').action(callback2)
   ctx.middleware(callback3)
   ctx.plugin(require('another-plugin'))
 }
 
-// 加载插件
+// Load the plugin
 const fork = ctx.plugin(callback)
 
-// 停用这个插件，取消上述全部副作用
+// Disable this plugin, removing all its side effects
 fork.dispose()
 ```
 
 对于可重用的插件，`fork.dispose()` 也只会停用 `fork` 对应的那一次。如果你想取消全部的副作用，可以使用 `ctx.registry.delete()`：
 
 ```ts
-// 移除可重用插件的全部副作用
+// Remove all side effects from a reusable plugin
 ctx.registry.delete(plugin)
 ```
 
-### 清除副作用
+### Clean up side effects
 
-Koishi 的插件系统支持热重载，即任何一个插件可能在运行时被多次加载和卸载。要实现这一点，我们就必须在插件被卸载时清除它的所有副作用。
+Koishi's plugin system supports hot reloading, meaning that any plugin might be loaded and unloaded multiple times at runtime. To make this possible, all side effects of a plugin must be cleaned up when it is unloaded.
 
-绝大部分 `ctx` 方法都会在在插件被停用自动回收副作用；然而，如果你使用了 `ctx` 之外的方法，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。下面是一个例子：
+绝大部分 `ctx` 方法都会在在插件被停用自动回收副作用；然而，如果你使用了 `ctx` 之外的方法，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。Below is an example:
 
 ```ts
 // 一个示例的服务器插件
@@ -70,9 +70,9 @@ export function apply(ctx: Context, config) {
 
 ## 可重用性与 `fork` 事件
 
-### 可重用插件
+### Reusable Plugins
 
-到此为止，我们所介绍的插件开发都限定在插件只能同时启用一份的情况。如果你想要在同一个应用中同时启用多份插件，会发生什么呢？
+Until now, the plugin development we discussed was limited to scenarios where only one instance of a plugin could be activated at a time. What happens if you want to load multiple instances of a plugin in the same application?
 
 ```ts
 function callback() {
@@ -85,9 +85,9 @@ ctx.plugin(callback)
 
 执行上面的代码，你会发现 `called` 只会被打印一次。这是因为 `ctx.plugin()` 会检测插件是否已经被加载：如果是，则会直接返回之前的 `Fork` 对象，而不会再次执行插件的逻辑。
 
-采用这种设计的主要原因是，插件往往会占用某些资源，因此重复启用会导致预期之外的问题。例如，一个插件注册了某个指令，如果重复启用，那么这个指令也会被重复注册。而当用户调用这个指令时，究竟要执行哪个指令的逻辑呢？这显然是不合理的。
+The primary reason for this design is that plugins often consume resources. Activating a plugin multiple times could lead to unexpected issues. For instance, a plugin might register a specific command; activating it multiple times would result in multiple registrations of the same command, creating ambiguity when the command is invoked.
 
-不过也不能因此就认为所有插件都不应该被重用。如果你真的有这样的需求，Koishi 也提供了方法——只需声明插件的 `reusable` 属性为 `true` 即可。参考下面的例子：
+However, this doesn't mean that all plugins should not be reused. 如果你真的有这样的需求，Koishi 也提供了方法——只需声明插件的 `reusable` 属性为 `true` 即可。Here's an example:
 
 ```ts title=reply.ts
 export const name = 'reply'
@@ -109,7 +109,7 @@ export function apply(ctx: Context, config: Config) {
 }
 ```
 
-然后我们可以多次调用此插件了：
+Then, we can load this plugin multiple times:
 
 ```ts
 import * as reply from './reply'
@@ -127,9 +127,9 @@ export default class Bar {
 }
 ```
 
-### 维护共享状态
+### Maintain Shared States
 
-一种更复杂的情况是，我们既需要插件可重用，又需要维护一些共享状态。例如，我们能否编写一个指令，使得它总是返回插件被调用的次数呢？这时候 `fork` 事件就派上用场了：
+A more complex situation arises when we need plugins to be reusable and maintain some shared state. For example, can we write a command that always returns the number of times the plugin has been invoked? 这时候 `fork` 事件就派上用场了：
 
 ```ts title=count.ts
 export const name = 'count'
@@ -156,16 +156,16 @@ export function apply(ctx: Context) {
 
 最后，`fork` 事件的回调函数与插件本身类似，也接受 `ctx` 和 `config` 两个参数，分别对应于该次调用时传入插件的参数。外侧和内侧的 `ctx` 含义不同，请格外注意。
 
-### 嵌套插件的可重用性
+### Nested Plugin Reusability
 
-让我们重新梳理一下可重用插件的概念：
+Let's revisit the concept of reusable plugins:
 
 1. 根据插件的 `reusable` 属性，可以将插件分为可重用插件和不可重用插件：不可重用插件被调用多次时，只会执行一次插件逻辑；而可重用插件被调用多次时，会执行多次插件逻辑；
 2. 这两种类型本质上都可以使用 `fork` 事件来表达：不可重用插件的逻辑写在 `fork` 事件的外侧，而可重用插件的逻辑写在 `fork` 事件的内侧。
 
 当我们嵌套使用可重用插件和不可重用插件时，又会发生什么呢？让我们来看一些例子吧。
 
-#### 情况一：不可重用插件嵌套可重用插件
+#### Condition I: reusable plugin in non-reusable plugins
 
 实际上我们会发现，`reusable` 属性只是 `fork` 事件的语法糖。下面两种写法是等价的：
 
@@ -188,7 +188,7 @@ ctx.plugin((ctx) => {
 
 然而，如果你直接将可重用插件嵌套在不可重用插件中，由于外层的插件只会执行一次，所以内层的插件也并不会被重复执行。这显然不是我们想要的结果。这就是为什么我们需要 `fork` 事件。当你需要在不可重用的插件中重用某段代码，你就应该使用 `fork` 事件，就像上面的例子一样。
 
-#### 情况二：可重用插件嵌套不可重用插件
+#### Condition II: non-reusable plugin in reusable plugins
 
 反过来的情况则更加自然：如果你在可重用插件内调用了一个不可重用的插件，那么可重用插件将被多次执行，而不可重用则会确保只被执行一次。这种写法常常用于注册指令或其他服务：
 
@@ -216,7 +216,7 @@ export function apply(ctx: Context, config: Config) {
 }
 ```
 
-## 重新认识上下文
+## Rethinking Contexts
 
 从学习 Koishi 开发的一开始，我们就已经接触到了 **上下文 (Context)** 这个概念。我们所熟悉的 `ctx.on()`, `ctx.middleware()` 以及 `ctx.command()` 等等 API 都是上下文类所提供的方法。而在本节中，我们进一步看到，上下文在插件开发中扮演着非常重要的角色。
 
