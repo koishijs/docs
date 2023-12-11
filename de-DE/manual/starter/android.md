@@ -1,7 +1,7 @@
 ---
 prev:
   text: 选择安装方式
-  link: /de-DE/manual/starter/
+  link: /zh-CN/manual/starter/
 next:
   text: 安装和配置插件
   link: /zh-CN/manual/usage/market.html
@@ -9,11 +9,11 @@ next:
 
 # 为 Android 安装
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
+:::danger
 此项目仍在早期开发中。部分功能可能不可用。
 :::
 
@@ -25,7 +25,7 @@ next:
 
 ## Installation
 
-Die Installation von Koishi über das Installationspaket ist die empfohlene Installationsmethode, da es alles automatisch für das System konfiguriert. In den meisten Fällen sollten Sie diese Methode wählen.
+通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
 ## 启动
 
