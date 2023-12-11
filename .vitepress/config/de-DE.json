@@ -1,5 +1,5 @@
 {
-  "description": "Entwicklung von Robotern mit hoher Leistung, die plattformübergreifend und erweiterbares sind",
+  "description": "创建跨平台、可扩展、高性能的机器人",
   "head": [
     [
       "link",
@@ -26,9 +26,9 @@
   "themeConfig": {
     "editLink": {
       "text": "Übersetzen dieser Seite auf Crowdin",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-de"
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "Navigation",
+    "navText": "导航",
     "nav": [
       {
         "text": "Anfängerleitfaden",
@@ -58,7 +58,7 @@
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "Plugins",
+        "text": "插件",
         "items": [
           {
             "text": "Marktplatz",
@@ -92,7 +92,7 @@
           "text": "",
           "items": [
             {
-              "text": "Einleitung",
+              "text": "介绍",
               "link": "/manual/introduction.md"
             }
           ]
@@ -105,31 +105,31 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "Installation für Windows",
+              "text": "为 Windows 安装",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "Installation für macOS",
+              "text": "为 macOS 安装",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "Installation für Linux",
+              "text": "为 Linux 安装",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "Installation für Android",
+              "text": "为 Android 安装",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "Installation für Container",
+              "text": "在容器中使用",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "Vorlagenprojekt erstellen",
+              "text": "创建模板项目",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "Als Abhängigkeit verwenden",
+              "text": "作为依赖调用",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -299,7 +299,7 @@
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "Berechtigungsverwaltung",
               "link": "/guide/database/permission.md"
             }
           ]
@@ -686,7 +686,7 @@
           "text": "插件",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Marktplatz",
               "link": "/market/"
             },
             {
@@ -902,7 +902,7 @@
           "text": "插件",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Marktplatz",
               "link": "/market/"
             },
             {
