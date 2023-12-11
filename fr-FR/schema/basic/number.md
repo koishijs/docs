@@ -7,7 +7,7 @@ code: |
   }).description('配置项')
 ---
 
-# 数值 (Number)
+# Number : Nombre
 
 `Schema.number()` 描述了一个数值，支持输入框和滑块。
 
