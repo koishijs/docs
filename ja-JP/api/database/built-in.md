@@ -1,6 +1,6 @@
-# 組み込みデータ構造
+# 内置数据结构
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
 :::
 
@@ -11,75 +11,75 @@ Koishi 的数据库 API 实际上分为两部分：
 
 这一页中将仅展示第二部分的内容。另一部分的内容请参见 [数据库操作](./database.md)。
 
-## 組み込みテーブル
+## 内置表
 
 ### User
 
-- **id:** `id` ユーザー ID
-- **name:** `string` ユーザー名
+- **id:** `id` 用户 ID
+- **name:** `string` 用户昵称
 - **authority:** `number` [权限等级](../../guide/database/permission.md)
 - **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
 - **locales:** `string[]` 语言列表
 
 ### Binding
 
-- **aid:** `id` ユーザー ID
-- **platform:** `string` プラットフォーム名
+- **aid:** `id` 用户 ID
+- **platform:** `string` 平台名
 - **pid:** `string` 平台账号
 
 ### Channel
 
-- **platform:** `string` プラットフォーム名
+- **platform:** `string` 平台名
 - **id:** `string` 平台账号
 - **assignee:** `string` [受理人](../../manual/usage/customize.md#受理人机制)
 - **permissions:** `string[]` [权限列表](../../guide/database/permission.md)
 - **locales:** `string[]` 语言列表
 
-## 組み込みインスタンスメソッド
+## 内置实例方法
 
-以下のインスタンスメソッドは @koishijs/core で実装されます。
+下列实例方法直接由 @koishijs/core 提供实现。
 
 ### ctx.database.getUser(platform, id, modifier?)
 
-- **platform:** `string` プラットフォーム名
-- **id:** `string` ユーザー識別子
-- **modifier:** `QueryModifier<User.Field>` クエリ修飾子
-- 戻り値: `Promise<User>` ユーザーデータ
+- **platform:** `string` 平台名
+- **id:** `string` 用户标识符
+- **modifier:** `QueryModifier<User.Field>` 请求修饰符
+- 返回值: `Promise<User>` 用户数据
 
-データベースにユーザーデータをリクエストします。
+向数据库请求用户数据。
 
 ### ctx.database.setUser(platform, id, data)
 
-- **platform:** `string` プラットフォーム名
-- **id:** `string` ユーザー識別子
-- **data:** `User` 変更・追加するデータ
-- 戻り値: `Promise<void>`
+- **platform:** `string` 平台名
+- **id:** `string` 用户标识符
+- **data:** `User` 要修改 / 添加的数据
+- 返回值: `Promise<void>`
 
-データベースにユーザーデータを修正・追加します。
+向数据库修改或添加用户数据。
 
 ### ctx.database.getChannel(platform, id, fields?)
 
-- **platform:** `string` プラットフォーム名
-- **id:** `string` チャンネル識別子
-- **fields:** `QueryModifier<User.Field>` クエリ修飾子
-- 戻り値: `Promise<Channel>` チャンネルデータ
+- **platform:** `string` 平台名
+- **id:** `string` 频道标识符
+- **fields:** `QueryModifier<User.Field>` 请求修饰符
+- 返回值: `Promise<Channel>` 频道数据
 
-データベースにチャンネルデータをリクエストします。
+向数据库请求频道数据。
 
-### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">非推奨</badge>
+### ctx.database.getAssignedChannels(fields?, platform?, assignees?) <badge type="danger">废弃</badge>
 
-- **fields:** `ChannelField[]` リクエストするフィールド。デフォルトはすべてのフィールドです。
-- **platform:** `string` プラットフォーム名。デフォルトはすべてのプラットフォームです。
-- **assignees:** `string[]` 代理人リスト。デフォルトは現在実行されているすべてのボットです。
-- 戻り値: `Promise<Channel[]>` チャンネルデータリスト
+- **fields:** `ChannelField[]` 请求的字段，默认为全部字段
+- **platform:** `string` 平台名，默认为全平台
+- **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
+- 返回值: `Promise<Channel[]>` 频道数据列表
 
-データベースに特定のボットが管理するすべでのチャンネルデータをリクエストします。ここにある二つの引数のどちらを選んでも、正しく認識されます。
+向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
 
 ### ctx.database.setChannel(platform, id, data)
 
-- **platform:** `string` プラットフォーム名
-- **id:** `number` チャンネル識別子
-- **data:** `Channel` 修正・追加するデータ
-- 戻り値: `Promise<void>`
+- **platform:** `string` 平台名
+- **id:** `number` 频道标识符
+- **data:** `Channel` 要修改 / 添加的数据
+- 返回值: `Promise<void>`
 
-データベースにチャンネルデータを修正・追加します。
+向数据库修改或添加频道数据。
