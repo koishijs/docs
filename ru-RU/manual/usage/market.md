@@ -1,7 +1,7 @@
 ---
 prev:
   text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  link: /ru-RU/manual/starter/
 ---
 
 # 安装和配置插件
