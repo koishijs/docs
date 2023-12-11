@@ -8,7 +8,8 @@
 
 一个典型的元素包含名称、属性和内容。在 Koishi 中，我们通常使用 JSX 或 API 的方式创建元素。下面是一些例子：
 
-::: tabs code
+:::tabs code
+
 ```tsx title=JSX
 // 欢迎 @用户名 入群！
 session.send(<>欢迎 <at id={userId}/> 入群！</>)
@@ -16,6 +17,7 @@ session.send(<>欢迎 <at id={userId}/> 入群！</>)
 // 发送一张 Koishi 图标
 session.send(<image url="https://koishi.chat/logo.png"/>)
 ```
+
 ```ts title=API
 // 欢迎 @用户名 入群！
 session.send('欢迎 ' + h('at', { id: session.userId }) + ' 入群！')
@@ -23,6 +25,7 @@ session.send('欢迎 ' + h('at', { id: session.userId }) + ' 入群！')
 // 发送一张 Koishi 图标
 session.send(h('image', { url: 'https://koishi.chat/logo.png' }))
 ```
+
 :::
 
 这两种写法各有优劣，不同人可能会有不同的偏好。但无论哪一种写法都表达了同样的意思。
@@ -101,6 +104,7 @@ Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需�
 <chat-panel>
 <chat-message nickname="Koishi">
 <blockquote>原消息文本</blockquote>
+
 你说得对
 </chat-message>
 </chat-panel>
@@ -184,15 +188,18 @@ function Custom(attrs, children, session) {
 
 你可以直接在渲染时使用这个组件：
 
-::: tabs code
+:::tabs code
+
 ```tsx title=JSX
 // 请注意这里的大写字母
 session.send(<Custom/>)
 ```
+
 ```ts title=API
 // 请注意这里的大写字母
 session.send(h(Custom))
 ```
+
 :::
 
 ### 注册全局组件
