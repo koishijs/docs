@@ -1,5 +1,5 @@
 {
-  "description": "创建跨平台、可扩展、高性能的机器人",
+  "description": "Un cadre de développement de chatbots performant, extensible et multiplateforme",
   "head": [
     [
       "link",
@@ -28,7 +28,7 @@
       "text": "Traduire cette page sur Crowdin",
       "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
-    "navText": "导航",
+    "navText": "Navigation",
     "nav": [
       {
         "text": "Démarrage",
@@ -43,15 +43,15 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶指南",
+            "text": "Guide avancée de développement",
             "link": "/cookbook/"
           },
           {
-            "text": "API 参考",
+            "text": "Références de l'API",
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground : Schéma",
             "link": "/schema/"
           }
         ],
@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Officielles",
             "link": "/plugins/"
           }
         ],
@@ -75,11 +75,11 @@
         "text": "À propos",
         "items": [
           {
-            "text": "参与讨论",
+            "text": "Communauté de Koishi",
             "link": "/about/contact.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "Notes des versions",
             "link": "/releases/index.md"
           }
         ],
@@ -105,31 +105,31 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "为 Windows 安装",
+              "text": "Installation pour Windows",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "为 macOS 安装",
+              "text": "Installation pour macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "为 Linux 安装",
+              "text": "Installation pour Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "为 Android 安装",
+              "text": "Installation pour Android",
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "在容器中使用",
+              "text": "Utilisation dans un conteneur",
               "link": "/manual/starter/docker.md"
             },
             {
-              "text": "创建模板项目",
+              "text": "Création d'un projet modèle",
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "作为依赖调用",
+              "text": "Appellation comme une dépendance",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -138,11 +138,11 @@
           "text": "Utilisation",
           "items": [
             {
-              "text": "安装和配置插件",
+              "text": "Installation et configuration de plugins",
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次对话",
+              "text": "Conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -150,41 +150,41 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号登录与绑定",
+              "text": "Génération des comptes",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "深入定制机器人",
+              "text": "Personnalisations du bot",
               "link": "/manual/usage/customize.md"
             }
           ]
         },
         {
-          "text": "配方",
+          "text": "Recettes",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "Utilisations avancées des commandes",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "Gestion des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "Recherche sur la place de marché",
               "link": "/manual/recipe/search.md"
             },
             {
-              "text": "公网部署",
+              "text": "Déploiement",
               "link": "/manual/recipe/server.md"
             }
           ]
         },
         {
-          "text": "启动器",
+          "text": "Lanceur",
           "items": [
             {
-              "text": "系统要求",
+              "text": "Système requise",
               "link": "/manual/launcher/system.md"
             },
             {
@@ -205,14 +205,14 @@
           ]
         },
         {
-          "text": "开发起步",
+          "text": "Développement",
           "items": [
             {
-              "text": "环境搭建",
+              "text": "Configuration de l'environnement",
               "link": "/guide/develop/setup.md"
             },
             {
-              "text": "配置文件",
+              "text": "Fichier de configuration",
               "link": "/guide/develop/config.md"
             },
             {
@@ -220,24 +220,24 @@
               "link": "/guide/develop/script.md"
             },
             {
-              "text": "工作区开发",
+              "text": "Espace de travail",
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "发布插件",
+              "text": "Publication du plugin",
               "link": "/guide/develop/publish.md"
             }
           ]
         },
         {
-          "text": "交互基础",
+          "text": "Interactions de base",
           "items": [
             {
-              "text": "指令开发",
+              "text": "Commande",
               "link": "/guide/basic/command.md"
             },
             {
-              "text": "事件系统",
+              "text": "Système événement",
               "link": "/guide/basic/events.md"
             },
             {
@@ -249,32 +249,32 @@
               "link": "/guide/basic/element.md"
             },
             {
-              "text": "进阶用法",
+              "text": "Utilisation avancée",
               "link": "/guide/basic/advanced.md"
             }
           ]
         },
         {
-          "text": "模块化",
+          "text": "Modulation",
           "items": [
             {
-              "text": "认识插件",
+              "text": "À propos du plugin",
               "link": "/guide/plugin/"
             },
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/guide/plugin/schema.md"
             },
             {
-              "text": "生命周期",
+              "text": "Cycle de vie",
               "link": "/guide/plugin/lifecycle.md"
             },
             {
-              "text": "服务与依赖",
+              "text": "Service et dépendance",
               "link": "/guide/plugin/service.md"
             },
             {
-              "text": "过滤器",
+              "text": "Filtres",
               "link": "/guide/plugin/filter.md"
             }
           ]
@@ -283,19 +283,19 @@
           "text": "base de données",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/database/"
             },
             {
-              "text": "数据模型",
+              "text": "Modèle de données",
               "link": "/guide/database/model.md"
             },
             {
-              "text": "进阶查询技巧",
+              "text": "Interrogations avancées",
               "link": "/guide/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/guide/database/builtin.md"
             },
             {
@@ -305,26 +305,26 @@
           ]
         },
         {
-          "text": "跨平台",
+          "text": "Multi-plateforme",
           "items": [
             {
-              "text": "基础知识",
+              "text": "Principes de bases",
               "link": "/guide/adapter/index.md"
             },
             {
-              "text": "实现机器人",
+              "text": "Implémentation du bot",
               "link": "/guide/adapter/bot.md"
             },
             {
-              "text": "实现适配器",
+              "text": "Implémentation de l'adaptateur",
               "link": "/guide/adapter/adapter.md"
             },
             {
-              "text": "消息编码",
+              "text": "Encodé d'éléments",
               "link": "/guide/adapter/message.md"
             },
             {
-              "text": "平台集成",
+              "text": "Intégration sur la plateforme conversationnelle",
               "link": "/guide/adapter/integration.md"
             }
           ]
@@ -333,40 +333,40 @@
           "text": "Console",
           "items": [
             {
-              "text": "扩展控制台",
+              "text": "Extension de la console",
               "link": "/guide/console/index.md"
             },
             {
-              "text": "数据交互",
+              "text": "Échange avec données",
               "link": "/guide/console/data.md"
             },
             {
-              "text": "客户端开发",
+              "text": "Développement du client",
               "link": "/guide/console/client.md"
             },
             {
-              "text": "主题开发",
+              "text": "Développement du thème",
               "link": "/guide/console/theme.md"
             }
           ]
         },
         {
-          "text": "国际化",
+          "text": "Internationalisation",
           "items": [
             {
-              "text": "基本用法",
+              "text": "Utilisation de base",
               "link": "/guide/i18n/index.md"
             },
             {
-              "text": "本地化文件",
+              "text": "Fichier de localisation",
               "link": "/guide/i18n/translation.md"
             },
             {
-              "text": "语言包开发",
+              "text": "Développement de paquet de langage",
               "link": "/guide/i18n/lang-pack.md"
             },
             {
-              "text": "接入 Crowdin",
+              "text": "Collaboration avec Crowdin",
               "link": "/guide/i18n/crowdin.md"
             }
           ]
@@ -374,7 +374,7 @@
         {
           "items": [
             {
-              "text": "→ 进阶指南",
+              "text": "→ Guide avancée de développement",
               "link": "/cookbook/"
             }
           ]
@@ -389,128 +389,128 @@
               "link": "/api/"
             },
             {
-              "text": "术语表",
+              "text": "Glossaire",
               "link": "/api/glossary.md"
             }
           ]
         },
         {
-          "text": "演练场",
-          "desc": "我们专门为一些 API 提供了交互式的演练场。",
+          "text": "Playground",
+          "desc": "Nous avons spécialement conçu une aire du playground interactive pour certains API.",
           "items": [
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/schema/"
             }
           ]
         },
         {
-          "text": "核心模块",
+          "text": "Module de base",
           "items": [
             {
-              "text": "适配器 (Adapter)",
+              "text": "Adaptateur",
               "link": "/api/core/adapter.md"
             },
             {
-              "text": "应用 (App)",
+              "text": "Application",
               "link": "/api/core/app.md"
             },
             {
-              "text": "机器人 (Bot)",
+              "text": "Bot",
               "link": "/api/core/bot.md"
             },
             {
-              "text": "指令 (Command)",
+              "text": "Commande",
               "link": "/api/core/command.md"
             },
             {
-              "text": "上下文 (Context)",
+              "text": "Contexte",
               "link": "/api/core/context.md"
             },
             {
-              "text": "事件 (Events)",
+              "text": "Événement",
               "link": "/api/core/events.md"
             },
             {
-              "text": "会话 (Session)",
+              "text": "Session",
               "link": "/api/core/session.md"
             }
           ]
         },
         {
-          "text": "内置服务",
+          "text": "Service interne",
           "items": [
             {
-              "text": "事件系统 (Events)",
+              "text": "Events : événements",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "Filter : filtres",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "HTTP : requête d'HTTP",
               "link": "/api/service/http.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "I18n : internationalisation",
               "link": "/api/service/i18n.md"
             },
             {
-              "text": "加载器 (Loader)",
+              "text": "Loader : chargeur",
               "link": "/api/service/loader.md"
             },
             {
-              "text": "权限管理 (Permissions)",
+              "text": "Permissions : génération des permissions",
               "link": "/api/service/permissions.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "Registry : système des plugins",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
+              "text": "Router : service network",
               "link": "/api/service/router.md"
             }
           ]
         },
         {
-          "text": "平台资源",
+          "text": "Ressources",
           "items": [
             {
-              "text": "频道 (Channel)",
+              "text": "Channel : canaux",
               "link": "/api/resources/channel.md"
             },
             {
-              "text": "群组 (Guild)",
+              "text": "Guild : guildes",
               "link": "/api/resources/guild.md"
             },
             {
-              "text": "群组成员 (GuildMember)",
+              "text": "GuildMember : membres de la guilde",
               "link": "/api/resources/member.md"
             },
             {
-              "text": "群组角色 (GuildRole)",
+              "text": "GuildRole : rôles de la guilde",
               "link": "/api/resources/role.md"
             },
             {
-              "text": "交互 (Interaction)",
+              "text": "Interactions",
               "link": "/api/resources/interaction.md"
             },
             {
-              "text": "登录状态 (Login)",
+              "text": "Login : état de connexion",
               "link": "/api/resources/login.md"
             },
             {
-              "text": "消息 (Message)",
+              "text": "Message : messages",
               "link": "/api/resources/message.md"
             },
             {
-              "text": "表态 (Reaction)",
+              "text": "Reaction : réactions",
               "link": "/api/resources/reaction.md"
             },
             {
-              "text": "用户 (User)",
+              "text": "User : comptes",
               "link": "/api/resources/user.md"
             }
           ]
@@ -519,23 +519,23 @@
           "text": "élément message",
           "items": [
             {
-              "text": "语法规范",
+              "text": "Spécification syntaxe",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "Éléments standards",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/message/components.md"
             },
             {
-              "text": "渲染函数",
+              "text": "Fonctions rendues",
               "link": "/api/message/api.md"
             },
             {
-              "text": "消息编码器",
+              "text": "Encodeur d'éléments",
               "link": "/api/message/encoder.md"
             }
           ]
@@ -544,27 +544,27 @@
           "text": "base de données",
           "items": [
             {
-              "text": "数据模型 (Model)",
+              "text": "Model : modèles de données",
               "link": "/api/database/model.md"
             },
             {
-              "text": "数据库操作 (Database)",
+              "text": "Database : opérations avec données de bases",
               "link": "/api/database/database.md"
             },
             {
-              "text": "查询表达式 (Query)",
+              "text": "Query : expression de la requête",
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "Eval : expression de la calculée",
               "link": "/api/database/evaluation.md"
             },
             {
-              "text": "查询构造器 (Selection)",
+              "text": "Selectron : constructeur de l'expression de la requête",
               "link": "/api/database/selection.md"
             },
             {
-              "text": "内置数据结构",
+              "text": "Structure des données internes",
               "link": "/api/database/built-in.md"
             }
           ]
@@ -573,40 +573,40 @@
           "text": "Console",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "API serveur",
               "link": "/api/console/server.md"
             },
             {
-              "text": "上下文 API",
+              "text": "API contexte",
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "API composable",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "内置组件",
+              "text": "Composants internes",
               "link": "/api/console/component.md"
             }
           ]
         },
         {
-          "text": "其他功能",
+          "text": "Autres fonctionnalités",
           "items": [
             {
-              "text": "观察者 (Observer)",
+              "text": "Observer : observateur",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "Logger : journal",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "Random : aléa",
               "link": "/api/utils/random.md"
             },
             {
-              "text": "其他工具 (Misc)",
+              "text": "Misc : miscellanées",
               "link": "/api/utils/misc.md"
             }
           ]
@@ -622,60 +622,60 @@
           ]
         },
         {
-          "text": "设计原理",
+          "text": "Principe de conception",
           "items": [
             {
-              "text": "项目架构",
+              "text": "Structure du projet",
               "link": "/cookbook/design/structure.md"
             },
             {
-              "text": "可逆的插件系统",
+              "text": "Système réversible de plugin",
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "从元框架到框架",
+              "text": "Du méta-framework au framework",
               "link": "/cookbook/design/framework.md"
             },
             {
-              "text": "零占用的存储",
+              "text": "Stockage avec zéro volume",
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Approfondis sur l'escape de travail",
               "link": "/cookbook/design/workspace.md"
             }
           ]
         },
         {
-          "text": "最佳实践",
+          "text": "Meilleures pratiques",
           "items": [
             {
-              "text": "资源转存",
+              "text": "Cache des fichiers de ressources",
               "link": "/cookbook/practice/assets.md"
             },
             {
-              "text": "图片渲染",
+              "text": "Rendu d'image",
               "link": "/cookbook/practice/render.md"
             },
             {
-              "text": "部署到 k-on!",
+              "text": "Déployer sur k-on !",
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "整合包开发",
+              "text": "Développement de paquet intégré",
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "Écrit des tests",
               "link": "/cookbook/practice/testing.md"
             }
           ]
         },
         {
-          "text": "案例分析",
+          "text": "Etude de cas",
           "items": [
             {
-              "text": "指令管理",
+              "text": "Gestion des commandes",
               "link": "/cookbook/appendix/commands.md"
             }
           ]
@@ -690,16 +690,16 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
         },
         {
-          "text": "适配器支持",
+          "text": "Adaptateurs",
           "items": [
             {
-              "text": "钉钉",
+              "text": "DingTalk",
               "link": "/plugins/adapter/dingtalk.md"
             },
             {
@@ -719,7 +719,7 @@
               "link": "/plugins/adapter/line.md"
             },
             {
-              "text": "邮件",
+              "text": "Courriers électroniques",
               "link": "/plugins/adapter/mail.md"
             },
             {
@@ -743,11 +743,11 @@
               "link": "/plugins/adapter/telegram.md"
             },
             {
-              "text": "微信公众号",
+              "text": "WeChat Official Account",
               "link": "/plugins/adapter/wechat-official.md"
             },
             {
-              "text": "企业微信",
+              "text": "WeCom (WeChat Work)",
               "link": "/plugins/adapter/wecom.md"
             },
             {
@@ -761,7 +761,7 @@
           ]
         },
         {
-          "text": "数据库支持",
+          "text": "Base de données",
           "items": [
             {
               "text": "Mémoire",
@@ -786,112 +786,112 @@
           ]
         },
         {
-          "text": "常用功能",
+          "text": "Fonctionnalités communes",
           "items": [
             {
-              "text": "数据管理 (Admin)",
+              "text": "Admin : Administration des données",
               "link": "/plugins/common/admin.md"
             },
             {
-              "text": "账号绑定 (Bind)",
+              "text": "Bind : Connexion des comptes",
               "link": "/plugins/common/bind.md"
             },
             {
-              "text": "发送广播 (Broadcast)",
+              "text": "Broadcast : Envoi de diffusion",
               "link": "/plugins/common/broadcast.md"
             },
             {
-              "text": "设置昵称 (Callme)",
+              "text": "Callme : Paramètre de pseudonyme",
               "link": "/plugins/common/callme.md"
             },
             {
-              "text": "发送消息 (Echo)",
+              "text": "Echo : Envoi de message",
               "link": "/plugins/common/echo.md"
             },
             {
-              "text": "查看帮助 (Help)",
+              "text": "Help : Vue d'aide",
               "link": "/plugins/common/help.md"
             },
             {
-              "text": "会话信息 (Inspect)",
+              "text": "Inspect : Inspecteur session",
               "link": "/plugins/common/inspect.md"
             }
           ]
         },
         {
-          "text": "控制台功能",
+          "text": "Fonctionnalités consoles",
           "items": [
             {
-              "text": "数据统计 (Analytics)",
+              "text": "Analytics : Analyse des données",
               "link": "/plugins/console/analytics.md"
             },
             {
-              "text": "用户登录 (Auth)",
+              "text": "Auth : Autorisation de comptes",
               "link": "/plugins/console/auth.md"
             },
             {
-              "text": "指令管理 (Commands)",
+              "text": "Commands : Gestion des commandes",
               "link": "/plugins/console/commands.md"
             },
             {
-              "text": "插件配置 (Config)",
+              "text": "Config : Configuration des plugins",
               "link": "/plugins/console/config.md"
             },
             {
-              "text": "控制台 (Console)",
+              "text": "Console : Fonctionnalités de console",
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "Explorer : gestion des fichiers",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "Insight : dépendant des plugins",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "Locales : traduction locale",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "Logger : gestion de journal",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "Market : place de marché",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Sandbox : débogage sur bac à sable",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "Status : état de fonctionnement",
               "link": "/plugins/console/status.md"
             }
           ]
         },
         {
-          "text": "开发工具",
+          "text": "Outils de développement",
           "items": [
             {
-              "text": "模块热替换 (HMR)",
+              "text": "HMR : Replacement de module d'exécution",
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Mock : Outils des tests",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
+              "text": "Server Proxy : serveur proxy",
               "link": "/plugins/develop/server-proxy.md"
             },
             {
-              "text": "API 服务器 (Server Satori)",
+              "text": "Server Satori : serveur d'API",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "临时服务器 (Server Temp)",
+              "text": "Server Temp : serveur temporaire",
               "link": "/plugins/develop/server-temp.md"
             }
           ]
@@ -906,7 +906,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Officielles",
               "link": "/plugins/"
             }
           ]
@@ -914,19 +914,19 @@
       ],
       "/schema/": [
         {
-          "text": "演练场",
+          "text": "Playground",
           "items": [
             {
-              "text": "配置构型",
+              "text": "Schéma de configuration",
               "link": "/schema/index.md"
             }
           ]
         },
         {
-          "text": "核心概念",
+          "text": "Concepts de base",
           "items": [
             {
-              "text": "必需与可选",
+              "text": "Exigence et optant",
               "link": "/schema/meta/required.md"
             },
             {
@@ -934,93 +934,93 @@
               "link": "/schema/meta/default.md"
             },
             {
-              "text": "标题与描述",
+              "text": "Titre et description",
               "link": "/schema/meta/description.md"
             },
             {
-              "text": "禁用与隐藏",
+              "text": "Désactiver et masquer",
               "link": "/schema/meta/disabled.md"
             },
             {
-              "text": "配置项外观",
+              "text": "Apparence des configurations",
               "link": "/schema/meta/role.md"
             },
             {
-              "text": "嵌套类型",
+              "text": "Type imbriqué",
               "link": "/schema/meta/nested.md"
             }
           ]
         },
         {
-          "text": "基础类型",
+          "text": "Type de base",
           "items": [
             {
-              "text": "数值 (Number)",
+              "text": "Number : Nombre",
               "link": "/schema/basic/number.md"
             },
             {
-              "text": "字符串 (String)",
+              "text": "String : Chaîne de caractères",
               "link": "/schema/basic/string.md"
             },
             {
-              "text": "布尔值 (Boolean)",
+              "text": "Boolean : Valeur booléenne",
               "link": "/schema/basic/boolean.md"
             },
             {
-              "text": "位集 (Bitset)",
+              "text": "Bitset : Stockage binaire",
               "link": "/schema/basic/bitset.md"
             },
             {
-              "text": "对象 (Object)",
+              "text": "Object : Objet",
               "link": "/schema/basic/object.md"
             },
             {
-              "text": "元组 (Tuple)",
+              "text": "Tuple : Tuple",
               "link": "/schema/basic/tuple.md"
             },
             {
-              "text": "字典 (Dict)",
+              "text": "Dict : Dictionnaire",
               "link": "/schema/basic/dict.md"
             },
             {
-              "text": "数组 (Array)",
+              "text": "Array : Tableau",
               "link": "/schema/basic/array.md"
             },
             {
-              "text": "路径 (Path)",
+              "text": "Path : Chemin",
               "link": "/schema/basic/path.md"
             }
           ]
         },
         {
-          "text": "高级类型",
+          "text": "Type avancé",
           "items": [
             {
-              "text": "Intersect：分组",
+              "text": "Intersect : groupement",
               "link": "/schema/advanced/intersect.md"
             },
             {
-              "text": "Union：单选框",
+              "text": "Union : boutons radio",
               "link": "/schema/advanced/union-select.md"
             },
             {
-              "text": "Union：联合类型",
+              "text": "Union : type conjoint",
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Union : type somme 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Union : type somme 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
-              "text": "Transform：输入转换",
+              "text": "Transform : recomposition",
               "link": "/schema/advanced/transform.md"
             },
             {
-              "text": "Computed：条件求值",
+              "text": "Computed : évaluation conditionnelle",
               "link": "/schema/advanced/computed.md"
             }
           ]
@@ -1028,68 +1028,68 @@
       ],
       "/about/": [
         {
-          "text": "关于",
+          "text": "À propos",
           "items": [
             {
-              "text": "许可证",
+              "text": "Licence ",
               "link": "/about/license.md"
             },
             {
-              "text": "参与讨论",
+              "text": "Communauté de Koishi",
               "link": "/about/contact.md"
             },
             {
-              "text": "认识团队",
+              "text": "À propos de l'équipe",
               "link": "/about/team.md"
             },
             {
-              "text": "常见问题",
+              "text": "Foire aux questions",
               "link": "/about/faq.md"
             },
             {
-              "text": "社区资源",
+              "text": "Ressources Communautaires",
               "link": "/about/community.md"
             },
             {
-              "text": "大事件",
+              "text": "Le Grand Événement",
               "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "更新",
+          "text": "Mettre à jour",
           "items": [
             {
-              "text": "发展史",
+              "text": "Histoire",
               "link": "/about/history.md"
             },
             {
-              "text": "更新计划",
+              "text": "Mettre à jour l'horaire",
               "link": "/about/releases.md"
             },
             {
-              "text": "从低版本迁移",
+              "text": "Migration depuis une version ancienne",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
         },
         {
-          "text": "贡献",
+          "text": "Contributions",
           "items": [
             {
-              "text": "项目结构",
+              "text": "Structure du projet",
               "link": "/about/contribute/structure.md"
             },
             {
-              "text": "文档贡献指南",
+              "text": "Guide de contribution des documentations",
               "link": "/about/contribute/docs.md"
             }
           ]
@@ -1100,67 +1100,67 @@
           "text": "",
           "items": [
             {
-              "text": "各版本介绍",
+              "text": "Notes des versions",
               "link": "/releases/index.md"
             },
             {
-              "text": "v4.1 版本介绍",
+              "text": "Notes de version : v4.1",
               "link": "/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "Notes de version : v4.2",
               "link": "/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "Notes de version : v4.3",
               "link": "/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "Notes de version : v4.4",
               "link": "/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "Notes de version : v4.5",
               "link": "/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "Notes de version : v4.6",
               "link": "/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "Notes de version : v4.7",
               "link": "/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "Notes de version : v4.8",
               "link": "/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "Notes de version : v4.9",
               "link": "/releases/v4.9.md"
             },
             {
-              "text": "v4.10 版本介绍",
+              "text": "Notes de version : v4.10",
               "link": "/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "Notes de version : v4.11",
               "link": "/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "Notes de version : v4.12",
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "Notes de version : v4.13",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "Notes de version : v4.14",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "Notes de version : v4.15",
               "link": "/releases/v4.15.md"
             }
           ]
@@ -1169,7 +1169,7 @@
           "text": "",
           "items": [
             {
-              "text": "更新日志",
+              "text": "Notes de mise à jour",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]
