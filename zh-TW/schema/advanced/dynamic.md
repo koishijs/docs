@@ -6,7 +6,7 @@ code: |
   }).description('配置项')
 ---
 
-# Dynamic：动态类型
+# Dynamic：動態型別
 
 :::tip
 此类型只能在 Koishi 中使用。
