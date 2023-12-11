@@ -30,7 +30,7 @@
 
 - 类型：`string`
 
-Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
+Koishi 服務暴露在公網的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
 
 ## 基础设置
 
@@ -116,7 +116,7 @@ interface DelayOptions {
 
 ## 配置文件选项
 
-::: warning
+:::warning
 下面的配置项来自 Koishi 的命令行工具，仅可在配置文件中编辑，不支持在控制台中修改。
 :::
 
