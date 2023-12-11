@@ -1,6 +1,6 @@
-# Database Plugin
+# 编写数据库插件
 
-::: danger 注意
+:::danger 注意
 此页文档正在施工，其中的内容可能不是最新。
 :::
 
