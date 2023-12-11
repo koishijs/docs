@@ -1,31 +1,31 @@
 ---
 prev:
-  text: 选择安装方式
-  link: /zh-CN/manual/starter/
+  text: Installation
+  link: /fr-FR/manual/starter/
 next:
-  text: 安装和配置插件
-  link: /zh-CN/manual/usage/market.html
+  text: Installation et configuration de plugins
+  link: /fr-FR/manual/usage/market.html
 ---
 
-# 为 macOS 安装
+# Installation pour macOS
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-## 下载
+## Téléchargement
 
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Installation
 
-通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
+Installer Koishi via le programme d'installation est la méthode la recommandée, car elle configure automatiquement tout ce dont vous avez besoin. En général, vous pouvez choisir cette méthode.
 
-## 启动
+## Démarrage
 
-安装完成后，点击 Koishi 图标即可启动。等待几秒钟，Koishi 控制台将会被打开，现在你可以开始使用 Koishi 了。
+Cliquez sur l'icône de Koishi pour le démarrer, en quelques secondes, la console Koishi s'ouvrira et vous pourrez commencer à utiliser Koishi.
 
-## 其他选择
+## Autres méthodes d'installation
 
-找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+Vous ne trouvez pas de programme d'installation qui vous convient ? 你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
