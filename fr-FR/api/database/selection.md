@@ -1,4 +1,4 @@
-# 查询构造器 (Selection)
+# Selectron : constructeur de l'expression de la requête
 
 :::tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
