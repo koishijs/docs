@@ -13,7 +13,7 @@
 - 设置别名和显示名称
 - 添加和删除子指令
 - Permission Management
-- 速率限制
+- Rate Limits
 
 与此同时，该插件也允许其他插件通过 `ctx.schema` 服务注册更多可以被该插件所配置的功能。
 
