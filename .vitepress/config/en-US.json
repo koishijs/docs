@@ -61,7 +61,7 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "marketplace",
+            "text": "Marketplace",
             "link": "/market/"
           },
           {
@@ -101,7 +101,7 @@
           "text": "",
           "items": [
             {
-              "text": "Install",
+              "text": "Installation",
               "link": "/manual/starter/"
             },
             {
@@ -129,7 +129,7 @@
               "link": "/manual/starter/boilerplate.md"
             },
             {
-              "text": "Install as a dependency",
+              "text": "Use as a Dependency",
               "link": "/manual/starter/direct.md"
             }
           ]
@@ -188,7 +188,7 @@
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "command line tool",
+              "text": "Command Line Tools",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -216,7 +216,7 @@
               "link": "/guide/develop/config.md"
             },
             {
-              "text": "launch script",
+              "text": "Launch Script",
               "link": "/guide/develop/script.md"
             },
             {
@@ -224,7 +224,7 @@
               "link": "/guide/develop/workspace.md"
             },
             {
-              "text": "Publish your plugin",
+              "text": "Publishing Plugins",
               "link": "/guide/develop/publish.md"
             }
           ]
@@ -280,7 +280,7 @@
           ]
         },
         {
-          "text": "database",
+          "text": "Database",
           "items": [
             {
               "text": "General Usage",
@@ -541,7 +541,7 @@
           ]
         },
         {
-          "text": "database",
+          "text": "Database",
           "items": [
             {
               "text": "Data Model",
@@ -686,7 +686,7 @@
           "text": "Plugins",
           "items": [
             {
-              "text": "marketplace",
+              "text": "Marketplace",
               "link": "/market/"
             },
             {
@@ -842,7 +842,7 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "File Management (Explorer)",
+              "text": "Resource Manager (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
@@ -902,7 +902,7 @@
           "text": "Plugins",
           "items": [
             {
-              "text": "marketplace",
+              "text": "Marketplace",
               "link": "/market/"
             },
             {
