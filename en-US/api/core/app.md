@@ -1,4 +1,4 @@
-# App
+# 应用 (App)
 
 **应用 (App)** 是程序的入口。可以通过 `new Context()` 构造或通过 `ctx.root` 访问。
 
@@ -116,7 +116,7 @@ interface DelayOptions {
 
 ## 配置文件选项
 
-::: warning
+:::warning
 下面的配置项来自 Koishi 的命令行工具，仅可在配置文件中编辑，不支持在控制台中修改。
 :::
 
