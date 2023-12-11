@@ -1,6 +1,6 @@
 # @koishijs/plugin-mock
 
-::: tip
+:::tip
 使用方法请参见 [开发 > 单元测试](../../cookbook/practice/testing.md) 章节。
 :::
 
