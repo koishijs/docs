@@ -4,7 +4,7 @@
 
 消息元素类似于 HTML 元素，它是组成消息的基本单位。一个元素可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。Koishi 会将这些元素转换为平台所支持的格式，以便在不同平台之间发送和接收消息。
 
-## 基本用法
+## Utilisation de base
 
 一个典型的元素包含名称、属性和内容。在 Koishi 中，我们通常使用 JSX 或 API 的方式创建元素。下面是一些例子：
 
@@ -70,7 +70,7 @@ h('p', 'hello', h('image', { url }))
 h('message', <image url="https://koishi.chat/logo.png"/>)
 ```
 
-## 标准元素
+## Éléments standards
 
 Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需求。例如：
 
