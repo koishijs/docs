@@ -1,6 +1,6 @@
-# Query Expression
+# 查询表达式 (Query)
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 基本用法](../../guide/database/index.md)
 :::
 
@@ -159,7 +159,7 @@ type Query<T> = QueryExpr<T> | Shorthand<Indexable> | Callback<T, boolean>
 
 判断列表中是否存在满足给定约束条件的元素。
 
-::: warning
+:::warning
 部分数据库可能不支持使用子条件，因此请尽量只使用 [`$eq`](#eq) 操作符。
 :::
 
