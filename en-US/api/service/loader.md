@@ -1,24 +1,24 @@
 # 加载器 (Loader) <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 这是一个实验性 API，未来可能会发生变化。
 :::
 
-::: warning
+:::warning
 此服务仅在 CLI (启动器 / 模板项目) 环境下可用，[作为依赖调用](../../manual/starter/direct.md) 的 Koishi 将不具备此服务。
 :::
 
 Loader 服务可用于管理 Koishi 实例加载的插件。通常情况下你不需要手动调用此服务，除非你在开发 [config](../../plugins/console/config.md) 或者 [HMR](../../plugins/develop/hmr.md) 这样的底层插件。
 
-## Instance Properties
+## 实例属性
 
 ### ctx.loader.envData
 
-- Type: `object`
+- 类型: `object`
 
 一个特殊的对象，可以在环境变量中存储少量数据。可以配合 `ctx.loader.fullReload()` 方法使用，以便在重启后恢复数据。
 
-::: warning
+:::warning
 如果你的插件需要持久化大量数据，请使用本地文件或者数据库。
 :::
 
