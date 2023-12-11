@@ -2,7 +2,6 @@
 
 ## 配置项
 
-
 <!-- ### title
 
 - 类型: `string`
@@ -15,21 +14,21 @@
 - 类型: `string`
 - 默认值: `/console`
 
-前端页面呈现的路径。
+前端頁面呈現的路徑。
 
 ### apiPath
 
 - 类型: `string`
 - 默认值: `/status`
 
-后端 API 服务的路径。
+後端 API 服務的路徑。
 
 ### selfUrl
 
 - 类型: `string`
 - 默认值: `''`
 
-Koishi 服务暴露在公网的地址。
+Koishi 服務暴露在公網的地址。
 
 ::: tip
 与其他需要 `selfUrl` 配置项的地方不同的是，这里的属性不会继承 `app.config.selfUrl` 的值。这是因为，由于这里缺省时会使用相对路径，网页依旧可以正常访问。
