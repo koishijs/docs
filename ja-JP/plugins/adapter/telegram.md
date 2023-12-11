@@ -8,9 +8,9 @@
 4. 使用 `/setprivacy` 关闭 Privacy Mode（设置为 DISABLED，不然机器人只能收到特定消息）
 5. 创建完毕后，你会获得一个 token（请注意不要泄露），将其作为机器人配置项即可使用
 
-参考文档：<https://core.telegram.org/bots>
+参考文档：https\://core.telegram.org/bots
 
-::: tip
+:::tip
 如果启动机器人后发现收不到不带 `/` 的消息，这很可能是由于 Privacy Mode 未开启。如果开启后仍然收不到消息，请尝试将机器人从群组中移除后重新加入。
 :::
 
