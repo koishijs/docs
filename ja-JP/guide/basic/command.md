@@ -1,6 +1,6 @@
 # 指令开发
 
-::: tip
+:::tip
 在学习本节之前，建议先完整阅读 [入门 > 指令系统](../../manual/usage/command.md)。
 :::
 
@@ -32,14 +32,14 @@ ctx.command('echo <message>')
 - 指令名可以包含数字、字母、短横线甚至中文，但不应该包含空白字符、小数点 `.` 或斜杠 `/`；小数点和斜杠的用途参见 [注册子指令](#注册子指令) 章节
 - 一个指令可以含有任意个参数，其中 **必选参数** 用尖括号包裹，**可选参数** 用方括号包裹；这些参数将作为 `action` 回调函数除 `Argv` 以外的的后续参数传入
 
-例如，下面的程序定义了一个拥有三个参数的指令，第一个为必选参数，后面两个为可选参数，它们将分别作为 `action` 回调函数的第 2~4 个参数：
+例如，下面的程序定义了一个拥有三个参数的指令，第一个为必选参数，后面两个为可选参数，它们将分别作为 `action` 回调函数的第 2\~4 个参数：
 
 ```ts
 ctx.command('test <arg1> [arg2] [arg3]')
   .action((_, arg1, arg2, arg3) => { /* do something */ })
 ```
 
-::: tip
+:::tip
 除去表达的意义不同，以及参数个数不足时使用必选参数可能产生错误信息外，这两种参数在程序上是没有区别的。与此同时，默认情况下 `action` 回调函数从第二个参数起也总是字符串。如果传入的参数不足，则对应的参数不会被传入，因此你需要自己处理可能的 `undefined`。
 :::
 
@@ -54,14 +54,15 @@ ctx.command('test <arg1> [...rest]')
 
 ### 文本参数
 
-通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。 在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
+通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。
+在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
 
 ```ts
 ctx.command('test <message:text>')
   .action((_, message) => { /* do something */ })
 ```
 
-::: tip
+:::tip
 文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](../../manual/recipe/execution.md#使用引号) 将要输入的文本包裹起来。
 :::
 
@@ -96,7 +97,6 @@ ctx.command('test [arg:number]')
 - integer: `number` 整数
 - posint: `number` 正整数
 - date: `Date` 日期
-
 
 <!-- ### 定义新类型
 
@@ -151,7 +151,6 @@ ctx.command('test [x:positive]').action((_, arg) => arg)
 <chat-message nickname="Alice">test 0.5</chat-message>
 <chat-message nickname="Koishi">参数 x 输入无效，应为整数。</chat-message>
 </chat-panel> -->
-
 
 <!-- ### 使用检查器
 
@@ -274,7 +273,7 @@ ctx.command('echo').alias('say')
 
 这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
 
-::: warning
+:::warning
 由于指令名可以在用户侧配置，因此不建议开发者设置过多的别名。此外，如果用户加载的多个插件都注册了同一个指令别名，那么后一个加载的插件将直接加载失败。
 :::
 
@@ -325,7 +324,7 @@ ctx.command('echo <message:text> 输出收到的信息')
 <chat-message nickname="Koishi">
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 </chat-message>
 </chat-panel>
@@ -349,9 +348,9 @@ ctx.command('echo <message:text>', '输出收到的信息')
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>注意：参数请写在最前面，不然会被当成 message 的一部分！</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
-<p>使用示例：</p>
+<p>例：</p>
 <p class="indent-1">echo -t 300 Hello World  五分钟后发送 Hello World</p>
 </chat-message>
 </chat-panel>
@@ -399,7 +398,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-message nickname="Koishi">
 <p>指令：bar</p>
 <p>一条看不见的指令</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">--foo &lt;text>  一个看不见的选项</p>
 </chat-message>
 </chat-panel>
