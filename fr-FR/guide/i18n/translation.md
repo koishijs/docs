@@ -1,4 +1,4 @@
-# Fichier de localisation
+# 本地化文件
 
 `i18n.define()` 允许开发者为自己的插件提供多套翻译，但直接将每种语言的翻译文本写进源代码并不利于代码的解耦。因此我们建议开发者将翻译文件写在一个单独的目录中，在插件中只需要引用这个目录中的文件即可：
 
@@ -17,11 +17,11 @@ ctx.i18n.define('en-US', require('./locales/en-US'))
 ctx.i18n.define('zh-CN', require('./locales/zh-CN'))
 ```
 
-::: tip
+:::tip
 在上面的例子中我们使用了 YAML 作为翻译文件的格式。这是因为它的语法简洁美观，非常适合本地化开发。你也可以采用 JSON 等任何你喜欢的格式进行开发。
 :::
 
-::: tip
+:::tip
 Node.js 并不支持直接加载 `.yaml` / `.yml` 后缀的文件，但我们可以通过适当的 [register](https://nodejs.org/api/cli.html#-r---require-module) 解决这个问题。对此我们的官方脚手架已经内置了相应的支持。
 :::
 
@@ -84,7 +84,7 @@ if (new Date().getHours < 12) {
 
 ## 配置本地化 <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 配置本地化仍然是实验性功能，暂不支持被其他插件扩展。
 :::
 
@@ -186,7 +186,7 @@ Schema.intersect([
 
 ## 控制台本地化 <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 控制台本地化仍然是实验性功能，暂不支持被其他插件扩展。
 :::
 
@@ -215,6 +215,6 @@ if (import.meta.hot) {
 }
 ```
 
-::: tip
+:::tip
 注意：此时你的翻译文件应当处于 `client` 目录而非 `src/locales` 目录。
 :::
