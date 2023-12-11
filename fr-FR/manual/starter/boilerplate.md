@@ -1,10 +1,10 @@
 ---
 prev:
-  text: Choisir une méthode d'installation
-  link: /fr-FR/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: Installation et configuration des plugins
-  link: /fr-FR/manual/usage/market.html
+  text: 安装和配置插件
+  link: /zh-CN/manual/usage/market.html
 ---
 
 # 创建模板项目
@@ -125,9 +125,9 @@ yarn start
 
 :::
 
-## 接下来……
+## Quelle est l'étape suivante ?
 
-Félicitations, vous avez maintenant une bonne compréhension de l'utilisation de base de Koishi ! 接下来：
+恭喜你已经掌握了 Koishi 的基本用法！接下来：
 
 - 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
