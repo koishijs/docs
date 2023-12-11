@@ -1,7 +1,7 @@
 ---
 prev:
-  text: インストール方法
-  link: /ja-JP/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
   text: 安装和配置插件
   link: /zh-CN/manual/usage/market.html
@@ -127,7 +127,7 @@ yarn start
 
 ## 次のステップ……
 
-おめでとうございます！Koishi の基本的な使い方をマスターしましたね。接下来：
+恭喜你已经掌握了 Koishi 的基本用法！接下来：
 
 - 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)
