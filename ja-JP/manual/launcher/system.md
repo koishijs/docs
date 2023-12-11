@@ -1,6 +1,6 @@
-# システム要件
+# 系统要求
 
-この章では、Koishi ランチャーがサポートするオペレーティングシステムのバージョンと機能を説明します。
+本节列出了 Koishi 启动器所需要的系统版本及该版本所支持的功能。
 
 :::tip
 下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
@@ -12,22 +12,22 @@
 
 ## Windows
 
-同一产品只列出了其最高版本。リストにないバージョンはすべてサポートされません。
+同一产品只列出了其最高版本。未列出的版本一律视为不支持。
 
 ### Windows 8.1
 
-| 製品                             | コア                   | ウインドウ                | エンハンス |
-| ------------------------------ | -------------------- | -------------------- | ----- |
-| Windows 8.1                    | :white\_check\_mark: | :white\_check\_mark: | :x:   |
-| Windows Server 2012 R2         | :white\_check\_mark: | :white\_check\_mark: | :x:   |
-| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x:   |
-| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x:   |
-| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x:   |
-| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x:   |
+| 产品                             | 核心                   | 窗口                   | 增强  |
+| ------------------------------ | -------------------- | -------------------- | --- |
+| Windows 8.1                    | :white\_check\_mark: | :white\_check\_mark: | :x: |
+| Windows Server 2012 R2         | :white\_check\_mark: | :white\_check\_mark: | :x: |
+| Hyper-V Server 2012 R2         | :x:                  | :x:                  | :x: |
+| Windows Storage Server 2012 R2 | :x:                  | :x:                  | :x: |
+| Windows Embedded 8.1 Pro       | :x:                  | :x:                  | :x: |
+| Windows Embedded 8.1 Industry  | :x:                  | :x:                  | :x: |
 
 ### Windows 10
 
-| 製品                                  | コア                   | ウインドウ                | エンハンス                |
+| 产品                                  | 核心                   | 窗口                   | 增强                   |
 | ----------------------------------- | -------------------- | -------------------- | -------------------- |
 | Version 1507                        | :x:                  | :x:                  | :x:                  |
 | Version 1511                        | :x:                  | :x:                  | :x:                  |
@@ -72,7 +72,7 @@
 
 ### Windows 11
 
-| 製品           | コア                   | ウインドウ                | エンハンス                |
+| 产品           | 核心                   | 窗口                   | 增强                   |
 | ------------ | -------------------- | -------------------- | -------------------- |
 | Version 21H2 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Version 22H2 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
