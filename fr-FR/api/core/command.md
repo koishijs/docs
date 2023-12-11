@@ -1,4 +1,4 @@
-# 指令 (Command)
+# Commande
 
 :::tip
 参见：[开发 > 交互基础 > 指令开发](../../guide/basic/command.md)
