@@ -12,7 +12,7 @@
 
 ### 开发者群
 
-[426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
+[426230045](https://jq.qq.com/?_wv=1027\&k=6FDoxQ6g)
 
 本群适用于已经有一定 Node.js / TypeScript 基础，并对 Koishi 开发感兴趣的用户——你可以在这里参与 Koishi 以及其他相关话题的深度讨论。
 
@@ -30,7 +30,7 @@
 
 ## 论坛
 
-<https://forum.koishi.xyz>
+https\://forum.koishi.xyz
 
 论坛是一种特别的讨论方式，它允许你的问题、想法、反馈被永久的保存下来，并且可以同时进行不同的讨论。你的问题在论坛有更大的可能性获得解答，并且能够保存下来让他人也受益。
 
