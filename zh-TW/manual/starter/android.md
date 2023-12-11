@@ -1,19 +1,19 @@
 ---
 prev:
-  text: 選擇安裝方式
-  link: /zh-TW/manual/starter/
+  text: 选择安装方式
+  link: /zh-CN/manual/starter/
 next:
-  text: 安裝和配置外掛
+  text: 安装和配置插件
   link: /zh-CN/manual/usage/market.html
 ---
 
 # 为 Android 安装
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
+:::danger
 此项目仍在早期开发中。部分功能可能不可用。
 :::
 
