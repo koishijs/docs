@@ -1,4 +1,4 @@
-# 内置数据结构
+# Structure des données internes
 
 :::tip
 参见：[开发 > 数据库 > 内置数据结构](../../guide/database/builtin.md)
