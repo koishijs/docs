@@ -1,31 +1,31 @@
-# Meet the Team
+# 认识团队
 
-## Core Members
+## 核心成员
 
 ### Shigma
 
-- Founder, koishijs/\*, satorijs/\*
-- https://github.com/shigma
+- 创始人，koishijs/\*，satorijs/\*
+- https\://github.com/shigma
 
 ### Il Harper
 
 - Koishi Desktop
 - Koishi Handbook
-- https://github.com/ilharp
+- https\://github.com/ilharp
 
 ### Anillc
 
 - koishijs/core, satorijs/adapter-telegram
 - Koishi Android
-- https://github.com/anillc
+- https\://github.com/anillc
 
 ### MaikoTan
 
 - Translations
 - satorijs/adapter-lark
-- https://github.com/maikotan
+- https\://github.com/maikotan
 
-## Team Members
+## 团队成员
 
 ### NWYLZW
 
@@ -35,7 +35,7 @@
 
 ### LittleC
 
-## Community Contributors
+## 社区贡献者
 
 ### i'DLisT
 
