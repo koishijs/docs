@@ -58,7 +58,7 @@
         "activeMatch": "/(guide|api|schema|cookbook)/"
       },
       {
-        "text": "plugin",
+        "text": "Plugins",
         "items": [
           {
             "text": "Place de marché",
@@ -188,7 +188,7 @@
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "outil de ligne de commande",
+              "text": "Outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -241,11 +241,11 @@
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "middleware",
+              "text": "Intergiciel",
               "link": "/guide/basic/middleware.md"
             },
             {
-              "text": "élément message",
+              "text": "Élément message",
               "link": "/guide/basic/element.md"
             },
             {
@@ -280,7 +280,7 @@
           ]
         },
         {
-          "text": "base de données",
+          "text": "Base de données",
           "items": [
             {
               "text": "Utilisation de base",
@@ -516,7 +516,7 @@
           ]
         },
         {
-          "text": "élément message",
+          "text": "Élément message",
           "items": [
             {
               "text": "Spécification syntaxe",
@@ -541,7 +541,7 @@
           ]
         },
         {
-          "text": "base de données",
+          "text": "Base de données",
           "items": [
             {
               "text": "Model : modèles de données",
@@ -683,7 +683,7 @@
       ],
       "/plugins/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Place de marché",
@@ -899,7 +899,7 @@
       ],
       "/market/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
               "text": "Place de marché",
