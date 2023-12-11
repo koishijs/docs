@@ -1,18 +1,18 @@
-# Recherche sur la place de marché
+# 搜索插件市场
 
-Il y a une multitude de plugins valides pour Koishi. Afin de faciliter la recherche des utilisateurs, nous avons mis en place une syntaxe spéciale pour la recherche. Par exemple, vous pouvez saisir `is:preview` dans la barre de recherche pour filtrer rapidement une catégorie spécifique de plugins.
+Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，我们提供了一套搜索语法。你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
-## Mots-clés
+## 搜索词
 
-En dehors de la syntaxe spéciale avec des deux-points, les mots-clés que vous saisissez seront utilisés pour la recherche dans :
+除去含有冒号的特殊语法外，你输入的搜索词会被用于查询：
 
-- Le nom du plugin
-- La description du plugin
-- Les mots-clés du plugin
+- 插件名称
+- 插件描述
+- 插件的关键词
 
-## Identifiants des plugins
+## 插件标识
 
-Actuellement, il existe quatre types d'identifiants de plugins, qui peuvent également servir de critères de filtrage :
+我们提供了四种插件标识，它们本身也是过滤条件。包括：
 
 <div class="plugin-flags-list">
 
@@ -23,7 +23,7 @@ Actuellement, il existe quatre types d'identifiants de plugins, qui peuvent éga
 
 </div>
 
-De plus, il existe d'autres critères de filtrage sans identifiant spécifique :
+此外，还有一些不带标识的过滤条件：
 
 <div class="plugin-flags-list">
 
@@ -33,12 +33,9 @@ De plus, il existe d'autres critères de filtrage sans identifiant spécifique :
 
 </div>
 
-Les critères de filtrage mentionnés ci-dessus peuvent également être inversés, par exemple `not:insecure` ou `created:
+上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
 
-
-<date`. Dans la barre à gauche, vous pouvez cliquer sur le nom de l'identifiant pour le sélectionner, un deuxième clic le sélectionne en mode inverse, et un troisième clic annule la sélection.
-
-## Catégories des plugins
+## 插件分类
 
 我们目前提供了 14 个基础分类。它们分别是：
 
@@ -65,7 +62,7 @@ Les critères de filtrage mentionnés ci-dessus peuvent également être invers�
 
 ## 插件排序
 
-插件市场中的插件会默认根据其评分进行排序。评分是一个 0~5 之间的数值，并在四舍五入后会显示为星星的个数。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
+插件市场中的插件会默认根据其评分进行排序。评分是一个 0\~5 之间的数值，并在四舍五入后会显示为星星的个数。评分由多个指标加权计算得到，下面列举出了一些常见的指标：
 
 - 插件是否开源
 - 插件是否被标记为不安全 / 开发中
@@ -86,7 +83,7 @@ Les critères de filtrage mentionnés ci-dessus peuvent également être invers�
 
 ## 快速体验
 
-::: warning
+:::warning
 快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
 :::
 
