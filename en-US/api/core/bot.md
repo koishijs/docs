@@ -1,46 +1,46 @@
-# Bot
+# 机器人 (Bot)
 
-::: tip
+:::tip
 参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
 :::
 
 **机器人 (Bot)** 是适配器的核心，它将不同平台的 API 封装成统一的格式供 Koishi 使用。而不同的适配器也可以自行扩展 Bot 实例上的属性和方法。
 
-## Instance Properties
+## 实例属性
 
 ### bot.adapter
 
-- Type: [`Adchapter`](./adapter.md)
+- 类型: [`Adapter`](./adapter.md)
 
 当前 `Bot` 所在的 [Adapter](./adapter.md) 实例。
 
 ### bot.config
 
-- Type: `object`
+- 类型: `object`
 
 构造 `Bot` 实例时所使用的配置项。
 
 ### bot.ctx
 
-- Type: [`Context`](./context.md)
+- 类型: [`Context`](./context.md)
 
 当前 `Bot` 所在的 [Context](./context.md) 实例。
 
 ### bot.internal
 
-- Type: `object`
+- 类型: `object`
 
 当前机器人的 [内部接口](../../guide/adapter/bot.md#实现内部接口)。
 
 ### bot.platform
 
-- Type: `string`
+- 类型: `string`
 
 当前 `Bot` 的 [平台名称](../glossary.md#平台-platform)。
 
 ### bot.selfId
 
-- Type: `string`
+- 类型: `string`
 
 当前 `Bot` 的平台账号。
 
@@ -56,7 +56,7 @@
 
 当前 `Bot` 的用户信息。
 
-## Adapter Related
+## 适配器相关
 
 ### bot.start()
 
@@ -74,9 +74,9 @@
 
 ### bot.dispatch(session)
 
-- **session:** [`Session`](./session.md) Session instance
+- **session:** [`Session`](./session.md) 会话实例
 
-Dispatch a session event.
+触发一个会话事件。
 
 ### bot.session(event?)
 
