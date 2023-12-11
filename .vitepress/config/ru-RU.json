@@ -26,7 +26,7 @@
   "themeConfig": {
     "editLink": {
       "text": "在 GitHub 编辑此页面",
-      "pattern": "https://crowdin.com/translate/koishi/:id/zhcn-ru"
+      "pattern": "https://github.com/koishijs/docs/edit/main/:path"
     },
     "navText": "导航",
     "nav": [
