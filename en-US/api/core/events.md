@@ -1,10 +1,10 @@
-# Events
+# 事件 (Events)
 
-::: tip
+:::tip
 参见：[开发 > 交互基础 > 事件系统](../../guide/basic/events.md) <br>参见：[开发 > 模块化 > 生命周期](../../guide/plugin/lifecycle.md)
 :::
 
-::: tip
+:::tip
 本节介绍 Koishi 的内置事件。如果想了解事件 API，请前往 [API > 内置服务 > 事件](../service/events.md)。
 :::
 
@@ -60,6 +60,7 @@
 尝试将一个未识别出指令的 Argv 对象识别成指令调用时使用。你可以在回调函数中修改传入的 Argv 对象，或者返回一个字符串表示识别出的指令。
 
 ### 事件：before-attach-channel
+
 ### 事件：before-attach-user
 
 - **session:** `Session` 当前会话
@@ -71,6 +72,7 @@
 这两个事件的触发于内置中间件中。如果没有配置数据库，则两个事件都不会触发；如果不是群聊消息，则 before-attach-channel 事件不会触发。
 
 ### 事件：attach-channel
+
 ### 事件：attach-user
 
 - **session:** `Session` 当前会话
@@ -81,6 +83,7 @@
 如果没有配置数据库，则两个事件都不会触发；如果不是群聊消息，则 attach-channel 事件不会触发。
 
 ### 事件：command/before-attach-channel
+
 ### 事件：command/before-attach-user
 
 - **session:** `Argv` 运行时参数
@@ -128,7 +131,7 @@
 
 插件被卸载时触发。参见 [清除副作用](../../guide/plugin/lifecycle.md#清除副作用)。
 
-::: warning
+:::warning
 请注意，`dispose` 事件的目的是清理副作用而不是确保数据保存。当 Koishi 进程崩溃或是被强行中止时，`dispose` 事件都可能不会触发。为了保护你的数据，你应当在每一次修改后立即上传数据，而不是在 `dispose` 中处理收尾工作。
 :::
 
