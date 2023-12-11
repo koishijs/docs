@@ -2,16 +2,16 @@
 layout: schema
 code: |
   Schema.object({
-  foo: Schema.number().disabled().description('这是一个禁用配置项。'),
-  bar: Schema.number().hidden().description('这是一个隐藏配置项。'),
-  baz: Schema.string().deprecated().description('这是一个已废弃配置项。'),
-  qux: Schema.string().experimental().description('这是一个实验性配置项。'),
-  choice: Schema.union([
-  Schema.const('foo').disabled(),
-  Schema.const('bar').hidden(),
-  Schema.const('baz').deprecated(),
-  Schema.const('qux').experimental(),
-  ]).description('这些功能在 select 中也可以使用。'),
+    foo: Schema.number().disabled().description('这是一个禁用配置项。'),
+    bar: Schema.number().hidden().description('这是一个隐藏配置项。'),
+    baz: Schema.string().deprecated().description('这是一个已废弃配置项。'),
+    qux: Schema.string().experimental().description('这是一个实验性配置项。'),
+    choice: Schema.union([
+      Schema.const('foo').disabled(),
+      Schema.const('bar').hidden(),
+      Schema.const('baz').deprecated(),
+      Schema.const('qux').experimental(),
+    ]).description('这些功能在 select 中也可以使用。'),
   }).description('配置项')
 ---
 
