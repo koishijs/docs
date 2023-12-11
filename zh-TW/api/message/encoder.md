@@ -1,10 +1,10 @@
 # 消息编码器 (MessageEncoder) <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 这是一个实验性功能，未来可能发生改动。
 :::
 
-::: tip
+:::tip
 参见：[开发 > 跨平台 > 消息编码](../../guide/adapter/message.md)
 :::
 
