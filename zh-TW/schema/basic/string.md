@@ -2,16 +2,16 @@
 layout: schema
 code: |
   Schema.object({
-  text: Schema.string().pattern(/^fff$/i).description('一段普通的文本。'),
-  secret: Schema.string().role('secret').default('password').description('请输入密码。'),
-  link: Schema.string().role('link').default('https://github.com').description('点击访问链接。'),
-  area: Schema.string().role('textarea', { rows: [2, 4] }).description('在下方输入多行文本。'),
-  color: Schema.string().role('color').description('选择一个颜色。'),
-  custom: Schema.string().pattern(/^custom$/i).description('这里只能输入 `custom`。'),
+    text: Schema.string().pattern(/^fff$/i).description('一段普通的文本。'),
+    secret: Schema.string().role('secret').default('password').description('请输入密码。'),
+    link: Schema.string().role('link').default('https://github.com').description('点击访问链接。'),
+    area: Schema.string().role('textarea', { rows: [2, 4] }).description('在下方输入多行文本。'),
+    color: Schema.string().role('color').description('选择一个颜色。'),
+    custom: Schema.string().pattern(/^custom$/i).description('这里只能输入 `custom`。'),
   }).description('配置项')
 ---
 
-# 字串 (String)
+# 字符串 (String)
 
 `Schema.string()` 描述了一个字符串，支持多种特殊外观。
 
