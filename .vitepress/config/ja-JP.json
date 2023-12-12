@@ -469,8 +469,8 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "ネットワークサービス (Router)",
-              "link": "/api/service/router.md"
+              "text": "网络服务 (Server)",
+              "link": "/api/service/server.md"
             }
           ]
         },
