@@ -1,7 +1,7 @@
 ---
 layout: home
 links:
-  starter: /en-US/manual/starter/
+  starter: /zh-CN/manual/starter/
 home:
   desc: Cross-platform Chatbot Framework Made With Love
   primary: 即刻起步
