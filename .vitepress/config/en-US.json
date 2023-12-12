@@ -1072,7 +1072,7 @@
               "link": "/about/upgrade.md"
             },
             {
-              "text": "各版本介绍",
+              "text": "Release Notes",
               "link": "/releases/index.md"
             },
             {
@@ -1100,7 +1100,7 @@
           "text": "",
           "items": [
             {
-              "text": "各版本介绍",
+              "text": "Release Notes",
               "link": "/releases/index.md"
             },
             {
