@@ -20,8 +20,7 @@ next:
 
 ## Install
 
-It is recommended to install Koishi from the installer, which would deal with most of the problems automatically.
-You should choose this method in general.
+You can install Koishi via the Koishi installer, which would deal with most of the problems automatically.This is recommended in general.
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
