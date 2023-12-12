@@ -1,7 +1,7 @@
 ---
 prev:
   text: Installation
-  link: /en-US/manual/starter/
+  link: /zh-CN/manual/starter/
 next:
   text: Install and Configure Plugins
   link: /en-US/manual/usage/market.html
