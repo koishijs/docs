@@ -92,12 +92,12 @@ if (session) this.dispatch(session)
 
 ```ts
 export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
-  static inject = ['router']
+  static inject = ['server']
 
   constructor(public ctx: C) {
     super()
 
-    ctx.router.post('/line', async (ctx) => {
+    ctx.server.post('/line', async (ctx) => {
       const { destination, events } = ctx.request.body
       const bot = this.bots.find(bot => bot.selfId === destination)
       if (!bot) return ctx.status = 403
@@ -114,7 +114,7 @@ export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
   async start(bot: LineBot) {
     await this.getLogin()
     await bot.internal.setWebhookEndpoint({
-      endpoint: this.ctx.router.config.selfUrl + '/line',
+      endpoint: this.ctx.server.config.selfUrl + '/line',
     })
   }
 }
@@ -125,11 +125,11 @@ export class HttpServer<C extends Context> extends Adapter<C, LineBot<C>> {
 ```ts
 await this.getLogin()
 await bot.internal.setWebhookEndpoint({
-  endpoint: this.ctx.router.config.selfUrl + '/line',
+  endpoint: this.ctx.server.config.selfUrl + '/line',
 })
 ```
 
-对于 HTTP 服务器来说，我们不仅需要维护机器人的状态，还需要创建一个 HTTP 服务器，用于接收来自聊天平台的事件。因此，我们在构造函数中使用 `ctx.router` 监听了 Webhook 回调地址。对于每一个接收到的请求，我们首先验证其是否对应于已经配置的机器人：
+对于 HTTP 服务器来说，我们不仅需要维护机器人的状态，还需要创建一个 HTTP 服务器，用于接收来自聊天平台的事件。因此，我们在构造函数中使用 `ctx.server` 监听了 Webhook 回调地址。对于每一个接收到的请求，我们首先验证其是否对应于已经配置的机器人：
 
 ```ts
 const sign = ctx.headers['x-line-signature']?.toString()
