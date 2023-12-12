@@ -118,7 +118,7 @@ Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广
 
 ## 路由 (Router)
 
-- [API > 内置服务 > 网络服务](./service/router.md)
+- [API > 内置服务 > 网络服务](./service/server.md)
 
 ## 配置构型 (Schema)
 
