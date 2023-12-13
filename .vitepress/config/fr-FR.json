@@ -467,10 +467,6 @@
             {
               "text": "Registry : système des plugins",
               "link": "/api/service/registry.md"
-            },
-            {
-              "text": "网络服务 (Server)",
-              "link": "/api/service/server.md"
             }
           ]
         },
@@ -883,15 +879,19 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "Server Proxy : serveur proxy",
+              "text": "服务器 (Server)",
+              "link": "/plugins/develop/server.md"
+            },
+            {
+              "text": "代理服务器 (Server Proxy)",
               "link": "/plugins/develop/server-proxy.md"
             },
             {
-              "text": "Server Satori : serveur d'API",
+              "text": "API 服务器 (Server Satori)",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "Server Temp : serveur temporaire",
+              "text": "临时服务器 (Server Temp)",
               "link": "/plugins/develop/server-temp.md"
             }
           ]
