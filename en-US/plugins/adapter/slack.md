@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-slack
 
+:::tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方式
 
 Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中，`http` 连接方式需要一个公网可访问的地址。在接入之前，请根据使用需求填写插件的 [`protocol`](#config-protocol) 字段。
