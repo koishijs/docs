@@ -1,6 +1,10 @@
 # 组合式 API
 
 :::tip
+参见：[开发 > 控制台 > 客户端开发](../../guide/console/client.md)
+:::
+
+:::tip
 本节中所涉及的 API 都在 @koishijs/client 中导出。
 :::
 
