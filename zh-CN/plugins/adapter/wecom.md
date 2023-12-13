@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-wecom
 
+::: warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 前往 [我的企业](https://work.weixin.qq.com/wework_admin/frame#profile)，复制页面下方企业 ID，填入插件的 corpId。

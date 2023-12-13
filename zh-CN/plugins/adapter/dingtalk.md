@@ -1,9 +1,13 @@
 # @koishijs/plugin-adapter-dingtalk
 
+::: tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方式
 
 1. 前往 [开放平台 > 应用开发 > 钉钉应用](https://open-dev.dingtalk.com/fe/app#/corp/app) 并点击「创建应用」，输入相关信息确定创建
-2. 在跳转至的页面，选择添加「机器人」；勾选「机器人配置」，输入相关信息；消息接收模式选择 `Stream 模式` 时，插件的 protocol 填写 ws，选择 `HTTP 模式` 时，将机器人的 `selfUrl` 值后连接 `/dingtalk` (如 `https://example.com/dingtalk`) 填入钉钉平台的消息接收地址，插件的 protocol 填写 http；最后点击发布按钮
+2. 在跳转至的页面，选择添加「机器人」；勾选「机器人配置」，输入相关信息；消息接收模式选择 `Stream 模式` 时，插件的 `protocol` 选择 `ws`，选择 `HTTP 模式` 时，将机器人的 `selfUrl` 值后连接 `/dingtalk` (如 `https://example.com/dingtalk`) 填入钉钉平台的消息接收地址，插件的 `protocol` 选择 `http`；最后点击发布按钮
 3. 在左侧打开「凭证与基础信息」页面，将 `Client ID` 填入插件的 `appkey` 字段，将 `Client Secret` 填入插件的 `secret` 字段。
 4. (可选) 为了在控制台中显示应用名称与头像，请参照 [添加接口调用权限](https://open.dingtalk.com/document/orgapp/add-api-permission) 操作，申请 `qyapi_get_microapp_list` 权限；在左侧打开「添加应用能力」，选择添加「网页应用」。将「企业内部应用 AgentId」填入插件的 `agentId` 字段
 

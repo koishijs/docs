@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-wechat-official
 
+::: warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 根据 [注册流程指引](https://kf.qq.com/product/weixinmp.html#hid=87) 注册公众平台。

@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-telegram
 
+::: tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 搜索 @botfather（有个官方认证的符号）并进入聊天界面

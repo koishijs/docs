@@ -1,6 +1,10 @@
 # @koishijs/plugin-adapter-qq
 
-QQ (官方机器人) 适配器。
+::: tip
+目前 QQ 群官方 API 尚未支持发送本地图片，但 Koishi 对此类需求做了处理。建议同时安装 [@koishijs/plugin-server-temp](../develop/server-temp.md) 插件，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
+QQ 和 QQ 频道官方机器人适配器。
 
 ## 接入方法
 

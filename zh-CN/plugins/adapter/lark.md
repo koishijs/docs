@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-lark
 
+::: warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 在开发者后台 ([Lark](https://open.larksuite.com/app/) / [飞书](https://open.feishu.cn/app/)) 新建**企业自建应用**，点击应用名称进入应用详情页。

@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-kook
 
+::: tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 前往 [开发者平台](https://developer.kookapp.cn/)，选择「机器人」并点击「新建」
