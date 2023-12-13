@@ -1,6 +1,10 @@
 # Server-side API
 
 :::tip
+参见：[开发 > 控制台 > 基本用法](../../guide/console/)
+:::
+
+:::tip
 本节中所涉及的 API 都在 @koishijs/plugin-console 中导出。
 :::
 
@@ -8,7 +12,7 @@
 
 `Console` 类封装了控制台服务的所有功能，你可以通过 `ctx.console` 来访问它。
 
-### console.addEntry(entry)
+### ctx.console.addEntry(entry)
 
 - **entry:** `Entry` 要添加的入口
 
@@ -21,14 +25,14 @@ interface Entry {
 
 添加客户端入口文件。
 
-### console.addListener(event, callback, options)
+### ctx.console.addListener(event, callback, options) <badge type="warning">实验性</badge>
 
 - **event:** `string` 事件名称
 - **callback:** `Function` 回调函数，其中 `this` 指向 [`Client`](#类-client) 对象
 
 注册一个事件监听器。
 
-### console.broadcast(event, body, options)
+### ctx.console.broadcast(event, body, options)
 
 - **event:** `string` 事件名称
 - **body:** `any` 事件内容
