@@ -18,6 +18,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-wechat-official](./adapter/wechat-official.md)
 - [@koishijs/plugin-adapter-wecom](./adapter/wecom.md)
 - [@koishijs/plugin-adapter-whatsapp](./adapter/whatsapp.md)
+- [@koishijs/plugin-adapter-zulip](./adapter/zulip.md)
 
 ## 資料庫支援
 
