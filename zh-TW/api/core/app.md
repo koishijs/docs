@@ -4,34 +4,6 @@
 
 本节中介绍的配置项可用于传入构造函数，也可以在配置文件或控制台中进行修改。
 
-## 网络设置
-
-### options.host
-
-- 类型：`string`
-- 默认值：`'127.0.0.1'`
-
-服务器监听的 IP 地址。如果将此设置为 `0.0.0.0` 将监听所有地址，包括局域网和公网地址。
-
-### options.port
-
-- 类型：`number`
-
-要监听的初始端口号。
-
-### options.maxPort
-
-- 类型：`number`
-- 默认值：[`options.port`](#options-port)
-
-允许监听的最大端口号。
-
-### options.selfUrl
-
-- 类型：`string`
-
-Koishi 服務暴露在公網的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
-
 ## 基础设置
 
 ### options.prefix
