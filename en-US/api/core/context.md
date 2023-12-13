@@ -9,12 +9,12 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.any](../service/filter.md#ctx-any)
 - [ctx.bail](../service/events.md#ctx-bail)
 - [ctx.before](../service/events.md#ctx-before)
-- [ctx.database](../database/database.md)
 - [ctx.emit](../service/events.md#ctx-emit)
 - [ctx.exclude](../service/filter.md#ctx-exclude)
 - [ctx.filter](../service/filter.md#ctx-filter)
 - [ctx.http](../service/http.md)
 - [ctx.i18n](../service/i18n.md)
+- [ctx.inject](../service/registry.md#ctx-inject)
 - [ctx.intersect](../service/filter.md#ctx-intersect)
 - [ctx.loader](../service/loader.md)
 - [ctx.middleware](../service/events.md#ctx-middleware)
@@ -28,11 +28,16 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.plugin](../service/registry.md#ctx-plugin)
 - [ctx.scope](../service/registry.md#ctx-scope)
 - [ctx.serial](../service/events.md#ctx-serial)
-- [ctx.server](../service/server.md)
 - [ctx.start](../service/registry.md#ctx-start)
 - [ctx.stop](../service/registry.md#ctx-stop)
 - [ctx.union](../service/filter.md#ctx-union)
-- [ctx.using](../service/registry.md#ctx-using)
+
+除此以外，以下服务由官方插件提供，因此使用时需要 [声明依赖](../../guide/plugin/service.md#inject)：
+
+- [ctx.console](../console/server.md)
+- [ctx.database](../database/database.md)
+- [ctx.mock](../../plugins/develop/mock.md)
+- [ctx.server](../../plugins/develop/server.md)
 
 ## Instance Properties
 
