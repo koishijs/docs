@@ -1,7 +1,11 @@
 # 上下文 API
 
+:::tip
+参见：[开发 > 控制台 > 客户端开发](../../guide/console/client.md)
+:::
+
 :::warning
-请注意：本文档介绍的是控制台客户端的 `Context`，而非 Koishi 本身的 `Context`。要查看后者的 API 文档请 [前往这里](../core/context.md)。
+消歧义：本文档介绍的是控制台客户端的 `Context`，而非 Koishi 本身的 `Context`。要查看后者的 API 文档请 [前往这里](../core/context.md)。
 :::
 
 Koishi 的控制台客户端一样通过插件化的方式加载，因此我们也实现了一套类似的 `Context` 机制。许多你熟悉的底层 API 在客户端是依然可用的 (例如生命周期事件、服务的定义与使用等等)。此外，我们还提供了一些与客户端相关的 API 来帮助你更方便地开发控制台插件。
