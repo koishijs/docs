@@ -62,7 +62,7 @@ root
 - [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
 - [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
 - 不能声明 [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
-- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
+- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions)
 
 一个符合上述标准的示例：
 
@@ -237,3 +237,23 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 - 缺省情况：按照当前版本的最后一位递增
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
+
+## 弃用插件
+
+如果你不再维护某个插件，或者你希望更换一个名字重新发布，那么你可以弃用该插件。在任意目录运行下面的命令以弃用插件：
+
+```sh
+npm deprecate <full-name> <message>
+# 例如
+npm deprecate koishi-plugin-example "this plugin is deprecated"
+```
+
+请注意这里要写出的是完整的包名，而不是插件的目录名。
+
+你也可以弃用某个特定版本或版本区间 (默认情况下将弃用所有版本)：
+
+```sh
+npm deprecate <full-name>@<version> <message>
+```
+
+弃用插件的最新版本后，该插件将不再显示在插件市场中。未来你仍然可以发布新版本，这将使你的插件重新进入插件市场。
