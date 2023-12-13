@@ -1,10 +1,10 @@
 # User : comptes
 
-::: tip
+::: warning
 消歧义：本节介绍跨平台协议中的用户对象。
 
 - 要了解数据库中的用户，请前往 [API > 数据库 > 内置数据结构](../database/built-in.md#user)
-- 要了解两者的区别，请前往 [API > 术语表](../glossary.md#用户)
+- 要了解两者的区别，请前往 [API > 术语表 > 用户](../glossary.md#user)
   :::
 
 ## 类型定义
