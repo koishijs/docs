@@ -1,10 +1,10 @@
 # Channel
 
-::: tip
+::: warning
 消歧义：本节介绍跨平台协议中的频道对象。
 
 - 要了解数据库中的频道，请前往 [API > 数据库 > 内置数据结构](../database/built-in.md#channel)
-- 要了解两者的区别，请前往 [API > 术语表](../glossary.md#频道)
+- 要了解两者的区别，请前往 [API > 术语表 > 频道](../glossary.md#channel)
   :::
 
 ## 类型定义
