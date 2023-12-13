@@ -324,9 +324,6 @@
         }, {
           "text": "插件系统 (Registry)",
           "link": "/api/service/registry.md"
-        }, {
-          "text": "网络服务 (Server)",
-          "link": "/api/service/server.md"
         }]
       }, {
         "text": "平台资源",
@@ -622,6 +619,9 @@
         }, {
           "text": "测试工具 (Mock)",
           "link": "/plugins/develop/mock.md"
+        }, {
+          "text": "服务器 (Server)",
+          "link": "/plugins/develop/server.md"
         }, {
           "text": "代理服务器 (Server Proxy)",
           "link": "/plugins/develop/server-proxy.md"

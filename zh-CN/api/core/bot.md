@@ -36,7 +36,7 @@
 
 - 类型: `string`
 
-当前 `Bot` 的 [平台名称](../glossary.md#平台-platform)。
+当前 `Bot` 的 [平台名称](../glossary.md#platform)。
 
 ### bot.selfId
 

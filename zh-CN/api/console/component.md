@@ -1,5 +1,9 @@
 # 内置组件
 
+::: tip
+参见：[开发 > 控制台 > 客户端开发](../../guide/console/client.md)
+:::
+
 ## `<k-comment>`
 
 - **props.type:** `'info' | 'success' | 'warning' | 'danger'` 提示类型
