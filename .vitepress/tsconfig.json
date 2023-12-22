@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "jsx": "preserve",
     "resolveJsonModule": true,
     "esModuleInterop": true,

@@ -1,16 +1,16 @@
 :root {
   // override element
   --el-text-color-regular: var(--vp-c-text-1);
-  --el-text-color-primary: var(--vp-c-gray);
+  --el-text-color-primary: var(--vp-c-text-1);
   --el-input-text-color: var(--vp-c-text-1);
   --el-border-color: var(--vp-c-border);
-  --el-border-color-hover: var(--vp-c-brand);
+  --el-border-color-hover: var(--vp-c-brand-1);
   --el-border-color-base: var(--vp-c-border);
   --el-border-color-light: var(--vp-c-divider);
   --el-border-color-lighter: var(--vp-c-divider);
   --el-border-color-extra-light: var(--vp-c-divider);
-  --el-color-primary: var(--vp-c-brand);
-  --el-color-primary-light-3: var(--vp-c-brand-darker);
+  --el-color-primary: var(--vp-c-brand-2);
+  --el-color-primary-light-3: var(--vp-c-brand-1);
   --el-color-primary-light-9: var(--k-hover-bg);
   --el-color-success: var(--k-color-success);
   --el-color-warning: var(--k-color-warning);
@@ -76,7 +76,7 @@
 }
 
 .el-radio__label {
-  --el-color-primary: var(--vp-c-brand);
+  --el-color-primary: var(--vp-c-brand-2);
   padding-top: 1px;
 }
 

@@ -10,7 +10,7 @@
         </div>
         <div class="chooser-select chooser-select-usage">
           <div class="chooser-select-item chooser-cell"
-            v-for="(value, key) in frontmatter.choices" :key="key"
+            v-for="(value, key) in stages" :key="key"
             :class="{ selected: chooserUsage === key }"
             @click="chooserUsage = key">
             <span class="hint"></span>{{ value.text }}
@@ -21,11 +21,11 @@
       <transition>
         <div class="chooser" :key="chooserUsage">
           <div class="chooser-header chooser-cell">
-            <span>{{ frontmatter.choices[chooserUsage].caption }}</span>
+            <span>{{ stages[chooserUsage].caption }}</span>
           </div>
           <div class="chooser-select" :class="'chooser-select-' + chooserUsage">
             <a class="chooser-select-item chooser-cell"
-              v-for="({ text, link }, index) in frontmatter.choices[chooserUsage].children"
+              v-for="({ text, link }, index) in stages[chooserUsage].children"
               :key="index"
               :href="withBase(link)">
               <span class="hint"></span>{{ text }}
@@ -39,10 +39,23 @@
 
 <script setup lang="ts">
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { withBase, useData } from 'vitepress'
 const chooserUsage = ref('production')
 const { frontmatter } = useData()
+
+interface Choice {
+  text: string
+  link: string
+}
+
+interface Stage {
+  text: string
+  caption: string
+  children: Choice[]
+}
+
+const stages = computed<Record<string, Stage>>(() => frontmatter.value.choices)
 
 </script>
 

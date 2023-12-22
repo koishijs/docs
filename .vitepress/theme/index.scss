@@ -1,5 +1,21 @@
 @import './element.scss';
 
+:root {
+  --vp-c-brand-1: #4a36b3;                              // 250 70 70
+  --vp-c-brand-2: #6c57d9;                              // 250 60 85
+  --vp-c-brand-3: #7562d9;                              // 250 55 85
+  --vp-c-brand-soft: rgba(138, 115, 255, 0.14);         // 250 55 100
+  --vp-c-brand-alt: #8F17E6;                            // 275 90 90
+}
+
+html.dark {
+  --vp-c-brand-1: #aa99ff;                              // 250 40 100
+  --vp-c-brand-2: #7c67e6;                              // 250 55 90
+  --vp-c-brand-3: #6045e6;                              // 250 70 90
+  --vp-c-brand-soft: rgba(128, 102, 255, 0.16);         // 250 60 100
+  --vp-c-brand-alt: #C079F2;                            // 275 50 95
+}
+
 @mixin apply-color($name, $base) {
   --k-color-#{$name}: #{$base};
   --k-color-#{$name}-fade: #{fade-out($base, 0.9)};
