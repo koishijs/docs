@@ -39,3 +39,9 @@ Forum is a special way of discussing. Your issues, ideas, feedback will save for
 QQ：[2953529126](https://qm.qq.com/q/P8eMJkP5yI) / 微信：ilharp
 
 We provide exclusive support for enterprise users. In addition to participating in discussions through the above methods, enterprise users can also add customer service to get one-on-one exclusive support.
+
+## 非官方渠道
+
+活跃的社区成员自发地创建了一些非官方的讨论渠道，你也可以在这里参与讨论。
+
+前往 [社区资源](./community.md) 页面查看更多非官方渠道。
