@@ -48,7 +48,11 @@
 
 包括全部的 [`WsClient`](../../api/core/adapter.md#类-adapter-wsclient) 选项。
 
-## 内部 API
+## 内部接口
+
+::: tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+:::
 
 - [`internal.addAttendee()`](https://open.dingtalk.com/document/isvapp/add-schedule-participant)
 - [`internal.addCityCarApply()`](https://open.dingtalk.com/document/isvapp/synchronize-third-party-city-vehicle-approval-form)

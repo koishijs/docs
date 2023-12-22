@@ -72,7 +72,11 @@
 
 当配置为 `attach` 并且发送文本+图片形式的消息时，无论 [`handleExternalAsset`](#options-discord-handleexternalasset) 配置为何都会先下载后发送。
 
-## 内部 API
+## 内部接口
+
+::: tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+:::
 
 - [`internal.addGuildMember()`](https://discord.com/developers/docs/resources/guild#add-guild-member)
 - [`internal.addGuildMemberRole()`](https://discord.com/developers/docs/resources/guild#add-guild-member-role)
