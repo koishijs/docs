@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import { cp, mkdir, rm } from 'fs/promises'
 import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { external } from './mixin'
-import mixins from './output'
 
 const isDev = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview'
 
@@ -44,8 +43,6 @@ export default async () => {
         'ru-RU': require('./ru-RU'),
       } : {}),
     },
-
-    mixins: await mixins(),
 
     markdown: {
       math: true,
