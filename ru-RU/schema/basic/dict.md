@@ -7,7 +7,7 @@ code: |
     table2: Schema.dict(Schema.object({
       foo: Schema.string(),
       bar: Schema.number(),
-    })).role('table').description('对象构成的字典。'),
+    })).role('table').description('以表格形式显示的由对象构成的字典。'),
   }).description('配置项')
 ---
 
