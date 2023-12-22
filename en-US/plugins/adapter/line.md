@@ -30,7 +30,11 @@
 
 机器人密钥。
 
-## 内部 API
+## Internal API
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+:::
 
 - [`internal.audienceMatch()`](https://developers.line.biz/en/reference/partner-docs/#phone-audience-match)
 - [`internal.broadcast()`](https://developers.line.biz/en/reference/messaging-api/#send-broadcast-message)
