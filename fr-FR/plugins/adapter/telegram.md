@@ -75,7 +75,11 @@
 
 Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/core/app.md#options-selfurl) 的值。
 
-## 内部 API
+## 内部接口
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+:::
 
 - [`internal.addStickerToSet()`](https://core.telegram.org/bots/api#addstickertoset)
 - [`internal.answerCallbackQuery()`](https://core.telegram.org/bots/api#answercallbackquery)
