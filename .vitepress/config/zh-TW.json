@@ -79,6 +79,10 @@
             "link": "/about/contact.md"
           },
           {
+            "text": "社區資源",
+            "link": "/about/community.md"
+          },
+          {
             "text": "各版本介绍",
             "link": "/releases/index.md"
           }
