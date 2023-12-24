@@ -79,6 +79,10 @@
             "link": "/about/contact.md"
           },
           {
+            "text": "Ressources Communautaires",
+            "link": "/about/community.md"
+          },
+          {
             "text": "Notes des versions",
             "link": "/releases/index.md"
           }
