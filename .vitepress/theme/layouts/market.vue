@@ -1,26 +1,27 @@
 <template>
-  <market-list
-    gravatar="https://cravatar.cn"
-    v-if="market"
-    v-model="words"
-    :data="market.objects"
-  >
-    <template #header="{ hasFilter, all, packages }">
-      <h1>插件市场</h1>
-      <div class="info">
-        当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
-        <span class="timestamp">({{ new Date(market.time).toLocaleString() }})</span>
-      </div>
-      <market-search class="k-card" v-model="words"></market-search>
-    </template>
-    <template #action="data">
-      <el-tooltip v-if="data.portable" content="快速体验" placement="bottom">
-        <a class="portable-button" :href="createLink(data.shortname)" rel="noopener noreferer" target="_blank">
-          <icon-portable/>
-        </a>
-      </el-tooltip>
-    </template>
-  </market-list>
+  <div class="market-list" v-if="market">
+    <market-list
+      gravatar="https://cravatar.cn"
+      v-model="words"
+      :data="market.objects"
+    >
+      <template #header="{ hasFilter, all, packages }">
+        <h1>插件市场</h1>
+        <div class="info">
+          当前共有 {{ hasFilter ? packages.length + ' / ' : '' }}{{ all.length }} 个可用于 v4 版本的插件
+          <span class="timestamp">({{ new Date(market.time).toLocaleString() }})</span>
+        </div>
+        <market-search class="k-card" v-model="words"></market-search>
+      </template>
+      <template #action="data">
+        <el-tooltip v-if="data.portable" content="快速体验" placement="bottom">
+          <a class="portable-button" :href="createLink(data.shortname)" rel="noopener noreferer" target="_blank">
+            <icon-portable/>
+          </a>
+        </el-tooltip>
+      </template>
+    </market-list>
+  </div>
 
   <div class="market-loading" v-else>
     <div v-if="error">
@@ -92,6 +93,8 @@ $breakpoint: 760px;
   padding: var(--vp-nav-height) 0 0 2rem;
   min-height: 100vh;
   max-width: var(--vp-layout-max-width);
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1439px) {
     padding-right: 2rem;

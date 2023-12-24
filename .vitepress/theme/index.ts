@@ -1,5 +1,6 @@
 import { defineTheme } from '@koishijs/vitepress/client'
 import { defineAsyncComponent } from 'vue'
+import Empty from './components/empty.vue'
 import Markdown from 'marked-vue'
 import Schema from 'schemastery'
 import components from '@koishijs/components'
@@ -70,6 +71,7 @@ export default defineTheme({
     app.use(ElTimePicker)
     app.use(ElTooltip)
     app.use(i18n)
+    app.component('k-empty', Empty)
     app.component('k-markdown', Markdown)
     app.component('vp-overview', Overview)
   },
