@@ -76,7 +76,7 @@ Koishi not only supports setting up filters at the plugin level, but certain con
 
 ![computed](/manual/console/computed.light.webp) {.light-only}
 
-Click this \[..] button to turn a regular configuration item into a calculationWe can configure a series of values that meet a filter, and a default value that does not meet anything.
+Click this [..] button to turn a regular configuration item into a calculationWe can configure a series of values that meet a filter, and a default value that does not meet anything.
 
 By utilizing this feature, we can achieve some complex functions, such as:
 
