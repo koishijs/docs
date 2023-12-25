@@ -48,19 +48,19 @@ Slack 适配器提供了两种接入方式：`http` 和 `ws` (推荐)。其中�
 
 ### 推荐的事件列表
 
-- channel\_archive
-- channel\_created
-- channel\_deleted
-- channel\_left
-- channel\_rename
-- member\_joined\_channel
-- member\_left\_channel
+- channel_archive
+- channel_created
+- channel_deleted
+- channel_left
+- channel_rename
+- member_joined_channel
+- member_left_channel
 - message.channels
 - message.groups
 - message.im
-- reaction\_added
-- reaction\_removed
-- team\_join
+- reaction_added
+- reaction_removed
+- team_join
 
 ### 推荐的权限列表
 
