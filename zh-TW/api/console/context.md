@@ -41,11 +41,11 @@ Koishi 的控制台客户端一样通过插件化的方式加载，因此我们�
 
 - **id:** `string` 菜单标识符
 - **items:** `MenuItem[]` 菜单项列表
-  - **items\[].id:** `string` 动作标识符
-  - **items\[].label:** `MaybeGetter<string>?` 菜单项名称
-  - **items\[].type:** `MaybeGetter<string>?` 菜单项类型
-  - **items\[].icon:** `MaybeGetter<string>?` 菜单项图标
-  - **items\[].order:** `number?` 排列优先级
+  - **items[].id:** `string` 动作标识符
+  - **items[].label:** `MaybeGetter<string>?` 菜单项名称
+  - **items[].type:** `MaybeGetter<string>?` 菜单项类型
+  - **items[].icon:** `MaybeGetter<string>?` 菜单项图标
+  - **items[].order:** `number?` 排列优先级
 
 注册一个菜单。
 
