@@ -76,6 +76,6 @@ root
 
 目前的所有工作流都基于整合包的版本号。当根工作区的版本号变动时，所有的工作流将开始运行。一次完整的发布将包含适用于 Koishi Desktop、Koishi Android 的完整环境，甚至是 Docker 镜像和 npm 包。部分流程需要配置 actions secrets，可以参考下面的列表：
 
-- DOCKER\_USERNAME
-- DOCKER\_PASSWORD
-- NPM\_TOKEN
+- DOCKER_USERNAME
+- DOCKER_PASSWORD
+- NPM_TOKEN
