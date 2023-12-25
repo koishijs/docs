@@ -11,7 +11,7 @@
 2. 未来可能会不基于 Koa Router 重新实现路由系统。
    :::
 
-### ctx.server\[method]\(path, middleware)
+### ctx.server[method](path, middleware)
 
 - **method:** 可以是 `get`, `post`, `put`, `delete`, `patch` 或 `all` (仅能是小写)
 - **path:** `string | RegExp | (string | RegExp)[]` 路径
