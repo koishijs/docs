@@ -151,7 +151,7 @@ $$
 \mathcal{C}_1=\mathcal{C}\times\mathfrak{F}=\mathcal{C}\times\left(\mathcal{C}\to\mathcal{C}\right)
 $$
 
-下文中我们将直接使用 $\mathcal{C}$ 来表示 $\mathcal{C}\_1$。
+下文中我们将直接使用 $\mathcal{C}$ 来表示 $\mathcal{C}_1$。
 
 ### 上下文与插件
 
