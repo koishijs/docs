@@ -294,7 +294,7 @@ class Console extends Service {
 }
 ```
 
-## 在 `package.json` 中声明依赖
+## 在 `package.json` 中声明依赖 {#package-json}
 
 如果你打算将插件发布到插件市场，我们建议在插件的 [`package.json`](../develop/publish.md#koishi-字段) 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
 
@@ -312,7 +312,7 @@ class Console extends Service {
 
 在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
 
-### 关于 `peerDependencies`
+### 关于 `peerDependencies` {#peer-vs-dep}
 
 一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
 
