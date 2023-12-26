@@ -44,27 +44,30 @@ There are two ways to access internal API in the plugin. Take Discord as an exam
 第一种是直接通过 `bot.internal` 属性访问。这个属性在 `Bot` 基类中的类型是 `any`，因此你可以直接使用其上的方法，也可以通过类型断言来获取更好的类型提示：
 
 ```ts
+// 这一行写在文件头
+import type { DiscordBot } from '@koishijs/plugin-adapter-discord'
+
 (bot as DiscordBot).internal.getGuild(guildId)
 ```
 
-另一种方法是在有 `Session` 对象的环境中，直接通过 `session[platform]` 就可以访问到对应适配器的内部接口。这种方式不仅无需类型断言，并且能够直接访问到会话的原始数据：
+另一种方法是在有 `Session` 对象的环境中，直接通过 `session[platform]` 就可以访问到对应适配器的内部接口。这种方式不仅无需类型断言，并且能够直接访问到会话的原始数据。你可以用这种方式对特定平台提供定制化的支持：
 
 ```ts
-session.discord.getGuild(guildId)
+// 这一行写在文件头
+import {} from '@koishijs/plugin-adapter-discord'
 
-session.discord.t // Original event name
-session.discord.d // Original event data
-```
-
-You can even customize support for different adapters in this way:
-
-```ts
 if (session.discord) {
-  session.discord.getGuild(guildId)
+  session.discord.getGuild(guildId)     // 内部接口
+  session.discord.t                     // 原始事件名称
+  session.discord.d                     // 原始事件数据
 } else {
-  // Handle other platforms
+  // 其他平台的处理
 }
 ```
+
+:::tip
+在上面的例子中，我们仅仅从 @koishijs/plugin-adapter-discord 中导入了类型。这种情况下插件并不实际依赖 Discord 适配器，因此你只需要将该依赖写入 `devDependencies` 即可。对于尚未接入 Discord 平台的用户，也不需要为运行你的插件多装一个适配器，仍然确保了安装体积的精简。关于这部分的讨论，可以参考 [服务与依赖](../plugin/service.md#peer-vs-dep) 一节。
+:::
 
 ### 在适配器中访问 {#access-from-adapter}
 
