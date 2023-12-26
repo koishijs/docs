@@ -51,7 +51,7 @@
 ## 内部接口
 
 ::: tip
-关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
 :::
 
 - [`internal.addAttendee()`](https://open.dingtalk.com/document/isvapp/add-schedule-participant)
