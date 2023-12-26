@@ -63,7 +63,7 @@ QQ 和 QQ 频道官方机器人适配器。
 ## Internal API
 
 :::tip
-关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#internal-access)。
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
 :::
 
 QQ 群和频道有着不同的机器人接口，因此我们提供了两套内部 API。
