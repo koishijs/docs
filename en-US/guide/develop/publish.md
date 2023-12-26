@@ -238,7 +238,7 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 
 When updating the version of a plug-in, the versions of dependencies that rely on this plug-in will also be upgraded to ensure consistency in the workspace.进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
 
-## 弃用插件
+## 弃用插件 {#deprecate}
 
 如果你不再维护某个插件，或者你希望更换一个名字重新发布，那么你可以弃用该插件。在任意目录运行下面的命令以弃用插件：
 
@@ -253,7 +253,7 @@ npm deprecate koishi-plugin-example "this plugin is deprecated"
 你也可以弃用某个特定版本或版本区间 (默认情况下将弃用所有版本)：
 
 ```sh
-npm deprecate <full-name>@<version> <message>
+npm deprecate <full-name>[@<version>] <message>
 ```
 
 弃用插件的最新版本后，该插件将不再显示在插件市场中。未来你仍然可以发布新版本，这将使你的插件重新进入插件市场。
