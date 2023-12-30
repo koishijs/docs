@@ -109,7 +109,7 @@ Click on the plugin to be added in the dialog box to create a plugin configurati
 
 ### Remove Plugin or Group
 
-:::warning
+:::danger
 注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。Please be careful.
 :::
 
@@ -117,6 +117,10 @@ Click Remove Plugin button in the top right corner in the configuration page of 
 When removing groups, all plugins in the group will also be deleted.
 
 ## Update and Uninstall Plugins
+
+:::warning
+依赖管理功能仅为生产环境设计。如果当前 Koishi 是开发环境，请使用 [`dep`](../../guide/develop/workspace.md#dep) 命令来更新依赖。
+:::
 
 Go to the "Dependency Management" page. You can see the dependency list here.Dependencies may include Koishi properties, various plugins, and packages that support plugins to run, etc.
 
