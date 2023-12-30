@@ -78,10 +78,9 @@ class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, Telegr
   // 使用 payload 存储待发送的消息
   private payload: Dict
 
-  constructor(bot: TelegramBot<C>, channelId: string, guildId?: string, options?: SendOptions) {
-    super(bot, channelId, guildId, options)
-    const chat_id = guildId || channelId
-    this.payload = { chat_id, parse_mode: 'html', text: '' }
+  // 在 prepare 中初始化 payload
+  async prepare() {
+    this.payload = { chat_id: this.channelId, parse_mode: 'html', text: '' }
   }
 
   // 将发送好的消息添加到 results 中
