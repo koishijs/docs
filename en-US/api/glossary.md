@@ -28,7 +28,7 @@
 频道是消息的集合。A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
-- [API > 平台资源 > 频道](./resources/user.md)
+- [API > 平台资源 > 频道](./resources/channel.md)
 - [API > 数据库 > 内置数据结构](./database/built-in.md#channel)
 
 ## 指令 (Command) {#command}
