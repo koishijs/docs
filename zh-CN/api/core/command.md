@@ -152,15 +152,3 @@ type FieldCollector<K extends string> =
 - 返回值: `void`
 
 移除当前指令及其所有子指令。
-
-## 静态属性和方法
-
-这里包含了与 Command 类相关的静态属性和方法。
-
-### Command.defaultConfig
-
-默认的指令配置。
-
-### Command.defaultOptionConfig
-
-默认的选项配置。
