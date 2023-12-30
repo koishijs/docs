@@ -28,7 +28,7 @@
 频道是消息的集合。一个频道包含了具备时间、逻辑顺序的一系列消息。频道又分为私聊频道和群聊频道，其中私聊频道有且仅有两人参与，而群聊频道可以有任意多人参与。
 
 - [开发 > 跨平台 > 基础知识](../guide/adapter/index.html#核心概念)
-- [API > 平台资源 > 频道](./resources/user.md)
+- [API > 平台资源 > 频道](./resources/channel.md)
 - [API > 数据库 > 内置数据结构](./database/built-in.md#channel)
 
 ## 指令 (Command) {#command}
