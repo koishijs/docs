@@ -38,6 +38,7 @@ Below is the list of official adapters:
 - [微信公众号](../../plugins/adapter/wechat-official.md)
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 The commonly used adapter plugins are pre-installed in Koishi. You can find them in the plugin configuration under the "Adapter" section.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
 
