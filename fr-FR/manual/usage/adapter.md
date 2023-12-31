@@ -35,6 +35,7 @@ Simuler des conversations uniquement dans un bac à sable ne suffit pas. Nous de
 - [微信公众号](../../plugins/adapter/wechat-official.md)
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 Parmi eux, les adaptateurs couramment utilisés sont déjà préinstallés dans Koishi, vous pouvez les trouver dans le groupe de configuration des plugins des « adaptateurs ». Si vous ne voyez pas la plateforme que vous souhaitez, vous pouvez également rechercher et installer d'autres plugins d'adaptateurs sur la place de marché.
 
