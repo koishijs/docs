@@ -12,7 +12,7 @@ html.dark {
   --vp-c-brand-1: #aa99ff;                              // 250 40 100
   --vp-c-brand-2: #7c67e6;                              // 250 55 90
   --vp-c-brand-3: #6045e6;                              // 250 70 90
-  --vp-c-brand-soft: rgba(128, 102, 255, 0.16);         // 250 60 100
+  --vp-c-brand-soft: rgba(128, 102, 255, 0.14);         // 250 60 100
   --vp-c-brand-alt: #C079F2;                            // 275 50 95
 }
 
@@ -103,5 +103,14 @@ mjx-container {
 
   > svg {
     margin-top: -4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vp-doc .custom-block {
+    div[class*='language-'] {
+      border-radius: 0;
+      margin: 16px -1.5rem;
+    }
   }
 }
