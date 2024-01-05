@@ -12,7 +12,7 @@ interface Element {
 }
 ```
 
-## 静态方法
+## Static methods
 
 ### h(type, attrs?, ...children?)
 
