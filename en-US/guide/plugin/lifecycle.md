@@ -11,11 +11,11 @@
 - Contains asynchronous operations (e.g., file operations, network requests, etc.)
 - Actions to be performed only after all other plugins have been loaded
 
-## 副作用与 `dispose` 事件
+## Side-effects and the `dispose` event
 
 ### Unload Plugins
 
-We have previously understood how to enable plugins; Koishi also supports disabling a plugin at runtime. `ctx.plugin()` 返回一个 `Fork` 对象。调用 `fork.dispose()` 可以停用一个插件。
+We have previously understood how to enable plugins; Koishi also supports disabling a plugin at runtime. `ctx.plugin()` returns a `Fork`.Call `fork.dispose()` to disable a plugin.
 
 ```ts
 import { Context } from 'koishi'
@@ -49,7 +49,7 @@ Koishi's plugin system supports hot reloading, meaning that any plugin might be 
 绝大部分 `ctx` 方法都会在在插件被停用自动回收副作用；然而，如果你使用了 `ctx` 之外的方法，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。Below is an example:
 
 ```ts
-// 一个示例的服务器插件
+// An example server plugin
 import { Context } from 'koishi'
 import { createServer } from 'http'
 
@@ -57,12 +57,12 @@ export function apply(ctx: Context, config) {
   const server = createServer()
 
   ctx.on('ready', () => {
-    // 在插件启动时监听端口
+    // listen on start
     server.listen(1234)
   })
 
   ctx.on('dispose', () => {
-    // 在插件停用时关闭端口
+    // close when dispose
     server.close()
   })
 }
@@ -91,7 +91,7 @@ However, this doesn't mean that all plugins should not be reused. 如果你真�
 
 ```ts title=reply.ts
 export const name = 'reply'
-export const reusable = true    // 声明此插件可重用
+export const reusable = true    // mark the plugin reusable
 
 export interface Config {
   input: string
@@ -100,7 +100,7 @@ export interface Config {
 
 export function apply(ctx: Context, config: Config) {
   ctx.middleware((session, next) => {
-    // 当用户发送 input 时，回复 output
+    // response output when user send input
     if (session.content === config.input) {
       return config.output
     }
@@ -194,10 +194,10 @@ ctx.plugin((ctx) => {
 
 ```ts internal.ts
 export function apply(ctx: Context) {
-  // 注册指令
+  // register a command
   ctx.command('foo').action(callback)
 
-  // 扩展控制台
+  // extend the console
   ctx.console.addEntry('/client')
 }
 ```
