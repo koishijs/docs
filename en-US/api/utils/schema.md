@@ -1,6 +1,6 @@
 # 配置构型 (Schema)
 
-## 静态方法
+## Static methods
 
 ### Schema.any()
 
