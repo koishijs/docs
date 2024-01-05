@@ -13,7 +13,7 @@ A plugin needs to be one of three basic forms:
 
 1. A function that accepts two parameters, which are the context and the configuration
 2. A class that accepts two constructor parameters, which are the context and the configuration
-3. 一个对象，其中的 `apply` 方法是第一种形式中所说的函数
+3. An object which the `apply` method is the function described in number 1
 
 The loading of this plugin is equivalent to the invocation the above function. Therefore, the four formulations below are basic equivalent:
 
@@ -41,7 +41,7 @@ ctx.plugin(class {
 
 The greatest advantage of pluginization is the ability to write different functionalities in separate modules. 此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容)。
 
-对于对象形式的插件，你还可以额外提供一个 `name` 属性作为插件的名称。For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
+For object plugins, you can also set `name` field as the name of the plugin.For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
 
 ```ts title=foo.ts
 // Namespace export of an object-form plugin
