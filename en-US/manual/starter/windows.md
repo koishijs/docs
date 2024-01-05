@@ -16,7 +16,7 @@ next:
 ## Download
 
 - [安装包 (.msi)](https://k.ilharp.cc/win.msi)
-- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+- [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Install
 
