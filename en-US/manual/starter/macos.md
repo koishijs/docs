@@ -16,7 +16,7 @@ next:
 ## Download
 
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
-- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+- [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Install
 
