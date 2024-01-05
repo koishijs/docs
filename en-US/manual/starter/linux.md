@@ -1,7 +1,7 @@
 ---
 prev:
   text: Installation
-  link: /zh-CN/manual/starter/
+  link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
   link: /en-US/manual/usage/market.html
@@ -16,7 +16,7 @@ next:
 ## Download
 
 - [AppImage (.AppImage)](https://k.ilharp.cc/linux.AppImage)
-- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
+- [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## 启动
 
