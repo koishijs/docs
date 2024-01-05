@@ -40,7 +40,7 @@
 ### config.port
 
 - 类型：`number`
-- 必需选项
+- required
 
 要监听的初始端口号。Koishi 建议使用 `5140` 作为默认端口。
 
