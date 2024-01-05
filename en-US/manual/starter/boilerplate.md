@@ -1,7 +1,7 @@
 ---
 prev:
   text: Installation
-  link: /zh-CN/manual/starter/
+  link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
   link: /en-US/manual/usage/market.html
@@ -40,7 +40,7 @@ Then, launch the installer you just downloaded, complete the installation proces
 
 ### NPM
 
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。It is very simple to install Yarn, just enter the following command into command line.
+Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。We also recommend more powerful [Yarn](https://classic.yarnpkg.com/) as package manager.It is very simple to install Yarn, just enter the following command into command line.
 
 ```sh
 # install yarn
