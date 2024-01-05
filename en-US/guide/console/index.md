@@ -4,7 +4,7 @@
 在学习本章之前，建议先完整阅读 [入门 > 认识控制台](../../manual/usage/market.md#认识控制台)。
 :::
 
-## 创建扩展
+## Create an extension
 
 在插件目录中新建这几个文件：
 
@@ -50,8 +50,8 @@ export default (ctx: Context) => {
     "module": "esnext",
     "moduleResolution": "node",
     "types": [
-      // 这一行的作用是导入相关全局类型
-      // 以便于在编辑器中显示更好的代码提示
+      // import client types
+      // for better completions in the editor
       "@koishijs/client/global",
     ],
   },
