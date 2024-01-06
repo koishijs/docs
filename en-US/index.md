@@ -4,8 +4,8 @@ links:
   starter: /zh-CN/manual/starter/
 home:
   desc: Cross-platform Chatbot Framework Made With Love
-  primary: 即刻起步
-  secondary: 了解更多
+  primary: Get started
+  secondary: Learn more
 features:
   - title: Real-time Monitoring
     desc: Monitor the status of your bot in real-time with Koishi dashboard.
