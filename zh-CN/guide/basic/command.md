@@ -28,7 +28,7 @@ ctx.command('echo <message>')
 ::: danger
 在插件中动态引用来自用户输入的[消息元素](./element.html)是非常危险的，因为它很容易导致 [XSS 攻击](https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC)。**绝不要**直接将用户提供的内容作为插值并返回
 
-在默认情况下，Koishi 会对用户输入内容（例如上述的 `message` 参数）进行转义以确保其安全性。但是使用了例如解码内容方式会导致输入内容绕过了 Koishi 的转义，如需必要，请自行控制并转义（escpae）来自用户的内容
+在默认情况下，Koishi 会对用户输入内容（例如上述的 `message` 参数）进行转义以确保其安全性。但是使用了例如解码内容方式会导致输入内容绕过了 Koishi 的转义，如需必要，请自行控制并[转义](/zh-CN/api/message/api.html#h-escape)来自用户的内容
 :::
 
 ## 定义参数
