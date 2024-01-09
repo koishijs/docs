@@ -327,6 +327,9 @@
         }, {
           "text": "插件系统 (Registry)",
           "link": "/api/service/registry.md"
+        }, {
+          "text": "计时器 (Timer)",
+          "link": "/api/service/timer.md"
         }]
       }, {
         "text": "平台资源",
