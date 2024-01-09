@@ -7,6 +7,7 @@ import components from '@koishijs/components'
 import { createI18n } from 'vue-i18n'
 import {
   ElButton,
+  ElCascader,
   ElCheckbox,
   ElCollapseTransition,
   ElColorPicker,
@@ -52,6 +53,7 @@ export default defineTheme({
 
     app.use(components)
     app.use(ElButton)
+    app.use(ElCascader)
     app.use(ElCheckbox)
     app.use(ElCollapseTransition)
     app.use(ElColorPicker)

@@ -21,7 +21,7 @@ session.send(<image url="https://koishi.chat/logo.png"/>)
 session.send('欢迎 ' + h('at', { id: session.userId }) + ' 入群！')
 
 // 发送一张 Koishi 图标
-session.send(h('image', { url: 'https://koishi.chat/logo.png' }))
+session.send(h('img', { src: 'https://koishi.chat/logo.png' }))
 ```
 :::
 
@@ -48,7 +48,7 @@ h('quote', { id })
 h('p', {}, 'hello')
 
 // 没有属性时二参数可以忽略不写
-h('p', 'hello', h('image', { url }))
+h('p', 'hello', h('img', { src }))
 ```
 
 ### 混用两种写法
