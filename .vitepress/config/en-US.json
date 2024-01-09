@@ -887,12 +887,12 @@
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "服务器 (Server)",
-              "link": "/plugins/develop/server.md"
+              "text": "通知服务 (Notifier)",
+              "link": "/plugins/develop/notifier.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "API 服务器 (Server Satori)",
@@ -1016,11 +1016,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union: Tagged 1",
+              "text": "Intersect + Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union: Tagged 2",
+              "text": "Intersect + Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
