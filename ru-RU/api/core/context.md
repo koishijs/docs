@@ -110,10 +110,6 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 
 - 类型: `symbol`
 
-### Context.source
-
-- 类型: `symbol`
-
 ### Context.current
 
 - 类型: `symbol`
