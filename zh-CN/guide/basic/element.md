@@ -14,7 +14,7 @@
 session.send(<>欢迎 <at id={userId}/> 入群！</>)
 
 // 发送一张 Koishi 图标
-session.send(<image url="https://koishi.chat/logo.png"/>)
+session.send(<img src="https://koishi.chat/logo.png"/>)
 ```
 ```ts title=API
 // 欢迎 @用户名 入群！
@@ -64,7 +64,7 @@ h('p', 'hello', h('img', { src }))
 
 ```tsx
 // 创建一个仅包含图片的消息
-h('message', <image url="https://koishi.chat/logo.png"/>)
+h('message', <img src="https://koishi.chat/logo.png"/>)
 ```
 
 ## 标准元素
@@ -73,7 +73,7 @@ Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需�
 
 - `at`：提及用户
 - `quote`：引用回复
-- `image`：嵌入图片
+- `img`：嵌入图片
 - `message`：发送消息
 
 尽管一个平台不太可能支持所有的行为，但适配器对每一个标准元素都进行了最大程度的适配。例如，对于不支持斜体的平台，我们会将斜体元素转换为普通文本；对于无法同时发送多张图片的平台，我们会将多张图片转换为多条消息分别发送等等。这样一来，开发者便可以在不同平台上使用同一套代码，而不用担心平台差异。
@@ -107,10 +107,10 @@ Koishi 提供了一系列标准元素，它们覆盖了绝大部分常见的需�
 
 ### 嵌入图片和其他资源
 
-使用 `image`, `audio`, `video` 和 `file` 元素嵌入图片、音频、视频和文件，它们的用法是类似的。这里以图片为例：
+使用 `img`, `audio`, `video` 和 `file` 元素嵌入图片、音频、视频和文件，它们的用法是类似的。这里以图片为例：
 
 ```html
-<image url="https://koishi.chat/logo.png"/>
+<img src="https://koishi.chat/logo.png"/>
 ```
 
 <chat-panel>
@@ -126,20 +126,20 @@ import { pathToFileURL } from 'url'
 import { resolve } from 'path'
 
 // 发送相对路径下的 logo.png
-h.image(pathToFileURL(resolve(__dirname, 'logo.png')).href)
+h.img(pathToFileURL(resolve(__dirname, 'logo.png')).href)
 
 // 等价于下面的写法
-<image url={pathToFileURL(resolve(__dirname, 'logo.png')).href}/>
+<img src={pathToFileURL(resolve(__dirname, 'logo.png')).href}/>
 ```
 
-如果图片以二进制数据的形式存在于内存中，你也可以直接通过 `h.image()` 构造 `data:` URL：
+如果图片以二进制数据的形式存在于内存中，你也可以直接通过 `h.img()` 构造 `data:` URL：
 
 ```tsx
 // 这里的二参数是图片的 MIME 类型
-h.image(buffer, 'image/png')
+h.img(buffer, 'image/png')
 
 // 等价于下面的写法
-<image url={'data:image/png;base64,' + buffer.toString('base64')}/>
+<img src={'data:image/png;base64,' + buffer.toString('base64')}/>
 ```
 
 ## 消息组件 <badge type="warning">实验性</badge>
