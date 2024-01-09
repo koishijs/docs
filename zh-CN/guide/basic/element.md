@@ -126,17 +126,17 @@ import { pathToFileURL } from 'url'
 import { resolve } from 'path'
 
 // 发送相对路径下的 logo.png
-h.img(pathToFileURL(resolve(__dirname, 'logo.png')).href)
+h.image(pathToFileURL(resolve(__dirname, 'logo.png')).href)
 
 // 等价于下面的写法
 <img src={pathToFileURL(resolve(__dirname, 'logo.png')).href}/>
 ```
 
-如果图片以二进制数据的形式存在于内存中，你也可以直接通过 `h.img()` 构造 `data:` URL：
+如果图片以二进制数据的形式存在于内存中，你也可以直接通过 `h.image()` 构造 `data:` URL：
 
 ```tsx
 // 这里的二参数是图片的 MIME 类型
-h.img(buffer, 'image/png')
+h.image(buffer, 'image/png')
 
 // 等价于下面的写法
 <img src={'data:image/png;base64,' + buffer.toString('base64')}/>
