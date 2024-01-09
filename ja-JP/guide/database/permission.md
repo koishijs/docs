@@ -8,14 +8,14 @@
 
 权限其实就是执行某些操作的能力。权限具有唯一的标识符，通常由小写英文字母、数字、短横线和点构成。下面是一些你可能会见到的权限名称：
 
-- `user.514`：ID 为 514 的用户的权限
-- `group.114`：ID 为 114 的用户组的权限
-- `authority.3`：权限等级 3 的权限
-- `command.foo`：指令 foo 的权限
-- `command.foo.option.bar`：指令 foo 选项 bar 的权限
-- `telegram.admin`：telegram 平台下群管理员的权限
-- `bot.channel.mute`：能够禁言频道的机器人的权限
-- `config.write`：能够写入配置文件的权限
+- `user:514`：ID 为 514 的用户的权限
+- `group:114`：ID 为 114 的用户组的权限
+- `authority:3`：权限等级 3 的权限
+- `command:foo`：指令 foo 的权限
+- `command:foo:option:bar`：指令 foo 选项 bar 的权限
+- `telegram:admin`：telegram 平台下群管理员的权限
+- `bot:channel.mute`：能够禁言频道的机器人的权限
+- `config:write`：能够写入配置文件的权限
 
 权限之间存在两种关系：继承和依赖。Koishi 不区分权限与权限组的概念，权限组只是继承了其他权限的权限。你可以将用户和用户组也都视为一种权限组。
 
@@ -32,14 +32,14 @@ ctx.permissions.inherit(A, B)
 例：ID 为 514 的用户拥有权限等级 3，指令 foo 所需要的权限等级是 2。这种情况下该用户显然应该可以调用该指令。那么这种调用关系具体是如何体现的呢？
 
 ```text
-user.514 > authority.3 > authority.2 > command.foo
+user:514 > authority:3 > authority:2 > command:foo
 ```
 
 这里出现了三个继承关系：
 
-- `user.114 > authority.3`，因为 ID 为 514 的用户拥有权限等级 3
-- `authority.3 > authority.2`，因为权限等级 3 天生比权限等级 2 大（内置逻辑）
-- `authority.2 > command.foo`，因为指令 foo 被权限等级 2 继承
+- `user:114 > authority:3`，因为 ID 为 514 的用户拥有权限等级 3
+- `authority:3 > authority:2`，因为权限等级 3 天生比权限等级 2 大（内置逻辑）
+- `authority:2 > command:foo`，因为指令 foo 被权限等级 2 继承
 
 由此，权限的继承关系能够顺利表达已有的权限等级机制，并且具备更强的表达能力。
 
@@ -50,19 +50,19 @@ user.514 > authority.3 > authority.2 > command.foo
 例：ID 为 514 的用户同时继承了权限等级 1，而指令 foo 所需权限等级 2，此时该用户并不能调用 foo 指令。但如果现在我们让该用户直接继承 foo 指令的调用权限，会发生什么呢？
 
 ```text
-user.514 > authority.1
-         > command.foo
+user:514 > authority:1
+         > command:foo
 ```
 
-在这张图中，`user.514` 并不能经由 `authority.1` 到达 `command.foo`，但是添加第二条边后又可以直接到达 `command.foo` 了。因此该用户此时就又可以调用 foo 指令了。
+在这张图中，`user:514` 并不能经由 `authority:1` 到达 `command:foo`，但是添加第二条边后又可以直接到达 `command:foo` 了。因此该用户此时就又可以调用 foo 指令了。
 
 可以看到，权限的继承为我们提供了一种能力，可以允许特定低等级用户去调用高级权限的指令，这种能力是过去的权限等级所不具有的。
 
 例：我们希望某个管理型指令 foo 既可以被权限等级 2 的用户调用，又可以被 QQ 群的管理员调用。此时我们可以对 foo 指令进行以下配置：
 
 ```text
-authority.2  >
-telegram.admin > command.foo
+authority:2  >
+telegram:admin > command:foo
 ```
 
 这样一来，一个用户只需满足上述两个条件之一就可以调用此指令了。
@@ -82,7 +82,7 @@ ctx.permissions.depend(A, B)
 例：foo 指令的代码中调用了 bar 指令，因此 foo 指令依赖 bar 指令。
 
 ```text
-command.foo -> command.bar
+command:foo -> command:bar
 ```
 
 如果用户只拥有 foo 的权限，没有调用 bar 的权限，他依然无法调用 foo 指令。
@@ -90,7 +90,7 @@ command.foo -> command.bar
 例：foo 指令的代码中使用了 `bot.muteChannel()`。
 
 ```text
-command.foo -> bot.channel.mute
+command:foo -> bot:channel.mute
 ```
 
 如果机器人没有实现此 API，用户就无法在该机器人上调用 foo 指令。
@@ -102,12 +102,12 @@ command.foo -> bot.channel.mute
 在上面的介绍中，如果要定义新的权限，就必须手动分配给用户或用户组后才能使用。有没有方法自动为一个会话分配权限呢？这就是权限访问器的功能。
 
 ```ts
-ctx.permissions.provide('telegram.admin', async (name, session) => {
+ctx.permissions.provide('telegram:admin', async (name, session) => {
   return session.telegram?.sender?.role === 'admin'
 })
 ```
 
-上面的代码的作用是：当某个会话处于 telegram 平台，并且发送者是群内管理员时，自动附加一个 telegram.admin 权限。利用这种技术，我们就可以为特定平台提供权限能力了。
+上面的代码的作用是：当某个会话处于 telegram 平台，并且发送者是群内管理员时，自动附加一个 `telegram:admin` 权限。利用这种技术，我们就可以为特定平台提供权限能力了。
 
 每个权限可以定义多个访问器函数。在运行时必须通过每一个访问器函数的检查才能视为拥有权限。
 
