@@ -2,7 +2,7 @@
 
 `ctx.server` 是 Koishi 的内置服务，提供了一个基于 [Koa Router](https://github.com/koajs/router) 的简单路由系统，用于管理 Koishi 应用收到的网络请求。除了 Koa Router 所支持的部分方法外，Router API 还提供了一些额外的功能，例如支持接受 WebSocket 连接等。
 
-## 实例方法
+## Context API
 
 ::: warning
 请避免使用未在本页列出的方法：
