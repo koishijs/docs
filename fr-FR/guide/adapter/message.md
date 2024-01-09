@@ -194,8 +194,8 @@ class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, Telegr
         form.append(key, this.payload[key].toString())
       }
       const { type, attrs } = this.asset
-      const { filename, data } = await this.bot.ctx.http.file(attrs.url, attrs)
-      if (type === 'image') {
+      const { filename, data } = await this.bot.ctx.http.file(attrs.src, attrs)
+      if (type === 'img') {
         form.append('photo', data, filename)
         message = await this.bot.internal.sendPhoto(form)
       } else if (type === 'audio') {
