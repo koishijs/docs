@@ -201,7 +201,7 @@
 - **options.timeout:** 中间件的生效时间，缺省时会使用 [`app.config.delay.prompt`](./app.md#options-delay)
 - 返回值: `Promise<T>` 回调函数返回的结果
 
-处理当前会话的下一次输入，如果超时则会返回 `null`。如果回调函数返回值非空，则下一次输入不会进入中间件处理流程。
+处理当前会话的下一次输入，如果超时则会返回 `undefined`。如果回调函数返回值非空，则下一次输入不会进入中间件处理流程。
 
 ### session.suggest(options)
 
