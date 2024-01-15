@@ -98,7 +98,7 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 
 ### ctx.broadcast(channels?, content, forced?) <badge>需要数据库</badge>
 
-- **channels:** `string[]` 频道列表
+- **channels:** `string[]` 频道列表 `platform:channelId`
 - **content:** `string` 要发送的内容
 - **forced:** `boolean` 是否无视 silent 标记
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
