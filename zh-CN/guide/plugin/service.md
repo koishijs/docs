@@ -313,7 +313,7 @@ class Console extends Service {
 在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
 
 ::: tip
-现在你已无需声明 `service` ，只需要在插件中声明 `inject` 即可，但值得注意的是，如果你将你的插件拆分为多个模块或插件，你不仅需要在依赖该服务的模块或插件中声明，你还需要在插件的入口文件中声明
+这里的声明与上面提到的 `inject` 应当同时存在。
 :::
 
 ### 关于 `peerDependencies` {#peer-vs-dep}
