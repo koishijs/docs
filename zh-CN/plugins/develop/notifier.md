@@ -13,7 +13,7 @@
 
 ### options.type
 
-- 类型: `'primary' | 'success' | 'warning' | 'danger'`
+- 类型: `'primary' | 'info' | 'success' | 'warning' | 'error'`
 - 默认值: `'primary'`
 
 通知类型。
