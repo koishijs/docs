@@ -312,6 +312,10 @@ class Console extends Service {
 
 在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
 
+::: tip
+现在你已无需声明 `service` ，只需要在插件中声明 `inject` 即可，但值得注意的是，如果你将你的插件拆分为多个模块或插件，你不仅需要在依赖该服务的模块或插件中声明，你还需要在插件的入口文件中声明
+:::
+
 ### 关于 `peerDependencies` {#peer-vs-dep}
 
 一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
@@ -342,8 +346,10 @@ export function apply(ctx: Context) {
 
 ```json title=package.json
 {
-  "service": {
-    "required": ["puppeteer"]
+  "koishi": {
+    "service": {
+      "required": ["puppeteer"]
+    }
   },
   "devDependencies": {
     "koishi-plugin-puppeteer": "^2.0.0"
@@ -367,8 +373,10 @@ export class ExamplePlugin extends DataService {
 
 ```json
 {
-  "service": {
-    "required": ["console"]
+  "koishi": {
+    "service": {
+      "required": ["console"]
+    }
   },
   "peerDependencies": {
     "@koishijs/plugin-console": "^5.13.0"
