@@ -367,8 +367,10 @@ export class ExamplePlugin extends DataService {
 
 ```json
 {
-  "service": {
-    "required": ["console"]
+  "koishi": {
+    "service": {
+      "required": ["console"]
+    }
   },
   "peerDependencies": {
     "@koishijs/plugin-console": "^5.13.0"
