@@ -17,7 +17,7 @@
 
 2. 将要使用 JSX 的文件后缀名修改为 `.tsx`。
 
-## 心跳迁移 <badge>v4.10.4</badge>
+## 心跳更新 <badge>v4.10.4</badge>
 
 在 4.10.4 版本中，我们调整了默认的心跳行为，这可能导致老用户升级时遭遇无限重启问题。可以执行下列操作进行升级：可以执行下列操作进行升级：
 
@@ -29,7 +29,7 @@
 6. 再次重启实例
 7. 如果之前移除了 assets-\* 插件，请重新前往插件市场进行安装
 
-## CLI 迁移 <badge>v4.11.0</badge>
+## CLI 更新 <badge>v4.11.0</badge>
 
 在 4.11.0 版本中我们移除了 @koishijs/cli 包，将其合并到了 koishi 中。这意味着你每次升级时不再需要同时升级两边了。但对于已经安装了 @koishijs/cli 的用户，你需要执行下列操作完成升级：这意味着你每次升级时不再需要同时升级两边了。但对于已经安装了 @koishijs/cli 的用户，你需要执行下列操作完成升级：
 
@@ -37,7 +37,7 @@
 2. 在依赖管理中，修改 koishi 的版本号到 4.11.0，同时移除 @koishijs/cli 的版本号
 3. 点击「应用更改」按钮
 
-## HMR 迁移 <badge>v4.12.0</badge>
+## HMR 更新 <badge>v4.12.0</badge>
 
 在 4.12.0 版本中，我们将模块热替换相关功能移至专门的插件 @koishijs/plugin-hmr 中。对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：
 
@@ -45,7 +45,7 @@
 2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#模块热替换) 中提到的部分
 3. 移除 `package.json` 文件中 `scripts.dev` 的 `--watch` 参数
 
-## 插件市场迁移 <badge>v4.13.0</badge>
+## 插件市场更新 <badge>v4.13.0</badge>
 
 在 4.13.0 版本中，我们将 @koishijs/plugin-market 插件分拆为了两个插件 market 和 config。其中 market 负责「插件市场」和「依赖管理」页面，而 config 则负责「插件配置」页面。直接将 market 插件更新到 2.0.0 或以上版本的用户会发现自己的「插件配置」页面消失，此时你需要执行下列操作完成升级：
 
@@ -69,7 +69,7 @@ plugins:
 4. 点击右上角的保存按钮
 5. 重新启动 Koishi 实例
 
-## 国际化迁移 <badge>v4.13.0</badge>
+## 国际化更新 <badge>v4.13.0</badge>
 
 在 4.13.0 版本中，我们也引入了多语言的回退机制。这意味者，所有涉及语言配置的地方都需要从单一的语言字符串修改为数组。具体包括以下几个地方：
 
@@ -113,3 +113,30 @@ for await (const item of bot.getChannelIter())  // new
 [`encoder.results`](../api/message/encoder.md#encoder-results) 的类型由 `string[]` 变为 `Message[]`。
 
 新增用于创建私聊频道的 [`bot.createDirectChannel()`](../api/resources/channel.md)，因此不再需要实现 [`bot.sendPrivateMessage()`](../api/resources/message.md#bot-sendprivatemessage)。
+
+## 消息元素更新 <badge>v4.16.4</badge>
+
+在 4.16.4 版本中，我们将 Koishi 内部的消息元素实现与 Satori 协议规范进行了对齐。涉及到以下 API 的变动：
+
+- `<image>` 元素更名为 `<img>`
+- `<img>`, `<audio>`, `<video>`, `<file>` 元素的 `url` 属性改为 `src`
+
+如果你的插件用到了相关的特性，请参考下面的迁移指南：
+
+- 如果你的插件**发送**了上述消息元素，你不需要进行任何修改
+  - 官方适配器插件 (和积极维护的社区适配器插件) 都进行了向下兼容
+  - 如果你使用了非官方的适配器并发现升级后无法发送图片，请联系适配器作者进行更新
+- 如果你的插件**接收并解析**了上述消息元素，你可能需要调整你的解析逻辑
+  - 要从给定的消息中提取图片，可以使用 [`h.select()`](../api/message/api.md#h-select) 方法
+  - 如果你的指令接受图片作为参数，可以直接使用 [`image`](../guide/basic/command.md#argument-type) 参数类型
+
+对于适配器作者，请参考下面的迁移指南：
+
+- 接收侧 (`Adapter`)：请确保创建的会话中的消息元素均符合最新标准
+- 发送侧 (`MessageEncoder`)：请尽量同时支持新旧标准，例如使用以下代码：
+
+```ts
+if (type === 'image' || type === 'img') {
+  await sendImage(attrs.src || attrs.url)
+}
+```
