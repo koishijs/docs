@@ -66,7 +66,7 @@ ctx.command('test <message:text>')
 文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](../../manual/recipe/execution.md#使用引号) 将要输入的文本包裹起来。
 :::
 
-### 参数的类型
+### 参数类型 {#argument-type}
 
 除去 `text` 以外，Koishi 还支持许多其他的类型。它们的用法与 `text` 无异：
 
@@ -97,6 +97,7 @@ ctx.command('test [arg:number]')
 - integer: `number` 整数
 - posint: `number` 正整数
 - date: `Date` 日期
+- image: `Dict` 图片
 
 <!-- ### 定义新类型
 
@@ -237,7 +238,7 @@ ctx.command('test')
 <chat-message nickname="Koishi">{ "writer": 0 }</chat-message>
 </chat-panel>
 
-### 选项的类型
+### 选项类型 {#option-type}
 
 选项也可以像参数一样设置类型：
 
