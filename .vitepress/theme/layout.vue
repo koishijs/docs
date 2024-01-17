@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 
-import { Layout } from '@koishijs/vitepress/client'
+import { Layout } from '@cordisjs/vitepress/client'
 import { useData } from 'vitepress'
 import { computed, provide, watch } from 'vue'
 import { useI18n } from 'vue-i18n'

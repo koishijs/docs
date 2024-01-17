@@ -1,4 +1,4 @@
-import { defineConfig } from '@koishijs/vitepress'
+import { defineConfig } from '@cordisjs/vitepress'
 import { resolve } from 'path'
 import { cp, mkdir, rm } from 'fs/promises'
 import vueI18n from '@intlify/unplugin-vue-i18n/vite'

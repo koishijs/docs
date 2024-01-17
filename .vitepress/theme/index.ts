@@ -1,4 +1,4 @@
-import { defineTheme } from '@koishijs/vitepress/client'
+import { defineTheme } from '@cordisjs/vitepress/client'
 import { defineAsyncComponent } from 'vue'
 import Empty from './components/empty.vue'
 import Markdown from 'marked-vue'

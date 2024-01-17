@@ -97,15 +97,6 @@ html.dark {
   }
 }
 
-mjx-container {
-  font-size: 0.95em;
-  vertical-align: middle;
-
-  > svg {
-    margin-top: -4px;
-  }
-}
-
 @media (max-width: 640px) {
   .vp-doc .custom-block {
     div[class*='language-'] {
