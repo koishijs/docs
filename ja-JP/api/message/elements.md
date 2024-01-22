@@ -221,7 +221,7 @@ hello<message/>world
 
 交互元素用于显然消息中的可交互性内容。如果平台不支持此类元素且难以提供回退，可以直接忽略整个元素。实现侧应当根据平台特性，针对性地返回带有交互和不带有交互的消息。
 
-### 按钮 (button) {#button} <badge type="warning">实验性</badge>
+### 按钮 (button) <badge type="warning">实验性</badge> {#button}
 
 - **id:** `string` 按钮的 ID
 - **type:** `string` 按钮的类型
