@@ -2,7 +2,7 @@
 
 我们已经知道，单独一个 `Bot` 类已经构成一个合法的插件了。However, such plugin has only the ability to call the platform API and cannot receive messages. 这个时候就需要 `Adapter` 类出场了。
 
-## Types of Adapters
+## 适配器的类型 {#types}
 
 适配器需要建立并维护机器人与聊天平台之间的连接。通常来说，根据协议的不同，适配器与机器人可能是一对一的，也可能是一对多的。让我们再看一眼之前介绍过的 `ReplBot` 实例：
 
@@ -23,11 +23,11 @@ class ReplBot<C extends Context> extends Bot<C> {
 
 简单来说就是，在实现适配器时，首先需要协议的类型确定适配器与机器人的对应关系。如果是一对一的，就需要声明 `reusable` 属性，否则不需要声明。此外，对于部分典型场景，我们又进一步派生出了 `Adapter.WsClient` 等子类，方便你快速实现适配器。
 
-## Typical Implementations
+## 典型实现 {#typical-impls}
 
 Let's see a few typical adapters.
 
-### WebSocket
+### WebSocket {#websocket}
 
 一种常见的通信方式是 WebSocket，许多平台 (Discord、KOOK、钉钉等) 都会使用这项技术。它的工作原理是，机器人首先向聊天平台的 WebSocket 网关发起连接请求，随后平台会将事件推送到机器人的 WebSocket 连接上。这里我们还是以 Discord 平台为例：
 
@@ -86,7 +86,7 @@ if (session) this.dispatch(session)
 
 `createSession()` 会根据事件的类型，创建不同的 `Session` 实例。如果无法对应到标准的会话事件，那么 `createSession()` 方法会返回空值，表示我们不需要调用 `dispatch()` 方法。
 
-### Webhook
+### Webhook {#webhook}
 
 另一种常见的通信方式是 Webhook，使用这种通信方式的平台有飞书、企业微信、Line 等。它的工作原理是，机器人搭建者首先在聊天平台的开发者后台配置一个 HTTP 服务器地址，随后平台会将事件推送到该地址上。这里我们以 Line 平台为例：
 
@@ -147,7 +147,7 @@ for (const event of parsed.events) {
 }
 ```
 
-### 其他通信方式
+### 其他通信方式 {#others}
 
 除了 WebSocket 和 Webhook 以外，还有一些其他可能出现的通信方式：
 
@@ -156,11 +156,11 @@ for (const event of parsed.events) {
 
 当然，对于那些不太像聊天平台的聊天平台，你也可以不必拘泥于传统的通信方式。直接继承 `Adapter` 基类，实现自己的逻辑即可。无论是我们在本章开始介绍的命令行环境，又或者是邮件、短信，甚至是社交媒体的评论区、私信，只要是能打字的地方，都可以通过适配器的方式接入到 Koishi 中！
 
-## Advanced Techniques
+## 进阶技巧 {#advanced}
 
 接下来我们将介绍一些复杂适配器的实现技巧。
 
-### Multi-Protocol Support
+### 多协议支持 {#multi-protocol}
 
 部分平台同时支持了多种通信方式，例如 Telegram 就同时支持了 Webhook 和 HTTP 轮询。对于此类平台，我们可以提供一个配置项，让用户根据需要自行选择通信方式。
 
@@ -243,7 +243,7 @@ namespace TelegramBot {
 }
 ```
 
-### Dynamically Create Bots
+### 动态创建机器人 {#dynamic}
 
 到此为止，我们的适配器开发中都存在一个隐含限制：用户的一次插件加载只能对应于一个 `Bot` 实例。如果用户需要创建多个机器人，那么就需要多次加载插件。这是因为在绝大多数适配器的使用场景下，用户都能很明确地知道自己需要创建多少个机器人。然而总有一些例外情况：
 
