@@ -30,19 +30,6 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运
 首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 console, sandbox 和 echo 为例)：
 
 ::: tabs code
-```npm
-# 初始化项目
-npm init
-
-# 安装 Koishi 和相关插件
-npm i koishi \
-      @koishijs/plugin-console \
-      @koishijs/plugin-sandbox \
-      @koishijs/plugin-echo
-
-# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
-npm i typescript @types/node esbuild esbuild-register -D
-```
 ```yarn
 # 初始化项目
 yarn init
@@ -55,6 +42,19 @@ yarn add koishi
 
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
+```
+```npm
+# 初始化项目
+npm init
+
+# 安装 Koishi 和相关插件
+npm i koishi \
+      @koishijs/plugin-console \
+      @koishijs/plugin-sandbox \
+      @koishijs/plugin-echo
+
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
+npm i typescript @types/node esbuild esbuild-register -D
 ```
 :::
 
@@ -98,15 +98,15 @@ node -r esbuild-register .
 如果你想要接入真实聊天平台，那么你只需要安装适配插件即可：
 
 ::: tabs code
-```npm
-# 以 Satori 和 Discord 适配器为例
-npm i @koishijs/plugin-adapter-satori \
-      @koishijs/plugin-adapter-discord
-```
 ```yarn
 # 以 Satori 和 Discord 适配器为例
 yarn add @koishijs/plugin-adapter-satori \
          @koishijs/plugin-adapter-discord
+```
+```npm
+# 以 Satori 和 Discord 适配器为例
+npm i @koishijs/plugin-adapter-satori \
+      @koishijs/plugin-adapter-discord
 ```
 :::
 
@@ -144,13 +144,13 @@ Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会�
 对于社区插件，使用类似的方式安装和加载：
 
 ::: tabs code
-```npm
-# 以 puppeteer 和 forward 插件为例
-npm i koishi-plugin-puppeteer koishi-plugin-forward
-```
 ```yarn
 # 以 puppeteer 和 forward 插件为例
 yarn add koishi-plugin-puppeteer koishi-plugin-forward
+```
+```npm
+# 以 puppeteer 和 forward 插件为例
+npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
 :::
 
