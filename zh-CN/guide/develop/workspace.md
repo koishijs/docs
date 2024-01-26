@@ -11,11 +11,11 @@ Koishi 的核心是插件系统，绝大部分 Koishi 功能都可以通过插�
 在应用目录运行下面的命令以创建一个新的插件工作区：
 
 ::: tabs code
-```npm
-npm run setup [name] -- [-c] [-m] [-G]
-```
 ```yarn
 yarn setup [name] [-c] [-m] [-G]
+```
+```npm
+npm run setup [name] -- [-c] [-m] [-G]
 ```
 :::
 
@@ -68,11 +68,11 @@ export function apply(ctx: Context) {
 假设你的 npm 用户名是 `alice`，那么你可以使用下面的命令创建一个私域插件工作区：
 
 ::: tabs code
-```npm
-npm run setup @alice/example
-```
 ```yarn
 yarn setup @alice/example
+```
+```npm
+npm run setup @alice/example
 ```
 :::
 
@@ -98,11 +98,11 @@ yarn setup @alice/example
 上面的插件暂时还只能在开发模式下运行。如果想要在生产模式下使用或发布到插件市场，你需要构建你的源代码。在应用目录运行下面的命令：
 
 ::: tabs code
-```npm
-npm run build [...name]
-```
 ```yarn
 yarn build [...name]
+```
+```npm
+npm run build [...name]
 ```
 :::
 
@@ -118,11 +118,11 @@ yarn build [...name]
 插件创建时，`package.json` 中已经包含了一些必要的依赖。如果你需要添加其他依赖，可以使用下面的命令：
 
 ::: tabs code
-```npm
-npm install [...deps] -w koishi-plugin-[name]
-```
 ```yarn
 yarn workspace koishi-plugin-[name] add [...deps]
+```
+```npm
+npm install [...deps] -w koishi-plugin-[name]
 ```
 :::
 
@@ -136,11 +136,11 @@ yarn workspace koishi-plugin-[name] add [...deps]
 尽管 npm 和 yarn 等包管理器都提供了依赖更新功能，但它们对工作区开发的支持都不是很好。因此，我们也提供了一个简单的命令用于批量更新依赖版本。
 
 ::: tabs code
-```npm
-npm run dep
-```
 ```yarn
 yarn dep
+```
+```npm
+npm run dep
 ```
 :::
 
@@ -163,11 +163,11 @@ yarn dep
 其他人创建的工作区插件可以直接克隆到你的 `external` 目录下。例如，你可以使用下面的命令将 `koishi-plugin-forward` 插件克隆到本地：
 
 ::: tabs code
-```npm
-npm run clone koishijs/koishi-plugin-forward
-```
 ```yarn
 yarn clone koishijs/koishi-plugin-forward
+```
+```npm
+npm run clone koishijs/koishi-plugin-forward
 ```
 :::
 
@@ -176,13 +176,13 @@ yarn clone koishijs/koishi-plugin-forward
 工作区不仅可以用于插件的二次开发，还可以用于开发 Koishi 本身。只需使用下面的命令将 Koishi 仓库克隆到本地，并完成构建：
 
 ::: tabs code
-```npm
-npm run clone koishijs/koishi
-npm run build -w @root/koishi
-```
 ```yarn
 yarn clone koishijs/koishi
 yarn workspace @root/koishi build
+```
+```npm
+npm run clone koishijs/koishi
+npm run build -w @root/koishi
 ```
 :::
 
