@@ -153,11 +153,11 @@ root
 编辑完上面的清单文件并 [构建源代码](./workspace.md#构建源代码) 后，你就可以公开发布你的插件了。
 
 ::: tabs code
-```npm
-npm run pub [...name]
-```
 ```yarn
 yarn pub [...name]
+```
+```npm
+npm run pub [...name]
 ```
 :::
 
@@ -179,11 +179,11 @@ No token found and can't prompt for login when running with --non-interactive.
 此时你需要在发布时使用官方镜像，具体操作如下：
 
 ::: tabs code
-```npm
-npm run pub [...name] -- --registry https://registry.npmjs.org
-```
 ```yarn
 yarn pub [...name] --registry https://registry.yarnpkg.com
+```
+```npm
+npm run pub [...name] -- --registry https://registry.npmjs.org
 ```
 :::
 
@@ -204,11 +204,11 @@ yarn config set npmPublishRegistry https://registry.yarnpkg.com
 初始创建的插件版本号为 `1.0.0`。当你修改过插件后，你需要更新版本号才能重新发布。在应用目录运行下面的命令以更新版本号：
 
 ::: tabs code
-```npm
-npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
-```
 ```yarn
 yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
+```
+```npm
+npm run bump [...name] -- [-1|-2|-3|-p|-v <ver>] [-r]
 ```
 :::
 
