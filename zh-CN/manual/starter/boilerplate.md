@@ -40,7 +40,7 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运
 
 ### 安装包管理器
 
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
+Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们推荐使用功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
 
 ```sh
 # 安装 yarn
