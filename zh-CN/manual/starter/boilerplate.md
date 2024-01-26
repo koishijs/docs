@@ -71,11 +71,11 @@ Set-ExecutionPolicy RemoteSigned
 如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
 
 ::: tabs code
-```npm
-npm config set registry https://registry.npmmirror.com
-```
 ```yarn
 yarn config set registry https://registry.npmmirror.com
+```
+```npm
+npm config set registry https://registry.npmmirror.com
 ```
 :::
 
@@ -93,11 +93,11 @@ yarn config set registry https://registry.npmmirror.com
 输入下面的命令以创建 Koishi 项目：
 
 ::: tabs code
-```npm
-npm init koishi@latest
-```
 ```yarn
 yarn create koishi
+```
+```npm
+npm init koishi@latest
 ```
 :::
 
@@ -108,11 +108,11 @@ yarn create koishi
 如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
 
 ::: tabs code
-```npm
-npm start
-```
 ```yarn
 yarn start
+```
+```npm
+npm start
 ```
 :::
 
