@@ -59,11 +59,11 @@ git config –-global user.email "you@example.com"
 输入下面的命令以创建 Koishi 项目：
 
 ::: tabs code
-```npm
-npm init koishi@latest
-```
 ```yarn
 yarn create koishi
+```
+```npm
+npm init koishi@latest
 ```
 :::
 
