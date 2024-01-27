@@ -49,9 +49,10 @@ jobs:
           DEPLOY_BASE: /dist-docs/
 
       - name: Deploy (koishi-plugin-docs)
+        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.WORKFLOW_TOKEN }}
+          personal_token: ${{ secrets.WORKFLOW_TOKEN }}
           publish_branch: dist-docs
           publish_dir: .vitepress/dist
           force_orphan: true
@@ -59,6 +60,7 @@ jobs:
           commit_message: '[skip ci] deploy'
 
       - name: Sync (koishi-plugin-docs)
+        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
         run: >
           curl -L
           -X POST
@@ -68,6 +70,7 @@ jobs:
           -d '{"ref":"main"}'
 
       - name: Build
+        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
         run: yarn build
         env:
           MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
@@ -75,10 +78,12 @@ jobs:
           MEILISEARCH_WRITE_KEY: ${{ secrets.MEILISEARCH_WRITE_KEY }}
 
       - name: Deploy
+        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.WORKFLOW_TOKEN }}
-          publish_branch: dist
+          personal_token: ${{ secrets.WORKFLOW_TOKEN }}
+          external_repository: koishi-bot/koishi
+          publish_branch: pages
           publish_dir: .vitepress/dist
           force_orphan: true
           enable_jekyll: true
