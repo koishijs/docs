@@ -12,7 +12,7 @@
     </div>
     <div class="copyright">
       <div>MIT Licensed</div>
-      <div>Copyright © 2019-2024 Shigma</div>
+      <div>Copyright © 2019-present Shigma</div>
       <a v-if="beian" target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn/">浙ICP备2021029727号-1</a>
     </div>
   </footer>
