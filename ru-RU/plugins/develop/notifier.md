@@ -4,10 +4,10 @@
 
 ### ctx.notifier.create(options?)
 
-- **options:** <code>string | [Options](#options)</code> 通知选项
+- **options:** <code>Fragment | [Options](#options)</code> 通知选项
 - 返回值: [`Notifier`](#notifier)
 
-创建一个通知。如果传入的是字符串，则会视为 [`options.content`](#options-content)。
+创建一个通知。如果传入的是字符串或 JSX，则会视为 [`options.content`](#options-content)。
 
 ## 通知选项 {#options}
 
@@ -20,7 +20,7 @@
 
 ### options.content
 
-- 类型: `string`
+- 类型: `Fragment`
 - 默认值: `''`
 
 通知内容。
@@ -29,7 +29,7 @@
 
 ### notifier.update(options?)
 
-- **options:** <code>string | [Options](#options)</code> 通知选项
+- **options:** <code>Fragment | [Options](#options)</code> 通知选项
 
 更新此通知。如果传入的是字符串，则会视为 [`options.content`](#options-content)。
 
