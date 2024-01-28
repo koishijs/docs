@@ -26,9 +26,11 @@ import { useData } from 'vitepress'
 const { frontmatter } = useData()
 
 const beian = ref(false)
+
 onMounted(() => {
-  if (window.location.href.includes('ilharper.com'))
+  if (window.location.href.includes('ilharper.com')) {
     beian.value = true
+  }
 })
 
 </script>
