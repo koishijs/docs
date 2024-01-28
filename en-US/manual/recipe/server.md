@@ -1,9 +1,5 @@
 # Deployment
 
-:::warning
-将 Koishi 暴露在公网上可能会导致你的服务器受到攻击。你需要妥善配合 [用户登录](../usage/platform.md#控制台登录) 等方式以限制控制台功能的访问能力。
-:::
-
 Koishi apps can only be accessed from localhost by default. You might need to access the Koishi Console or services provided by other plugins on the Internet.
 
 - Allow more people to access your Koishi console
@@ -11,7 +7,13 @@ Koishi apps can only be accessed from localhost by default. You might need to ac
 
 This section would guide you in completing the deployment for a Koishi application.
 
-## 配置 server 插件
+## 配置用户登录
+
+将 Koishi 不受限制地暴露在公网上可能会导致你的服务器受到攻击。因此，你需要妥善配合用户登录等方式以限制控制台功能的访问能力。
+
+在 [前面的章节](../usage/platform.md#控制台登录) 中，我们已经介绍了 [auth](../../plugins/console/auth.md) 插件的使用方法。
+
+## 配置服务器地址
 
 [@koishijs/plugin-server](../../plugins/develop/server.md) 是一个预装插件。
 
