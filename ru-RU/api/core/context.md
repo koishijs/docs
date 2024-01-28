@@ -96,11 +96,10 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 
 在当前上下文中注册或修改一个指令。
 
-### ctx.broadcast(channels?, content, forced?) <badge>需要数据库</badge>
+### ctx.broadcast(channels?, content) <badge>需要数据库</badge>
 
 - **channels:** `string[]` 频道列表，格式为 `{platform}:{channelId}` (如 `discord:1234567890`)
 - **content:** `string` 要发送的内容
-- **forced:** `boolean` 是否无视 silent 标记
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
 所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
