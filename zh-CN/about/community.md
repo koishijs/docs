@@ -7,6 +7,7 @@
 ### QQ 群
 
 - [590104798](https://qm.qq.com/q/vJ0kcQePCM)：Koishi 非官方交流群
+- [814699063](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bD8y40Tv5bVlDZCrGDqXK15AlUC1epFf&authKey=41tIW6KYDvX%2B7QWXRdiYeR4WRP%2Bd9zsTNHUwD1XaivDgWJXR3WgZQRxq9ibxeJVu&noverify=0&group_code=814699063)：Koishi玩家俱乐部
 
 ## 文档
 
