@@ -143,6 +143,6 @@ ctx.database
 ```ts
 // 返回的数据包含 foo, bar 两个属性
 ctx.database
-  .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
+  .join(['foo', 'bar'] as const, (foo, bar) => $.eq(foo.id, bar.id))
   .execute()
 ```
