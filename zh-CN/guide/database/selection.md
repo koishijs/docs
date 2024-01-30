@@ -146,3 +146,22 @@ ctx.database
   .join(['foo', 'bar'] as const, (foo, bar) => $.eq(foo.id, bar.id))
   .execute()
 ```
+
+普通的 `.orderBy()` 和 `.where()` 方法不支持字段中带有 `.` 符号。因此在使用连接查询时，你需要使用[求值表达式](#求值表达式)：
+
+```ts
+ctx.database
+  .join(['foo', 'bar'] as const, (foo, bar) => $.eq(foo.id, bar.id))
+  .orderBy(row => row.foo.id)
+  .execute()
+```
+
+如果你的表名比较复杂，你也可以为参与连接的各个表指定别名。将用于指定表名的数组改为传入一个对象，并修改传入函数的参数即可。下面是一个例子：
+
+```ts
+// 返回的数据包含 t1, t2 两个属性
+ctx.database
+  .join({ t1: 'foo', t2: 'bar', }, row => $.eq(row.t1.id, row.t2.id))
+  .orderBy(row => row.t1.id)
+  .execute();
+```
