@@ -83,7 +83,7 @@
             "link": "/about/community.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "Release Notes",
             "link": "/releases/index.md"
           }
         ],
@@ -473,7 +473,7 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "计时器 (Timer)",
+              "text": "Timer",
               "link": "/api/service/timer.md"
             }
           ]
@@ -637,7 +637,7 @@
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "从元框架到框架",
+              "text": "Meta-framework and Framework",
               "link": "/cookbook/design/framework.md"
             },
             {
