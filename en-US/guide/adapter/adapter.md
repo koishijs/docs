@@ -183,12 +183,12 @@ adapter-telegram
 class ServerAdapter<C extends Context> extends Adapter<C, TelegramBot<C>> {}
 
 namespace ServerAdapter {
-  export interface Config {
+  export interface Options {
     protocol: 'server'
     path?: string
   }
 
-  export const Config: Schema<Config> = Schema.object({
+  export const Options: Schema<Options> = Schema.object({
     protocol: Schema.const('server').required(),
     path: Schema.string().default('/telegram'),
   })
@@ -202,12 +202,12 @@ class PollingAdapter<C extends Context> extends Adapter<C, TelegramBot<C>> {
 }
 
 namespace PollingAdapter {
-  export interface Config {
+  export interface Options {
     protocol: 'polling'
     timeout?: string
   }
 
-  export const Config: Schema<Config> = Schema.object({
+  export const Options: Schema<Options> = Schema.object({
     protocol: Schema.const('server').required(),
     timeout: Schema.number().default(Time.second * 25),
   })
@@ -229,15 +229,15 @@ class TelegramBot<C extends Context> extends Bot<C, TelegramBot.Config> {
 }
 
 namespace TelegramBot {
-  export type Config = ServerAdapter.Config | PollingAdapter.Config
+  export type Config = ServerAdapter.Options | PollingAdapter.Options
 
   export const Config: Schema<Config> = Schema.intersect([
     Schema.object({
       protocol: Schema.union(['server', 'polling']).required(),
     }),
     Schema.union([
-      HttpServer.Config,
-      HttpPolling.Config,
+      HttpServer.Options,
+      HttpPolling.Options,
     ]),
   ])
 }
