@@ -117,7 +117,7 @@ type FieldCollector<K extends string> =
 - **config:** [`Command.Config`](./context.md#ctx-command) 指令的配置
 - 返回值：`Command` 注册或修改的指令
 
-注册或修改子指令。子指令会继承当期指令的上下文。参见 [注册子指令](../../guide/basic/command.md#注册子指令) 和 [子指令](../../manual/usage/command.md#子指令) 章节。
+注册或修改子指令。子指令会继承当期指令的上下文。参见 [子指令](../../manual/usage/command.md#子指令) 和 [注册子指令](../../guide/basic/command.md#注册子指令) 章节。
 
 ### cmd.parse(input)
 
