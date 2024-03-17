@@ -18,13 +18,13 @@ code: |
 支持传入一些额外的选项：
 
 - `allowCreate`：是否允许创建目录和上传文件
-- `extensions`：可选的文件的扩展名列表，扩展名全需要以 `.` 开头；特别地其中如果包含 `directory` 则表示可以选择文件夹
+- `filters`：可选的文件的扩展名列表，扩展名全需要以 `.` 开头；特别地其中如果包含 `directory` 则表示可以选择文件夹
 
 ```ts
 export default Schema.object({
   path1: Schema.path(),
   path2: Schema.path({
-    extensions: ['.png', '.jpg', 'directory'],
+    filters: ['.png', '.jpg', 'directory'],
   }),
 })
 ```
