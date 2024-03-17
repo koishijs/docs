@@ -52,10 +52,10 @@ foo:
 <chat-message nickname="Koishi">Hello, world!</chat-message>
 </chat-panel>
 
-带插值的用法。
+这个组件也可以配合插值使用：
 
 ```html
-<i18n path='foo.bar'>{'Koishi'}</i18n>
+<i18n path="foo.bar">{'Koishi'}</i18n>
 ```
 
 ```yaml
