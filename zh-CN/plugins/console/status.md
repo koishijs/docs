@@ -7,45 +7,20 @@
 status 指令可以用于查看机器人的运行状态。
 
 <chat-panel>
-<chat-message nickname="Alice">你的状态</chat-message>
+<chat-message nickname="Alice">status</chat-message>
 <chat-message nickname="Koishi">
-<p>5 名四季酱正在为 20 个群和 2409 名用户提供服务。</p>
-<p>四季酱 2 号：工作中（2/min）</p>
-<p>四季酱 3 号：工作中（3/min）</p>
-<p>四季酱 4 号：工作中（3/min）</p>
-<p>四季酱 5 号：工作中（0/min）</p>
-<p>四季酱 9 号：工作中（5/min）</p>
+<p>[qq] Koishi：运行中</p>
+<p>[lark] Koishi：运行中</p>
 <p>==========</p>
-<p>更新时间：2019-12-8 14:41:15</p>
-<p>启动时间：2019-12-8 14:52:12</p>
-<p>已运行 43 天 10 小时 22 分钟</p>
-<p>已载入指令：105</p>
-<p>已载入中间件：8</p>
-<p>CPU 使用率：1% / 2%</p>
-<p>内存使用率：34% / 91%</p>
+<p>CPU 使用率：0% / 1%</p>
+<p>内存使用率：1% / 48%</p>
 </chat-message>
 </chat-panel>
 
-### 修改指令输出
-
-可以使用模板语法修改 status 指令的输出。默认的代码实现如下：
-
-<div v-pre>
-
-```ts
-template.set('status', {
-  bot: '{{ username }}：{{ code ? `无法连接` : `工作中（${currentRate[0]}/min）` }}',
-  output: [
-    '{{ bots }}',
-    '==========',
-    '活跃用户数量：{{ activeUsers }}',
-    '活跃群数量：{{ activeGuilds }}',
-    'CPU 使用率：{{ (cpu[0] * 100).toFixed() }}% / {{ (cpu[1] * 100).toFixed() }}%',
-    '内存使用率：{{ (memory[0] * 100).toFixed() }}% / {{ (memory[1] * 100).toFixed() }}%',
-  ].join('\n'),
-})
-```
-</div>
+### 本地化
+::: tip
+请参见 [入门 > 国际化](../../manual/usage/customize.md#本地化文本) 一节。
+:::
 
 ## 配置项
 
