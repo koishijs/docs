@@ -52,6 +52,21 @@ foo:
 <chat-message nickname="Koishi">Hello, world!</chat-message>
 </chat-panel>
 
+这个组件也可以配合插值使用：
+
+```html
+<i18n path="foo.bar">{'Koishi'}</i18n>
+```
+
+```yaml
+foo:
+  bar: Hello, {0}!
+```
+
+<chat-panel>
+<chat-message nickname="Koishi">Hello, Koishi!</chat-message>
+</chat-panel>
+
 ### 时间 (i18n:time) <badge>会话+广播</badge>
 
 - **value:** 时间长度（毫秒）
