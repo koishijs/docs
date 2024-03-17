@@ -29,6 +29,10 @@ import {
 } from 'element-plus'
 import Layout from './layout.vue'
 import Overview from './overview.vue'
+import LayoutHome from './layouts/home/index.vue'
+import LayoutMarket from './layouts/market.vue'
+import LayoutStarter from './layouts/starter.vue'
+import LayoutSchema from './layouts/schema/index.vue'
 
 import '@koishijs/core'
 import 'element-plus/dist/index.css'
@@ -38,10 +42,10 @@ globalThis.Schema = Schema
 
 export default defineTheme({
   layouts: {
-    home: defineAsyncComponent(() => import('./layouts/home/index.vue')),
-    market: defineAsyncComponent(() => import('./layouts/market.vue')),
-    starter: defineAsyncComponent(() => import('./layouts/starter.vue')),
-    schema: defineAsyncComponent(() => import('./layouts/schema/index.vue')),
+    home: LayoutHome,
+    market: LayoutMarket,
+    starter: LayoutStarter,
+    schema: LayoutSchema,
   },
   Layout,
   enhanceApp({ app }) {

@@ -14,7 +14,7 @@
   "devDependencies": {
     "@cordisjs/vitepress": "^3.2.6",
     "@intlify/unplugin-vue-i18n": "^1.5.0",
-    "@koishijs/components": "^1.5.8",
+    "@koishijs/components": "^1.5.9",
     "@koishijs/core": "^4.17.2",
     "@koishijs/dns": "^1.0.1",
     "@koishijs/market": "^4.2.5",
