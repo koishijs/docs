@@ -10,7 +10,10 @@
 
 ## 实例方法
 
-### ctx.permissions.define(name, inherits)
+### ctx.permissions.define(name, options)
+
+- **name:** `string` 权限名称
+- **options.check:** `(session: Partial<Session>) => boolean` 权限检查函数
 
 ### ctx.permissions.inherit(a, b)
 

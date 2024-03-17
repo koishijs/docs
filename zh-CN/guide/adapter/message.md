@@ -286,7 +286,7 @@ class LarkAdapter {
         responseType: 'stream',
       })
       ctx.status = 200
-      ctx.response.headers['content-type'] = response.headers['content-type']
+      ctx.response.headers['content-type'] = response.headers.get('content-type')
       ctx.response.body = response.data
     })
   }

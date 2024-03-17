@@ -14,7 +14,7 @@
 
 - **method:** `string` 请求方法
 - **url:** `string` 请求地址
-- **config:** `AxiosRequestConfig` 配置项
+- **config:** `RequestConfig` 配置项
 - 返回值: `Promise<any>`
 
 ### ctx.http.head(url, config)
@@ -22,7 +22,7 @@
 ### ctx.http.delete(url, config)
 
 - **url:** `string` 请求地址
-- **config:** `AxiosRequestConfig` 配置项
+- **config:** `RequestConfig` 配置项
 - 返回值: `Promise<any>`
 
 发送 HEAD / GET / DELETE 请求。
@@ -33,7 +33,7 @@
 
 - **url:** `string` 请求地址
 - **data:** `any` 请求数据
-- **config:** `AxiosRequestConfig` 配置项
+- **config:** `RequestConfig` 配置项
 - 返回值: `Promise<any>`
 
 发送 POST / PUT / PATCH 请求。
