@@ -5,7 +5,7 @@ code: |
     array: Schema.array(Number).description('这是一个数组，点击右侧的按钮添加元素。'),
     table1: Schema.array(String).role('table').description('以表格形式显示的数组。'),
     table2: Schema.array(Schema.object({
-      foo: Schema.string().disabled(),
+      foo: Schema.string(),
       bar: Schema.number().experimental(),
       qux: Schema.bitset({ FOO: 1, BAR: 2, QUX: 4 }).default(5),
     })).role('table').description('以表格形式显示的由对象构成的数组。'),
@@ -31,7 +31,7 @@ export default Schema.object({
   table1: Schema.array(String).role('table'),
   table2: Schema.array(Schema.object({
     foo: Schema.string(),
-    bar: Schema.number(),
+    bar: Schema.number().experimental(),
     qux: Schema.bitset({ FOO: 1, BAR: 2, QUX: 4 }).default(5),
   })).role('table'),
 })
