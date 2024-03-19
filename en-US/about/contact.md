@@ -18,13 +18,13 @@ This group is for the users who had learned Node.js / TypeScript and interested 
 
 ## Discord
 
-[加入服务器](https://discord.com/invite/xfxYwmd284)
+[Join server](https://discord.com/invite/xfxYwmd284)
 
 Our Discord server has channels with different features such as Version Releases, Development Discuss and Question Feedback. You can also participate in discussions here.
 
 ## Telegram
 
-[加入闲聊群](https://t.me/koishichat) / [加入通知频道](https://t.me/koishichannel)
+[Join Group] (https\://t.me/koishichat) / [Join Notification Channel](https://t.me/koishichannel)
 
 Welcome to join our Telegram chat group, where you can participate in discussions or receive version update notifications in the announcement channel.
 
@@ -36,12 +36,12 @@ Forum is a special way of discussing. Your issues, ideas, feedback will save for
 
 ## Enterprise Support
 
-QQ：[2953529126](https://qm.qq.com/q/P8eMJkP5yI) / 微信：ilharp
+QQ: [2953529126] (https\://qm.qq.com/q/P8eMJkP5yI) / WeChat: ilharp
 
 We provide exclusive support for enterprise users. In addition to participating in discussions through the above methods, enterprise users can also add customer service to get one-on-one exclusive support.
 
-## 非官方渠道
+## Community channels
 
-活跃的社区成员自发地创建了一些非官方的讨论渠道，你也可以在这里参与讨论。
+Active community members have spontaneously created unofficial discussion channels where you can also participate in discussions.
 
-前往 [社区资源](./community.md) 页面查看更多非官方渠道。
+Go to the Community Resources (./community.md) page to see more unofficial channels.
