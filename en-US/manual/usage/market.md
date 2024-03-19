@@ -96,7 +96,7 @@ In addition, the [filter](../usage/customize.md#过滤器) mechanism can also be
 ### Adding More Plugins
 
 :::tip
-通常情况下，一个插件只能同时运行一份配置。请参考 [维护多份配置](../recipe/multiple.md) 章节。
+In general, a plugin can only run one configuration at a time.Please refer to [Maintaining Multiple Configurations] (.. /recipe/multiple.md).
 :::
 
 If an installed plugin is not shown in the plugin list, you can also add it manually.
