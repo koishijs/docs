@@ -1,8 +1,8 @@
 # FAQ
 
-## 谁在维护 Koishi？
+## Who maintains Koishi?
 
-Koishi 是一个由 Shigma 创立的开源项目。它于 2020 年 1 月发布了第一个正式版本。如今，Koishi 由其核心团队维护，并由 Shigma 担任主要负责人。更多信息请参阅 [团队成员](./team.md)。
+Koishi is an open-source project founded by Shigma.它于 2020 年 1 月发布了第一个正式版本。如今，Koishi 由其核心团队维护，并由 Shigma 担任主要负责人。更多信息请参阅 [团队成员](./team.md)。
 
 ## 谁在使用 Koishi？
 
