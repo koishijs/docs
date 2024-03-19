@@ -10,12 +10,12 @@ next:
 # Install for Windows
 
 :::tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+If you want to learn about other installation methods, go to [Select installation method] (./index.md).
 :::
 
 ## Download
 
-- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [Installation Package (.msi)] (https\://k.ilharp.cc/win.msi)
 - [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Install
@@ -26,21 +26,21 @@ You can install Koishi via the Koishi installer, which would deal with most of t
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
+Double-click on the package and click Next all the way to wait for the installation process to finish, then you can find Koishi in the Start menu.
 
 :::tip
-安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
+Double-click on the package and click Next all the way to wait for the installation process to finish, then you can find Koishi in the Start menu.
 :::
 
-## 启动
+## Start
 
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-安装完成后，点击 Koishi 图标即可启动。The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
+Once the installation is complete, click on the Koishi icon to launch.The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
 ## Other Downloads
 
 Could not find an installation package suitable for you?
-你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+You can still choose to [use in Docker] (./docker.md) or [create template project] (./boilerplate.md).
