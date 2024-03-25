@@ -207,3 +207,18 @@ ctx.component('custom', (attrs, children, session) => {
 // 现在你可以在任何地方使用小写的 <custom/> 了
 session.send(<custom/>)
 ```
+
+## 转义与解析
+
+::: danger
+直接发送未经转义的用户输入是非常危险的，因为它很容易导致 [XSS 攻击](https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC)。在使用诸如 `h.unescape()` 之类的 API 时，请务必确保输入的安全性。
+:::
+
+在默认情况下，Koishi 会对指令参数进行转义以确保安全性。但在某些情况下，你可能希望手动处理消息元素的转义和解析。为此，我们提供了一系列实用方法：
+
+- [`h.escape()`](../../api/message/api.md#h-escape): 转义字符串
+- [`h.unescape()`](../../api/message/api.md#h-unescape): 反转义字符串
+- [`h.parse()`](../../api/message/api.md#h-parse): 将字符串解析为消息元素
+- [`h.select()`](../../api/message/api.md#h-select): 从消息元素中选择指定类型的元素
+- [`h.transform()`](../../api/message/api.md#h-transform): 在消息元素中查找并替换指定类型的元素
+- [`h.transformAsync()`](../../api/message/api.md#h-transformasync): 上述方法的异步版本
