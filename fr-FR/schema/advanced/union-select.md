@@ -2,12 +2,12 @@
 layout: schema
 code: |
   Schema.object({
-  value1: Schema.union(['foo', 'bar', 'qux']).description('从三个值中选择一个。'),
-  value2: Schema.union([
-  Schema.const('foo').description('选项 1'),
-  Schema.const('bar').description('选项 2'),
-  Schema.const('baz').description('选项 3'),
-  ]).role('radio').description('从三个值中选择一个。'),
+    value1: Schema.union(['foo', 'bar', 'qux']).description('从三个值中选择一个。'),
+    value2: Schema.union([
+      Schema.const('foo').description('选项 1'),
+      Schema.const('bar').description('选项 2'),
+      Schema.const('baz').description('选项 3'),
+    ]).role('radio').description('从三个值中选择一个。'),
   }).description('配置项')
 ---
 

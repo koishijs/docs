@@ -1,4 +1,4 @@
-# 内置组件
+# 內建元件
 
 - 标有 <badge>会话</badge> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
 - 标有 <badge>会话+广播</badge> 的组件只能在会话环境或 `ctx.broadcast()` 中使用
@@ -50,6 +50,21 @@ foo:
 
 <chat-panel>
 <chat-message nickname="Koishi">Hello, world!</chat-message>
+</chat-panel>
+
+这个组件也可以配合插值使用：
+
+```html
+<i18n path="foo.bar">{'Koishi'}</i18n>
+```
+
+```yaml
+foo:
+  bar: Hello, {0}!
+```
+
+<chat-panel>
+<chat-message nickname="Koishi">Hello, Koishi!</chat-message>
 </chat-panel>
 
 ### 时间 (i18n:time) <badge>会话+广播</badge>

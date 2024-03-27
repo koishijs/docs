@@ -1,4 +1,4 @@
-# 群组成员 (GuildMember)
+# GuildMember : membres de la guilde
 
 ## 类型定义
 

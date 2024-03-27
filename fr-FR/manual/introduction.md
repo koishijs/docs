@@ -2,7 +2,7 @@
 
 Koishi est un framework chatbots multiplateforme qui est performant et extensible.
 
-Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](https://fr.touhouwiki.net/wiki/Koishi_Komeiji) de la série de jeux vidéo Touhou Project. Koishi Komeiji manipule l'inconscient, ce qui symbolise le thème d'un chatbot ainsi que l'amour des développeurs de Koishi pour celui-ci.
+它的名字和图标设计来源于东方 Project 中的角色 [古明地恋 (Komeiji Koishi)](https://zh.touhouwiki.net/wiki/古明地恋)。Koishi Komeiji manipule l'inconscient, ce qui symbolise le thème d'un chatbot ainsi que l'amour des développeurs de Koishi pour celui-ci.
 
 ## Fonctionnalités
 
@@ -10,9 +10,9 @@ Son nom et son icône ont été inspirés du personnage de [Koishi Komeiji](http
 
 Koishi offre une console sans configurer. Vous pouvez construire vos chatbots dans quelque minutes sans accusé celui-ci.
 
-- **Place de marché des plugins** : Vous pouvez facilement télécharger ou ajouter les plugins dans la console Koishi sans avoir des connaissances en langage de programmation.
-- **Prise en charge de différentes plateformes** : Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
-- **Surveillance en temps réel** : Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
+- <strong>Place de marché des plugins</strong> : Vous pouvez facilement télécharger ou ajouter les plugins dans la console Koishi sans avoir des connaissances en langage de programmation.
+- <strong>Prise en charge de différentes plateformes</strong> : Koishi supporte les plateformes comme Telegram, Discord et QQ. Les données devraient être partagées entre les plateformes ou comptes.
+- <strong>Surveillance en temps réel</strong> : Vous pouvez utiliser le panneau de contrôle à tout moment pour surveiller l'état ou modifier les configurations du chatbot, et même discuter avec le compte du bot.
 
 ### Une communauté prospère
 
@@ -22,10 +22,10 @@ Après plus de 4 ans de développement, Koishi maintient une communauté de dév
 
 Koishi offre de nombreuses fonctionnalités professionnelles aux développeurs pour construire des solutions évolutives pour divers besoins complexes.
 
-- **Prise en charge des types** : Koishi est entièrement développé en TypeScript et dispose d'une prise en charge de type de premier ordre. Les suggestions de code vous permettent d'écrire du code sans consulter la documentation.
-- **Tests unitaires** : Toutes les fonctionnalités de base ont été testées unitairement, ce qui garantit la fiabilité et fournit aux développeurs une solution de test et de débogage.
-- **Rechargement à chaud** : En développant des plugins de Koishi, vous pouvez simplement enregistrer le fichier pour recharger à chaud sans redémarrer l'instance de Koishi, comme le développement front-end.
+- <strong>Prise en charge des types</strong> : Koishi est entièrement développé en TypeScript et dispose d'une prise en charge de type de premier ordre. Les suggestions de code vous permettent d'écrire du code sans consulter la documentation.
+- <strong>Tests unitaires</strong> : Toutes les fonctionnalités de base ont été testées unitairement, ce qui garantit la fiabilité et fournit aux développeurs une solution de test et de débogage.
+- <strong>Rechargement à chaud</strong> : En développant des plugins de Koishi, vous pouvez simplement enregistrer le fichier pour recharger à chaud sans redémarrer l'instance de Koishi, comme le développement front-end.
 
 ## Commencer
 
-Cliquez ici pour [commencer](./starter/) votre voyage sur Koishi.
+点击前往 [起步](./starter/)，开启你的 Koishi 之旅。

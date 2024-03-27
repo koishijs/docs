@@ -7,39 +7,39 @@ next:
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 为 Windows 安装
+# 為 Windows 安裝
 
-::: tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+:::tip
+如果想瞭解其他安裝方式，請移步 [選擇安裝方式](./index.m)。
 :::
 
-## 下载
+## 下載
 
-- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [安裝包 (.msi)](https://k.ilharp.cc/win.msi)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
-## 安装
+## 安裝
 
-通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
+通過安裝包安裝 Koishi 是最推薦的安裝方式，安裝程式會自動處理大部分問題。一般情況下你都應該選擇這種方式。
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
+按兩下安裝包並一路點按「Next」，等待安裝過程結束，你便可以在「開始」功能表中找到 Koishi 了。
 
-::: tip
-安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
+:::tip
+安裝流程在部分電腦上這可能會花費 10 分鐘以上的時間，請耐心等待。
 :::
 
-## 启动
+## 啟動
 
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-安装完成后，点击 Koishi 图标即可启动。等待几秒钟，Koishi 控制台将会被打开，现在你可以开始使用 Koishi 了。
+安裝完成後，點擊 Koishi 圖示即可啟動。等待幾秒鐘，Koishi 控制台將會被打開，現在你可以開始使用 Koishi 了。
 
-## 其他选择
+## 其他選擇
 
-找不到适合你的安装包？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。
+找不到適合你的安裝包？你仍然可以選擇 [在容器中使用](./docker.md) 或 [創建範本專案](./boilerplate.md)。

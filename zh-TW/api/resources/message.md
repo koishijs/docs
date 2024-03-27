@@ -25,15 +25,15 @@ interface Message {
 
 向特定频道发送消息。
 
-::: warning
+:::warning
 只要你能够获取到会话对象，你就不应使用此 API，而应该使用 [`session.send()`](../core/session.md#session-send)。一些平台会将主动发送的消息同被动接收后回复的消息区分开来，甚至可能限制主动消息的发送，因此使用 [`session.send()`](../core/session.md#session-send) 总是有更好的可靠性。
 :::
 
-::: tip
+:::tip
 `bot.sendMessage()` 既可以发送群聊消息，也可以发送私聊消息。当发送私聊消息时，其与 `bot.sendPrivateMessage()` 的区别在于前者传入的是频道 ID，而后者传入的是用户 ID。
 :::
 
-::: tip
+:::tip
 大多数情况下应当使用 [`MessageEncoder`](../message/encoder.md) 实现消息发送功能，而不是直接实现此方法。
 :::
 

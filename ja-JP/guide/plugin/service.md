@@ -57,7 +57,7 @@ export function apply(ctx: Context) {
 
 你很快会发现这样写完全无法运行。首先，数据库服务需要等到应用启动完成后才可以访问，换言之即使安装了数据库插件，你也无法立即判断数据库服务是否存在。此外，一旦上述服务所在插件在运行时被重载，由于上面的代码属于 dialogue 插件，因此 if 中代码的副作用将无法被有效清理；而当相应的服务重新被注册时，这部分的代码也不会被重新运行，从而导致一系列难以检测的问题。
 
-### inject 属性
+### inject 属性 {#inject}
 
 为了解决这种问题，Koishi 为插件声明提供了一个独特的 `inject` 属性：
 
@@ -93,7 +93,7 @@ ctx.plugin({
 })
 ```
 
-::: tip
+:::tip
 请注意：这里出现了两个 `ctx` 对象，它们属于不同的插件。在子插件的回调函数内，请务必使用作为参数的 `ctx` 而不是外层的 `ctx`，不然在服务被热重载时可能会引发内存泄漏。
 :::
 
@@ -138,7 +138,6 @@ export function apply(ctx: Context) {
   })
 }
 ```
-
 
 <!-- ## 服务的共享与隔离
 
@@ -220,7 +219,7 @@ app.private().console instanceof Console // true
 ```ts no-extra-header
 declare module 'koishi' {
   interface Context {
-    console: console
+    console: Console
   }
 }
 ```
@@ -295,7 +294,7 @@ class Console extends Service {
 }
 ```
 
-## 在 `package.json` 中声明依赖
+## 在 `package.json` 中声明依赖 {#package-json}
 
 如果你打算将插件发布到插件市场，我们建议在插件的 [`package.json`](../develop/publish.md#koishi-字段) 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
 
@@ -313,7 +312,11 @@ class Console extends Service {
 
 在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
 
-### 关于 `peerDependencies`
+::: tip
+这里的声明与上面提到的 `inject` 应当同时存在。
+:::
+
+### 关于 `peerDependencies` {#peer-vs-dep}
 
 一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
 
@@ -343,8 +346,10 @@ export function apply(ctx: Context) {
 
 ```json title=package.json
 {
-  "service": {
-    "required": ["puppeteer"]
+  "koishi": {
+    "service": {
+      "required": ["puppeteer"]
+    }
   },
   "devDependencies": {
     "koishi-plugin-puppeteer": "^2.0.0"
@@ -368,8 +373,10 @@ export class ExamplePlugin extends DataService {
 
 ```json
 {
-  "service": {
-    "required": ["console"]
+  "koishi": {
+    "service": {
+      "required": ["console"]
+    }
   },
   "peerDependencies": {
     "@koishijs/plugin-console": "^5.13.0"

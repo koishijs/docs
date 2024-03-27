@@ -1,8 +1,8 @@
-# 进阶查询技巧
+# Interrogations avancées
 
 `database.get()` 已经能实现一些简单的查询了。然而在实际的开发中，我们通常会遇到排序、分组乃至聚合等更复杂的查询需求。此时就轮到更加强大的 `database.select()` 方法登场了。
 
-## 基本用法
+## Utilisation de base
 
 `database.select()` 会创建一个 `Selection` 对象。它提供了一系列的链式方法，你可以将其理解成一个查询语句的构造器。构造完成后，你可以调用 `.execute()` 方法来执行最终的查询。下面是一个简单的例子：
 

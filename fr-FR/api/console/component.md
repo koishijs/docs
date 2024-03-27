@@ -1,4 +1,8 @@
-# 内置组件
+# Composants internes
+
+:::tip
+参见：[开发 > 控制台 > 客户端开发](../../guide/console/client.md)
+:::
 
 ## `<k-comment>`
 

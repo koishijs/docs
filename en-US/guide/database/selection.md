@@ -1,8 +1,8 @@
-# 进阶查询技巧
+# Advanced Query
 
 `database.get()` 已经能实现一些简单的查询了。然而在实际的开发中，我们通常会遇到排序、分组乃至聚合等更复杂的查询需求。此时就轮到更加强大的 `database.select()` 方法登场了。
 
-## 基本用法
+## Basic Usage
 
 `database.select()` 会创建一个 `Selection` 对象。它提供了一系列的链式方法，你可以将其理解成一个查询语句的构造器。构造完成后，你可以调用 `.execute()` 方法来执行最终的查询。下面是一个简单的例子：
 
@@ -46,7 +46,7 @@ ctx.database
 
 ## 字段映射
 
-`.project()` 方法可以用于映射查询结果。它接受一个对象，对象的键表示要映射的字段名，值表示映射的表达式。下面是一个例子：
+`.project()` 方法可以用于映射查询结果。它接受一个对象，对象的键表示要映射的字段名，值表示映射的表达式。Below is an example:
 
 ```ts
 // 返回的数组元素将只含有 a, b 属性
@@ -77,7 +77,7 @@ ctx.database
 
 ## 分组查询
 
-`.groupBy()` 和 `.having()` 方法可以用于分组查询。`.groupBy()` 方法接受一个字段名或求值函数，`.having()` 方法接受一个含有聚合运算并返回布尔值的表达式。下面是一个例子：
+`.groupBy()` 和 `.having()` 方法可以用于分组查询。`.groupBy()` 方法接受一个字段名或求值函数，`.having()` 方法接受一个含有聚合运算并返回布尔值的表达式。Below is an example:
 
 ```ts
 // 按照 value 字段分组，返回结果数大于 5 的分组
@@ -104,7 +104,7 @@ ctx.database
 
 ### 添加字段
 
-`.groupBy()` 还额外接受一个二参数，用于在查询结果中添加聚合字段。这个参数是一个对象，同样与 `.project()` 中的用法类似。下面是一个例子：
+`.groupBy()` 还额外接受一个二参数，用于在查询结果中添加聚合字段。这个参数是一个对象，同样与 `.project()` 中的用法类似。Below is an example:
 
 ```ts
 // 返回的数据包含 value, sum, count 三个属性
@@ -119,7 +119,7 @@ ctx.database
 
 ### 多级分组
 
-可以通过链式调用 `.groupBy()` 方法来实现多级分组。下面是一个例子：
+可以通过链式调用 `.groupBy()` 方法来实现多级分组。Below is an example:
 
 ```ts
 ctx.database
@@ -138,7 +138,7 @@ ctx.database
 
 ## 连接查询 <badge type="warning">实验性</badge>
 
-最后介绍一下连接查询的用法。使用 `.join()` 可以将多个表连接起来，返回一个新的 `Selection`，其属性分别对应多个表的名称。下面是一个例子：
+最后介绍一下连接查询的用法。使用 `.join()` 可以将多个表连接起来，返回一个新的 `Selection`，其属性分别对应多个表的名称。Below is an example:
 
 ```ts
 // 返回的数据包含 foo, bar 两个属性

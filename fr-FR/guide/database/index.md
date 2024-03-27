@@ -1,6 +1,6 @@
-# 基本用法
+# Utilisation de base
 
-::: tip
+:::tip
 `ctx.database` 并非内置服务，因此如果你的插件需要使用数据库功能，需要[声明依赖](../plugin/service.md#inject-属性)。
 :::
 
@@ -64,7 +64,7 @@ await ctx.database.get('schedule', {
 ```ts
 // 向 schedule 表中添加一行数据，data 是要添加的数据行
 // 返回值是添加的行的完整数据 (包括自动填充的 id 和默认属性等)
-await ctx.database.create('schedule', row)
+await ctx.database.create('schedule', data)
 ```
 
 如果你想要批量插入数据，可以使用下面介绍的 `database.upsert()` 方法。
@@ -111,18 +111,18 @@ await ctx.database.upsert('foo', [
 
 如果初始的数据库是这样的：
 
-| id    | foo  | bar |
-| ----- | ---- | --- |
+| id                       | foo  | bar |
+| ------------------------ | ---- | --- |
 | (默认值) | null | bar |
-| 1     | foo  | baz |
+| 1                        | foo  | baz |
 
 那么进行上述操作后的数据库将是这样的：
 
-| id | foo   | bar    | 说明                                 |
-| -- | ----- | ------ | ---------------------------------- |
-| 1  | hello | baz    | 该行已经存在，只更新了 foo 字段                 |
-| 2  | world | bar    | 插入了新行，其中 foo 字段取自传入的数据，bar 字段取自默认值 |
-| 3  | null  | koishi | 插入了新行，其中 bar 字段取自传入的数据，foo 字段取自默认值 |
+| id | foo     | bar    | 说明                                 |
+| -- | ------- | ------ | ---------------------------------- |
+| 1  | bonjour | baz    | 该行已经存在，只更新了 foo 字段                 |
+| 2  | world   | bar    | 插入了新行，其中 foo 字段取自传入的数据，bar 字段取自默认值 |
+| 3  | null    | koishi | 插入了新行，其中 bar 字段取自传入的数据，foo 字段取自默认值 |
 
 如果想以非主键来索引要修改的数据，可以使用第三个参数：
 

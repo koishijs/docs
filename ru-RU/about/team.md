@@ -5,25 +5,25 @@
 ### Shigma
 
 - 创始人，koishijs/\*，satorijs/\*
-- https://github.com/shigma
+- https\://github.com/shigma
 
 ### Il Harper
 
 - Koishi Desktop
 - Koishi Handbook
-- https://github.com/ilharp
+- https\://github.com/ilharp
 
 ### Anillc
 
 - koishijs/core, satorijs/adapter-telegram
 - Koishi Android
-- https://github.com/anillc
+- https\://github.com/anillc
 
 ### MaikoTan
 
 - Translations
 - satorijs/adapter-lark
-- https://github.com/maikotan
+- https\://github.com/maikotan
 
 ## 团队成员
 

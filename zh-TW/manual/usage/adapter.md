@@ -27,7 +27,7 @@
 - [KOOK](../../plugins/adapter/kook.md)
 - [飞书](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
-- [郵件](../../plugins/adapter/mail.md)
+- [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
@@ -35,10 +35,11 @@
 - [微信公众号](../../plugins/adapter/wechat-official.md)
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
 
-一個 Koishi 應用可以同時接入多個聊天平臺的多個賬號。每個賬號對應一份插件配置，你可以參考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由於同一平臺內接入的多個機器人共享了相同的用戶數據。因此，你可以非常方便地在多個機器人之間切換以實現負載均衡。
+一個 Koishi 應用可以同時接入多個聊天平臺的多個賬號。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。由於同一平臺內接入的多個機器人共享了相同的用戶數據。因此，你可以非常方便地在多個機器人之間切換以實現負載均衡。
 
 不同平台的接入方式与难度存在较大的差异。對於不同的平臺，你需要做好相應的準備工作。这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 

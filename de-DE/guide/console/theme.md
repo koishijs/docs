@@ -23,7 +23,7 @@ ctx.theme({
 
 如你所见，要定义一个色彩主题非常简单，只需要调用 [`ctx.theme()`](../../api/console/context.md#ctx-theme) 即可。其中，`id` 用于标识主题，`name` 则会显示在主题选择器中。
 
-::: tip
+:::tip
 请注意：`id` 必须以 `-dark` 或 `-light` 结尾，否则 Koishi 将无法正确回退 CSS 变量！
 :::
 

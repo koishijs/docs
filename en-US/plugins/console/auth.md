@@ -1,4 +1,4 @@
-# 用户登录 (Auth)
+# User Authorization (Auth)
 
 ## 配置项
 

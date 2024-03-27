@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-line
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息
@@ -10,7 +14,7 @@
 6. 在 Security 页面推荐配置白名单 IP
 7. 启动插件，打开 Messaging API 页面，勾选 Use webhook
 
-参考文档：<https://developers.line.biz/en/docs/messaging-api/getting-started/>
+参考文档：https\://developers.line.biz/en/docs/messaging-api/getting-started/
 
 ## 配置项
 
@@ -26,7 +30,11 @@
 
 机器人密钥。
 
-## 内部 API
+## 内部接口
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
+:::
 
 - [`internal.audienceMatch()`](https://developers.line.biz/en/reference/partner-docs/#phone-audience-match)
 - [`internal.broadcast()`](https://developers.line.biz/en/reference/messaging-api/#send-broadcast-message)
@@ -93,10 +101,10 @@
 
 ## 内部事件
 
-- [`line/account-link`](https://developers\.line\.biz/en/reference/messaging-api/#account-link-event)
-- [`line/beacon`](https://developers\.line\.biz/en/reference/messaging-api/#beacon-event)
-- [`line/device-link`](https://developers\.line\.biz/en/reference/messaging-api/#device-link-event)
-- [`line/device-unlink`](https://developers\.line\.biz/en/reference/messaging-api/#device-unlink-event)
+- [`line/account-link`](https://developers.line.biz/en/reference/messaging-api/#account-link-event)
+- [`line/beacon`](https://developers.line.biz/en/reference/messaging-api/#beacon-event)
+- [`line/device-link`](https://developers.line.biz/en/reference/messaging-api/#device-link-event)
+- [`line/device-unlink`](https://developers.line.biz/en/reference/messaging-api/#device-unlink-event)
 - [`line/follow`](https://developers.line.biz/en/reference/messaging-api/#follow-event)
 - [`line/join`](https://developers.line.biz/en/reference/messaging-api/#join-event)
 - [`line/leave`](https://developers.line.biz/en/reference/messaging-api/#leave-event)
@@ -104,7 +112,7 @@
 - [`line/member-left`](https://developers.line.biz/en/reference/messaging-api/#member-left-event)
 - [`line/message`](https://developers.line.biz/en/reference/messaging-api/#message-event)
 - [`line/postback`](https://developers.line.biz/en/reference/messaging-api/#postback-event)
-- [`line/scenario-result`](https://developers\.line\.biz/en/reference/messaging-api/#scenario-result-event)
+- [`line/scenario-result`](https://developers.line.biz/en/reference/messaging-api/#scenario-result-event)
 - [`line/unfollow`](https://developers.line.biz/en/reference/messaging-api/#unfollow-event)
 - [`line/unsend`](https://developers.line.biz/en/reference/messaging-api/#unsend-event)
-- [`line/video-viewing-complete`](https://developers\.line\.biz/en/reference/messaging-api/#video-viewing-complete)
+- [`line/video-viewing-complete`](https://developers.line.biz/en/reference/messaging-api/#video-viewing-complete)
