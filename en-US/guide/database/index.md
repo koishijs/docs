@@ -64,7 +64,7 @@ await ctx.database.get('schedule', {
 ```ts
 // 向 schedule 表中添加一行数据，data 是要添加的数据行
 // 返回值是添加的行的完整数据 (包括自动填充的 id 和默认属性等)
-await ctx.database.create('schedule', row)
+await ctx.database.create('schedule', data)
 ```
 
 如果你想要批量插入数据，可以使用下面介绍的 `database.upsert()` 方法。
