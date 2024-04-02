@@ -120,6 +120,49 @@ You have <plural count={count}>
 
 ## 扩展组件
 
-### 网页渲染 (html)
+### 网页渲染 (html) <badge>需要 Puppeteer</badge>
+
+- **style:** HTML 中 `body` 标签的 `style` 属性
+
+调用 Puppeteer 渲染给定 HTML。
+
+JSX 中的 `html` 将被转化为为 HTML 中的 `body` 标签。
+
+```html
+<html style={"color: purple;"}>
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
+
+你也可以为 `style` 属性指定一个对象：
+
+```html
+<html style={{
+  color: "purple",
+}}>
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
+
+如果你需要向 HTML 的 `head` 标签中添加 CSS 等页面属性，可以将它们包裹在 `head` 中。下面是一个例子：
+
+```html
+<html>
+  <head>
+    <style>
+      {`
+        body {
+          color: "purple"
+        }
+      `}
+    </style>
+  </head>
+
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
 
 ### 内容审查 (censor)
