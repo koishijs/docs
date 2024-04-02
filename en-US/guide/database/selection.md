@@ -11,7 +11,7 @@ ctx.database.get('foo', { id: { $gt: 5 } })
 // 等价于
 ctx.database
   .select('foo')
-  .where({ id: { $gt: 5 } })
+  .where(row => $.gt(row.id, 5))
   .execute()
 ```
 
@@ -31,7 +31,7 @@ ctx.database
 
 ## 求值表达式
 
-`.orderBy()` 和 `.where()` 方法都支持传入一个函数，这个函数会接受一个 `row` 参数，表示当前正在处理的数据行。你可以在这个函数中返回一个值，这个值会被用于排序或筛选。
+`.orderBy()` 和 `.where()` 等方法都支持传入一个函数，这个函数会接受一个 `row` 参数，表示当前正在处理的数据行。你可以在这个函数中返回一个值，这个值会被用于排序或筛选。
 
 ```ts
 // 返回 id 大于 5 的数据行，并按 id 升序排列
@@ -41,8 +41,6 @@ ctx.database
   .orderBy(row => row.id)
   .execute()
 ```
-
-这里的 `$.gt()` 是一个求值表达式。你可以在 [这里](../../api/database/evaluation.md) 看到完整的求值表达式 API。
 
 ## 字段映射
 
@@ -143,7 +141,7 @@ ctx.database
 ```ts
 // 返回的数据包含 foo, bar 两个属性
 ctx.database
-  .join(['foo', 'bar'] as const, (foo, bar) => $.eq(foo.id, bar.id))
+  .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
   .execute()
 ```
 
@@ -151,7 +149,7 @@ ctx.database
 
 ```ts
 ctx.database
-  .join(['foo', 'bar'] as const, (foo, bar) => $.eq(foo.id, bar.id))
+  .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
   .orderBy(row => row.foo.id)
   .execute()
 ```
@@ -161,7 +159,7 @@ ctx.database
 ```ts
 // 返回的数据包含 t1, t2 两个属性
 ctx.database
-  .join({ t1: 'foo', t2: 'bar', }, row => $.eq(row.t1.id, row.t2.id))
+  .join({ t1: 'foo', t2: 'bar' }, row => $.eq(row.t1.id, row.t2.id))
   .orderBy(row => row.t1.id)
-  .execute();
+  .execute()
 ```
