@@ -19,7 +19,7 @@
 
 处理特定路径上的网络请求。具体请参见 [这里](https://github.com/koajs/router/blob/master/API.md)。
 
-### ctx.server.ws(path, handler)
+### ctx.server\.ws(path, handler)
 
 - **path:** `string | RegExp | (string | RegExp)[]` 路径
 - **handler:** `WebSocketHandler` 处理函数，接受下列参数
