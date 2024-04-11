@@ -25,8 +25,8 @@ export interface Field<T> {
 
 | 名称 | TS 类型 | 默认长度 | 默认初始值 | 说明 |
 | :-: | :-: | :-: | :-: | :-: |
-| integer | `number` | 10 | `0` | 有符号整型数，长度决定了数据的范围 |
-| unsigned | `number` | 10 | `0` | 无符号整型数，长度决定了数据的范围 |
+| integer | `number` | 4 | `0` | 有符号整型数，长度决定了数据的范围 |
+| unsigned | `number` | 4 | `0` | 无符号整型数，长度决定了数据的范围 |
 | float | `number` | 固定长度 | `0` | 单精度浮点数 |
 | double | `number` | 固定长度 | `0` | 双精度浮点数 |
 
