@@ -38,7 +38,7 @@
 
 发送 POST / PUT / PATCH 请求。
 
-### ctx.http.ws(url)
+### ctx.http\.ws(url)
 
 - **url:** `string` 请求地址
 - 返回值: `WebSocket`
