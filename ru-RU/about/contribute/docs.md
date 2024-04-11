@@ -155,6 +155,6 @@
 
 ## 参考资料
 
-- https\://github.com/vinta/pangu.js
-- https\://stdrc.cc/style-guides/chinese.html
-- https\://stdrc.cc/style-guides/markdown.html
+- https://github.com/vinta/pangu.js
+- https://stdrc.cc/style-guides/chinese.html
+- https://stdrc.cc/style-guides/markdown.html
