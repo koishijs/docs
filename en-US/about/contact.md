@@ -24,19 +24,19 @@ Our Discord server has channels with different features such as Version Releases
 
 ## Telegram
 
-[Join Group] (https\://t.me/koishichat) / [Join Notification Channel](https://t.me/koishichannel)
+[Join Group] (https://t.me/koishichat) / [Join Notification Channel](https://t.me/koishichannel)
 
 Welcome to join our Telegram chat group, where you can participate in discussions or receive version update notifications in the announcement channel.
 
 ## Forum
 
-https\://forum.koishi.xyz
+https://forum.koishi.xyz
 
 Forum is a special way of discussing. Your issues, ideas, feedback will save forever. And you can have different discussions at the same time.Your questions are more likely to be answered in the forum and can be saved for the benefit of others.
 
 ## Enterprise Support
 
-QQ: [2953529126] (https\://qm.qq.com/q/P8eMJkP5yI) / WeChat: ilharp
+QQ: [2953529126] (https://qm.qq.com/q/P8eMJkP5yI) / WeChat: ilharp
 
 We provide exclusive support for enterprise users. In addition to participating in discussions through the above methods, enterprise users can also add customer service to get one-on-one exclusive support.
 
