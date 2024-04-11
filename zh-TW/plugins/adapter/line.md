@@ -14,7 +14,7 @@
 6. 在 Security 頁面推薦配置白名單 IP
 7. 啟動外掛，開啟 Messaging API 頁面，勾選 Use webhook
 
-参考文档：https\://developers.line.biz/en/docs/messaging-api/getting-started/
+参考文档：https://developers.line.biz/en/docs/messaging-api/getting-started/
 
 ## 配置项
 
@@ -101,10 +101,10 @@
 
 ## 内部事件
 
-- [`line/account-link`](https://developers.line.biz/en/reference/messaging-api/#account-link-event)
-- [`line/beacon`](https://developers.line.biz/en/reference/messaging-api/#beacon-event)
-- [`line/device-link`](https://developers.line.biz/en/reference/messaging-api/#device-link-event)
-- [`line/device-unlink`](https://developers.line.biz/en/reference/messaging-api/#device-unlink-event)
+- [`line/account-link`](https://developers\.line\.biz/en/reference/messaging-api/#account-link-event)
+- [`line/beacon`](https://developers\.line\.biz/en/reference/messaging-api/#beacon-event)
+- [`line/device-link`](https://developers\.line\.biz/en/reference/messaging-api/#device-link-event)
+- [`line/device-unlink`](https://developers\.line\.biz/en/reference/messaging-api/#device-unlink-event)
 - [`line/follow`](https://developers.line.biz/en/reference/messaging-api/#follow-event)
 - [`line/join`](https://developers.line.biz/en/reference/messaging-api/#join-event)
 - [`line/leave`](https://developers.line.biz/en/reference/messaging-api/#leave-event)
@@ -112,7 +112,7 @@
 - [`line/member-left`](https://developers.line.biz/en/reference/messaging-api/#member-left-event)
 - [`line/message`](https://developers.line.biz/en/reference/messaging-api/#message-event)
 - [`line/postback`](https://developers.line.biz/en/reference/messaging-api/#postback-event)
-- [`line/scenario-result`](https://developers.line.biz/en/reference/messaging-api/#scenario-result-event)
+- [`line/scenario-result`](https://developers\.line\.biz/en/reference/messaging-api/#scenario-result-event)
 - [`line/unfollow`](https://developers.line.biz/en/reference/messaging-api/#unfollow-event)
 - [`line/unsend`](https://developers.line.biz/en/reference/messaging-api/#unsend-event)
-- [`line/video-viewing-complete`](https://developers.line.biz/en/reference/messaging-api/#video-viewing-complete)
+- [`line/video-viewing-complete`](https://developers\.line\.biz/en/reference/messaging-api/#video-viewing-complete)
