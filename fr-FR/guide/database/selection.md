@@ -142,15 +142,7 @@ ctx.database
 // 返回的数据包含 foo, bar 两个属性
 ctx.database
   .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
-  .execute()
-```
-
-普通的 `.orderBy()` 和 `.where()` 方法不支持字段中带有 `.` 符号。因此在使用连接查询时，你需要使用[求值表达式](#求值表达式)：
-
-```ts
-ctx.database
-  .join(['foo', 'bar'], (foo, bar) => $.eq(foo.id, bar.id))
-  .orderBy(row => row.foo.id)
+  .orderBy('foo.id') // orderBy 可以使用 'a.b' 的形式
   .execute()
 ```
 
@@ -160,6 +152,6 @@ ctx.database
 // 返回的数据包含 t1, t2 两个属性
 ctx.database
   .join({ t1: 'foo', t2: 'bar' }, row => $.eq(row.t1.id, row.t2.id))
-  .orderBy(row => row.t1.id)
+  .orderBy('t1.id') // orderBy 可以使用 'a.b' 的形式
   .execute()
 ```
