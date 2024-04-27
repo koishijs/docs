@@ -6,7 +6,7 @@
 
 这一节介绍了其他未被归类的内置工具函数。
 
-## 字符串操作
+## 字符串操作 {#string}
 
 ### capitalize(source)
 
@@ -36,7 +36,7 @@
 
 如果输入的是字符串，则将字符串转换成 snake_case；如果是数组或对象，则递归地将对象中的每个（可枚举）的键转换成 snake_case；其他情况不受影响。
 
-## 集合操作
+## 集合操作 {#set}
 
 ### contain(array1, array2)
 
@@ -70,7 +70,7 @@
 
 求两个集合的并集。
 
-## 对象操作
+## 对象操作 {#object}
 
 ### is(type, value)
 
@@ -133,7 +133,58 @@
 
 将对象的每个键进行过滤，返回新的对象。
 
-## 日期操作
+## 二进制数据 {#binary}
+
+### Binary.is(source)
+
+- **source:** `any` 要判断的值
+- 返回值: `boolean`
+
+判断一个值是否为 `ArrayBufferLike`。
+
+### Binary.isSource(source)
+
+- **source:** `any` 要判断的值
+- 返回值: `boolean`
+
+判断一个值是否为 `ArrayBufferLike` 或 `ArrayBufferView`。
+
+### Binary.fromSource(source)
+
+- **source:** `ArrayBufferLike | ArrayBufferView` 要转换的值
+- 返回值: `ArrayBufferLike`
+
+将可能的 `ArrayBufferView` 转换成 `ArrayBuffer`。
+
+### Binary.toBase64(source)
+
+- **source:** `ArrayBufferLike` 要转换的值
+- 返回值: `string`
+
+将二进制数据转换成 base64 字符串。
+
+### Binary.fromBase64(source)
+
+- **source:** `string` 要转换的值
+- 返回值: `ArrayBuffer`
+
+将 base64 字符串转换成二进制数据。
+
+### Binary.toHex(source)
+
+- **source:** `ArrayBufferLike` 要转换的值
+- 返回值: `string`
+
+将二进制数据转换成十六进制字符串。
+
+### Binary.fromHex(source)
+
+- **source:** `string` 要转换的值
+- 返回值: `ArrayBuffer`
+
+将十六进制字符串转换成二进制数据。
+
+## 时间与日期 {#time}
 
 ### 静态属性
 
