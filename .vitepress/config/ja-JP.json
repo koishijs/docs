@@ -43,11 +43,11 @@
             "link": "/guide/"
           },
           {
-            "text": "进阶指南",
+            "text": "上級者向けガイド",
             "link": "/cookbook/"
           },
           {
-            "text": "API 参考",
+            "text": "API リファレンス",
             "link": "/api/"
           },
           {
@@ -83,7 +83,7 @@
             "link": "/about/community.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "各バージョンの情報",
             "link": "/releases/index.md"
           }
         ],
