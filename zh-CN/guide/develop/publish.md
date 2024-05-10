@@ -146,6 +146,8 @@ root
 - **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
+**required** 和 **optional** 属性暂时没有作用，但也推荐你添加上，以便后续更新时直接使用最新功能。有关服务的使用与提供，请参考[服务与依赖](../plugin/service.md)。
+
 ::: tip
 此外，还有一些字段与 [Koishi Online](../../cookbook/practice/online.md) 的部署流程相关 (如 `browser`, `exports` 等)。由于不影响主线开发，你可以稍后再进行了解。
 :::
