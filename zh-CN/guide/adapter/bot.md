@@ -119,7 +119,7 @@ class DiscordBot<C extends Context> extends Bot<C> {
 
 ```ts{5,9,17-20}
 class Internal {
-  constructor(private http: Quester) {}
+  constructor(private http: HTTP) {}
 
   getGuild(guildId: string) {
     return this.http.get(`/guilds/${guildId}`)
@@ -144,19 +144,19 @@ class DiscordBot<C extends Context> extends Bot<C> {
 }
 ```
 
-[`ctx.http`](../../api/service/http.md) 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `Quester` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
+[`ctx.http`](../../api/service/http.md) 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `HTTP` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
 
 ### 反射网络请求 {#reflect}
 
-在 `Quester` 的帮助下，我们甚至可以直接对网络请求进行反射，从而自动生成内部接口。
+在 `HTTP` 的帮助下，我们甚至可以直接对网络请求进行反射，从而自动生成内部接口。
 
 ```ts
 class Internal {
-  constructor(private http: Quester) {}
+  constructor(private http: HTTP) {}
 
-  static define(path: string, methods: Partial<Record<Quester.Method, string | string[]>>) {
+  static define(path: string, methods: Partial<Record<HTTP.Method, string | string[]>>) {
     for (const key in methods) {
-      const method = key as Quester.Method
+      const method = key as HTTP.Method
       for (const name of makeArray(methods[method])) {
         this.prototype[name] = async function (this: Internal, ...args: any[]) {
           // 将参数填入路径中

@@ -71,10 +71,11 @@ interface Message {
 
 修改特定消息。
 
-### bot.getMessageList(channelId, next?)
+### bot.getMessageList(channelId, next?, direction?)
 
 - **channelId:** `string` 频道 ID
-- **next:** `string` 分页令牌
+- **next:** `string` 分页令牌，未指定时视为从最新消息向前获取
+- **direction:** `Direction` 消息获取方向，可以为 `'before' | 'after' | 'around'`
 - 返回值: `Promise<List<Message>>` 消息列表
 
 获取频道消息列表。
