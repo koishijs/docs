@@ -96,6 +96,7 @@ ctx.command('test [arg:number]')
 - channel: `string` 频道，格式为 `{platform}:{id}`
 - integer: `number` 整数
 - posint: `number` 正整数
+- natural: `number` 正整数
 - date: `Date` 日期
 - image: `Dict` 图片
 

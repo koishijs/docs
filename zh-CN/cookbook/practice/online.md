@@ -169,16 +169,16 @@ ctx.console.addEntry(process.env.KOISHI_BASE ? [
 
 如果你想在本地测试插件是否能在 k-on! 中运行，可以参考以下流程：
 
-1. 克隆 koishijs/webui 和 koishijs/ponyfills 仓库。
+1. 克隆 koishijs/webui 和 cordiverse/ponyfills 仓库。
 
 ::: tabs code
 ```npm
 npm run clone koishijs/webui
-npm run clone koishijs/ponyfills
+npm run clone cordiverse/ponyfills
 ```
 ```yarn
 yarn clone koishijs/webui
-yarn clone koishijs/ponyfills
+yarn clone cordiverse/ponyfills
 ```
 :::
 
