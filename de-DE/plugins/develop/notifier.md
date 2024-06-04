@@ -1,4 +1,4 @@
-# 通知服务 (Notifier)
+# @koishi/plugin-notifier
 
 ## 上下文 API
 
