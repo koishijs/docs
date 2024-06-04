@@ -132,15 +132,12 @@ root
       "optional": ["assets"],               // 可选的服务
       "implements": ["dialogue"],           // 实现的服务
     },
-    "locales": ["en", "zh"],                // 支持的语言
   }
 }
 ```
 
 - **description:** 插件描述，应该是一个对象，其中的键代表语言名，值是对应语言下的描述
-- **service:** 插件的服务相关信息，具体包含下列属性：
-  - **implements:** 实现的服务，应该是一个服务名构成的数组
-- **locales:** 插件支持的语言，应该是一个语言名构成的数组
+- **service:** 插件的服务相关信息，详情请参见 [服务与依赖](../plugin/service.html#package-json)
 - **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
