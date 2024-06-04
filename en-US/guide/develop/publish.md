@@ -124,24 +124,21 @@ We can also use the `koishi` field to specify Koishi related information
     "koishi": "^4.3.2"
   },
   "koishi": {
-    "description": {                        // descriptions in different languages
+    "description": {                        // 不同语言的插件描述
       "en": "English Description",
       "zh": "中文描述"
     },
     "service": {
-      "required": ["database"],             // dependent services of required
-      "optional": ["assets"],               // dependent services of optional
-      "implements": ["dialogue"],           // services provided by the itself
+      "required": ["database"],             // 必需的服务
+      "optional": ["assets"],               // 可选的服务
+      "implements": ["dialogue"],           // 实现的服务
     },
-    "locales": ["en", "zh"],                // supported languages
   }
 }
 ```
 
 - **description:** This refers to the description of the plugin, which should be an object. The keys represent the language names, and the values are the descriptions in the corresponding languages.
-- **service:** This pertains to the service-related information of the plugin, which includes the following attributes:
-  - **implements:** services that your plugin implements, represented as an array of service names.
-- **locales:** This refers to the languages supported by the plugin, represented as an array of language names.
+- **service:** 插件的服务相关信息，详情请参见 [服务与依赖](../plugin/service.html#package-json)
 - **preview:** Configure `true` to allow plugin to be displayed as "developing" status
 - **hidden:** If set to true, this prevents the plugin from being displayed in the marketplace (you usually don’t need to do this).
 
