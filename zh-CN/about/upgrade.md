@@ -114,6 +114,16 @@ for await (const item of bot.getChannelIter())  // new
 
 新增用于创建私聊频道的 [`bot.createDirectChannel()`](../api/resources/channel.md)，因此不再需要实现 [`bot.sendPrivateMessage()`](../api/resources/message.md#bot-sendprivatemessage)。
 
+## Server 插件独立 <badge>v4.16.0</badge>
+
+在 4.16.0 版本中，我们将 `Server` 服务从 Koishi 中分离出来，独立成了 [@koishijs/plugin-server](../plugins/develop/server.md) 插件。Koishi CLI 提供了自动迁移机制，因此任何使用 CLI 启动 Koishi 的用户无需进行任何操作。
+
+如果你是将 Koishi 作为依赖调用的进阶开发者，你需要执行下列操作完成升级：
+
+1. 安装最新版本的 [@koishijs/plugin-server](../plugins/develop/server.md) 插件；
+2. 在你的代码中手动导入并加载该插件；
+3. 将你过去的 `host`, `port`, `maxPort`, `selfUrl` 全局设置移动至 server 插件的配置项。
+
 ## 消息元素更新 <badge>v4.16.4</badge>
 
 在 4.16.4 版本中，我们将 Koishi 内部的消息元素实现与 Satori 协议规范进行了对齐。涉及到以下 API 的变动：
@@ -140,3 +150,15 @@ if (type === 'image' || type === 'img') {
   await sendImage(attrs.src || attrs.url)
 }
 ```
+
+## HTTP 插件独立 <badge>v4.17.6</badge>
+
+在 4.17.6 版本中，我们将 HTTP 服务从 Koishi 中分离出来，独立成了 [@koishijs/plugin-http](../plugins/develop/http.md) 插件。Koishi CLI 提供了自动迁移机制，因此任何使用 CLI 启动 Koishi 的用户无需进行任何操作。
+
+如果你是将 Koishi 作为依赖调用的进阶开发者，你需要执行下列操作完成升级：
+
+1. 安装最新版本的 [@koishijs/plugin-http](../plugins/develop/http.md) 插件；
+2. (可选，如果你使用网络代理工具) 安装最新版本的 [@koishijs/plugin-proxy-agent](../plugins/develop/proxy-agent.md) 插件；
+3. 在你的代码中手动导入并加载这两个插件；
+4. 将你过去的 `request` 全局设置移动至 http 插件的配置项；
+5. (可选) 将你过去的 `request.proxyAgent` 全局设置移动至 proxy-agent 插件的配置项。
