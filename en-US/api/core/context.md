@@ -31,6 +31,7 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.registry](../service/registry.md)
 - [ctx.scope](../service/registry.md#ctx-scope)
 - [ctx.serial](../service/events.md#ctx-serial)
+- [ctx.server](../service/server.md)
 - [ctx.setInterval](../service/timer.md#ctx-setinterval)
 - [ctx.setTimeout](../service/timer.md#ctx-settimeout)
 - [ctx.sleep](../service/timer.md#ctx-sleep)
