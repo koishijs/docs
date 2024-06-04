@@ -91,6 +91,7 @@ ctx.command('test [arg:number]')
 
 - string: `string` 字符串
 - number: `number` 数值
+- bigint: `bigint` [大整数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - text: `string` 贪婪匹配的字符串
 - user: `string` 用户，格式为 `{platform}:{id}`
 - channel: `string` 频道，格式为 `{platform}:{id}`
