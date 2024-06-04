@@ -162,3 +162,23 @@ if (type === 'image' || type === 'img') {
 3. 在你的代码中手动导入并加载这两个插件；
 4. 将你过去的 `request` 全局设置移动至 http 插件的配置项；
 5. (可选) 将你过去的 `request.proxyAgent` 全局设置移动至 proxy-agent 插件的配置项。
+
+## `tsconfig` 更新 <badge>v4.17.8</badge>
+
+在 4.17.8 版本中，由于部分依赖的更新，我们对推荐的 `tsconfig.json` 配置进行了调整。如果你的项目使用了 TypeScript，并且在升级后发现无法通过编译，你可以打开 `tsconfig.json` 文件，并尝试执行下列修改以完成升级：
+
+1. 将 `module` 属性改为 `esnext`；
+2. 将 `moduleResolution` 属性改为 `bundler`；
+3. 将 `emitDeclarationOnly` 属性改为 `true` (或者添加这个属性)。
+
+```json{3-5}
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "emitDeclarationOnly": true,
+  },
+}
+```
+
+注意，如果你的项目中存在多个 `tsconfig.json` 文件，你需要对每一个文件都进行上述修改 (通过 `extends` 继承其他文件中配置的除外)。
