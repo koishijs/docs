@@ -78,14 +78,6 @@ interface DelayOptions {
 - `prefer-user`: 优先使用用户语言
 - `prefer-channel`: 优先使用频道语言
 
-## 请求设置
-
-### options.request.proxyAgent
-
-- 类型: `string`
-
-配置请求时默认使用的网络代理。
-
 ## 配置文件选项
 
 ::: warning

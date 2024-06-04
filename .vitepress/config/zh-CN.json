@@ -328,6 +328,9 @@
           "text": "插件系统 (Registry)",
           "link": "/api/service/registry.md"
         }, {
+          "text": "服务器 (Server)",
+          "link": "/api/service/server.md"
+        }, {
           "text": "计时器 (Timer)",
           "link": "/api/service/timer.md"
         }]
@@ -623,11 +626,17 @@
           "text": "模块热替换 (HMR)",
           "link": "/plugins/develop/hmr.md"
         }, {
+          "text": "网络请求 (HTTP)",
+          "link": "/plugins/develop/http.md"
+        }, {
           "text": "测试工具 (Mock)",
           "link": "/plugins/develop/mock.md"
         }, {
           "text": "通知服务 (Notifier)",
           "link": "/plugins/develop/notifier.md"
+        }, {
+          "text": "网络代理 (Proxy Agent)",
+          "link": "/plugins/develop/proxy-agent.md"
         }, {
           "text": "服务器 (Server)",
           "link": "/plugins/develop/server.md"
