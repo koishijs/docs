@@ -1,4 +1,4 @@
-# Launch Script
+# launch script
 
 There is also a set of command line tools that provided by Koishi to boot the application quickly by reading the configuration file.
 

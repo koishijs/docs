@@ -1,27 +1,27 @@
 ---
 prev:
-  text: Choisir une méthode d'installation
+  text: Installation
   link: /fr-FR/manual/starter/
 next:
-  text: Installation et configuration des plugins
+  text: Installation et configuration de plugins
   link: /fr-FR/manual/usage/market.html
 ---
 
 # Installation pour Android
 
-::: tip
-Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
-Ce projet est toujours en cours de développement. Certaines fonctionnalités peuvent ne pas être disponibles.
+:::danger
+此项目仍在早期开发中。Certaines fonctionnalités peuvent ne pas être disponibles.
 :::
 
 ## Téléchargement
 
-- [Télécharger le package standard (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [Télécharger le package d'extension (.apk)](https://k.ilharp.cc/android-full.apk)
-- [Voir plus de versions](https://github.com/koishijs/koishi-android/releases)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
+- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
 ## Installation
 
@@ -29,4 +29,4 @@ Installer Koishi via le programme d'installation est la méthode la recommandée
 
 ## Démarrage
 
-Cliquez sur l'icône de Koishi pour le démarrer et Koishi pouvez démarrer en quelques secondes.
+Cliquez sur l'icône de Koishi pour le démarrer,

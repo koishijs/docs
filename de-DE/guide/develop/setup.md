@@ -54,17 +54,20 @@ git config –-global user.email "you@example.com"
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
-:::
+  :::
 
 输入下面的命令以创建 Koishi 项目：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm init koishi@latest
 ```
+
 ```yarn
 yarn create koishi
 ```
+
 :::
 
 跟随提示即可完成全套初始化流程。

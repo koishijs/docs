@@ -1,6 +1,8 @@
 # Search Marketplace
 
-There are many plugins in the Koishi marketplace. A set of search query syntax was provided in order to make the searching experience smooth and convinient. You can enter the syntax like `is:preview` in the search box to quickly filter plugins for a category.
+There are many plugins in the Koishi marketplace.
+A set of search query syntax was provided in order to make the searching experience smooth and convinient.
+你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
 ## Search Terms
 
@@ -33,10 +35,7 @@ We provide four categories of plugin identifiers, which are also filters.Includi
 
 </div>
 
-The above filters can also be reversely selected, e.g. `not:insecure` or `created:
-
-
-<date`.In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
+上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
 
 ## Plugin Categories
 
@@ -46,14 +45,15 @@ We currently offer 14 base categories. They are:
 
 - <market-icon name="solid:core" />`category:core`：核心功能
 - <market-icon name="solid:adapter" />`category:adapter`：适配器
-- <market-icon name="solid:storage" />`category:storage`：存储服务
+- <market-icon name="solid:general" />`category:general`：存储服务
 - <market-icon name="solid:extension" />`category:extension`：扩展功能
-- <market-icon name="solid:console" />`category:console`：控制台
+- <market-icon name="solid:webui" />`category:webui`：控制台
 - <market-icon name="solid:manage" />`category:manage`：管理工具
 - <market-icon name="solid:preset" />`category:preset`：行为预设
 - <market-icon name="solid:image" />`category:image`：图片服务
 - <market-icon name="solid:media" />`category:media`：资讯服务
 - <market-icon name="solid:tool" />`category:tool`：实用工具
+- <market-icon name="solid:life" />`category:life`：生活指南
 - <market-icon name="solid:ai" />`category:ai`：人工智能
 - <market-icon name="solid:meme" />`category:meme`：趣味交互
 - <market-icon name="solid:game" />`category:game`：娱乐玩法
@@ -82,15 +82,15 @@ Beside to sort by rating, you can also choose another sorting method:
 
 </div>
 
-If you want to sort reversely, add `-asc` backwards. Such as `sort:creed-asc`.In the sidebar, you can click on the "Sort Type" to sort, click twice to reverse the sequencing, click three times to cancel the sequencing.
+如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。In the sidebar, you can click on the "Sort Type" to sort, click twice to reverse the sequencing, click three times to cancel the sequencing.
 
-## Quick Experience
+## Instant Preview
 
-::: Warning
-Quick experience is still experimental. It is only available in the marketplace in official documents.
+:::warning
+快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) is an online Koishi runtime.You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.If you are the plugin developer, you can see [this article](../../cookbook/practice/online.md) to deploy your plugin to k-on!.
+[Koishi Online (k-on!)](https://koishi.online) 是一个在线的 Koishi 运行时。You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
 
 <script lang="ts" setup>
 import { MarketIcon } from '@koishijs/market'

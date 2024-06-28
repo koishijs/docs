@@ -1,6 +1,6 @@
-# 指令 (Command)
+# コマンド
 
-::: tip
+:::tip
 参见：[开发 > 交互基础 > 指令开发](../../guide/basic/command.md)
 :::
 
@@ -83,7 +83,8 @@ type CommandAction = (argv: Argv, ...args: any[]) => Awaitable<string | void>
 - **fields:** `FieldCollector<UserField>` 要请求的用户字段
 - 返回值: `this`
 
-如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
+如果指令需要用到用户数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。
+参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
 ```ts
 type FieldCollector<K extends string> =
@@ -96,36 +97,27 @@ type FieldCollector<K extends string> =
 - **fields:** `FieldCollector<ChannelField>` 要请求的频道字段
 - 返回值: `this`
 
-如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。 参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
+如果指令需要用到频道数据，你可以提前声明，这样有助于合并多次请求，从而提高性能。
+参见[按需加载](../../guide/database/builtin.md#声明所需字段)章节。
 
-### cmd.alias(...names)
+### cmd.alias(name, config?)
 
-- **names:** `string[]` 要设置的别名
+- **name:** `string` 要设置的别名
+- **config:** `Command.Alias`
+  - **config.args:** `any[]` 要带的参数列表，将与传入的参数合并
+  - **config.options:** `Dict` 要带的选项列表，将与传入的选项合并
 - 返回值: `this`
 
 设置指令别名。
-
-### cmd.shortcut(name, config?)
-
-- **name:** `string | RegExp` 快捷匹配
-- **config:** `ShortcutConfig`
-  - **config.prefix:** `boolean` 调用时要求保留前缀
-  - **config.fuzzy:** `boolean` 允许在快捷方式后带参数
-  - **config.greedy:** `boolean` 将所有后面的内容解析成一个参数
-  - **config.args:** `any[]` 要带的参数列表，将与传入的参数合并
-  - **config.options:** `Record<string, any>` 要带的选项列表，将与传入的选项合并
-- 返回值: `this`
-
-设置快捷方式。
 
 ### cmd.subcommand(name, desc?, config?)
 
 - **name:** `string` 指令名以及可能的参数
 - **desc:** `string` 指令的描述
-- **config:** [`CommandConfig`](./context.md#ctx-command) 指令的配置
+- **config:** [`Command.Config`](./context.md#ctx-command) 指令的配置
 - 返回值：`Command` 注册或修改的指令
 
-注册或修改子指令。子指令会继承当期指令的上下文。参见[指令的多级结构](../../guide/basic/command.md#指令的多级结构)章节。
+注册或修改子指令。子指令会继承当期指令的上下文。参见 [子指令](../../manual/usage/command.md#子指令) 和 [注册子指令](../../guide/basic/command.md#注册子指令) 章节。
 
 ### cmd.parse(input)
 
@@ -150,15 +142,3 @@ type FieldCollector<K extends string> =
 - 返回值: `void`
 
 移除当前指令及其所有子指令。
-
-## 静态属性和方法
-
-这里包含了与 Command 类相关的静态属性和方法。
-
-### Command.defaultConfig
-
-默认的指令配置。
-
-### Command.defaultOptionConfig
-
-默认的选项配置。

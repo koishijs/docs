@@ -33,10 +33,7 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 </div>
 
-上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:
-
-
-<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
+上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。在侧边栏中，你可以点击标识名称进行选择，点击第二次反向选择，点击第三次则会取消选择。
 
 ## プラグインの種類
 
@@ -46,14 +43,15 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 - <market-icon name="solid:core" />`category:core`：核心功能
 - <market-icon name="solid:adapter" />`category:adapter`：适配器
-- <market-icon name="solid:storage" />`category:storage`：存储服务
+- <market-icon name="solid:general" />`category:general`：存储服务
 - <market-icon name="solid:extension" />`category:extension`：扩展功能
-- <market-icon name="solid:console" />`category:console`：控制台
+- <market-icon name="solid:webui" />`category:webui`：控制台
 - <market-icon name="solid:manage" />`category:manage`：管理工具
 - <market-icon name="solid:preset" />`category:preset`：行为预设
 - <market-icon name="solid:image" />`category:image`：图片服务
 - <market-icon name="solid:media" />`category:media`：资讯服务
 - <market-icon name="solid:tool" />`category:tool`：实用工具
+- <market-icon name="solid:life" />`category:life`：生活指南
 - <market-icon name="solid:ai" />`category:ai`：人工智能
 - <market-icon name="solid:meme" />`category:meme`：趣味交互
 - <market-icon name="solid:game" />`category:game`：娱乐玩法
@@ -86,7 +84,7 @@ Koishi 有着丰富的插件生态。为了让用户更方便地搜索插件，�
 
 ## 快速体验
 
-::: warning
+:::warning
 快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
 :::
 
