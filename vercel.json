@@ -1,0 +1,30 @@
+{
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31556952, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path((?!zh-CN|zh-TW|en-US|de-DE|fr-FR|ja-JP|ru-RU).*).html",
+      "destination": "/zh-CN/:path.html"
+    },
+    {
+      "source": "/:path((?!zh-CN|zh-TW|en-US|de-DE|fr-FR|ja-JP|ru-RU).*)/",
+      "destination": "/zh-CN/:path/"
+    },
+    {
+      "source": "/",
+      "destination": "/zh-CN/"
+    }
+  ],
+  "github": {
+    "silent": true
+  }
+}
