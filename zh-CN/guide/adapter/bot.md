@@ -144,7 +144,7 @@ class DiscordBot<C extends Context> extends Bot<C> {
 }
 ```
 
-[`ctx.http`](../../api/service/http.md) 是 Koishi 的内置服务，其上封装了一套基于 [axios](https://github.com/axios/axios) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `HTTP` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
+[`ctx.http`](../../api/service/http.md) 是 Koishi 的基础服务，其上封装了一套基于 [fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API) 的网络请求 API。这里，我们使用 `ctx.http.extend()` 方法创建了一个新的 `HTTP` 实例，其上的请求会继承传入的配置。这样我们就无需每次请求都写一遍请求头了。
 
 ### 反射网络请求 {#reflect}
 
