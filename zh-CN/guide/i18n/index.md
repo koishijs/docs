@@ -95,6 +95,13 @@ ctx.i18n.define('en-US', { hello: 'Hello, {author.name}!' })
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。
 
+如果你希望对属性值进行某些计算，传入 Javascript 表达式也是可以的：
+
+```ts
+ctx.i18n.define('zh-CN', { list: '列表：{arr.join(",")}' })
+ctx.i18n.define('en-US', { list: 'List: {arr.join(",")}' })
+```
+
 ### 使用消息元素
 
 你也可以在模板中使用 [消息元素](../basic/element.md) 语法。消息元素的属性同样使用 `{}` 进行插值：
