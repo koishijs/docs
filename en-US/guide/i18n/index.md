@@ -95,6 +95,19 @@ ctx.i18n.define('en-US', { hello: 'Hello, {author.name}!' })
 
 上述三段代码的实际效果完全相同，可以根据自己的需要进行选择。
 
+如果你希望对属性值进行某些计算，传入 Javascript 表达式也是可以的：
+
+```ts
+ctx.i18n.define('zh-CN', { list: '列表：{arr.join(",")}' })
+ctx.i18n.define('en-US', { list: 'List: {arr.join(",")}' })
+```
+
+::: tip
+目前支持的表达能力会受到解析器和特殊语法的限制。请避免在表达式中引入 `}`，以免造成歧义。
+
+此外，如果向 `session.text()` 传入的二参数是一个数组，那么直接写 `{0}` 将表示数组中的第一个元素 (而非作为 JavaScript 表达式的 `0`)。
+:::
+
 ### 使用消息元素
 
 你也可以在模板中使用 [消息元素](../basic/element.md) 语法。消息元素的属性同样使用 `{}` 进行插值：
