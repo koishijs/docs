@@ -38,7 +38,7 @@ git --version           # git version 2.39.1
 
 ```sh
 git config --global user.name "Your Name"
-git config –-global user.email "you@example.com"
+git config --global user.email "you@example.com"
 ```
 
 ### 注册 GitHub
