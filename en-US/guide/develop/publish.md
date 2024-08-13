@@ -148,7 +148,7 @@ Furthermore, there are certain aspects related to the deployment process of [Koi
 
 ## Publish your plugin
 
-Congratulations! It's time to publish your plugin, after editing the file above and [build source](./workspace.md##build-source-code).
+编辑完上面的清单文件并 [构建源代码](./workspace.md#build) 后，你就可以公开发布你的插件了。
 
 :::tabs code
 
