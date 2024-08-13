@@ -57,7 +57,7 @@ The `package.json` in your plugin should meet the requirements below to appear i
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) should match one of these formats:
   - `koishi-plugin-*`
   - `@bar/koishi-plugin-*`
-  - `@koishijs/plugin-*` (官方插件)
+  - `@koishijs/plugin-*` (official plugin)
   - 其中 `*` 是由数字、小写字母和连字符 `-` 组成的字符串
 - [`name`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#name) is unique
 - [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) should match [semantic version](https://semver.org/) (usually from `1.0.0`)
