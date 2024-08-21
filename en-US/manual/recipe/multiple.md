@@ -12,12 +12,12 @@ Solutions can be varied for different demands, so there is no a unique answer. F
 
 In each Koishi application, some plugins can be enabled multiple instances, others can't. It is not the defects of the plugin, but the expected behavior.In fact, the author of the plugin can specify which features can be enabled independently.This is reflected in two different types of plugins: those that can enable multiple configurations at the same time are called reusable plugins and instead are non-reusable plugins.
 
-典型的可重用插件是 [适配器插件](../usage/adapter.md)。Each adapter corresponds to a running bot, and bots on different platforms are configured by different adapters. So, if you want to configure multiple bots on the same platform, just follow the method in previous section to add multiple adapter plugins.
+Typical reusable plugins are [adapter plugins](../usage/adapter.md).Each adapter corresponds to a running bot, and bots on different platforms are configured by different adapters. So, if you want to configure multiple bots on the same platform, just follow the method in previous section to add multiple adapter plugins.
 
 At the same time, the vast majority of plugins are not reusable. For such plugins, you can only have one running configuration at a time. If there's already a running configuration, you'll see a line prompting "This plugin is already running and cannot be reused" in other configurations. Of course, you can still prepare multiple configurations, then disable one configuration and enable another at the right time.
 
-对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/customize.md#过滤器) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#多实例) 方案。
+对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/customize.md#filters) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#multiple-instances) 方案。
 
-## Multiple Instances
+## 多实例 {#multiple-instances}
 
 Another option is to run multiple Koishi instances at the same time. Doing so makes it possible to use completely different plugin configurations in different instances, or even enable completely different combinations of plugins. But, by contrast, you need to maintain multiple instances and each requires a separate port.
