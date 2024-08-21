@@ -11,7 +11,7 @@ Koishi 应用默认情况下只能在本机访问。而对于某些需求，你�
 
 将 Koishi 不受限制地暴露在公网上可能会导致你的服务器受到攻击。因此，你需要妥善配合用户登录等方式以限制控制台功能的访问能力。
 
-在 [前面的章节](../usage/platform.md#控制台登录) 中，我们已经介绍了 [auth](../../plugins/console/auth.md) 插件的使用方法。
+在 [前面的章节](../usage/platform.md#console-login) 中，我们已经介绍了 [auth](../../plugins/console/auth.md) 插件的使用方法。
 
 ## 配置服务器地址
 
