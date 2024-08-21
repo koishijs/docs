@@ -50,7 +50,7 @@ Chaque utilisateur ne peut interagir qu'avec des utilisateurs de niveau d'autori
 
 上述两个配置项都支持 [计算属性](#计算属性)，这也意味着你可以在不同的聊天环境中配置不同的行为。
 
-## Filtres
+## 过滤器 {#filters}
 
 很多时候，我们会希望某些功能只能对于某些群聊或私聊使用。使用权限管理意味着引入数据库，而更轻量的方式是通过 **过滤器 (Filter)** 直接影响插件的作用范围。
 
