@@ -91,7 +91,7 @@ Koishi pre-configured some groups during the installation, while newly installed
 
 Creating a new group is also simple.In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner to create a new group.The name of the new group is randomly generated, but you can change it by clicking on the name to the name you like.The groups can unfold and fold by clicking on the small triangle in the left bar.
 
-In addition, the [filter](../usage/customize.md#过滤器) mechanism can also be used on groups to control the behavior of a range of plugins.
+此外，[过滤器](../usage/customize.md#filters) 机制也可用于分组，便于控制一系列插件的行为。
 
 ### Adding More Plugins
 
