@@ -16,8 +16,8 @@ Dans une même application Koishi, vous pouvez activer plusieurs instances pour 
 
 Cependant, la plupart des plugins ne sont pas réutilisables. Pour ces types de plugins, vous ne pouvez avoir qu'une seule configuration en cours d'exécution à un même plugin. Si vous avez déjà une configuration d'un plugin en cours d'exécution, vous verrez une notification indiquant « Ce plugin est en cours d'exécution et ne peut pas être réutilisé » lorsque vous essayez de l'activer ailleurs. Cependant, vous pouvez toujours préparer plusieurs configurations, puis passer de l'une à l'autre au moment opportun.
 
-对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/customize.md#过滤器) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#多实例) 方案。
+对于那些不可重用的插件，如果希望在不同的场景下切换到不同的配置，就需要插件作者提供带有 [过滤器](../usage/customize.md#filters) 的配置项。如果你想要修改的配置不支持过滤器，那么你可以考虑向插件作者提出建议，或采用下面介绍的 [多实例](#multiple-instances) 方案。
 
-## Instance multiple
+## 多实例 {#multiple-instances}
 
 Une autre approche consiste à exécuter plusieurs instances de l'application Koishi en même temps. L'avantage de cette approche est que vous pouvez utiliser des configurations de plugins totalement différentes dans des applications différentes, voire activer des combinaisons de plugins totalement différentes. Cependant, en contrepartie, vous devrez gérer plusieurs applications distinctes, chacune nécessitant un port indépendant.
