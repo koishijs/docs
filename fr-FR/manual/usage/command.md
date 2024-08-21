@@ -121,7 +121,7 @@ Pour les guildes contenant un grand nombre de personnes ou plusieurs robots, nou
 
 1. `prefix` 是一个列表，默认值为 `['']` 表示无需前缀也能触发；将列表清空会导致所有指令都无法通过 `prefix` 触发 (但仍然可以通过私聊或 `nickname` 或 @机器人 触发)
 2. 如果你在 `prefix` 中设置了多个值，例如 `['.', '/', '']`，那么 `.`, `/` 或无前缀都能触发指令；但由于 Koishi 是按顺序匹配各个前缀的，因此空串 `''` 必须写在最后一个
-3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#过滤器) 一节
+3. 可以为不同的会话设置不同的 `prefix`，具体请参考 [过滤器](./customize.md#filters) 一节
    :::
 
 ## sous-commande
