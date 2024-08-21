@@ -670,7 +670,7 @@
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "整合包开发",
+              "text": "Integrated Package Development",
               "link": "/cookbook/practice/bundle.md"
             },
             {
@@ -680,7 +680,7 @@
           ]
         },
         {
-          "text": "案例分析",
+          "text": "Case Study",
           "items": [
             {
               "text": "Command Management",
@@ -891,15 +891,15 @@
               "link": "/plugins/develop/http.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Application Mocking (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "通知服务 (Notifier)",
+              "text": "Notification Service (Notifier)",
               "link": "/plugins/develop/notifier.md"
             },
             {
-              "text": "网络代理 (Proxy Agent)",
+              "text": "Network Proxy (Proxy Agent)",
               "link": "/plugins/develop/proxy-agent.md"
             },
             {
@@ -907,11 +907,11 @@
               "link": "/plugins/develop/server.md"
             },
             {
-              "text": "API 服务器 (Server Satori)",
+              "text": "API Server (Server Satori)",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "临时服务器 (Server Temp)",
+              "text": "Temporary Server (Server Temp)",
               "link": "/plugins/develop/server-temp.md"
             }
           ]
@@ -1028,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Intersect + Union：配置联动 1",
+              "text": "Intersect w/ Union: Tagged Union 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Intersect + Union：配置联动 2",
+              "text": "Intersect w/ Union: Tagged Union 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
@@ -1077,7 +1077,7 @@
           ]
         },
         {
-          "text": "更新",
+          "text": "Update",
           "items": [
             {
               "text": "History",
@@ -1088,7 +1088,7 @@
               "link": "/about/releases.md"
             },
             {
-              "text": "从低版本迁移",
+              "text": "Migrate from Previous Version",
               "link": "/about/upgrade.md"
             },
             {
