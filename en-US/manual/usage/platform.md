@@ -28,7 +28,7 @@ Koishi describes itself as a "cross-platform" framework, but what does this "cro
 
 If you want to login or bind your account, the platform name and user ID here will be useful.
 
-## Console Login
+## 控制台登录 {#console-login}
 
 [auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。In addition, the plugin comes with an administrator account, which is the most convenient way to raise the rights of users who have just built Koishi.
 
