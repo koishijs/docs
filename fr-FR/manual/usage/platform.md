@@ -28,7 +28,7 @@ Sur certaines plateformes, les informations du compte ne sont pas visibles, il e
 
 Si vous souhaitez vous connecter ou lier des comptes, les champs "Nom de la plateforme" et "ID de l'utilisateur" seront utiles.
 
-## Connexion à la console
+## 控制台登录 {#console-login}
 
 [auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。Le plugin <a href="../../plugins/console/auth.md">auth</a> permet à n'importe quel utilisateur de se connecter à Koishi via la console et de gérer ses propres informations utilisateur.
 
