@@ -77,7 +77,7 @@ Koishi 设计了一整套对象关系映射 (ORM) 接口，它易于扩展并广
 
 ## 过滤器 (Filter) {#filter}
 
-- [入门 > 过滤器](../manual/usage/customize\.md#filters)
+- [入门 > 过滤器](../manual/usage/customize.md#filters)
 - [开发 > 模块化 > 过滤器](../guide/plugin/filter.md)
 - [API > 内置服务 > 过滤器](./service/filter.md)
 
