@@ -1,8 +1,8 @@
 # Search Marketplace
 
 There are many plugins in the Koishi marketplace.
-A set of search query syntax was provided in order to make the searching experience smooth and convinient.
-你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
+A set of search query syntax was provided in order to make the searching experience smooth and convenient.
+You can filter a certain category of plugins by using the filter syntax like `is:preview`.
 
 ## Search Terms
 
@@ -18,36 +18,36 @@ We provide four categories of plugin identifiers, which are also filters.Includi
 
 <div class="plugin-flags-list">
 
-- <market-icon name="verified" style="color: var(--k-color-success)" />`is:verified`：官方认证
-- <market-icon name="insecure" style="color: var(--k-color-danger)" />`is:insecure`：不安全
-- <market-icon name="preview" style="color: var(--k-color-warning)" />`is:preview`：开发中
-- <market-icon name="newborn" style="color: var(--k-color-success)" />`created:>date`：近期新增
+- <market-icon name="verified" style="color: var(--k-color-success)" />`is:verified`: Official Verified
+- <market-icon name="insecure" style="color: var(--k-color-danger)" />`is:insecure`: Insecure
+- <market-icon name="preview" style="color: var(--k-color-warning)" />`is:preview`: In Development
+- <market-icon name="newborn" style="color: var(--k-color-success)" />`created:>date`: Recently Added
 
 </div>
 
-此外，还有一些不带标识的过滤条件：
+Also, there are some filters without icons:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="download" />`is:installed`：已安装
-- <market-icon name="portable" />`is:portable`：快速体验
-- <market-icon name="tag" />`updated:>date`：近期更新
+- <market-icon name="download" />`is:installed`: Installed
+- <market-icon name="portable" />`is:portable`: Quick Preview
+- <market-icon name="tag" />`updated:>date`: Recently Updated
 
 </div>
 
-上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
+You can also use the opposite condition for these filters, such as `not:insecure` or `created:<date`. In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
 
 ## Plugin Categories
 
-We currently offer 14 base categories. They are:
+There are currently 14 categories of plugins:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="solid:core" />`category:core`：核心功能
-- <market-icon name="solid:adapter" />`category:adapter`：适配器
-- <market-icon name="solid:general" />`category:general`：存储服务
-- <market-icon name="solid:extension" />`category:extension`：扩展功能
-- <market-icon name="solid:webui" />`category:webui`：控制台
+- <market-icon name="solid:core" />`category:core`: Core Features
+- <market-icon name="solid:adapter" />`category:adapter`: Adapters
+- <market-icon name="solid:general" />`category:general`: Storage Services
+- <market-icon name="solid:extension" />`category:extension`: Extension Features
+- <market-icon name="solid:webui" />`category:webui`: WebUI Plugins
 - <market-icon name="solid:manage" />`category:manage`：管理工具
 - <market-icon name="solid:preset" />`category:preset`：行为预设
 - <market-icon name="solid:image" />`category:image`：图片服务
