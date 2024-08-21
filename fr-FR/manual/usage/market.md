@@ -84,7 +84,7 @@ Lors de l'installation de Koishi, certains groupes sont préconfigurés, et les 
 
 La création d'un nouveau groupe est également simple. Cliquez sur "Configuration globale" ou sur le nom d'un groupe, puis cliquez sur le bouton "Créer un groupe" en haut à droite. Le nom du nouveau groupe est généré de manière aléatoire, mais vous pouvez cliquer sur le nom pour le modifier comme vous le souhaitez. Les groupes peuvent être développés ou réduits en cliquant sur la petite flèche à côté du nom du groupe.
 
-此外，[过滤器](../usage/customize.md#过滤器) 机制也可用于分组，便于控制一系列插件的行为。
+此外，[过滤器](../usage/customize.md#filters) 机制也可用于分组，便于控制一系列插件的行为。
 
 ### Ajout de plugins supplémentaires
 
