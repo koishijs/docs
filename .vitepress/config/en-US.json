@@ -473,11 +473,11 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "服务器 (Server)",
+              "text": "Route Management (Server)",
               "link": "/api/service/server.md"
             },
             {
-              "text": "计时器 (Timer)",
+              "text": "Timer (Timer)",
               "link": "/api/service/timer.md"
             }
           ]
@@ -645,11 +645,11 @@
               "link": "/cookbook/design/framework.md"
             },
             {
-              "text": "零占用的存储",
+              "text": "Zero-Storage",
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Workspaces In-depth",
               "link": "/cookbook/design/workspace.md"
             }
           ]
@@ -658,11 +658,11 @@
           "text": "Cookbook",
           "items": [
             {
-              "text": "资源转存",
+              "text": "Resources Persistence",
               "link": "/cookbook/practice/assets.md"
             },
             {
-              "text": "图片渲染",
+              "text": "Image Rendering",
               "link": "/cookbook/practice/render.md"
             },
             {
@@ -903,7 +903,7 @@
               "link": "/plugins/develop/proxy-agent.md"
             },
             {
-              "text": "服务器 (Server)",
+              "text": "Route Management (Server)",
               "link": "/plugins/develop/server.md"
             },
             {
