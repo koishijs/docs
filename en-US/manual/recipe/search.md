@@ -89,7 +89,7 @@ To sort in reverse order, add `-asc` to the end, like `sort:created-asc`. In the
 Quick Preview is currently an experimental feature and is only available in the plugin market within the official site.
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) is an online runtime for Koishi. It allows you to quickly test out several plugins without installing Koishi locally. A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
+[Koishi Online (k-on!)](https://koishi.online) is an online runtime for Koishi. It allows you to quickly test out several plugins without installing Koishi locally. Plugins compatible with k-on! will display a lightning bolt icon, which you can click to instantly create a k-on! instance.  If you're a plugin developer, you can refer to [this guide](../../cookbook/practice/online.md) to make your plugin compatible with k-on!.
 
 <script lang="ts" setup>
 import { MarketIcon } from '@koishijs/market'
