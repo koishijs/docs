@@ -10,9 +10,9 @@ Solutions can be varied for different demands, so there is no a unique answer. F
 
 ## Single Instance
 
-In each Koishi application, some plugins can be enabled multiple instances, others can't. It is not the defects of the plugin, but the expected behavior.In fact, the author of the plugin can specify which features can be enabled independently.This is reflected in two different types of plugins: those that can enable multiple configurations at the same time are called reusable plugins and instead are non-reusable plugins.
+In the same Koishi application, some plugins can be enabled multiple times simultaneously, while others cannot—this is not a flaw in the implementation but rather the intended behavior. In fact, plugin developers can specify which features can be independently enabled. This results in two different types of plugins: those that can be enabled multiple times are called reusable plugins, while those that cannot are known as non-reusable plugins.
 
-Typical reusable plugins are [adapter plugins](../usage/adapter.md).Each adapter corresponds to a running bot, and bots on different platforms are configured by different adapters. So, if you want to configure multiple bots on the same platform, just follow the method in previous section to add multiple adapter plugins.
+Typical reusable plugins are known as [adapter plugins](../usage/adapter.md).Each adapter corresponds to a running bot, and bots on different platforms are configured by different adapters. So, if you want to configure multiple bots on the same platform, just follow the method in previous section to add multiple adapter plugins.
 
 At the same time, the vast majority of plugins are not reusable. For such plugins, you can only have one running configuration at a time. If there's already a running configuration, you'll see a line prompting "This plugin is already running and cannot be reused" in other configurations. Of course, you can still prepare multiple configurations, then disable one configuration and enable another at the right time.
 
