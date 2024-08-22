@@ -1,20 +1,19 @@
 # Search Marketplace
 
-There are many plugins in the Koishi marketplace.
-A set of search query syntax was provided in order to make the searching experience smooth and convenient.
-You can filter a certain category of plugins by using the filter syntax like `is:preview`.
+Koishi enhances its features through a rich ecosystem of plugins,
+and to make it easier for users to find what they need, we provide a set of search filters. You can enter commands like `is:preview` in the search field to filter plugins by category.
 
 ## Search Terms
 
-In addition to special syntax with colon numbers, the search term you enter will be used for querying：
+Aside from special syntax with colons, the search terms you enter will be used to query:
 
-- Plugin name
-- Plugin description
+- Plugin names
+- Plugin descriptions
 - Plugin keywords
 
-## Plugin identification
+## Plugin tags
 
-We provide four categories of plugin identifiers, which are also filters.Including:
+There are 4 kinds of tags for every plugin, these tags can be also used as filters:
 
 <div class="plugin-flags-list">
 
@@ -25,7 +24,7 @@ We provide four categories of plugin identifiers, which are also filters.Includi
 
 </div>
 
-Also, there are some filters without icons:
+There are also some filters without specific tags:
 
 <div class="plugin-flags-list">
 
@@ -35,62 +34,62 @@ Also, there are some filters without icons:
 
 </div>
 
-You can also use the opposite condition for these filters, such as `not:insecure` or `created:<date`. In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
+These filters can also be used in reverse, such as `not:insecure` or `created:<date`. In the sidebar, you can click on a tag name to select it, click again to reverse the selection, and click a third time to cancel the selection.
 
 ## Plugin Categories
 
-There are currently 14 categories of plugins:
+There are currently 14 base categories:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="solid:core" />`category:core`: Core Features
+- <market-icon name="solid:core" />`category:core`: Core Functionalities
 - <market-icon name="solid:adapter" />`category:adapter`: Adapters
-- <market-icon name="solid:general" />`category:general`: Storage Services
+- <market-icon name="solid:general" />`category:general`: General Services
 - <market-icon name="solid:extension" />`category:extension`: Extension Features
 - <market-icon name="solid:webui" />`category:webui`: WebUI Plugins
-- <market-icon name="solid:manage" />`category:manage`：管理工具
-- <market-icon name="solid:preset" />`category:preset`：行为预设
-- <market-icon name="solid:image" />`category:image`：图片服务
-- <market-icon name="solid:media" />`category:media`：资讯服务
-- <market-icon name="solid:tool" />`category:tool`：实用工具
-- <market-icon name="solid:life" />`category:life`：生活指南
-- <market-icon name="solid:ai" />`category:ai`：人工智能
-- <market-icon name="solid:meme" />`category:meme`：趣味交互
-- <market-icon name="solid:game" />`category:game`：娱乐玩法
-- <market-icon name="solid:gametool" />`category:gametool`：游戏辅助
+- <market-icon name="solid:manage" />`category:manage`: Management Tools
+- <market-icon name="solid:preset" />`category:preset`: Behavior Presets
+- <market-icon name="solid:image" />`category:image`: Image Services
+- <market-icon name="solid:media" />`category:media`: Media Services
+- <market-icon name="solid:tool" />`category:tool`: Utilities
+- <market-icon name="solid:life" />`category:life`: Lifestyle Guides
+- <market-icon name="solid:ai" />`category:ai`: Artificial Intelligence
+- <market-icon name="solid:meme" />`category:meme`: Interactions
+- <market-icon name="solid:game" />`category:game`: Entertainment
+- <market-icon name="solid:gametool" />`category:gametool`: Games Utilities
 
 </div>
 
-The categories of plugins are maintained by members of the Koishi team, usually within one week after the plugin is published.Very few plugins do not belong to any category.If you think your plugin is not sorted correctly, you can submit an issue for feedback.
+These categories are maintained by the Koishi team and are usually assigned within a week of the plugin's release.A few plugins may not fall into any category. If you believe your plugin has been misclassified, you can submit an issue to us.
 
-## Sort Plugins
+## Plugin Sorting
 
-Plugins in the marketplace will be sorted by default according to their ratings.Rating is a value between 0 and 5 and will show as stars after rounded.Rating is weighted by multiple indicators, with some common indicators listed below:
+By default, plugins in the market are sorted by their ratings, which range from 0 to 5 and are displayed as stars. The rating is calculated based on several factors, including:
 
-- Open-sourced
-- Mark as insecure/preview
-- Downloads of the plugin
-- Size of the plugin
+- Whether the plugin is open-source
+- Whether the plugin is marked as insecure or in development
+- The number of downloads
+- The installation size
 
-Beside to sort by rating, you can also choose another sorting method:
+In addition to sorting by rating, you can choose other sorting methods:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="download" />`sort:download`：按下载量排序
-- <market-icon name="heart-pulse" />`sort:created`：按创建时间排序
-- <market-icon name="tag" />`sort:updated`：按更新时间排序
+- <market-icon name="download" />`sort:download`: Sort by downloads
+- <market-icon name="heart-pulse" />`sort:created`: Sort by creation date
+- <market-icon name="tag" />`sort:updated`: Sort by recent update
 
 </div>
 
-如果要反向排序，可以在后面加上 `-asc`，例如 `sort:created-asc`。In the sidebar, you can click on the "Sort Type" to sort, click twice to reverse the sequencing, click three times to cancel the sequencing.
+To sort in reverse order, add `-asc` to the end, like `sort:created-asc`. In the sidebar, you can click a sorting option to apply it, click again to reverse the order, and click a third time to cancel the sort.
 
-## Instant Preview
+## Quick Preview
 
 :::warning
-快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
+Quick Preview is currently an experimental feature and is only available in the plugin market within the official site.
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) 是一个在线的 Koishi 运行时。You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
+[Koishi Online (k-on!)](https://koishi.online) is an online runtime for Koishi. It allows you to quickly test out several plugins without installing Koishi locally. A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.如果你是插件开发者，可以参考 [这篇文章](../../cookbook/practice/online.md) 来将你的插件部署到 k-on!。
 
 <script lang="ts" setup>
 import { MarketIcon } from '@koishijs/market'
