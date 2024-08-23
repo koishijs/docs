@@ -1,19 +1,19 @@
 # Deployment
 
-Koishi apps can only be accessed from localhost by default. You might need to access the Koishi Console or services provided by other plugins on the Internet.
+By default, the Koishi application is only accessible on the local machine. However, you might want to access the Koishi console or other web services from Internet for some certain reason:
 
-- Allow more people to access your Koishi console
-- 使用作为 webhook 服务端的插件 (例如 [github](https://github.koishi.chat) 和部分适配器插件)
+- Allowing more people to access your Koishi console
+- Using plugins that serve as a webhook server (e.g., [GitHub](https://github.koishi.chat) and some adapter plugins)
 
-This section would guide you in completing the deployment for a Koishi application.
+This tutorial will guide you through the process of deploying the Koishi application on the Internet.
 
-## 配置用户登录
+## Configure User Authentication
 
-将 Koishi 不受限制地暴露在公网上可能会导致你的服务器受到攻击。因此，你需要妥善配合用户登录等方式以限制控制台功能的访问能力。
+Exposing a Koishi application to the Internet without restrictions could lead to attacks on your server. Therefore, you need to properly configure user authentication and other measures to restrict access to the console features.
 
-在 [前面的章节](../usage/platform.md#console-login) 中，我们已经介绍了 [auth](../../plugins/console/auth.md) 插件的使用方法。
+In the [previous section](../usage/platform.md#console-login), we introduced how to use the [auth](../../plugins/console/auth.md) plugin.
 
-## 配置服务器地址
+## Configuring the Server URL
 
 [@koishijs/plugin-server](../../plugins/develop/server.md) 是一个预装插件。
 
