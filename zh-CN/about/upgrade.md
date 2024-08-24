@@ -39,7 +39,7 @@
 
 ## HMR 更新 <badge>v4.12.0</badge>
 
-在 4.12.0 版本中，我们将模块热替换相关功能移至专门的插件 @koishijs/plugin-hmr 中。对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：
+在 4.12.0 版本中，我们将模块热替换相关功能移至专门的插件 @koishijs/plugin-hmr 中。如果你使用了 hmr 插件，你需要执行下列操作完成升级：
 
 1. 安装最新版本的 @koishijs/plugin-hmr
 2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#hmr) 中提到的部分
