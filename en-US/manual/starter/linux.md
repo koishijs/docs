@@ -10,7 +10,7 @@ next:
 # Install for Linux
 
 :::tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
 ## Download
