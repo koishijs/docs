@@ -34,7 +34,7 @@
 在 4.11.0 版本中我们移除了 @koishijs/cli 包，将其合并到了 koishi 中。这意味着你每次升级时不再需要同时升级两边了。但对于已经安装了 @koishijs/cli 的用户，你需要执行下列操作完成升级：
 
 1. 先完成 4.10.4 版本的更新，确保自己的版本号不小于 4.10.4
-2. 在依赖管理中，修改 koishi 的版本号到 4.11.0，同时移除 @koishijs/cli 的版本号
+2. 在依赖管理中，修改 koishi 的版本号到 4.11.0，并移除 @koishijs/cli
 3. 点击「应用更改」按钮
 
 ## HMR 更新 <badge>v4.12.0</badge>
@@ -42,7 +42,7 @@
 在 4.12.0 版本中，我们将模块热替换相关功能移至专门的插件 @koishijs/plugin-hmr 中。对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：
 
 1. 安装最新版本的 @koishijs/plugin-hmr
-2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#模块热替换) 中提到的部分
+2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#hmr) 中提到的部分
 3. 移除 `package.json` 文件中 `scripts.dev` 的 `--watch` 参数
 
 ## 插件市场更新 <badge>v4.13.0</badge>
@@ -104,7 +104,7 @@ for await (const item of bot.getChannelIter())  // new
 
 [`User`](../api/resources/user.md) 类型的 `userId` 属性改为 `id`，同理对于 [`Channel`](../api/resources/channel.md), [`Guild`](../api/resources/guild.md), [`Message`](../api/resources/message.md) 也是如此。此外，`Author` 被重构为了 `User` 和 `Member` 两个部分。
 
-[`Session`](../api/core/session.md) 引入了 `event` 属性用于存放所有事件相关的资源。尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
+[`Session`](../api/core/session.md) 引入了 `event` 属性用于存放所有事件相关的资源。尽管我们在会话中提供了 [访问器属性](../api/core/session.md#accessor-property) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
 
 `Adapter.Server` 和 `Adapter.Client` 两个基类被移除。现在可以直接使用 [`Adapter`](../api/core/adapter.md) 基类，并通过 `reusable` 属性决定其是否可重用。
 
