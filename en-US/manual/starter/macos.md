@@ -10,7 +10,7 @@ next:
 # Install for macOS
 
 :::tip
-If you want to learn about other installation methods, go to [Select installation method] (./index.md).
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
 ## Download
@@ -18,7 +18,7 @@ If you want to learn about other installation methods, go to [Select installatio
 - [Package (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## Install
+## Installation
 
 It is recommended to install Koishi from the installer, which would deal with most of the problems automatically.
 You should choose this method in general.
