@@ -1,9 +1,9 @@
-# Système requise
+# Système requis
 
-Cette section énumère les versions du système requises pour le lanceur Koishi et les fonctionnalités prises en charge par chaque version.
+Cette section répertorie les versions du système requises pour le lanceur Koishi ainsi que les fonctionnalités prises en charge par ces versions.
 
 :::tip
-下面的列表仅对 Koishi 启动器有效，Koishi 本体几乎能在任何主流环境运行。
+La liste ci-dessous concerne uniquement le lanceur Koishi. Le noyau Koishi peut fonctionner dans presque tous les environnements courants.
 :::
 
 :::tip
