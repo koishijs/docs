@@ -1,16 +1,16 @@
 ---
 prev:
   text: Installation
-  link: /zh-CN/manual/starter/
+  link: /en-US/manual/starter/
 next:
   text: Install and Configure Plugins
   link: /en-US/manual/usage/market.html
 ---
 
-# Install for Android
+# Installation on Android
 
 :::tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
 :::danger
@@ -23,7 +23,7 @@ next:
 - [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
 - [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
-## Install
+## Installation
 
 It is recommended to install Koishi from the installer, which would deal with most of the problems automatically.
 You should choose this method in general.
