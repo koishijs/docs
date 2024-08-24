@@ -10,7 +10,7 @@ next:
 # Install for Windows
 
 :::tip
-If you want to learn about other installation methods, go to [Select installation method] (./index.md).
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
 ## Download
@@ -18,7 +18,7 @@ If you want to learn about other installation methods, go to [Select installatio
 - [Installation Package (.msi)] (https://k.ilharp.cc/win.msi)
 - [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## Install
+## Installation
 
 You can install Koishi via the Koishi installer, which would deal with most of the problems automatically.This is recommended in general.
 
