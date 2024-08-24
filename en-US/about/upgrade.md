@@ -19,38 +19,38 @@ In version 4.10.3, we officially introduced JSX support. This means you can now 
 
 ## Heartbeat Update <badge>v4.10.4</badge>
 
-In version 4.10.4, we adjusted the default heartbeat behavior, which might cause older users to encounter infinite restart issues when upgrading. 可以执行下列操作进行升级：
+In version 4.10.4, we adjusted the default heartbeat behavior, which might cause older users to encounter infinite restart issues when migrating. To resolve this, follow these steps:
 
-1. 先将 market 插件更新到最新版本 (最新版本支持批量更新)
-2. (非 v4.10.3 用户忽略此步骤) 在控制台中修改全局设置，将 `heartbeatInterval` 项的值改为 `6000`，`heartbeatTimeout` 项的值改为 `600000`，并点击「重载配置」按钮
-3. 在依赖管理中，通过下拉菜单将全部官方依赖修改为最新版本 (如果有 suggest 和 assets-\* 依赖则选择移除)，并点击「应用更改」按钮
-4. 更新完成后重启实例
-5. 在控制台中修改全局设置，将 `heartbeatInterval` 和 `heartbeatTimeout` 项的值均改为 `0`，并点击「重载配置」按钮
-6. 再次重启实例
-7. 如果之前移除了 assets-\* 插件，请重新前往插件市场进行安装
+1. Update the market plugin to the latest version (you can use batch update in the latest version).
+2. (Skip this step if you are not using v4.10.3) In the console, modify the global settings by setting `heartbeatInterval` to `6000` and `heartbeatTimeout` to `600000`, then click the "Reload Configuration" button.
+3. In the dependency management section, update all official dependencies to the latest version via the dropdown menu (remove the `suggest` and `assets-*` dependencies if present) and click the "Apply Changes" button.
+4. Restart Koishi application when you have done above.
+5. In the console, change the `heartbeatInterval` and `heartbeatTimeout` settings back to `0` and click the "Reload Configuration" button.
+6. Restart Koishi application again.
+7. If you removed any `assets-*` plugins in the steps above, reinstall them from the plugin market.
 
-## CLI 更新 <badge>v4.11.0</badge>
+## CLI Update <badge>v4.11.0</badge>
 
-在 4.11.0 版本中我们移除了 @koishijs/cli 包，将其合并到了 koishi 中。这意味着你每次升级时不再需要同时升级两边了。但对于已经安装了 @koishijs/cli 的用户，你需要执行下列操作完成升级：这意味着你每次升级时不再需要同时升级两边了。但对于已经安装了 @koishijs/cli 的用户，你需要执行下列操作完成升级：
+In version 4.11.0, we removed the `@koishijs/cli` package and merged it into `koishi`. This means you no longer need to migrate both separately. However, if you already have `@koishijs/cli` installed, follow these steps to migrate:
 
-1. 先完成 4.10.4 版本的更新，确保自己的版本号不小于 4.10.4
-2. 在依赖管理中，修改 koishi 的版本号到 4.11.0，同时移除 @koishijs/cli 的版本号
-3. 点击「应用更改」按钮
+1. First, complete the update to version 4.10.4, ensuring your version is at least 4.10.4.
+2. In Dependency Management page, change the `koishi` version to 4.11.0 and remove `@koishijs/cli`.
+3. Click the "Apply Changes" button.
 
-## HMR 更新 <badge>v4.12.0</badge>
+## HMR Update <badge>v4.12.0</badge>
 
-在 4.12.0 版本中，我们将模块热替换相关功能移至专门的插件 @koishijs/plugin-hmr 中。对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：对于生产模式下的用户无影响，但开发者则需要在升级 Koishi 后手动安装新插件。你需要执行下列操作完成升级：
+In version 4.12.0, we moved the hot module replacement (HMR) functionality to a dedicated plugin, `@koishijs/plugin-hmr`. This change does not affect end users, but developers need to manually install the new plugin after upgrading Koishi. Follow these steps to upgrade:
 
-1. 安装最新版本的 @koishijs/plugin-hmr
+1. Install the latest version of `@koishijs/plugin-hmr`.
 2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#模块热替换) 中提到的部分
-3. 移除 `package.json` 文件中 `scripts.dev` 的 `--watch` 参数
+3. Remove the `--watch` parameter from the `scripts.dev` section in your `package.json` file.
 
-## 插件市场更新 <badge>v4.13.0</badge>
+## Plugin Marketplace Update <badge>v4.13.0</badge>
 
-在 4.13.0 版本中，我们将 @koishijs/plugin-market 插件分拆为了两个插件 market 和 config。其中 market 负责「插件市场」和「依赖管理」页面，而 config 则负责「插件配置」页面。直接将 market 插件更新到 2.0.0 或以上版本的用户会发现自己的「插件配置」页面消失，此时你需要执行下列操作完成升级：
+In version 4.13.0, we split the `@koishijs/plugin-market` plugin into two separate plugins: `market` and `config`. The `market` plugin provides the "Plugin Market" and "Dependency Management" pages, while the `config` plugin manages the "Plugin Configuration" page. Users who update the `market` plugin only to version 2.0.0 or above will notice that their "Plugin Configuration" page disappears. To resolve this, follow these steps:
 
-1. 首先确保你的 market 插件是最新版 (应该是 2.0.0 以上版本)
-2. 打开「插件市场」页面，安装最新版的 config 插件
+1. Ensure that your `market` plugin is updated to the latest version (version 2.0.0 or above).
+2. Open the "Plugin Marketplace" page and install the latest version of the `config` plugin.
 3. 打开「资源管理器」页面，找到 `koishi.yml` 页面，打开并编辑：
 
 ```yaml
@@ -60,24 +60,24 @@ maxPort: 5149
 plugins:
   ...
     ...
-    config: {}         # 加一行在这里，注意左侧缩进与 market 对齐
+    config: {}         # Add this line, aligning the left indentation with the market plugin
     market:
       ...
     ...
 ```
 
-4. 点击右上角的保存按钮
-5. 重新启动 Koishi 实例
+4. Click the Save button in the upper right corner.
+5. Restart the Koishi application
 
-## 国际化更新 <badge>v4.13.0</badge>
+## Internationalization Update <badge>v4.13.0</badge>
 
-在 4.13.0 版本中，我们也引入了多语言的回退机制。这意味者，所有涉及语言配置的地方都需要从单一的语言字符串修改为数组。具体包括以下几个地方：
+In version 4.13.0, we also introduced a fallback mechanism for multiple languages. This means that any language configuration needs to be changed from a single string to an array. This affects the following options:
 
-- 应用配置项 `locale` → `i18n.locales`
-- 用户和频道的数据结构 `locale` → `locales`
-- 会话对象的属性 `locale` → `locales`
+- Application global configuration `locale` → `i18n.locales`
+- User and channel database field `locale` → `locales`
+- Session object property `locale` → `locales`
 
-用户无需留意这些改动，但开发者如果使用了上述 API 则需要进行迁移。
+Usually end users do not need to worry about these changes, but developers who use the above API should make the necessary migration.
 
 ## 协议更新 <badge>v4.14.5</badge>
 
