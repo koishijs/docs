@@ -72,4 +72,4 @@ After completing the initial configuration, there are some additional community 
 
 ### Adding ICP Filing (China Only)
 
-If your server is located in China mainland, you need to add ICP filing to the WebUI before it is accessible in the Internet.此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
+If your server is located in China mainland, you need to add ICP filing to the WebUI before it is accessible from Internet. You can use plugins like [footer](https://github.com/koishijs/koishi-plugin-footer) to complete this configuration.
