@@ -1,17 +1,17 @@
-# Outil de ligne de commande
+# Outils de ligne de commande
 
-对于不使用图形化界面的用户，Koishi 启动器提供了命令行工具 `koi`，可以用来创建、管理和运行 Koishi。
+Pour les utilisateurs qui ne souhaitent pas utiliser une interface graphique, le lanceur Koishi propose un outil en ligne de commande, `koi`, qui permet de créer, gérer et exécuter Koishi.
 
-如果你下载得到的文件类似 `koi-xxx.appimage` 的话，直接把下面介绍的 `koi` 替换成这个文件名就可以了。
+Si le nom de fichier que vous avez téléchargé est comme `koi-xxx.appimage`, il suffit de remplacer `koi` par le nom de ce fichier dans les commandes ci-dessous.
 
-| Commande              | Fonction                    |
-| --------------------- | --------------------------- |
-| `koi run daemon`      | Démarrer sans démon         |
-| `koi daemon start`    | Démarrer le démon           |
-| `koi daemon stop`     | Arrêter le démon            |
-| `koi daemon kill`     | Forcer l'arrêt du démon     |
-| `koi ps`              | Vérifier l'état d'exécution |
-| `koi start default`   | 启动实例 `default`              |
-| `koi stop default`    | 停止实例 `default`              |
-| `koi restart default` | 重启实例 `default`              |
-| `koi yarn -n default` | 修复 `default` 的依赖            |
+| Commande              | Fonction                                        |
+| --------------------- | ----------------------------------------------- |
+| `koi run daemon`      | Démarrer sans mode démon                        |
+| `koi daemon start`    | Démarrer le mode démon                          |
+| `koi daemon stop`     | Arrêter le mode démon                           |
+| `koi daemon kill`     | Forcer l'arrêt du mode démon                    |
+| `koi ps`              | Vérifier l'état d'exécution                     |
+| `koi start default`   | Démarrer l'instance `default`                   |
+| `koi stop default`    | Arrêter l'instance `default`                    |
+| `koi restart default` | Redémarrer l'instance `default`                 |
+| `koi yarn -n default` | Réparer les dépendances de l'instance `default` |
