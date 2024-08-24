@@ -10,8 +10,8 @@ Some excellent community resources to learn from are summarized on this page. If
 
 ## Documentations
 
-- [Koishi Plugin Development Tutorial](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601) (TimeBather)
+- [Koishi Plugin Development Tutorial (Chinese)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601)  by TimeBather
 
 ## Videos
 
-- [Collection] [Koishi Robot Tutorial](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) (Il Harper)
+- [Collection] [Koishi Robot Tutorial (Chinese)](https://space.bilibili.com/23224916/channel/collectiondetail?sid=1049866) by Il Harper
