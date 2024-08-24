@@ -1,10 +1,10 @@
-# 从低版本迁移
+# Migration from Older Versions
 
-## JSX 支持 <badge>v4.10.3</badge>
+## JSX Support <badge>v4.10.3</badge>
 
-在 4.10.3 版本中，我们正式引入了 JSX 支持。这意味着你可以在插件中使用 JSX 语法来构造消息元素了。要实现这一点，你需要对你的项目进行一些配置：
+In version 4.10.3, we officially introduced JSX support. This means you can now use JSX syntax in your plugins to construct message elements. To enable this, you'll need to configure your project as follows:
 
-1. 打开 `tsconfig.base.json` 文件并加入以下配置：
+1. Open the `tsconfig.base.json` file and add the following configuration:
 
 ```json{3-4}
 {
@@ -15,11 +15,11 @@
 }
 ```
 
-2. 将要使用 JSX 的文件后缀名修改为 `.tsx`。
+2. Change the file extension of any files using JSX syntax to `.tsx`.
 
-## 心跳更新 <badge>v4.10.4</badge>
+## Heartbeat Update <badge>v4.10.4</badge>
 
-在 4.10.4 版本中，我们调整了默认的心跳行为，这可能导致老用户升级时遭遇无限重启问题。可以执行下列操作进行升级：可以执行下列操作进行升级：
+In version 4.10.4, we adjusted the default heartbeat behavior, which might cause older users to encounter infinite restart issues when upgrading. 可以执行下列操作进行升级：
 
 1. 先将 market 插件更新到最新版本 (最新版本支持批量更新)
 2. (非 v4.10.3 用户忽略此步骤) 在控制台中修改全局设置，将 `heartbeatInterval` 项的值改为 `6000`，`heartbeatTimeout` 项的值改为 `600000`，并点击「重载配置」按钮
