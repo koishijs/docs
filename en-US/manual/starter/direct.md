@@ -10,7 +10,7 @@ next:
 # Install as a dependency
 
 :::warning
-这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
+这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。If you are not familiar with JavaScript or not interested in business code, please [choose another installation method](./index.md).
 :::
 
 :::warning
