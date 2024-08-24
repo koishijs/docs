@@ -15,15 +15,15 @@ Koishi 应用默认情况下只能在本机访问。而对于某些需求，你�
 
 ## 配置服务器地址
 
-[@koishijs/plugin-server](../../plugins/develop/server.md) 是一个预装插件。
+Koishi 的服务器功能是由预装插件 [@koishijs/plugin-server](../../plugins/develop/server.md) 提供的。
 
 前往「插件配置」页面，找到 server 插件，并将 `host` 修改为 `0.0.0.0`，随后点击右上角的「重载配置」。等待插件重启之后，你就可以使用 `IP:端口` 的方式，在局域网内任意设备的浏览器上访问到 Koishi 控制台了。
 
-如果你已经准备了域名，你还需要同时将 `selfUrl` 修改为能访问到 Koishi 实例的地址。
+如果你将 Koishi 应用暴露在公网上，并配置了相应的域名解析记录，你还需要将 `selfUrl` 修改为能访问到 Koishi 实例的地址。
 
 ## 配置反向代理
 
-如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。使用反向代理时，你不需要修改上述 `host` 配置项。
+如果你有更复杂的需求，例如配置 SSL、域名等，可以使用反向代理。常见的方案有 nginx、Caddy 等。在同设备上使用反向代理时，你不需要修改上述 `host` 配置项。
 
 ### Caddy を使用する
 
