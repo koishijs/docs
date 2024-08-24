@@ -1,18 +1,18 @@
 # History
 
-2019 年 8 月，我开始编写我的第一个基于 Node.js 的聊天机器人，名为四季酱。当时我浏览各种聊天机器人框架，发现并没有自己真正想要的，遂决定从零开始编写。一开始这个机器人只包含了很少的功能，但随着其更多功能的加入，我开始调整起底层架构，并计划逐步将其开源出来。当时我浏览各种聊天机器人框架，发现并没有自己真正想要的，遂决定从零开始编写。一开始这个机器人只包含了很少的功能，但随着其更多功能的加入，我开始调整起底层架构，并计划逐步将其开源出来。
+In August 2019, I started developing my first Node.js-based chatbot, named Shiki-chan. At that time, I explored various chatbot frameworks but couldn’t find one that truly met my needs, so I decided to build one from scratch. Initially, the bot had only a few features, but as I added more functionalities, I began to refine the underlying architecture and planned to gradually open-source it.
 
-直到 v4 发布之前，Koishi 大约每 8 个月发布一个大版本。到目前为止 Koishi 大约每 8 个月发布一个大版本。可以说 Koishi 的发展完全是由需求推动的，在迭代中形成了一套聊天机器人开发的最佳实践。
+Before the release of v4, Koishi had a major version update approximately every eight months. It can be said that Koishi's development was entirely driven by user needs. It formed a set of best practices for chatbot development through the iterations.
 
-## v1 时期
+## The v1 Era
 
-Koishi v1 发布于 2020 年 1 月。此时的 Koishi 虽然体量尚小，但已具备了许多一直沿袭至今的特征：通过插件系统实现了功能的模块化，通过事件模型和中间件处理各种输入，上下文负责对输入的事件进行过滤，以及一个通过链式调用进行开发的指令系统等等。
+Koishi v1 was released in January 2020. Although Koishi was still small in scope at this time, it already had many features that continue to this day: modular functionality implemented through a plugin system, user input handling via events and middlewares, context filtering of input events, and a command system developed through chained calls.
 
-目前可追溯的 v1 官方插件只有 common, schedule 和 teach，其他在这个时期开发的插件大都已经弃用了。
+The only v1 official plugins that continue to v4 are `common`, `schedule`, and `teach`, while most other plugins developed during this period have been deprecated.
 
-## v2 时期
+## The v2 Era
 
-Koishi v2 发布于 2020 年 9 月，主要改动存在于应用层设计上。在这个大版本中，应用作为程序的入口对所需的资源统一管理，第一次有了生命周期钩子的概念，也将 v1 时期的元信息对象进化为了会话对象。这些改动将许多底层的接口进行了封装，允许插件开发者通过更为现代化的方式组织业务逻辑。在这个大版本中，应用作为程序的入口对所需的资源统一管理，第一次有了生命周期钩子的概念，也将 v1 时期的元信息对象进化为了会话对象。这些改动将许多底层的接口进行了封装，允许插件开发者通过更为现代化的方式组织业务逻辑。
+Koishi v2 was released in September 2020, with significant changes to the application layer design. 在这个大版本中，应用作为程序的入口对所需的资源统一管理，第一次有了生命周期钩子的概念，也将 v1 时期的元信息对象进化为了会话对象。这些改动将许多底层的接口进行了封装，允许插件开发者通过更为现代化的方式组织业务逻辑。
 
 v2 时期也是官方插件发展迅猛的时期，许多功能强大的插件如 eval, github, image-search 和 puppeteer 等都是在这个阶段被开发出来的。
 
