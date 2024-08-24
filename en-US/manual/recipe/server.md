@@ -23,13 +23,13 @@ In the [previous section](../usage/platform.md#console-login), we introduced how
 
 ## 配置反向代理
 
-Reverse proxies are useful if you have more complex needs such as SSL and server name etc. Common solutions include nginx, Caddy, etc. 使用反向代理时，你不需要修改上述 `host` 配置项。
+If you are about to configure SSL, domain, and other more complex options, you could use a reverse proxy server. Common solutions include nginx, Caddy, and others. You do not need to change the host setting mentioned above if you are using a reverse proxy server.
 
 ### Use Caddy
 
 ```text
-# If you want to use a domain and also a SSL certificate
-# please change the :80 below to your domain
+# If you want to use a domain name and automatically issue an SSL certificate,
+# replace :80 with your domain below
 # https://caddyserver.com/docs/caddyfile
 :80 {
   reverse_proxy http://127.0.0.1:5140
@@ -38,7 +38,7 @@ Reverse proxies are useful if you have more complex needs such as SSL and server
 
 ### Use nginx
 
-Below is a nginx configuration for reference:
+Here is an example of nginx configuration for reference:
 
 ```text
 # http://nginx.org/en/docs/http/websocket.html
@@ -51,7 +51,7 @@ server {
   # server_name, port, ssl, etc.
 
   location / {
-    # 5140 corresponds to app.config.port
+    # The port 5140 is listened by a Koishi application
     proxy_pass http://127.0.0.1:5140/;
     proxy_redirect off;
     proxy_set_header X-Real-IP $remote_addr;
@@ -66,10 +66,10 @@ server {
 }
 ```
 
-## What's Next...
+## Next Steps
 
-Once the initial configuration has been completed, there are some additional community plugins to help you better deploy the Koishi Console.
+After completing the initial configuration, there are some additional community plugins that can help you better deploy the Koishi WebUI.
 
-### Add filing information
+### Adding ICP Filing (China Only)
 
-If your server is in the Mainland of China, you need to add the filing information inquiry to your console to be able to access it successfully on the Internet.此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
+If your server is located in China mainland, you need to add ICP filing to the WebUI before it is accessible in the Internet.此时你可以使用 [footer](https://github.com/koishijs/koishi-plugin-footer) 等插件来完成配置。
