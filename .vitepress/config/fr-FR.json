@@ -473,11 +473,11 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "服务器 (Server)",
+              "text": "Server : Gestion des routes",
               "link": "/api/service/server.md"
             },
             {
-              "text": "计时器 (Timer)",
+              "text": "Timer : chronomètre",
               "link": "/api/service/timer.md"
             }
           ]
@@ -891,27 +891,27 @@
               "link": "/plugins/develop/http.md"
             },
             {
-              "text": "测试工具 (Mock)",
+              "text": "Mock : simulacres d'application",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "通知服务 (Notifier)",
+              "text": "Notifier : service de notification",
               "link": "/plugins/develop/notifier.md"
             },
             {
-              "text": "网络代理 (Proxy Agent)",
+              "text": "Proxy Agent : proxy de réseau",
               "link": "/plugins/develop/proxy-agent.md"
             },
             {
-              "text": "服务器 (Server)",
+              "text": "Server : Gestion des routes",
               "link": "/plugins/develop/server.md"
             },
             {
-              "text": "API 服务器 (Server Satori)",
+              "text": "Server Satori : serveur d'API",
               "link": "/plugins/develop/server-satori.md"
             },
             {
-              "text": "临时服务器 (Server Temp)",
+              "text": "Server Temp : serveur temporaire",
               "link": "/plugins/develop/server-temp.md"
             }
           ]
@@ -1028,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Intersect + Union：配置联动 1",
+              "text": "Intersection avec syndicat : collaboration des configurations 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Intersect + Union：配置联动 2",
+              "text": "Intersection avec syndicat : collaboration des configurations 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
