@@ -2,11 +2,11 @@
 
 Some excellent community resources to learn from are summarized on this page. If you also want to feature your project on this page, please click the edit button at the bottom of the page to edit and then create a Pull Request.
 
-## 社群
+## Community
 
 ### QQ Groups
 
-- [590104798](https://qm.qq.com/q/vJ0kcQePCM)：Koishi 非官方交流群
+- [590104798](https://qm.qq.com/q/vJ0kcQePCM): Koishi unofficial QQ group
 
 ## Documentations
 
