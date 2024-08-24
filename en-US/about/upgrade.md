@@ -79,9 +79,9 @@ In version 4.13.0, we also introduced a fallback mechanism for multiple language
 
 Usually end users do not need to worry about these changes, but developers who use the above API should make the necessary migration.
 
-## 协议更新 <badge>v4.14.5</badge>
+## Protocol Update <badge>v4.14.5</badge>
 
-在 4.14.5 版本中，我们将协议库 Satori 升级到了 v3 alpha 版本。新版本引入了与分页 API 相关的不兼容更新。具体受影响的 API 如下：
+In version 4.14.5, we upgraded Satori the protocol library to version 3 alpha. This new version of Satori introduces breaking changes related to paginated APIs. The affected APIs are as follows:
 
 - `bot.getChannelList()`
 - `bot.getFriendList()`
@@ -91,38 +91,38 @@ Usually end users do not need to worry about these changes, but developers who u
 - `bot.getMessageList()`
 - `bot.getReactionList()`
 
-上述 API 将不再返回 `Promise<T[]>` 而是返回一个 `Promise<List<T>>`，包含 `data` 属性和可选的 `next` 属性。`data` 包含了当前页的数据，`next` 则表示下一页的分页令牌。此外，对于上述每一个 API，我们还额外提供了返回异步迭代器的版本：
+These APIs will no longer return `Promise<T[]>` but instead return `Promise<List<T>>`, which includes a `data` field and an optional `next` field. The `data` field contains the data for the current page, and `next` field is the pagination token for the next page. Additionally, for each of the above APIs, there is an alternative version that returns an asynchronous iterator provided:
 
 ```ts
 for (const item of await bot.getChannelList())  // old
 for await (const item of bot.getChannelIter())  // new
 ```
 
-## 协议更新 <badge>v4.15.0</badge>
+## Protocol Update <badge>v4.15.0</badge>
 
-在 4.15.0 版本中，我们将协议库 Satori 升级到了 v3 正式版本。新版本引入了一系列涉及平台资源不兼容更新。
+In version 4.15.0, we upgraded Satori the protocol library to the stable version 3. This version introduces several breaking changes related to platform resources.
 
-[`User`](../api/resources/user.md) 类型的 `userId` 属性改为 `id`，同理对于 [`Channel`](../api/resources/channel.md), [`Guild`](../api/resources/guild.md), [`Message`](../api/resources/message.md) 也是如此。此外，`Author` 被重构为了 `User` 和 `Member` 两个部分。
+The `userId` property of the [`User`](../api/resources/user.md) type has been renamed to `id`, and similarly, the same applies to [`Channel`](../api/resources/channel.md), [`Guild`](../api/resources/guild.md), and [`Message`](../api/resources/message.md). Additionally, `Author` has been restructured into two parts: `User` and `Member`.
 
-[`Session`](../api/core/session.md) 引入了 `event` 属性用于存放所有事件相关的资源。尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
+[`Session`](../api/core/session.md) includes an `event` property to store all event-related resources. 尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
 
-`Adapter.Server` 和 `Adapter.Client` 两个基类被移除。现在可以直接使用 [`Adapter`](../api/core/adapter.md) 基类，并通过 `reusable` 属性决定其是否可重用。
+Base classes `Adapter.Server` and `Adapter.Client` have been removed. Now you can now directly use the base class [`Adapter`](../api/core/adapter.md), and the `reusable` property refers whether it can be reused.
 
-[`Bot`](../api/core/bot.md) 将实现 [`Login`](../api/resources/login.md) 资源，因此其上的用户数据将存放在 `bot.user` 中。此外，[`status`](../api/resources/login.md) 属性由字符串变为数值枚举。
+[`Bot`](../api/core/bot.md) now implements the resource [`Login`](../api/resources/login.md), so user data will be stored in `bot.user`. Additionally, the property [`status`](../api/resources/login.md) has changed from a string to a numeric enumeration.
 
-[`encoder.results`](../api/message/encoder.md#encoder-results) 的类型由 `string[]` 变为 `Message[]`。
+The type of [`encoder.results`](../api/message/encoder.md#encoder-results) has changed from `string[]` to `Message[]`.
 
-新增用于创建私聊频道的 [`bot.createDirectChannel()`](../api/resources/channel.md)，因此不再需要实现 [`bot.sendPrivateMessage()`](../api/resources/message.md#bot-sendprivatemessage)。
+A new method [`bot.createDirectChannel()`](../api/resources/channel.md) has been added to create private chat channels, so you no longer need to implement [`bot.sendPrivateMessage()`](../api/resources/message.md#bot-sendprivatemessage).
 
-## Server 插件独立 <badge>v4.16.0</badge>
+## Server Plugin Separation <badge>v4.16.0</badge>
 
-在 4.16.0 版本中，我们将 `Server` 服务从 Koishi 中分离出来，独立成了 [@koishijs/plugin-server](../plugins/develop/server.md) 插件。Koishi CLI 提供了自动迁移机制，因此任何使用 CLI 启动 Koishi 的用户无需进行任何操作。
+In version 4.16.0, we separated the `Server` service from Koishi into an independent plugin, [@koishijs/plugin-server](../plugins/develop/server.md). The Koishi CLI would automatically migrate it, so end users who launch Koishi with the CLI don't need to take any action.
 
-如果你是将 Koishi 作为依赖调用的进阶开发者，你需要执行下列操作完成升级：
+If you use Koishi with a programmactially method, follow these steps to complete the upgrade:
 
-1. 安装最新版本的 [@koishijs/plugin-server](../plugins/develop/server.md) 插件；
-2. 在你的代码中手动导入并加载该插件；
-3. 将你过去的 `host`, `port`, `maxPort`, `selfUrl` 全局设置移动至 server 插件的配置项。
+1. Install the latest version of the [@koishijs/plugin-server](../plugins/develop/server.md) plugin.
+2. Manually import and load the plugin in your code.
+3. Move your previous global settings for `host`, `port`, `maxPort`, and `selfUrl` to the server plugin configuration.
 
 ## 消息元素更新 <badge>v4.16.4</badge>
 
@@ -153,9 +153,9 @@ if (type === 'image' || type === 'img') {
 
 ## HTTP 插件独立 <badge>v4.17.6</badge>
 
-在 4.17.6 版本中，我们将 HTTP 服务从 Koishi 中分离出来，独立成了 [@koishijs/plugin-http](../plugins/develop/http.md) 插件。Koishi CLI 提供了自动迁移机制，因此任何使用 CLI 启动 Koishi 的用户无需进行任何操作。
+在 4.17.6 版本中，我们将 HTTP 服务从 Koishi 中分离出来，独立成了 [@koishijs/plugin-http](../plugins/develop/http.md) 插件。The Koishi CLI would automatically migrate it, so end users who launch Koishi with the CLI don't need to take any action.
 
-如果你是将 Koishi 作为依赖调用的进阶开发者，你需要执行下列操作完成升级：
+If you use Koishi with a programmactially method, follow these steps to complete the upgrade:
 
 1. 安装最新版本的 [@koishijs/plugin-http](../plugins/develop/http.md) 插件；
 2. (可选，如果你使用网络代理工具) 安装最新版本的 [@koishijs/plugin-proxy-agent](../plugins/develop/proxy-agent.md) 插件；
