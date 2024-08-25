@@ -2,10 +2,10 @@
 
 ## Utilisation des guillemets
 
-Koishi interprète automatiquement le contenu entre guillemets comme un paramètre single. Cela s'avère très utile dans de nombreuses situations, voici quelques exemples courants :
+Comme pour la plupart des outils en ligne de commande, il peut être nécessaire d'utiliser des guillemets pour entourer les paramètres, afin d'éviter qu'ils ne soient interprétés de manière incorrecte comme plusieurs paramètres ou comme une option erronée. Cette astuce est très utile dans de nombreux cas :
 
-- Si vous souhaitez transmettre des paramètres contenant des espaces (le comportement par défaut est de n'interpréter que la partie avant l'espace).
-- 当希望传入以 `-` 开头的参数时 (默认的行为是解析成下一个选项)
+- Passez un paramètre contenant des espaces (par défaut, il traite les chaînes qui continent des espaces comme plusieurs paramètres)
+- Passez un paramètre commençant par `-` (par défaut, cela est interprété comme l'option suivante)
 - 当希望传入一个空字符串时作为参数时 (默认的行为是解析为 `true`)
 - 当希望传入只由数字构成的字符串参数时 (默认行为是解析为 `number` 类型)
 
