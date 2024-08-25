@@ -7,16 +7,16 @@ La liste ci-dessous concerne uniquement le lanceur Koishi. Le noyau Koishi peut 
 :::
 
 :::tip
-即便你的操作系统不被 Koishi 官方支持，你也可以 [前往论坛](https://k.ilharp.cc) 选择社区提供的兼容性版本或 [使用模板项目](../starter/boilerplate.md)，只不过 Koishi 官方不对社区启动器的可用性和安全性负责。
+Même si votre système d'exploitation n'est pas officiellement pris en charge par Koishi, vous pouvez [consulter le forum](https://k.ilharp.cc) pour choisir une version compatible proposée par la communauté ou [utiliser un projet modèle](../starter/boilerplate.md). Cependant, Koishi ne garantit pas la disponibilité ni la sécurité des lanceurs créés par la communauté.
 :::
 
 ## Windows
 
-Seule la version de Windows la plus récente de chaque produit est répertoriée. Les versions non répertoriées ne sont pas prises en charge.
+Pour chaque produit Windows, seule la version la plus récente est répertoriée. Les versions non mentionnées ne sont pas prises en charge.
 
 ### Windows 8.1
 
-| Produit                                       | Noyau                                                                                        | Fenêtre                                                                                      | Amélioré                            |
+| Produit                                       | Noyau                                                                                        | Interface                                                                                    | Amélioré                            |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------- |
 | Windows 8.1                   | :white_check_mark: | :white_check_mark: | :x: |
 | Windows Server 2012 R2                        | :white_check_mark: | :white_check_mark: | :x: |
@@ -27,7 +27,7 @@ Seule la version de Windows la plus récente de chaque produit est répertoriée
 
 ### Windows 10
 
-| Produit                             | Noyau                                                                                        | Fenêtre                                                                                      | Amélioré                                                                                     |
+| Produit                             | Noyau                                                                                        | Interface                                                                                    | Amélioré                                                                                     |
 | ----------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Version 1507                        | :x:                                                          | :x:                                                          | :x:                                                          |
 | Version 1511                        | :x:                                                          | :x:                                                          | :x:                                                          |
@@ -72,7 +72,7 @@ Seule la version de Windows la plus récente de chaque produit est répertoriée
 
 ### Windows 11
 
-| Produit      | Noyau                                                                                        | Fenêtre                                                                                      | Amélioré                                                                                     |
+| Produit      | Noyau                                                                                        | Interface                                                                                    | Amélioré                                                                                     |
 | ------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Version 21H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Version 22H2 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
