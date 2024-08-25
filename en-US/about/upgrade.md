@@ -34,15 +34,15 @@ In version 4.10.4, we adjusted the default heartbeat behavior, which might cause
 In version 4.11.0, we removed the `@koishijs/cli` package and merged it into `koishi`. This means you no longer need to migrate both separately. However, if you already have `@koishijs/cli` installed, follow these steps to migrate:
 
 1. First, complete the update to version 4.10.4, ensuring your version is at least 4.10.4.
-2. In Dependency Management page, change the `koishi` version to 4.11.0 and remove `@koishijs/cli`.
+2. 在依赖管理中，修改 koishi 的版本号到 4.11.0，并移除 @koishijs/cli
 3. Click the "Apply Changes" button.
 
 ## HMR Update <badge>v4.12.0</badge>
 
-In version 4.12.0, we moved the hot module replacement (HMR) functionality to a dedicated plugin, `@koishijs/plugin-hmr`. This change does not affect end users, but developers need to manually install the new plugin after upgrading Koishi. Follow these steps to upgrade:
+In version 4.12.0, we moved the hot module replacement (HMR) functionality to a dedicated plugin, `@koishijs/plugin-hmr`. 如果你使用了 hmr 插件，你需要执行下列操作完成升级：
 
 1. Install the latest version of `@koishijs/plugin-hmr`.
-2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#模块热替换) 中提到的部分
+2. 修改你的配置文件，加上 [模块热替换](../guide/develop/script.md#hmr) 中提到的部分
 3. Remove the `--watch` parameter from the `scripts.dev` section in your `package.json` file.
 
 ## Plugin Marketplace Update <badge>v4.13.0</badge>
@@ -51,7 +51,7 @@ In version 4.13.0, we split the `@koishijs/plugin-market` plugin into two separa
 
 1. Ensure that your `market` plugin is updated to the latest version (version 2.0.0 or above).
 2. Open the "Plugin Marketplace" page and install the latest version of the `config` plugin.
-3. 打开「资源管理器」页面，找到 `koishi.yml` 页面，打开并编辑：
+3. 打开「资源管理器」页面，找到 `koishi.yml` 文件，打开并编辑：
 
 ```yaml
 host: 127.0.0.1
@@ -104,7 +104,7 @@ In version 4.15.0, we upgraded Satori the protocol library to the stable version
 
 The `userId` property of the [`User`](../api/resources/user.md) type has been renamed to `id`, and similarly, the same applies to [`Channel`](../api/resources/channel.md), [`Guild`](../api/resources/guild.md), and [`Message`](../api/resources/message.md). Additionally, `Author` has been restructured into two parts: `User` and `Member`.
 
-[`Session`](../api/core/session.md) includes an `event` property to store all event-related resources. 尽管我们在会话中提供了 [访问器属性](../api/core/session.md#访问器属性) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
+[`Session`](../api/core/session.md) includes an `event` property to store all event-related resources. 尽管我们在会话中提供了 [访问器属性](../api/core/session.md#accessor-property) 以保证了大部分 API 的向下兼容，但对于没有提供访问器的事件属性，或是在使用 Bot API 的返回值时，你都需要手动修改代码。
 
 Base classes `Adapter.Server` and `Adapter.Client` have been removed. Now you can now directly use the base class [`Adapter`](../api/core/adapter.md), and the `reusable` property refers whether it can be reused.
 
