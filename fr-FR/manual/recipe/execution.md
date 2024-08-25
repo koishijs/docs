@@ -2,12 +2,11 @@
 
 ## Utilisation des guillemets
 
-Comme pour la plupart des outils en ligne de commande, vous pouvez être nécessaire d'utiliser des guillemets pour entourer les paramètres, afin d'éviter qu'ils ne soient interprétés de manière incorrecte comme plusieurs paramètres ou comme une option erronée. Cette astuce est très utile dans de nombreux cas :
+与大多数命令行工具一样，你可以使用单引号或双引号将参数包裹，引号中的内容将被视为一个独立的参数。这在许多场景下都非常有用：
 
 - Passez un paramètre contenant des espaces (par défaut, il traite les chaînes qui continent des espaces comme plusieurs paramètres)
 - Passez un paramètre commençant par `-` (par défaut, cela est interprété comme l'option suivante)
 - Passez une chaîne vide comme paramètre (par défaut, cela est interprété comme `true`)
-- 当希望传入只由数字构成的字符串参数时 (默认行为是解析为 `number` 类型)
 
 ## Substitution de commande
 
