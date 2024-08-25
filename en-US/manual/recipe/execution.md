@@ -2,12 +2,11 @@
 
 ## Quotes
 
-Koishi would regard the content in quotes (whatever full-width or half-width) as a single parameter. This would be useful in many cases, for example:
+与大多数命令行工具一样，你可以使用单引号或双引号将参数包裹，引号中的内容将被视为一个独立的参数。这在许多场景下都非常有用：
 
 - Passing parameters with spaces (by default, spaces would be treated as delimiters between parameters)
 - Passing parameters starting with `-` (by default, text starting with `-` would be treated as options)
 - Passing an empty string as parameters (by default, options without parameters would be parsed as `true`)
-- Passing a number as string parameter (by default, it would be parsed as a `number` type parameter)
 
 ## Command Substitution
 
