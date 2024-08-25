@@ -1,6 +1,6 @@
 # Utilisations avancées des commandes
 
-## Les guillemets
+## Utilisation des guillemets
 
 Koishi interprète automatiquement le contenu entre guillemets comme un paramètre single. Cela s'avère très utile dans de nombreuses situations, voici quelques exemples courants :
 
