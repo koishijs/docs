@@ -9,7 +9,7 @@ Koishi would regard the content in quotes (whatever full-width or half-width) as
 - Passing an empty string as parameters (by default, options without parameters would be parsed as `true`)
 - Passing a number as string parameter (by default, it would be parsed as a `number` type parameter)
 
-## Interpolation
+## Command Substitution
 
 Use the result from the execution of other commands as parameters in a command, you can use `$()` for command interpolation:
 
