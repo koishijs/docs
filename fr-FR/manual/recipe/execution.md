@@ -28,13 +28,13 @@ De plus, vous pouvez découvrir une autre méthode de substitution dans le plugi
 
 ## Correction automatique
 
-Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe. Dans ces cas, Koishi peut automatiquement corriger en suggérant des commandes similaires :
+Lors de l'utilisation, il est possible de faire des erreurs de frappe. Dans ce cas, Koishi peut automatiquement suggérer la commande correcte en se basant sur un nom de commande similaire :
 
 <chat-panel>
 <chat-message nickname="Alice">ecko bonjour</chat-message>
-<chat-message nickname="Koishi">Voulez-vous dire « echo » ? 回复句号以使用推测的指令。</chat-message>
+<chat-message nickname="Koishi">Voulez-vous dire « echo » ? Tapez un point pour appliquer la suggestion.</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">bonjour</chat-message>
 </chat-panel>
 
-如果想调整模糊匹配的程度，你还可以修改配置项 [minSimilarity](../../api/core/app.md#options-minsimilarity)。Pratique, n'est-ce pas ?
+Si vous souhaitez ajuster le niveau de tolérance de la correction automatique, vous pouvez modifier l'option [minSimilarity](../../api/core/app.md#options-minsimilarity). Pratique, n'est-ce pas ?
