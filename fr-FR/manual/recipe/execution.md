@@ -2,7 +2,7 @@
 
 ## Utilisation des guillemets
 
-与大多数命令行工具一样，你可以使用单引号或双引号将参数包裹，引号中的内容将被视为一个独立的参数。这在许多场景下都非常有用：
+Comme pour la plupart des outils en ligne de commande, il peut être nécessaire d'utiliser des guillemets pour entourer les paramètres, afin d'éviter qu'ils ne soient interprétés de manière incorrecte comme plusieurs paramètres ou comme une option erronée. Cette astuce est très utile dans de nombreux cas :
 
 - Passez un paramètre contenant des espaces (par défaut, il traite les chaînes qui continent des espaces comme plusieurs paramètres)
 - Passez un paramètre commençant par `-` (par défaut, cela est interprété comme l'option suivante)
@@ -24,9 +24,9 @@ Par défaut, Koishi n'échappe pas le texte entre guillemets simples. Si vous ne
 <chat-message nickname="Koishi">foo$(echo bar)</chat-message>
 </chat-panel>
 
-最后，你还可以在 [koishi-plugin-eval](https://eval.koishi.chat) 中了解到另一种插值方法。
+De plus, vous pouvez découvrir une autre méthode de substitution dans le plugin [koishi-plugin-eval](https://eval.koishi.chat).
 
-## Correspondance floue
+## Correction automatique
 
 Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe. Dans ces cas, Koishi peut automatiquement corriger en suggérant des commandes similaires :
 
