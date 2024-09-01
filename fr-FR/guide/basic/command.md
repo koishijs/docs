@@ -93,8 +93,8 @@ ctx.command('test [arg:number]')
 - number: `number` 数值
 - bigint: `bigint` [大整数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - text: `string` 贪婪匹配的字符串
-- user: `string` 用户，格式为 `{platform}:{id}`
-- channel: `string` 频道，格式为 `{platform}:{id}`
+- user: `string` 用户，格式为 `{platform}:{id}` (调用时可以使用 `at` 元素或者 `@{platform}:{id}` 的格式)
+- channel: `string` 频道，格式为 `{platform}:{id}` (调用时可以使用 `sharp` 元素或者 `#{platform}:{id}` 的格式)
 - integer: `number` 整数
 - posint: `number` 正整数
 - natural: `number` 正整数
