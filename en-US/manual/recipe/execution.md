@@ -2,7 +2,7 @@
 
 ## Quotes
 
-与大多数命令行工具一样，你可以使用单引号或双引号将参数包裹，引号中的内容将被视为一个独立的参数。这在许多场景下都非常有用：
+Like most command line tools, you can use single or double quotes to wrap arguments, the content within the quotes will be treated as a separate argument.This is very useful in many scenarios:
 
 - Passing parameters with spaces (by default, spaces would be treated as delimiters between parameters)
 - Passing parameters starting with `-` (by default, text starting with `-` would be treated as options)
