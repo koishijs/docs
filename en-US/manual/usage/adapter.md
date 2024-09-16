@@ -16,7 +16,7 @@ You will see the response from bot with "Bonjour".
 
 ![sandbox](/manual/console/sandbox.dark.webp) {.dark-only}
 
-如果想要模拟群聊，我们可以创建更多的用户，并在聊天界面顶部点击切换到「群聊模式」。这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。如果你要体验的是下棋一类的多人交互插件，这会非常有用。
+如果想要模拟群聊，我们可以创建更多的用户，并在聊天界面顶部点击切换到「群聊模式」。这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。This would be useful when you want to test a multiplayer plugin like chess.
 
 除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
 
