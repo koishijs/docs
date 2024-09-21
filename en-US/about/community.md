@@ -8,6 +8,10 @@ Some excellent community resources to learn from are summarized on this page. If
 
 - [590104798](https://qm.qq.com/q/vJ0kcQePCM): Koishi unofficial QQ group
 
+### Forum
+
+- [Koishi Unofficial](https://forum.itzdrli.cc): Koishi 非官方论坛
+
 ## Documentations
 
 - [Koishi Plugin Development Tutorial (Chinese)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601)  by TimeBather
