@@ -8,6 +8,10 @@
 
 - [590104798](https://qm.qq.com/q/vJ0kcQePCM)：Koishi 非官方交流群
 
+### 论坛
+
+- [Koishi Unofficial](https://forum.itzdrli.cc): Koishi 非官方论坛
+
 ## 文档
 
 - [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601) (沐辰-TimeBather)
