@@ -1,17 +1,17 @@
 # License
 
-The Koishi team is dedicated to maintaining a thriving open-source ecosystem.
+The Koishi team is committed to maintaining a healthy open-source ecosystem.
 
-## License used by Koishi
+## Licenses Used by Koishi
 
-- Koishi itself and its core plugins are all open-sourced under the MIT License ([repository link](https://github.com/koishijs/koishi)).
-- Official plugins related to the console are open-sourced under the AGPL-3.0 License ([repository link](https://github.com/koishijs/webui)).
-  - According to the terms of the license, software that uses official console plugins must be open-sourced under the same license.
-  - Plugins that extend console functionality in the form of a service are not subject to this restriction.
+- The Koishi core framework and its essential plugins are open-sourced under the MIT License ([Repository Link](https://github.com/koishijs/koishi))
+- Official plugins related to the console are open-sourced under the AGPL-3.0 License ([Repository Link](https://github.com/koishijs/webui))
+  - According to the license terms, any software that uses official console plugins must also be open-sourced under the same license
+  - Plugins that extend console functionalities as a service are not subject to this restriction
 
-## License for the official website
+## License Used By Official Website
 
-- The theme on which this document relies is open-sourced under the MIT License ([repository link](https://github.com/koishijs/theme)).
-- The document repository is open-sourced under the CC-BY-SA-4.0 and AGPL-3.0 Licenses ([repository link](https://github.com/koishijs/docs)).
-  - The content of the document is open-sourced under the CC-BY-SA-4.0 License (parts outside the `.vitepress` directory).
-  - Extensions to the original theme library are open-sourced under the AGPL-3.0 License (parts in the `.vitepress` directory).
+- The theme used by this documentation is open-sourced under the MIT License ([Repository Link](https://github.com/koishijs/theme))
+- The documentation repository is open-sourced under the CC-BY-SA-4.0 and AGPL-3.0 Licenses ([Repository Link](https://github.com/koishijs/docs))
+  - The content of the documentation is open-sourced under the CC-BY-SA-4.0 License (except for the `.vitepress` directory)
+  - Extensions made to the original theme repository are open-sourced under the AGPL-3.0 License (contents within the `.vitepress` directory)

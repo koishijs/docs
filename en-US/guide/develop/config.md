@@ -1,6 +1,6 @@
 # Configuration File
 
-::: warning
+:::warning
 配置文件的结构未来可能会发生变化，请留意后续更新。
 :::
 
@@ -8,7 +8,7 @@
 
 默认情况下配置文件的格式为 [YAML](https://en.wikipedia.org/wiki/YAML)，它是一种易于阅读和编辑的文本格式，你可以用任何文本编辑器打开。
 
-## 应用目录
+## workspace root
 
 配置文件所在的目录叫**应用目录**。根据你的安装方式，应用目录的位置可能不同：
 
@@ -67,7 +67,7 @@ plugins:
 
 ### Plugin name
 
-插件名称通常对应于插件发布时的包名。例如：
+插件名称通常对应于插件发布时的包名。例如：例如：
 
 - `market` 对应于官方插件 `@koishijs/plugin-market`
 - `dialogue` 对应于社区插件 `koishi-plugin-dialogue`
@@ -107,7 +107,7 @@ plugins:
 
 ## 修改配置文件
 
-::: tip
+:::tip
 如果你不了解 YAML 的语法，请不要随意修改配置文件，否则将可能导致 Koishi 应用无法运行。你可以在 [这篇教程](https://www.runoob.com/w3cnote/yaml-intro.html) 中学习 YAML 的语法。
 :::
 
@@ -133,7 +133,7 @@ plugins:
 
 当项目启动时，会将环境变量中的值替换进去。
 
-除了系统提供的环境变量外，Koishi 还原生支持 [dotenv](https://github.com/motdotla/dotenv)。你可以在当前目录创建一个 `.env` 文件，并在里面填写你的环境变量。这个文件已经被包含在 `.gitignore` 中，你可以在其中填写隐私信息 (例如账号密码) 而不用担心被上传到远端。例如在上面的例子中你就可以这样写：
+除了系统提供的环境变量外，Koishi 还原生支持 [dotenv](https://github.com/motdotla/dotenv)。你可以在当前目录创建一个 `.env.local` 文件，并在里面填写你的环境变量。这个文件已经被包含在 `.gitignore` 中，你可以在其中填写隐私信息 (例如账号密码) 而不用担心被上传到远端。例如在上面的例子中你就可以这样写：
 
 ```sh title=.env
 DISCORD_TOKEN = xxx

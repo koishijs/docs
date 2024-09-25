@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-lark
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 在开发者后台 ([Lark](https://open.larksuite.com/app/) / [飞书](https://open.feishu.cn/app/)) 新建**企业自建应用**，点击应用名称进入应用详情页。
@@ -11,7 +15,7 @@
 7. 将第 6 步中配置的值加上 `path` 的值，填写到飞书开发者后台事件订阅页面的**请求地址配置**中，并点击完成。
 8. 若第 7 步的 URL 验证未通过，请检查你所配置的地址是否正确。
 
-参考文档：<https://open.larksuite.com/document/home/develop-a-bot-in-5-minutes/coding>
+参考文档：https://open.larksuite.com/document/home/develop-a-bot-in-5-minutes/coding
 
 ## 配置项
 

@@ -1,4 +1,4 @@
-# 插件系统 (Registry)
+# 外掛系統 (Registry)
 
 ## 实例属性
 
@@ -10,7 +10,7 @@
 
 当前上下文关联的 State 对象。
 
-## 实例方法
+## 實體方法
 
 ### ctx.plugin(plugin, options?)
 
@@ -20,7 +20,7 @@
 
 当前上下文中安装一个插件。参见 [认识插件](../../guide/plugin/)。
 
-### ctx.using(deps, plugin)
+### ctx.inject(deps, plugin)
 
 - **deps:** `string[]` 依赖的服务列表
 - **plugin:** `Plugin` 要安装的插件
