@@ -32,33 +32,33 @@ Commencez par initialiser le répertoire de votre robot conversationnel et insta
 :::tabs code
 
 ```npm
-# Initialiser le projet
+# 初始化项目
 npm init
 
-# Installer Koishi et les plugins correspondants
+# 安装 Koishi 和相关插件
 npm i koishi \
+      @koishijs/plugin-server \
       @koishijs/plugin-console \
       @koishijs/plugin-sandbox \
       @koishijs/plugin-echo
 
-# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
-
 ```
 
 ```yarn
-# Initialiser le projet
+# 初始化项目
 yarn init
 
-# Installer Koishi et les plugins correspondants
+# 安装 Koishi 和相关插件
 yarn add koishi
+         @koishijs/plugin-server \
          @koishijs/plugin-console \
          @koishijs/plugin-sandbox \
          @koishijs/plugin-echo
 
-# Installer TypeScript et les paquets dépendances (vous pouvez ignorer cette étape si vous ne les utilisez pas)
+# 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
-
 ```
 
 :::
@@ -67,23 +67,24 @@ yarn add typescript @types/node esbuild esbuild-register -D
 
 ```ts title=index.ts no-extra-header
 import { Context } from 'koishi'
+import server from '@koishijs/plugin-server'
 import console from '@koishijs/plugin-console'
 import * as sandbox from '@koishijs/plugin-sandbox'
 import * as echo from '@koishijs/plugin-echo'
 
-// Créez une application Koishi
-const ctx = new Context({
+// 创建一个 Koishi 应用
+const ctx = new Context()
+
+// 启用上述插件
+ctx.plugin(server, {
   port: 5140,
-})
+})                      // 提供后端服务
+ctx.plugin(console)     // 提供控制台
+ctx.plugin(sandbox)     // 提供调试沙盒
+ctx.plugin(echo)        // 提供回声指令
 
-// Activez les plugins ci-dessus
-ctx.plugin(console)     // Fournit la console
-ctx.plugin(sandbox)     // Fournit un bac à sable de débogage
-ctx.plugin(echo)        // Fournit la commande echo
-
-// Démarrez l'application
+// 启动应用
 ctx.start()
-
 ```
 
 Exécutez ensuite ce fichier :
