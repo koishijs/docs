@@ -1,0 +1,1 @@
+const s="/dist-docs/manual/windows/msi-installer-dark.webp",t="/dist-docs/manual/windows/msi-installer-light.webp",a="/dist-docs/manual/windows/start-menu-dark.webp",i="/dist-docs/manual/windows/start-menu-light.webp";export{s as _,t as a,a as b,i as c};
