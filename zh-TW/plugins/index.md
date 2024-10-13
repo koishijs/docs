@@ -55,8 +55,10 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## 開發工具
 
 - [@koishijs/plugin-hmr](./develop/hmr.md)：模块热替换
+- [@koishijs/plugin-http](./develop/http.md)：网络请求
 - [@koishijs/plugin-mock](./develop/mock.md)：测试工具
 - [@koishijs/plugin-notifier](./develop/notifier.md)：通知服务
+- [@koishijs/plugin-proxy-agent](./develop/proxy-agent.md)：网络代理
 - [@koishijs/plugin-server](./develop/server.md)：服务器
 - [@koishijs/plugin-server-satori](./develop/server-satori.md)：API 服务器
 - [@koishijs/plugin-server-temp](./develop/server-temp.md)：临时服务器
