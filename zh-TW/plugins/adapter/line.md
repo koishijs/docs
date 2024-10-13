@@ -14,7 +14,7 @@
 6. 在 Security 頁面推薦配置白名單 IP
 7. 啟動外掛，開啟 Messaging API 頁面，勾選 Use webhook
 
-参考文档：https://developers.line.biz/en/docs/messaging-api/getting-started/
+参考文档：<https://developers.line.biz/en/docs/messaging-api/getting-started/>
 
 ## 配置项
 
