@@ -79,9 +79,6 @@ ctx.plugin(server, {
 ctx.plugin(console)     // 提供控制台
 ctx.plugin(sandbox)     // 提供调试沙盒
 ctx.plugin(echo)        // 提供回声指令
-
-// 启动应用
-ctx.start()
 ```
 
 接着运行这个文件：
