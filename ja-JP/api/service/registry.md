@@ -28,12 +28,6 @@
 
 安装一个存在服务依赖的插件。参见 [服务的依赖关系](../../guide/plugin/service.md#服务的依赖关系)。
 
-### ctx.start()
-
-- 返回值: `Promise<void>`
-
-启动此应用。
-
 ### ctx.stop()
 
 - 返回值: `Promise<void>`
