@@ -14,7 +14,7 @@
 6. 在 Security 页面推荐配置白名单 IP
 7. 启动插件，打开 Messaging API 页面，勾选 Use webhook
 
-参考文档：https://developers.line.biz/en/docs/messaging-api/getting-started/
+参考文档：<https://developers.line.biz/en/docs/messaging-api/getting-started/>
 
 ## 配置项
 
