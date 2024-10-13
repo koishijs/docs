@@ -207,6 +207,6 @@ yarn workspace @root/koishi build
 
 :::
 
-Generally, non-plugin repositories need to go through path configuration after being cloned in order to be used normally. 不过不同担心，模板项目支持已经内置了 Koishi 生态中的几个核心仓库 ([koishi](https://github.com/koishijs/koishi), [satori](https://github.com/satorijs/satori), [minato](https://github.com/shigma/minato)) 的路径配置。
+Generally, non-plugin repositories need to go through path configuration after being cloned in order to be used normally. 不过不同担心，模板项目支持已经内置了 Koishi 生态中的几个核心仓库 ([koishi](https://github.com/koishijs/koishi), [satori](https://github.com/satorijs/satori), [minato](https://github.com/cordiverse/minato)) 的路径配置。
 
 完成上述操作后，现在你的 `yarn dev` 已经能直接使用 Koishi 的 TypeScript 源码了！
