@@ -1,3 +1,3 @@
-# 各版本介绍
+# Notes des versions
 
 <vp-overview/>

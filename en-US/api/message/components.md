@@ -1,11 +1,11 @@
 # Built-in Components
 
-- 标有 <badge>Session</badge> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
+- 标有 <badge>会话</badge> 的组件只能在会话环境下使用 (常见的会话环境包括中间件和指令的内部)
 - 标有 <badge>会话+广播</badge> 的组件只能在会话环境或 `ctx.broadcast()` 中使用
 
 ## 核心组件
 
-### 调用指令 (execute) <badge>Session</badge>
+### 调用指令 (execute) <badge>会话</badge>
 
 按照子元素执行指令，并使用指令的输出替换此元素。
 
@@ -17,7 +17,7 @@ foo<execute>echo 123</execute>bar
 <chat-message nickname="Koishi">foo123bar</chat-message>
 </chat-panel>
 
-### 等待输入 (prompt) <badge>Session</badge>
+### 等待输入 (prompt) <badge>会话</badge>
 
 输出子元素并等待用户输入，并使用输入内容替换此元素。
 
@@ -50,6 +50,21 @@ foo:
 
 <chat-panel>
 <chat-message nickname="Koishi">Hello, world!</chat-message>
+</chat-panel>
+
+这个组件也可以配合插值使用：
+
+```html
+<i18n path="foo.bar">{'Koishi'}</i18n>
+```
+
+```yaml
+foo:
+  bar: Hello, {0}!
+```
+
+<chat-panel>
+<chat-message nickname="Koishi">Hello, Koishi!</chat-message>
 </chat-panel>
 
 ### 时间 (i18n:time) <badge>会话+广播</badge>
@@ -105,6 +120,49 @@ You have <plural count={count}>
 
 ## 扩展组件
 
-### 网页渲染 (html)
+### 网页渲染 (html) <badge>需要 Puppeteer</badge>
+
+- **style:** HTML 中 `body` 标签的 `style` 属性
+
+调用 Puppeteer 渲染给定 HTML。
+
+JSX 中的 `html` 将被转化为为 HTML 中的 `body` 标签。
+
+```html
+<html style={"color: purple;"}>
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
+
+你也可以为 `style` 属性指定一个对象：
+
+```html
+<html style={{
+  color: "purple",
+}}>
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
+
+如果你需要向 HTML 的 `head` 标签中添加 CSS 等页面属性，可以将它们包裹在 `head` 中。下面是一个例子：
+
+```html
+<html>
+  <head>
+    <style>
+      {`
+        body {
+          color: "purple"
+        }
+      `}
+    </style>
+  </head>
+
+  <h1>This is a header</h1>
+  <p>Hello Puppeteer!</p>
+</html>
+```
 
 ### 内容审查 (censor)

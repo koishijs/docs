@@ -7,30 +7,23 @@ choices:
     text: Building chatbot service
     caption: I use Koishi on...
     children:
-      - 
-        text: Windows
+      - text: Windows
         link: /en-US/manual/starter/windows.html
-      - 
-        text: macOS
+      - text: macOS
         link: /en-US/manual/starter/macos.html
-      - 
-        text: Linux
+      - text: Linux
         link: /en-US/manual/starter/linux.html
-      - 
-        text: Android
+      - text: Android
         link: /en-US/manual/starter/android.html
-      - 
-        text: Docker
+      - text: Docker
         link: /en-US/manual/starter/docker.html
   development:
     text: Developing
     caption: I use Koishi as...
     children:
-      - 
-        text: A standalone project
+      - text: A standalone project
         link: /en-US/manual/starter/boilerplate.html
-      - 
-        text: A dependency
+      - text: A dependency
         link: /en-US/manual/starter/direct.html
 ---
 

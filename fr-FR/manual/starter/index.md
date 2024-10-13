@@ -7,30 +7,23 @@ choices:
     text: Le service de robot conversationnel
     caption: J'utilise Koishi dans...
     children:
-      - 
-        text: Windows
+      - text: Windows
         link: /fr-FR/manual/starter/windows.html
-      - 
-        text: macOS
+      - text: macOS
         link: /fr-FR/manual/starter/macos.html
-      - 
-        text: Linux
+      - text: Linux
         link: /fr-FR/manual/starter/linux.html
-      - 
-        text: Android
+      - text: Android
         link: /fr-FR/manual/starter/android.html
-      - 
-        text: Docker
+      - text: Docker
         link: /fr-FR/manual/starter/docker.html
   development:
     text: Le développement
     caption: J'utilise Koishi comme...
     children:
-      - 
-        text: Un projet indépendant
+      - text: Un projet indépendant
         link: /fr-FR/manual/starter/boilerplate.html
-      - 
-        text: Une dépendance d'un autre projet
+      - text: Une dépendance d'un autre projet
         link: /fr-FR/manual/starter/direct.html
 ---
 

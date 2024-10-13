@@ -1,6 +1,6 @@
 # 机器人 (Bot)
 
-::: tip
+:::tip
 参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
 :::
 
@@ -36,7 +36,7 @@
 
 - 类型: `string`
 
-当前 `Bot` 的 [平台名称](../glossary.md#平台-platform)。
+当前 `Bot` 的 [平台名称](../glossary.md#platform)。
 
 ### bot.selfId
 

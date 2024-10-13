@@ -1,6 +1,6 @@
 # Database
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 基本用法](../../guide/database/)
 :::
 
@@ -161,6 +161,12 @@ export interface WriteResult {
 
 计算聚合表达式。
 
+### ctx.database.stats() <badge type="warning">实验性</badge>
+
+- 返回值: [`Promise<Stats>`](#stats)
+
+获取统计信息。
+
 ### ctx.database.drop(table)
 
 - **table:** `string` 表名
@@ -168,8 +174,18 @@ export interface WriteResult {
 
 删除表。
 
-### ctx.database.stats() <badge type="warning">实验性</badge>
+::: danger
+这是一个危险操作，删除表后将无法恢复数据。
 
-- 返回值: [`Promise<Stats>`](#stats)
+如果你是插件开发者，并希望重构插件的数据库结构，我们建议使用 [整表迁移](../../guide/database/model.md#整表迁移)，以防止用户数据丢失。
+:::
 
-获取统计信息。
+### ctx.database.dropAll()
+
+- 返回值: `Promise<void>`
+
+删除所有表。
+
+:::danger
+这是一个危险操作，删除表后将无法恢复数据。
+:::

@@ -27,7 +27,7 @@
 
 成功注册并登录 Crowdin 后，你会被自动导向你的[个人页面](https://crowdin.com/profile)。点击右上角的加号，即可创建项目。
 
-::: tip
+:::tip
 若你的项目是开放源代码的，并且活跃了 4 个月及以上，你可以申请 Crowdin 的开源项目许可。当你成功创建项目后，填写[这个表单](https://crowdin.com/page/open-source-project-setup-request)，Crowdin 的客服人员会帮助你。
 :::
 
@@ -93,7 +93,7 @@ Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用�
 
 在运行 Crowdin 的 CLI 工具之前，你需要确保当前项目的根目录下存在名为 `crowdin.yml` 的配置文件，你可以运行 `crowdin init` 创建一个基础配置文件，修改其中的条目以适应你的项目。详细的介绍可以看 [Crowdin 的文档](https://support.crowdin.com/configuration-file/)。
 
-::: tip
+:::tip
 `crowdin.yml` 中的配置项不仅适用于 Crowdin CLI，还可以在上述的代码仓库集成中发挥作用，Crowdin 会自动读取该文件以确定翻译的范围。
 :::
 

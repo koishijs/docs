@@ -2,12 +2,11 @@
 
 ## 使用引号
 
-Koishi 会自动将引号 (半角或者全角) 中的内容视为一个整体。这在很多场景中都非常有用，下面举出了一些典型的例子：
+与大多数命令行工具一样，你可以使用单引号或双引号将参数包裹，引号中的内容将被视为一个独立的参数。这在许多场景下都非常有用：
 
 - 当希望传入带空格的参数时 (默认行为是只解析空格前面的部分)
 - 当希望传入以 `-` 开头的参数时 (默认的行为是解析成下一个选项)
 - 当希望传入一个空字符串时作为参数时 (默认的行为是解析为 `true`)
-- 当希望传入只由数字构成的字符串参数时 (默认行为是解析为 `number` 类型)
 
 ## 指令插值
 
@@ -33,7 +32,7 @@ Koishi 默认不转义单引号内的文本。如果你不希望某个参数被�
 
 <chat-panel>
 <chat-message nickname="Alice">ecko hello</chat-message>
-<chat-message nickname="Koishi">您要找的是不是“echo”？发送句号以使用推测的指令。</chat-message>
+<chat-message nickname="Koishi">您要找的是不是“echo”？回复句号以使用推测的指令。</chat-message>
 <chat-message nickname="Alice">.</chat-message>
 <chat-message nickname="Koishi">hello</chat-message>
 </chat-panel>

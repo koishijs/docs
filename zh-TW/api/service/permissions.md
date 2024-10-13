@@ -1,16 +1,19 @@
 # 权限管理 (Permissions) <badge type="warning">实验性</badge>
 
-::: warning
+:::warning
 权限管理目前属于实验性功能，API 可能在后续版本中发生变化。
 :::
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 权限管理](../../guide/database/permission.md)
 :::
 
-## 实例方法
+## 實體方法
 
-### ctx.permissions.define(name, inherits)
+### ctx.permissions.define(name, options)
+
+- **name:** `string` 权限名称
+- **options.check:** `(session: Partial<Session>) => boolean` 权限检查函数
 
 ### ctx.permissions.inherit(a, b)
 

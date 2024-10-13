@@ -1,10 +1,10 @@
 ---
 prev:
-  text: Choisir une méthode d'installation
+  text: Installation
   link: /fr-FR/manual/starter/
 ---
 
-# Installation et configuration des plugins
+# Installation et configuration de plugins
 
 :::tip
 本节将介绍「插件市场」「插件配置」和「依赖管理」页面的使用方法。
@@ -33,7 +33,7 @@ L'interface de la console est principalement divisée en deux parties : à gauch
 
 Au cours des prochaines sections, nous expliquerons en détail les fonctionnalités et l'utilisation de chaque page.
 
-## Installer les plugins
+## Installation de plugins
 
 :::warning
 Koishi 不对非官方插件的安全性做任何保证。N'installez pas de plugins provenant de sources inconnues, car ils peuvent rendre Koishi instable, voire entraîner des conséquences plus graves. Si vous rencontrez des problèmes après avoir installé un plugin, veuillez signaler le problème dans le groupe d'utilisateurs ou le forum. De plus, certains plugins portent l'étiquette "Non sécurisé" et ne bénéficient pas du support de la communauté officielle.
@@ -84,7 +84,7 @@ Lors de l'installation de Koishi, certains groupes sont préconfigurés, et les 
 
 La création d'un nouveau groupe est également simple. Cliquez sur "Configuration globale" ou sur le nom d'un groupe, puis cliquez sur le bouton "Créer un groupe" en haut à droite. Le nom du nouveau groupe est généré de manière aléatoire, mais vous pouvez cliquer sur le nom pour le modifier comme vous le souhaitez. Les groupes peuvent être développés ou réduits en cliquant sur la petite flèche à côté du nom du groupe.
 
-此外，[过滤器](../usage/customize.md#过滤器) 机制也可用于分组，便于控制一系列插件的行为。
+此外，[过滤器](../usage/customize.md#filters) 机制也可用于分组，便于控制一系列插件的行为。
 
 ### Ajout de plugins supplémentaires
 
@@ -100,13 +100,17 @@ Si un plugin déjà installé n'apparaît pas dans la liste des plugins, vous po
 
 ### Suppression de plugins ou de groupes
 
-:::warning
+:::danger
 注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。Faites preuve de prudence.
 :::
 
 Sur n'importe quelle page de configuration de plugin, cliquez sur le bouton "Supprimer le plugin" en haut à droite pour supprimer la configuration du plugin. De même, dans la page de configuration du groupe, cliquez sur le bouton "Supprimer le groupe" en haut à droite pour supprimer ce groupe. Lorsque vous supprimez un groupe, tous les plugins qui s'y trouvent sont également supprimés.
 
 ## Mise à jour et désinstallation des plugins
+
+:::warning
+依赖管理功能仅为生产环境设计。如果当前 Koishi 是开发环境，请使用 [`dep`](../../guide/develop/workspace.md#dep) 命令来更新依赖。
+:::
 
 Accédez à la page "Gestion des dépendances", où vous pouvez voir la liste des dépendances. Les dépendances peuvent inclure le cœur de Koishi, divers plugins, ainsi que des packages logiciels nécessaires au fonctionnement des plugins.
 

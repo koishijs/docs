@@ -10,7 +10,7 @@
 
 本章将介绍官方插件 `@koishijs/plugin-mock`。你可以用它来快速检验你编写的 Koishi 插件。
 
-::: tip
+:::tip
 本节中介绍的样例用到了 [Mocha](https://mochajs.org/) 和 [Chai](https://www.chaijs.com/)。它们都是比较通用的测试库和断言库，但并非绑定 @koishijs/plugin-mock 一同使用。你也可以根据你的喜好选择其他工具，比如 [Jest](https://jestjs.io/) 等等。
 :::
 
@@ -18,16 +18,19 @@
 
 首先在工作区中安装所需的测试工具以及 @koishijs/plugin-mock：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm i mocha chai @koishijs/plugin-mock @types/mocha @types/chai -DW
 ```
+
 ```yarn
 yarn add mocha chai @koishijs/plugin-mock @types/mocha @types/chai -DW
 ```
+
 :::
 
-::: tip
+:::tip
 这里的 `-W` 表明直接安装到根工作区。你也可以改成只对一个插件添加这些依赖，不过考虑到你可能会在其他插件中也用到它们，安装到根工作区会更加方便。
 :::
 

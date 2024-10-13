@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-telegram
 
+:::tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 搜索 @botfather（有个官方认证的符号）并进入聊天界面
@@ -10,7 +14,7 @@
 
 参考文档：<https://core.telegram.org/bots>
 
-::: tip
+:::tip
 如果启动机器人后发现收不到不带 `/` 的消息，这很可能是由于 Privacy Mode 未开启。如果开启后仍然收不到消息，请尝试将机器人从群组中移除后重新加入。
 :::
 
@@ -71,7 +75,11 @@
 
 Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/core/app.md#options-selfurl) 的值。
 
-## 内部 API
+## 内部接口
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
+:::
 
 - [`internal.addStickerToSet()`](https://core.telegram.org/bots/api#addstickertoset)
 - [`internal.answerCallbackQuery()`](https://core.telegram.org/bots/api#answercallbackquery)
