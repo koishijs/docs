@@ -1,6 +1,6 @@
 # Bot
 
-::: tip
+:::tip
 参见：[开发 > 跨平台 > 实现机器人](../../guide/adapter/bot.md)
 :::
 
@@ -10,37 +10,37 @@
 
 ### bot.adapter
 
-- Type: [`Adchapter`](./adapter.md)
+- 类型: [`Adapter`](./adapter.md)
 
 当前 `Bot` 所在的 [Adapter](./adapter.md) 实例。
 
 ### bot.config
 
-- Type: `object`
+- 类型: `object`
 
 构造 `Bot` 实例时所使用的配置项。
 
 ### bot.ctx
 
-- Type: [`Context`](./context.md)
+- 类型: [`Context`](./context.md)
 
 当前 `Bot` 所在的 [Context](./context.md) 实例。
 
 ### bot.internal
 
-- Type: `object`
+- 类型: `object`
 
 当前机器人的 [内部接口](../../guide/adapter/bot.md#实现内部接口)。
 
 ### bot.platform
 
-- Type: `string`
+- 类型: `string`
 
-当前 `Bot` 的 [平台名称](../glossary.md#平台-platform)。
+当前 `Bot` 的 [平台名称](../glossary.md#platform)。
 
 ### bot.selfId
 
-- Type: `string`
+- 类型: `string`
 
 当前 `Bot` 的平台账号。
 
@@ -74,7 +74,7 @@
 
 ### bot.dispatch(session)
 
-- **session:** [`Session`](./session.md) Session instance
+- **session:** [`Session`](./session.md) 会话实例
 
 Dispatch a session event.
 
@@ -83,7 +83,7 @@ Dispatch a session event.
 - **event:** [`Event`](./session.md#session-event) 会话数据
 - 返回值: [`Session`](./session.md)
 
-创建一个新的会话实例。
+Create a new session instance.
 
 ### bot.online()
 

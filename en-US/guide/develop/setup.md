@@ -38,7 +38,7 @@ git --version           # git version 2.39.1
 
 ```sh
 git config --global user.name "Your Name"
-git config –-global user.email "you@example.com"
+git config --global user.email "you@example.com"
 ```
 
 ### 注册 GitHub
@@ -50,21 +50,24 @@ git config –-global user.email "you@example.com"
 Open a command line, cd to the directory that you want to create a Koishi template project.
 
 ::: tip
-The working directory path should not be absurdly long, also it is recommended to use a path that contains ASCII characters only. For example:
+这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
-- Other operating systems: `~/dev`
-:::
+- 其他操作系统：`~/dev`
+  :::
 
 Enter the following command to create Koishi template project:
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm init koishi@latest
 ```
+
 ```yarn
 yarn create koishi
 ```
+
 :::
 
 Follow the prompts and finalize the initialization process.

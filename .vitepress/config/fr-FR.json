@@ -61,7 +61,7 @@
         "text": "Plugins",
         "items": [
           {
-            "text": "Place de Marché",
+            "text": "Place de marché",
             "link": "/market/"
           },
           {
@@ -77,6 +77,10 @@
           {
             "text": "Communauté de Koishi",
             "link": "/about/contact.md"
+          },
+          {
+            "text": "Ressources Communautaires",
+            "link": "/about/community.md"
           },
           {
             "text": "Notes des versions",
@@ -121,7 +125,7 @@
               "link": "/manual/starter/android.md"
             },
             {
-              "text": "Installation avec image conteneur",
+              "text": "Utilisation dans un conteneur",
               "link": "/manual/starter/docker.md"
             },
             {
@@ -138,11 +142,11 @@
           "text": "Utilisation",
           "items": [
             {
-              "text": "Installation et configuration des plugins",
+              "text": "Installation et configuration de plugins",
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "Première conversation",
+              "text": "Conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -163,11 +167,11 @@
           "text": "Recettes",
           "items": [
             {
-              "text": "Solutions perfectionnées des commandes",
+              "text": "Utilisations avancées des commandes",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "Maintenance des multiples configurations",
+              "text": "Gestion des multiples configurations",
               "link": "/manual/recipe/multiple.md"
             },
             {
@@ -184,11 +188,11 @@
           "text": "Lanceur",
           "items": [
             {
-              "text": "Configuration requise",
+              "text": "Système requis",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "Outils de ligne de commande",
+              "text": "Outil de ligne de commande",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -469,8 +473,12 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "Router : service network",
-              "link": "/api/service/router.md"
+              "text": "Server : Gestion des routes",
+              "link": "/api/service/server.md"
+            },
+            {
+              "text": "Timer : chronomètre",
+              "link": "/api/service/timer.md"
             }
           ]
         },
@@ -686,7 +694,7 @@
           "text": "Plugins",
           "items": [
             {
-              "text": "Place de Marché",
+              "text": "Place de marché",
               "link": "/market/"
             },
             {
@@ -879,12 +887,24 @@
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "Mock : Outils des tests",
+              "text": "HTTP : requête d'HTTP",
+              "link": "/plugins/develop/http.md"
+            },
+            {
+              "text": "Mock : simulacres d'application",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "Server Proxy : serveur proxy",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "Notifier : service de notification",
+              "link": "/plugins/develop/notifier.md"
+            },
+            {
+              "text": "Proxy Agent : proxy de réseau",
+              "link": "/plugins/develop/proxy-agent.md"
+            },
+            {
+              "text": "Server : Gestion des routes",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "Server Satori : serveur d'API",
@@ -899,10 +919,10 @@
       ],
       "/market/": [
         {
-          "text": "plugin",
+          "text": "Plugins",
           "items": [
             {
-              "text": "Place de Marché",
+              "text": "Place de marché",
               "link": "/market/"
             },
             {
@@ -1008,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union : type somme 1",
+              "text": "Intersection avec syndicat : collaboration des configurations 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union : type somme 2",
+              "text": "Intersection avec syndicat : collaboration des configurations 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
@@ -1035,7 +1055,7 @@
               "link": "/about/license.md"
             },
             {
-              "text": "Discussions participatives",
+              "text": "Communauté de Koishi",
               "link": "/about/contact.md"
             },
             {

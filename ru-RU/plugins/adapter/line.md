@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-line
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息
@@ -26,7 +30,11 @@
 
 机器人密钥。
 
-## 内部 API
+## 内部接口
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
+:::
 
 - [`internal.audienceMatch()`](https://developers.line.biz/en/reference/partner-docs/#phone-audience-match)
 - [`internal.broadcast()`](https://developers.line.biz/en/reference/messaging-api/#send-broadcast-message)

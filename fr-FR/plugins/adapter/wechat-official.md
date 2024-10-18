@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-wechat-official
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 根据 [注册流程指引](https://kf.qq.com/product/weixinmp.html#hid=87) 注册公众平台。
@@ -8,7 +12,7 @@
 4. 页面下方启用服务器配置，将机器人的 `selfUrl` 值后连接 `/wechat-official` (如 `https://example.com/wechat-official`)，在 URL 一栏中填写；在插件配置和公众平台上填入相同的 Token；在公众平台上生成 EncodingAESKey 并填入插件的 aesKey 字段；三种消息加解密方式均可选择。
 5. 如果公众号为企业主体，且通过了微信认证，可在插件配置中启用 customerService。客服接口提供了更宽松的消息回复能力。
 
-参考文档：[https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html](https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html)
+参考文档：<https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html>
 
 ## 配置项
 

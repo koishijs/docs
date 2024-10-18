@@ -1,16 +1,20 @@
 # @koishijs/plugin-adapter-telegram
 
+:::tip
+如果选择通信方式为 `http`，那么你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
 1. 搜索 @botfather（有个官方认证的符号）并进入聊天界面
-2. After entering `start`, a menu will appear. You can use commands to configure your bot here.
-3. To create a bot, click `/newbot` and follow the instructions to finish the process of creation.
+2. 输入 `/start` 后，会出现一个使用菜单，你可以使用这里指令对你的机器人进行配置
+3. 要创建一个机器人，请点击 `/newbot`，并根据系统提示完成创建流程
 4. 使用 `/setprivacy` 关闭 Privacy Mode（设置为 DISABLED，不然机器人只能收到特定消息）
 5. 创建完毕后，你会获得一个 token（请注意不要泄露），将其作为机器人配置项即可使用
 
 参考文档：<https://core.telegram.org/bots>
 
-::: tip
+:::tip
 如果启动机器人后发现收不到不带 `/` 的消息，这很可能是由于 Privacy Mode 未开启。如果开启后仍然收不到消息，请尝试将机器人从群组中移除后重新加入。
 :::
 
@@ -71,7 +75,11 @@
 
 Koishi 服务暴露在公网的地址，会覆盖 [`app.config.selfUrl`](../../api/core/app.md#options-selfurl) 的值。
 
-## 内部 API
+## Internal API
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
+:::
 
 - [`internal.addStickerToSet()`](https://core.telegram.org/bots/api#addstickertoset)
 - [`internal.answerCallbackQuery()`](https://core.telegram.org/bots/api#answercallbackquery)

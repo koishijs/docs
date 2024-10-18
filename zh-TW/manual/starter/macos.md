@@ -7,9 +7,9 @@ next:
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 为 macOS 安装
+# 為 macOS 安裝
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
@@ -18,7 +18,7 @@ next:
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
 - [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
-## 安装
+## 安裝
 
 通过安装包安装 Koishi 是最推荐的安装方式，安装程序会自动处理大部分问题。一般情况下你都应该选择这种方式。
 
