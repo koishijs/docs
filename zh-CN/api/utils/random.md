@@ -49,7 +49,7 @@ random.pick([1, 2, 3])          // 随机选取一个元素
 - **end:** `number` 上界
 - 返回值: `number` 一个 `[start, end)` 之间的随机整数
 
-生成一个随机实数。
+生成一个随机整数。
 
 ### Random.pick(array, count?)
 
