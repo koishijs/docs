@@ -17,11 +17,7 @@
 
 ## 注册及登录 Crowdin
 
-你可以使用邮箱注册，也可以用谷歌账号、Github 账号等登录，与其他网站异曲同工，因此此处不再赘述。
-
-:::tip
-如果你还是学生，并且成功申请了 GitHub 的学生开发包 (Student Pack)，在你使用 GitHub 账号成功登录 Crowdin 后会自动获赠价值 1500 美元的 1 年 Bronze 计划。
-:::
+你可以使用邮箱注册，也可以用谷歌账号、Github 账号等第三方登录，与其他网站异曲同工，因此此处不再赘述。
 
 ## 创建本地化项目
 
@@ -37,22 +33,92 @@
 公开项目意味着所有 Crowdin 用户都能搜索到你的项目，也可以看到你的项目的所有内容，也可以向项目贡献翻译。如果你是通过开源项目免费许可的方式创建的项目，则只能创建公开项目。
 :::
 
-### 项目结构
+### 项目结构 {#project-structure}
 
-由于 Crowdin 会将待翻译的文件名显示在项目的文件列表中，为了不引起误会，你需要为每个待翻译的文件设置一个易懂的名称。同时，要保证 Crowdin 输出的翻译结果与你的项目结构一致。
+项目中的文件结构由项目性质决定。通常我们需要将不同语言的翻译内容分别存储为不同的文件，并放置在同一个目录下 (如 `locales`)，以便于管理。
 
-因此推荐的做法是，为每种语言建立一个独立的文件夹，然后将待翻译的文件命名为项目名称，如下所示：
+Crowdin 支持[多种文件格式](#file-type)，这里以 `YAML` (`.yml`) 为例分别说明不同项目下的文件结构。
 
-```text
-echo/
-  |-- i18n/
-      |-- en/
-          |-- echo.yaml
-      |-- zh-CN/
-          |-- echo.yaml
-  |-- index.js
-  |-- package.json
+#### 单插件项目
+
+单插件项目的翻译文件通常存储在插件的根目录下的 `src/locales` 目录中，如：
+
+```plaintext
+src/
+  locales/
+    en-US.yml
+    zh-CN.yml
+    ...
+package.json
 ```
+
+这里有[一个示例项目](https://github.com/koishijs/novelai-bot/tree/main/src/locales)可以参考。
+
+#### 多插件项目
+
+多插件项目通常是 monorepo 结构，即根目录作为开发工作区，每个插件作为一个子项目放置在其他目录下。这种情况下，与单插件项目类似，翻译文件通常存储在插件的根目录下的 `src/locales` 目录中，如：
+
+```plaintext
+packages/
+  plugin-a/
+    src/
+      locales/
+        en-US.yml
+        zh-CN.yml
+        ...
+  plugin-b/
+    src/
+      locales/
+        en-US.yml
+        zh-CN.yml
+        ...
+```
+
+这里有[一个示例项目](https://github.com/koishijs/koishi-plugin-booru/tree/main/packages/core/src/locales)可以参考。
+
+#### 机器人项目 / 整合包项目
+
+机器人项目是多插件项目的一种特殊形式。除了有多个插件的翻译文件外，还有机器人本身的翻译文件，通常放置在根目录下的 `locales` 目录中，如：
+
+```plaintext
+locales/
+  en-US.yml
+  zh-CN.yml
+  ...
+packages/
+  plugin-a/
+    src/
+      locales/
+        en-US.yml
+        zh-CN.yml
+        ...
+  plugin-b/
+    src/
+      locales/
+        en-US.yml
+        zh-CN.yml
+        ...
+```
+
+#### 文档项目 (Vitepress)
+
+由于文档通常需要对每个页面和大量配置文件进行翻译，我们通常将每个页面的主要内容放置在不同的目录下，并将配置文件本身进行拆分，如：
+
+```plaintext
+.vitepress/
+  config/
+    index.ts
+    en-US.json
+    zh-CN.json
+    ...
+en-US/
+  index.md
+zh-CN/
+  index.md
+package.json
+```
+
+这里有[一个示例项目](https://github.com/koishijs/docs)可以参考。·
 
 ## 上传项目文件
 
@@ -66,19 +132,9 @@ echo/
 
 除了手动上传，你还可以设置集成，让 Crowdin 自动同步 GitHub 等仓库里的文件，并可设置定期推送译文到相应的分支。
 
-你可以点击[这里](https://support.crowdin.com/github-integration/)直达 Crowdin 关于 GitHub 集成的文档。如果你使用的是 Gitlab 等其他仓库，也可以在知识库里找到相应的指南。
+你可以点击[这里](https://support.crowdin.com/github-integration/)直达 Crowdin 关于 GitHub 集成的文档，跟随文档配置好集成后即可让 Crowdin 自动同步 GitHub 上的内容。如果你使用的是 Gitlab 等其他仓库，也可以在这里找到相应的指南。
 
-回到项目主页，单击集成 (Integrations) 标签页，可以为你的项目设置集成。Crowdin 支持许多集成方案，找到你所使用的代码仓库并点击。
-
-然后，单击 Set Up Integration，连接到你的代码仓库的账户，选择你想要设置集成的仓库，选择你想要获取原文和推送译文的分支，默认情况下 Crowdin 创建一个新的分支，名为 `l10n_` 加上原分支名，如图中所示的 `l10n_master`。
-
-![github integration connecting github](https://support.crowdin.com/assets/docs/github_integration_connecting_github.png)
-
-![github integration unconfigured](https://support.crowdin.com/assets/docs/github_integration_unconfigured.png)
-
-此外，你还需要点击分支名右边的编辑按钮，然后点添加文件筛选器 (Add File Filter)，在视图左边写上源文件和目标文件的模式匹配字符串之后，在右边切换并预览将会同步到 Crowdin 的文件列表，以及翻译后的文件名及其路径，你还可以添加更多的筛选器。确认添加无误后，单击 Save 按钮保存。
-
-视图下方的 Push Source 选项默认是不勾选的，即 Crowdin 不会自动将翻译推送到仓库，打开这个选项后，Crowdin 会在对应的仓库开启一个 PR，并自动 rebase 到最新的分支，然后同步 Crowdin 上的同步到仓库。设置完成后，Crowdin 并不会自动开始同步，需要手动触发一次：点击表格右上角的 Sync Now，静待片刻即可同步完成。
+设置完成后，Crowdin 并不会立刻同步，需要手动触发：点击 Sync Now，等待进度条走完即可。以后 Crowdin 会定时检查并自动同步。
 
 ### 通过 CLI 上传文件
 
@@ -89,9 +145,11 @@ $ npm i -g @crowdin/cli
 $ yarn global add @crowdin/cli
 ```
 
-Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用户，你也可以直接下载 Crowdin 所提供的安装程序安装，请查看 [Crowdin 的文档](https://support.crowdin.com/cli-tool/#installation)获知更多详情。
+Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用户，你也可以直接下载 Crowdin 所提供的安装程序安装，请查看 [Crowdin 的文档](https://crowdin.github.io/crowdin-cli/installation)获知更多详情。
 
-在运行 Crowdin 的 CLI 工具之前，你需要确保当前项目的根目录下存在名为 `crowdin.yml` 的配置文件，你可以运行 `crowdin init` 创建一个基础配置文件，修改其中的条目以适应你的项目。详细的介绍可以看 [Crowdin 的文档](https://support.crowdin.com/configuration-file/)。
+在运行 Crowdin 的 CLI 工具之前，你需要确保当前项目的根目录下存在名为 `crowdin.yml` 的配置文件，你可以运行 `crowdin init` 创建一个基础配置文件，修改其中的条目以适应你的项目。详细的介绍可以看 [Crowdin 的文档](https://support.crowdin.com/developer/configuration-file/)。
+
+你也可以参考上方提到的[示例项目](#project-structure)中的 `crowdin.yml` 文件。
 
 :::tip
 `crowdin.yml` 中的配置项不仅适用于 Crowdin CLI，还可以在上述的代码仓库集成中发挥作用，Crowdin 会自动读取该文件以确定翻译的范围。
@@ -99,7 +157,7 @@ Crowdin 也提供了 Homebrew / apt 等多种安装方式，对于 Windows 用�
 
 推荐在项目目录下的 `crowdin.yml` 文件中配置好文件筛选器，并且在 `$HOME/.crowdin.yml` 文件中存储你的 Crowdin 密钥等敏感信息，然后你就可以简单地运行 `crowdin upload sources` 上传源文件，而不需要每次都打出冗长的包含通配符的文件路径了。
 
-### 文件类型
+### 文件类型 {#file-type}
 
 Crowdin 支持许多常见文件类型，如 `HTML`、`docx`、`pdf`，本地化软件框架支持的 `xliff` 与 `po` 等自然也不在话下，如果你不确定你的文件类型是否受支持，你可以在[这里](https://support.crowdin.com/supported-formats/)查看 Crowdin 支持的文件类型列表。
 
@@ -135,10 +193,10 @@ commands:
 
 当你成功添加源文件之后，就可以着手进行翻译了。点开想要翻译的语言，打开对应文件，就可以进入 Crowdin 的在线翻译编辑器。假设你是从个人电脑打开的，那么视图会从左到右分成三个部分，左边是待翻译的字符串，中间是翻译区，右边是评论和参考区。
 
-![crowdin online editor](https://support.crowdin.com/assets/docs/online_editor_sections.png)
+![crowdin online editor](https://support.crowdin.com/_astro/sections.BiwHNeHV_1rT0sS.webp)
 
 如果你对该项目申请了开源项目免费许可，那么该项目还会启用 Global TM 功能。这是 Crowdin 的共享翻译语料库，可以根据其他人的项目中存在的类似文本对当前的待翻译字符串进行提示，你的项目的字符串及翻译结果也会上传到这个语料库中。
 
 ## 下载翻译
 
-与上传翻译一样，Crowdin 提供了多种方式可以下载翻译结果，你可以直接通过网页下载单个或多个文件，也可以通过 Crowdin CLI 下载。如果你设置了与任何代码仓库的集成，并勾选了定时同步，则 Crowdin 会自动推送翻译结果到指定的分支。
+与上传翻译一样，Crowdin 提供了多种方式可以下载翻译结果，你可以直接通过网页下载单个或多个文件，也可以通过 Crowdin CLI 下载。如果你设置了代码仓库的集成，并勾选了定时同步，则 Crowdin 会定时自动推送翻译结果到指定的分支。
