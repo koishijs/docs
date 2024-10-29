@@ -146,7 +146,7 @@
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "第一次对话",
+              "text": "始めての会話",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -154,11 +154,11 @@
               "link": "/manual/usage/command.md"
             },
             {
-              "text": "账号登录与绑定",
+              "text": "アカウントのログインとバインド",
               "link": "/manual/usage/platform.md"
             },
             {
-              "text": "深入定制机器人",
+              "text": "Bot の徹底したカスタマイズ",
               "link": "/manual/usage/customize.md"
             }
           ]
