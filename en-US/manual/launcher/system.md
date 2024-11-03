@@ -12,7 +12,7 @@ Even if your operating system isn't listed as a supported platform below, you ca
 
 ## Windows
 
-We only listed the latest version in a product line. The unlisted version should be considered unsupported.
+We have only listed the latest version in a product line here. The unlisted version should be considered unsupported.
 
 ### Windows 8.1
 
