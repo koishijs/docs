@@ -20,7 +20,7 @@ const encodeGuild = (data: Universal.Guild): Discord.Guild => ({
 
 Koishi 使用 [消息元素](../basic/element.md) 表达任何聊天平台的消息。这是一种类似于 HTML 的格式。消息元素作为组成消息的基本单位，可以表示具有特定语义的内容，如文本、表情、图片、引用、元信息等。本节将介绍如何在消息元素与平台消息之间互相转换。
 
-## 接收消息
+## 接收消息 {#receive}
 
 在会话对象上存在两个属性与消息的内容有关：`content` 和 `elements`，它们分别对应着字符串形式和消息元素形式的消息内容。它们之间会自动转换，因此下面的两种写法是等价的：
 
@@ -41,9 +41,9 @@ session.elements = [
 session.content = input.replace(/@(\d+)/g, '<at id="$1"/>')
 ```
 
-## Send messages
+## 发送消息 {#send}
 
-### 兼容性原则
+### 兼容性原则 {#compatibility}
 
 在具体介绍消息发送之前，不知道你是否有这样的疑问：Koishi 提供了一整套标准的消息元素，但并非所有平台都支持这些元素。对于那些不支持的元素，应该如何处理呢？
 
@@ -55,7 +55,7 @@ Koishi 的建议是**尽量兼容实现**。对于平台不支持的元素，可
 
 对于更加复杂的元素，适配器也可以发挥自主性，设计最适合的交互形式。例如，如果用户的需求是「从若干个选项中选择一个」，那么平台 A 可以渲染出多个按钮供用户点击；平台 B 则可以发送一条带有表态的消息，点击表态对应选择选项；实在不行，平台 C 也可以直接发送选项列表和文本提示语，并将用户的下一次输入作为选项。
 
-### 消息编码器
+### 消息编码器 {#encoder}
 
 之前介绍过的 REPL 适配器为了简化写法，并未包含消息的编码过程。对于一般的适配器，我们建议通过继承 `MessageEncoder` 类来实现消息的发送逻辑。
 
@@ -78,10 +78,9 @@ class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, Telegr
   // 使用 payload 存储待发送的消息
   private payload: Dict
 
-  constructor(bot: TelegramBot<C>, channelId: string, guildId?: string, options?: SendOptions) {
-    super(bot, channelId, guildId, options)
-    const chat_id = guildId || channelId
-    this.payload = { chat_id, parse_mode: 'html', text: '' }
+  // 在 prepare 中初始化 payload
+  async prepare() {
+    this.payload = { chat_id: this.channelId, parse_mode: 'html', text: '' }
   }
 
   // 将发送好的消息添加到 results 中
@@ -125,7 +124,7 @@ export class TelegramBot<C extends Context> extends Bot<C, TelegramBot.Config> {
 }
 ```
 
-### 行内元素
+### 行内元素 {#inline}
 
 上面的例子仅仅包含了消息编码器的基本结构，并未实现除了文本外的任何消息元素。对于任何非文本元素，上面的代码都会回退到其内部的文本。要添加更多消息元素的支持，只需在 `visit` 方法中添加更多的判断分支，就像这样：
 
@@ -145,7 +144,7 @@ if (type === 'text') {
 }
 ```
 
-### 消息分片
+### 消息分片 {#fragment}
 
 在 Koishi 中，一次消息发送可能在目标平台产生多条独立的消息，称为消息分片。这也是为什么上面的 `results` 是一个数组。消息分片产生的原因是多样的：
 
@@ -165,7 +164,7 @@ if (type === 'text') {
 } else ...
 ```
 
-### 资源元素
+### 资源元素 {#asset}
 
 由于不同平台对于媒体资源的支持类型、发送方式、渲染形式有所不同，因此资源元素的情况会更加复杂。可以大致将各种平台规定的发送方式分为以下几类：
 
@@ -195,8 +194,8 @@ class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, Telegr
         form.append(key, this.payload[key].toString())
       }
       const { type, attrs } = this.asset
-      const { filename, data } = await this.bot.ctx.http.file(attrs.url, attrs)
-      if (type === 'image') {
+      const { filename, data } = await this.bot.ctx.http.file(attrs.src, attrs)
+      if (type === 'img') {
         form.append('photo', data, filename)
         message = await this.bot.internal.sendPhoto(form)
       } else if (type === 'audio') {
@@ -221,11 +220,11 @@ class TelegramMessageEncoder<C extends Context> extends MessageEncoder<C, Telegr
 
 差不多这样就实现了资源元素的发送。值得一提的是，这里的代码使用了 `http.file()` 方法。它可以自动为我们处理 `http:`、`file:`、`data:` 等各种协议的资源链接，并将它们统一转换为 `ArrayBuffer`。这可以省去适配器解析资源链接的步骤，对于适配器开发是非常方便的。
 
-## 进阶知识
+## 进阶知识 {#advanced}
 
 下面的知识并非适用于所有适配器。但对于一些特殊的平台，你可能会用到它们。
 
-### 发送被动消息
+### 发送被动消息 {#passive}
 
 我们通常将机器人做出的交互行为分为两种：主动交互和被动交互。
 
@@ -249,11 +248,11 @@ class QQGuildMessageEncoder {
 
 在这一段代码中使用了 `this.options`，它存储了一些额外的发送选项。其中 `session` 正好对应着接收到消息的会话对象。当我们调用 `session.send()` 时，Koishi 会把当前的会话对象传递给 `MessageEncoder`。这样一来，我们就可以在发送消息时带上回复目标了。
 
-### 资源反向代理
+### 资源反向代理 {#reverse-proxy}
 
 一些平台会使用 ID 标识资源文件 (例如 Lark)。当你接收到来自平台的消息时，拿到的是资源 ID 而非资源链接。此时你需要将资源 ID 转换为资源链接，才能构造合法的资源元素。
 
-::: tip
+:::tip
 Telegram 是另一种特殊情况。尽管其提供的资源链接是可用的，但这个链接中会明文包含机器人令牌，并非可以公开使用的链接。因此 Telegram 和其他类似平台也适用于这一节的内容。
 :::
 
@@ -268,10 +267,10 @@ Telegram 是另一种特殊情况。尽管其提供的资源链接是可用的�
 
 ```ts
 class LarkAdapter {
-  static inject = ['router']
+  static inject = ['server']
 
   constructor(ctx: Context) {
-    ctx.router.get('/lark/assets/:message_id/:key', async (ctx) => {
+    ctx.server.get('/lark/assets/:message_id/:key', async (ctx) => {
       const key = ctx.params.key
       const messageId = ctx.params.message_id
       const selfId = ctx.request.query.self_id
@@ -283,7 +282,7 @@ class LarkAdapter {
         responseType: 'stream',
       })
       ctx.status = 200
-      ctx.response.headers['content-type'] = response.headers['content-type']
+      ctx.response.headers['content-type'] = response.headers.get('content-type')
       ctx.response.body = response.data
     })
   }
@@ -296,13 +295,13 @@ class LarkAdapter {
 h.image(`http://${host}/image/${message_id}/${image_key}?self_id=${selfId}`)
 ```
 
-::: tip
+:::tip
 反向代理同时也带来了一个新的问题，那就是当这个链接被原样发送时，外网可能无法访问到这个链接。但无需担心，上面提到的 `http.file()` 方法恰好可以解决这个问题。因此，即使经过了反向代理，Koishi 也可以确保消息的跨平台转发插件能够正常工作。
 :::
 
-### 扩展消息元素
+### 扩展消息元素 {#extension}
 
-平台可以提供扩展消息元素，但需要加上平台通用名称作为前缀。下面是一个例子：
+平台可以提供扩展消息元素，但需要加上平台通用名称作为前缀。Below is an example:
 
 ```html
 <kook:card size="lg">
@@ -310,7 +309,7 @@ h.image(`http://${host}/image/${message_id}/${image_key}?self_id=${selfId}`)
 </kook:card>
 ```
 
-标准元素的平台扩展属性也可以通过加上平台通用名称作为前缀的方式声明。下面是一个例子：
+标准元素的平台扩展属性也可以通过加上平台通用名称作为前缀的方式声明。Below is an example:
 
 ```html
 <!-- src 是 audio 元素的标准属性。 -->
@@ -318,6 +317,6 @@ h.image(`http://${host}/image/${message_id}/${image_key}?self_id=${selfId}`)
 <audio src="url1" kook:cover="url2"/>
 ```
 
-::: tip
+:::tip
 平台扩展消息元素的属性是否需要前缀由 SDK 实现自行决定。如果某个消息元素希望在未来标准化，那么加上前缀可以降低迁移成本。如果没有标准化需要，那么去掉前缀在书写上更方便。
 :::

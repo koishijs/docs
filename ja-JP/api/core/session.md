@@ -1,4 +1,4 @@
-# 会话 (Session)
+# セッション
 
 会话来源于 Koishi v1 的元信息对象，并在后续的版本中发展成了专门的类并大幅扩展了功能。目前的会话已经参与到了 Koishi 的绝大部分工作。
 
@@ -25,7 +25,7 @@
 
 当前会话绑定的频道数据，是一个可观测对象。
 
-::: warning
+:::warning
 这个属性对应的是 Koishi 内置数据结构中的频道数据，而不是平台的频道数据。如果你需要访问平台频道数据，请使用 `session.event.channel`。
 :::
 
@@ -58,11 +58,11 @@
 
 当前会话绑定的用户数据，是一个可观测对象。
 
-::: warning
+:::warning
 这个属性对应的是 Koishi 内置数据结构中的用户数据，而不是平台的用户数据。如果你需要访问平台用户数据，请使用 `session.event.user`。
 :::
 
-## 访问器属性
+## 访问器属性 {#accessor-property}
 
 对于部分常用的事件体属性，我们提供了访问器属性。
 
@@ -71,7 +71,7 @@
 - 类型: <code>[GuildMember](../resources/member.md) & [User](../resources/user.md)</code>
 - 完整写法: `{ ...session.event.user, ...session.event.member }`
 
-::: tip
+:::tip
 注意到 `GuildMember` 和 `User` 有部分重叠的字段，例如 `name` 和 `avatar`。在这种情况下，`GuildMember` 的字段会覆盖 `User` 的字段。
 :::
 
@@ -201,7 +201,7 @@
 - **options.timeout:** 中间件的生效时间，缺省时会使用 [`app.config.delay.prompt`](./app.md#options-delay)
 - 返回值: `Promise<T>` 回调函数返回的结果
 
-处理当前会话的下一次输入，如果超时则会返回 `null`。如果回调函数返回值非空，则下一次输入不会进入中间件处理流程。
+处理当前会话的下一次输入，如果超时则会返回 `undefined`。如果回调函数返回值非空，则下一次输入不会进入中间件处理流程。
 
 ### session.suggest(options)
 

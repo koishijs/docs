@@ -2,7 +2,7 @@
 
 Koishi is a cross-platform, extensive, high-performance chatbot framework.
 
-The name and icon design are inspired from [Komeiji Koishi](https://en.touhouwiki.net/wiki/Koishi_Komeiji), who is a character in Touhou Project. Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
+它的名字和图标设计来源于东方 Project 中的角色 [古明地恋 (Komeiji Koishi)](https://zh.touhouwiki.net/wiki/古明地恋)。Komeiji Koishi manipulates the unconscious, which symbolizes the theme of a chatbot as well as the love of the Koishi developers for it.
 
 ## Features
 
@@ -16,7 +16,9 @@ Koishi provides an out-of-the-box console. Even zero-based users can build their
 
 ### Power of Community
 
-After four years of iteration, Koishi has developed a rich plugin ecosystem and a robust system that matches it. 超过 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。Whether your goal is to build a large-scale interactive application or a lightweight assistant chatbot, Koishi provides you with the best practices. We have also detailed documents for you in case that you are worried about the complexity of the massive functions through plugins.
+After four years of iteration, Koishi has developed a rich plugin ecosystem and a robust system that matches it.
+超过 1000 个官方和社区插件覆盖了机器人开发的方方面面，从平台支持、数据库、资源存储、网页控制台、状态管理到具体的业务功能一应俱全。Whether your goal is to build a large-scale interactive application or a lightweight assistant chatbot, Koishi provides you with the best practices.
+We have also detailed documents for you in case that you are worried about the complexity of the massive functions through plugins.
 
 ### Made for Developers
 
@@ -28,4 +30,4 @@ In addition, there are many professional functions for developers built in Koish
 
 ## Get Started
 
-Click [Getting Started](./starter/) to start your journey with Koishi.
+点击前往 [起步](./starter/)，开启你的 Koishi 之旅。
