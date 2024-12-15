@@ -13,11 +13,11 @@ next:
 这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
 :::
 
-:::warning
+:::danger
 我们强烈建议使用模板项目进行 Koishi 开发。如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。
 :::
 
-虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
+虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望在没有 Node.js 的环境下运行 Koishi，那么直接调用将会成为更具有灵活性的选择。
 
 ## Initialisation du projet
 
