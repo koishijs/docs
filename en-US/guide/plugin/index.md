@@ -39,7 +39,7 @@ ctx.plugin(class {
 
 ## Modular Plugins
 
-The greatest advantage of pluginization is the ability to write different functionalities in separate modules. 此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容)。
+The greatest advantage of pluginization is the ability to write different functionalities in separate modules. 此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#默认导入) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#命名空间导入)。
 
 For object plugins, you can also set `name` field as the name of the plugin.For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
 
