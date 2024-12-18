@@ -49,7 +49,7 @@ npm i typescript @types/node esbuild esbuild-register -D
 yarn init
 
 # 安装 Koishi 和相关插件
-yarn add koishi
+yarn add koishi \
          @koishijs/plugin-server \
          @koishijs/plugin-console \
          @koishijs/plugin-sandbox \
