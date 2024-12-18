@@ -2,8 +2,8 @@
 
 Koishi describes itself as a "cross-platform" framework, but what does this "cross-platform" mean?This doesn't just mean that Koishi supports multiple running platforms, but that Koishi can access multiple chat platforms simultaneously and provide the most native experience possible:
 
-- Koishi 提供了统一的接口，你可以在任何聊天平台上享受完整的 Koishi 生态。
-- Koishi 应用可以同时接入多个聊天平台，用户可以在任意平台上与你的机器人进行交互。
+- Koishi provides a unified interface so you can enjoy the full Koishi ecosystem on any chat platform。
+- Koishi app can access multiple chat platforms at the same time, so users can interact with your bot on any platform。
 - Koishi 原生地支持了跨平台账号绑定，这使得用户可以带着全部数据进行无感迁移。
 
 现在就让我们来说说，如何在 Koishi 中使用跨平台的账号系统。
@@ -28,9 +28,9 @@ Koishi describes itself as a "cross-platform" framework, but what does this "cro
 
 If you want to login or bind your account, the platform name and user ID here will be useful.
 
-## Console Login
+## 控制台登录 {#console-login}
 
-The [auth](../../plugins/console/auth.md) plugin allows any user to log in and manage their Koishi account from the console.In addition, the plugin comes with an administrator account, which is the most convenient way to raise the rights of users who have just built Koishi.
+[auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。In addition, the plugin comes with an administrator account, which is the most convenient way to raise the rights of users who have just built Koishi.
 
 ### Configure Login Plugin
 
@@ -40,7 +40,7 @@ Click on the Auth plugin in the Plugin Configuration screen.At this point we wil
 
 ![plugin-login](/manual/console/plugin-login.dark.webp) {.dark-only}
 
-Enter the password you've prepared. Click "Activate plugin".Select "User Password Login", enter the username (default `admin` if you haven't changed it) and password you just configured, and click "Login" to enter your personal page.
+Enter the password you've prepared. Click "Activate plugin".此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
 
 ![login-password](/manual/console/login-password.light.webp) {.light-only}
 
@@ -76,7 +76,7 @@ Click the "Disconnect" button on the right side of the platform account if you w
 
 ### Binding by command
 
-[bind](../../plugins/common/bind.md) The plugin also implements the binding of accounts by means of a command.Using the platform account you want to bind to, send `bind` to the bot:
+[bind](../../plugins/common/bind.md) 插件通过指令也实现了账号绑定。使用要绑定的平台账号向机器人发送 `bind`：
 
 <chat-panel>
 <chat-message nickname="Alice">bind</chat-message>
@@ -87,7 +87,7 @@ Click the "Disconnect" button on the right side of the platform account if you w
 </chat-message>
 </chat-panel>
 
-Using the original platform account, follow the prompt and send `Koishi/123456` to the bot.The binding is complete at this point if your first message is a private chat message.The bot will ask you to confirm again if your first message is a guild chat message:
+跟随提示，使用原始平台账号向机器人发送 `Koishi/123456`。The binding is complete at this point if your first message is a private chat message.The bot will ask you to confirm again if your first message is a guild chat message:
 
 <chat-panel>
 <chat-message nickname="Alice">Koishi/123456</chat-message>
@@ -99,6 +99,6 @@ Using the original platform account, follow the prompt and send `Koishi/123456` 
 </chat-message>
 </chat-panel>
 
-Follow the prompts again and send `Koishi/654321` to the bot using the target platform account to complete the binding.
+再次跟随提示，使用目标平台账号向机器人发送 `Koishi/654321`，即可完成绑定。
 
-Once the binding is complete, you can unbind the state at any time by sending `bind -r` to the robot from the target platform.
+绑定完成后，你可以随时在目标平台向机器人发送 `bind -r` 来解除绑定状态。

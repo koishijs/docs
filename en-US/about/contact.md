@@ -12,19 +12,19 @@ This group is for the users who newly used Koishi, or have problems when using K
 
 ### For developers
 
-[426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
+[426230045](https://jq.qq.com/?_wv=1027\&k=6FDoxQ6g)
 
 This group is for the users who had learned Node.js / TypeScript and interested in Koishi Development. You can discuss anything deeply about Koishi in this group.
 
 ## Discord
 
-[Join the Server](https://discord.com/invite/xfxYwmd284)
+[Join server](https://discord.com/invite/xfxYwmd284)
 
 Our Discord server has channels with different features such as Version Releases, Development Discuss and Question Feedback. You can also participate in discussions here.
 
 ## Telegram
 
-[Join the Chat Group](https://t.me/koishichat) / [Join the Announcement Channel](https://t.me/koishichannel)
+[Join Group] (https://t.me/koishichat) / [Join Notification Channel](https://t.me/koishichannel)
 
 Welcome to join our Telegram chat group, where you can participate in discussions or receive version update notifications in the announcement channel.
 
@@ -36,6 +36,12 @@ Forum is a special way of discussing. Your issues, ideas, feedback will save for
 
 ## Enterprise Support
 
-QQ：[2953529126](https://qm.qq.com/q/P8eMJkP5yI) / WeChat：ilharp
+QQ: [2953529126] (https://qm.qq.com/q/P8eMJkP5yI) / WeChat: ilharp
 
 We provide exclusive support for enterprise users. In addition to participating in discussions through the above methods, enterprise users can also add customer service to get one-on-one exclusive support.
+
+## Community channels
+
+Active community members have spontaneously created unofficial discussion channels where you can also participate in discussions.
+
+Go to the Community Resources (./community.md) page to see more unofficial channels.

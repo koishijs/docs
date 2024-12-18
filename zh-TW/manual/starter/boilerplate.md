@@ -7,7 +7,7 @@ next:
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 创建模板项目
+# 建立模板專案
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。

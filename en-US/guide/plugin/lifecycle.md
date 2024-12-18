@@ -1,21 +1,21 @@
 # Lifecycle
 
-In the [Event System](../basic/events.md), we have already learned about session events dispatched by chat platforms. In addition to these, Koishi also provides various lifecycle events. These events are triggered at specific phases during Koishi's lifetime, and you can implement various functionalities by listening to them. This section mainly introduces some core events relevant to plugin development.
+在 [事件系统](../basic/events.md) 中，我们已经了解了由聊天平台推送的会话事件。In addition to these, Koishi also provides various lifecycle events. These events are triggered at specific phases during Koishi's lifetime, and you can implement various functionalities by listening to them. This section mainly introduces some core events relevant to plugin development.
 
-For a complete list of events provided by Koishi, you can refer to the [Events](../../api/core/events.md).
+要了解 Koishi 所提供的全部事件，可以参考 [事件列表](../../api/core/events.md)。
 
-## Asynchronous loading and `ready` event
+## 异步加载与 `ready` 事件
 
-The `ready` event is triggered when the application starts. If a plugin is loaded while the application is already in a started state, the ready event will be triggered immediately. The following scenarios are where you would typically use the `ready` event:
+`ready` 事件在应用启动时触发。If a plugin is loaded while the application is already in a started state, the ready event will be triggered immediately. 在下面的场景建议将逻辑放入 `ready` 事件：
 
 - Contains asynchronous operations (e.g., file operations, network requests, etc.)
 - Actions to be performed only after all other plugins have been loaded
 
-## Side effects and `dispose` event
+## Side-effects and the `dispose` event
 
 ### Unload Plugins
 
-We have previously understood how to enable plugins; Koishi also supports disabling a plugin at runtime. The `ctx.plugin()` method returns a `Fork` object, and calling `fork.dispose()` can disable a plugin.
+We have previously understood how to enable plugins; Koishi also supports disabling a plugin at runtime. `ctx.plugin()` returns a `Fork`.Call `fork.dispose()` to disable a plugin.
 
 ```ts
 import { Context } from 'koishi'
@@ -35,7 +35,7 @@ const fork = ctx.plugin(callback)
 fork.dispose()
 ```
 
-For reusable plugins, calling `fork.dispose()` will only disable the instance of the plugin represented by that particular `fork`. If you want to remove all side effects, you can use `ctx.registry.delete()`:
+对于可重用的插件，`fork.dispose()` 也只会停用 `fork` 对应的那一次。如果你想取消全部的副作用，可以使用 `ctx.registry.delete()`：
 
 ```ts
 // Remove all side effects from a reusable plugin
@@ -46,7 +46,7 @@ ctx.registry.delete(plugin)
 
 Koishi's plugin system supports hot reloading, meaning that any plugin might be loaded and unloaded multiple times at runtime. To make this possible, all side effects of a plugin must be cleaned up when it is unloaded.
 
-Most methods of `ctx` will automatically clean up side effects when a plugin is disabled. However, if you are using methods outside of `ctx`, you might introduce other side effects, which then need to be manually cleaned up using the `dispose` event. Below is an example:
+绝大部分 `ctx` 方法都会在在插件被停用自动回收副作用；然而，如果你使用了 `ctx` 之外的方法，你的代码还可能通过其他方式引入副作用，这时就需要通过 `dispose` 事件来手动清除它们。Below is an example:
 
 ```ts
 // An example server plugin
@@ -57,18 +57,18 @@ export function apply(ctx: Context, config) {
   const server = createServer()
 
   ctx.on('ready', () => {
-    // Listen to a port when the plugin starts
+    // listen on start
     server.listen(1234)
   })
 
   ctx.on('dispose', () => {
-    // Close the port when the plugin is disabled
+    // close when dispose
     server.close()
   })
 }
 ```
 
-## Reusability and `fork` Event
+## 可重用性与 `fork` 事件
 
 ### Reusable Plugins
 
@@ -83,15 +83,15 @@ ctx.plugin(callback)
 ctx.plugin(callback)
 ```
 
-If you run the code above, you'll notice that `called` is printed only once. This is because `ctx.plugin()` checks if the plugin has already been loaded. If it has, it returns the existing `Fork` object, rather than re-running the plugin callback.
+执行上面的代码，你会发现 `called` 只会被打印一次。这是因为 `ctx.plugin()` 会检测插件是否已经被加载：如果是，则会直接返回之前的 `Fork` 对象，而不会再次执行插件的逻辑。
 
 The primary reason for this design is that plugins often consume resources. Activating a plugin multiple times could lead to unexpected issues. For instance, a plugin might register a specific command; activating it multiple times would result in multiple registrations of the same command, creating ambiguity when the command is invoked.
 
-However, this doesn't mean that all plugins should not be reused. If you have such a need, Koishi provides a way to do it—simply declare the `reusable` property of the plugin as `true`. Here's an example:
+However, this doesn't mean that all plugins should not be reused. 如果你真的有这样的需求，Koishi 也提供了方法——只需声明插件的 `reusable` 属性为 `true` 即可。Here's an example:
 
 ```ts title=reply.ts
 export const name = 'reply'
-export const reusable = true  // Declare this plugin as reusable
+export const reusable = true    // mark the plugin reusable
 
 export interface Config {
   input: string
@@ -100,7 +100,7 @@ export interface Config {
 
 export function apply(ctx: Context, config: Config) {
   ctx.middleware((session, next) => {
-    // Reply with output when user sends input
+    // response output when user send input
     if (session.content === config.input) {
       return config.output
     }
@@ -129,7 +129,7 @@ export default class Bar {
 
 ### Maintain Shared States
 
-A more complex situation arises when we need plugins to be reusable and maintain some shared state. For example, can we write a command that always returns the number of times the plugin has been invoked? This is where the `fork` event comes in handy:
+A more complex situation arises when we need plugins to be reusable and maintain some shared state. For example, can we write a command that always returns the number of times the plugin has been invoked? 这时候 `fork` 事件就派上用场了：
 
 ```ts title=count.ts
 export const name = 'count'
@@ -150,7 +150,7 @@ export function apply(ctx: Context) {
 }
 ```
 
-Here, the plugin listens for the fork event. `fork` 是一个生命周期事件，当插件每次被调用时都会触发。Thus, we can update the shared state in the `fork` event handler. Every time a new `Fork` object is created, `count` increases by 1; and each time a `Fork` object is disposed, `count` decreases by 1. When the user invokes the command, we simply return the value of `count`.
+我们可以看到，上面的插件并没有声明 `reusable` 属性，取而代之的是监听了 `fork` 事件。`fork` 是一个生命周期事件，当插件每次被调用时都会触发。因此，我们可以在 `fork` 事件中对共享状态进行更新。我们每创建一个新的 `Fork` 对象，就会增加一次 `count`；而每当 `Fork` 对象被停用，就会减少一次 `count`；当用户调用指令时，我们只需要返回 `count` 的值即可。
 
 `fork` 事件实际上将插件分割成了两个不同的作用域。外侧的代码仍然只会被执行一次，对应着不可重用的部分；而内侧的代码则会被执行多次，对应着可重用的部分。在上面的例子中，只需将指令的注册放在外侧作用域中，这样就不用担心重复注册的问题了。
 
@@ -160,8 +160,8 @@ Here, the plugin listens for the fork event. `fork` 是一个生命周期事件�
 
 Let's revisit the concept of reusable plugins:
 
-1. Based on the `reusable` property, plugins can be categorized as reusable or non-reusable: Non-reusable plugins take effect only once when invoked multiple times, while reusable plugins take effect multiple times.
-2. Both types can essentially use the `fork` event to express themselves: the logic for non-reusable plugins is written outside the `fork` event, and the logic for reusable plugins is written inside it.
+1. 根据插件的 `reusable` 属性，可以将插件分为可重用插件和不可重用插件：不可重用插件被调用多次时，只会执行一次插件逻辑；而可重用插件被调用多次时，会执行多次插件逻辑；
+2. 这两种类型本质上都可以使用 `fork` 事件来表达：不可重用插件的逻辑写在 `fork` 事件的外侧，而可重用插件的逻辑写在 `fork` 事件的内侧。
 
 当我们嵌套使用可重用插件和不可重用插件时，又会发生什么呢？让我们来看一些例子吧。
 
@@ -194,10 +194,10 @@ ctx.plugin((ctx) => {
 
 ```ts internal.ts
 export function apply(ctx: Context) {
-  // 注册指令
+  // register a command
   ctx.command('foo').action(callback)
 
-  // 扩展控制台
+  // extend the console
   ctx.console.addEntry('/client')
 }
 ```

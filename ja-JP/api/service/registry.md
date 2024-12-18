@@ -1,4 +1,4 @@
-# 插件系统 (Registry)
+# プラグインシステム (Registry)
 
 ## 实例属性
 
@@ -20,19 +20,13 @@
 
 当前上下文中安装一个插件。参见 [认识插件](../../guide/plugin/)。
 
-### ctx.using(deps, plugin)
+### ctx.inject(deps, plugin)
 
 - **deps:** `string[]` 依赖的服务列表
 - **plugin:** `Plugin` 要安装的插件
 - 返回值: `this`
 
 安装一个存在服务依赖的插件。参见 [服务的依赖关系](../../guide/plugin/service.md#服务的依赖关系)。
-
-### ctx.start()
-
-- 返回值: `Promise<void>`
-
-启动此应用。
 
 ### ctx.stop()
 

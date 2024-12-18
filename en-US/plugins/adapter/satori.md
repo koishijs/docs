@@ -1,6 +1,6 @@
 # @koishijs/plugin-adapter-satori
 
-::: tip
+:::tip
 另见：[@koishijs/plugin-server-satori](../develop/server-satori.md)。
 :::
 

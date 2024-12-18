@@ -1,7 +1,3 @@
----
-layout: schema
----
-
-# Config Schema
+# Schema
 
 <vp-overview/>

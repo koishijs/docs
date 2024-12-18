@@ -2,17 +2,17 @@
 layout: schema
 code: |
   Schema.object({
-  value: Schema.union([
-  Schema.const().description('unset'),
-  Schema.number().description('number'),
-  Schema.string().description('string'),
-  Schema.const(true).description('true'),
-  Schema.const(false).description('false'),
-  Schema.object({
-  foo: Schema.string().description('对象的一个属性。'),
-  bar: Schema.number().description('对象的另一个属性。'),
-  }).description('object'),
-  ]).description('从六种可能情况中选择一个。'),
+    value: Schema.union([
+      Schema.const().description('unset'),
+      Schema.number().description('number'),
+      Schema.string().description('string'),
+      Schema.const(true).description('true'),
+      Schema.const(false).description('false'),
+      Schema.object({
+        foo: Schema.string().description('对象的一个属性。'),
+        bar: Schema.number().description('对象的另一个属性。'),
+      }).description('object'),
+    ]).description('从六种可能情况中选择一个。'),
   }).description('配置项')
 ---
 
