@@ -166,8 +166,19 @@ yarn pub [...name]
 
 This will be released of all plugins that have changed version numbers.
 
-:::tip
-It takes some time for the plugin to be successfully published to the plugin marketplace (usually within 15 minutes). Please be patient.
+::: tip
+从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
+
+如果发布时多次失败或者长时间无响应，可以添加 `--debug` 选项以显示调试信息。
+
+```npm
+npm run pub [...name] --debug
+```
+
+```yarn
+yarn pub [...name] --debug
+```
+
 :::
 
 If you are in China and have configured a mirror, you may encounter the following error hint:
