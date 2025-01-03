@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "官方外掛一覽",
             "link": "/plugins/"
           }
         ],
@@ -77,6 +77,10 @@
           {
             "text": "參與討論",
             "link": "/about/contact.md"
+          },
+          {
+            "text": "社區資源",
+            "link": "/about/community.md"
           },
           {
             "text": "各版本介绍",
@@ -163,15 +167,15 @@
           "text": "配方",
           "items": [
             {
-              "text": "指令进阶技巧",
+              "text": "指令進階技巧",
               "link": "/manual/recipe/execution.md"
             },
             {
-              "text": "维护多份配置",
+              "text": "維護多份配置",
               "link": "/manual/recipe/multiple.md"
             },
             {
-              "text": "搜索插件市场",
+              "text": "搜尋外掛市場",
               "link": "/manual/recipe/search.md"
             },
             {
@@ -181,14 +185,14 @@
           ]
         },
         {
-          "text": "启动器",
+          "text": "啟動器",
           "items": [
             {
-              "text": "系统要求",
+              "text": "系統要求",
               "link": "/manual/launcher/system.md"
             },
             {
-              "text": "命令行工具",
+              "text": "命令列工具",
               "link": "/manual/launcher/cli.md"
             }
           ]
@@ -299,7 +303,7 @@
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "權限管理",
               "link": "/guide/database/permission.md"
             }
           ]
@@ -441,19 +445,19 @@
           "text": "內建服務",
           "items": [
             {
-              "text": "事件系统 (Events)",
+              "text": "事件系統 (Events)",
               "link": "/api/service/events.md"
             },
             {
-              "text": "过滤器 (Filter)",
+              "text": "過濾器 (Filter)",
               "link": "/api/service/filter.md"
             },
             {
-              "text": "网络请求 (HTTP)",
+              "text": "網路請求 (HTTP)",
               "link": "/api/service/http.md"
             },
             {
-              "text": "国际化 (I18n)",
+              "text": "國際化 (I18n)",
               "link": "/api/service/i18n.md"
             },
             {
@@ -465,12 +469,16 @@
               "link": "/api/service/permissions.md"
             },
             {
-              "text": "插件系统 (Registry)",
+              "text": "外掛系統 (Registry)",
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
-              "link": "/api/service/router.md"
+              "text": "服务器 (Server)",
+              "link": "/api/service/server.md"
+            },
+            {
+              "text": "计时器 (Timer)",
+              "link": "/api/service/timer.md"
             }
           ]
         },
@@ -516,18 +524,18 @@
           ]
         },
         {
-          "text": "消息元素",
+          "text": "訊息元素",
           "items": [
             {
-              "text": "语法规范",
+              "text": "語法規範",
               "link": "/api/message/syntax.md"
             },
             {
-              "text": "标准元素",
+              "text": "標準元素",
               "link": "/api/message/elements.md"
             },
             {
-              "text": "内置组件",
+              "text": "內建元件",
               "link": "/api/message/components.md"
             },
             {
@@ -541,7 +549,7 @@
           ]
         },
         {
-          "text": "数据库",
+          "text": "資料庫",
           "items": [
             {
               "text": "資料模型 (Model)",
@@ -556,7 +564,7 @@
               "link": "/api/database/query.md"
             },
             {
-              "text": "求值表达式 (Eval)",
+              "text": "求值表示式 (Eval)",
               "link": "/api/database/evaluation.md"
             },
             {
@@ -570,10 +578,10 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "控制檯",
           "items": [
             {
-              "text": "服务端 API",
+              "text": "服務端 API",
               "link": "/api/console/server.md"
             },
             {
@@ -581,11 +589,11 @@
               "link": "/api/console/context.md"
             },
             {
-              "text": "组合式 API",
+              "text": "組合式 API",
               "link": "/api/console/composition.md"
             },
             {
-              "text": "内置组件",
+              "text": "內建元件",
               "link": "/api/console/component.md"
             }
           ]
@@ -594,15 +602,15 @@
           "text": "其他功能",
           "items": [
             {
-              "text": "观察者 (Observer)",
+              "text": "觀察者 (Observer)",
               "link": "/api/utils/observer.md"
             },
             {
-              "text": "输出日志 (Logger)",
+              "text": "輸出日誌 (Logger)",
               "link": "/api/utils/logger.md"
             },
             {
-              "text": "随机操作 (Random)",
+              "text": "隨機操作 (Random)",
               "link": "/api/utils/random.md"
             },
             {
@@ -666,7 +674,7 @@
               "link": "/cookbook/practice/bundle.md"
             },
             {
-              "text": "编写测试",
+              "text": "編寫測試",
               "link": "/cookbook/practice/testing.md"
             }
           ]
@@ -690,7 +698,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "官方外掛一覽",
               "link": "/plugins/"
             }
           ]
@@ -842,31 +850,31 @@
               "link": "/plugins/console/index.md"
             },
             {
-              "text": "资源管理器 (Explorer)",
+              "text": "資源管理器 (Explorer)",
               "link": "/plugins/console/explorer.md"
             },
             {
-              "text": "插件依赖图 (Insight)",
+              "text": "外掛依賴圖 (Insight)",
               "link": "/plugins/console/insight.md"
             },
             {
-              "text": "本地翻译 (Locales)",
+              "text": "本地翻譯 (Locales)",
               "link": "/plugins/console/locales.md"
             },
             {
-              "text": "日志管理 (Logger)",
+              "text": "日誌管理 (Logger)",
               "link": "/plugins/console/logger.md"
             },
             {
-              "text": "插件市场 (Market)",
+              "text": "外掛市場 (Market)",
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "沙箱除錯 (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
-              "text": "运行状态 (Status)",
+              "text": "執行狀態 (Status)",
               "link": "/plugins/console/status.md"
             }
           ]
@@ -879,12 +887,24 @@
               "link": "/plugins/develop/hmr.md"
             },
             {
-              "text": "測試工具 (Mock)",
+              "text": "網路請求 (HTTP)",
+              "link": "/plugins/develop/http.md"
+            },
+            {
+              "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "通知服务 (Notifier)",
+              "link": "/plugins/develop/notifier.md"
+            },
+            {
+              "text": "网络代理 (Proxy Agent)",
+              "link": "/plugins/develop/proxy-agent.md"
+            },
+            {
+              "text": "服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "API 服务器 (Server Satori)",
@@ -906,7 +926,7 @@
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "官方外掛一覽",
               "link": "/plugins/"
             }
           ]
@@ -1008,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置聯動 1",
+              "text": "Intersect + Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置聯動 2",
+              "text": "Intersect + Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
@@ -1047,7 +1067,7 @@
               "link": "/about/faq.md"
             },
             {
-              "text": "社区资源",
+              "text": "社區資源",
               "link": "/about/community.md"
             },
             {
@@ -1108,35 +1128,35 @@
               "link": "/releases/v4.1.md"
             },
             {
-              "text": "v4.2 版本介绍",
+              "text": "v4.2 版本介紹",
               "link": "/releases/v4.2.md"
             },
             {
-              "text": "v4.3 版本介绍",
+              "text": "v4.3 版本介紹",
               "link": "/releases/v4.3.md"
             },
             {
-              "text": "v4.4 版本介绍",
+              "text": "v4.4 版本介紹",
               "link": "/releases/v4.4.md"
             },
             {
-              "text": "v4.5 版本介绍",
+              "text": "v4.5 版本介紹",
               "link": "/releases/v4.5.md"
             },
             {
-              "text": "v4.6 版本介绍",
+              "text": "v4.6 版本介紹",
               "link": "/releases/v4.6.md"
             },
             {
-              "text": "v4.7 版本介绍",
+              "text": "v4.7 版本介紹",
               "link": "/releases/v4.7.md"
             },
             {
-              "text": "v4.8 版本介绍",
+              "text": "v4.8 版本介紹",
               "link": "/releases/v4.8.md"
             },
             {
-              "text": "v4.9 版本介绍",
+              "text": "v4.9 版本介紹",
               "link": "/releases/v4.9.md"
             },
             {
@@ -1144,23 +1164,23 @@
               "link": "/releases/v4.10.md"
             },
             {
-              "text": "v4.11 版本介绍",
+              "text": "v4.11 版本介紹",
               "link": "/releases/v4.11.md"
             },
             {
-              "text": "v4.12 版本介绍",
+              "text": "v4.12 版本介紹",
               "link": "/releases/v4.12.md"
             },
             {
-              "text": "v4.13 版本介绍",
+              "text": "v4.13 版本介紹",
               "link": "/releases/v4.13.md"
             },
             {
-              "text": "v4.14 版本介绍",
+              "text": "v4.14 版本介紹",
               "link": "/releases/v4.14.md"
             },
             {
-              "text": "v4.15 版本介绍",
+              "text": "v4.15 版本介紹",
               "link": "/releases/v4.15.md"
             }
           ]

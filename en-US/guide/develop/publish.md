@@ -1,4 +1,4 @@
-# Publishing Plugins
+# Publish your plugin
 
 Your plugin should be published onto npm before being available to Koishi users.
 只需满足一定的规范，你的插件就能显示在 [插件市场](../../market/) 中，其他人可以通过控制台来安装它。
@@ -57,13 +57,13 @@ The `package.json` in your plugin should meet the requirements below to appear i
 - [`name`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#name) should match one of these formats:
   - `koishi-plugin-*`
   - `@bar/koishi-plugin-*`
-  - `@koishijs/plugin-*` (官方插件)
+  - `@koishijs/plugin-*` (official plugin)
   - 其中 `*` 是由数字、小写字母和连字符 `-` 组成的字符串
-- [`name`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#name) 不能与已发布的插件重复或相似
-- [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
-- [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
-- 不能声明 [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
-- Avoid [deprecating](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) of the latest version unless there is a valid reason to do so. For example, if you intend to re-release the plugin under a different name, it can be used to hide the old plugin on the marketplace.
+- [`name`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#name) is unique
+- [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) should match [semantic version](https://semver.org/) (usually from `1.0.0`)
+- [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) must contain `koishi`
+- Could not declare [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) to `true` (otherwise your plugin cannot be published)
+- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions)
 
 Example:
 
@@ -114,7 +114,7 @@ To make more information available to Koishi users, you could add more comprehen
 
 ### `koishi` 字段
 
-除此以外，我们还提供了一个额外的 `koishi` 字段，用于指定与 Koishi 相关的信息。
+We can also use the `koishi` field to specify Koishi related information
 
 ```json title=package.json
 {
@@ -133,15 +133,12 @@ To make more information available to Koishi users, you could add more comprehen
       "optional": ["assets"],               // 可选的服务
       "implements": ["dialogue"],           // 实现的服务
     },
-    "locales": ["en", "zh"],                // 支持的语言
   }
 }
 ```
 
-- **description:** 插件描述，应该是一个对象，其中的键代表语言名，值是对应语言下的描述
-- **service:** 插件的服务相关信息，具体包含下列属性：
-  - **implements:** services that your plugin implements, represented as an array of service names.
-- **locales:** This refers to the languages supported by the plugin, represented as an array of language names.
+- **description:** This refers to the description of the plugin, which should be an object. The keys represent the language names, and the values are the descriptions in the corresponding languages.
+- **service:** 插件的服务相关信息，详情请参见 [服务与依赖](../plugin/service.html#package-json)
 - **preview:** Configure `true` to allow plugin to be displayed as "developing" status
 - **hidden:** If set to true, this prevents the plugin from being displayed in the marketplace (you usually don’t need to do this).
 
@@ -149,9 +146,9 @@ To make more information available to Koishi users, you could add more comprehen
 Furthermore, there are certain aspects related to the deployment process of [Koishi Online](../../cookbook/practice/online.md), including browsers, exports, and more.Since they do not affect the mainline development, you can learn about them later.
 :::
 
-## Publishing Plugins
+## Publish your plugin
 
-Congratulations! It's time to publish your plugin, after editing the file above and [build source](./workspace.md##build-source-code).
+编辑完上面的清单文件并 [构建源代码](./workspace.md#build) 后，你就可以公开发布你的插件了。
 
 :::tabs code
 
@@ -169,8 +166,19 @@ yarn pub [...name]
 
 This will be released of all plugins that have changed version numbers.
 
-:::tip
-It takes some time for the plugin to be successfully published to the plugin marketplace (usually within 15 minutes). Please be patient.
+::: tip
+从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
+
+如果发布时多次失败或者长时间无响应，可以添加 `--debug` 选项以显示调试信息。
+
+```npm
+npm run pub [...name] --debug
+```
+
+```yarn
+yarn pub [...name] --debug
+```
+
 :::
 
 If you are in China and have configured a mirror, you may encounter the following error hint:
@@ -237,3 +245,23 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 - Default: incremented by the last of the release version number
 
 When updating the version of a plug-in, the versions of dependencies that rely on this plug-in will also be upgraded to ensure consistency in the workspace.进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
+
+## 弃用插件 {#deprecate}
+
+如果你不再维护某个插件，或者你希望更换一个名字重新发布，那么你可以弃用该插件。在任意目录运行下面的命令以弃用插件：
+
+```sh
+npm deprecate <full-name> <message>
+# 例如
+npm deprecate koishi-plugin-example "this plugin is deprecated"
+```
+
+请注意这里要写出的是完整的包名，而不是插件的目录名。
+
+你也可以弃用某个特定版本或版本区间 (默认情况下将弃用所有版本)：
+
+```sh
+npm deprecate <full-name>[@<version>] <message>
+```
+
+弃用插件的最新版本后，该插件将不再显示在插件市场中。未来你仍然可以发布新版本，这将使你的插件重新进入插件市场。

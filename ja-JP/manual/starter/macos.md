@@ -1,22 +1,22 @@
 ---
 prev:
-  text: インストール方法
+  text: インストーラーを選択
   link: /ja-JP/manual/starter/
 next:
-  text: 安装和配置插件
-  link: /zh-CN/manual/usage/market.html
+  text: プラグインのインストールと設定
+  link: /ja-JP/manual/usage/market.html
 ---
 
-# 为 macOS 安装
+# macOS にインストール
 
-::: tip
-その他のインストール方法を知りたい場合、[インストール方法](./index.md) に進んでください。
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-## 下载
+## ダウンロード
 
 - [安装包 (.pkg)](https://k.ilharp.cc/osx.pkg)
-- [その他のバージョン](https://github.com/koishijs/koishi-desktop/releases)
+- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## インストール
 
@@ -26,6 +26,6 @@ next:
 
 安装完成后，点击 Koishi 图标即可启动。Koishiコンソールが数秒で有効化されます。Koishiの使用を開始することができます。
 
-## その他の選択肢
+## その他の選択
 
-適切なインストーラーが見つかりませんか？[コンテナーで実行](./docker.md) や [テンプレートプロジェクトの作成](./boilerplate.md) を選択することもできます。
+適切なインストーラーが見つかりませんか？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。

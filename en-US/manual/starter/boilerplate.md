@@ -7,26 +7,26 @@ next:
   link: /en-US/manual/usage/market.html
 ---
 
-# Create a boilerplate
+# Create from Template
 
 :::tip
-如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
-本节将介绍我们最推荐的 Koishi 开发方案——创建模板项目。相比直接从零搭建，模板项目的优势在于：
+In this section, we will talk about creating a template project, which is strongly recommended for developing Koishi. Comparing to build up a project from scratch, there are advantages with the template:
 
-- 创建完成即是拥有带完整控制台体验的项目，一键创建各种模板插件
-- 支持直接加载 TypeScript，你可以尽情享受代码提示和类型检查带来的便利
-- 支持插件热重载，你可以在不重启应用的情况下修改插件代码，并获得即时的反馈
-- 支持二次开发，你可以将你自己的机器人与其他人的插件进行联合调试
+- Template One-click Creation. Create a project with full console experience and plugin templates with only one click
+- Fully TypeScript support. Enjoy the benefits of code hints and type checks.
+- Plugins Hot Reload. Get immediately feedback while changing plugin code without restarting the app.
+- Support Secondary Development. You could connect your own bot and others' plugins for debugging.
 
-当然，模板项目也可以直接用于生产。虽然在操作上可能不如启动器方便，但它提供了更多的自由度，并能在启动器所覆盖不到的场景下顺利运行。
+Of course, you could also use the template project in production. While it might be not convenient in operation, it would be more configurable than launchers. Template project could also be easily launched in case that launchers wouldn't work.
 
-## 安装 Node.js
+## Install Node.js
 
 Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运行环境，你需要自己安装它。
 
-### 下载安装包
+### Download Installer
 
 首先我们前往 [Node.js](https://nodejs.org/) 的官方网站：
 
@@ -34,19 +34,19 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运
 
 ![home](/manual/nodejs/home-light.webp) {.light-only}
 
-在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。我们建议你选择更加稳定的 LTS 版本，点击按钮即可下载安装包。
+在这里可以看到两个巨大的按钮，分别对应着 **LTS (长期维护版)** 和 **Current (最新版本)**。The stable LTS version is recommended. Click the button to download the installer.
 
-随后，运行下载好的安装包，根据提示完成整个安装流程即可。
+Then, launch the installer you just downloaded, complete the installation process.
 
-### 安装包管理器
+### NPM
 
-Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。我们同时也推荐功能更强大的 [yarn](https://classic.yarnpkg.com/) 作为包管理器。它的安装非常简单，只需打开命令行输入下面的命令：
+Node.js 自带名为 [npm](https://www.npmjs.com/) 的包管理器，你可以直接使用它。We also recommend more powerful [Yarn](https://classic.yarnpkg.com/) as package manager.It is very simple to install Yarn, just enter the following command into command line.
 
 ```sh
-# 安装 yarn
+# install yarn
 npm i -g yarn
 
-# 查看版本
+# check yarn version
 yarn -v
 ```
 
@@ -54,21 +54,21 @@ yarn -v
 部分 Windows 用户可能会发现以下错误 ([参考链接](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies))：
 
 ```text
-yarn：无法加载文件 yarn.ps1，因为在此系统上禁止运行脚本。
+yarn: File yarn.ps1 cannot be loaded because running scripts is disabled on this system.
 ```
 
-此时请以管理员身份重新运行终端，并输入下面的命令：
+Now start a (PowerShell) terminal with elevated permission (as Administrator), run the command below:
 
 ```sh
 Set-ExecutionPolicy RemoteSigned
 ```
 
-之后就可以正常使用 yarn 了。
+Then you can use Yarn normally.
 :::
 
-### 配置镜像源
+### Configure Registry Mirror
 
-如果你是国内用户，从 npm 或 yarn 上下载依赖可能非常慢。因此，我们推荐你配置一下镜像源，以提升安装速度。
+If you live in Chinese mainland, it might be very slow when you download dependencies from npm or yarn. Therefore, it is recommended to configure a registry mirror to speed up the installation process.
 
 :::tabs code
 
@@ -82,7 +82,7 @@ yarn config set registry https://registry.npmmirror.com
 
 :::
 
-## 创建项目
+## Create a Project
 
 Open a command line, cd to the directory that you want to create a Koishi template project.
 
@@ -109,9 +109,9 @@ yarn create koishi
 
 Follow the prompts and finalize the initialization process.
 
-## 启动应用
+## Launch the Application
 
-If you have successfully finalized the operations above, your application should be already launched, the Koishi Console Web UI should be also opened. 如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。当应用处于关闭状态时，你可以在运行下面的指令以再次启动：
+If you have successfully finalized the operations above, your application should be already launched, the Koishi Console Web UI should be also opened. 如果你想要关闭应用，可以在命令行中按下 `Ctrl+C` 组合键。When your application is terminated, you could enter the following command to launch it again:
 
 :::tabs code
 
@@ -127,7 +127,7 @@ yarn start
 
 ## What's Next...
 
-Congratulations on mastering the basic of Koishi! 接下来：
+Congratulations on mastering the basic of Koishi! Moving forward:
 
 - 如果你希望了解 Koishi 的更多功能，请前往 [安装和配置插件](../usage/market.md)
 - 如果你希望立即开始你的插件开发，请前往 [开发指南](../../guide/index.md)

@@ -1,7 +1,7 @@
 {
   "name": "Koishi",
   "short_name": "Koishi",
-  "description": "跨平台、可扩展、高性能的机器人框架",
+  "description": "Un cadre de développement de chatbots performant, extensible et multiplateforme",
   "start_url": "/fr-FR/",
   "display": "standalone",
   "background_color": "#ffffff",
