@@ -14,9 +14,13 @@
 
 ### 网易 163 邮箱
 
-- 接收服务器：`imap.163.com`，端口号 `993`
-- 发送服务器：`smtp.163.com`，端口号 `465` 或 `994`
-- 参考：[网易邮箱 IMAP 服务](https://mail.163.com/html/110127_imap/index.htm)
+ **由于 [#204](https://github.com/satorijs/satori/issues/204), 暂时无法正常接入网易（163, 126）邮箱**
+ 
+~~- 接收服务器：`imap.163.com`，端口号 `993`~~ 
+
+~~- 发送服务器：`smtp.163.com`，端口号 `465` 或 `994`~~ 
+
+~~- 参考：[网易邮箱 IMAP 服务](https://mail.163.com/html/110127_imap/index.htm)~~ 
 
 ### Outlook
 
