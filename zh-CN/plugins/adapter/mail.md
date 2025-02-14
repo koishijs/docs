@@ -24,9 +24,13 @@
 
 ### Outlook
 
-- 接收服务器：`outlook.office365.com`，端口号 `993`
-- 发送服务器：`smtp-mail.outlook.com`，端口号 `587`
-- 参考：[Outlook.com 的 POP、IMAP 和 SMTP 设置](https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040)
+**[Outlook现仅支持OAuth验证](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online)**
+
+~~- 接收服务器：`outlook.office365.com`，端口号 `993`~~
+
+~~- 发送服务器：`smtp-mail.outlook.com`，端口号 `587`~~
+
+~~- 参考：[Outlook.com 的 POP、IMAP 和 SMTP 设置](https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040)~~
 
 ### Gmail
 
