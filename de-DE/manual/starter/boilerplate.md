@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 选择安装方式
+  text: Andere Installationsmethoden
   link: /de-DE/manual/starter/
 next:
-  text: 安装和配置插件
+  text: Installation und Konfiguration der Plugins
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 创建模板项目
+# Vorlagenprojekt erstellen
 
 :::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。

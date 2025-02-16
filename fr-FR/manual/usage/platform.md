@@ -12,7 +12,7 @@ Maintenant, explorons comment utiliser le système de compte multiplateforme dan
 
 Sur certaines plateformes, les informations du compte ne sont pas visibles, il est donc nécessaire d'utiliser des outils pour les récupérer.
 
-Le plugin [inspect](../../plugins/common/inspect.md) permet de récupérer des informations de session.Après avoir installé ce plugin, vous pouvez envoyer la commande `inspect` depuis n'importe quel compte de plateforme à votre robot (n'utilisez pas le mode sandbox, sinon, vous n'obtiendrez que des données d'utilisateur sandbox). Voici un exemple d'informations de session obtenues :
+[inspect](../../plugins/common/inspect.md) 插件提供了获取会话信息的能力。安装这个插件后，使用任意平台账号向机器人发送 `inspect` (这里不要使用沙盒，不然只能获得沙盒用户的数据)，就可以获得下面的会话信息：
 
 <chat-panel>
 <chat-message nickname="Alice">inspect</chat-message>
@@ -28,9 +28,9 @@ Le plugin [inspect](../../plugins/common/inspect.md) permet de récupérer des i
 
 Si vous souhaitez vous connecter ou lier des comptes, les champs "Nom de la plateforme" et "ID de l'utilisateur" seront utiles.
 
-## Connexion à la console
+## 控制台登录 {#console-login}
 
-De plus, ce plugin inclut un compte administrateur intégré, ce qui en fait le moyen le plus pratique pour les utilisateurs nouvellement installés de Koishi d'obtenir des privilèges.Le plugin [auth](../../plugins/console/auth.md) permet à n'importe quel utilisateur de se connecter à Koishi via la console et de gérer ses propres informations utilisateur.
+[auth](../../plugins/console/auth.md) 插件允许任何用户在控制台登录 Koishi 账号并管理自己的用户信息。Le plugin <a href="../../plugins/console/auth.md">auth</a> permet à n'importe quel utilisateur de se connecter à Koishi via la console et de gérer ses propres informations utilisateur.
 
 ### Configuration du plugin de connexion
 
@@ -40,7 +40,7 @@ Accédez à la page de configuration des plugins et cliquez sur le plugin "auth"
 
 ![plugin-login](/manual/console/plugin-login.dark.webp) {.dark-only}
 
-Entrez le mot de passe que vous avez préparé, puis cliquez sur "Activer le plugin".Sélectionnez "Connexion avec nom d'utilisateur et mot de passe", entrez le nom d'utilisateur que vous avez configuré (par défaut, c'est `admin`) et le mot de passe, puis cliquez sur "Connexion" pour accéder à votre espace personnel.
+Entrez le mot de passe que vous avez préparé, puis cliquez sur "Activer le plugin".此时会弹出一个登录框，选择「用户密码登录」，填写你刚刚配置好的用户名 (如果你没改就是默认值 `admin`) 和密码，点击「登录」即可进入个人页面。
 
 ![login-password](/manual/console/login-password.light.webp) {.light-only}
 
@@ -76,7 +76,7 @@ Si vous souhaitez supprimer la liaison, cliquez simplement sur "Dissocier" à dr
 
 ### Associer par commande
 
-Le plugin [bind](../../plugins/common/bind.md) permet également de associer les comptes via des commandes.Envoyez la commande `bind` depuis le compte de la plateforme que vous souhaitez associer :
+[bind](../../plugins/common/bind.md) 插件通过指令也实现了账号绑定。使用要绑定的平台账号向机器人发送 `bind`：
 
 <chat-panel>
 <chat-message nickname="Alice">bind</chat-message>
@@ -87,7 +87,7 @@ Le plugin [bind](../../plugins/common/bind.md) permet également de associer les
 </chat-message>
 </chat-panel>
 
-Suivez les instructions et utilisez le compte de la plateforme d'origine pour envoyer `Koishi/123456` au robot.Si votre premier message est un message privé, la association est déjà terminée à ce stade.Si votre premier message est dans un groupe de discussion, le robot vous demandera de confirmer à nouveau :
+跟随提示，使用原始平台账号向机器人发送 `Koishi/123456`。Si votre premier message est un message privé, la association est déjà terminée à ce stade.Si votre premier message est dans un groupe de discussion, le robot vous demandera de confirmer à nouveau :
 
 <chat-panel>
 <chat-message nickname="Alice">Koishi/123456</chat-message>
@@ -99,6 +99,6 @@ Suivez les instructions et utilisez le compte de la plateforme d'origine pour en
 </chat-message>
 </chat-panel>
 
-Suivez à nouveau les instructions et utilisez le compte de la plateforme cible pour envoyer `Koishi/654321` au robot. Cela complétera la association.
+再次跟随提示，使用目标平台账号向机器人发送 `Koishi/654321`，即可完成绑定。
 
-Une fois la association effectuée, vous pouvez à tout moment envoyer `bind -r` depuis la plateforme cible pour dissocier les comptes.
+绑定完成后，你可以随时在目标平台向机器人发送 `bind -r` 来解除绑定状态。

@@ -57,7 +57,7 @@ export function apply(ctx: Context) {
 
 你很快会发现这样写完全无法运行。首先，数据库服务需要等到应用启动完成后才可以访问，换言之即使安装了数据库插件，你也无法立即判断数据库服务是否存在。此外，一旦上述服务所在插件在运行时被重载，由于上面的代码属于 dialogue 插件，因此 if 中代码的副作用将无法被有效清理；而当相应的服务重新被注册时，这部分的代码也不会被重新运行，从而导致一系列难以检测的问题。
 
-### inject 属性
+### inject 属性 {#inject}
 
 为了解决这种问题，Koishi 为插件声明提供了一个独特的 `inject` 属性：
 
@@ -93,7 +93,7 @@ ctx.plugin({
 })
 ```
 
-::: tip
+:::tip
 请注意：这里出现了两个 `ctx` 对象，它们属于不同的插件。在子插件的回调函数内，请务必使用作为参数的 `ctx` 而不是外层的 `ctx`，不然在服务被热重载时可能会引发内存泄漏。
 :::
 
@@ -138,7 +138,6 @@ export function apply(ctx: Context) {
   })
 }
 ```
-
 
 <!-- ## 服务的共享与隔离
 
@@ -203,45 +202,40 @@ plugins:
 如果你希望自己插件提供一些接口供其他插件使用，那么最好的办法便是提供自定义服务，就像这样：
 
 ```ts
-import Console from '@koishijs/plugin-console'
-// ---cut---
-// 这个表达式定义了一个名为 console 的服务
-Context.service('console')
-
-// 假如你在某个上下文设置了这个值，其他的上下文也将拥有此属性
-app.guild().console = new Console()
-app.private().console instanceof Console // true
+export default class Console extends Service {
+  constructor(ctx: Context) {
+    super(ctx, 'console')
+  }
+}
 ```
 
-这种做法的本质原理是修改了 Context 的原型链。
+这样定义的好处在于，`Console` 本身也是一个合法的插件，其他插件可以直接通过 `ctx.plugin(Console)` 来加载它。
 
-对于 TypeScript 用户，你还需要进行声明合并，以便能够在上下文对象中获得类型提示：
+对于 TypeScript 用户，在定义服务时，你还需要进行声明合并，以便能够在上下文对象中获得类型提示：
 
 ```ts no-extra-header
 declare module 'koishi' {
   interface Context {
-    console: console
+    console: Console
   }
+}
+```
+
+而使用服务的插件则需要声明依赖并导入类型：
+
+```ts
+import {} from 'koishi-plugin-console'
+
+export const inject = ['console']
+
+export function apply(ctx: Context) {
+  ctx.console.addEntry('/path/to/dialogue/extension')
 }
 ```
 
 ### 服务的生命周期
 
-相比直接赋值，我们更推荐你从 Service 派生子类来实现自定义服务：
-
-```ts
-class Console extends Service {
-  constructor(ctx: Context) {
-    // 这样写你就不需要手动给 ctx 赋值了
-    super(ctx, 'console', true)
-  }
-}
-
-// 这样定义的好处在于，Console 本身也是一个插件
-app.plugin(Console)
-```
-
-Service 抽象类的构造函数支持三个参数：
+`Service` 抽象类的构造函数支持三个参数：
 
 - `ctx`：服务所在的上下文对象
 - `name`：服务的名称 (即其在所有上下文中的属性名)
@@ -255,19 +249,7 @@ Service 抽象类的构造函数支持三个参数：
 
 默认情况下，一个自定义服务会先等待 ready 事件触发，然后调用可能存在的 `start()` 方法，最后才会被注册到全体上下文中。这种设计确保了服务在能够被访问的时候就已经是可用的。但如果你的服务不需要等待 ready 事件，那么只需传入第三个参数 `true` 就可以立即将服务注册到所有上下文中。
 
-此外，当注册了服务的插件被卸载时，其注册的服务也会被移除，其他插件不再可以访问到这项服务：
-
-```ts
-import Console from '@koishijs/plugin-console'
-// ---cut---
-app.console                 // falsy
-app.plugin(Console)         // 加载插件
-app.console                 // truthy
-app.dispose(Console)        // 卸载插件
-app.console                 // falsy
-app.plugin(Console)         // 重新加载插件
-app.console                 // truthy
-```
+此外，当注册了服务的插件被卸载时，其注册的服务也会被移除，通过 `inject` 声明依赖的插件也会被停止运行，直到服务再次被实现。这意味着开发者不需要担心服务的生命周期，只需要专注于提供或使用服务的功能即可。
 
 ### 支持热重载
 
@@ -285,9 +267,9 @@ class Console extends Service {
     this.entries.add(filename)
     this.triggerReload()
 
-    // 注意这个地方，caller 属性会指向访问此方法的上下文
+    // 注意这个地方，ctx 属性会指向访问此方法的上下文 (而不是构造函数中的上下文)
     // 只需要在这个上下文上监听 dispose 事件，就可以顺利处理副作用了
-    this[Context.current]?.on('dispose', () => {
+    this.ctx.on('dispose', () => {
       this.entries.delete(filename)
       this.triggerReload()
     })
@@ -295,9 +277,9 @@ class Console extends Service {
 }
 ```
 
-## 在 `package.json` 中声明依赖
+## 在 `package.json` 中声明依赖 {#package-json}
 
-如果你打算将插件发布到插件市场，我们建议在插件的 [`package.json`](../develop/publish.md#koishi-字段) 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
+如果你打算将插件发布到插件市场，我们建议在插件的 `package.json` 中对其所提供和使用的服务进行声明。这些字段将显示在控制台中插件的详情页中，帮助使用者更好地理解插件的功能。
 
 ```json title=package.json
 {
@@ -313,7 +295,13 @@ class Console extends Service {
 
 在这里，`required` 对应于必需依赖，`optional` 对应于可选依赖，`implements` 对应于提供的服务。如果你的插件没有使用或提供服务，那么对应的字段可以省略。
 
-### 关于 `peerDependencies`
+### 对比 `inject` 声明 {#inject-vs-dep}
+
+<!-- 按理说，我已经在 `inject` 中声明过一次服务依赖了，为什么还要在 `package.json` 中再声明一次呢？ -->
+
+对于任何依赖服务的插件，其必须声明 `inject` 才能正常工作，但缺失 `package.json` 中的声明并不会影响插件的运行。尽管如此，我们依然建议你在 `package.json` 中声明依赖，因为这样做能够在安装时提供更多信息，使用者可以一次性地安装插件所需的所有依赖，而不是等到插件运行时才发现缺少了某个服务。
+
+### 关于 `peerDependencies` {#peer-vs-dep}
 
 一个很容易混淆的概念是 `package.json` 自带的 `peerDependencies` 字段。这个字段用于声明一个 npm 包的依赖，但声明的依赖需要由用户安装 (或由包管理器自动安装到依赖树顶层)。是不是跟服务的概念非常像？它们之间的区别如下：
 

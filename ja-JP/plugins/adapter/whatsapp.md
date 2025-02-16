@@ -1,5 +1,9 @@
 # @koishijs/plugin-adapter-whatsapp
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方式
 
 1. 前往 [商务平台](https://business.facebook.com/) 创建业务账户，并在 [业务设置](https://business.facebook.com/settings/security) 完成组织验证

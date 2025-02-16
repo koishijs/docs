@@ -91,7 +91,7 @@ ctx.settings({
   schema: Schema.object({
     wallpaper: Schema.object({
       image: Schema.string().description('要使用的背景图片。'),
-      opacity: Schema.number().description('前景的透明度。'),
+      opacity: Schema.number().description('前景的不透明度。'),
     }).description('壁纸设置'),
   }),
 })

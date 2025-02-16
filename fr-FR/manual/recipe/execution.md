@@ -1,35 +1,34 @@
 # Utilisations avancées des commandes
 
-## Les guillemets
+## Utilisation des guillemets
 
-Koishi interprète automatiquement le contenu entre guillemets comme un paramètre single. Cela s'avère très utile dans de nombreuses situations, voici quelques exemples courants :
+Comme pour la plupart des outils en ligne de commande, il peut être nécessaire d'utiliser des guillemets pour entourer les paramètres, afin d'éviter qu'ils ne soient interprétés de manière incorrecte comme plusieurs paramètres ou comme une option erronée. Cette astuce est très utile dans de nombreux cas :
 
-- Si vous souhaitez transmettre des paramètres contenant des espaces (le comportement par défaut est de n'interpréter que la partie avant l'espace).
-- Si vous souhaitez transmettre des paramètres commençant par `-` (le comportement par défaut est d'interpréter le prochain élément comme une option).
-- Si vous souhaitez transmettre une chaîne vide en tant que paramètre (le comportement par défaut est d'interpréter comme `true`).
-- Si vous souhaitez transmettre des paramètres constitués uniquement de chiffres (le comportement par défaut est d'interpréter comme des types `number`).
+- Passez un paramètre contenant des espaces (par défaut, il traite les chaînes qui continent des espaces comme plusieurs paramètres)
+- Passez un paramètre commençant par `-` (par défaut, cela est interprété comme l'option suivante)
+- Passez une chaîne vide comme paramètre (par défaut, cela est interprété comme `true`)
 
-## L'Interpolation
+## Substitution de commande
 
-Si vous souhaitez utiliser le contenu d'une autre commande au sein d'une commande, vous pouvez utiliser `$()` pour l'interpolation de commandes :
+Si vous souhaitez utiliser la sortie d'une autre commande dans une commande, vous pouvez utiliser `$()` pour effectuer une substitution de commande :
 
 <chat-panel>
 <chat-message nickname="Alice">echo foo$(echo bar)</chat-message>
 <chat-message nickname="Koishi">foobar</chat-message>
 </chat-panel>
 
-Koishi ne s'échappe pas automatiquement du texte entre guillemets simples. Si vous ne souhaitez pas que certains paramètres soient échappés par la syntaxe d'interpolation, vous pouvez utiliser des guillemets simples :
+Par défaut, Koishi n'échappe pas le texte entre guillemets simples. Si vous ne souhaitez pas qu'un paramètre soit échappé par la syntaxe de substitution, vous pouvez utiliser des guillemets simples :
 
 <chat-panel>
 <chat-message nickname="Alice">echo 'foo$(echo bar)'</chat-message>
 <chat-message nickname="Koishi">foo$(echo bar)</chat-message>
 </chat-panel>
 
-Enfin, vous pouvez également en savoir plus sur une autre méthode d'interpolation dans [koishi-plugin-eval](https://eval.koishi.chat).
+De plus, vous pouvez découvrir une autre méthode de substitution dans le plugin [koishi-plugin-eval](https://eval.koishi.chat).
 
-## Correspondance floue
+## Correction automatique
 
-Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe. Dans ces cas, Koishi peut automatiquement corriger en suggérant des commandes similaires :
+Lors de l'utilisation, il est possible de faire des erreurs de frappe. Dans ce cas, Koishi peut automatiquement suggérer la commande correcte en se basant sur un nom de commande similaire :
 
 <chat-panel>
 <chat-message nickname="Alice">ecko bonjour</chat-message>
@@ -38,4 +37,4 @@ Dans l'utilisation quotidienne, il arrive parfois de faire des fautes de frappe.
 <chat-message nickname="Koishi">bonjour</chat-message>
 </chat-panel>
 
-Si vous souhaitez ajuster le degré de correspondance floue, vous pouvez modifier la configuration [minSimilarity](../../api/core/app.md#options-minsimilarity). Pratique, n'est-ce pas ?
+Si vous souhaitez ajuster le niveau de tolérance de la correction automatique, vous pouvez modifier l'option [minSimilarity](../../api/core/app.md#options-minsimilarity). Pratique, n'est-ce pas ?

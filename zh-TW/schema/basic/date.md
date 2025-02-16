@@ -2,10 +2,10 @@
 layout: schema
 code: |
   Schema.object({
-  value: Schema.date().description('选择日期与时间 (对象)。'),
-  datetime: Schema.string().role('datetime').description('选择日期与时间 (字符串)。'),
-  date: Schema.string().role('date').description('选择日期 (字符串)。'),
-  time: Schema.string().role('time').description('选择时间 (字符串)。'),
+    value: Schema.date().description('选择日期与时间 (对象)。'),
+    datetime: Schema.string().role('datetime').description('选择日期与时间 (字符串)。'),
+    date: Schema.string().role('date').description('选择日期 (字符串)。'),
+    time: Schema.string().role('time').description('选择时间 (字符串)。'),
   }).description('配置项')
 ---
 
