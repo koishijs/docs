@@ -14,23 +14,23 @@
 
 ### 网易 163 邮箱
 
- **由于 [#204](https://github.com/satorijs/satori/issues/204), 暂时无法正常接入网易（163, 126）邮箱**
+::: danger
+由于 [satorijs/satori#204](https://github.com/satorijs/satori/issues/204)，暂时无法正常接入网易 (163, 126) 邮箱。
+:::
  
-~~- 接收服务器：`imap.163.com`，端口号 `993`~~ 
-
-~~- 发送服务器：`smtp.163.com`，端口号 `465` 或 `994`~~ 
-
-~~- 参考：[网易邮箱 IMAP 服务](https://mail.163.com/html/110127_imap/index.htm)~~ 
+- 接收服务器：`imap.163.com`，端口号 `993`
+- 发送服务器：`smtp.163.com`，端口号 `465` 或 `994`
+- 参考：[网易邮箱 IMAP 服务](https://mail.163.com/html/110127_imap/index.htm)
 
 ### Outlook
 
-**[Outlook现仅支持OAuth验证](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online)**
+::: danger
+[Outlook 现仅支持 OAuth 验证](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online)。
+:::
 
-~~- 接收服务器：`outlook.office365.com`，端口号 `993`~~
-
-~~- 发送服务器：`smtp-mail.outlook.com`，端口号 `587`~~
-
-~~- 参考：[Outlook.com 的 POP、IMAP 和 SMTP 设置](https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040)~~
+- 接收服务器：`outlook.office365.com`，端口号 `993`
+- 发送服务器：`smtp-mail.outlook.com`，端口号 `587`
+- 参考：[Outlook.com 的 POP、IMAP 和 SMTP 设置](https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040)
 
 ### Gmail
 
