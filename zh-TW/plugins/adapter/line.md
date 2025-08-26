@@ -1,14 +1,18 @@
 # @koishijs/plugin-adapter-line
 
+:::warning
+在接入之前，你需要准备一个带有 SSL 证书的公网域名，并将 Koishi [部署到公网](../../manual/recipe/server.md)。
+:::
+
 ## 接入方法
 
-1. 在 [LINE 開發者控制檯](https://developers.line.biz/console/) 註冊賬號，建立一個新的 Provider，在 Provider 中建立一個 Channel，型別選擇 Messaging API，輸入相關資訊
+1. 在 [LINE 开发者控制台](https://developers.line.biz/console/) 注册账号，创建一个新的 Provider，在 Provider 中创建一个 Channel，类型选择 Messaging API，输入相关信息
 2. 在 Basic settings 頁面找到 Channel secret，填入外掛的 secret 欄位
 3. 在 Messaging API 頁面底部 Channel access token 處點選 Issue 建立 token，填入外掛的 token 欄位
 4. 根據使用需求可在上方的 Allow bot to join group chats (允許機器人加入群組) 處點選 Edit，在新頁面中找到 Toggle features 一欄，第一對單選框選擇 Allow
 5. 在 Messaging API 頁面底部，根據使用需求點選 Auto-reply messages 或者 Greeting messages 的修改按鈕，在新頁面中可設定是否啟用平臺自帶的自動回覆或問候訊息
-6. 在 Security 页面推荐配置白名单 IP
-7. 启动插件，打开 Messaging API 页面，勾选 Use webhook
+6. 在 Security 頁面推薦配置白名單 IP
+7. 啟動外掛，開啟 Messaging API 頁面，勾選 Use webhook
 
 参考文档：<https://developers.line.biz/en/docs/messaging-api/getting-started/>
 
@@ -26,7 +30,11 @@
 
 机器人密钥。
 
-## 内部 API
+## 内部接口
+
+:::tip
+关于内部接口的使用方式，请参见 [访问内部接口](../../guide/adapter/bot.md#access-from-plugin)。
+:::
 
 - [`internal.audienceMatch()`](https://developers.line.biz/en/reference/partner-docs/#phone-audience-match)
 - [`internal.broadcast()`](https://developers.line.biz/en/reference/messaging-api/#send-broadcast-message)

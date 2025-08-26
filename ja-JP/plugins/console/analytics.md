@@ -1,1 +1,1 @@
-# 数据统计 (Analytics)
+# データ統計 (Analytics)

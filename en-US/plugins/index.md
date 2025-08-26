@@ -18,6 +18,7 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 - [@koishijs/plugin-adapter-wechat-official](./adapter/wechat-official.md)
 - [@koishijs/plugin-adapter-wecom](./adapter/wecom.md)
 - [@koishijs/plugin-adapter-whatsapp](./adapter/whatsapp.md)
+- [@koishijs/plugin-adapter-zulip](./adapter/zulip.md)
 
 ## Database
 
@@ -54,7 +55,10 @@ Koishi 官方提供了许多插件。为了更好地模块化开发，它们被�
 ## Developer Tools
 
 - [@koishijs/plugin-hmr](./develop/hmr.md)：模块热替换
+- [@koishijs/plugin-http](./develop/http.md)：网络请求
 - [@koishijs/plugin-mock](./develop/mock.md)：测试工具
-- [@koishijs/plugin-server-proxy](./develop/server-proxy.md)：代理服务器
+- [@koishijs/plugin-notifier](./develop/notifier.md)：通知服务
+- [@koishijs/plugin-proxy-agent](./develop/proxy-agent.md)：网络代理
+- [@koishijs/plugin-server](./develop/server.md)：服务器
 - [@koishijs/plugin-server-satori](./develop/server-satori.md)：API 服务器
 - [@koishijs/plugin-server-temp](./develop/server-temp.md)：临时服务器

@@ -27,7 +27,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 <chat-panel>
 <chat-message nickname="Alice">authorize -u @Bob 2</chat-message>
-<chat-message nickname="Koishi">User data updated.</chat-message>
+<chat-message nickname="Koishi">User data has been changed.</chat-message>
 </chat-panel>
 
 任何用户只能对权限等级低于自己的用户进行操作，且操作后的权限等级同样必须低于自己。
@@ -40,7 +40,7 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 反过来，如果你希望你的 Koishi 实例不主动响应某个频道的消息，可以通过 `assign -r` 的方式来移除该频道的受理人。其他频道不会受到影响。
 
-::: tip
+:::tip
 某个频道处于无受理人状态与该频道被过滤器排除的区别在于：前者仍然可以被通过 @机器人 的方式触发指令，而后者无论如何都无法触发指令。具体请参考 [触发前缀](./command.md#触发前缀) 章节。
 :::
 
@@ -50,19 +50,19 @@ Koishi 内部有一套默认的权限系统，它为每个用户赋予了一个�
 
 上述两个配置项都支持 [计算属性](#计算属性)，这也意味着你可以在不同的聊天环境中配置不同的行为。
 
-## Filters
+## 过滤器 {#filters}
 
-Many times, we hope that certain features can only be used for certain group or private chats.Using permission management means introducing a database, and a lighter approach is to directly affect the plugin's functional diagram through **filters**.
+Many times, we hope that certain features can only be used for certain group or private chats.使用权限管理意味着引入数据库，而更轻量的方式是通过 **过滤器 (Filter)** 直接影响插件的作用范围。
 
 ### Plugin Filters
 
-::: tip
-A few plugins are unrelated to chat platforms, such as console and database plugins.These plugins therefore have no filter settings.
+:::tip
+少数插件与聊天平台无关，例如控制台、数据库插件等。These plugins therefore have no filter settings.
 :::
 
 Most of the plugins provide filter settings at the top of the plugin details page.Click the 'Add Condition' button to create a filter condition.Can include or exclude any platform/user/group/channel/robot by setting filters.
 
-::: tip
+:::tip
 如果不知道这些 ID 是什么，可以使用 [获取账号信息](./platform.md#获取账号信息) 中介绍的 [inspect](../../plugins/common/inspect.md) 插件。
 :::
 
@@ -70,7 +70,7 @@ After adding a condition, you will find that the button below has changed to two
 
 ### Conditional Properties
 
-Koishi not only supports setting up filters at the plugin level, but certain configuration items also support taking different values in different sessions.For example, we can see `prefix`, `autopsying` on the right side of configuration items with a "…" button
+Koishi not only supports setting up filters at the plugin level, but certain configuration items also support taking different values in different sessions.以全局设置为例，我们可以看到 `prefix`, `autoAssign` 等配置项的右侧有一个「…」按钮：
 
 ![computed](/manual/console/computed.dark.webp) {.dark-only}
 
@@ -92,7 +92,7 @@ Koishi supports internationalization natively, which means that a Koishi bot cou
 
 In Koishi, each user and channel managed by the application itself can independently set language preferences.其中，应用级别的默认语言通过全局配置项 `locale` 来设置，而用户、频道的语言偏好则通过 [admin](../../plugins/common/admin.md) 插件提供的 `user.locale` 和 `channel.locale` 指令来管理 (还记得指令系统中的 [这个例子](./command.md#子指令) 吧)。
 
-By default, the priority of preferred language is Channel > User > GlobalA group may have a large number of users who use different native languages participating in discussions, and different language channels are usually set up to facilitate communication.而对于此类情况，频道优先策略就可以让机器人在这些频道内始终使用预设好的语言来回答，而对于未设置语言偏好的频道，机器人仍然会遵循用户的偏好设置。Of course, you can also change this behavior through the global configuration item`i18n. output`.
+默认情况下，语言偏好的优先级是 频道 > 用户 > 全局。A group may have a large number of users who use different native languages participating in discussions, and different language channels are usually set up to facilitate communication.而对于此类情况，频道优先策略就可以让机器人在这些频道内始终使用预设好的语言来回答，而对于未设置语言偏好的频道，机器人仍然会遵循用户的偏好设置。当然，你也可以通过全局配置项 `i18n.output` 来更改此行为。
 
 ### Localize Text
 

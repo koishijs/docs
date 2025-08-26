@@ -1,6 +1,6 @@
-# 指令开发
+# コマンドの開発
 
-::: tip
+:::tip
 在学习本节之前，建议先完整阅读 [入门 > 指令系统](../../manual/usage/command.md)。
 :::
 
@@ -39,7 +39,7 @@ ctx.command('test <arg1> [arg2] [arg3]')
   .action((_, arg1, arg2, arg3) => { /* do something */ })
 ```
 
-::: tip
+:::tip
 除去表达的意义不同，以及参数个数不足时使用必选参数可能产生错误信息外，这两种参数在程序上是没有区别的。与此同时，默认情况下 `action` 回调函数从第二个参数起也总是字符串。如果传入的参数不足，则对应的参数不会被传入，因此你需要自己处理可能的 `undefined`。
 :::
 
@@ -54,18 +54,19 @@ ctx.command('test <arg1> [...rest]')
 
 ### 文本参数
 
-通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。 在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
+通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。
+在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
 
 ```ts
 ctx.command('test <message:text>')
   .action((_, message) => { /* do something */ })
 ```
 
-::: tip
+:::tip
 文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](../../manual/recipe/execution.md#使用引号) 将要输入的文本包裹起来。
 :::
 
-### 参数的类型
+### 参数类型 {#argument-type}
 
 除去 `text` 以外，Koishi 还支持许多其他的类型。它们的用法与 `text` 无异：
 
@@ -90,13 +91,15 @@ ctx.command('test [arg:number]')
 
 - string: `string` 字符串
 - number: `number` 数值
+- bigint: `bigint` [大整数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - text: `string` 贪婪匹配的字符串
-- user: `string` 用户，格式为 `{platform}:{id}`
-- channel: `string` 频道，格式为 `{platform}:{id}`
+- user: `string` 用户，格式为 `{platform}:{id}` (调用时可以使用 `at` 元素或者 `@{platform}:{id}` 的格式)
+- channel: `string` 频道，格式为 `{platform}:{id}` (调用时可以使用 `sharp` 元素或者 `#{platform}:{id}` 的格式)
 - integer: `number` 整数
 - posint: `number` 正整数
+- natural: `number` 正整数
 - date: `Date` 日期
-
+- image: `Dict` 图片
 
 <!-- ### 定义新类型
 
@@ -151,7 +154,6 @@ ctx.command('test [x:positive]').action((_, arg) => arg)
 <chat-message nickname="Alice">test 0.5</chat-message>
 <chat-message nickname="Koishi">参数 x 输入无效，应为整数。</chat-message>
 </chat-panel> -->
-
 
 <!-- ### 使用检查器
 
@@ -238,7 +240,7 @@ ctx.command('test')
 <chat-message nickname="Koishi">{ "writer": 0 }</chat-message>
 </chat-panel>
 
-### 选项的类型
+### 选项类型 {#option-type}
 
 选项也可以像参数一样设置类型：
 
@@ -262,56 +264,33 @@ ctx.command('test')
 <chat-message nickname="Koishi">选项 beta 输入无效，请检查语法。</chat-message>
 </chat-panel>
 
-## 更改触发方式
+## 指令别名
 
-### 指令别名
+:::warning
+由于指令名可以在用户侧配置，因此**不建议**开发者设置过多别名或以常用词作为别名。如果用户加载的多个插件都注册了同一个指令别名，那么后一个加载的插件将直接加载失败。
+:::
 
 你可以为一条指令添加别名：
 
 ```ts
-ctx.command('echo').alias('say')
+ctx.command('echo <message>').alias('say')
 ```
 
 这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
 
-::: warning
-由于指令名可以在用户侧配置，因此不建议开发者设置过多的别名。此外，如果用户加载的多个插件都注册了同一个指令别名，那么后一个加载的插件将直接加载失败。
-:::
-
-### 快捷匹配
-
-Koishi 的指令机制虽然能够尽可能避免冲突和误触发，但是也带来了一些麻烦。一方面，一些常用指令的调用会受到指令前缀的限制；另一方面，一些指令可能有较长的选项和参数，但它们调用时却往往是相同的。面对这些情况，**快捷匹配 (Shortcut)** 能有效地解决你的问题。
-
-假设你实现了一个货币系统和 rank 指令，调用 `rank wealth --global` 可以实现查看全服所有人财富排行，你可以这样做：
+你还可以为别名添加参数或选项：
 
 ```ts
-ctx.command('rank <type>')
-  .shortcut('全服财富排行', { args: ['wealth'], options: { global: true } })
+ctx.command('market <area> <item>').alias('市场', { args: ['China'] })
 ```
 
-这样一来，只要输入“全服财富排行”，Koishi 就会自动调用 `rank wealth --global`，回复查询结果了。
-
-通常来说，快捷方式都要求严格匹配（当然删除两端空格和繁简体转化这种程度的模糊匹配是可以做的），但是你也可以让快捷方式允许带参数：
-
-```ts
-ctx.command('buy <item>')
-  .shortcut('购买', { prefix: true, fuzzy: true })
-```
-
-上面程序注册了一个快捷方式，`prefix` 要求在调用时保留指令前缀，而 `fuzzy` 允许这个快捷方式带参数列表。这样一来，只要输入“Koishi，购买物品名”，Koishi 就会自动调用“buy 物品名”了。
-
-除此以外，你还可以使用正则表达式作为快捷方式：
-
-```ts
-ctx.command('market <area>')
-  .shortcut(/^查(.+区)市场$/, { args: ['$1'] })
-```
-
-这样一来，输入“查美区市场”就等价于输入“market 美区”了。
-
-不难看出，使用快捷方式会让你的输入方式更加接近自然语言，也会让你的机器人显得更平易近人。
+此时调用 `市场` 时将等价于调用 `market China`。如果你传入了更多的参数，那么它们将被添加到 `China` 之后。
 
 ## 编写帮助
+
+:::tip
+此功能需要安装 [@koishijs/plugin-help](../../plugins/common/help.md) 插件。
+:::
 
 之前已经介绍了 `ctx.command()` 和 `cmd.option()` 这两个方法，它们都能传入一个 `desc` 参数。你可以在这个参数的结尾补上对于指令或参数的说明文字，就像这样：
 
@@ -325,7 +304,7 @@ ctx.command('echo <message:text> 输出收到的信息')
 <chat-message nickname="Koishi">
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
 </chat-message>
 </chat-panel>
@@ -349,9 +328,9 @@ ctx.command('echo <message:text>', '输出收到的信息')
 <p>echo &lt;message></p>
 <p>输出收到的信息</p>
 <p>注意：参数请写在最前面，不然会被当成 message 的一部分！</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">-t, --timeout &lt;seconds>  设定延迟发送的时间</p>
-<p>使用示例：</p>
+<p>例：</p>
 <p class="indent-1">echo -t 300 Hello World  五分钟后发送 Hello World</p>
 </chat-message>
 </chat-panel>
@@ -372,7 +351,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
+<p>利用可能なコマンド：</p>
 <p class="indent-1">help  显示帮助信息</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
 </chat-message>
@@ -390,7 +369,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-panel>
 <chat-message nickname="Alice">help -H</chat-message>
 <chat-message nickname="Koishi">
-<p>当前可用的指令有：</p>
+<p>利用可能なコマンド：</p>
 <p class="indent-1">help  显示帮助信息</p>
 <p class="indent-1">bar  一条看不见的指令</p>
 <p>输入“帮助+指令名”查看特定指令的语法和使用示例。</p>
@@ -399,7 +378,7 @@ ctx.command('bar 一条看不见的指令', { hidden: true })
 <chat-message nickname="Koishi">
 <p>指令：bar</p>
 <p>一条看不见的指令</p>
-<p>可用的选项有：</p>
+<p>利用可能なオプション：</p>
 <p class="indent-1">--foo &lt;text>  一个看不见的选项</p>
 </chat-message>
 </chat-panel>

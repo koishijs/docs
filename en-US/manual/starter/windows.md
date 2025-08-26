@@ -9,37 +9,38 @@ next:
 
 # Install for Windows
 
-::: tip
-If you want to learn about other installation method, please visit [Installation](./index.md).
+:::tip
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
-## 下载
+## Download
 
-- [Installer (.msi)](https://k.ilharp.cc/win.msi)
-- [Other Downloads](https://github.com/koishijs/koishi-desktop/releases)
+- [Installation Package (.msi)] (https://k.ilharp.cc/win.msi)
+- [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
-## Install
+## Installation
 
-It is recommended to install Koishi from the installer, which would deal with most of the problems automatically. You should choose this method in general.
+You can install Koishi via the Koishi installer, which would deal with most of the problems automatically.This is recommended in general.
 
 ![msi-installer](/manual/windows/msi-installer-dark.webp) {.dark-only}
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
+Double-click on the package and click Next all the way to wait for the installation process to finish, then you can find Koishi in the Start menu.
 
-::: tip
-The installation might cost more than 10 minutes on some devices, please be patient.
+:::tip
+Double-click on the package and click Next all the way to wait for the installation process to finish, then you can find Koishi in the Start menu.
 :::
 
-## 启动
+## Start
 
 ![start-menu](/manual/windows/start-menu-dark.webp) {.dark-only}
 
 ![start-menu](/manual/windows/start-menu-light.webp) {.light-only}
 
-安装完成后，点击 Koishi 图标即可启动。The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
+Once the installation is complete, click on the Koishi icon to launch.The Koishi Console would be opened after a few seconds. Now you can start using Koishi.
 
 ## Other Downloads
 
-Could not find an installation package suitable for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).
+Could not find an installation package suitable for you?
+You can still choose to [use in Docker] (./docker.md) or [create template project] (./boilerplate.md).

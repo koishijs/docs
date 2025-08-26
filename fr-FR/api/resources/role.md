@@ -1,4 +1,4 @@
-# 群组角色 (GuildRole)
+# GuildRole : rôles de la guilde
 
 ## 类型定义
 

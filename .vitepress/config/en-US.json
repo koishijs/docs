@@ -79,7 +79,11 @@
             "link": "/about/contact.md"
           },
           {
-            "text": "各版本介绍",
+            "text": "Community Resources",
+            "link": "/about/community.md"
+          },
+          {
+            "text": "Release Notes",
             "link": "/releases/index.md"
           }
         ],
@@ -105,19 +109,19 @@
               "link": "/manual/starter/"
             },
             {
-              "text": "Install for Windows",
+              "text": "Installation on Windows",
               "link": "/manual/starter/windows.md"
             },
             {
-              "text": "Install for macOS",
+              "text": "Installation on macOS",
               "link": "/manual/starter/macos.md"
             },
             {
-              "text": "Install for Linux",
+              "text": "Installation on Linux",
               "link": "/manual/starter/linux.md"
             },
             {
-              "text": "Install for Android",
+              "text": "Installation on Android",
               "link": "/manual/starter/android.md"
             },
             {
@@ -142,7 +146,7 @@
               "link": "/manual/usage/market.md"
             },
             {
-              "text": "First Dialogue",
+              "text": "Conversation",
               "link": "/manual/usage/adapter.md"
             },
             {
@@ -241,7 +245,7 @@
               "link": "/guide/basic/events.md"
             },
             {
-              "text": "Middleware",
+              "text": "middleware",
               "link": "/guide/basic/middleware.md"
             },
             {
@@ -389,7 +393,7 @@
               "link": "/api/"
             },
             {
-              "text": "Glossary",
+              "text": "Terms of Glossary",
               "link": "/api/glossary.md"
             }
           ]
@@ -469,8 +473,12 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "Router",
-              "link": "/api/service/router.md"
+              "text": "Route Management (Server)",
+              "link": "/api/service/server.md"
+            },
+            {
+              "text": "Timer (Timer)",
+              "link": "/api/service/timer.md"
             }
           ]
         },
@@ -633,15 +641,15 @@
               "link": "/cookbook/design/disposable.md"
             },
             {
-              "text": "从元框架到框架",
+              "text": "Meta-framework and Framework",
               "link": "/cookbook/design/framework.md"
             },
             {
-              "text": "零占用的存储",
+              "text": "Zero-Storage",
               "link": "/cookbook/design/storage.md"
             },
             {
-              "text": "深入工作区",
+              "text": "Workspaces In-depth",
               "link": "/cookbook/design/workspace.md"
             }
           ]
@@ -650,19 +658,19 @@
           "text": "Cookbook",
           "items": [
             {
-              "text": "资源转存",
+              "text": "Resources Persistence",
               "link": "/cookbook/practice/assets.md"
             },
             {
-              "text": "图片渲染",
+              "text": "Image Rendering",
               "link": "/cookbook/practice/render.md"
             },
             {
-              "text": "部署到 k-on!",
+              "text": "K-ON! Deployment",
               "link": "/cookbook/practice/online.md"
             },
             {
-              "text": "整合包开发",
+              "text": "Integrated Package Development",
               "link": "/cookbook/practice/bundle.md"
             },
             {
@@ -672,7 +680,7 @@
           ]
         },
         {
-          "text": "案例分析",
+          "text": "Case Study",
           "items": [
             {
               "text": "Command Management",
@@ -686,7 +694,7 @@
           "text": "Plugins",
           "items": [
             {
-              "text": "Plugin market",
+              "text": "Marketplace",
               "link": "/market/"
             },
             {
@@ -862,7 +870,7 @@
               "link": "/plugins/console/market.md"
             },
             {
-              "text": "沙箱调试 (Sandbox)",
+              "text": "Sandbox Debug (Sandbox)",
               "link": "/plugins/console/sandbox.md"
             },
             {
@@ -879,12 +887,24 @@
               "link": "/plugins/develop/hmr.md"
             },
             {
+              "text": "HTTP",
+              "link": "/plugins/develop/http.md"
+            },
+            {
               "text": "Application Mocking (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "Proxy Server (Server Proxy)",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "Notification Service (Notifier)",
+              "link": "/plugins/develop/notifier.md"
+            },
+            {
+              "text": "Network Proxy (Proxy Agent)",
+              "link": "/plugins/develop/proxy-agent.md"
+            },
+            {
+              "text": "Route Management (Server)",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "API Server (Server Satori)",
@@ -902,7 +922,7 @@
           "text": "Plugins",
           "items": [
             {
-              "text": "Plugin market",
+              "text": "Marketplace",
               "link": "/market/"
             },
             {
@@ -930,7 +950,7 @@
               "link": "/schema/meta/required.md"
             },
             {
-              "text": "Default Value",
+              "text": "Default",
               "link": "/schema/meta/default.md"
             },
             {
@@ -1008,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union: Tagged 1",
+              "text": "Intersect w/ Union: Tagged Union 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union: Tagged 2",
+              "text": "Intersect w/ Union: Tagged Union 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {
@@ -1043,7 +1063,7 @@
               "link": "/about/team.md"
             },
             {
-              "text": "FAQ",
+              "text": "Frequently Asked Questions",
               "link": "/about/faq.md"
             },
             {
@@ -1051,28 +1071,28 @@
               "link": "/about/community.md"
             },
             {
-              "text": "大事件",
+              "text": "Big events",
               "link": "/about/events.md"
             }
           ]
         },
         {
-          "text": "更新",
+          "text": "Update",
           "items": [
             {
               "text": "History",
               "link": "/about/history.md"
             },
             {
-              "text": "更新计划",
+              "text": "Updates",
               "link": "/about/releases.md"
             },
             {
-              "text": "从低版本迁移",
+              "text": "Migrate from Previous Version",
               "link": "/about/upgrade.md"
             },
             {
-              "text": "各版本介绍",
+              "text": "Release Notes",
               "link": "/releases/index.md"
             },
             {
@@ -1100,7 +1120,7 @@
           "text": "",
           "items": [
             {
-              "text": "各版本介绍",
+              "text": "Release Notes",
               "link": "/releases/index.md"
             },
             {
@@ -1169,7 +1189,7 @@
           "text": "",
           "items": [
             {
-              "text": "Change Log",
+              "text": "Changelog",
               "link": "https://github.com/koishijs/koishi/releases"
             }
           ]

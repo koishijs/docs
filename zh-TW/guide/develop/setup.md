@@ -1,4 +1,4 @@
-# 环境搭建
+# 環境搭建
 
 本节将介绍推荐的开发环境搭建流程。如果某些软件已经安装完成，可以跳过对应的步骤。
 
@@ -38,7 +38,7 @@ git --version           # git version 2.39.1
 
 ```sh
 git config --global user.name "Your Name"
-git config –-global user.email "you@example.com"
+git config --global user.email "you@example.com"
 ```
 
 ### 注册 GitHub
@@ -54,17 +54,20 @@ git config –-global user.email "you@example.com"
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
-:::
+  :::
 
 输入下面的命令以创建 Koishi 项目：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm init koishi@latest
 ```
+
 ```yarn
 yarn create koishi
 ```
+
 :::
 
 跟随提示即可完成全套初始化流程。

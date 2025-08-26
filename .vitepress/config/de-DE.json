@@ -39,7 +39,7 @@
         "text": "Entwicklung",
         "items": [
           {
-            "text": "开发指南",
+            "text": "Entwicklungs-Anleitung",
             "link": "/guide/"
           },
           {
@@ -47,11 +47,11 @@
             "link": "/cookbook/"
           },
           {
-            "text": "API 参考",
+            "text": "API Referenz",
             "link": "/api/"
           },
           {
-            "text": "演练场：配置构型",
+            "text": "Playground: Schema",
             "link": "/schema/"
           }
         ],
@@ -65,7 +65,7 @@
             "link": "/market/"
           },
           {
-            "text": "官方插件一览",
+            "text": "Plugins Offizielle",
             "link": "/plugins/"
           }
         ],
@@ -77,6 +77,10 @@
           {
             "text": "参与讨论",
             "link": "/about/contact.md"
+          },
+          {
+            "text": "社区资源",
+            "link": "/about/community.md"
           },
           {
             "text": "各版本介绍",
@@ -138,7 +142,7 @@
           "text": "使用",
           "items": [
             {
-              "text": "安装和配置插件",
+              "text": "Installation und Konfiguration der Plugins",
               "link": "/manual/usage/market.md"
             },
             {
@@ -299,7 +303,7 @@
               "link": "/guide/database/builtin.md"
             },
             {
-              "text": "权限管理",
+              "text": "Berechtigungsverwaltung",
               "link": "/guide/database/permission.md"
             }
           ]
@@ -330,7 +334,7 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "Konsole",
           "items": [
             {
               "text": "扩展控制台",
@@ -469,8 +473,12 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
-              "link": "/api/service/router.md"
+              "text": "服务器 (Server)",
+              "link": "/api/service/server.md"
+            },
+            {
+              "text": "计时器 (Timer)",
+              "link": "/api/service/timer.md"
             }
           ]
         },
@@ -570,7 +578,7 @@
           ]
         },
         {
-          "text": "控制台",
+          "text": "Konsole",
           "items": [
             {
               "text": "服务端 API",
@@ -683,14 +691,14 @@
       ],
       "/plugins/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Marktplatz",
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
@@ -879,12 +887,24 @@
               "link": "/plugins/develop/hmr.md"
             },
             {
+              "text": "网络请求 (HTTP)",
+              "link": "/plugins/develop/http.md"
+            },
+            {
               "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "通知服务 (Notifier)",
+              "link": "/plugins/develop/notifier.md"
+            },
+            {
+              "text": "网络代理 (Proxy Agent)",
+              "link": "/plugins/develop/proxy-agent.md"
+            },
+            {
+              "text": "服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "API 服务器 (Server Satori)",
@@ -899,14 +919,14 @@
       ],
       "/market/": [
         {
-          "text": "插件",
+          "text": "Plugins",
           "items": [
             {
-              "text": "插件市场",
+              "text": "Marktplatz",
               "link": "/market/"
             },
             {
-              "text": "官方插件一览",
+              "text": "Plugins Offizielle",
               "link": "/plugins/"
             }
           ]
@@ -1008,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Intersect + Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Intersect + Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {

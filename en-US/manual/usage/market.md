@@ -1,7 +1,7 @@
 ---
 prev:
   text: Installation
-  link: /en-US/manual/starter/
+  link: /zh-CN/manual/starter/
 ---
 
 # Install and Configure Plugins
@@ -91,12 +91,12 @@ Koishi pre-configured some groups during the installation, while newly installed
 
 Creating a new group is also simple.In "Global Configuration" or in any group page, click the "Create Group" button in the top right corner to create a new group.The name of the new group is randomly generated, but you can change it by clicking on the name to the name you like.The groups can unfold and fold by clicking on the small triangle in the left bar.
 
-In addition, the [filter](../usage/customize.md#过滤器) mechanism can also be used on groups to control the behavior of a range of plugins.
+此外，[过滤器](../usage/customize.md#filters) 机制也可用于分组，便于控制一系列插件的行为。
 
 ### Adding More Plugins
 
 :::tip
-通常情况下，一个插件只能同时运行一份配置。请参考 [维护多份配置](../recipe/multiple.md) 章节。
+In general, a plugin can only run one configuration at a time.Please refer to [Maintaining Multiple Configurations] (.. /recipe/multiple.md).
 :::
 
 If an installed plugin is not shown in the plugin list, you can also add it manually.
@@ -109,7 +109,7 @@ Click on the plugin to be added in the dialog box to create a plugin configurati
 
 ### Remove Plugin or Group
 
-:::warning
+:::danger
 注意：此操作无法被撤销，如果你想要恢复之前的配置，只能再次手动添加。Please be careful.
 :::
 
@@ -117,6 +117,10 @@ Click Remove Plugin button in the top right corner in the configuration page of 
 When removing groups, all plugins in the group will also be deleted.
 
 ## Update and Uninstall Plugins
+
+:::warning
+依赖管理功能仅为生产环境设计。如果当前 Koishi 是开发环境，请使用 [`dep`](../../guide/develop/workspace.md#dep) 命令来更新依赖。
+:::
 
 Go to the "Dependency Management" page. You can see the dependency list here.Dependencies may include Koishi properties, various plugins, and packages that support plugins to run, etc.
 

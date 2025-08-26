@@ -62,7 +62,7 @@ root
 - [`version`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#version) 应当符合 [语义化版本](https://semver.org/lang/zh-CN/) (通常从 `1.0.0` 开始)
 - [`peerDependencies`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) 必须包含 `koishi`
 - 不能声明 [`private`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#private) 为 `true` (否则你的插件无法发布)
-- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions) (一种常见的情况是：你已经发布了某个插件，又希望更换一个名字重新发布，此时你可以通过弃用的方式让旧的名字不显示在插件市场中)
+- 最新版本不能被 [弃用](https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions)
 
 一个符合上述标准的示例：
 
@@ -132,15 +132,12 @@ root
       "optional": ["assets"],               // 可选的服务
       "implements": ["dialogue"],           // 实现的服务
     },
-    "locales": ["en", "zh"],                // 支持的语言
   }
 }
 ```
 
 - **description:** 插件描述，应该是一个对象，其中的键代表语言名，值是对应语言下的描述
-- **service:** 插件的服务相关信息，具体包含下列属性：
-  - **implements:** 实现的服务，应该是一个服务名构成的数组
-- **locales:** 插件支持的语言，应该是一个语言名构成的数组
+- **service:** 插件的服务相关信息，详情请参见 [服务与依赖](../plugin/service.html#package-json)
 - **preview:** 配置为 `true` 可以让插件显示为「开发中」状态
 - **hidden:** 配置为 `true` 可以让插件市场中不显示该插件 (通常情况下你不需要这么做)
 
@@ -150,7 +147,7 @@ root
 
 ## プラグインを公開する
 
-编辑完上面的清单文件并 [构建源代码](./workspace.md#构建源代码) 后，你就可以公开发布你的插件了。
+编辑完上面的清单文件并 [构建源代码](./workspace.md#build) 后，你就可以公开发布你的插件了。
 
 :::tabs code
 
@@ -168,8 +165,19 @@ yarn pub [...name]
 
 这将发布所有版本号发生变动的插件。
 
-:::tip
+::: tip
 从插件成功发布到进插件市场需要一定的时间 (通常在 15 分钟内)，请耐心等待。
+
+如果发布时多次失败或者长时间无响应，可以添加 `--debug` 选项以显示调试信息。
+
+```npm
+npm run pub [...name] --debug
+```
+
+```yarn
+yarn pub [...name] --debug
+```
+
 :::
 
 :::: tip
@@ -237,3 +245,23 @@ yarn bump [...name] [-1|-2|-3|-p|-v <ver>] [-r]
 - 缺省情况：按照当前版本的最后一位递增
 
 当进行此操作时，其他相关插件的依赖版本也会同步更新，确保所有工作区内依赖的插件版本一致。进一步，如果你希望更新了依赖版本的插件也同时更新自身的版本，那么可以附加 `-r, --recursive` 选项。
+
+## 弃用插件 {#deprecate}
+
+如果你不再维护某个插件，或者你希望更换一个名字重新发布，那么你可以弃用该插件。在任意目录运行下面的命令以弃用插件：
+
+```sh
+npm deprecate <full-name> <message>
+# 例如
+npm deprecate koishi-plugin-example "this plugin is deprecated"
+```
+
+请注意这里要写出的是完整的包名，而不是插件的目录名。
+
+你也可以弃用某个特定版本或版本区间 (默认情况下将弃用所有版本)：
+
+```sh
+npm deprecate <full-name>[@<version>] <message>
+```
+
+弃用插件的最新版本后，该插件将不再显示在插件市场中。未来你仍然可以发布新版本，这将使你的插件重新进入插件市场。

@@ -7,9 +7,9 @@ next:
   link: /zh-CN/manual/usage/market.html
 ---
 
-# 为 Linux 安装
+# 為 Linux 安裝
 
-::: tip
+:::tip
 如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 

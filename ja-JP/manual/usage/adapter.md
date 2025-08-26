@@ -25,7 +25,7 @@
 - [钉钉](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
 - [KOOK](../../plugins/adapter/kook.md)
-- [Lark](../../plugins/adapter/lark.md)
+- [飞书](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
 - [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
@@ -35,10 +35,11 @@
 - [微信公众号](../../plugins/adapter/wechat-official.md)
 - [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 其中，常用的适配器插件已经预装在了 Koishi 中，你可以在插件配置中的 adapter 分组中找到它们。如果没有看到你想要的平台，你也可以在插件市场中搜索并安装更多适配器插件。
 
-Koishiアプリは、様々なチャットアプリにまたがる複数のアカウントに同時に接続できます。各アカウントは、自身のプラグイン設定のを持つ、新しいプラグイン設定を追加するには、[プラグインの追加](./market.md#添加更多插件)のメソッドを参照します。同じチャットアプリでアクセスされた複数のボットは、同じユーザーデータを共有しますから。複数のボットを簡単に切り替えて負荷分散を行うことができます。
+Koishiアプリは、様々なチャットアプリにまたがる複数のアカウントに同時に接続できます。每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。同じチャットアプリでアクセスされた複数のボットは、同じユーザーデータを共有しますから。複数のボットを簡単に切り替えて負荷分散を行うことができます。
 
 不同平台的接入方式与难度存在较大的差异。様々なチャットアプリが違えば、それに応じた準備が必要だ。这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 

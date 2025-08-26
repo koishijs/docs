@@ -1,4 +1,4 @@
-# 基础知识
+# Basics
 
 Koishi 通过适配器插件来实现对不同聊天平台的支持。
 
@@ -12,15 +12,15 @@ Koishi 通过适配器插件来实现对不同聊天平台的支持。
 
 **平台 (Platform)** 是指聊天平台，比如 Discord、Telegram 等。Users on the same platform can message each other, but users on different platforms cannot message each other.Each separate self-built server is considered a separate platform for a self-built chat platform like Rocket Chat.
 
-**Bot(Bot)** is a platform user controlled by Koishi.这里的用户可以是真实用户，也可以是部分平台专门提供的机器人用户。By interacting with the robot, other users experience Koishi's functions.
+**机器人 (Bot)** 是指由 Koishi 操控的平台用户。这里的用户可以是真实用户，也可以是部分平台专门提供的机器人用户。By interacting with the robot, other users experience Koishi's functions.
 
-**Adapters (Adapter)** are plugins that implement the platform protocol and enable robots to access the platform.In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
+**适配器 (Adapter)** 是指实现了平台协议，能够让机器人接入平台的插件。In general, one adapter instance corresponds to one robot user, and enabling multiple adapters at the same time allows simultaneous access to multiple robots.
 
-**Message(Message)** is literally a message.It is usually text or rich text format, and sometimes includes media resources such as images and audio, etc.Koishi uniformly encodes messages using message elements.
+**消息 (Message)** 是字面意义上的消息。It is usually text or rich text format, and sometimes includes media resources such as images and audio, etc.Koishi uniformly encodes messages using message elements.
 
-**Channel(Channel)** is a collection of messages.A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
+**频道 (Channel)** 是消息的集合。A channel contains a series of messages that have a temporal and logical sequence to each other.Channels are divided into private chat channels and group chat channels, where private chat channels have only two participants and group chat channels can have any number of participants.
 
-**Guilds (Guilds)** are collections of platform users.A guild will typically contain both a set of Users and Channels, and be managed by some of them using a permission-based mechanism.In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
+**群组 (Guild)** 是平台用户的集合。A guild will typically contain both a set of Users and Channels, and be managed by some of them using a permission-based mechanism.In some platforms, the concepts of guilds and guild chat channels coincide (e.g. QQ): there is one and only one group chat channel within a guildThe private chat channel does not belong to any of the guilds
 
 ## REPL 适配器
 

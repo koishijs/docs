@@ -1,4 +1,4 @@
-# 环境搭建
+# 環境構築
 
 本节将介绍推荐的开发环境搭建流程。如果某些软件已经安装完成，可以跳过对应的步骤。
 
@@ -38,7 +38,7 @@ git --version           # git version 2.39.1
 
 ```sh
 git config --global user.name "Your Name"
-git config –-global user.email "you@example.com"
+git config --global user.email "you@example.com"
 ```
 
 ### 注册 GitHub
@@ -47,29 +47,32 @@ git config –-global user.email "you@example.com"
 
 ## 安装 Koishi
 
-打开命令行，并进入你想要创建 Koishi 项目的目录。
+コマンドラインを開いて Koishi プロジェクトを作成したいディレクトリに移動します。
 
 ::: tip
 这个目录不宜过长，且路径中请避免出现中文或者空格。我们推荐的目录如下：
 
 - Windows：`C:\dev` 或者 `D:\dev` (也不要直接在盘根创建项目，最好是建一层目录)
 - 其他操作系统：`~/dev`
-:::
+  :::
 
-输入下面的命令以创建 Koishi 项目：
+以下のコマンドを入力して Koishi プロジェクトを作成します：
 
-::: tabs code
+:::tabs code
+
 ```npm
 npm init koishi@latest
 ```
+
 ```yarn
 yarn create koishi
 ```
+
 :::
 
-跟随提示即可完成全套初始化流程。
+指示に従って初期化プロセスを完了してください。
 
-如果你顺利完成了上述操作，你的应用此时应该已经是启动状态，并弹出了控制台界面。接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
+上記の操作が正常に完了した場合、アプリケーションはすでに起動状態になり、コンソール画面が表示されています。接下来的几节中我们将学习更多的命令行用法，因此我们可以先关闭 Koishi。在命令行中按下 `Ctrl+C` 组合键即可停止 Koishi 的运行。
 
 <!-- ## 安装 VSCode (可选)
 

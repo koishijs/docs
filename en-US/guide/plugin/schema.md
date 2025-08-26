@@ -88,7 +88,7 @@ namespace Example {
   })
 }
 
-export default Foo
+export default Example
 ```
 
 形如 `name` 和 `Config` 这样的属性，我们称之为插件的元属性。它们需要与插件的入口函数同级导出。例如，你还可以通过导出 `usage` 属性来为插件提供使用方法。这样一来，一个完整的插件就可以写成这样：

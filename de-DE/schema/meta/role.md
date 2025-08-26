@@ -2,16 +2,16 @@
 layout: schema
 code: |
   Schema.intersect([
-  Schema.object({
-  number: Schema.percent().role('').default(0.5).description('点击按钮修改数值。'),
-  string: Schema.string().default('password').description('可见的输入框。'),
-  choice: Schema.union(['foo', 'bar', 'qux']).default('foo').description('从选择器中取值。'),
-  }).description('配置项 1'),
-  Schema.object({
-  number: Schema.percent().role('slider').default(0.5).description('拖动滑块修改数值。'),
-  string: Schema.string().role('secret').default('password').description('隐藏的密码框。'),
-  choice: Schema.union(['foo', 'bar', 'qux']).default('foo').role('radio').description('从单选框中取值。'),
-  }).description('配置项 2'),
+    Schema.object({
+      number: Schema.percent().role('').default(0.5).description('点击按钮修改数值。'),
+      string: Schema.string().default('password').description('可见的输入框。'),
+      choice: Schema.union(['foo', 'bar', 'qux']).default('foo').description('从选择器中取值。'),
+    }).description('配置项 1'),
+    Schema.object({
+      number: Schema.percent().role('slider').default(0.5).description('拖动滑块修改数值。'),
+      string: Schema.string().role('secret').default('password').description('隐藏的密码框。'),
+      choice: Schema.union(['foo', 'bar', 'qux']).default('foo').role('radio').description('从单选框中取值。'),
+    }).description('配置项 2'),
   ])
 ---
 

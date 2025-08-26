@@ -2,7 +2,7 @@
 
 正如 [深入工作区](../design/workspace.md) 一文所说，对于普通的插件开发者，我们不建议将模板项目提交到 Git 仓库中。但凡事总有例外——如果你想要分发的不是插件而是成品机器人本身，那么你就需要提交根工作区了。像这种包含根工作区的仓库被称为 **整合包 (Bundle)**。
 
-## 起步
+## はじめに
 
 :::tip
 在开始之前，我们推荐你创建一个全新的模板项目。由于整合包功能还在开发中，模板项目的结构可能随时发生更改。使用全新的模板项目可以确保你可以顺利完成后续流程。
@@ -76,6 +76,6 @@ root
 
 目前的所有工作流都基于整合包的版本号。当根工作区的版本号变动时，所有的工作流将开始运行。一次完整的发布将包含适用于 Koishi Desktop、Koishi Android 的完整环境，甚至是 Docker 镜像和 npm 包。部分流程需要配置 actions secrets，可以参考下面的列表：
 
-- DOCKER\_USERNAME
-- DOCKER\_PASSWORD
-- NPM\_TOKEN
+- DOCKER_USERNAME
+- DOCKER_PASSWORD
+- NPM_TOKEN

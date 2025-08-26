@@ -1,10 +1,10 @@
-# 平台集成
+# Intégration sur la plateforme conversationnelle
 
 至此，Koishi 的适配器开发已经接近尾声。经过前面的几节内容，我们的适配器已经封装了平台接口，与服务器稳定地进行连接，并能够顺利地接受和发送消息。但除此以外，部分平台还提供了一些额外的能力，允许机器人做得更好。Koishi 当然也要把这些能力集成到机器人中。
 
-## 斜线指令
+## 斜线指令 {#slash-command}
 
-::: tip
+:::tip
 相关章节：[指令开发](../basic/command.md)
 :::
 
@@ -24,9 +24,9 @@ class DiscordBot {
 }
 ```
 
-## 用户语言偏好
+## 用户语言偏好 {#user-locale}
 
-::: tip
+:::tip
 相关章节：[多语言支持](../i18n/index.md)
 :::
 

@@ -2,4 +2,4 @@
 layout: market
 ---
 
-# Plugin market
+# marketplace

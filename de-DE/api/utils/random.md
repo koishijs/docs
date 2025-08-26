@@ -1,6 +1,6 @@
 # 随机数操作
 
-::: tip
+:::tip
 本节中的 API 来自 [inaba](https://github.com/shigma/inaba)，并由 Koishi 重新导出。
 :::
 
@@ -49,7 +49,7 @@ random.pick([1, 2, 3])          // 随机选取一个元素
 - **end:** `number` 上界
 - 返回值: `number` 一个 `[start, end)` 之间的随机整数
 
-生成一个随机实数。
+生成一个随机整数。
 
 ### Random.pick(array, count?)
 

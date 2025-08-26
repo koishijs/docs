@@ -7,30 +7,23 @@ choices:
     text: Как вот-вот
     caption: В......
     children:
-      - 
-        text: Windows
+      - text: Windows
         link: /ru-RU/manual/starter/windows.html
-      - 
-        text: macOS
+      - text: macOS
         link: /ru-RU/manual/starter/macos.html
-      - 
-        text: Linux
+      - text: Linux
         link: /ru-RU/manual/starter/linux.html
-      - 
-        text: Android
+      - text: Android
         link: /ru-RU/manual/starter/android.html
-      - 
-        text: Docker
+      - text: Docker
         link: /ru-RU/manual/starter/docker.html
   development:
     text: 用于开发
     caption: 我希望 Koishi 作为……
     children:
-      - 
-        text: 一个独立的项目
+      - text: 一个独立的项目
         link: /ru-RU/manual/starter/boilerplate.html
-      - 
-        text: 其他项目的依赖
+      - text: 其他项目的依赖
         link: /ru-RU/manual/starter/direct.html
 ---
 

@@ -9,19 +9,19 @@ next:
 
 # 作为依赖调用
 
-::: warning
+:::warning
 这篇指南假设你已了解关于 [JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) 和 [Node.js](https://nodejs.org/) 的中级知识。如果你刚开始学习 JavaScript 开发或者对编写业务代码不感兴趣，请 [选择其他安装方式](./index.md)。
 :::
 
-::: warning
+:::danger
 我们强烈建议使用模板项目进行 Koishi 开发。如果你不确定自己在做什么，建议先完整阅读 [模板项目](./boilerplate.md) 章节。
 :::
 
-虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望将 Koishi 嵌入更复杂的程序中，那么直接调用将会成为更具有灵活性的选择。
+虽然现在我们推荐绝大部分用户使用 [模板项目](./boilerplate.md)，但如果你希望在没有 Node.js 的环境下运行 Koishi，那么直接调用将会成为更具有灵活性的选择。
 
 ## 初始化项目
 
-::: tip
+:::tip
 Koishi 本身使用 TypeScript 编写，因此我们推荐你使用 TypeScript 来进行 Koishi 开发。在接下来的文档中，我们将统一使用 TypeScript 作为示例代码。如果你想编写原生 JavaScript 或使用其他方言，可以在示例代码的基础上自行修改。
 :::
 
@@ -29,13 +29,15 @@ Koishi 需要 [Node.js](https://nodejs.org/) (最低 v18，推荐使用 LTS) 运
 
 首先初始化你的机器人目录并安装 Koishi 和所需的插件 (这里以官方插件 console, sandbox 和 echo 为例)：
 
-::: tabs code
+:::tabs code
+
 ```npm
 # 初始化项目
 npm init
 
 # 安装 Koishi 和相关插件
 npm i koishi \
+      @koishijs/plugin-server \
       @koishijs/plugin-console \
       @koishijs/plugin-sandbox \
       @koishijs/plugin-echo
@@ -43,12 +45,14 @@ npm i koishi \
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 npm i typescript @types/node esbuild esbuild-register -D
 ```
+
 ```yarn
 # 初始化项目
 yarn init
 
 # 安装 Koishi 和相关插件
-yarn add koishi
+yarn add koishi \
+         @koishijs/plugin-server \
          @koishijs/plugin-console \
          @koishijs/plugin-sandbox \
          @koishijs/plugin-echo
@@ -56,28 +60,28 @@ yarn add koishi
 # 安装 TypeScript 相关依赖 (如不使用可忽略此步骤)
 yarn add typescript @types/node esbuild esbuild-register -D
 ```
+
 :::
 
 新建入口文件 `index.ts`，并写下这段代码：
 
 ```ts title=index.ts no-extra-header
 import { Context } from 'koishi'
+import server from '@koishijs/plugin-server'
 import console from '@koishijs/plugin-console'
 import * as sandbox from '@koishijs/plugin-sandbox'
 import * as echo from '@koishijs/plugin-echo'
 
 // 创建一个 Koishi 应用
-const ctx = new Context({
-  port: 5140,
-})
+const ctx = new Context()
 
 // 启用上述插件
+ctx.plugin(server, {
+  port: 5140,
+})                      // 提供后端服务
 ctx.plugin(console)     // 提供控制台
 ctx.plugin(sandbox)     // 提供调试沙盒
 ctx.plugin(echo)        // 提供回声指令
-
-// 启动应用
-ctx.start()
 ```
 
 接着运行这个文件：
@@ -97,17 +101,20 @@ node -r esbuild-register .
 
 如果你想要接入真实聊天平台，那么你只需要安装适配插件即可：
 
-::: tabs code
+:::tabs code
+
 ```npm
 # 以 Satori 和 Discord 适配器为例
 npm i @koishijs/plugin-adapter-satori \
       @koishijs/plugin-adapter-discord
 ```
+
 ```yarn
 # 以 Satori 和 Discord 适配器为例
 yarn add @koishijs/plugin-adapter-satori \
          @koishijs/plugin-adapter-discord
 ```
+
 :::
 
 接着修改你刚刚创建的 `index.ts`。每个机器人相当于启用一个插件：
@@ -143,15 +150,18 @@ Koishi 插件可以在 [npm](https://www.npmjs.com) 上获取。通常插件会�
 
 对于社区插件，使用类似的方式安装和加载：
 
-::: tabs code
+:::tabs code
+
 ```npm
 # 以 puppeteer 和 forward 插件为例
 npm i koishi-plugin-puppeteer koishi-plugin-forward
 ```
+
 ```yarn
 # 以 puppeteer 和 forward 插件为例
 yarn add koishi-plugin-puppeteer koishi-plugin-forward
 ```
+
 :::
 
 ```ts title=index.ts

@@ -61,7 +61,7 @@ cmd.userFields((argv, fields) => {
 
 你可以在 [这里](../../api/utils/observer.md) 看到完整的观察者 API。
 
-## 进阶用法
+## 進階用法
 
 ### attach 事件
 

@@ -1,6 +1,6 @@
 # Recherche sur la place de marché
 
-Il y a une multitude de plugins valides pour Koishi. Afin de faciliter la recherche des utilisateurs, nous avons mis en place une syntaxe spéciale pour la recherche. Par exemple, vous pouvez saisir `is:preview` dans la barre de recherche pour filtrer rapidement une catégorie spécifique de plugins.
+Il y a une multitude de plugins valides pour Koishi. Afin de faciliter la recherche des utilisateurs, nous avons mis en place une syntaxe spéciale pour la recherche. 你可以在搜索框中输入形如 `is:preview` 的语法来快速过滤某个类别的插件。
 
 ## Mots-clés
 
@@ -33,10 +33,7 @@ De plus, il existe d'autres critères de filtrage sans identifiant spécifique :
 
 </div>
 
-Les critères de filtrage mentionnés ci-dessus peuvent également être inversés, par exemple `not:insecure` ou `created:
-
-
-<date`. Dans la barre à gauche, vous pouvez cliquer sur le nom de l'identifiant pour le sélectionner, un deuxième clic le sélectionne en mode inverse, et un troisième clic annule la sélection.
+上述的过滤条件也可以反向选择，例如 `not:insecure` 或 `created:<date`。Dans la barre à gauche, vous pouvez cliquer sur le nom de l'identifiant pour le sélectionner, un deuxième clic le sélectionne en mode inverse, et un troisième clic annule la sélection.
 
 ## Catégories des plugins
 
@@ -46,14 +43,15 @@ Les critères de filtrage mentionnés ci-dessus peuvent également être invers�
 
 - <market-icon name="solid:core" />`category:core`：核心功能
 - <market-icon name="solid:adapter" />`category:adapter`：适配器
-- <market-icon name="solid:storage" />`category:storage`：存储服务
+- <market-icon name="solid:general" />`category:general`：存储服务
 - <market-icon name="solid:extension" />`category:extension`：扩展功能
-- <market-icon name="solid:console" />`category:console`：控制台
+- <market-icon name="solid:webui" />`category:webui`：控制台
 - <market-icon name="solid:manage" />`category:manage`：管理工具
 - <market-icon name="solid:preset" />`category:preset`：行为预设
 - <market-icon name="solid:image" />`category:image`：图片服务
 - <market-icon name="solid:media" />`category:media`：资讯服务
 - <market-icon name="solid:tool" />`category:tool`：实用工具
+- <market-icon name="solid:life" />`category:life`：生活指南
 - <market-icon name="solid:ai" />`category:ai`：人工智能
 - <market-icon name="solid:meme" />`category:meme`：趣味交互
 - <market-icon name="solid:game" />`category:game`：娱乐玩法
@@ -86,7 +84,7 @@ Les critères de filtrage mentionnés ci-dessus peuvent également être invers�
 
 ## 快速体验
 
-::: warning
+:::warning
 快速体验目前仍然是实验性功能，仅在官方文档中的插件市场里可用。
 :::
 

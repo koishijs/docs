@@ -1,2 +1,1 @@
-# 插件依赖图 (Insight)
-
+# 外掛依賴圖 (Insight)

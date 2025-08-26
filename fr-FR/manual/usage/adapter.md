@@ -16,29 +16,30 @@ Tout d'abord, cliquez sur « Ajouter un utilisateur » dans le coin supérieur g
 
 Si vous souhaitez simuler une conversation en guilde, vous pouvez créer plus d'utilisateurs. Ensuite, changez en mode « Conversation en guilde » en haut. De cette manière, vous pouvez changer et contrôler plusieurs utilisateurs virtuels pour converser avec le robot. Cela peut être très utile si vous souhaitez essayer des plugins multijoueurs tels que les jeux d'échecs.
 
-En outre, si certaines commandes nécessitent un certain [niveau des autorisations](../usage/customize.md#权限管理), vous pouvez les ajuster dans les « Paramètres de l'utilisateur ».
+除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
 
 ## Connexion à une plateforme conversationnelle réelle
 
 Simuler des conversations uniquement dans un bac à sable ne suffit pas. Nous devons connecter le robot à une plateforme conversationnelle réelle pour qu'il puisse réellement nous être utile. Koishi utilise des plugins d'adaptateurs pour prendre en charge diverses plates-formes conversationnelles. Voici une liste des adaptateurs maintenus officiellement :
 
-- [DingTalk](../../plugins/adapter/dingtalk.md)
+- [钉钉](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
 - [KOOK](../../plugins/adapter/kook.md)
-- [Lark](../../plugins/adapter/lark.md)
+- [飞书](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
-- [Courriers électroniques](../../plugins/adapter/mail.md)
+- [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [WeChat Official Account](../../plugins/adapter/wechat-official.md)
-- [WeCom (WeChat Work)](../../plugins/adapter/wecom.md)
+- [微信公众号](../../plugins/adapter/wechat-official.md)
+- [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 Parmi eux, les adaptateurs couramment utilisés sont déjà préinstallés dans Koishi, vous pouvez les trouver dans le groupe de configuration des plugins des « adaptateurs ». Si vous ne voyez pas la plateforme que vous souhaitez, vous pouvez également rechercher et installer d'autres plugins d'adaptateurs sur la place de marché.
 
-Une application Koishi peut se connecter à plusieurs comptes sur différentes plates-formes conversationnelles. Chaque compte correspond à une configuration de plugin, et vous pouvez ajouter de nouvelles configurations de plugins en suivant les méthodes décrites dans [Ajouter plus de plugins](./market.md#添加更多插件). Étant donné que plusieurs comptes robots dans la même plateforme partagent les mêmes données d'utilisateurs, il est très facile de passer entre eux pour équilibrer la charge.
+Une application Koishi peut se connecter à plusieurs comptes sur différentes plates-formes conversationnelles. 每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。Étant donné que plusieurs comptes robots dans la même plateforme partagent les mêmes données d'utilisateurs, il est très facile de passer entre eux pour équilibrer la charge.
 
 Les méthodes et la complexité de la connexion varient considérablement d'une plateforme à l'autre, vous devez donc effectuer des préparatifs spécifiques pour chaque plateforme. Ces préparatifs peuvent inclure l'enregistrement d'un compte de développeur sur la plateforme, la préparation d'un serveur accessible depuis Internet, etc. Vous trouverez des instructions détaillées dans la documentation de chaque plugin d'adaptateur.
 

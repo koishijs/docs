@@ -1,10 +1,11 @@
 # About Plugin
 
-::: tip
-Before learning this chapter, it is recommended to read [Manual > Install and Configure Plugins](../../manual/usage/market.md).
+:::tip
+在学习本章之前，建议先完整阅读 [入门 > 安装和配置插件](../../manual/usage/market.md)。
 :::
 
-Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
+Modular is a fundamental feature in Koishi.With the plugin system, Koishi was able to couple various features and distribute them in the form of modules.We have already experienced the basic plugin development example in
+the Getting Started section.In this chapter, we will introduce more modular developing ways and best practices in some scenarios.
 
 ## Basic Forms of Plugins
 
@@ -12,7 +13,7 @@ A plugin needs to be one of three basic forms:
 
 1. A function that accepts two parameters, which are the context and the configuration
 2. A class that accepts two constructor parameters, which are the context and the configuration
-3. An object which has a `apply` method of the object and the method is the function in the first form
+3. An object which the `apply` method is the function described in number 1
 
 The loading of this plugin is equivalent to the invocation the above function. Therefore, the four formulations below are basic equivalent:
 
@@ -38,9 +39,9 @@ ctx.plugin(class {
 
 ## Modular Plugins
 
-The greatest advantage of pluginization is the ability to write different functionalities in separate modules. At this point, the plugin will serve as a module export, and it can either be a [default export](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入默认值) or a [namespace export](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入整个模块的内容).
+The greatest advantage of pluginization is the ability to write different functionalities in separate modules. 此时插件将作为模块的导出，它可以是 [默认导出](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#默认导入) 或 [导出整体](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import#命名空间导入)。
 
-For plugins in the object form, you can additionally provide a `name` property as the plugin's name. For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
+For object plugins, you can also set `name` field as the name of the plugin.For function and class forms, the plugin name would be the function or class name. Named plugins help better describe their functionalities and are used for plugin relationship visualization, although they don't affect any runtime behaviors.
 
 ```ts title=foo.ts
 // Namespace export of an object-form plugin
@@ -87,15 +88,16 @@ When developing more complex features, you can break down the plugin into multip
 
 A module can be loaded as a plugin via Koishi's configuration file, and it needs to satisfy one of the following two conditions:
 
-- The **default export** of the module is a plugin.
-- The **namespace export** of the module is a plugin.
+- 此模块的**默认导出**是一个插件
+- 此模块的**导出整体**是一个插件
 
 There is no advantage or disadvantage between these two methods; you can adjust the export form according to your own needs. Conventionally, if your plugin is a function, we usually directly export the apply method and treat the namespace export as a plugin; if your plugin is a class, we usually use the default export form.
 
-The priority of the default export is higher here. Therefore, as long as the module provides a default export, Koishi will try to load this default export instead of the namespace export. Be sure to pay attention to this during development.
+:::tip
+这里默认导出的优先级更高。Therefore, as long as the module provides a default export, Koishi will try to load this default export instead of the namespace export. Be sure to pay attention to this during development.
 :::
 
-The `plugins` field in the configuration file records the plugin configurations:
+配置文件中的 `plugins` 字段记录了插件的信息：
 
 ```yaml title=koishi.yml
 plugins:

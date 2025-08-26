@@ -2,9 +2,13 @@
 
 Koishi 控制台前后端的数据交互基本是通过 WebSocket 实现的。为了适应不同的场景，我们提供了多种数据交互的形式。
 
+:::tip
+在前后端之间传递的数据需要经过 JSON 序列化，因此请避免传入函数和自引用对象等无法被 JSON 序列化的内容。
+:::
+
 ## 被动推送
 
-后端代码：
+Backend:
 
 ```ts title=src/index.ts no-extra-header
 import { Context } from 'koishi'
@@ -42,7 +46,7 @@ export function apply(ctx: Context) {
 }
 ```
 
-前端代码：
+Frontend:
 
 ```ts title=client/index.ts no-extra-header
 import { Context } from '@koishijs/client'
@@ -50,9 +54,9 @@ import Page from './page.vue'
 
 export default (ctx: Context) => {
   ctx.page({
-    name: '页面标题',
+    name: 'Page title',
     path: '/custom-page',
-    // 只有当获得了 custom 数据，才可以访问页面
+    // available when the `custom` field exist
     fields: ['custom'],
     component: Page,
   })
@@ -72,7 +76,7 @@ import { store } from '@koishijs/client'
 
 ## 主动获取
 
-后端代码：
+Backend:
 
 ```ts title=src/index.ts no-extra-header
 import { Context } from 'koishi'
@@ -122,7 +126,7 @@ send('get-greeting').then(data => {
 当你引入了 @koishijs/plugin-auth 插件之后，你可以为你的页面访问和数据交互引入鉴权机制：
 
 ```ts
-// 只有已登录并且权限等级不低于 3 的用户才能访问此接口
+// Only logged user with authority not less than 3 can access this page
 ctx.console.addListener('get-greeting', () => {
   return ['Hello', 'World']
 }, { authority: 3 })
@@ -130,9 +134,9 @@ ctx.console.addListener('get-greeting', () => {
 
 ```ts title=client/index.ts
 ctx.page({
-  name: '页面标题',
+  name: 'Page title',
   path: '/custom-page',
-  // 只有已登录并且权限等级不低于 3 的用户才能访问此界面
+  // Only logged user with authority not less than 3 can access this page
   authority: 3,
   component: Page,
 })

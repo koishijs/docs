@@ -1,4 +1,4 @@
-# 群组 (Guild)
+# Guild : guildes
 
 ## 类型定义
 

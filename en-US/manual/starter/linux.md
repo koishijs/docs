@@ -9,14 +9,14 @@ next:
 
 # Install for Linux
 
-::: tip
-If you want to learn about other installation method, please visit [Installation](./index.md).
+:::tip
+For information on other installation methods, please visit [Choosing an Installation Method](./index.md).
 :::
 
-## 下载
+## Download
 
 - [AppImage (.AppImage)](https://k.ilharp.cc/linux.AppImage)
-- [Other Downloads](https://github.com/koishijs/koishi-desktop/releases)
+- [More versions](https://github.com/koishijs/koishi-desktop/releases)
 
 ## 启动
 
@@ -24,4 +24,5 @@ If you want to learn about other installation method, please visit [Installation
 
 ## Other Downloads
 
-Could not find an installation package suitable for you? You could choose to [use in a container](./docker.md) or [create template project](./boilerplate.md).
+Could not find an installation package suitable for you?
+你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。

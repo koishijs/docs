@@ -1,36 +1,8 @@
-# 应用 (App)
+# アプリ
 
 **应用 (App)** 是程序的入口。可以通过 `new Context()` 构造或通过 `ctx.root` 访问。
 
 本节中介绍的配置项可用于传入构造函数，也可以在配置文件或控制台中进行修改。
-
-## 网络设置
-
-### options.host
-
-- 类型：`string`
-- 默认值：`'127.0.0.1'`
-
-服务器监听的 IP 地址。如果将此设置为 `0.0.0.0` 将监听所有地址，包括局域网和公网地址。
-
-### options.port
-
-- 类型：`number`
-
-要监听的初始端口号。
-
-### options.maxPort
-
-- 类型：`number`
-- 默认值：[`options.port`](#options-port)
-
-允许监听的最大端口号。
-
-### options.selfUrl
-
-- 类型：`string`
-
-Koishi 服务暴露在公网的地址。部分功能（例如 [adapter-telegram](../../plugins/adapter/telegram.md) 或是 [plugin-assets-local](https://assets.koishi.chat/plugins/local.html)）需要用到。
 
 ## 基础设置
 
@@ -106,17 +78,9 @@ interface DelayOptions {
 - `prefer-user`: 优先使用用户语言
 - `prefer-channel`: 优先使用频道语言
 
-## 请求设置
-
-### options.request.proxyAgent
-
-- 类型: `string`
-
-配置请求时默认使用的网络代理。
-
 ## 配置文件选项
 
-::: warning
+:::warning
 下面的配置项来自 Koishi 的命令行工具，仅可在配置文件中编辑，不支持在控制台中修改。
 :::
 

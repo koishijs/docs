@@ -2,14 +2,14 @@
 layout: schema
 code: |
   Schema.intersect([
-  Schema.object({
-  foo: Schema.number().description('这是一个属性。'),
-  bar: Schema.string().description('这是另一个属性。'),
-  }).description('分组 1'),
-  Schema.object({
-  baz: Schema.string().description('这是又一个属性。'),
-  qux: Schema.boolean().description('这是最后一个属性。'),
-  }).description('分组 2'),
+    Schema.object({
+      foo: Schema.number().description('这是一个属性。'),
+      bar: Schema.string().description('这是另一个属性。'),
+    }).description('分组 1'),
+    Schema.object({
+      baz: Schema.string().description('这是又一个属性。'),
+      qux: Schema.boolean().description('这是最后一个属性。'),
+    }).description('分组 2'),
   ])
 ---
 

@@ -1,96 +1,95 @@
 # Search Marketplace
 
-There are many plugins in the Koishi marketplace. A set of search query syntax was provided in order to make the searching experience smooth and convinient. You can enter the syntax like `is:preview` in the search box to quickly filter plugins for a category.
+Koishi enhances its features through a rich ecosystem of plugins,
+and to make it easier for users to find what they need, we provide a set of search filters. You can enter commands like `is:preview` in the search field to filter plugins by category.
 
 ## Search Terms
 
-In addition to special syntax with colon numbers, the search term you enter will be used for querying：
+Aside from special syntax with colons, the search terms you enter will be used to query:
 
-- Plugin name
-- Plugin description
+- Plugin names
+- Plugin descriptions
 - Plugin keywords
 
-## Plugin identification
+## Plugin tags
 
-We provide four categories of plugin identifiers, which are also filters.Including:
-
-<div class="plugin-flags-list">
-
-- <market-icon name="verified" style="color: var(--k-color-success)" />`is:verified`：官方认证
-- <market-icon name="insecure" style="color: var(--k-color-danger)" />`is:insecure`：不安全
-- <market-icon name="preview" style="color: var(--k-color-warning)" />`is:preview`：开发中
-- <market-icon name="newborn" style="color: var(--k-color-success)" />`created:>date`：近期新增
-
-</div>
-
-此外，还有一些不带标识的过滤条件：
+There are 4 kinds of tags for every plugin, these tags can be also used as filters:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="download" />`is:installed`：已安装
-- <market-icon name="portable" />`is:portable`：快速体验
-- <market-icon name="tag" />`updated:>date`：近期更新
+- <market-icon name="verified" style="color: var(--k-color-success)" />`is:verified`: Official Verified
+- <market-icon name="insecure" style="color: var(--k-color-danger)" />`is:insecure`: Insecure
+- <market-icon name="preview" style="color: var(--k-color-warning)" />`is:preview`: In Development
+- <market-icon name="newborn" style="color: var(--k-color-success)" />`created:>date`: Recently Added
 
 </div>
 
-The above filters can also be reversely selected, e.g. `not:insecure` or `created:
+There are also some filters without specific tags:
 
+<div class="plugin-flags-list">
 
-<date`.In the sidebar, you can click on the identifier to select, click twice to reverse the selection, click three times to cancel the selection.
+- <market-icon name="download" />`is:installed`: Installed
+- <market-icon name="portable" />`is:portable`: Quick Preview
+- <market-icon name="tag" />`updated:>date`: Recently Updated
+
+</div>
+
+These filters can also be used in reverse, such as `not:insecure` or `created:<date`. In the sidebar, you can click on a tag name to select it, click again to reverse the selection, and click a third time to cancel the selection.
 
 ## Plugin Categories
 
-We currently offer 14 base categories. They are:
+There are currently 14 base categories:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="solid:core" />`category:core`：核心功能
-- <market-icon name="solid:adapter" />`category:adapter`：适配器
-- <market-icon name="solid:storage" />`category:storage`：存储服务
-- <market-icon name="solid:extension" />`category:extension`：扩展功能
-- <market-icon name="solid:console" />`category:console`：控制台
-- <market-icon name="solid:manage" />`category:manage`：管理工具
-- <market-icon name="solid:preset" />`category:preset`：行为预设
-- <market-icon name="solid:image" />`category:image`：图片服务
-- <market-icon name="solid:media" />`category:media`：资讯服务
-- <market-icon name="solid:tool" />`category:tool`：实用工具
-- <market-icon name="solid:ai" />`category:ai`：人工智能
-- <market-icon name="solid:meme" />`category:meme`：趣味交互
-- <market-icon name="solid:game" />`category:game`：娱乐玩法
-- <market-icon name="solid:gametool" />`category:gametool`：游戏辅助
+- <market-icon name="solid:core" />`category:core`: Core Functionalities
+- <market-icon name="solid:adapter" />`category:adapter`: Adapters
+- <market-icon name="solid:general" />`category:general`: General Services
+- <market-icon name="solid:extension" />`category:extension`: Extension Features
+- <market-icon name="solid:webui" />`category:webui`: WebUI Plugins
+- <market-icon name="solid:manage" />`category:manage`: Management Tools
+- <market-icon name="solid:preset" />`category:preset`: Behavior Presets
+- <market-icon name="solid:image" />`category:image`: Image Services
+- <market-icon name="solid:media" />`category:media`: Media Services
+- <market-icon name="solid:tool" />`category:tool`: Utilities
+- <market-icon name="solid:life" />`category:life`: Lifestyle Guides
+- <market-icon name="solid:ai" />`category:ai`: Artificial Intelligence
+- <market-icon name="solid:meme" />`category:meme`: Interactions
+- <market-icon name="solid:game" />`category:game`: Entertainment
+- <market-icon name="solid:gametool" />`category:gametool`: Games Utilities
 
 </div>
 
-The categories of plugins are maintained by members of the Koishi team, usually within one week after the plugin is published.Very few plugins do not belong to any category.If you think your plugin is not sorted correctly, you can submit an issue for feedback.
+These categories are maintained by the Koishi team and are usually assigned within a week of the plugin's release.A few plugins may not fall into any category. If you believe your plugin has been misclassified, you can submit an issue to us.
 
-## Sort Plugins
+## Plugin Sorting
 
-Plugins in the marketplace will be sorted by default according to their ratings.Rating is a value between 0 and 5 and will show as stars after rounded.Rating is weighted by multiple indicators, with some common indicators listed below:
+By default, plugins in the market are sorted by their ratings, which range from 0 to 5 and are displayed as stars. The rating is calculated based on several factors, including:
 
-- Open-sourced
-- Mark as insecure/preview
-- Downloads of the plugin
-- Size of the plugin
+- Whether the plugin is open-source
+- Whether the plugin is marked as insecure or in development
+- The number of downloads
+- The installation size
 
-Beside to sort by rating, you can also choose another sorting method:
+In addition to sorting by rating, you can choose other sorting methods:
 
 <div class="plugin-flags-list">
 
-- <market-icon name="download" />`sort:download`：按下载量排序
-- <market-icon name="heart-pulse" />`sort:created`：按创建时间排序
-- <market-icon name="tag" />`sort:updated`：按更新时间排序
+- <market-icon name="download" />`sort:download`: Sort by downloads
+- <market-icon name="heart-pulse" />`sort:created`: Sort by creation date
+- <market-icon name="tag" />`sort:updated`: Sort by recent update
 
 </div>
 
-If you want to sort reversely, add `-asc` backwards. Such as `sort:creed-asc`.In the sidebar, you can click on the "Sort Type" to sort, click twice to reverse the sequencing, click three times to cancel the sequencing.
+To sort in reverse order, add `-asc` to the end, like `sort:created-asc`. In the sidebar, you can click a sorting option to apply it, click again to reverse the order, and click a third time to cancel the sort.
 
-## Quick Experience
+## Quick Preview
 
-::: Warning
-Quick experience is still experimental. It is only available in the marketplace in official documents.
+:::warning
+Quick Preview is currently an experimental feature and is only available in the plugin market within the official site.
 :::
 
-[Koishi Online (k-on!)](https://koishi.online) is an online Koishi runtime.You can quickly experience the functionality of the plugin without installing Koishi locally.A plugin that can used on k-on! will show a lightning button. Click it to quickly create a k-on! instance.If you are the plugin developer, you can see [this article](../../cookbook/practice/online.md) to deploy your plugin to k-on!.
+[Koishi Online (k-on!)](https://koishi.online) is an online runtime for Koishi. It allows you to quickly test out several plugins without installing Koishi locally. Plugins compatible with k-on! will display a lightning bolt icon, which you can click to instantly create a k-on! instance.  If you're a plugin developer, you can refer to [this guide](../../cookbook/practice/online.md) to make your plugin compatible with k-on!.
 
 <script lang="ts" setup>
 import { MarketIcon } from '@koishijs/market'

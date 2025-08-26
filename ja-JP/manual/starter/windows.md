@@ -3,20 +3,20 @@ prev:
   text: インストーラーを選択
   link: /ja-JP/manual/starter/
 next:
-  text: 安装和配置插件
-  link: /zh-CN/manual/usage/market.html
+  text: プラグインのインストールと設定
+  link: /ja-JP/manual/usage/market.html
 ---
 
 # Windows にインストール
 
-::: tip
-その他のインストール方法を知りたい場合、[インストール方法](./index.md) に進んでください。
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
 ## ダウンロード
 
-- [インストーラー(.msi)](https://k.ilharp.cc/win.msi)
-- [その他のバージョン](https://github.com/koishijs/koishi-desktop/releases)
+- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## インストール
 
@@ -28,8 +28,8 @@ next:
 
 双击安装包并一路点按「Next」，等待安装过程结束，你便可以在「开始」菜单中找到 Koishi 了。
 
-::: tip
-一部分のコンピューターでは、インストールプロセスに10分以上かかる場合があります。お待ちください
+:::tip
+安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
 :::
 
 ## 启动
@@ -42,4 +42,4 @@ next:
 
 ## その他の選択
 
-適切なインストーラーが見つかりませんか？[コンテナーで実行](./docker.md) や [テンプレートプロジェクトの作成](./boilerplate.md) を選択することもできます。
+適切なインストーラーが見つかりませんか？你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。

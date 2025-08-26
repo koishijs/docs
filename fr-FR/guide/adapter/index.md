@@ -1,4 +1,4 @@
-# 基础知识
+# Principes de bases
 
 Koishi 通过适配器插件来实现对不同聊天平台的支持。
 

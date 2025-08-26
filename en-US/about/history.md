@@ -1,29 +1,29 @@
 # History
 
-2019 年 8 月，我开始编写我的第一个基于 Node.js 的聊天机器人，名为四季酱。当时我浏览各种聊天机器人框架，发现并没有自己真正想要的，遂决定从零开始编写。一开始这个机器人只包含了很少的功能，但随着其更多功能的加入，我开始调整起底层架构，并计划逐步将其开源出来。
+In August 2019, I started developing my first Node.js-based chatbot, named Shiki-chan. At that time, I explored various chatbot frameworks but couldn’t find one that truly met my needs, so I decided to build one from scratch. Initially, the bot had only a few features, but as I added more functionalities, I began to refine the underlying architecture and planned to gradually open-source it.
 
-直到 v4 发布之前，Koishi 大约每 8 个月发布一个大版本。可以说 Koishi 的发展完全是由需求推动的，在迭代中形成了一套聊天机器人开发的最佳实践。
+Before the release of v4, Koishi had a major version update approximately every eight months. It can be said that Koishi's development was entirely driven by user needs. It formed a set of best practices for chatbot development through the iterations.
 
-## v1 时期
+## The v1 Era
 
-Koishi v1 发布于 2020 年 1 月。此时的 Koishi 虽然体量尚小，但已具备了许多一直沿袭至今的特征：通过插件系统实现了功能的模块化，通过事件模型和中间件处理各种输入，上下文负责对输入的事件进行过滤，以及一个通过链式调用进行开发的指令系统等等。
+Koishi v1 was released in January 2020. Although Koishi was still small in scope at this time, it already had many features that continue to this day: modular functionality implemented through a plugin system, user input handling via events and middlewares, context filtering of input events, and a command system developed through chained calls.
 
-目前可追溯的 v1 官方插件只有 common, schedule 和 teach，其他在这个时期开发的插件大都已经弃用了。
+The only v1 official plugins that continue to v4 are `common`, `schedule`, and `teach`, while most other plugins developed during this period have been deprecated.
 
-## v2 时期
+## The v2 Era
 
-Koishi v2 发布于 2020 年 9 月，主要改动存在于应用层设计上。在这个大版本中，应用作为程序的入口对所需的资源统一管理，第一次有了生命周期钩子的概念，也将 v1 时期的元信息对象进化为了会话对象。这些改动将许多底层的接口进行了封装，允许插件开发者通过更为现代化的方式组织业务逻辑。
+Koishi v2 was released in September 2020, with significant changes to the application layer design. In this major version, the application became the program’s entry point, managing required resources in a unified way. This was the first time the concept of lifecycle hooks was introduced, and the metadata objects from the v1 era evolved into session objects. These changes encapsulated many underlying interfaces, allowing plugin developers to organize business logic in a more modern structure.
 
-v2 时期也是官方插件发展迅猛的时期，许多功能强大的插件如 eval, github, image-search 和 puppeteer 等都是在这个阶段被开发出来的。
+The v2 era also saw rapid growth in official plugins, with many powerful plugins like `eval`, `github`, `image-search`, and `puppeteer` being developed during this era.
 
-## v3 时期
+## The v3 Era
 
-Koishi v3 发布于 2021 年 5 月。这个版本最核心的变化是我们抽象出了 Adapter / Bot 的概念，并成功将 Koishi 适配到 Discord 和 Telegram 等其他主流聊天平台中。另一个值得一提的改动则是我们实现了插件的热重载，并由此催生了网页控制台和插件市场的发展。
+Koishi v3 was released in May 2021. The core change in this version was the abstraction of the Adapter / Bot concept, successfully adapting Koishi to other mainstream chat platforms like Discord and Telegram. Another notable change was the implementation of hot-reloading for plugins, which develops the web console and the plugin marketplace.
 
-在此期间社区开发者贡献了大量或有趣或实用的插件，也意味着 Koishi 在功能模块化的推行上取得了令人满意的成效。
+During this period, community developers contributed many interesting and useful plugins, indicating significant success in promoting the modularity of Koishi’s functionality.
 
-## v4 时期
+## The v4 Era
 
-Koishi v4 发布于 2022 年 1 月，在底层架构中进行了大幅优化。我们引入了 Service 的概念，这将使我们得以通过类似于 IoC / DI 的方式管理 Koishi 的各项功能。同时对于数据库，我们也提供了一个 ORM 解决方案，这大幅优化了插件的开发体验。此外，我们正式围绕 Service 确立了 Assets 和 Cache 等接口，并提供了许多官方插件实现。
+Koishi v4 was released in January 2022, with significant optimizations to the underlying architecture. We introduced the concept of Service, allowing us to manage Koishi’s features in a manner similar to IoC (Inversion of Control) / DI (Dependency Injection). Additionally, we provided an ORM solution for databases, greatly improving the plugin development experience.  Furthermore, we formally established interfaces around Service, such as Assets and Cache, and provided numerous official plugin implementations.
 
-在这个版本中，我们出于维护性的考虑将一些官方插件移出了 koishijs/koishi。即便如此，官方插件的数量也较上一个大版本有了一个激增。以插件市场为核心的生态也正在被快速完善起来。
+In this version, we moved some official plugins out of `koishijs/koishi` for maintenance reasons. Even so, the number of official plugins has seen a significant increase compared to the previous major version. The ecosystem centered around the plugin marketplace is also rapidly maturing.

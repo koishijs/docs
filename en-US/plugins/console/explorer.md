@@ -1,2 +1,1 @@
-# Resource Manager (Explorer)
-
+# File Management (Explorer)

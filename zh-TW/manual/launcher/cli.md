@@ -1,4 +1,4 @@
-# 命令行工具
+# 命令列工具
 
 对于不使用图形化界面的用户，Koishi 启动器提供了命令行工具 `koi`，可以用来创建、管理和运行 Koishi。
 
@@ -10,7 +10,7 @@
 | `koi daemon start`    | 启动守护                           |
 | `koi daemon stop`     | 停止守护                           |
 | `koi daemon kill`     | 强制结束守护                         |
-| `koi ps`              | 查看运行状态                         |
+| `koi ps`              | 查看運行狀態                         |
 | `koi start default`   | 启动实例 `default`                 |
 | `koi stop default`    | 停止实例 `default`                 |
 | `koi restart default` | 重启实例 `default`                 |

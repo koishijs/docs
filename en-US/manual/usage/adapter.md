@@ -6,9 +6,11 @@ After installing Koishi and exploring the marketplace, you must be eager to expe
 
 Navigate to the "Sandbox" page in the Console, where we can simulate a conversation with bots.
 
-首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key. 你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
+首先点击屏幕左上角的「添加用户」来创建一个虚拟用户 (通常第一位虚拟用户的名字会是 Alice)，此时屏幕右侧会出现空白的聊天界面。Click the input box at the bottom of the chat UI, type "help" (without quotes) and then press the Enter key.
+你会立即在聊天界面中看到机器人的回复，列出了包括 `echo` 和 `help` 在内的所有可用的指令，这便是 `help` 这个内置指令的功能。
 
-可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Let's try with entering "echo Bonjour", then press Enter to commit it. You will see the response from bot with "Bonjour".
+可以看到，这里的 `echo` 就是我们刚刚安装的插件，它的功能是将用户的输入原样返回。Let's try with entering "echo Bonjour", then press Enter to commit it.
+You will see the response from bot with "Bonjour".
 
 ![sandbox](/manual/console/sandbox.light.webp) {.light-only}
 
@@ -16,29 +18,32 @@ Navigate to the "Sandbox" page in the Console, where we can simulate a conversat
 
 如果想要模拟群聊，我们可以创建更多的用户，并在聊天界面顶部点击切换到「群聊模式」。这样，你就可以通过在左侧栏切换并控制多个虚拟用户与机器人聊天了。如果你要体验的是下棋一类的多人交互插件，这会非常有用。
 
-Additionally, you could also set the [Authority Level](../usage/customize.md#权限管理) of a user in the "User Settings" page when any commands require it.
+除此以外，如果某些指令需要一定的 [权限等级](../usage/customize.md#权限管理)，你也可以切换到「用户设置」中进行调整。
 
 ## Integrating with Real Chat Platforms
 
-Simulate the conversation in the sandbox is far from enough.We need to connect the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms. Below is the list of official adapters:
+Simulate the conversation in the sandbox is far from enough.We need to connect the bot into a real chat platform for it to truly serve us.Koishi uses adapter plugins to support various chat platforms.
+Below is the list of official adapters:
 
-- [DingTalk](../../plugins/adapter/dingtalk.md)
+- [钉钉](../../plugins/adapter/dingtalk.md)
 - [Discord](../../plugins/adapter/discord.md)
 - [KOOK](../../plugins/adapter/kook.md)
-- [Lark](../../plugins/adapter/lark.md)
+- [飞书](../../plugins/adapter/lark.md)
 - [LINE](../../plugins/adapter/line.md)
-- [Mail](../../plugins/adapter/mail.md)
+- [邮件](../../plugins/adapter/mail.md)
 - [Matrix](../../plugins/adapter/matrix.md)
 - [QQ](../../plugins/adapter/qq.md)
 - [Slack](../../plugins/adapter/slack.md)
 - [Telegram](../../plugins/adapter/telegram.md)
-- [WeChat Official](../../plugins/adapter/wechat-official.md)
-- [WeCom](../../plugins/adapter/wecom.md)
+- [微信公众号](../../plugins/adapter/wechat-official.md)
+- [企业微信](../../plugins/adapter/wecom.md)
 - [WhatsApp](../../plugins/adapter/whatsapp.md)
+- [Zulip](../../plugins/adapter/zulip.md)
 
 The commonly used adapter plugins are pre-installed in Koishi. You can find them in the plugin configuration under the "Adapter" section.If you don't see the platform you want, you can also search for and install more adapter plugins in the marketplace.
 
-A Koishi application could simultaneously connect to multiple bot accounts on multiple chat platforms. Each configuration copy of the corresponding adapter plugin maintains the bot account instance, you could add new configurations of adapter plugin according to [Add More Plugins](./market.md#添加更多插件). Since multiple bots within the same platform share the same user data, switching between them for load balancing is easy.
+A Koishi application could simultaneously connect to multiple bot accounts on multiple chat platforms. 每个账号对应一份插件配置，你可以参考 [添加更多插件](./market.md#添加更多插件) 中的方法添加新的插件配置。Since multiple bots within the same platform share the same user data,
+switching between them for load balancing is easy.
 
 There are large differences between the different platforms of ways and difficulty.There are different configuration work that you need to do with different platforms. 这些工作可能包括在平台内注册开发者账号、准备一台部署到公网的服务器等等。你可以在各个适配器插件的文档中找到详细的指引。
 

@@ -1,7 +1,3 @@
----
-layout: schema
----
-
-# 配置模式
+# 配置构型
 
 <vp-overview/>

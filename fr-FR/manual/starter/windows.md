@@ -1,22 +1,22 @@
 ---
 prev:
-  text: Autre méthode d'installation
+  text: Installation
   link: /fr-FR/manual/starter/
 next:
-  text: Installation et configuration des plugins
+  text: Installation et configuration de plugins
   link: /fr-FR/manual/usage/market.html
 ---
 
 # Installation pour Windows
 
-::: tip
-Si vous souhaitez en savoir plus sur les autres méthodes d'installation, veuillez vous référer à [Autre méthode d'installation](./index.md).
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
 ## Téléchargement
 
-- [Programme d'installation (.msi)](https://k.ilharp.cc/win.msi)
-- [Voir plus de versions](https://github.com/koishijs/koishi-desktop/releases)
+- [安装包 (.msi)](https://k.ilharp.cc/win.msi)
+- [查看更多版本](https://github.com/koishijs/koishi-desktop/releases)
 
 ## Installation
 
@@ -26,10 +26,10 @@ Installer Koishi via le programme d'installation est la méthode la recommandée
 
 ![msi-installer](/manual/windows/msi-installer-light.webp) {.light-only}
 
-Double-cliquez sur le programme d'installation, puis cliquez sur *Suivant* pour terminer l'installation. Vous pouvez maintenant trouver Koishi dans le menu *Démarrer*.
+Double-cliquez sur le programme d'installation, puis cliquez sur <i>Suivant</i> pour terminer l'installation. Vous pouvez maintenant trouver Koishi dans le menu <i>Démarrer</i>.
 
-::: tip
-Le processus d'installation peut prendre plus de 10 minutes sur certains ordinateurs, veuillez patienter.
+:::tip
+安装流程在部分电脑上这可能会花费 10 分钟以上的时间，请耐心等待。
 :::
 
 ## Démarrage
@@ -42,4 +42,4 @@ Cliquez sur l'icône de Koishi pour le démarrer, en quelques secondes, la conso
 
 ## Autres méthodes d'installation
 
-Vous ne trouvez pas de programme d'installation qui vous convient ? Vous pouvez toujours choisir la [installation avec image conteneur](./docker.md) ou la [création d'un projet modèle](./boilerplate.md).
+Vous ne trouvez pas de programme d'installation qui vous convient ? 你仍然可以选择 [在容器中使用](./docker.md) 或 [创建模板项目](./boilerplate.md)。

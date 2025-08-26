@@ -1,4 +1,4 @@
-# 客户端开发
+# Client Components
 
 ## 布局组件
 
@@ -42,7 +42,7 @@ ctx.slot({
 })
 ```
 
-## 使用插槽
+## Use slots
 
 你应该已经注意到了，在上面的两个例子中，我们都使用了 [`ctx.slot()`](../../api/console/context.md#ctx-slot) 来扩展某些元素。这个方法的作用是向控制台的某个区域中注入 Vue 组件。而上面的 `status-left` 和 `global` 则是两个插槽的名称，分别对应了状态栏左侧区域和整个页面区域。
 
@@ -91,7 +91,7 @@ ctx.settings({
   schema: Schema.object({
     wallpaper: Schema.object({
       image: Schema.string().description('要使用的背景图片。'),
-      opacity: Schema.number().description('前景的透明度。'),
+      opacity: Schema.number().description('前景的不透明度。'),
     }).description('壁纸设置'),
   }),
 })

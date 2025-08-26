@@ -1,27 +1,27 @@
 ---
 prev:
-  text: インストール方法
+  text: インストーラーを選択
   link: /ja-JP/manual/starter/
 next:
-  text: 安装和配置插件
-  link: /zh-CN/manual/usage/market.html
+  text: プラグインのインストールと設定
+  link: /ja-JP/manual/usage/market.html
 ---
 
-# Androidにインストール
+# Android にインストール
 
-::: tip
-その他のインストール方法を知りたい場合、[インストール方法](./index.md) に進んでください。
+:::tip
+如果想了解其他安装方式，请移步 [选择安装方式](./index.md)。
 :::
 
-::: danger
-このプロジェクトはまだ初期開発段階です。一部の機能は利用できない場合があります。
+:::danger
+此项目仍在早期开发中。一部の機能は利用できない場合があります。
 :::
 
-## 下载
+## ダウンロード
 
-- [標準パッケージをダウンロード (.apk)](https://k.ilharp.cc/android-lite.apk)
-- [拡張パッケージをダウンロード (.apk)](https://k.ilharp.cc/android-full.apk)
-- [その他のバージョン](https://github.com/koishijs/koishi-android/releases)
+- [下载标准包 (.apk)](https://k.ilharp.cc/android-lite.apk)
+- [下载扩展包 (.apk)](https://k.ilharp.cc/android-full.apk)
+- [查看更多版本](https://github.com/koishijs/koishi-android/releases)
 
 ## インストール
 

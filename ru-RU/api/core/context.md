@@ -9,12 +9,14 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.any](../service/filter.md#ctx-any)
 - [ctx.bail](../service/events.md#ctx-bail)
 - [ctx.before](../service/events.md#ctx-before)
-- [ctx.database](../database/database.md)
+- [ctx.debounce](../service/timer.md#ctx-debounce)
 - [ctx.emit](../service/events.md#ctx-emit)
+- [ctx.events](../service/events.md)
 - [ctx.exclude](../service/filter.md#ctx-exclude)
 - [ctx.filter](../service/filter.md#ctx-filter)
 - [ctx.http](../service/http.md)
 - [ctx.i18n](../service/i18n.md)
+- [ctx.inject](../service/registry.md#ctx-inject)
 - [ctx.intersect](../service/filter.md#ctx-intersect)
 - [ctx.loader](../service/loader.md)
 - [ctx.middleware](../service/events.md#ctx-middleware)
@@ -26,13 +28,24 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 - [ctx.parallel](../service/events.md#ctx-parallel)
 - [ctx.permissions](../service/permissions.md)
 - [ctx.plugin](../service/registry.md#ctx-plugin)
-- [ctx.router](../service/router.md)
+- [ctx.registry](../service/registry.md)
 - [ctx.scope](../service/registry.md#ctx-scope)
 - [ctx.serial](../service/events.md#ctx-serial)
-- [ctx.start](../service/registry.md#ctx-start)
+- [ctx.server](../service/server.md)
+- [ctx.setInterval](../service/timer.md#ctx-setinterval)
+- [ctx.setTimeout](../service/timer.md#ctx-settimeout)
+- [ctx.sleep](../service/timer.md#ctx-sleep)
 - [ctx.stop](../service/registry.md#ctx-stop)
+- [ctx.throttle](../service/timer.md#ctx-throttle)
+- [ctx.timer](../service/timer.md)
 - [ctx.union](../service/filter.md#ctx-union)
-- [ctx.using](../service/registry.md#ctx-using)
+
+除此以外，以下服务由官方插件提供，因此使用时需要 [声明依赖](../../guide/plugin/service.md#inject)：
+
+- [ctx.console](../console/server.md)
+- [ctx.database](../database/database.md)
+- [ctx.mock](../../plugins/develop/mock.md)
+- [ctx.server](../../plugins/develop/server.md)
 
 ## 实例属性
 
@@ -63,7 +76,6 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 
 以当前上下文为原型创建一个新上下文。`meta` 中的属性将覆盖当前上下文的属性。
 
-
 <!-- ### ctx.isolate(names)
 
 - **keys:** `string[]` 隔离的服务列表
@@ -84,14 +96,13 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 
 在当前上下文中注册或修改一个指令。
 
-### ctx.broadcast(channels?, content, forced?) <badge>需要数据库</badge>
+### ctx.broadcast(channels?, content) <badge>需要数据库</badge>
 
-- **channels:** `string[]` 频道列表
+- **channels:** `string[]` 频道列表，格式为 `{platform}:{channelId}` (如 `discord:1234567890`)
 - **content:** `string` 要发送的内容
-- **forced:** `boolean` 是否无视 silent 标记
 - 返回值: `Promise<string[]>` 成功发送的消息 ID 列表
 
-所有机器人向自己分配的频道广播消息，存在标记 silent 的频道除外。如有失败不会抛出错误。
+所有机器人向自己分配的频道广播消息。如果传入的频道不存在，会输出一个警告。
 
 ### ctx.logger(scope?)
 
@@ -103,10 +114,6 @@ Koishi 使用了组合 (Compose) 的开发方式，绝大部分上下文属性�
 ## 静态属性和方法
 
 ### Context.filter
-
-- 类型: `symbol`
-
-### Context.source
 
 - 类型: `symbol`
 

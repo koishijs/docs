@@ -1,39 +1,32 @@
 ---
 layout: Anfänger
-sidebar: falsch
+sidebar: false
 caption: Ich benutze Koishi.
 choices:
   production:
     text: Verwendung für den Aufbau von Roboterservices.
     caption: Ich benutze Koishi auf...
     children:
-      - 
-        text: Windows
+      - text: Windows
         link: /de-DE/manual/starter/windows.html
-      - 
-        text: macOS
+      - text: macOS
         link: /de-DE/manual/starter/macos.html
-      - 
-        text: Linux
+      - text: Linux
         link: /de-DE/manual/starter/linux.html
-      - 
-        text: Android
+      - text: Android
         link: /de-DE/manual/starter/android.html
-      - 
-        text: Docker
+      - text: Docker
         link: /de-DE/manual/starter/docker.html
   development:
     text: Entwicklung
     caption: Ich benutze Koishi als...
     children:
-      - 
-        text: Ein eigenständiges Projekt
+      - text: Ein eigenständiges Projekt
         link: /de-DE/manual/starter/boilerplate.html
-      - 
-        text: Abhängigkeiten von anderen Projekten
+      - text: Abhängigkeiten von anderen Projekten
         link: /de-DE/manual/starter/direct.html
 ---
 
-# Installation
+# Andere Installationsmethoden
 
 Koishi bietet verschiedene Installationsmethoden an, Sie können je nach Bedarf eine auswählen:

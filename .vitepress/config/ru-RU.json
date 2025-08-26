@@ -79,6 +79,10 @@
             "link": "/about/contact.md"
           },
           {
+            "text": "社区资源",
+            "link": "/about/community.md"
+          },
+          {
             "text": "各版本介绍",
             "link": "/releases/index.md"
           }
@@ -469,8 +473,12 @@
               "link": "/api/service/registry.md"
             },
             {
-              "text": "网络服务 (Router)",
-              "link": "/api/service/router.md"
+              "text": "服务器 (Server)",
+              "link": "/api/service/server.md"
+            },
+            {
+              "text": "计时器 (Timer)",
+              "link": "/api/service/timer.md"
             }
           ]
         },
@@ -879,12 +887,24 @@
               "link": "/plugins/develop/hmr.md"
             },
             {
+              "text": "网络请求 (HTTP)",
+              "link": "/plugins/develop/http.md"
+            },
+            {
               "text": "测试工具 (Mock)",
               "link": "/plugins/develop/mock.md"
             },
             {
-              "text": "代理服务器 (Server Proxy)",
-              "link": "/plugins/develop/server-proxy.md"
+              "text": "通知服务 (Notifier)",
+              "link": "/plugins/develop/notifier.md"
+            },
+            {
+              "text": "网络代理 (Proxy Agent)",
+              "link": "/plugins/develop/proxy-agent.md"
+            },
+            {
+              "text": "服务器 (Server)",
+              "link": "/plugins/develop/server.md"
             },
             {
               "text": "API 服务器 (Server Satori)",
@@ -1008,11 +1028,11 @@
               "link": "/schema/advanced/union-arbitrary.md"
             },
             {
-              "text": "Union：配置联动 1",
+              "text": "Intersect + Union：配置联动 1",
               "link": "/schema/advanced/union-tagged-1.md"
             },
             {
-              "text": "Union：配置联动 2",
+              "text": "Intersect + Union：配置联动 2",
               "link": "/schema/advanced/union-tagged-2.md"
             },
             {

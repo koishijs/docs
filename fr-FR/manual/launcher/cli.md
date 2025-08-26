@@ -1,15 +1,15 @@
 # Outils de ligne de commande
 
-Pour les utilisateurs qui préfèrent ne pas utiliser l'interface graphique, le lanceur Koishi propose un outil en ligne de commande nommé `koi`. Il vous permet de créer, gérer et exécuter Koishi.
+Pour les utilisateurs qui ne souhaitent pas utiliser une interface graphique, le lanceur Koishi propose un outil en ligne de commande, `koi`, qui permet de créer, gérer et exécuter Koishi.
 
-Si vous avez téléchargé un fichier similaire à `koi-xxx.appimage`, vous pouvez simplement le renommer en `koi` comme indiqué ci-dessous.
+Si le nom de fichier que vous avez téléchargé est comme `koi-xxx.appimage`, il suffit de remplacer `koi` par le nom de ce fichier dans les commandes ci-dessous.
 
 | Commande              | Fonction                                        |
 | --------------------- | ----------------------------------------------- |
-| `koi run daemon`      | Démarrer sans démon                             |
-| `koi daemon start`    | Démarrer le démon                               |
-| `koi daemon stop`     | Arrêter le démon                                |
-| `koi daemon kill`     | Forcer l'arrêt du démon                         |
+| `koi run daemon`      | Démarrer sans mode démon                        |
+| `koi daemon start`    | Démarrer le mode démon                          |
+| `koi daemon stop`     | Arrêter le mode démon                           |
+| `koi daemon kill`     | Forcer l'arrêt du mode démon                    |
 | `koi ps`              | Vérifier l'état d'exécution                     |
 | `koi start default`   | Démarrer l'instance `default`                   |
 | `koi stop default`    | Arrêter l'instance `default`                    |

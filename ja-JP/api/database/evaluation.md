@@ -1,14 +1,12 @@
-# 求值表达式 (Eval)
+# 評価式 (Eval)
 
-::: tip
+:::tip
 参见：[开发 > 数据库 > 进阶查询技巧](../../guide/database/selection.md)
 :::
 
-求值表达式是一组静态 API，主要在 [`Selection`](./selection.md) 中使用。你可以从 Koishi 中直接导入：
+与查询表达式不同，求值表达式是一组静态 API。你可以从 Koishi 中直接导入：
 
 ```ts
-import { Eval } from 'koishi'
-// 或者使用更短的别名
 import { $ } from 'koishi'
 ```
 
