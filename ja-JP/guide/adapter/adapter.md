@@ -208,7 +208,7 @@ namespace PollingAdapter {
   }
 
   export const Options: Schema<Options> = Schema.object({
-    protocol: Schema.const('server').required(),
+    protocol: Schema.const('polling').required(),
     timeout: Schema.number().default(Time.second * 25),
   })
 }
