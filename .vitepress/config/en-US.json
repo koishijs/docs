@@ -967,6 +967,10 @@
               "link": "/schema/basic/boolean.md"
             },
             {
+              "text": "Date",
+              "link": "/schema/basic/date.md"
+            },
+            {
               "text": "Bitset",
               "link": "/schema/basic/bitset.md"
             },

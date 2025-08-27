@@ -967,6 +967,10 @@
               "link": "/schema/basic/boolean.md"
             },
             {
+              "text": "日期 (Date)",
+              "link": "/schema/basic/date.md"
+            },
+            {
               "text": "位集 (Bitset)",
               "link": "/schema/basic/bitset.md"
             },
