@@ -987,6 +987,10 @@
               "link": "/schema/basic/boolean.md"
             },
             {
+              "text": "日期 (Date)",
+              "link": "/schema/basic/date.md"
+            },
+            {
               "text": "Bitset : Stockage binaire",
               "link": "/schema/basic/bitset.md"
             },
