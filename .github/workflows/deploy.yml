@@ -38,7 +38,7 @@ jobs:
         run: yarn
 
       - name: Upload Lockfile
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lockfile
           path: yarn.lock
