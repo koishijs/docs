@@ -49,7 +49,7 @@ jobs:
           DEPLOY_BASE: /dist-docs/
 
       - name: Deploy (koishi-plugin-docs)
-        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.repository == 'nostalgia296/docs' && github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.WORKFLOW_TOKEN }}
@@ -60,17 +60,17 @@ jobs:
           commit_message: '[skip ci] deploy'
 
       - name: Sync (koishi-plugin-docs)
-        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.repository == 'nostalgia296/docs' && github.ref == 'refs/heads/main' }}
         run: >
           curl -L
           -X POST
           -H "Accept: application/vnd.github+json"
           -H "Authorization: Bearer ${{ secrets.WORKFLOW_TOKEN }}"
-          https://api.github.com/repos/koishijs/koishi-plugin-docs/actions/workflows/build.yml/dispatches
+          https://api.github.com/repos/nostalgia296/koishi-plugin-docs/actions/workflows/build.yml/dispatches
           -d '{"ref":"main"}'
 
       - name: Build
-        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.repository == 'nostalgia296/docs' && github.ref == 'refs/heads/main' }}
         run: yarn build
         env:
           MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
@@ -78,11 +78,11 @@ jobs:
           MEILISEARCH_WRITE_KEY: ${{ secrets.MEILISEARCH_WRITE_KEY }}
 
       - name: Deploy
-        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.repository == 'nostalgia296/docs' && github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.WORKFLOW_TOKEN }}
-          external_repository: koishi-bot/koishi
+          external_repository: nostalgia296/koishi
           publish_branch: pages
           publish_dir: .vitepress/dist
           force_orphan: true
