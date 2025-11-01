@@ -96,6 +96,22 @@ $breakpoint: 760px;
   display: flex;
   flex-direction: column;
 
+  --card-margin: 2rem;
+  --card-padding-vertical: 1.5rem;
+  --card-padding-horizontal: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    --card-margin: 1.5rem;
+    --card-padding-vertical: 1rem;
+    --card-padding-horizontal: 1rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    --card-margin: 1rem;
+    --card-padding-vertical: 0.75rem;
+    --card-padding-horizontal: 0.875rem;
+  }
+
   @media (max-width: 1439px) {
     padding-right: 2rem;
   }
@@ -111,22 +127,6 @@ $breakpoint: 760px;
   .info {
     margin: 1rem auto;
     text-align: center;
-  }
-
-  --card-margin: 2rem;
-  --card-padding-vertical: 1.5rem;
-  --card-padding-horizontal: 1.5rem;
-
-  @media screen and (max-width: 768px) {
-    --card-margin: 1.5rem;
-    --card-padding-vertical: 1rem;
-    --card-padding-horizontal: 1rem;
-  }
-
-  @media screen and (max-width: 420px) {
-    --card-margin: 1rem;
-    --card-padding-vertical: 0.75rem;
-    --card-padding-horizontal: 0.875rem;
   }
 
   @media (max-width: 480px) {
