@@ -12,7 +12,7 @@
 
 ### 開發者群
 
-[426230045](https://jq.qq.com/?_wv=1027\&k=6FDoxQ6g)
+[426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
 
 本群適用於已經有一定 Node,js / TypeScript 基礎，并對 Koishi 開發感興趣的用戶——你可以在這裏參與 Koishi 以及其他相關話題的深度討論。
 
