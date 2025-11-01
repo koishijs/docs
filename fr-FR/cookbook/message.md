@@ -44,3 +44,4 @@
    - 根据配置检查用户权限和调用记录
 4. 逐一调用 action 回调函数，直到返回值不为 `undefined`
 5. 触发 [command](../api/core/events.md#事件：command) 事件
+
