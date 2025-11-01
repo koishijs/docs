@@ -12,7 +12,7 @@ This group is for the users who newly used Koishi, or have problems when using K
 
 ### For developers
 
-[426230045](https://jq.qq.com/?_wv=1027\&k=6FDoxQ6g)
+[426230045](https://jq.qq.com/?_wv=1027&k=6FDoxQ6g)
 
 This group is for the users who had learned Node.js / TypeScript and interested in Koishi Development. You can discuss anything deeply about Koishi in this group.
 
