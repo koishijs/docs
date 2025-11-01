@@ -1,6 +1,7 @@
 ---
 layout: starter
 sidebar: false
+
 caption: J'utilise Koishi pour...
 choices:
   production:
