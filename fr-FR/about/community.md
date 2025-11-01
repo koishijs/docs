@@ -14,7 +14,7 @@
 
 ## 文档
 
-- [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601) (沐辰-TimeBather)
+- [Koishi 插件开发入门教程](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601) (沐辰-TimeBather)
 
 ## 视频
 
