@@ -14,7 +14,7 @@ Some excellent community resources to learn from are summarized on this page. If
 
 ## Documentations
 
-- [Koishi Plugin Development Tutorial (Chinese)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum\&album_id=2700565655187865601)  by TimeBather
+- [Koishi Plugin Development Tutorial (Chinese)](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=2700565655187865601)  by TimeBather
 
 ## Videos
 
