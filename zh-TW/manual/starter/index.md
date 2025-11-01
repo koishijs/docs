@@ -1,6 +1,7 @@
 ---
 layout: starter
 sidebar: false
+
 caption: 我使用 Koishi……
 choices:
   production:
