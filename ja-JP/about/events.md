@@ -6,5 +6,5 @@
 
 Koishi 有幸作为开源社区 [参与](https://summer-ospp.ac.cn/org/orgdetail/90fe7a64-0ec0-4c60-963d-becc7e95f977?lang=zh) 了开源之夏 2023 活动，并完成了以下两个项目的开发：
 
-- [Koishi 通用平台聊天插件](https://summer-ospp.ac.cn/org/prodetail/2390f0169?list=org\&navpage=org)
-- [Koishi Android 客户端](https://summer-ospp.ac.cn/org/prodetail/2390f0170?list=org\&navpage=org)
+- [Koishi 通用平台聊天插件](https://summer-ospp.ac.cn/org/prodetail/2390f0169?list=org&navpage=org)
+- [Koishi Android 客户端](https://summer-ospp.ac.cn/org/prodetail/2390f0170?list=org&navpage=org)
