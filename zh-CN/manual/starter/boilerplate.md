@@ -72,10 +72,10 @@ Set-ExecutionPolicy RemoteSigned
 
 ::: tabs code
 ```npm
-npm config set registry https://registry.npmmirror.com
+npm config set registry https://registry.koishi.chat
 ```
 ```yarn
-yarn config set registry https://registry.npmmirror.com
+yarn config set registry https://registry.koishi.chat
 ```
 :::
 
