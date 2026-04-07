@@ -1,5 +1,4 @@
 import { defineTheme } from '@cordisjs/vitepress/client'
-import { defineAsyncComponent } from 'vue'
 import Empty from './components/empty.vue'
 import Markdown from 'marked-vue'
 import Schema from 'schemastery'
@@ -38,15 +37,10 @@ import '@koishijs/core'
 import 'element-plus/dist/index.css'
 import './index.scss'
 
+// @ts-ignore
 globalThis.Schema = Schema
 
 export default defineTheme({
-  layouts: {
-    home: LayoutHome,
-    market: LayoutMarket,
-    starter: LayoutStarter,
-    schema: LayoutSchema,
-  },
   Layout,
   enhanceApp({ app }) {
     const i18n = createI18n({
@@ -54,6 +48,11 @@ export default defineTheme({
       locale: 'zh-CN',
       fallbackLocale: '',
     })
+
+    app.component('homepage', LayoutHome)
+    app.component('market', LayoutMarket)
+    app.component('starter', LayoutStarter)
+    app.component('schema', LayoutSchema)
 
     app.use(components)
     app.use(ElButton)

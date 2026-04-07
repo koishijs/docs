@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homepage
 links:
   starter: /zh-TW/manual/starter/
 home:
