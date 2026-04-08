@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homepage
 
 links:
   starter: /ru-RU/manual/starter/
