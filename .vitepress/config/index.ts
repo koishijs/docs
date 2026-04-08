@@ -1,7 +1,6 @@
 import { defineConfig } from '@cordisjs/vitepress'
 import { resolve } from 'path'
 import { cp, mkdir, rm } from 'fs/promises'
-import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { external } from './mixin'
 
 const isDev = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview'
@@ -71,9 +70,9 @@ export default async () => {
           dns: '@koishijs/dns',
         },
       },
-      plugins: [
-        vueI18n({ ssr: true }),
-      ] as any,
+      ssr: {
+        noExternal: ['vue-i18n'],
+      },
     },
   })
 }
