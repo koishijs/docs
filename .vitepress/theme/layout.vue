@@ -1,7 +1,6 @@
 <template>
-  <Layout :class="extra">
+  <Layout>
     <template v-if="frontmatter.layout === 'schema'" #sidebar-nav-before>
-      <VPNavBarTitle></VPNavBarTitle>
       <div class="group">
         <VPSidebarItem :item="navItem" :depth="0"></VPSidebarItem>
       </div>
@@ -14,14 +13,15 @@
 
 <script lang="ts" setup>
 
-import { Layout } from '@cordisjs/vitepress/client'
+import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
 import { computed, provide, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getSorted, kConfig, MarketFilter } from '@koishijs/market'
-import VPNavBarTitle from '@theme-default/components/VPNavBarTitle.vue'
 import VPSidebarItem from '@theme-default/components/VPSidebarItem.vue'
-import { home, market, words } from './utils'
+import { market, words } from './utils'
+
+const Layout = DefaultTheme.Layout
 
 provide(kConfig, {
   portable: true,
@@ -36,14 +36,8 @@ watch(localeIndex, () => {
 
 const navItem = computed(() => ({
   text: theme.value.navText || '导航',
-  items: theme.value.nav.filter(item => item.link),
+  items: theme.value.nav.filter((item: any) => item.link),
 }))
-
-const extra = computed(() => {
-  if (frontmatter.value.layout === 'home') {
-    return [`parity-` + (Math.round(home.position.value) % 2 ? 'odd' : 'even')]
-  }
-})
 
 </script>
 

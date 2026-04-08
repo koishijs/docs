@@ -63,7 +63,8 @@ export default async () => {
 
     vite: {
       optimizeDeps: {
-        include: ['xss'],
+        include: ['xss', 'spark-md5'],
+        exclude: ['@koishijs/market'],
       },
       resolve: {
         alias: {
