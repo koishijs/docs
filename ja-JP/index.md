@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homepage
 
 links:
   starter: /ja-JP/manual/starter/
