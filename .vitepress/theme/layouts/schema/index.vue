@@ -67,7 +67,7 @@ watch(schema, () => {
 const output = computed(() => {
   try {
     return schema.value(config.value)
-  } catch (e) {
+  } catch (e: any) {
     return e.message
   }
 })
@@ -75,7 +75,7 @@ const output = computed(() => {
 const input = computed(() => {
   try {
     return JSON.parse(JSON.stringify(config.value))
-  } catch (e) {
+  } catch (e: any) {
     return e.message
   }
 })
@@ -83,6 +83,15 @@ const input = computed(() => {
 </script>
 
 <style lang="scss">
+
+.Layout.layout-schema {
+  --vp-nav-height: 0px;
+  --vp-layout-max-width: 100%;
+
+  .VPNav, .VPLocalNav {
+    display: none;
+  }
+}
 
 .schema-container {
   position: relative;

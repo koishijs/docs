@@ -88,3 +88,13 @@ jobs:
           force_orphan: true
           enable_jekyll: true
           commit_message: '[skip ci] deploy'
+
+      - name: Deploy
+        if: ${{ github.repository == 'koishijs/docs' && github.ref == 'refs/heads/main' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_branch: pages
+          publish_dir: .vitepress/dist
+          force_orphan: true
+          enable_jekyll: true
+          commit_message: '[skip ci] deploy'

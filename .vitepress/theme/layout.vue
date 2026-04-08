@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :class="frontmatter.layout && `layout-${frontmatter.layout}`">
     <template v-if="frontmatter.layout === 'schema'" #sidebar-nav-before>
       <div class="group">
         <VPSidebarItem :item="navItem" :depth="0"></VPSidebarItem>
@@ -42,6 +42,23 @@ const navItem = computed(() => ({
 </script>
 
 <style lang="scss">
+
+.Layout.layout-homepage {
+  --vp-nav-bg-color: transparent;
+  --vp-c-gutter: transparent;
+
+  .VPSidebar {
+    background-color: transparent;
+  }
+
+  .VPNavBar .divider-line::before {
+    display: none;
+  }
+
+  .VPNavBar.has-sidebar .title {
+    background-color: transparent;
+  }
+}
 
 .market-filter-group {
   margin-top: 16px;
