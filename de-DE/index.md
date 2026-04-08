@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homepage
 
 links:
   starter: /de-DE/manual/starter/
