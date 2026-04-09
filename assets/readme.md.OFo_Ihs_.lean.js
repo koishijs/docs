@@ -1,0 +1,1 @@
+import{_ as a,f as t,p as r,aS as i}from"./chunks/framework.CjjfFAPi.js";const p=JSON.parse('{"title":"koishi.chat","description":"","frontmatter":{},"headers":[],"relativePath":"readme.md","filePath":"readme.md"}'),o={name:"readme.md"};function s(h,e,c,d,l,n){return t(),r("div",null,[...e[0]||(e[0]=[i("",5)])])}const m=a(o,[["render",s]]);export{p as __pageData,m as default};

@@ -1,0 +1,243 @@
+---
+url: /guide/basic/command.md
+---
+# 指令开发
+
+::: tip
+在学习本节之前，建议先完整阅读 [入门 > 指令系统](../../manual/usage/command.md)。
+:::
+
+正如我们在入门篇中介绍的那样，一个 Koishi 机器人的绝大部分功能都是通过指令提供给用户的。Koishi 的指令系统能够高效地处理大量消息的并发调用，同时还提供了快捷方式、调用前缀、权限管理、速率限制、本地化等大量功能。因此，只需掌握指令开发并编写少量代码就可以轻松应对各类用户需求。
+
+编写下面的代码，你就实现了一个简单的 echo 指令：
+
+```ts
+ctx.command('echo <message>')
+  .action((_, message) => message)
+```
+
+让我们回头看看这段代码是如何工作的：
+
+* `.command()` 方法定义了名为 echo 的指令，其有一个必选参数为 `message`
+* `.action()` 方法定义了指令触发时的回调函数，第一个参数是一个 `Argv` 对象，第二个参数是输入的 `message`
+
+这种链式的结构能够让我们非常方便地定义和扩展指令。稍后我们将看到这两个函数的更多用法，以及更多指令相关的函数。
+
+## 定义参数
+
+正如你在上面所见的那样，使用 `ctx.command(decl)` 方法可以定义一个指令，其中 `decl` 是一个字符串，包含了 **指令名** 和 **参数列表**。
+
+* 指令名可以包含数字、字母、短横线甚至中文，但不应该包含空白字符、小数点 `.` 或斜杠 `/`；小数点和斜杠的用途参见 [注册子指令](#注册子指令) 章节
+* 一个指令可以含有任意个参数，其中 **必选参数** 用尖括号包裹，**可选参数** 用方括号包裹；这些参数将作为 `action` 回调函数除 `Argv` 以外的的后续参数传入
+
+例如，下面的程序定义了一个拥有三个参数的指令，第一个为必选参数，后面两个为可选参数，它们将分别作为 `action` 回调函数的第 2~4 个参数：
+
+```ts
+ctx.command('test <arg1> [arg2] [arg3]')
+  .action((_, arg1, arg2, arg3) => { /* do something */ })
+```
+
+::: tip
+除去表达的意义不同，以及参数个数不足时使用必选参数可能产生错误信息外，这两种参数在程序上是没有区别的。与此同时，默认情况下 `action` 回调函数从第二个参数起也总是字符串。如果传入的参数不足，则对应的参数不会被传入，因此你需要自己处理可能的 `undefined`。
+:::
+
+### 变长参数
+
+有时我们需要传入未知数量的参数，这时我们可以使用 **变长参数**，它可以通过在括号中前置 `...` 来实现。在下面的例子中，无论传入了多少个参数，都会被放入 `rest` 数组进行处理：
+
+```ts
+ctx.command('test <arg1> [...rest]')
+  .action((_, arg1, ...rest) => { /* do something */ })
+```
+
+### 文本参数
+
+通常来说传入的信息被解析成指令调用后，会被空格分割成若干个参数。但如果你想输入的就是含有空格的内容，可以通过在括号中后置 `:text` 来声明一个 **文本参数**。
+在下面的例子中，即使 test 后面的内容中含有空格，也会被整体传入 `message` 中：
+
+```ts
+ctx.command('test <message:text>')
+  .action((_, message) => { /* do something */ })
+```
+
+::: tip
+文本参数的解析优先级很高，即使是之后的内容中含有选项也会被一并认为是该参数的一部分。因此，当使用文本参数时，应确保选项写在该参数之前，或 [使用引号](../../manual/recipe/execution.md#使用引号) 将要输入的文本包裹起来。
+:::
+
+### 参数类型 {#argument-type}
+
+除去 `text` 以外，Koishi 还支持许多其他的类型。它们的用法与 `text` 无异：
+
+```ts
+function showValue(value) {
+  return `${typeof value} ${JSON.stringify(value)}`
+}
+
+ctx.command('test [arg:number]')
+  .option('foo', '<val:string>')
+  .action(({ options }, arg) => `${showValue(arg)} ${showValue(options.foo)}`)
+```
+
+目前 Koishi 支持的内置类型如下：
+
+* string: `string` 字符串
+* number: `number` 数值
+* bigint: `bigint` [大整数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+* text: `string` 贪婪匹配的字符串
+* user: `string` 用户，格式为 `{platform}:{id}` (调用时可以使用 `at` 元素或者 `@{platform}:{id}` 的格式)
+* channel: `string` 频道，格式为 `{platform}:{id}` (调用时可以使用 `sharp` 元素或者 `#{platform}:{id}` 的格式)
+* integer: `number` 整数
+* posint: `number` 正整数
+* natural: `number` 正整数
+* date: `Date` 日期
+* image: `Dict` 图片
+
+## 定义选项
+
+使用 `cmd.option(name, decl)` 方法可以给指令定义参数。这个方法也是支持链式调用的，就像这样：
+
+```ts
+ctx.command('test')
+  .option('alpha', '-a')          // 定义一个选项
+  .option('beta', '-b [beta]')    // 定义一个带参数的可选选项
+  .option('gamma', '-c <gamma>')  // 定义一个带参数的必选选项
+  .action(({ options }) => JSON.stringify(options))
+```
+
+从上面的例子中我们不难看出 Koishi 指令系统的许多方便的特性：
+
+* 使用注册的多个别名中的任何一个都会被赋值到 `name` 中
+* 选项和参数之间同时支持用空格或等号隔开的语法
+* 单个短横线后跟多个字母时，会把之后的参数赋给最后一个字母（如果需要参数的话）
+* 多字母中如果有短横线，会被自动进行驼峰式处理
+* 类型自动转换：无参数默认为 `true`，如果是数字会转化为数字，其余情况为字符串
+* 支持识别未注册选项，同时会根据传入的命令行推测是否需要参数
+* 如果一个未注册选项以 `no-` 开头，则会自动去除这个前缀并处理为 `false`
+
+在调用 `cmd.option()` 时，你还可以传入第三个参数，它应该是一个对象，用于配置选项的具体特性。它们将在下面逐一介绍。
+
+### 选项的默认值
+
+使用 `fallback` 配置选项的默认值。配置了默认值的选项，如果没有被使用，则会按照注册的默认值进行赋值。
+
+```ts
+ctx.command('test')
+  .option('alpha', '-a', { fallback: 100 })
+  .option('beta', '-b', { fallback: 100 })
+  .action(({ options }) => JSON.stringify(options))
+```
+
+### 选项的重载
+
+将同一个选项注册多次，并结合使用 `value` 配置选项的重载值。如果使用了带有重载值的选项，将按照注册的重载值进行赋值。
+
+```ts
+ctx.command('test')
+  .option('writer', '-w <id>')
+  .option('writer', '--anonymous', { value: 0 })
+  .action(({ options }) => JSON.stringify(options))
+```
+
+### 选项类型 {#option-type}
+
+选项也可以像参数一样设置类型：
+
+```ts
+ctx.command('text')
+  .option('alpha', '-a <value:number>')
+```
+
+除了这种写法外，你还可以传入一个 `type` 属性，作为选项的临时类型声明。它可以是像上面的例子一样的回调函数，也可以是一个 `RegExp` 对象，表示传入的选项应当匹配的正则表达式：
+
+```ts
+ctx.command('test')
+  .option('beta', '-b <value>', { type: /^ba+r$/ })
+  .action(({ options }) => options.beta)
+```
+
+## 指令别名
+
+::: warning
+由于指令名可以在用户侧配置，因此**不建议**开发者设置过多别名或以常用词作为别名。如果用户加载的多个插件都注册了同一个指令别名，那么后一个加载的插件将直接加载失败。
+:::
+
+你可以为一条指令添加别名：
+
+```ts
+ctx.command('echo <message>').alias('say')
+```
+
+这样一来，无论是 `echo` 还是 `say` 都能触发这条指令了。
+
+你还可以为别名添加参数或选项：
+
+```ts
+ctx.command('market <area> <item>').alias('市场', { args: ['China'] })
+```
+
+此时调用 `市场` 时将等价于调用 `market China`。如果你传入了更多的参数，那么它们将被添加到 `China` 之后。
+
+## 编写帮助
+
+::: tip
+此功能需要安装 [@koishijs/plugin-help](../../plugins/common/help.md) 插件。
+:::
+
+之前已经介绍了 `ctx.command()` 和 `cmd.option()` 这两个方法，它们都能传入一个 `desc` 参数。你可以在这个参数的结尾补上对于指令或参数的说明文字，就像这样：
+
+```ts
+ctx.command('echo <message:text> 输出收到的信息')
+  .option('timeout', '-t <seconds> 设定延迟发送的时间')
+```
+
+### 添加使用说明
+
+当然，我们还可以加入具体的用法和使用示例，进一步丰富这则使用说明：
+
+```ts
+ctx.command('echo <message:text>', '输出收到的信息')
+  .option('timeout', '-t <seconds> 设定延迟发送的时间')
+  .usage('注意：参数请写在最前面，不然会被当成 message 的一部分！')
+  .example('echo -t 300 Hello World  五分钟后发送 Hello World')
+```
+
+这时再调用 `echo -h`，你便会发现使用说明中已经添加了你刚刚的补充文本：
+
+### 隐藏指令和选项
+
+读到这里，细心的你可能会产生一丝好奇：如果 `echo -h` 能够被解析成查看帮助的话，这个 `-h` 为什么不出现在这个帮助中呢？答案很简单，因为这个内置选项被 Koishi 隐藏起来了。如果你希望隐藏一条指令或一个选项，只需要注册时将配置项 `hidden` 设置为 `true` 即可：
+
+```ts
+// 手动导入类型
+import {} from '@koishijs/plugin-help'
+
+ctx.command('bar 一条看不见的指令', { hidden: true })
+  .option('foo', '<text> 一个看不见的选项', { hidden: true })
+  .action(({ options }) => 'secret: ' + options.foo)
+```
+
+如果要查看隐藏的指令和选项，可以使用 `help -H`：
+
+## 注册子指令
+
+在本节的最后，我们介绍一下[子指令](../../manual/usage/command.md#子指令)的注册方法：
+
+```ts
+// 层级式子指令
+ctx.command('foo/bar')
+
+// 派生式子指令
+ctx.command('foo.bar')
+```
+
+是的，除了这里用到了斜杠 `/` 和小数点 `.` 来分别表示层级式和派生式子指令外，其他用法都是完全一致的。
+
+对于已经存在的指令，你也可以使用 `cmd.subcommand()` 方法来注册子指令：
+
+```ts
+// 层级式子指令
+ctx.command('foo').subcommand('bar')
+
+// 派生式子指令
+ctx.command('foo').subcommand('.bar')
+```
