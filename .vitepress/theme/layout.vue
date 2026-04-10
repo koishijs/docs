@@ -24,7 +24,7 @@ import { market, words } from './utils'
 const Layout = DefaultTheme.Layout
 
 provide(kConfig, {
-  portable: true,
+  // portable: true,
 })
 
 const { frontmatter, localeIndex, theme } = useData()
