@@ -12,7 +12,7 @@ People who interact with Koishi generally fall into three roles:
 - **Deployers:** Those who use Koishi to set up bots.
 - **Users:** Those who interact with Koishi bots.
 
-Currently, the Koishi plugin marketplace features over 1,000 plugins, maintained by more than 500 developers. On GitHub, Koishi has over 3,000 stars. In various official discussion channels, there are thousands of active deployers. Many of these deployers manage bots that serve tens of thousands of active users.
+目前，在 Koishi 的插件市场中能看到超过 3000 个插件，这些插件由超过 500 位开发者维护。On GitHub, Koishi has over 3,000 stars. In various official discussion channels, there are thousands of active deployers. Many of these deployers manage bots that serve tens of thousands of active users.
 
 ## Is Koishi Lightweight?
 
