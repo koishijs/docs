@@ -15,7 +15,7 @@ export const market = ref() as MarketRef
 
 market.refresh = async () => {
   if (market.value && +new Date(market.value.time) + refreshInterval > Date.now()) return
-  const response = await fetch('https://registry-next.koishi.chat/index.json')
+  const response = await fetch('https://registry.koishi.chat/index.json')
   market.value = await response.json()
 }
 
