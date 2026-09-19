@@ -7,6 +7,7 @@
 3. 要将机器人拉进你的服务器，点击「OAuth2」，并在网址生成器中勾选 Bot 和机器人所需要的权限
 4. 打开生成的链接，选择你具有管理权限的服务器，就成功把机器人添加进去了
 5. 将上面的 token 作为机器人配置项即可使用
+6. 回到「Bot」页面，打开 **Privileged Gateway Intents** 中的 **MESSAGE CONTENT INTENT**。默认的 `intents` 配置已经订阅了 `GUILD_MESSAGES`，但 Discord 要求再在开发者门户里显式开启这一项，否则机器人会正常上线、却收不到任何普通消息
 
 ## 配置项
 
