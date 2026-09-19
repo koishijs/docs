@@ -54,7 +54,7 @@ export class DiscordAdapter<C extends Context> extends Adapter.WsClient<C, Disco
 }
 ```
 
-一个 `WsClient` 类需要实现 `prepare()` 和 `accept()` 两个方法。`prepare()` 方法应当返回一个 `WebSocket` 对象，用于与聊天平台建立连接。在上面的例子中，我们首先通过内部 API 获取了 WebSocket 网关地址，然后使用 `bot.http.ws()` 方法创建了一个 `WebSocket` 对象：
+一个 `WsClient` 类需要实现 `prepare()` 和 `accept()` 两个方法。 `prepare()` 方法应当返回一个 `WebSocket` 对象，用于与聊天平台建立连接。在上面的例子中，我们首先通过内部 API 获取了 WebSocket 网关地址，然后使用 `bot.http.ws()` 方法创建了一个 `WebSocket` 对象：
 
 ```ts
 const { url } = await this.bot.internal.getGatewayBot()
@@ -254,7 +254,7 @@ namespace TelegramBot {
 无限制的 `Bot` 连接可能会导致你的 Koishi 被恶意调用。因此，如果将适配器作为可任意连接的服务端，请确保在可信任的网络环境下运行，或者引入其他验证机制。
 :::
 
-在上述的情况下，我们需要对插件的写法做一些调整。`Bot` 类不再能作为插件的入口了，但我们可以直接使用 `Adapter` 类作为入口。这里以 WhatsApp 平台为例：
+在上述的情况下，我们需要对插件的写法做一些调整。 `Bot` 类不再能作为插件的入口了，但我们可以直接使用 `Adapter` 类作为入口。这里以 WhatsApp 平台为例：
 
 ```ts title=index.ts
 import WhatsAppAdapter from './adapter'
