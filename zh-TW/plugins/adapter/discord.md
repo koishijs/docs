@@ -7,6 +7,7 @@
 3. 要將機器人拉進你的服務器，點擊「OAuth2」，並在網址生成器中勾選 Bot 和機器人所需要的權限
 4. 打開生成的鏈接，選擇你具有管理權限的服務器，就成功把機器人添加進去了
 5. 将上面的 token 作为机器人配置项即可使用
+6. 回到「Bot」页面，打开 **Privileged Gateway Intents** 中的 **MESSAGE CONTENT INTENT**。默认的 `intents` 配置已经订阅了 `GUILD_MESSAGES`，但 Discord 要求再在开发者门户里显式开启这一项，否则机器人会正常上线、却收不到任何普通消息
 
 ## 配置项
 
