@@ -7,6 +7,7 @@
 3. To invite your bot into your server, click "OAuth2" and check the permissions that required for your bot in URL Generator, make sure "Bot" to be checked.
 4. Open the link that you generated above, select the server that you have the admin permissions, then you could add your bot into the server successfully.
 5. 将上面的 token 作为机器人配置项即可使用
+6. 回到「Bot」页面，打开 **Privileged Gateway Intents** 中的 **MESSAGE CONTENT INTENT**。默认的 `intents` 配置已经订阅了 `GUILD_MESSAGES`，但 Discord 要求再在开发者门户里显式开启这一项，否则机器人会正常上线、却收不到任何普通消息
 
 ## 配置项
 
